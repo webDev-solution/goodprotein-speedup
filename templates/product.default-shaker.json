@@ -1,0 +1,483 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "cb1a85e5-41f4-439e-a3ba-533149722caf": {
+          "type": "title",
+          "settings": {
+            "display_on_card": false,
+            "text_align": "text-left"
+          }
+        },
+        "ab45c7a7-7a59-401b-8cd1-5106aa4396ac": {
+          "type": "text",
+          "settings": {
+            "display_on_card": false,
+            "text": "",
+            "icon": "check-mark"
+          }
+        },
+        "7af786d8-f426-40c5-a82e-eb13deac98bd": {
+          "type": "flavours_list",
+          "settings": {
+            "label": "Flavour",
+            "collection": "accessories-1",
+            "type": "dropdown",
+            "size": "medium"
+          }
+        },
+        "ba6279c8-91c7-427e-9edd-db56825620dc": {
+          "type": "variant_picker",
+          "settings": {
+            "display_on_card": false,
+            "option_style": "drop_down",
+            "hide_option_labels": false,
+            "enable_color_swatches": false
+          }
+        },
+        "abra_banner_fJyTHR": {
+          "type": "shopify:\/\/apps\/abra-promotions\/blocks\/banner\/daa1493a-23b5-48bb-8cb5-7ab1267b4642",
+          "disabled": true,
+          "settings": {
+            "name": "Product banner",
+            "banner_background_color": "#ffe89f",
+            "banner_border_color": "#ffe89f",
+            "banner_color": "#262626",
+            "banner_icon_color": "#262626",
+            "banner_border_radius": 12,
+            "banner_font_size": 16,
+            "banner_icon_size": 16,
+            "banner_padding_y": 10,
+            "banner_padding_x": 10,
+            "text_align": "center"
+          }
+        },
+        "price_gtyrtk": {
+          "type": "price",
+          "settings": {
+            "display_on_card": false,
+            "show_on_sale_sticker": false,
+            "text_align": "text-left"
+          }
+        },
+        "45097549-4d28-4b24-8b64-cbb8764121a4": {
+          "type": "buy_buttons",
+          "settings": {
+            "display_on_card": false,
+            "show_price": false,
+            "hide_quantity": false,
+            "enable_payment_button": false,
+            "show_pickup_availability": false
+          }
+        },
+        "5e9bdb49-ac21-4a79-b2a8-69b8749f4d13": {
+          "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+          "disabled": true,
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": -5,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "sm",
+            "intro_text": "or",
+            "show_interest_free": false,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "cb1a85e5-41f4-439e-a3ba-533149722caf",
+        "ab45c7a7-7a59-401b-8cd1-5106aa4396ac",
+        "7af786d8-f426-40c5-a82e-eb13deac98bd",
+        "ba6279c8-91c7-427e-9edd-db56825620dc",
+        "abra_banner_fJyTHR",
+        "price_gtyrtk",
+        "45097549-4d28-4b24-8b64-cbb8764121a4",
+        "5e9bdb49-ac21-4a79-b2a8-69b8749f4d13"
+      ],
+      "custom_css": [],
+      "settings": {
+        "bought_count": "{{ product.metafields.custom.bought_counts_in_past_week.value }}",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
+        "display": "fit",
+        "show_slideshow_arrows_on_desktop": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "autoplay_videos_on_desktop": true,
+        "media_mobile_width": "w-full",
+        "thumbnails_position": "under",
+        "thumbnail_crop": "aspect-w-1 aspect-h-1",
+        "thumbnail_shape": "default",
+        "hide_media_shadow": false,
+        "thumbnail_size": "large",
+        "show_thumbnails_on_mobile": false,
+        "color_accent": "#8eccf3",
+        "color_background": "#e9f6fd",
+        "color_media": "#8eccf3",
+        "text_color": "#000000",
+        "accent_text_color": "#000000"
+      }
+    },
+    "4e136310-1788-411b-a9dd-3d710b8d176d": {
+      "type": "product-usps",
+      "blocks": {
+        "dd9bd363-a48c-4082-9c53-d3b82445becf": {
+          "type": "usps",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pd-17.png",
+            "heading": "20,000+ Verified Reviews",
+            "content": "4.78 out of 5 stars average."
+          }
+        },
+        "27bb69e5-166b-48f2-af3a-6abbffe2360b": {
+          "type": "usps",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pd-18.png",
+            "heading": "60-Day Satisfaction Guarantee",
+            "content": "If you don’t love it, you don’t pay for it."
+          }
+        },
+        "a71a9abb-1c21-4ccf-8938-27cf1743f21f": {
+          "type": "usps",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pd-19.png",
+            "heading": "Over 30 Million Shakes Sold",
+            "content": "And more than 30 million cravings curbed."
+          }
+        }
+      },
+      "block_order": [
+        "dd9bd363-a48c-4082-9c53-d3b82445becf",
+        "27bb69e5-166b-48f2-af3a-6abbffe2360b",
+        "a71a9abb-1c21-4ccf-8938-27cf1743f21f"
+      ],
+      "settings": {
+        "background": true,
+        "color_bg": "#8eccf3",
+        "color_text": "#000000"
+      }
+    },
+    "63d86149-3de8-44e0-9fc5-522d7f858a28": {
+      "type": "product-video-carousel",
+      "blocks": {
+        "d9ad31d4-fe3f-45c8-9769-41c0101c410f": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/6._Samantha_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/6. Samantha_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/6._Samantha_1x1_FR.png",
+            "fr_video_link": ""
+          }
+        },
+        "247693e3-878b-40c8-bc42-6d01fb3f9600": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/5._Bianka_1x1_EN_3a7bf577-59a2-4361-bf82-aed8586054af.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/5. Bianka.mp4",
+            "fr_image": "shopify:\/\/shop_images\/5._Bianka_1x1_FR_2.png",
+            "fr_video_link": ""
+          }
+        },
+        "481c3263-1c4e-4352-8093-806c1be1321c": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/4._Samantha_B_1x1_EN_1.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/4. Samantha B_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/4._Samantha_B_1x1_FR_1.png",
+            "fr_video_link": ""
+          }
+        },
+        "e5b35c6a-72b6-4db3-b215-1b926f2899e2": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/3._Brooke_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/3. Brooke_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/3._Brooke_1x1_FR.png",
+            "fr_video_link": ""
+          }
+        },
+        "2d93a8a2-e525-40a5-90ba-b84f1033b0cf": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/2._Cassandra_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/2. Cassandra.mp4",
+            "fr_image": "shopify:\/\/shop_images\/2._Cassandra_1x1_FR_1.png",
+            "fr_video_link": ""
+          }
+        },
+        "20ccd199-380c-41d1-b416-b78bc013d92e": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/1._Andy_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/1. Andy_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/1._Andy_1x1_FR.png",
+            "fr_video_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d9ad31d4-fe3f-45c8-9769-41c0101c410f",
+        "247693e3-878b-40c8-bc42-6d01fb3f9600",
+        "481c3263-1c4e-4352-8093-806c1be1321c",
+        "e5b35c6a-72b6-4db3-b215-1b926f2899e2",
+        "2d93a8a2-e525-40a5-90ba-b84f1033b0cf",
+        "20ccd199-380c-41d1-b416-b78bc013d92e"
+      ],
+      "settings": {
+        "bg_color": "",
+        "itme_show": 5,
+        "subtitle": "4.81  <span class=\"review-star\"><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><\/span>",
+        "heading": "Don't just take our word for it…",
+        "subheading": "300,000+ Satisfied Canadians",
+        "content": "We're inspired every day by the Good Protein community sharing how our shakes have changed the way they think about nutrition."
+      }
+    },
+    "9bcc3e2d-da35-4c7e-92dc-c286ee68f5c1": {
+      "type": "product-section-2",
+      "blocks": {
+        "2551e668-2b78-4530-98aa-c6560db6ca8a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/satisfies-sweet-tooth.png"
+          }
+        },
+        "af1e274b-54df-48ea-821f-75f4c5896df8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-weird-aftertaste.png"
+          }
+        },
+        "6965a56d-3e83-4276-9418-1b1fb95ff791": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blends-perfectly.png"
+          }
+        }
+      },
+      "block_order": [
+        "2551e668-2b78-4530-98aa-c6560db6ca8a",
+        "af1e274b-54df-48ea-821f-75f4c5896df8",
+        "6965a56d-3e83-4276-9418-1b1fb95ff791"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Why do people love our\u2028 All-in-One Superfood Blend?",
+        "color_bg": "#fcf7e4"
+      }
+    },
+    "1681839312959091a3": {
+      "type": "apps",
+      "blocks": {
+        "junip_product_reviews_ugc_junip_product_review_iTUYJf": {
+          "type": "shopify:\/\/apps\/junip\/blocks\/junip-product-review\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "junip_product_reviews_ugc_junip_product_review_iTUYJf"
+      ],
+      "custom_css": [
+        ".junip-product-review-container {padding: 64px 16px;}",
+        ".junip-btn {\/* background-color: transparent; border: 2px solid #fecb28; border-radius: 30px; text-transform: capitalize; letter-spacing: 0; font-size: 16px; font-weight: 600; padding: 15px 35px;*\/}",
+        ".junip-write-review-cta-container {top: 0;}",
+        "@media (max-width: 989px) {.junip-product-review-container {padding: 45px 16px; }}"
+      ],
+      "settings": {}
+    },
+    "cd0e31ad-e872-4998-a438-1f33ad3b5b27": {
+      "type": "product-section-1",
+      "blocks": {
+        "fd76fa0d-fb5f-4d54-b3fe-3228faca6204": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "fd76fa0d-fb5f-4d54-b3fe-3228faca6204"
+      ],
+      "settings": {
+        "image_position": "right",
+        "heading": "Try Good Protein Risk-Free",
+        "sub_heading": "60-Day Satisfaction Guarantee",
+        "content": "<p>Still not sure? Try Good Protein for a full 60 days to see if it's right for you. If you don't love it, our customer service team will take care of it<\/p>",
+        "max_width": "450",
+        "btn_text": "Try it Today",
+        "btn_url": "",
+        "image": "shopify:\/\/shop_images\/IMG_5296_1__enhanced_1_ed4ab604-0d65-4984-b06c-3692a5683039.png",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67"
+      }
+    },
+    "ee6e96ba-ba06-4f35-9fc6-a0282957f485": {
+      "type": "product-section-faq",
+      "blocks": {
+        "b9c2e0f0-fa6d-424e-86bd-0b0739a81516": {
+          "type": "faq",
+          "settings": {
+            "title": "Are your products high quality?",
+            "content": "<p>Our manufacturer holds SQF (Safe Quality Food) certification from GFSI (Global Food Safety Initiative) (https:\/\/www.sqfi.com\/our-program\/what-is-sqf), which means that each ingredient used in our products is assessed for its level of risk to consumer health or food fraud. Analyses are then carried out on the various ingredients and on each batch of mixes, to offer you a safe, quality product.<\/p>",
+            "category": "Product"
+          }
+        },
+        "b8e550a3-ccdc-4a55-ac16-76b6f86f6864": {
+          "type": "faq",
+          "settings": {
+            "title": "What is your 60-day Satisfaction Guarantee?",
+            "content": "<p>Try Good Protein completely risk-free!<\/p><p>We are committed to providing high-quality products and excellent customer experience. We believe that you should be completely satisfied with your purchase, and that's why we offer a 60-day Satisfaction Guarantee on your first order.<\/p><p>If you're not happy with your purchase for any reason, please complete <a href=\"https:\/\/goodprotein.ca\/pages\/contact\"><span style=\"text-decoration:underline\">this contact form<\/span><\/a> and provide us with all necessary details, including the reason for the return and the number of bags, opened and unopened, to be returned.<\/p><p>*Customers are responsible for covering the return shipping. <\/p><p>**Please note that to be eligible for a refund on your first order, only 25% of the bag can be consumed.<\/p><p>For more information regarding our 60-day Satisfaction Guarantee, please visit section 9 of our <a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions\"><span style=\"text-decoration:underline\">Terms and conditions<\/span><\/a><\/p>",
+            "category": "shipping"
+          }
+        },
+        "e22484ef-89ba-4ff0-9a3e-ef357a1770e6": {
+          "type": "faq",
+          "settings": {
+            "title": "Will I lose weight by consuming your products?",
+            "content": "<p>Our blends weren’t specifically created for weight loss, but they can easily be integrated into a healthy diet and training regimen that’s been designed for weight loss. Using high quality, functional superfood blends that are rich in nutrients is a great way to help achieve your goals. Talk to a healthcare professional before beginning any weight loss program and seek out a certified professional to design one tailored to you and your needs.<\/p>",
+            "category": "product"
+          }
+        },
+        "adedff46-55c8-4e80-b187-a49ebbc88ee8": {
+          "type": "faq",
+          "settings": {
+            "title": "Can I cancel my subscription at any time?",
+            "content": "<p>If you've benefited from an extra discount on your first subscription order, a minimum of two subscription orders are required before canceling.  You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price.<\/p>",
+            "category": "subscription"
+          }
+        },
+        "faq_HHnj4R": {
+          "type": "faq",
+          "settings": {
+            "title": "Is the All-in-One Superfood Shake a meal replacement?",
+            "content": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.<\/p>",
+            "category": "product"
+          }
+        },
+        "a0b5c887-3258-46e4-bad0-fcf1d52efb43": {
+          "type": "faq",
+          "settings": {
+            "title": "How much is shipping?",
+            "content": "<p>Deliveries in the majority of Canada are free for orders over $55. For any order falling under the minimum amount required, we charge a shipping fee of $10.95, $12.95 or $19.95 depending on the area. In some areas we offer same day delivery for an additional $4.95. *See Section 12 our the Terms & Conditions.<\/p>",
+            "category": "shipping"
+          }
+        },
+        "faq_XW8ei6": {
+          "type": "faq",
+          "settings": {
+            "title": "What does a subscription entail?",
+            "content": "<p>Put simply, a subscription allows you to save 20% on all of your orders; meaning you can take full advantage of our superfood blends — and discover all of their benefits — at a low price. We know what you’re thinking: that’s a great deal and you’re wondering how to subscribe. All it takes is opting in and receiving at least 2 shipments. <br\/>You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price.<\/p>",
+            "category": "subscription"
+          }
+        },
+        "faq_NeBdEV": {
+          "type": "faq",
+          "settings": {
+            "title": "Where do your products come from?",
+            "content": "<p>We’re based in Quebec, Canada and we’re proud to say that all of our blends are made locally. Our ingredients come from renowned suppliers around the world, with the majority being based right here in Canada.<\/p>",
+            "category": "product"
+          }
+        },
+        "faq_xN4ikh": {
+          "type": "faq",
+          "settings": {
+            "title": "How long does delivery take?",
+            "content": "<p>In general, your package will arrive within 5-7 business days. Tracking will be provided–you can follow your package the entire time it makes its way to you!<\/p>",
+            "category": "shipping"
+          }
+        },
+        "d6adef86-1e71-45f6-8925-860a92bb75f6": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "target_section_color_scheme": "primary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": "reverse"
+          }
+        }
+      },
+      "block_order": [
+        "b9c2e0f0-fa6d-424e-86bd-0b0739a81516",
+        "b8e550a3-ccdc-4a55-ac16-76b6f86f6864",
+        "e22484ef-89ba-4ff0-9a3e-ef357a1770e6",
+        "adedff46-55c8-4e80-b187-a49ebbc88ee8",
+        "faq_HHnj4R",
+        "a0b5c887-3258-46e4-bad0-fcf1d52efb43",
+        "faq_XW8ei6",
+        "faq_NeBdEV",
+        "faq_xN4ikh",
+        "d6adef86-1e71-45f6-8925-860a92bb75f6"
+      ],
+      "disabled": true,
+      "settings": {
+        "background": true,
+        "heading": "FAQ",
+        "tabs": "Product, Subscription, Shipping",
+        "chat_heading": "Have any questions?",
+        "chat_content": "<p>Chat with our customer support team.<br> Monday - Friday 9am to 5pm (EST).<\/p>\n<p><a onclick=\"GorgiasChat.open();\" class=\"chat\">Start Chat <i class=\"fa-regular fa-comment-dots\"><\/i>\n<\/a><\/p>\n<p>You can also contact us via email:<\/p>\n<ul>\n<li><a href=\"https:\/\/goodprotein.ca\/pages\/contact\"><i class=\"fa-solid fa-envelope\"><\/i>info@goodprotein.ca<\/a><\/li>\n<\/ul>",
+        "color_bg": "#fcf7e4"
+      }
+    },
+    "353fe27a-5e75-4e07-a74a-8858a1bf52db": {
+      "type": "product-section-1",
+      "disabled": true,
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/pd-2.png",
+        "image_position": "left",
+        "heading": "Every order makes a nutritional  impact for a mother or child.",
+        "sub_heading": "",
+        "content": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.<\/p>",
+        "max_width": "400",
+        "btn_text": "See Our Cause",
+        "btn_url": "#",
+        "image": "shopify:\/\/shop_images\/pd-1.png",
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4e136310-1788-411b-a9dd-3d710b8d176d",
+    "63d86149-3de8-44e0-9fc5-522d7f858a28",
+    "9bcc3e2d-da35-4c7e-92dc-c286ee68f5c1",
+    "1681839312959091a3",
+    "cd0e31ad-e872-4998-a438-1f33ad3b5b27",
+    "ee6e96ba-ba06-4f35-9fc6-a0282957f485",
+    "353fe27a-5e75-4e07-a74a-8858a1bf52db"
+  ]
+}

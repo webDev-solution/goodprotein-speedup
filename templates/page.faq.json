@@ -1,0 +1,410 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "0b7fd576-fa70-4e61-8ae2-2471d52c6f80": {
+      "type": "feature-text",
+      "blocks": {
+        "9f87b19b-fde7-4d51-ad19-422876d48eb1": {
+          "type": "sticker",
+          "disabled": true,
+          "settings": {
+            "text": "FAQ",
+            "shape": "star_1",
+            "width": 150,
+            "sticker_font_size": "1.563rem",
+            "half_image_width_on_mobile": true,
+            "horizontal_position": 71,
+            "vertical_position": 59,
+            "rotate": -4,
+            "show_sticker_on_mobile": true,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "constantly_rotate",
+            "enable_parallax": false,
+            "parallax_speed": 1,
+            "color": "bg-scheme-accent text-scheme-accent-overlay",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "9f87b19b-fde7-4d51-ad19-422876d48eb1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "rich_text": "<h3><strong>Answers to all your questions<\/strong><\/h3>",
+        "mobile_text_size": "text-3xl",
+        "desktop_text_size": "lg:text-6xl",
+        "display_on_card": false,
+        "apply_effects": false,
+        "content_width_desktop": "lg:w-1\/3",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "363c3bef-9c19-44d7-b2c0-e1800b660c24": {
+      "type": "faq",
+      "blocks": {
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-0": {
+          "type": "question",
+          "settings": {
+            "question": "Are your products high quality?",
+            "answer": "<p>Our manufacturer holds SQF (Safe Quality Food) certification from GFSI (Global Food Safety Initiative) (https:\/\/www.sqfi.com\/our-program\/what-is-sqf), which means that each ingredient used in our products is assessed for its level of risk to consumer health or food fraud. Analyses are then carried out on the various ingredients and on each batch of mixes, to offer you a safe, quality product.<\/p>"
+          }
+        },
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-1": {
+          "type": "question",
+          "settings": {
+            "question": "Will I lose weight by consuming your products?",
+            "answer": "<p>Our blends weren’t specifically created for weight loss, but they can easily be integrated into a healthy diet and training regimen that’s been designed for weight loss. Using high quality, functional superfood blends that are rich in nutrients is a great way to help achieve your goals. Talk to a healthcare professional before beginning any weight loss program and seek out a certified professional to design one tailored to you and your needs.<\/p>"
+          }
+        },
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-2": {
+          "type": "question",
+          "settings": {
+            "question": "Can I take your products if I'm pregnant or breastfeeding?",
+            "answer": "<p>You should always talk with a healthcare professional before trying any new natural products, and that’s especially true while pregnant or breastfeeding. That being said, every single ingredient in our blends is either organic or certified GMO-free and, of course, of the utmost quality. We recommend taking a look at the ingredients in each superfood blend, as well as the nutritional facts, to see what’s suitable for your needs.<\/p>"
+          }
+        },
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-3": {
+          "type": "question",
+          "settings": {
+            "question": "Are the products safe for children?",
+            "answer": "<p>All of our superfood blends contain plant-based ingredients that are made from real, organic, GMO-free whole foods. Our blends are full of fruits, vegetables and other superfoods, making them highly nutritious and, in all likelihood, perfect for your children’s needs. We recommend taking a look at the ingredients in each product, as well as the nutritional facts, to see what’s suitable for your children.<\/p>"
+          }
+        },
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-5": {
+          "type": "question",
+          "settings": {
+            "question": "Is the All-in-One Superfood Shake a meal replacement?",
+            "answer": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.<\/p>"
+          }
+        },
+        "39063f7b-ad77-4cde-a335-0e8d150bcfe6": {
+          "type": "question",
+          "settings": {
+            "question": "Where do your products come from?",
+            "answer": "<p>We’re based in Quebec, Canada and we’re proud to say that all of our blends are made locally. Our ingredients come from renowned suppliers around the world, with the majority being based right here in Canada.<\/p>"
+          }
+        },
+        "dfa6fd78-0112-43c3-84f7-cb065a2ab724": {
+          "type": "question",
+          "settings": {
+            "question": "What’s Reb-M and why have I never heard of it before?",
+            "answer": "<p>We use organic Reb-M (Rebaudioside M), an isolated steviol glycoside found in the stevia leaf. Conventional stevia-based sweeteners often have significant aftertaste and bitterness, but isolated Reb-M doesn’t include the enzymes that create those unpleasant tastes. The result is a zero-calorie, plant-based sweetener that tastes exactly like sugar — without leaving a bad taste in your mouth.<\/p><p>You’re probably wondering why you haven’t heard of it before if it’s such a great product. The answer? It costs us 400% more than the sweeteners that you’ll find in most other shakes and powders — we believe the best ingredients are worth it, even when others settle for “good  enough”.<\/p>"
+          }
+        },
+        "8513941b-ba4d-457a-96dd-b941ecf44b68": {
+          "type": "question",
+          "settings": {
+            "question": "Can I substitute my vegetables with the Green Superfood Juice?",
+            "answer": "<p>Our superfood blends aren’t intended to replace any specific type of food, nor a real meal. That being said, our Green Superfood Juice is a great alternative for those who might not eat enough vegetables, since each scoop of our unique blend contains up to 4 servings of nutrient-rich greens.<\/p>"
+          }
+        },
+        "c6e4998d-0011-4ae3-a320-e2ad180b9bb0": {
+          "type": "question",
+          "settings": {
+            "question": "How does Red Superfood Juice compare to an energy drink?",
+            "answer": "<p>We love the Red Superfood Juice because it offers a jolt of energy without the jitters that come with an afternoon coffee. Rather than synthetic caffeine, which is added to most energy drinks (not to mention all of the artificial sweeteners), our Red Superfood Juice is made with whole coffee fruit extract, considered a superfood because of the caffeine and polyphenols that it contains — naturally, of course. Our Red Superfood Juice is also packed with freeze-dried berries that are known to increase energy — again, naturally.<\/p>"
+          }
+        },
+        "ed4bdee2-6932-44f1-a72d-a6efcf6d5de1": {
+          "type": "shape_divider",
+          "disabled": true,
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-0",
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-1",
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-2",
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-3",
+        "template--14678748561517__363c3bef-9c19-44d7-b2c0-e1800b660c24-168201104785f93458-5",
+        "39063f7b-ad77-4cde-a335-0e8d150bcfe6",
+        "dfa6fd78-0112-43c3-84f7-cb065a2ab724",
+        "8513941b-ba4d-457a-96dd-b941ecf44b68",
+        "c6e4998d-0011-4ae3-a320-e2ad180b9bb0",
+        "ed4bdee2-6932-44f1-a72d-a6efcf6d5de1"
+      ],
+      "custom_css": [
+        ".card {border-radius: 30px; border-width: 2px; border-color: #0066cc;}",
+        "h2 {font-size: 34px;}",
+        "h3 {font-size: 18px;}"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "body",
+        "two_columns_desktop": false,
+        "title": "Product",
+        "richtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
+        "use_gradient_background": false
+      }
+    },
+    "9fcc4455-0120-4ef6-8940-72cf89c782cc": {
+      "type": "faq",
+      "blocks": {
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-1": {
+          "type": "question",
+          "settings": {
+            "question": "How much is shipping?",
+            "answer": "<p>Deliveries in the majority of Canada are free for orders over $55. For any order falling under the minimum amount required, we charge a shipping fee of $10.95, $12.95 or $19.95 depending on the area. *See Section 12 our the Terms & Conditions.<\/p>"
+          }
+        },
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-0": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>In general, your package will arrive within 5-7 business days. Tracking will be provided–you can follow your package the entire time it makes its way to you!<\/p>"
+          }
+        },
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-2": {
+          "type": "question",
+          "settings": {
+            "question": "What is your 60-day Satisfaction Guarantee?",
+            "answer": "<p>If you’re trying us for the first time and aren’t totally thrilled, no stress! If your bag is at least half full and wish to return it within 60 days of your delivery date, we’ll give you a full refund minus a 15% return fee. Prefer to exchange? No problem! You can swap your original item(s) for a different flavour with a $5 shipping fee (fees waived with subscription), and you can do this up to 2 times a year.<\/p><p>For second (or third, or fourth, or... you get the jist!) purchases, you can only exchange an open bag for a different flavour with $5 shipping fee (unless you're subscribed, and then it's free!). You can enjoy up to 2 swaps a year.<\/p><p>For any order-related issues, like if you receive the wrong product or a damaged product, just let us know at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\">info@goodprotein.ca<\/a>, and we'll sort it out quickly.<\/p><p>Just a heads-up: Sample Packs and accessories like the Shaker Bottle are excluded from this policy. <\/p><p><a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\" title=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\">Click here<\/a> to view the complete terms & conditions of our 60-day Satisfaction Guarantee, or contact us at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\">info@goodprotein.ca<\/a> for more details!covering the return shipping. <\/p>"
+          }
+        },
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-3": {
+          "type": "question",
+          "settings": {
+            "question": "What happens if I’m not home when my order gets delivered?",
+            "answer": "<p>Our shipping providers don’t require a signature upon delivery of your Good Protein order, so, if the location seems secure — or if you’ve left instructions about where to leave a delivery — the box will be left on site. If you feel it’s not ideal to have it delivered to your home when you’re not there, we recommend having it delivered somewhere else. Like, say, at work, where we’re sure your colleagues will appreciate your new, tasty — and healthy! — treats.<\/p>"
+          }
+        },
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-4": {
+          "type": "question",
+          "settings": {
+            "question": "Do you deliver to PO boxes?",
+            "answer": "<p>Unfortunately, we can't guarantee delivery to a PO box. While we use a number of different shipping providers, the vast majority of them won't deliver to a PO box.<br\/><br\/>If you're worried about delivery when you're not home, you can always leave a note for the delivery person to drop the package at a back door, or have it delivered to an office, a commercial address or a pick-up counter.<\/p>"
+          }
+        },
+        "195fad13-a134-4a0c-b224-62c8caeecb81": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
+        "16f3c442-7f05-4bd5-af26-b7f29c87306b": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-1",
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-0",
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-2",
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-3",
+        "template--14678748561517__9fcc4455-0120-4ef6-8940-72cf89c782cc-168201104785f93458-4",
+        "195fad13-a134-4a0c-b224-62c8caeecb81",
+        "16f3c442-7f05-4bd5-af26-b7f29c87306b"
+      ],
+      "custom_css": [
+        ".card {border-radius: 30px; border-width: 2px; border-color: #0066cc;}",
+        "h2 {font-size: 34px;}",
+        "h3 {font-size: 18px;}"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "body",
+        "two_columns_desktop": false,
+        "title": "Delivery",
+        "richtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "a4ad1b71-f27c-4cf9-9f82-709f89d7c148": {
+      "type": "faq",
+      "blocks": {
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-0": {
+          "type": "question",
+          "settings": {
+            "question": "What’s the difference between a one-time purchase and a subscription?",
+            "answer": "<p>On the product page, you’ll see two options: <strong>one-time purchase <\/strong>or <strong>subscribe & save 20%<\/strong>. By selecting one-time purchase, you’re ordering the blend of your choice without committing to another order. If you choose to subscribe, you’ll save 20% on every order, but need to place at least two orders before cancelling — otherwise you’ll be charged the regular price.<\/p>"
+          }
+        },
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-1": {
+          "type": "question",
+          "settings": {
+            "question": "What does a subscription entail?",
+            "answer": "<p>Put simply, a subscription allows you to save 20% on all of your orders; meaning you can take full advantage of our superfood blends — and discover all of their benefits — at a low price. We know what you’re thinking: that’s a great deal and you’re wondering how to subscribe. All it takes is opting in and receiving at least 2 shipments. You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price.<\/p>"
+          }
+        },
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-2": {
+          "type": "question",
+          "settings": {
+            "question": "Will I receive orders automatically if I subscribe?",
+            "answer": "<p>When you subscribe, not only do you save 20%, but you’ll also be set up for automatic re-orders — so you never have to worry about running low on superfood blends. Our subscription is flexible: you can choose to receive a delivery every 30, 45 or 60 days, depending on how often you use our products. It’s easy and convenient to modify and manage your subscription; meaning you can change or skip a delivery if need be, right up until the day it’s processed.<\/p>"
+          }
+        },
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-3": {
+          "type": "question",
+          "settings": {
+            "question": "Will I get charged every month for my subscription?",
+            "answer": "<p>Not necessarily. Because you choose when your orders get delivered, you’ll be charged according to your subscription details. For example, if you’re set to re-order every 45 days, you’ll be charged every 45 days.<\/p>"
+          }
+        },
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-4": {
+          "type": "question",
+          "settings": {
+            "question": "How do I manage my subscription?",
+            "answer": "<p>Once you’ve logged into your account, you can control everything yourself — we promise it’s easy. Click the <strong>Delivery Schedule <\/strong>tab and you’ll see when your next deliveries are planned. Going on a trip and want to skip your next delivery? Easy. Click the <strong>Subscriptions <\/strong>tab and you’ll see all the product and subscription details; to the right of that, you’ll see an <strong>Edit <\/strong>button (on mobile you’ll have to swipe right, slightly). Click that and you’ll be able to change which products or flavours you receive, customize the frequency of your orders, put your subscription on pause or cancel your subscription.<\/p>"
+          }
+        },
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-5": {
+          "type": "question",
+          "settings": {
+            "question": "Can I cancel an order?",
+            "answer": "<p>If you’ve received an order conformation for a delivery that you don’t want right away, it’s possible for us to cancel it or postpone it, as long as the order hasn’t been processed. If the order has been processed, it won’t be possible for us to cancel it.<\/p><p>If you’ve received an order that you don’t want, it’s possible to return it and get a refund. If you want to return an order, let us know by contacting <a href=\"mailto:info@goodprotein.ca\">info@goodprotein.ca<\/a> and we’ll help you take care of it.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-0",
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-1",
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-2",
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-3",
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-4",
+        "template--14678748561517__a4ad1b71-f27c-4cf9-9f82-709f89d7c148-1685383580ff48e5ac-5"
+      ],
+      "custom_css": [
+        ".card {border-radius: 30px; border-width: 2px; border-color: #0066cc;}",
+        "h2 {font-size: 34px;}",
+        "h3 {font-size: 18px;}"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "body",
+        "two_columns_desktop": false,
+        "title": "Subscriptions",
+        "richtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
+        "use_gradient_background": false
+      }
+    },
+    "faq_GQzLPi": {
+      "type": "faq",
+      "blocks": {
+        "question_ReQxgj": {
+          "type": "question",
+          "settings": {
+            "question": "So, what’s changed?",
+            "answer": "<p>You loved our shakes before, and now you’re gonna love ‘em even more. We’re thrilled to introduce our new & improved All-in-One Shakes, with creamier taste, smoother texture, cleaner ingredients, and a bolder look.<\/p><p>Let’s break it down: <\/p><p><strong>CREAMIER<\/strong><\/p><p>✅ Curb your cravings with the creamiest, most decadent flavours packed with feel-good ingredients that taste unbelievably good, too. <\/p><p><strong>SMOOTHER<\/strong><\/p><p>✅ No grainy or chalky texture. No bad aftertaste. Just thick, frothy goodness that goes down real smooth, like your favourite milkshake.<\/p><p><strong>CLEANER<\/strong><\/p><p>✅ We upped the number of fruits & veggies in each shake to give your body the best balance of essential vitamins, minerals, and micronutrients.<\/p><p>✅ We replaced the sunflower oil with coconut-derived MCT oil - the result is a more natural, higher-quality shake, free of seed oils.<\/p><p><strong>BRIGHTER<\/strong><\/p><p>✅ Each shake now blends true to its flavour, so Strawberry & Cream blends pink, Peanut Butter blends brown, you get the gist!<\/p><p><strong>BOLDER<\/strong><\/p><p>✅ Even our packaging got an upgrade ‘cause new recipes call for... well, new looks! Now they’re equally as bold.<\/p>"
+          }
+        },
+        "question_6TmMrk": {
+          "type": "question",
+          "settings": {
+            "question": "Which flavours are now made with the new & improved recipe?",
+            "answer": "<p>All of them! <\/p><p>While every single shake in our line-up has gotten a major recipe glow-up, a few of them also changed names to better reflect their flavour profile, too. <\/p><p><span style=\"text-decoration:underline\">All-new flavours<\/span><\/p><p>Mixed Berries<\/p><p>Peanut Butter<\/p><p><span style=\"text-decoration:underline\">Same flavour profile, new name and new recipe<\/span><\/p><p>Vanilla Chai is now Chai Latte<\/p><p>Chocolate is now Chocolate Fudge<\/p><p>Banana Cream is now Bananas & Cream<\/p><p>Chocolate Mint is now Mint Chocolate Chip<\/p><p>Unsweetened Natural is now Unflavored<\/p><p><span style=\"text-decoration:underline\">Same flavour profile, same name and new recipe<\/span><\/p><p>Strawberries & Cream<\/p><p>Cookies & Cream<\/p><p>Salted Caramel<\/p><p>Mocha<\/p><p><span style=\"text-decoration:underline\">Discontinued<\/span><\/p><p>Açai Berry<\/p><p>Peanut Butter Cup<\/p>"
+          }
+        },
+        "question_Xtbpkm": {
+          "type": "question",
+          "settings": {
+            "question": "Why the change?",
+            "answer": "<p>For two equally big reasons. <\/p><p>#1 - Us.<\/p><p>Our recipe was good before, but why settle for good when we can do... gooder? Especially when we’ve got someone like our CEO Edward, always on the grind for THE cleanest, best-tasting ingredients out there. He scoured, he conquered. <\/p><p>#2 - You.<\/p><p>The love our customer base continues to give us NEVER EVER goes unnoticed. There’s been major hype, and we love that. But there’s also been 5 years’ worth of very valid feedback, and since we put our community over everything else, it was time for us to talk the talk AND walk the walk!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_ReQxgj",
+        "question_6TmMrk",
+        "question_Xtbpkm"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".card {border-radius: 30px; border-width: 2px; border-color: #0066cc;}",
+        "h2 {font-size: 34px;}",
+        "h3 {font-size: 18px;}"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "body",
+        "two_columns_desktop": false,
+        "title": "Good Protein - Rebranded",
+        "richtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "66d20962-3c5d-44f0-b1c5-bcd3999bdd8d": {
+      "type": "rich-text",
+      "blocks": {
+        "dbc53a0a-248b-4747-90ab-6d2b2e33495f": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "dbc53a0a-248b-4747-90ab-6d2b2e33495f"
+      ],
+      "settings": {
+        "logo_max_width": 120,
+        "title": "Didn't find what you were looking for?",
+        "heading_size": "heading-template",
+        "site_review": false,
+        "rich_text": "",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-1\/2",
+        "button_link": "shopify:\/\/pages\/contact",
+        "button_label": "Contact us",
+        "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0b7fd576-fa70-4e61-8ae2-2471d52c6f80",
+    "363c3bef-9c19-44d7-b2c0-e1800b660c24",
+    "9fcc4455-0120-4ef6-8940-72cf89c782cc",
+    "a4ad1b71-f27c-4cf9-9f82-709f89d7c148",
+    "faq_GQzLPi",
+    "66d20962-3c5d-44f0-b1c5-bcd3999bdd8d"
+  ]
+}

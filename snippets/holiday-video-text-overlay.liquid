@@ -1,0 +1,193 @@
+{% liquid
+  assign content_class = 'grid absolute inset-0 w-full h-full'
+  assign content_inset_class = 'max-w-site py-5 px-section mx-auto'
+  assign card_container_class = 'card-container max-w-sm'
+  assign card_content_class = 'card py-5 py-10 px-section'
+  case crop
+    when 'four-three'
+        assign container_class = 'aspect-w-4 aspect-h-3'
+    when 'widescreen'
+        assign container_class = 'aspect-w-16 aspect-h-9'
+    when 'cinematic'
+      assign container_class = 'aspect-w-2.35 aspect-h-1'
+    when 'full-screen'
+      assign container_class = 'h-screen'
+  endcase
+
+  case crop_desktop
+    when 'four-three'
+      assign container_class = container_class | append: ' lg:h-auto lg:aspect-w-4 lg:aspect-h-3'
+    when 'widescreen'
+      assign container_class = container_class | append: ' lg:h-auto lg:aspect-w-16 lg:aspect-h-9'
+    when 'cinematic'
+      assign container_class = container_class | append: ' lg:h-auto lg:aspect-w-2.35 lg:aspect-h-1'
+    when 'full-screen'
+      assign container_class = container_class | append: ' lg:p-0 lg:h-screen'
+  endcase
+%}
+
+<div class="holiday-video-text-overlay-saturn relative z-10 lg:bg-transparent {{ container_class }}" style="background: url({{fallback_image | img_url: '2048x' }}); background-repeat: no-repeat; background-size: cover;" >
+  <div class="{% if style == 'inset' %}max-w-site px-5 lg:px-10 py-5 mx-auto{% endif %}">
+    <div class="{% if style == 'inset' %}media-style-container{% endif %}">
+      {% render 'background-video',
+        video: video,
+        fallback_image: fallback_image,
+        component_id: section.id
+      %}
+    </div>
+  </div>
+  <div
+    class="body-container-saturn px-section py-section-vertical-spacing {{ content_class }} z-10  text-scheme-text {{ place_content }} {{ text_align }} {% if style == 'inset' %}max-w-site mx-auto{% endif %}" 
+  > 
+
+  {%- capture content %}
+    {% if title != blank %}
+      <div class="top-text-flavour-saturn">New and Limited Edition Flavour</div>
+      <h2 class="text-heading-saturn font-heading  {{ heading_size }} heading-style {{ settings.heading_drop_shadow_style }}">
+        {{ title | escape }}
+      </h2>
+    {% endif %}
+    {% if richtext != blank %}
+      <div class="richtext text-theme-basic mt-5 text-richtext-saturn">
+        {{ richtext }}
+      </div>
+    {% endif %}
+
+    {% if cta_url != blank and cta_text != blank %}
+      <!-- <div class="relative z-10 mt-5">
+        <a class="inline-block push-btn" href="{{ cta_url }}">
+          <span class="push-btn-surface custom-btn-saturn">{{ cta_text }}</span>
+        </a>
+      </div> -->
+      <button id="quick-buy-btn-41937434968173" class="btn quick-buy-btn custom-btn-saturn" data-product-id="41937434968173" data-variant-id="41937434968173">
+        Add
+      </button>
+    {% endif %}
+  {%- endcapture -%}
+
+    <div class="{% if style == 'inset' %}{{ content_inset_class }}{% endif %}">
+      <div class="{% if display_on_card == true %}{{ card_container_class }}{% endif %} text-scheme-text" data-color-scheme="{{ text_overlay_color }}">
+        <div class="{% if display_on_card == true %}{{ card_content_class }}{% endif %}">
+          {{ content }}
+        </div>
+        {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .holiday-video-text-overlay-saturn {
+    background-size: contain !important;
+  }
+  .holiday-video-text-overlay-saturn .top-text-flavour-saturn {
+    color: red;
+    font-size: larger;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+  .holiday-video-text-overlay-saturn .text-heading-saturn {
+    color: {{ title_color }} !important;
+  }
+  .holiday-video-text-overlay-saturn .text-richtext-saturn {
+    font-family: "Gelica Bk" !important;
+  }
+  .holiday-video-text-overlay-saturn .text-richtext-saturn strong {
+    font-family: "Gelica Bk" !important;
+  }
+  .holiday-video-text-overlay-saturn .custom-btn-saturn{
+    color: #C82700;
+    background-color: #C2E4F2;
+    padding: 9px 55px;
+    border: 3px solid red;
+    font-family: "Gelica Bk" !important;
+    margin-top: clamp(5px, 3vw, 30px);
+  }
+  @media (min-width: 500px) and (max-width: 767px) {
+    #shopify-section-template--16211340984429__video_with_text_overlay_q7wcVp .py-section-vertical-spacing {
+        padding: 30px 0px !important;
+    }
+    #shopify-section-template--16211340984429__video_with_text_overlay_q7wcVp .top-text-flavour-saturn {
+        padding-top: 20px;
+    }
+     .holiday-video-text-overlay-saturn .text-heading-saturn {
+       padding-top: 16px;
+     }
+     .holiday-video-text-overlay-saturn .mt-5 {
+        margin-top: 40px !important;
+    }
+    #shopify-section-template--16211340984429__video_with_text_overlay_q7wcVp .inline-block.push-btn {
+        padding-bottom: 20px;
+    }
+  }  
+  @media (max-width: 400px) {
+    .holiday-video-text-overlay-saturn .top-text-flavour-saturn {
+      padding: 0px;
+    }
+    .holiday-video-text-overlay-saturn .custom-btn-saturn{
+      padding: 5px 40px;
+      border: 2px solid red;
+      font-family: "Gelica Bk" !important;
+    }
+    .holiday-video-text-overlay-saturn .mt-5 {
+      /* margin-top: 5px !important; */
+    }
+  }
+  @media (max-width: 400px) {
+    .holiday-video-text-overlay-saturn .text-richtext-saturn {
+      display: none;
+    }
+  }
+  @media (min-width: 500px) and (max-width: 700px) {
+    .section-content .holiday-video-text-overlay-saturn .text-scheme-text > div {
+      max-width: 350px !important;
+      position: relative;
+      left: 60px !important;
+    }
+    .holiday-video-text-overlay-saturn .mt-5 {
+      margin-top: 8px !important;
+    }
+    .holiday-video-text-overlay-saturn .text-richtext-saturn p {
+          font-size: 16px !important;
+    }
+    .holiday-video-text-overlay-saturn button.btn.quick-buy-btn {
+      font-size: 14px !important;
+      margin-top: 10px;
+      padding: 7px 55px;
+    }
+    .holiday-video-text-overlay-saturn .text-heading-saturn {
+        padding-top: 0px !important;
+    }
+  }
+  @media (min-width: 400px) and (max-width: 500px) {
+    .section-content .holiday-video-text-overlay-saturn .text-scheme-text > div {
+      max-width: 290px !important;
+      position: relative;
+      left: 12vw !important;
+    }
+    .holiday-video-text-overlay-saturn .top-text-flavour-saturn {
+      padding-top: 0px !important;
+    }
+    .holiday-video-text-overlay-saturn h2.text-heading-saturn {
+      font-size: unset;
+    }
+    .holiday-video-text-overlay-saturn .text-richtext-saturn {
+      margin-top: 0px !important;
+    }
+    .holiday-video-text-overlay-saturn .text-richtext-saturn p {
+          font-size: 13px !important;
+    }
+    .holiday-video-text-overlay-saturn button.btn.quick-buy-btn {
+      padding: 4px 29px;
+      border: 2px solid red;
+    }
+  }
+  @media (max-width: 400px) {
+    .section-content .holiday-video-text-overlay-saturn .text-scheme-text > div {
+      left: 0px !important;
+      max-width: 400px !important;
+      text-align: center;
+      background: radial-gradient(#ffffff, transparent);
+    }
+  }
+</style>

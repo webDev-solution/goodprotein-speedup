@@ -1,0 +1,39 @@
+<section class="text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} " data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" >
+
+  <div class="section-content py-section-vertical-spacing px-section  mx-auto">
+     <div class="custom_url"></div>
+    <script>
+      var currentURL = window.location.href;
+      if (currentURL.includes('/fr')) {
+        document.querySelector('.custom_url').id = "friendbuylandingpage-fr";
+      } else {
+        document.querySelector('.custom_url').id = "friendbuylandingpage";
+      }
+    </script>    
+{% comment %}
+    {% if  request.path contains '/fr' %}
+      <div id="friendbuylandingpage-fr"></div>
+    {% else %}
+      <div id="friendbuylandingpage"></div>
+    {% endif %}  
+{% endcomment %}    
+  </div>
+</section>  
+
+{% schema %}
+{
+  "name": "friend-page",
+  "presets": [
+    {
+      "name": "friend-page-template"
+    }
+  ],
+  "templates": ["page"]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

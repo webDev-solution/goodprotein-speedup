@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "image_with_text_overlay_dQ4NGM": {
+      "type": "raise-check-gift-card-balance-saturn",
+      "blocks": {
+        "title_Ef6jiR": {
+          "type": "title",
+          "settings": {
+            "title": "Get on board with Good Protein Rewards",
+            "heading_size": "heading-base"
+          }
+        },
+        "text_G6bYRq": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p><strong>Earning rewards with Good Protein is easy, simple, and fun. Just shop our delicious protein shakes online, enjoy the benefits of a healthy diet, and you'll be on your way to earning amazing rewards and cashback!<\/strong><\/p>"
+          }
+        },
+        "button_q6Kz3Q": {
+          "type": "button",
+          "settings": {
+            "cta_url_1": "\/account\/login",
+            "cta_text_1": "Join Now",
+            "cta_url_2": "https:\/\/rise.ai\/",
+            "cta_text_2": "Sign In"
+          }
+        }
+      },
+      "block_order": [
+        "title_Ef6jiR",
+        "text_G6bYRq",
+        "button_q6Kz3Q"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screenshot_4.webp",
+        "image_mobile": "shopify:\/\/shop_images\/Screenshot_4.webp",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "primary",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_dQ4NGM"
+  ]
+}

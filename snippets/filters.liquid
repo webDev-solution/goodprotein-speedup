@@ -1,0 +1,58 @@
+<template data-should-teleport="#left-drawer-slot">
+  <div
+    :data-modal-label="$store.modals.leftDrawer.contents === 'filters' ? '{{ 'facets.filters.title_tags' | t }}' : false"
+    x-show="$store.modals.leftDrawer.contents === 'filters'"
+    class="sidebar-filters px-section "
+  >
+    {%- liquid
+      assign sort_by = results.sort_by | default: results.default_sort_by
+      assign total_active_values = 0
+      for filter in results.filters
+        assign total_active_values = total_active_values | plus: filter.active_values.size
+        if filter.type == 'price_range'
+          if filter.max_value.value or filter.min_value.value
+            assign total_active_values = total_active_values | plus: 1
+          endif
+        endif
+      endfor
+      if results.url
+        assign results_url = results.url
+      else
+        assign terms = results.terms | escape
+        assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+      endif
+    -%}
+      <div class="relative flex items-center justify-between pt-5 pb-2.5 w-full border-b-input border-scheme-text">
+        <h1 class="font-heading  heading-base heading-style full_shadow" class="" tabindex="-1">
+          {{ 'facets.filters.title_tags' | t }}
+        </h1>
+        <button @click.prevent="$store.modals.close('filters')" class="block top-0">
+          <span class="sr-only">{{ 'general.accessibility.close_modal' | t }}</span>
+          <span class="inline-block w-5 h-5">{% render 'icon-close' %}</span>
+        </button>
+      </div>
+    {% if linklists[section.settings.tab_menu] != blank %}
+      <aside>
+        <nav>
+          <ul class="mt-5 mb-5">
+            {% for link in linklists[section.settings.tab_menu].links %}
+              {% assign grid__collection = link.object %}
+              <li class="mb-2.5">
+                {% if link.title == 'All' %}
+                <a class="pb-1" href="/collections/all">
+                  {{- link.title -}}
+                </a>
+                {% else %}
+                <a class="pb-1" href="{{ link.url }}?view=sub">
+                  {{- link.title -}}
+                </a>
+                {% endif %}
+                
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </aside>
+    {% endif %}
+  </div>
+</template>

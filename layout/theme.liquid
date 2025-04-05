@@ -1,0 +1,1003 @@
+{%- capture avada-seo-original -%}
+
+<!doctype html>
+  <html class="no-js" lang="{{ request.locale.iso_code }}">
+    <head>
+
+
+      <style>
+        @font-face {
+          font-family: 'Gelica SBd';  
+          src: url('https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Gelica-Bold.otf?v=1726990667') format('truetype');
+          font-weight: normal;
+          font-style: normal;
+        }
+      </style>
+  
+      
+	{% render 'pandectes-rules' %}
+
+{% if handle contains 'limited-drop' %}
+<meta name="robots" content="noindex">
+{% endif %}
+{% if handle contains 'limited-clearance-fr-2024' %}
+<meta name="robots" content="noindex">
+{% endif %}
+{% if handle contains 'limited-clearance-eng-2024' %}
+<meta name="robots" content="noindex">
+{% endif %}
+{% if handle contains 'limited-clearance-fr' %}
+<meta name="robots" content="noindex">
+{% endif %}
+{% if handle contains 'limited-clearance' %}
+<meta name="robots" content="noindex">
+{% endif %}
+
+      
+	
+	
+      <!-- <script>
+          !async function(){function e(e){for(var t=e+"=",a=document.cookie.split(";"),i=0;i<a.length;i++){for(var n=a[i];" "==n.charAt(0);)n=n.substring(1,n.length);if(0==n.indexOf(t))return n.substring(t.length,n.length)}return null}function t(e,t,a){var i="";if(a){var n=new Date;n.setTime(n.getTime()+864e5*a),i="; expires="+n.toUTCString()}document.cookie=e+"="+(t||"")+i+"; path=/"}function a(e){document.cookie=e+"=; Max-Age=-99999999;"}let i=window.location.search,n=new URLSearchParams(i),o=n.get("code");o=o??n.get("rstr");var d=document.createElement("div"),c=document.createElement("span"),r=document.createElement("button");d.id="va-bar",c.id="va-text",r.id="va-close";let p="";if(o){let s=new Date().getTime()-6e4*new Date().getTimezoneOffset(),g=await fetch(window.location.origin+"/apps/veeper/api/proxy/campaign/apply?code="+o+"&time="+s),l=await g.json();l?.code===2e3?(p="\uD83C\uDFF7️"+l.data.message,t("campaign_code",o,1),t("campaign_id",l?.data?.campaign_id?"campaign_"+l.data.campaign_id:"",1),await fetch("/cart/update.js",{method:"POST",headers:{"X-Requested-With":"XMLHttpRequest","Content-Type":"application/json;"},body:JSON.stringify({attributes:{__campaign:l?.data?.campaign_id?"campaign_"+l.data.campaign_id:""}})})):(p="\uD83C\uDFF7️ Your discount code is not valid !",a("campaign_code"),a("campaign_id"))}p&&(c.textContent=p,r.textContent="Close",d.appendChild(c),d.appendChild(r),document.body.insertBefore(d,document.body.firstChild),setTimeout(()=>d.style.display="none",1e4),r.addEventListener("click",()=>d.style.display="none")),console.log("Working...")}();
+      </script> -->
+	    
+      <link rel='preconnect dns-prefetch' href='https://api.config-security.com/' crossorigin />
+      <link rel='preconnect dns-prefetch' href='https://conf.config-security.com/' crossorigin />
+      <link rel='preconnect dns-prefetch' href='https://whale.camera/' crossorigin />
+
+      <script>
+      /* >> TriplePixel :: start*/
+      window.TriplePixelData={TripleName:"goodproteinca.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
+      /* << TriplePixel :: end*/
+      </script>
+
+      <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
+      <!-- Added by AVADA SEO Suite -->
+      {% include 'avada-seo' %}
+      <!-- /Added by AVADA SEO Suite -->
+      <script>
+        window["friendbuyAPI"] = friendbuyAPI = window["friendbuyAPI"] || [];
+      
+        // registers your merchant using your merchant ID found in the
+        // retailer app https://retailer.friendbuy.io/settings/general
+        friendbuyAPI.merchantId = "f894d4ae-f869-4b60-8739-5f7c1ae871cd";
+        friendbuyAPI.push(["merchant", friendbuyAPI.merchantId]);
+      
+        // load the merchant SDK and your campaigns
+        (function(f, r, n, d, b, u, y) {
+          while ((u = n.shift())) {
+            (b = f.createElement(r)), (y = f.getElementsByTagName(r)[0]);
+            b.async = 1;
+            b.src = u;
+            y.parentNode.insertBefore(b, y);
+          }
+        })(document, "script", [
+          "https://static.fbot.me/friendbuy.js",
+          "https://campaign.fbot.me/" + friendbuyAPI.merchantId + "/campaigns.js",
+        ]);
+      </script>
+      <!-- Begin: Northbeam pixel -->
+      <script>(function(){var r;(n=r=r||{}).A="identify",n.B="trackPageView",n.C="fireEmailCaptureEvent",n.D="fireCustomGoal",n.E="firePurchaseEvent";var n="//j.northbeam.io/ota-sp/c124bfc4-86b5-4dfa-b945-1ff6f526e822.js";function t(n){for(var e=[],r=1;r<arguments.length;r++)e[r-1]=arguments[r];a.push({fnName:n,args:e})}var a=[],e=((e={_q:a})[r.A]=function(n,e){return t(r.A,n,e)},e[r.B]=function(){return t(r.B)},e[r.C]=function(n,e){return t(r.C,n,e)},e[r.D]=function(n,e){return t(r.D,n,e)},e[r.E]=function(n){return t(r.E,n)},window.Northbeam=e,document.createElement("script"));e.async=!0,e.src=n,document.head.appendChild(e);})()</script>
+      <!-- End: Northbeam pixel -->  
+      <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
+
+      <script>
+      /* >> TriplePixel :: start*/
+      window.TriplePixelData={TripleName:"goodproteinca.myshopify.com",ver:"1.9.0"},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","application/json")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e]),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,url:window.location.href,ref:document.referrer,ver:window.TriplePixelData.ver},O("//api.config-security.com/",5,p),O("//triplewhale-pixel.web.app/dot1.9.txt",5)))}}("","TriplePixel",localStorage);
+      /* << TriplePixel :: end*/
+      </script>
+
+      
+      {% render 'replo-head' %}
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="theme-color" content="">
+      <link rel="canonical" href="{{ canonical_url }}">
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
+      <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  
+
+      {%- liquid
+        assign main_font = settings.type_main_font
+        assign main_font_bold = main_font | font_modify: 'weight', 'bold'
+        assign heading_font = settings.type_heading_font
+        assign accent_font = settings.type_accent_font
+      -%}
+  
+      {%- if settings.favicon != blank -%}
+        <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: '32x32' }}">
+      {%- endif -%}
+  
+      {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+        <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+      {%- endunless -%}
+  
+      <title>
+        {{ page_title }}
+        {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+        {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+        {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      </title>
+
+      <script>
+        window["friendbuyAPI"] = friendbuyAPI = window["friendbuyAPI"] || [];
+      
+        // registers your merchant using your merchant ID found in the
+        // retailer app https://retailer.friendbuy.io/settings/general
+        friendbuyAPI.merchantId = "f894d4ae-f869-4b60-8739-5f7c1ae871cd";
+        friendbuyAPI.push(["merchant", friendbuyAPI.merchantId]);
+      
+        // load the merchant SDK and your campaigns
+        (function(f, r, n, d, b, u, y) {
+          while ((u = n.shift())) {
+            (b = f.createElement(r)), (y = f.getElementsByTagName(r)[0]);
+            b.async = 1;
+            b.src = u;
+            y.parentNode.insertBefore(b, y);
+          }
+        })(document, "script", [
+          "https://static.fbot.me/friendbuy.js",
+          "https://campaign.fbot.me/" + friendbuyAPI.merchantId + "/campaigns.js",
+        ]);
+      </script>
+  
+      {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}">
+      {% endif %}
+  
+      {%- render 'meta-tags' -%}
+  
+      {{ content_for_header }}
+
+      <script>
+       
+        document.addEventListener("DOMContentLoaded", function() {
+          const url = new URL(window.location.href);
+          const id = url.searchParams.get('id');
+          console.log(id);
+          const element = document.getElementById(id);
+          if (element) {
+              window.scrollTo({
+                  top: element.offsetTop,
+                  behavior: "smooth"
+              });
+          }
+        });
+      </script>
+  
+      {% render 'js-bridge' %}
+  
+      <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+      <script src="{{ 'utils.aio.min.js' | asset_url }}" defer></script>
+      <script src="{{ 'global.bundle.min.js' | asset_url }}" type="module"></script>
+      {% if template == 'cart' or settings.cart_type == 'modal' %}
+        <script src="{{ 'cart-items.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'cart-footer.aio.min.js' | asset_url }}" type="module"></script>
+        {% if settings.cart_notes_enable %}
+          <script src="{{ 'cart-note.aio.min.js' | asset_url }}" type="module"></script>
+        {% endif %}
+      {% endif %}
+      {% if request.design_mode %}
+        {% comment %} If theme editor, load all modules {% endcomment %}
+        <script src="{{ 'product.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-video.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-background-video.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'theme-editor-support.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'vendor-product.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'product-quick-buy.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'header.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'call-to-action-sticker.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'sections-age-check.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'filterable.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'login.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-popup.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-predictive-search.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'vendor-store-availability.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'store-availability.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'product-model.aio.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-photoswipe.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'shapes-animations.aio.min.js' | asset_url }}" defer></script>
+        <script src="{{ 'sections-footer.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'modules-quantity.bundle.min.js' | asset_url }}" type="module"></script>
+        <script src="{{ 'block-shape-divider.aio.min.js' | asset_url }}" type="module"></script>
+      {% endif %}
+      <script src="{{ 'alpine-extensions.aio.min.js' | asset_url }}" defer></script>
+
+      <link rel="stylesheet" href="{{ 'base.bundle.aio.min.css' | asset_url }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+      <script>
+        Fancybox.bind('[data-fancybox]', {
+          // Custom options
+        });    
+      </script>
+      <link rel="stylesheet" href="{{ 'custom.aio.min.css' | asset_url }}">
+      <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+
+      {{'custom-quickview.scss.css' | asset_url | stylesheet_tag }}
+
+      {% if template contains 'customers' %}
+      {% comment %}theme-check-disable ParserBlockingScriptTag{% endcomment %}
+      {{ "shopify_common.js" | shopify_asset_url | script_tag }}
+      {{ "customer_area.js" | shopify_asset_url | script_tag }}
+      {% comment %}theme-check-enable ParserBlockingScriptTag{% endcomment %}
+      {% endif %}
+
+      {% if product.metafields.custom.discount != blank %}
+        {% assign product_discount = product.metafields.custom.discount | default: 0 %}
+      {% else %}
+        {% assign product_discount = settings.discount | default: 0 %}
+      {% endif %}
+      {% if product_discount != blank %}
+      <script>
+        var product_percent = {{product_discount}};
+      </script>
+      {% endif %}
+      
+
+      {% style %}
+        :root {
+          --max-site-width: 1820px;
+        }
+        .junip-checkbox input[type=checkbox]+label:before {
+          border: 1px solid #000!important;
+        }
+
+        {{ main_font | font_face: font_display: 'swap' }}
+        {{ heading_font | font_face: font_display: 'swap' }}
+        {{ accent_font | font_face: font_display: 'swap' }}
+  
+        {%- liquid
+          assign main_font_bolder = main_font | font_modify: 'weight', 'bolder'
+          assign main_font_italic = main_font | font_modify: 'style', 'italic'
+          assign main_font_bold_italic = main_font_bold | font_modify: 'style', 'italic'
+          if main_font_bold
+            echo main_font_bold | font_face: font_display: 'swap'
+          endif
+          if main_font_italic
+            echo main_font_italic | font_face: font_display: 'swap'
+          endif
+          if main_font_bold_italic
+            echo main_font_bold_italic | font_face: font_display: 'swap'
+          endif
+          if main_font_bolder
+            echo main_font_bolder | font_face: font_display: 'swap'
+          endif
+        -%}
+  
+        {% if settings.heading_uppercase -%}
+          {%- capture heading_capitalize -%}uppercase{%- endcapture -%}
+        {% else -%}
+          {%- capture heading_capitalize -%}none{%- endcapture -%}
+        {% endif -%}
+        {%- capture heading_letterspacing -%}{{ settings.heading_letterspacing | divided_by: 1000.0 }}{% unless settings.heading_letterspacing == 0 -%}em{% endunless -%}{%- endcapture -%}
+  
+        :root {
+          --heading-font-stack: {{ heading_font.family }}, {{ heading_font.fallback_families }};
+          --heading-font-weight: {{ heading_font.weight }};
+          --heading-font-style: {{ heading_font.style }};
+          --heading-letterspacing: {{ heading_letterspacing }};
+          --heading-capitalize: {{ heading_capitalize }};
+          --main-font-stack: {{ main_font.family }}, {{ main_font.fallback_families }};
+          --main-font-weight: {{ main_font.weight }};
+          --main-font-style: {{ main_font.style }};
+          --accent-font-stack: {{ accent_font.family }}, {{ accent_font.fallback_families }};
+          --accent-font-weight: {{ accent_font.weight }};
+          --accent-font-style: {{ accent_font.style }};
+          
+          {% for scheme in settings.color_schemes %}
+            {% if forloop.index == 1 %}
+            .pdp-color- {
+              --color-pdp-title-color: {{scheme.settings.title_color}};
+              --color-pdp-background: {{ scheme.settings.background }};
+              --color-pdp-usps: {{ scheme.settings.text }};
+              --color-pdp-usps-text: {{ scheme.settings.ups_text_color }};
+              --color-pdp-nutrition-title: {{scheme.settings.nutrition_title_color}};
+              --color-pdp-nutrition-text: {{scheme.settings.nutrition_text_color}};
+              --color-pdp-section-1: {{scheme.settings.input}};
+              --color-pdp-section-2: {{scheme.settings.shadow}};
+              --color-pdp-section-3: {{scheme.settings.button_label}};
+              --color-pdp-section-5: {{scheme.settings.background_gradient}};
+              --color-pdp-section-5-icon: {{scheme.settings.background_gradient_icon}};
+              --color-pdp-section-7: {{scheme.settings.button}};
+              --color-pdp-section-7-icon: {{scheme.settings.icon-7}};
+              --color-pdp-section-8: {{scheme.settings.secondary_button_label}};
+              --color-pdp-section-faq: {{scheme.settings.caption}};
+            }
+            {% endif %}
+            .pdp-color-scheme-{{forloop.index}} {
+              --color-pdp-title-color: {{scheme.settings.title_color}};
+              --color-pdp-background: {{ scheme.settings.background }};
+              --color-pdp-usps: {{ scheme.settings.text }};
+              --color-pdp-usps-text: {{ scheme.settings.ups_text_color }};
+              --color-pdp-nutrition-title: {{scheme.settings.nutrition_title_color}};
+              --color-pdp-nutrition-text: {{scheme.settings.nutrition_text_color}};
+              --color-pdp-section-1: {{scheme.settings.input}};
+              --color-pdp-section-2: {{scheme.settings.shadow}};
+              --color-pdp-section-3: {{scheme.settings.button_label}};
+              --color-pdp-section-5: {{scheme.settings.background_gradient}};
+              --color-pdp-section-5-icon: {{scheme.settings.background_gradient_icon}};
+              --color-pdp-section-7: {{scheme.settings.button}};
+              --color-pdp-section-7-icon: {{scheme.settings.icon-7}};
+              --color-pdp-section-8: {{scheme.settings.secondary_button_label}};
+              --color-pdp-section-faq: {{scheme.settings.caption}};
+            }
+          {% endfor %}
+
+        }
+        .ly-switcher-wrapper {
+          display: none!important
+        }
+        
+      {% if request.path contains 'pages/holiday-2025' %}
+        #shopify-section-header, #shopify-section-footer { display: none; }
+      {% endif %}
+      {% if request.path contains 'pages/new-year-2025' %}
+        #shopify-section-header, #shopify-section-footer { display: none; }
+      {% endif %}
+
+      {% if request.path contains 'pages/bfcm-2024' %}
+        #shopify-section-header, #shopify-section-footer { display: none; }
+      {% endif %}
+       
+      {% endstyle %}
+      {%- render 'css-variables' %}
+  
+      {% comment %}theme-check-disable MissingTemplate{% endcomment %}
+      {% render 'critical-css' %}
+      {% comment %}theme-check-enable MissingTemplate{% endcomment %}
+      <style id="manual-critical-css">
+        [x-cloak] {
+          display: none;
+        }
+        [data-parallax-container] {
+          will-change: opacity;
+          opacity: 0;
+          transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        .no-js [data-parallax-container],
+        [data-parallax-container].animated {
+          opacity: 1;
+        }
+
+        @media (prefers-reduced-motion) {
+          [data-parallax-container] {
+            opacity: 1;
+          }
+        }
+      </style>
+  
+      {% unless heading_font.system? %}
+        <link rel="preload" as="font" href="{{ heading_font | font_url }}" type="font/woff2" crossorigin>
+      {% endunless %}
+      {% unless main_font.system? %}
+        <link rel="preload" as="font" href="{{ main_font | font_url }}" type="font/woff2" crossorigin>
+      {% endunless %}
+      <script>
+        window.onYouTubeIframeAPIReady = () => {
+          document.body.dispatchEvent(new CustomEvent('youtubeiframeapiready'));
+        };
+      </script>
+
+    {% include 'friendbuy' %}
+    <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}"></script>
+    {% include 'store-credit-launcher' %}
+    <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
+
+
+
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+const intervalId = setInterval(checkCartDrawerStatus, 10);
+        function checkCartDrawerStatus() {
+            const targetNode = document.getElementById('CartPopup');
+            // console.log("loop targetNode", targetNode)
+            if (targetNode) {
+                clearInterval(intervalId);
+const targetNode = document.getElementById('CartPopup');
+// Options for the observer (which mutations to observe)
+const config = { attributes: true, childList: true, subtree: true };
+
+// Callback function to execute when mutations are observed
+const callback = function(mutationsList, observer) {
+    for(const mutation of mutationsList) {
+        if (mutation.type === 'childList') {
+            // console.log('A child node has been added or removed.');
+        }
+        else if (mutation.type === 'attributes') {
+            // console.log(`The ${mutation.attributeName} attribute was modified.`);
+
+        }
+       helper();
+    }
+};
+
+// Create an observer instance linked to the callback function
+const observer = new MutationObserver(callback);
+
+// Start observing the target node for configured mutations
+observer.observe(targetNode, config);
+
+// To stop observing:
+// observer.disconnect();
+            }
+        }
+
+
+
+
+    });
+function helper(){
+  // console.log("drawer opened")
+const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-upgrade-dropdown optgroup[label="Subscription plans"]');
+
+    // Loop through each optgroup
+    subscriptionOptGroups.forEach(optGroup => {
+        // Get all options within the current optgroup
+        const options = optGroup.querySelectorAll('option');
+
+        // Loop through each option and hide those with "Subscribe & Save"
+        options.forEach(option => {
+            if (option.textContent.includes('Bundle')) {
+                option.style.display = 'none';
+            }
+        });
+    });
+}
+      </script>
+<script src="{{ 'loop_bundle.js' | asset_url }}"></script>
+{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}<body data-color-scheme="primary">
+
+  
+  
+      {% comment %}theme-check-disable MissingTemplate{% endcomment %}
+      <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
+      {% liquid
+        section 'announcement-bar'
+        if request.path contains 'pages/bfcm-2024'
+          section 'custom-header'
+        elsif request.path contains 'pages/holiday-2025'
+          section 'custom-holiday-header'
+        elsif request.path contains 'pages/new-year-2025'
+          section 'custom-holiday-header'
+        else
+          section 'header'
+        endif 
+      %}
+
+     <main id="MainContent" class="overflow-hidden">
+
+    {%- if request.path contains 'loop_subscriptions/bundle' or request.path contains 'loop_subscriptions/customer' -%}
+      {% render 'loop_loader' %}
+    {%- endif -%}
+  
+        {{ content_for_layout }}
+      </main>
+      {% section 'footer' %}
+      {%- if template == 'index' -%}
+        {%- section 'call-to-action' -%}
+      {%- endif -%}
+      {%- section 'age-check' -%}
+      <div id="screenreader-announce" class="sr-only" aria-live="polite" role="status"></div>
+  
+      <ul hidden>
+        <li id="a11y-refresh-page-message">{{ 'general.accessibility.refresh_page' | t }}</li>
+        <li id="a11y-selection-message">{{ 'general.accessibility.selection_help' | t }}</li>
+      </ul>
+  
+      {% comment %} Modal containers {% endcomment %}
+      {% render 'left-drawer' %}
+      {% render 'right-drawer' %}
+      {% render 'modal' %}
+      {% render 'manage-plan-modal' %}
+      <script src="{{ 'modals.js' | asset_url }}" type="module"></script>
+      {{'custom.js' | asset_url | script_tag }}
+
+      {% comment %}theme-check-enable LiquidTag{% endcomment %}
+      {%- if settings.show_on_sale_and_sold_out_badges -%}
+      {%- render 'static-sticker-defs' with shape: settings.on_sale_badge_shape, id: 'on-sale' -%}
+      {%- render 'static-sticker-defs' with shape: settings.sold_out_badge_shape, id: 'sold-out' -%}
+      {%- endif -%}
+      {%- render 'static-sticker-defs' with shape: settings.metafield_badge_shape, id: 'metafield-badge' -%}
+      {% comment %}theme-check-enable MissingTemplate{% endcomment %}
+
+    {{ 'ajaxinate.min.js' | asset_url | script_tag }}
+  
+    {% render 'junip-store-key' %}
+
+    <script>
+        // Get the current URL
+        var currentUrl = window.location.href;
+
+        // Check if the current URL is the French version
+        if (currentUrl.indexOf('/fr/') !== -1) {
+            // Load the Gorgias chat widget script
+            var script = document.createElement('script');
+            script.src = "https://config.gorgias.chat/bundle-loader/01GYCCA36KQ0Z8ZCXTEX79AMZE";
+            document.getElementById('gorgias-chat-widget-install-v3').appendChild(script);
+        }
+    </script>
+
+
+    <!-- CRITEO START -->
+    {% render 'criteo-tracking' %}
+    <!-- CRITEO END -->
+
+
+    {% if product %}
+    <script>
+    window.addEventListener('load', function() {
+    var _learnq = window._learnq || [];
+    function addedToCart() {
+      fetch(`${window.location.origin}/cart.js`)
+      .then(res => res.clone().json().then(data => {
+        var cart = {
+          total_price: data.total_price/100,
+          $value: data.total_price/100,
+          total_discount: data.total_discount,
+          original_total_price: data.original_total_price/100,
+          items: data.items
+        }
+        if (item !== 'undefined') {
+          cart = Object.assign(cart, item)
+        }
+        if (klAjax) {
+            _learnq.push(['track', 'Added to Cart', cart]);
+            klAjax = false;
+          }
+      }))
+    };
+    (function (ns, fetch) {
+      ns.fetch = function() {
+        const response = fetch.apply(this, arguments);
+        response.then(res => {
+          if (`${window.location.origin}/cart/add.js`
+            .includes(res.url)) {
+              addedToCart()
+          }
+        });
+        return response
+      }
+    }(window, window.fetch));
+    var klAjax = true;
+    var atcButtons = document.querySelectorAll("form[action*='/cart/add'] button[type='submit']");
+    for (var i = 0; i < atcButtons.length; i++) {
+        atcButtons[i].addEventListener("click", function() {
+          if (klAjax) {
+            _learnq.push(['track', 'Added to Cart', item]);
+            klAjax = false;
+          }
+        })
+    }
+    });
+    </script>
+    {% endif %}
+
+
+{% include 'store-credit-launcher' %}
+
+  
+<!-- BEGIN app snippet: veeperapp -->
+<script src="https://cdn.sdk.veeperapp.com/listener.js?shop=goodproteinca.myshopify.com" ></script> 
+<!-- End app snippert-->  
+
+ 
+</body>{% comment %}ly_liquid_scripts_begin{% endcomment %}{% endcapture %}{%- comment -%}Version 1.0{%- endcomment -%}{%- if request.locale.primary == true -%}{%- assign strings = ly_liquid_content | strip_newlines | split: '<ly-' -%}{%- for each_string in strings -%}{%- if each_string contains '</ly' -%}{%- assign ly_string = each_string | split: '</ly' | first -%}{%- assign ly_tag = ly_string | split: '>' | first -%}{%- assign ly_open_tag = '<ly-' | append: ly_tag | append: '>' -%}{%- assign ly_close_tag = '</ly-' | append: ly_tag | append: '>' -%}{%- assign delim = ly_tag | append: '>' -%}{%- assign ly_content = ly_string | split: delim | last -%}{%- assign src = ly_open_tag | append: ly_content | append: ly_close_tag -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, ly_content -%}{%- endif -%}{%- endfor -%}{%- assign strings = ly_liquid_content | strip_newlines | split: '&lt;ly-' -%}{%- for each_string in strings -%}{%- if each_string contains '&lt;/ly' -%}{%- assign ly_string = each_string | split: '&lt;/ly' | first -%}{%- assign ly_tag = ly_string | split: '&gt;' | first -%}{%- assign ly_open_tag = '&lt;ly-' | append: ly_tag | append: '&gt;' -%}{%- assign ly_close_tag = '&lt;/ly-' | append: ly_tag | append: '&gt;' -%}{%- assign delim = ly_tag | append: '&gt;' -%}{%- assign ly_content = ly_string | split: delim | last -%}{%- assign src = ly_open_tag | append: ly_content | append: ly_close_tag -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, ly_content -%}{%- endif -%}{%- endfor -%}{{- ly_liquid_content -}}{%- else -%}{%- assign current_language_num = 0 -%}{%- for language in shop.metafields.language_codes -%}{%- if language.last == request.locale.iso_code -%}{%- assign language_id_num = language.first | replace: "ly", "" | plus: 0 %}{%- if current_language_num < language_id_num -%}{%- assign current_language = language.first -%}{%- assign current_language_num = language_id_num -%}{%- endif -%}{%- endif -%}{%- endfor -%}{%- assign language = current_language -%}{%- assign strings = ly_liquid_content | strip_newlines | split: '<ly-' -%}{%- for each_string in strings -%}{%- if each_string contains '</ly' -%}{%- assign ly_string = each_string | split: '</ly' | first -%}{%- assign ly_tag = ly_string | split: '>' | first -%}{%- assign ly_open_tag = '<ly-' | append: ly_tag | append: '>' -%}{%- assign ly_close_tag = '</ly-' | append: ly_tag | append: '>' -%}{%- assign ly_complete_tag = ly_open_tag | append: ly_close_tag -%}{%- assign delim = ly_tag | append: '>' -%}{%- assign ly_content = ly_string | split: delim | last -%}{%- assign tag_parts = ly_tag | split: '-' -%}{%- assign type = tag_parts | first -%}{%- assign id = tag_parts | last -%}{%- assign src = ly_open_tag | append: ly_content | append: ly_close_tag -%}{%- assign used_translation = nil -%}{%- assign namespace = language | append: 'as' -%}{%- assign key = 'tid' | append: theme.id -%}{%- if shop.metafields[namespace][key] -%}{%- assign data = shop.metafields[namespace][key] -%}{%- assign splitter = '[ly' | append: id | append: ']' -%}{%- if data contains splitter -%}{%- assign used_translation = data | split: splitter | last | split: '[ly]' | first -%}{%- endif -%}{%- endif -%}{%- if used_translation -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, used_translation -%}{%- else -%}{%- assign namespace = language | append: type -%}{%- assign key = 'id' | append: id -%}{%- if shop.metafields[namespace][key] -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, shop.metafields[namespace][key] -%}{%- else -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, ly_content -%}{%- endif -%}{%- endif -%}{%- endif -%}{%- endfor -%}{%- assign strings = ly_liquid_content | strip_newlines | split: '&lt;ly-' -%}{%- for each_string in strings -%}{%- if each_string contains '&lt;/ly' -%}{%- assign ly_string = each_string | split: '&lt;/ly' | first -%}{%- assign ly_tag = ly_string | split: '&gt;' | first -%}{%- assign ly_open_tag = '&lt;ly-' | append: ly_tag | append: '&gt;' -%}{%- assign ly_close_tag = '&lt;/ly-' | append: ly_tag | append: '&gt;' -%}{%- assign ly_complete_tag = ly_open_tag | append: ly_close_tag -%}{%- assign delim = ly_tag | append: '&gt;' -%}{%- assign ly_content = ly_string | split: delim | last -%}{%- assign tag_parts = ly_tag | split: '-' -%}{%- assign type = tag_parts | first -%}{%- assign id = tag_parts | last -%}{%- assign src = ly_open_tag | append: ly_content | append: ly_close_tag -%}{%- assign used_translation = nil -%}{%- assign namespace = language | append: 'as' -%}{%- assign key = 'tid' | append: theme.id -%}{%- if shop.metafields[namespace][key] -%}{%- assign data = shop.metafields[namespace][key] -%}{%- assign splitter = '[ly' | append: id | append: ']' -%}{%- if data contains splitter -%}{%- assign used_translation = data | split: splitter | last | split: '[ly]' | first -%}{%- endif -%}{%- endif -%}{%- if used_translation -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, used_translation -%}{%- else -%}{%- assign namespace = language | append: type -%}{%- assign key = 'id' | append: id -%}{%- if shop.metafields[namespace][key] -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, shop.metafields[namespace][key] -%}{%- else -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src, ly_content -%}{%- endif -%}{%- endif -%}{%- endif -%}{%- endfor -%}{%- capture customs -%}{%- for custom in shop.metafields.custom -%}{%- assign src = custom | last -%}{%- assign key = custom | first -%}{%- assign key = key | split: "ly" | last -%}{%- assign translation_namespace = language | append: "cu" -%}{%- assign translation_key = "id" | append: key -%}{%- if shop.metafields[translation_namespace][translation_key] -%}{%- assign translation = shop.metafields[translation_namespace][translation_key] -%} [ly_custom]{{- src -}}[ly_custom_split]{{- translation -}}{%- endif-%}{%- endfor -%}{%- for custom in shop.metafields.ly_global_cu -%}{%- assign src = custom | last -%}{%- assign key = custom | first -%}{%- assign key = key | split: "ly" | last -%}{%- assign translation_namespace = language | append: "ncu" -%}{%- assign translation_key = "id" | append: key -%}{%- if shop.metafields[translation_namespace][translation_key] -%}{%- assign translation = shop.metafields[translation_namespace][translation_key] -%} [ly_custom]{%- if src.type == 'json' -%}{{- src.value.text -}}{%- else -%}{{- src.text -}}{%- endif -%}[ly_custom_split]{{- translation -}}{%- endif-%}{%- endfor -%}{%- if global_strict_mode -%}{%- for custom in shop.metafields.ly_global_strict_mode_cu -%}{%- assign src = custom | last -%}{%- assign key = custom | first -%}{%- assign key = key | split: "ly" | last -%}{%- assign translation_namespace = language | append: "ncu" -%}{%- assign translation_key = "id" | append: key -%}{%- if shop.metafields[translation_namespace][translation_key] -%}{%- assign translation = shop.metafields[translation_namespace][translation_key] -%} [ly_custom]{{- src.value.text -}}[ly_custom_split]{{- translation -}}{%- endif-%}{%- endfor -%}{%- endif -%}{%- case request.page_type -%}{%- when 'index' -%}{%- assign used_scope = 'ly_frontpage_cu' -%}{%- when 'product' -%}{%- assign used_scope = 'ly_products_cu' -%}{%- assign used_object = product -%}{%- when 'collection' -%}{%- assign used_scope = 'ly_collections_cu' -%}{%- assign used_object = collection -%}{%- when 'list-collections' -%}{% assign used_scope = 'ly_collections_cu' -%}{%- when 'blog' -%}{%- assign used_scope = 'ly_blogs_cu' -%}{%- assign used_object = blog -%}{%- when 'article' -%}{%- assign used_scope = 'ly_articles_cu' -%}{%- assign used_object = article -%}{%- when 'page' -%}{% assign used_scope = 'ly_pages_cu' -%}{%- assign used_object = page -%}{%- else -%}{%- assign used_scope = 'ly_system_cu' -%}{%- endcase -%}{%- for custom in shop.metafields[used_scope] -%}{%- assign src = custom | last -%}{%- assign key = custom | first -%}{%- assign key = key | split: "ly" | last -%}{%- assign translation_namespace = language | append: "ncu" -%}{%- assign translation_key = "id" | append: key -%}{%- if shop.metafields[translation_namespace][translation_key] -%}{%- assign translation = shop.metafields[translation_namespace][translation_key] -%} [ly_custom]{%- if src.type == 'json' -%}{{- src.value.text -}}{%- else -%}{{- src.text -}}{%- endif -%}[ly_custom_split]{{- translation -}}{%- endif-%}{%- endfor -%}{%- if used_object -%}{%- for custom in used_object.metafields.custom -%}{%- assign src = custom | last -%}{%- assign key = custom | first -%}{%- assign key = key | split: "ly" | last -%}{%- assign translation_namespace = language | append: "cu" -%}{%- assign translation_key = "id" | append: key -%}{%- if used_object.metafields[translation_namespace][translation_key] -%}{%- assign translation = used_object.metafields[translation_namespace][translation_key] -%} [ly_custom]{%- if src.type == 'json' -%}{{- src.value.text -}}{%- else -%}{{- src.text -}}{%- endif -%}[ly_custom_split]{{- translation -}}{%- endif-%}{%- endfor -%}{%- endif -%}{%- endcapture -%}{%- assign customs = customs | split : '[ly_custom]' -%}{%- for custom in customs -%}{%- assign used_custom = custom | split: '[ly_custom_split]' -%}{%- assign src = used_custom | first -%}{%- assign dst = used_custom | last -%}{%- assign src1 = '"' | append: src | append: '"' -%}{%- assign dst1 = '"' | append: dst | append: '"' -%}{%- assign src2 = "'" | append: src | append: "'" -%}{%- assign dst2 = "'" | append: dst | append: "'" -%}{%- assign src3 = ">" | append: src | append: "<" -%}{%- assign dst3 = ">" | append: dst | append: "<" -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src1, dst1 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src2, dst2 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src3, dst3 -%}{%- endfor -%}{%- assign tag_translation_namespace = "ta" | append: language -%}{%- for tag_translation in shop.metafields[tag_translation_namespace] -%}{%- assign src = tag_translation | first -%}{%- if src contains 'ly_tag_' -%}{%- assign tmp_tag_namespace = 'l_ta' | append: language -%}{%- if shop.metafields[tmp_tag_namespace][src] -%}{%- assign src = shop.metafields[tmp_tag_namespace][src] -%}{%- endif -%}{%- endif -%}{%- assign translation = tag_translation | last -%}{%- assign src1 = '"' | append: src | append: '"' -%}{%- assign dst1 = '"' | append: translation | append: '"' -%}{%- assign src2 = "'" | append: src | append: "'" -%}{%- assign dst2 = "'" | append: translation | append: "'" -%}{%- assign src3 = ">" | append: src | append: "<" -%}{%- assign dst3 = ">" | append: translation | append: "<" -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src1, dst1 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src2, dst2 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src3, dst3 -%}{%- endfor -%}{%- assign translation_mode_key = 'ly' | append: theme.id -%}{%- if shop.metafields.translation_mode[translation_mode_key] == 'non-strict' -%}{%- assign vendor_translation_namespace = 've' | append: language -%}{%- for vendor_translation in shop.metafields[vendor_translation_namespace] -%}{%- assign src = vendor_translation | first -%}{%- if src contains 'ly_vendor_' -%}{%- assign tmp_vendor_namespace = 'l_ve' | append: language -%}{%- if shop.metafields[tmp_vendor_namespace][src] -%}{%- assign src = shop.metafields[tmp_vendor_namespace][src] -%}{%- endif -%}{%- endif -%}{%- assign translation = vendor_translation | last -%}{%- assign src1 = '"' | append: src | append: '"' -%}{%- assign dst1 = '"' | append: translation | append: '"' -%}{%- assign src2 = "'" | append: src | append: "'" -%}{%- assign dst2 = "'" | append: translation | append: "'" -%}{%- assign src3 = ">" | append: src | append: "<" -%}{%- assign dst3 = ">" | append: translation | append: "<" -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src1, dst1 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src2, dst2 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src3, dst3 -%}{%- endfor -%}{%- assign type_translation_namespace = "ty" | append: language -%}{%- for type_translation in shop.metafields[type_translation_namespace] -%}{%- assign src = type_translation | first -%}{%- if src contains 'ly_type_' -%}{%- assign tmp_type_namespace = 'l_ty' | append: language -%}{%- if shop.metafields[tmp_type_namespace][src] -%}{%- assign src = shop.metafields[tmp_type_namespace][src] -%}{%- endif -%}{%- endif -%}{%- assign translation = type_translation | last -%}{%- assign src1 = '"' | append: src | append: '"' -%}{%- assign dst1 = '"' | append: translation | append: '"' -%}{%- assign src2 = "'" | append: src | append: "'" -%}{%- assign dst2 = "'" | append: translation | append: "'" -%}{%- assign src3 = ">" | append: src | append: "<" -%}{%- assign dst3 = ">" | append: translation | append: "<" -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src1, dst1 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src2, dst2 -%}{%- assign ly_liquid_content = ly_liquid_content | replace: src3, dst3 -%}{%- endfor -%}{%- endif -%}{%- assign ly_liquid_content = ly_liquid_content | replace: '#ly_cu', '' -%}{{- ly_liquid_content -}}{%- endif -%}<script>if (!window.langify) { console.log("langify is not published on this theme, but the polyfill translation code is active"); } else { console.log("langify polyfill translation code is active"); } window.langify = window.langify || {}; window.langify.settings = window.langify.settings || {}; window.langify.settings.polyfill = true;</script>{% comment %}ly_liquid_scripts_end{% endcomment %}
+<style>
+span.icon.icon-plus.grid-product__price-min {
+    display: none !important;
+}
+</style>  
+</html>
+
+<!-- Begin Shopify-Afterpay JavaScript Snippet (v1.1.6) -->
+{% if cart.currency.iso_code == shop.currency %}
+<script type="text/javascript">
+// Overrides:
+// var afterpay_min = 1.00;       // As per your Afterpay contract.
+// var afterpay_max = 2000.00;    // As per your Afterpay contract.
+// var afterpay_msg_size = 'sm';  // Can be 'xs', 'sm', 'md' or 'lg'.
+// var afterpay_bold_amount = true;
+// var afterpay_logo_theme = 'colour';  // Can be 'colour', 'black' or 'white'.
+// var afterpay_modal_open_icon = true;
+// var afterpay_hide_upper_limit = false;
+// var afterpay_hide_lower_limit = true;
+// var afterpay_show_if_outside_limits = true;
+// var afterpay_cbt_enabled = false;
+// var afterpay_apr_loans_available = false;
+
+var afterpay_product_integration_enabled = false;
+// var afterpay_product_selector = '#product-price-selector';
+// var afterpay_variable_price_fallback = false;
+// var afterpay_variable_price_fallback_selector = '';
+// var afterpay_variable_price_fallback_method = 'mutation';  // Can be 'mutation' or 'interval'.
+
+// var afterpay_cart_integration_enabled = true;
+// var afterpay_cart_static_selector = '#cart-subtotal-selector';
+// var afterpay_variable_subtotal_fallback = false;
+// var afterpay_variable_subtotal_fallback_selector = '';
+// var afterpay_variable_subtotal_fallback_method = 'mutation'; // Can be 'mutation' or 'interval'.
+// var afterpay_cart_dynamic_integration_enabled = false;
+
+// var afterpay_footer_logo_enabled = true;
+// var afterpay_footer_logo_format = 'icon';  // Can be 'icon', 'stacked' or 'logo'.
+// var afterpay_footer_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
+// var afterpay_footer_logo_background = 'border';  // Can be 'border' or 'transparent'.
+// var afterpay_footer_logo_container = 'footer ul.payment-icons';
+// var afterpay_footer_logo_template = '<li class="payment-icon"><object data="{logo_path}" type="image/svg+xml"></object></li>';
+
+// Non-editable fields:
+var afterpay_js_language = {{ localization.language.iso_code | slice: 0, 2 | json }};
+var afterpay_js_country = {{ localization.country.iso_code | json }};
+var afterpay_shop_currency = {{ shop.currency | json }};
+var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
+var afterpay_shop_money_format = {{ shop.money_format | json }};
+var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+var afterpay_theme_name = {{ theme.name | json }};
+var afterpay_product = {{ product | json }};
+var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+var afterpay_cart_total_price = {{ cart.total_price | json }};
+var afterpay_js_snippet_version = '1.1.6';
+</script>
+<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+{% else %}
+<!-- Afterpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
+{% endif %}
+<!-- End Shopify-Afterpay JavaScript Snippet (v1.1.6) -->
+
+
+
+
+
+{%- endcapture avada-seo-original -%}
+{%- capture avada-seo-minified -%}
+{%- include 'avada-seo-minifier', content: avada-seo-original -%}
+{%- endcapture -%}
+{%- if avada-seo-minified contains 'Liquid error' -%}
+{{ avada-seo-original }}
+{%- else -%}
+{{ avada-seo-minified }}
+{%- endif -%}
+
+
+{% if request.path contains '/fr/' %}
+<div id="customer-id-account-sanobu" style="display: none">{{ customer.id }}</div>
+<div id="customer-email-account-sanobu" style="display: none">{{ customer.email }}</div>
+<div class="modal-container-sanobu">
+  <div class="modal-sanobu">
+    <div class="">
+      <button class="close-modal-sanobu">&times;</button>
+    </div>
+    <div class="modal-title-sanobu">
+      <p>Vous avez <span class="value-gift-credit-sanobu">0</span> $ en crédits de remboursement</p>
+    </div>
+    
+    
+    <p class="credit-code-sanobu">Code de crédit : <span class="value-gift-code-credit-sanobu"></span></p>
+    <a href="#" class="add-credit-btn-sanobu"><span class="plus-icon-sanobu">+</span> Ajouter un crédit en magasin</a>
+    
+    <div class="add-store-credit-container-sanobu">
+      <div class="add-store-credit-result-sanobu">Impossible d'ajouter une carte-cadeau!</div>
+      <div class="add-store-credit-main-sanobu">
+        <input id="gift-card-code-input-tag-sanobu" placeholder="Gift Card Code" />
+      </div>
+      <div class="add-store-credit-error-sanobu">Champ obligatoire</div>
+      <button class="add-store-credit-button-sanobu">Ajouter un crédit de magasin</button>
+    </div>
+    <style>
+      .add-store-credit-container-sanobu {
+        background: #fff;
+        border: 1px solid hsla(0, 0%, 82%, .5);
+        border-radius: 8px;
+        padding: 18px;
+        max-width: 500px;
+        margin: auto;
+        display: none;
+      }
+      .add-store-credit-result-sanobu {
+        color: #da2424;
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        display: none;
+      }
+      .add-store-credit-error-sanobu {
+        color: #da2424;
+        font-size: 13px;
+        margin: 0;
+        text-align: left;
+        display: none;
+      }
+      .add-store-credit-main-sanobu input {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        background: #fff;
+        border: 1px solid #c4cdd5;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 0 0 rgba(99, 115, 129, .05);
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 1.1;
+        min-height: 33px;
+        padding: 8px;
+        transition-duration: .2s;
+        transition-property: box-shadow, border, border-color, background-color;
+        transition-timing-function: cubic-bezier(.64,0,.35,1);
+        width: 100%;
+        will-change: box-shadow, border, border-color, background-color;
+      }
+      .add-store-credit-button-sanobu {
+        align-items: center;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: inherit;
+        justify-content: center;
+        margin: 0;
+        min-height: 30px;
+        opacity: .9;
+        position: relative;
+        text-align: center;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        transition-duration: .2s;
+        transition-property: opacity, color, background, border, box-shadow;
+        transition-timing-function: cubic-bezier(.64,0,.35,1);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        background: linear-gradient(rgb(2, 50, 70) 0%, rgb(2, 55, 77) 100%);
+        font-size: 1.3rem;
+        padding: 14px 30px;
+        margin: 10px 0;
+        font-size: 13px;
+        color: white;
+      }
+    </style>
+
+    <div class="gift-card-sanobu">
+      <table>
+        <thead>
+          <tr>
+            <th>Code de carte-cadeau</th>
+            <th>Solde</th>
+            <th>Date d'expiration</th>
+          </tr>
+        </thead>
+        <tbody class="table-tbody-sanobu">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-container-sanobu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 94px 0;
+    /* margin: 20px; */
+  }
+
+  .modal-container-sanobu span {
+    color: #0073e6;
+  }
+  .modal-container-sanobu .plus-icon-sanobu {
+    /* color: #0073e6; */
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: 'center';
+    border-radius: 50%;
+    background-color: #eee;
+  }
+
+  .modal-sanobu {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 660px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: center;
+  }
+
+  .modal-title-sanobu {
+    padding-top: 13px;
+    font-size: 20px;
+    line-height: 2.4rem;
+    font-family: 'Montserrat';
+    text-align: center;
+  }
+
+  .close-modal-sanobu {
+    background: none;
+    border: none;
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .credit-code-sanobu {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .add-credit-btn-sanobu {
+    display: inline-block;
+    margin: 10px 0;
+    /* color: #0073e6; */
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .add-credit-btn-sanobu:hover {
+    text-decoration: underline;
+  }
+
+  .gift-card-sanobu table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .gift-card-sanobu th,
+  .gift-card-sanobu td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .gift-card-sanobu th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modalContainer = document.querySelector(".modal-container-sanobu");
+    const closeModalButton = document.querySelector(".close-modal-sanobu");
+    let currentURL = window.location.href;
+    req_uri="goodproteinca.myshopify.com";
+    // if(currentURL.includes("/fr")){
+    //   req_uri="goodproteinca.myshopify.com";
+    // }
+    
+    function closeModal() {
+      modalContainer.style.display = "none";
+    }
+
+    closeModalButton.addEventListener("click", closeModal);
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modalContainer) {
+        closeModal();
+      }
+    });
+
+    document.querySelector('#Rise-account-page-button').addEventListener("click", function (event) {
+      event.preventDefault();
+      modalContainer.style.display = "flex";
+      
+    });
+    document.querySelector('.add-credit-btn-sanobu').addEventListener("click", function (event) {
+      event.preventDefault();
+      this.style.display = 'none';
+      document.querySelector('.add-store-credit-container-sanobu').style.display = "block";
+    });
+    document.querySelector('.add-store-credit-button-sanobu').addEventListener("click", function () {
+      if (!document.querySelector('#gift-card-code-input-tag-sanobu').value) {
+        document.querySelector('.add-store-credit-error-sanobu').style.display = "block";
+        return;
+      }
+      fetch(
+        `https://application.rise-ai.com/v1/gift-cards/customers/${document.querySelector("#customer-id-account-sanobu").innerHTML}?shop_url=${req_uri}&customer_email=${document.querySelector("#customer-email-account-sanobu").innerHTML}`, 
+        { 
+          method: 'PUT', 
+          headers: myHeaders,
+          body: JSON.stringify({ code: document.querySelector('#gift-card-code-input-tag-sanobu').value })
+        }
+      )      
+      .then(response => response.json())
+      .then(result => {
+        
+      })
+      .catch(error => {
+        document.querySelector('.add-store-credit-error-sanobu').style.display = "block";
+        console.log('error', error);
+      });
+    });
+
+    // ------------------------------------------------
+
+    var myHeaders = new Headers();
+    myHeaders.append("x-rise-access-token", "TlfYoGDGk1e7nKXYDwuFxOOcIHpfGSWimZVBY7pMU2I");
+
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    };
+    // ------------------------------------------------------
+    fetch(`https://application.rise-ai.com/v2/gift-cards/?customer_id=${document.querySelector("#customer-id-account-sanobu").innerHTML}&shop_url=${req_uri}`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        if (document.documentElement.getAttribute('lang') == 'fr') {
+          document.querySelector('.value-gift-credit-sanobu').innerHTML = result.amount;
+          document.querySelector('.value-gift-code-credit-sanobu').innerHTML = result.code;
+        }
+      })
+      .catch(error => console.log('error', error));
+    fetch(req_uri + `apps/rise-ai/gift-cards`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        var html = "";
+        if (document.documentElement.getAttribute('lang') == 'fr') {
+          result.forEach((eachItem) => {
+            html += `
+              <tr>
+                <td>${eachItem.code}</td>
+                <td>${eachItem.balance}$</td>
+                <td>${eachItem.expires_on || "-"}</td>
+              </tr>
+            `;
+          });
+          document.querySelector(".table-tbody-sanobu").innerHTML = html;
+        }
+      })
+      .catch(error => console.log('error', error));
+  });
+</script>
+
+{% endif %}
+<style>
+  .loop_cp_body_marked_for_cancellation {
+    margin-top: 2em !important;
+}
+  .modal-content .buttons .btn {
+    background: #1B66CC !important;
+    
+  }
+  .modal-content h2{
+    color: #1B66CC !important;
+  }
+  #pause-btn{
+    color: #fff !important;
+  }
+  .modal-content p {
+    color: #1B66CC !important;
+  }
+</style>

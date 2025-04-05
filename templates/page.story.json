@@ -1,0 +1,645 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "image_with_text_7xEDmV": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "image": "shopify:\/\/shop_images\/desktop-collection-2.jpg",
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "img_width": "100%",
+        "image_size": "three_fifths",
+        "max_width": 100,
+        "text_style": "body",
+        "disable_media_style": false,
+        "subtitle": "",
+        "title": "85+ superfoods,",
+        "heading_size": "heading-base",
+        "richtext": "<p><strong>nutrients and plant-based ingredients.<\/strong><\/p>",
+        "ingredient_text": "",
+        "text_alignment": "text-left",
+        "ingredient_link_t": "",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "quaternary"
+      }
+    },
+    "ss_video_with_text_HL3Nan": {
+      "type": "ss-video-with-text",
+      "blocks": {
+        "caption_RTrPDf": {
+          "type": "caption",
+          "settings": {
+            "caption": "ABOUT US",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading_Ajx4bi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Delicious, Smooth and Healthy Mission.",
+            "heading_custom": true,
+            "heading_font": "lato_n7",
+            "header_size": 42,
+            "font_weight": "600",
+            "heading_height": 130,
+            "heading_color": "#000000"
+          }
+        },
+        "text_7eTnex": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Those are the things we’ve been obsessed with since Day One: making a healthier, smoother and more delicious shake is why Good Protein exists. <br\/><br\/>We’ve spent years testing, tasting and sourcing the best ingredients to create plant-based shakes that taste exactly like your favourite sweet snacks and juices that are as satisfying as a freshly squeezed glass — all while offering your body everything it deserves. <\/p>",
+            "text_custom": true,
+            "text_font": "lato_n4",
+            "text_size": 18,
+            "text_height": 150,
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "caption_RTrPDf",
+        "heading_Ajx4bi",
+        "text_7eTnex"
+      ],
+      "settings": {
+        "media": "image",
+        "image_height": "adapt",
+        "desktop_image_width": "50",
+        "image_radius": 20,
+        "layout": "text_first",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "icon_play_size": 30,
+        "video_controls": true,
+        "video_autoplay": false,
+        "video_loop": false,
+        "image": "shopify:\/\/shop_images\/Our-Story-05.png",
+        "desktop_content_alignment": "left",
+        "content_padding_top": 36,
+        "content_padding_bottom": 36,
+        "content_padding_horizontal": 5,
+        "content_padding_horizontal_mobile": 1.5,
+        "content_spacing": 20,
+        "mobile_content_alignment": "center",
+        "wrapper_border": false,
+        "content_border_thickness": 1,
+        "border_radius": 20,
+        "padding_inside": 20,
+        "shadow": false,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_border_color": "#d3d3d3",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0.5,
+        "content_layout": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_feature_1_QMT886": {
+      "type": "featured-icon-columns",
+      "blocks": {
+        "image_4NGkgP": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Satisfying",
+            "feature_text": "No more gritty textures, unpleasant aftertastes or bland flavours. Satisfy your body’s needs and your cravings with the same sip.",
+            "feature_image": "shopify:\/\/shop_images\/ICONS-ONESHAKE-0-03_1.svg",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_YmLmDV": {
+          "type": "image",
+          "settings": {
+            "feature_title": "High Quality",
+            "feature_text": "We’re obsessed with finding the best ingredients in the world, because they’re often more nutritious and taste better. You’ll never find anything artificial in our products, only real, all-natural, plant-based ingredients that are GMO-, dairy-, gluten- and soy-free.",
+            "feature_image": "shopify:\/\/shop_images\/Fiche-Nut-Icons-Dec2023-01-01_1.svg",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_dTbpxJ": {
+          "type": "image",
+          "settings": {
+            "feature_title": "More than Protein",
+            "feature_text": "Our shakes and juices offer way more than just protein: they help curb cravings, improve your digestion, support your immune system, offer more energy and give you everything you need to keep your muscles healthy.",
+            "feature_image": "shopify:\/\/shop_images\/ICONS-ONESHAKE-0-01.svg",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_4NGkgP",
+        "image_YmLmDV",
+        "image_dTbpxJ"
+      ],
+      "settings": {
+        "title": "Super Good Superfoods",
+        "text": "",
+        "button_title": "",
+        "button_link": "",
+        "feature_row": 3,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_vertical": 0,
+        "feature_padding_horizontal": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": true,
+        "feature_heading_font": "lato_n7",
+        "feature_heading_size": 24,
+        "feature_heading_size_mobile": 20,
+        "feature_heading_height": 150,
+        "feature_heading_mt": 8,
+        "feature_text_custom": true,
+        "feature_text_font": "lato_n4",
+        "feature_text_size": 18,
+        "feature_text_size_mobile": 16,
+        "feature_text_height": 150,
+        "feature_text_mt": 4,
+        "feature_icon_size": 100,
+        "feature_icon_size_mobile": 100,
+        "feature_bg": "rgba(0,0,0,0)",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#e9f6fd",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 3,
+        "full_width": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_video_with_text_CE6QDW": {
+      "type": "ss-video-with-text",
+      "blocks": {
+        "heading_WdP9KJ": {
+          "type": "heading",
+          "settings": {
+            "heading": "This is Edward",
+            "heading_custom": true,
+            "heading_font": "lato_n9",
+            "header_size": 42,
+            "font_weight": "400",
+            "heading_height": 130,
+            "heading_color": "#000000"
+          }
+        },
+        "text_himE9c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>He founded Good Protein. But he was obsessed with health and nutrition long before that.<br\/><br\/>Along the way he tried all the supplements and protein shakes out there, but they always left a bad taste in his mouth. Not only did they have a gritty texture and unappetizing taste, but they also focused on one aspect of what the body needed at the expense of others — like feeling bloated after a supposedly healthy shake.<\/p>",
+            "text_custom": true,
+            "text_font": "lato_n4",
+            "text_size": 18,
+            "text_height": 150,
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WdP9KJ",
+        "text_himE9c"
+      ],
+      "settings": {
+        "media": "image",
+        "image_height": "adapt",
+        "desktop_image_width": "50",
+        "image_radius": 20,
+        "layout": "image_first",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "icon_play_size": 30,
+        "video_controls": true,
+        "video_autoplay": false,
+        "video_loop": false,
+        "image": "shopify:\/\/shop_images\/Edward-Square-Blue.png",
+        "desktop_content_alignment": "left",
+        "content_padding_top": 36,
+        "content_padding_bottom": 36,
+        "content_padding_horizontal": 5,
+        "content_padding_horizontal_mobile": 1.5,
+        "content_spacing": 20,
+        "mobile_content_alignment": "center",
+        "wrapper_border": false,
+        "content_border_thickness": 1,
+        "border_radius": 20,
+        "padding_inside": 20,
+        "shadow": false,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_border_color": "#d3d3d3",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0.5,
+        "content_layout": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_video_with_text_XCRbcW": {
+      "type": "ss-video-with-text",
+      "blocks": {
+        "heading_CChr9F": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_custom": true,
+            "heading_font": "lato_n9",
+            "header_size": 42,
+            "font_weight": "400",
+            "heading_height": 130,
+            "heading_color": "#000000"
+          }
+        },
+        "text_b6CLKA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>So, in 2019, Edward started scouring the world for the best suppliers and the highest-quality ingredients, with a single goal in mind: to create a shake that complements your daily diet – a nutritionally rich solution that provides essential nutrients for the body's well-being.<\/p>",
+            "text_custom": true,
+            "text_font": "lato_n4",
+            "text_size": 18,
+            "text_height": 150,
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CChr9F",
+        "text_b6CLKA"
+      ],
+      "settings": {
+        "media": "image",
+        "image_height": "adapt",
+        "desktop_image_width": "50",
+        "image_radius": 20,
+        "layout": "text_first",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "icon_play_size": 30,
+        "video_controls": true,
+        "video_autoplay": false,
+        "video_loop": false,
+        "image": "shopify:\/\/shop_images\/Our-Story-04.png",
+        "desktop_content_alignment": "left",
+        "content_padding_top": 36,
+        "content_padding_bottom": 36,
+        "content_padding_horizontal": 5,
+        "content_padding_horizontal_mobile": 1.5,
+        "content_spacing": 20,
+        "mobile_content_alignment": "center",
+        "wrapper_border": false,
+        "content_border_thickness": 1,
+        "border_radius": 20,
+        "padding_inside": 20,
+        "shadow": false,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_border_color": "#d3d3d3",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0.5,
+        "content_layout": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_video_with_text_eDrGwk": {
+      "type": "ss-video-with-text",
+      "blocks": {
+        "heading_aEX8a4": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_custom": true,
+            "heading_font": "lato_n9",
+            "header_size": 42,
+            "font_weight": "400",
+            "heading_height": 130,
+            "heading_color": "#000000"
+          }
+        },
+        "text_nHd7Fq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Today, we’ve sold over 15 MILLION shakes in 12 different flavours, not to mention an immune system-supporting Green Superfood Juice, an energizing, antioxidant-rich Red Superfood Juice, a calming Golden Turmeric Latte, and a plant-based Collagen Booster.<\/p>",
+            "text_custom": true,
+            "text_font": "lato_n4",
+            "text_size": 18,
+            "text_height": 150,
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_aEX8a4",
+        "text_nHd7Fq"
+      ],
+      "settings": {
+        "media": "image",
+        "image_height": "adapt",
+        "desktop_image_width": "50",
+        "image_radius": 20,
+        "layout": "image_first",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "icon_play_size": 30,
+        "video_controls": true,
+        "video_autoplay": false,
+        "video_loop": false,
+        "image": "shopify:\/\/shop_images\/Our-Story-03.gif",
+        "desktop_content_alignment": "left",
+        "content_padding_top": 36,
+        "content_padding_bottom": 36,
+        "content_padding_horizontal": 5,
+        "content_padding_horizontal_mobile": 1.5,
+        "content_spacing": 20,
+        "mobile_content_alignment": "center",
+        "wrapper_border": false,
+        "content_border_thickness": 1,
+        "border_radius": 20,
+        "padding_inside": 20,
+        "shadow": false,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_border_color": "#d3d3d3",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0.5,
+        "content_layout": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "ss_video_with_text_zdGNA7": {
+      "type": "ss-video-with-text",
+      "blocks": {
+        "heading_XYWWQL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Journey To A Healthier Life Starts Now",
+            "heading_custom": true,
+            "heading_font": "lato_n9",
+            "header_size": 54,
+            "font_weight": "600",
+            "heading_height": 130,
+            "heading_color": "#000000"
+          }
+        },
+        "text_h8kHtd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>100% Risk Free Satisfaction Guarantee<\/p>",
+            "text_custom": true,
+            "text_font": "lato_n7",
+            "text_size": 22,
+            "text_height": 130,
+            "text_color": "#000000"
+          }
+        },
+        "button_7KGztp": {
+          "type": "button",
+          "settings": {
+            "button_label": "GET STARTED",
+            "button_link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+            "button_custom": true,
+            "button_font": "lato_n7",
+            "button_size": 24,
+            "button_height": 130,
+            "button_style": "button",
+            "button_padding_horizontal": 40,
+            "button_padding_vertical": 12,
+            "button_radius": 60,
+            "button_border_thickness": 1,
+            "button_text_color": "#1c1a1a",
+            "button_text_hover_color": "#1a1a1a",
+            "button_color": "#fecb28",
+            "button_hover_color": "#fff5d6",
+            "button_border_color": "#fecb28",
+            "button_border_hover_color": "#fff5d6"
+          }
+        }
+      },
+      "block_order": [
+        "heading_XYWWQL",
+        "text_h8kHtd",
+        "button_7KGztp"
+      ],
+      "disabled": true,
+      "settings": {
+        "media": "image",
+        "image_height": "adapt",
+        "desktop_image_width": "50",
+        "image_radius": 20,
+        "layout": "image_first",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "icon_play_size": 30,
+        "video_controls": true,
+        "video_autoplay": false,
+        "video_loop": false,
+        "image": "shopify:\/\/shop_images\/Replo-001.png",
+        "desktop_content_alignment": "left",
+        "content_padding_top": 36,
+        "content_padding_bottom": 36,
+        "content_padding_horizontal": 5,
+        "content_padding_horizontal_mobile": 1.5,
+        "content_spacing": 20,
+        "mobile_content_alignment": "center",
+        "wrapper_border": false,
+        "content_border_thickness": 1,
+        "border_radius": 20,
+        "padding_inside": 20,
+        "shadow": false,
+        "background_color": "#d2f6ff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_background_color": "rgba(0,0,0,0)",
+        "content_border_color": "#d3d3d3",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "content_layout": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "image_with_text_tztMDD": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "image": "shopify:\/\/shop_images\/pd-3.png",
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "left",
+        "img_width": "100%",
+        "image_size": "half",
+        "max_width": 100,
+        "text_style": "body",
+        "disable_media_style": false,
+        "subtitle": "",
+        "title": "Your Journey To A Healthier Life Starts Now",
+        "heading_size": "heading-template",
+        "richtext": "<h4>100% Risk Free Satisfaction Guarantee<\/h4>",
+        "ingredient_text": "",
+        "text_alignment": "text-center",
+        "ingredient_link_t": "",
+        "button_link": "shopify:\/\/products\/vanilla-cupcake-all-in-one-shake",
+        "button_label": "GET STARTED",
+        "color_scheme": "tertiary"
+      }
+    },
+    "ss_bonbon_hero_BzrDnP": {
+      "type": "ss-bonbon-hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/vanilla-shake.png",
+        "heading": "A More Satisfying, Nutritious Routine Starts Here",
+        "subheading": "<p>100% Satisfaction Guarantee<\/p>",
+        "url_text": "Get Started",
+        "url": "\/products\/vanilla-milkshake-all-in-one-shake",
+        "svg-bg-color": "#e9f6fd",
+        "text-color": "#0066cc",
+        "button-bg": "#0066cc",
+        "button-text-color": "#ffffff",
+        "heading-size": 48,
+        "subheading-size": 24,
+        "image_padding": 10,
+        "background-color": "#e9f6fd",
+        "padding_top": 48,
+        "padding_bottom": 100,
+        "section-width": 80
+      }
+    },
+    "logo_list_kLDYpj": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_xakbeK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/salut-bonjour.png",
+            "link": ""
+          }
+        },
+        "logo_rpUETd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Global_News.svg_1.png",
+            "link": ""
+          }
+        },
+        "logo_x4ErBm": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bhc-onetrust_766740de-9794-49df-b333-e1f6b6d9d270.png",
+            "link": ""
+          }
+        },
+        "logo_cEgKCk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/chatelaine_176a7a86-29e1-4817-996b-9c73241a501c.png",
+            "link": ""
+          }
+        },
+        "logo_jhhcjk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/file_14.png",
+            "link": ""
+          }
+        },
+        "logo_GHP4zK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/National_Post-Logo.wine.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_xakbeK",
+        "logo_rpUETd",
+        "logo_x4ErBm",
+        "logo_cEgKCk",
+        "logo_jhhcjk",
+        "logo_GHP4zK"
+      ],
+      "settings": {
+        "title": "",
+        "max_width": 160,
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_7xEDmV",
+    "ss_video_with_text_HL3Nan",
+    "ss_feature_1_QMT886",
+    "ss_video_with_text_CE6QDW",
+    "ss_video_with_text_XCRbcW",
+    "ss_video_with_text_eDrGwk",
+    "ss_video_with_text_zdGNA7",
+    "image_with_text_tztMDD",
+    "ss_bonbon_hero_BzrDnP",
+    "logo_list_kLDYpj"
+  ]
+}

@@ -1,0 +1,110 @@
+{% liquid
+  assign image_class = 'w-full media-style'
+  if style == 'inset'
+    assign image_class = image_classs | append: ' media-style'
+  endif
+  if heading_size == 'heading-template'
+    assign content_max_width = 'max-w-xl'
+  else
+    assign content_max_width = 'max-w-lg'
+  endif
+  if display_content_below_image_on_mobile
+    assign content_class = 'lg:grid lg:absolute lg:inset-0 lg:w-full lg:h-full'
+    assign content_inset_class = 'max-w-site lg:py-5 lg:px-section mx-auto'
+    assign card_container_class = 'lg:card-container'
+    assign card_content_class = 'lg:card py-5 lg:py-10 lg:px-section'
+    assign card_border_class = 'lg:card-border'
+  else
+    assign content_class = 'grid absolute inset-0 w-full h-full'
+    assign content_inset_class = 'max-w-site py-5 px-section mx-auto'
+    assign card_container_class = 'card-container'
+    assign card_content_class = 'card py-5 py-10 px-section'
+    assign card_border_class = 'card-border'
+  endif
+%}
+
+<div class="relative z-10  lg:bg-transparent h-full" >
+
+  {%- if cta_url != blank and cta_text == blank -%}
+    <a href="{{ cta_url }}" class="absolute inset-0 z-20"></a>
+  {%- endif -%}
+
+  <div class="{% if crop contains 'slideshow' %}lg:h-full{% endif %} {% if style == 'inset' %}max-w-site px-5 lg:px-10 py-5 mx-auto{% endif %}">
+    <div class="{{ crop }} {% if style == 'inset' %}media-style-container{% endif %}">
+
+      {% if image != blank %}
+        {%- if image_mobile != blank -%}
+        <div class="hidden lg:block">
+        {%- endif -%}
+        {% if request.locale.iso_code != 'fr' %}
+        {{ image | image_url: width: 2000 | image_tag: sizes: '100vw', class: image_class, loading: 'lazy' }}
+        {% elsif fr_image != blank %}
+        {{ fr_image | image_url: width: 2000 | image_tag: sizes: '100vw', class: image_class, loading: 'lazy' }}
+        {% else %}
+        {{ image | image_url: width: 2000 | image_tag: sizes: '100vw', class: image_class, loading: 'lazy' }}
+        {% endif %}
+        
+        {%- if image_mobile != blank -%}
+        </div>
+        {%- endif -%}
+        {%- if image_mobile != blank -%}
+        <div class="lg:hidden">
+          {{ image_mobile | image_url: width: 1200 | image_tag: sizes: '100vw', class: image_class, loading: 'lazy' }}
+        </div>
+        {%- endif -%}
+      {% else %}
+        <div class="w-full {% unless slideshow_height == 'natural' %}absolute top-0 left-0 right-0 bottom-0{% endunless %}">
+          {{ 'lifestyle-1' | placeholder_svg_tag: 'block text-scheme-placeholder-foreground fill-current bg-neutral-100' }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+  <div
+    class="px-section py-section-vertical-spacing {{ content_class }} z-10  text-scheme-text {{ place_content }} {{ text_align }} {% if style == 'inset' %}max-w-site mx-auto{% endif %}" 
+  > 
+
+  {%- capture content %}
+    {% if title != blank %}
+      <h2 class="font-heading  {{ heading_size }} heading-style {{ settings.heading_drop_shadow_style }}">
+        {{ title | escape }}
+      </h2>
+    {% endif %}
+    {% if richtext != blank %}
+      <div class="rte text-theme-basic mt-5">
+        {{ richtext }}
+      </div>
+    {% endif %}
+
+    {% if cta_url != blank and cta_text != blank %}
+      <div class="relative z-10 mt-5">
+        <p class="read_more_btn">  
+        <a  href="{{ cta_url }}">
+          <span class="">{{ cta_text }}</span> <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"></path></svg>
+        </a></p>
+      </div>
+    {% endif %}
+  {%- endcapture -%}
+
+    <div class="{% if style == 'inset' %}{{ content_inset_class }}{% endif %}">
+      
+      {%- unless text_overlay_color != 'same_as_section' and display_content_below_image_on_mobile == false -%}
+      <div class="{% unless text_overlay_color == 'same_as_section' %}lg:hidden{% endunless %} {% if display_on_card == true %}{{ card_container_class }}{% endif %} {{ content_max_width }}">
+        <div class="break-words {% if display_on_card == true %}{{ card_content_class }}{% endif %} ">
+          {{ content }}
+        </div>
+        {% if display_on_card and settings.card_show_border_on_shadow %}<div class="{{ card_border_class }}"></div>{% endif %}
+      </div>
+      {%- endunless -%}
+
+      {% unless text_overlay_color == 'same_as_section' %}
+      <div class="{% unless text_overlay_color != 'same_as_section' and display_content_below_image_on_mobile == false %}hidden lg:block{% endunless %} {% if display_on_card == true %}{{ card_container_class }} {% endif %}  {{ content_max_width }} text-scheme-text" data-color-scheme="{{ text_overlay_color }}">
+        <div class="break-words {% if display_on_card == true %}{{ card_content_class }}{% endif %}">
+          {{ content }}
+        </div>
+        {% if display_on_card and settings.card_show_border_on_shadow %}<div class="{{ card_border_class }}"></div>{% endif %}
+      </div>
+      {% endunless %}
+    </div>
+
+  </div>
+</div>

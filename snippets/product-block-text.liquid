@@ -1,0 +1,36 @@
+{% if product.metafields.custom.checkmark_text != blank %}
+  {% for value in product.metafields.custom.checkmark_text.value %}
+
+  <div class="{{ block_base_classes }} text-sm {% if block.settings.icon != 'none' %}flex items-center justify-start{% endif %}" {{ block.shopify_attributes }}>
+    {% if block.settings.icon != 'none' %}
+      <span class="inline-block w-5 h-5 mr-2 {{ block.settings.icon }}" style="min-width: 1.25rem;">
+       {% if block.settings.icon == 'check-mark' %} 
+  <!--         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg> -->
+          <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/white-heavy-check-mark_2705.png?v=1688582364" width="20" alt="" class="img-fluid">
+       {% else %}
+        {% render 'theme-icon',
+          icon: block.settings.icon,
+        %}
+       {% endif %}  
+      </span>
+    {% endif %}
+    {{ value }}
+  </div>
+  {% endfor %}
+{% else %}
+<div class="{{ block_base_classes }} text-sm {% if block.settings.icon != 'none' %}flex items-center justify-start{% endif %}" {{ block.shopify_attributes }}>
+  {% if block.settings.icon != 'none' %}
+    <span class="inline-block w-5 h-5 mr-2 {{ block.settings.icon }}">
+     {% if block.settings.icon == 'check-mark' %} 
+<!--         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg> -->
+        <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/white-heavy-check-mark_2705.png?v=1688582364" width="20" alt="" class="img-fluid">
+     {% else %}
+      {% render 'theme-icon',
+        icon: block.settings.icon,
+      %}
+     {% endif %}  
+    </span>
+  {% endif %}
+  {{ block.settings.text }}
+</div>
+{% endif %}

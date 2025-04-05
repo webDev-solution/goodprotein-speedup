@@ -1,0 +1,55 @@
+.button-group-title-saturn {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.button-group-container-saturn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-group-container-saturn button {
+    padding: 7px 32px;
+    border: 1.5px solid black;
+    border-radius: 31px;
+    text-transform: capitalize;
+    margin: 10px 5px;
+  cursor: pointer;
+}
+
+.button-group-container-saturn button.active {
+  background: #2998FF73;
+  border: 0px solid;
+  scale: 1.05;
+  color: white;
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+  .button-group-container-saturn button {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .button-group-container-saturn button {
+    padding: 4px 10px;
+    font-size: 12px;
+    margin: 10px 1px;
+  }
+}
+@media (min-width: 650px) and (max-width: 768px) {
+  .button-group-container-saturn button {
+    padding: 2.5px 8px;
+    font-size: 10px;
+    margin: 10px 1px;
+  }
+}
+@media (max-width: 650px) {
+  .button-group-container-saturn {
+    flex-wrap: wrap;
+  }
+  .button-group-container-saturn button {
+    padding: 3px 13px;
+    font-size: 12px;
+    margin: 5px 5px;
+  }
+}

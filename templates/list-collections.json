@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "blocks": {
+        "13b0706d-6b53-4ec8-87b3-4e572cba2962": {
+          "type": "collection",
+          "settings": {
+            "collection": "superfood-shake",
+            "image_shape": "default"
+          }
+        },
+        "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "juices",
+            "image_shape": "same_as_section"
+          }
+        },
+        "5be6a2ba-78df-4740-baf8-90eb280a6555": {
+          "type": "collection",
+          "settings": {
+            "collection": "collagen",
+            "image_shape": "same_as_section"
+          }
+        },
+        "7cd09241-55f3-4fc3-8a64-51f05fce3d4b": {
+          "type": "collection",
+          "settings": {
+            "collection": "turmeric-chai",
+            "image_shape": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "13b0706d-6b53-4ec8-87b3-4e572cba2962",
+        "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f",
+        "5be6a2ba-78df-4740-baf8-90eb280a6555",
+        "7cd09241-55f3-4fc3-8a64-51f05fce3d4b"
+      ],
+      "settings": {
+        "layout": "grid",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "",
+        "no_products": 6,
+        "show_collection_description": false,
+        "show_view_all": true,
+        "display_on_card": true,
+        "enable_quick_buy": false,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "slideshow_focus": "center",
+        "mobile_slide_width": "three_fifths",
+        "desktop_slide_width": 40,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "collage": {
+      "type": "main-list-collections-collage",
+      "disabled": true,
+      "settings": {
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "button_style": "push-btn-surface",
+        "show_buttons_on_mobile": false,
+        "only_show_button_on_hover": true,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collage"
+  ]
+}

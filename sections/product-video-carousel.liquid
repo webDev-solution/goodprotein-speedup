@@ -1,0 +1,294 @@
+{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}
+<div class="product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
+  <h3 class="large-hide" >{{ section.settings.heading }}</h3>
+  {% if section.settings.subtitle %}
+    <h5>{{ section.settings.subtitle }}</h5>
+  {% endif %}
+  <h3 class="small-hide" >{{ section.settings.heading }}</h3>
+  <h4>{{ section.settings.subheading }}</h4>
+  <p>{{ section.settings.content }}</p>
+  <div class="inner_product-video-carousel">
+    {% for block in section.blocks %}
+      <div class="product-section-box product-video-box">
+        {% if request.locale.iso_code == 'fr' %}
+          {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+        {% else %}
+          {% assign image_link = block.settings.image | image_url: width: 600 %}
+        {% endif %}
+        {% if block.settings.video_type == 'other' %}
+          {% if request.locale.iso_code == 'fr' %}
+            {% assign video_link = block.settings.fr_video_link %}
+            {% assign video = true %}
+          {% else %}
+            {% assign video_link = block.settings.video_link %}
+            {% assign video = true %}
+          {% endif %}
+        {% else %}
+          {% if request.locale.iso_code == 'fr' %}
+            {% assign video_link = block.settings.fr_hosted_video %}
+            {% assign video = true %}
+          {% else %}
+            {% assign video_link = block.settings.hosted_video %}
+            {% assign video = true %}
+          {% endif %}
+        {% endif %}
+        {% if image_link != blank %}
+          {{image_link | image_tag: class: 'image', image_size: '400x' }}
+        {% endif %}
+        {% if video_link!= blank %} 
+          {{video_link | video_tag: class: 'video c_hidden', image_size: '400x' }}
+        {% endif %}
+        
+
+       <div class="playpause c_hidden"><i class="fa-solid fa-circle-play"></i></div>
+      </div>
+    {% endfor %}
+  </div>    
+</div>
+
+<script> 
+  $('.video').parent().click(function () {
+    if($(this).children(".video").get(0).paused){
+      $(this).children(".video").get(0).play();   
+      $(this).children(".playpause").fadeOut();
+    }else{       
+      $(this).children(".video").get(0).pause();
+    $(this).children(".playpause").fadeIn();
+      }
+  });
+
+  $(document).ready(function(){
+    var acc = document.getElementsByClassName("product-video-box");
+    for (var i = 0; i < acc.length; i++) {
+      // Prevent duplicate event listeners by checking if already attached
+      if (!acc[i].hasAttribute('data-listener')) {
+          acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
+        // Attach the event listener without using setTimeout inside
+        acc[i].addEventListener("click", function() {
+          if(this.querySelector("video")){
+            this.querySelector("img").style.display = "none";
+            this.querySelector("video").classList.remove("c_hidden");
+   //         this.querySelector(".playpause").classList.remove("c_hidden");
+          }
+        });
+      }
+    }
+  });
+
+  function playPause(v_el) { 
+    // var myVideo = document.getElementById(v_el);
+    // console.log(myVideo);
+    // if (myVideo.paused) 
+    //   myVideo.play(); 
+    // else 
+    //   myVideo.pause(); 
+  } 
+</script> 
+
+<style>
+  #shopify-section-{{ section.id }} .product-video-carousel{
+    background-color:{{ section.settings.bg_color }};
+  }
+
+  .v_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+/*
+  .v_content {
+    height: 100px;
+    width: 45%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 100px; 
+    text-align: center;
+    background-color: grey;
+    margin: 5px;
+    border: 1px solid lightgrey;
+    display: none;
+  }
+*/
+  #loadMore {
+    width: 200px;
+    color: #000;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: 600;
+    text-underline-position: under;
+    text-decoration: underline;
+  }
+
+  .noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+  }  
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    function slick_slider(){
+      $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick({
+        centerMode: true,
+        slidesToShow: {{ section.settings.itme_show }},
+        autoplay: true,
+        autoplaySpeed: 200000,
+        swipeToSlide: true,
+        arrows:true,
+        prevArrow:'<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow:'<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: 'unslick'
+          }
+        ]
+      });
+    }
+    slick_slider();
+      $(window).on('resize', function() {
+        var viewportWidth = $(window).width();
+
+        if (viewportWidth < 769) {
+            $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
+        } else {
+            slick_slider();
+        }
+    });
+    
+    $(document).ready(function(){
+      $(".v_content").slice(0, 4).show();
+      $("#loadMore").on("click", function(e){
+        e.preventDefault();
+        $(".v_content:hidden").slice(0, 4).slideDown();
+        if($(".v_content:hidden").length == 0) {
+          // $("#loadMore").text("No Content").addClass("noContent");
+        }
+      });    
+    })
+  });
+  
+</script>
+{% schema %}
+{
+  "name": "Product Video Carousel",
+  "settings": [
+    {
+      "type":"color",
+      "id":"bg_color",
+      "label":"Bg Color"
+    },
+    {
+      "type":"number",
+      "id":"itme_show",
+      "label":"Show Per Item",
+      "default":6
+    },
+    {
+      "type":"textarea",
+      "id":"subtitle",
+      "label":"Sub Title"
+    },
+    {
+      "type":"textarea",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"subheading",
+      "label":"Sub Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"content",
+      "label":"Content"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"image",
+      "name":"Image",
+      "settings":[
+        {
+          "type":"select",
+          "id":"video_type",
+          "label":"Video Type",
+          "options":[
+            {
+              "value":"mp4",
+              "label":"MP4"
+            },
+            {
+              "value":"other",
+              "label":"YouTube/Vimeo"
+            }
+          ],
+          "default":"mp4"
+        },
+        {
+          "type": "header",
+          "content": "English video"
+        },
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"hosted_video",
+          "label":"Hosted Video"
+        },
+        {
+          "type": "header",
+          "content": "Frech video"
+        },
+        {
+          "type":"image_picker",
+          "id":"fr_image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"fr_video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"fr_hosted_video",
+          "label":"Hosted Video"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Product Video Carousel",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

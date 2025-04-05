@@ -1,0 +1,338 @@
+{%- liquid
+  assign image_shape = image_shape | default: settings.product_tile_media_shape
+  assign mobile_grid_cols = item.settings.products_per_row_mobile
+  assign layout = item.settings.layout
+  case row
+    when 2
+      assign desktop_grid_cols = 'lg:grid-cols-2'
+    when 3
+      assign desktop_grid_cols = 'lg:grid-cols-3'
+    when 4
+      assign desktop_grid_cols = 'lg:grid-cols-4'
+    when 5
+      assign desktop_grid_cols = 'lg:grid-cols-5'
+  endcase
+
+  case item.settings.mobile_slide_width
+    when 'three_fifths'
+      assign mobile_slide_width = 'w-3/5'
+    when 'full_width'
+      assign mobile_slide_width = 'w-full'
+  endcase
+-%}
+
+{%- render 'collection-shape-defs',
+  shape: image_shape,
+  section_id: item.id,
+  item_count: product_number_c
+-%}
+
+{%- capture view_all_button -%}
+<a href="{{ collection.url }}" class="inline-block push-btn">
+  <span class="push-btn-surface">{{ 'collections.general.all_of_collection' | t: collection: collection.title }}</span>
+</a>
+{%- endcapture -%}
+{% assign product_count = collection.products_count %}
+
+<div class="holiday-featured-collection-id hidden">slideshow-{{ section.id }}-{{ index }}</div>
+<div class="holiday-featured-collection-id hidden">{{ product_count }}</div>
+
+<div {% if layout == 'carousel' %}id="slideshow-{{ section.id }}-{{ index }}"{% endif %} class="holiday-featured-collection-div holiday-featured-collection-div-saturn {% if item.settings.title != '' %}section-content-top-margin{% endif %} {% if layout == 'carousel' %}splide{% endif %}">
+  <div class="{% if layout == 'carousel' %}splide__track {% if settings.product_tiles_scatter %}splide__track--overflow-visible{% endif %} {% if item.settings.display_on_card %}{% if settings.card_shadow_direction contains 'top' %}pt-card-shadow{% else %}pb-card-shadow{% endif %}{% endif %}{% endif %}">
+    <ul class="{% if product_number_c == 4 %}{% if row == 5 %}product-count-4{% endif %}{% endif %} {% if row == 4 %}product-count-4{% endif %} {% if product_number_c == 3 %}{% if row == 5 %}product-count-3{% endif %}{% endif %} {% if row == 3 %}product-count-3{% endif %} {% if layout == 'carousel' %}splide__list{% endif %} {% if layout == 'grid' %}grid gap-theme {% if mobile_grid_cols == '2' %}grid-cols-2{% else %}grid-cols-1{% endif %} {{ desktop_grid_cols }}{% endif %} {% if settings.product_tiles_scatter %}py-4{% endif %}">
+      {%- for product in collection.products limit: product_number_c -%}
+      <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}">
+        {%- liquid
+          if settings.product_tiles_scatter
+            if layout == 'carousel'
+              capture class
+                cycle '-translate-y-4 ', 'translate-y-4 '
+              endcapture
+            else
+              capture class
+                case item.settings.products_per_row_mobile
+                  when '2'
+                  cycle 'max-lg:-translate-y-4 ', 'max-lg:translate-y-4 '
+                endcase
+                case item.settings.products_per_row_desktop
+                  when 3
+                    cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                  when 2 or 4
+                    cycle 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                  when 5
+                    cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                endcase
+              endcapture
+            endif
+          endif
+          capture odd_even
+            cycle 'odd', 'even'
+          endcapture
+
+          assign shape_id = item.id
+          if image_shape == 'blob'
+            assign shape_id = item.id | append: '-' | append: forloop.index0
+          endif
+        -%}
+        {%- render 'holiday-product-tile'
+          product: product,
+          crop: item.settings.product_tiles_aspect_ratio,
+          shape: image_shape,
+          shape_id: shape_id,
+          display_on_card: item.settings.display_on_card,
+          class: class,
+          odd_even: odd_even,
+          index: forloop.index0,
+          products_per_row_mobile: section.settings.products_per_row_mobile,
+          enable_quick_buy: section.settings.enable_quick_buy,
+          discount_badge: section.settings.discount_badge,
+          discounted_percent: discounted_percent
+        -%}
+      </li>
+    {%- else -%}
+      {% for i in (1..product_number_c) %}
+
+        <li class="{% if layout == 'carousel' %}splide__slide {{ mobile_slide_width }}{% endif %}">
+          {%- liquid
+            if settings.product_tiles_scatter
+              if layout == 'carousel'
+                capture class
+                  cycle '-translate-y-4 ', 'translate-y-4 '
+                endcapture
+              else
+                capture class
+                  case item.settings.products_per_row_mobile
+                    when '2'
+                    cycle 'max-lg:-translate-y-4 ', 'max-lg:translate-y-4 '
+                  endcase
+                  case item.settings.products_per_row_desktop
+                    when 3
+                      cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                    when 2 or 4
+                      cycle 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                    when 5
+                      cycle 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 ', 'lg:-translate-y-4 ', 'lg:translate-y-4 '
+                  endcase
+                endcapture
+              endif
+            endif
+            capture odd_even
+              cycle 'odd', 'even'
+            endcapture
+            assign shape_id = item.id
+            if image_shape == 'blob'
+              assign shape_id = item.id | append: '-' | append: forloop.index0
+            endif
+          -%}
+          {%- render 'holiday-product-tile'
+            product: blank,
+            crop: item.settings.product_tiles_aspect_ratio,
+            shape: section.settings.image_shape,
+            shape_id: shape_id,
+            display_on_card: item.settings.display_on_card,
+            class: class,
+            odd_even: odd_even,
+            index: forloop.index0 
+          -%}
+        </li>
+      {%- endfor -%}
+    {%- endfor -%}
+    </ul>
+  </div>
+  {%- if layout == 'carousel' -%}
+  <div class="splide__arrows flex justify-between items-center mt-5 px-section">
+    {%- if collection != blank -%}
+      <div>
+        {%- if collection.all_products_count > product_number_c and item.settings.show_view_all -%}
+          {{ view_all_button }}
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- render 'splide-navigation' %}
+  </div>
+  <script class="slideshow-options" type="application/json">
+    {
+      "mediaQuery": "min",
+      "arrows": true,
+      "pagination": false,
+      "rewind": true,     
+      "autoWidth": true,
+      "gap": "1.25rem",
+      "focus": {{ item.settings.slideshow_focus | json }},
+      "type": "loop",
+      "autoScroll": {
+        "autoStart": {% if item.settings.autoscroll_mode == '0' or item.settings.autoscroll_mode == blank %}false{% else %}true{% endif %},
+        "speed": {% if item.settings.autoscroll_mode == blank %}0{% else %}{{ item.settings.autoscroll_mode | plus: 0 | json }}{% endif %}
+      },
+      "padding": {
+        "left": "1.25rem",
+        "right": "1.25rem"
+      },
+      "breakpoints": {
+        "990": {
+          "gap": "2.5rem",
+          "padding": {
+            "left": "2.5rem",
+            "right": "2.5rem"
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (min-width: 990px) {
+      #slideshow-{{ section.id }}-{{ index }} .splide__slide {
+        width: {{ item.settings.desktop_slide_width }}%;
+      }
+    }
+  </style>
+  {%- endif -%}
+</div>
+
+{%- if collection != blank and layout == 'grid' -%}
+  {%- if collection.all_products_count > product_number_c and item.settings.show_view_all -%}
+    <div class="text-center mt-5 lg:mt-10">
+      {{ view_all_button }}
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
+
+{% comment %}
+  {%- if layout == 'carousel' -%}
+{% unless request.design_mode %}
+  <script src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}" type="module"></script>
+{% endunless %}
+{{ 'modules-slideshow.bundle.aio.min.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+{% endcomment %}
+
+{% unless request.design_mode %}
+  <script src="{{ 'modules-slideshow.bundle.min.js' | asset_url }}" type="module"></script>
+{% endunless %}
+{{ 'modules-slideshow.bundle.aio.min.css' | asset_url | stylesheet_tag }}
+
+
+{%- if section.settings.enable_quick_buy -%}
+{%- unless request.design_mode -%}
+<script src="{{ 'vendor-product.bundle.min.js' | asset_url }}" type="module"></script>
+<script src="{{ 'product-quick-buy.js' | asset_url }}" type="module"></script>
+{%- endunless -%}
+{%- endif -%}
+
+<style>
+  .product-count-4 {
+    /* position: relative;
+    left: 8%; */
+    width: 80%;
+  }
+  .product-count-3 {
+    /* position: relative;
+    left: 17%; */
+    width: 60%;
+  }
+  .splide__slide {
+    right: 2% !important;
+  }
+  @media (min-width: 600px) and (max-width: 750px) {
+    .splide__slide {
+      width: 33% !important;
+      margin: 0rem !important;
+      /* right: 3%; */
+    }
+  }
+  @media (max-width: 800px) {
+    .product-count-3, .product-count-4 {
+      left: unset;
+      /* right: -2.5%; */
+    }
+  }
+  ul.splide__list {
+    position: relative;
+    right: 2.5%;
+  }
+  
+
+  .splide__arrows {
+    width: 100%;
+  }
+  .splide__arrows .controls {
+    width: 100%;
+    position: relative;
+    top: -242px;
+  }
+  .splide__arrows .controls>div {
+    justify-content: space-between !important;
+    display: flex !important;
+  }
+
+  
+  .holiday-featured-collection-div-saturn>div {
+    padding: 0 10rem;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 1400px) {
+    .holiday-featured-collection-div-saturn>div {
+      padding: 0px;
+    }
+  }
+  @media (min-width: 1400px) and (max-width: 1500px) {
+    .holiday-featured-collection-div-saturn>div {
+      padding: 0 5rem;
+    }
+  }
+  @media (min-width: 750px) and (max-width: 1250px) {
+    .holiday-featured-collection-div-saturn .lg\:grid-cols-5 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+    .holiday-featured-collection-div-saturn .lg\:grid-cols-4 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+    .holiday-featured-collection-div-saturn .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+  }
+  @media (max-width: 1250px) {
+    .holiday-featured-collection-div-saturn .product-count-3 {
+      width: 100%;
+    }
+    .holiday-featured-collection-div-saturn .product-count-3 {
+      width: 100%;
+    }
+  }
+</style>
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const isMobile = window.innerWidth < 800;
+    const deviceType = isMobile ? 'mobile' : 'desktop';
+    console.log('Device Type:', deviceType);
+
+    if (deviceType == 'mobile') {
+      var domHolidayFeaturedCollectionDiv = document.querySelector(".holiday-featured-collection-div");
+      domHolidayFeaturedCollectionDiv.id = document.querySelector(".holiday-featured-collection-id").innerHTML;
+    }
+  
+    Add the device type as a class to the body
+  });
+</script> -->
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Fix price '+'
+    var intervalForRemovePlus = setInterval(function () {
+      if (document.querySelectorAll(".price-item")) {
+        console.log("!!!!!cannnnnnnnnnnnnnnnnnnnnnnnnnnn");
+        document.querySelectorAll(".price-item").forEach(function (price) {
+          let price_text = price.innerHTML;
+          price.innerHTML = price_text.replaceAll('+', '');
+        });
+      } else {
+        console.log("cannnnnnnnnnnnnnnnnnnnnnnnnnnn");
+      }
+    }, 500);
+    setTimeout(function () {
+      clearInterval(intervalForRemovePlus);
+    }, 20000);
+  });
+</script> -->

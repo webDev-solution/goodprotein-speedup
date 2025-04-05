@@ -1,0 +1,67 @@
+{{'custom-product-section-2.scss.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{section.id}} [data-section-type="pdp-section-2"] {
+    --color-pdp-section-2: {{section.settings.color_bg}};
+  }
+{% endstyle %}
+
+<div data-section-type="pdp-section-2" class="product-section product-section-2 product-section-padding">
+  <div class="page-width">
+    <h3>{{ section.settings.heading }}</h3>
+    <div class="inner-product-section inner-product-section-2">
+      {% for block in section.blocks %}
+      <div class="product-section-box product-section-2-box">
+        <img src="{{ block.settings.image | img_url:'600x' }}" width="" height="" alt=""/>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Product why people love",
+  "settings": [
+    {
+      "type":"textarea",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type": "header",
+      "content": "color_schema"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background color",
+      "default": "#fcf7e4"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"image",
+      "name":"Image",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name":"Product Section 2",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

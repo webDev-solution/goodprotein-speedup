@@ -1,0 +1,257 @@
+
+{{'custom-account.scss.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %}
+
+<account-section class="block m-auto section-content py-section-vertical-spacing px-section max-w-site" data-color-scheme="{{section.settings.color_scheme}}" data-customer-id="{{customer.id}}" data-customer-email="{{customer.email}}">
+  <div class="page-width">
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="grid__item lg:col-span-9 info mb-10">
+        <p class="uppercase h2">Welcome, ({{customer.first_name}})</h2>
+        <div class="credit-balance">
+
+        </div>
+        <a class="inline-block text-primary-accent mb-2" href="{{ routes.account_logout_url }}">{{ 'layout.customer.log_out' | t }}</a>
+      </div>
+      <div class="grid__item lg:col-span-3">
+        <a class="btn push-btn square-style mb-5 block" id="Rise-account-page-button" >Store credits & giftcards</a>
+        {% render 'loop-subscriptions', type: 'customer-portal-link' %}
+      </div>
+    </div>
+    <div class="mb-10 mt-10 lg:mt-0">
+      <h1 class="font-heading heading-template mb-2.5 text-center">{{ 'customer.account.title' | t }}</h1>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12">
+      <div class="col-span-4 p-2">
+        <div class="card p-5">
+          <p class="h2 mb-5" >Rewards summary</p>
+          <div class="reward-balance">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-span-4 p-2">
+        <div class="card p-5">
+          <div class="flex mb-5 justify-between items-center">
+            <p class="h2">Account Details</p>
+            <a class="btn push-btn square-style small" href="/account/addresses" >Manage</a>
+          </div>
+          {{customer.default_address | format_address }}
+        </div>
+      </div>
+      {% if customer.orders_count > 0 %}
+      <div class="col-span-4 p-2">
+        <div class="card p-5">
+          <div class="flex mb-5 justify-between items-center">
+            <p class="h2">Order History</p>
+            <div class="view-full-history-btn-saturn btn push-btn square-style small">View All</div>
+          </div>
+          <p class="mb-2">Last Order: {{customer.orders[0].name}}</p>
+          <p class="mb-2">Date: {{customer.orders[0].created_at}}</p>
+          <p class="mb-2">Payment status: {{customer.orders[0].financial_status_label}}</p>
+          <p class="mb-2" >Delivery status: {{customer.orders[0].fulfillment_status_label}}</p>
+        </div>
+      </div>
+      {% endif %}
+      
+    </div>
+  </div>
+</account-section> 
+
+<div style="display: none !important;" class="order-full-history-contain-saturn">
+  <div class="modal-back-saturn"></div>
+  <div class="order-body-contain-saturn">
+    <div class="order-body-contain-close-btn-saturn">
+      <span class="order-body-close-btn-saturn">&times;</span>
+    </div>
+    <div class="order-body-title-saturn">
+      Order History
+    </div>
+    <div class="order-body-caption-saturn order-tr-saturn order-tr-caption-saturn">
+        <div class="order-td-saturn order-td-name-saturn order-td-name-caption-saturn">Order Name</div>
+        <div class="order-td-saturn order-td-created_at-saturn order-td-created_at-caption-saturn">Date</div>
+        <div class="order-td-saturn order-td-financial_status_label-saturn order-td-financial_status_label-caption-saturn">Payment Status</div>
+        <div class="order-td-saturn order-td-fulfillment_status_label-saturn order-td-fulfillment_status_label-caption-saturn">Delivery Status</div>
+      </div>
+    <div class="order-body">
+      <!-- <div class="order-body-caption-saturn order-tr-saturn order-tr-caption-saturn">
+        <div class="order-td-saturn order-td-name-saturn order-td-name-caption-saturn">Order Name</div>
+        <div class="order-td-saturn order-td-created_at-saturn order-td-created_at-caption-saturn">Date</div>
+        <div class="order-td-saturn order-td-financial_status_label-saturn order-td-financial_status_label-caption-saturn">Payment Status</div>
+        <div class="order-td-saturn order-td-fulfillment_status_label-saturn order-td-fulfillment_status_label-caption-saturn">Delivery Status</div>
+      </div> -->
+      {% for each_other in customer.orders %}
+        <div class="order-tr-saturn">
+          <div class="order-td-saturn order-td-name-saturn">{{ each_other.name }}</div>
+          <div class="order-td-saturn order-td-created_at-saturn">{{ each_other.created_at }}</div>
+          <div class="order-td-saturn order-td-financial_status_label-saturn">{{ each_other.financial_status_label }}</div>
+          <div class="order-td-saturn order-td-fulfillment_status_label-saturn">{{ each_other.fulfillment_status_label }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var viewFullHistoryBtn = document.querySelector('.view-full-history-btn-saturn');
+    var orderFullHistoryContainer = document.querySelector('.order-full-history-contain-saturn');
+
+    if (orderFullHistoryContainer) {
+      // orderFullHistoryContainer.addEventListener('click', function () {
+      //   orderFullHistoryContainer.style.display = 'none';
+      // });
+      if (document.querySelector('.modal-back-saturn')) {
+        document.querySelector('.modal-back-saturn').addEventListener('click', function (event) {
+          orderFullHistoryContainer.style.display = 'none';
+        });
+      }
+      if (document.querySelector('.order-body-close-btn-saturn')) {
+        document.querySelector('.order-body-close-btn-saturn').addEventListener('click', function () {
+          orderFullHistoryContainer.style.display = 'none';
+        });
+      }
+    }
+
+    if (viewFullHistoryBtn && orderFullHistoryContainer) {
+      viewFullHistoryBtn.addEventListener('click', function () {
+        orderFullHistoryContainer.style.display = 'flex';
+      });
+    }
+  })
+</script>
+<style>
+  .modal-back-saturn {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 800;
+  }
+  .order-full-history-contain-saturn {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.1);
+  }
+  .order-body-contain-saturn {
+    width: 100%;
+    max-width: 1000px;
+    /* height: 80vh; */
+    padding: 25px;
+    padding-top: 10px;
+    border-radius: 15px;
+    background-color: white;
+    margin: 10px;
+    z-index: 999;
+  }
+  .order-body-contain-close-btn-saturn {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .order-body-close-btn-saturn {
+    cursor: pointer;
+  }
+  .order-body-title-saturn {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .order-body {
+    height: 70vh;
+    overflow: auto;
+  }
+  .order-body-caption-saturn {
+    display: flex;
+  }
+  .order-tr-saturn {
+    display: flex;
+  }
+  .order-td-saturn {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .order-td-name-saturn {
+    flex: 5;
+  }
+  .order-td-created_at-saturn {
+    flex: 9;
+  }
+  .order-td-financial_status_label-saturn {
+    flex: 4;
+  }
+  .order-td-fulfillment_status_label-saturn {
+    flex: 4;
+  }
+  .order-body-caption-saturn {
+    font-weight: bold;
+    text-align: center;
+  }
+  .order-body-contain-saturn {
+    text-align: center;
+  }
+  .order-tr-caption-saturn {
+    /* border: 1px solid black !important; */
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  .order-tr-saturn {
+    padding: 10px 0;
+    /* border: 1px solid black; */
+    border-top: 1px solid #ccc;
+    border-bottom: 0px;
+  }
+  /* .order-tr-saturn:first-child {
+    border-top: 1px solid black;
+  } */
+  .order-tr-saturn:last-child {
+    /* border-bottom: 1px solid black; */
+    border-bottom: 1px solid #ccc;
+  }
+  @media (max-width: 320px) {
+    .order-td-saturn {
+      font-size: 10px;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 400px) {
+    .order-td-saturn {
+      font-size: 11px;
+    }
+  }
+  @media (min-width: 400px) and (max-width: 500px) {
+    .order-td-saturn {
+      font-size: 12px;
+    }
+  }
+  @media (min-width: 500px) and (max-width: 760px) {
+    .order-td-saturn {
+      font-size: 14px;
+    }
+  }
+</style>
+
+{{'custom-account.js' | asset_url | script_tag }}
+
+
+{% schema %}
+{
+  "name": "Main account",
+  "settings": [
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color Scheme"
+      }
+  ]
+}
+{% endschema %}

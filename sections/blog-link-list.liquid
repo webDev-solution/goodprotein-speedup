@@ -1,0 +1,211 @@
+{%- liquid
+  assign block_heading_level = 'h2'
+  assign icons = section.blocks | where: "type", "icon"
+%}
+
+<div id="mySidenav" class="sidenav">
+  
+  <h4 class="filter_title"><ly-as-1383352>Filters</ly-as-1383352></h4><a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><ly-as-1383353>&times;</ly-as-1383353></a>
+  <ul>
+  {% for block in section.blocks %}
+          {% if block.type == 'icon' %}
+            {% if block.settings.text != "" %}
+             <li class="text-base lg:text-xl px-section b_mnu_item">
+               <a href="{% if block.settings.link != '' %} {{ block.settings.link }} {% else %}#{% endif %}" data-href="grid_superfood-shake" class="collection_tab_text " style="color: #000000;">{{ block.settings.text }}</a>
+             </li>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+<section class="relative text-scheme-text bg-scheme-background {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} relative overflow-hidden" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" >
+  <div class="section-content relative z-10 py-section-vertical-spacing px-section max-w-site mx-auto" style="padding-bottom: 0;">
+    <div class="{% if section.settings.title != '' %}section-content-top-margin{% endif %}">
+      
+      <button type="button" onclick="openNav()" class="push-btn-surface mobile_filter_blog btn disclosure-btn  border-b-text" aria-expanded="false" aria-controls="lang-list" aria-describedby="lang-heading" data-disclosure-toggle>
+                 <ly-as-1383352>Filters</ly-as-1383352>
+                    <span class="chevron-down inline-block ml-2 w-3 fill-current">
+                      {% render 'icon-chevron-down' %}
+                    </span>                   
+                  </button>
+      
+    <div class="collections_tab">     
+    <div class="collections_tab_wrap" style="background-color: #ffe89e;">
+      <ul class=" text-center">
+         {% for block in section.blocks %}
+          {% if block.type == 'icon' %}
+            {% if block.settings.text != "" %}
+             <li style="background-color: #ffe89e;">
+               <a href="{% if block.settings.link != '' %}{{ block.settings.link }}{% else %}#{% endif %}" class="" style="color: #000000;">{{ block.settings.text }}</a>
+             </li>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+                      
+      </ul>
+    </div>
+    </div>
+    </div>
+  </div>
+
+</section>
+
+<style>
+  @media (min-width: 989px)
+  {
+.mobile_filter_blog {
+    overflow: hidden;
+    height: 0;
+    transition: height .3s ease;
+  display: none;
+  opacity: 0;
+}
+  }
+
+  .filter_title {
+    position: absolute;
+    top: 15px;
+    font-size: 18px;
+    margin-left: calc(50% - 30px);
+  }
+  .mobile_filter_blog  {
+    width: 100%;
+  }
+  
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: #fff5d6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Blog list",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 50,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Icon max width",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "label": "Text style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Body"
+        },
+        {
+          "value": "heading",
+          "label": "Heading"
+        }
+      ],
+      "default": "body"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color Scheme"
+      },
+    {
+      "type": "checkbox",
+      "id": "use_gradient_background",
+      "label": "Use gradient for background"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Blog Category Link",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog list",
+      "blocks": [
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        }
+      ]
+    }
+  ]
+} 
+{% endschema %}

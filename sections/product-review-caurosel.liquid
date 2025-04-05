@@ -1,0 +1,104 @@
+<div class="product-section product-review-caurosel"  id="pro_review_caurosel">
+  <div class="pro_review_ttl_wrap">
+    {% if section.settings.subtitle %}
+      <h5>{{ section.settings.subtitle }}</h5>
+    {% endif %}
+    <h3>{{ section.settings.heading }}</h3>
+    <h4>{{ section.settings.subheading }}</h4>
+    <p>{{ section.settings.content }}</p>  
+  </div>
+    <div class="inner_product-review-caurosel">
+      {% for block in section.blocks %}
+         <div class="product-section-box product-review-box">
+          <figure>
+            {{ block.settings.image | image_url: width: 400 | image_tag: class: 'custom-class', loading: 'lazy' }}
+         
+         </figure>
+           <div class="product-review-content"> 
+             <div class="product-star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+             <p>{{ block.settings.content }}</p>
+           </div>
+         </div>
+      {% endfor %}
+    </div>
+</div>
+
+<script>
+   $('.inner_product-review-caurosel').slick({
+     centerMode: true,
+     centerPadding: '120px',
+     initialSlide: 2,
+     variableWidth: true,
+     infinite: true,
+     slidesToScroll: 1,
+     autoplay: true,
+     autoplaySpeed: 2000,
+     responsive: [
+     {
+      breakpoint: 768,
+      settings: {
+          centerPadding: '60px',
+          slidesToShow: 1
+      }
+     }
+      ]
+   });
+</script>
+
+{% schema %}
+  {
+    "name": "Product Review Carousel",
+    "settings": [
+      {
+        "type":"textarea",
+        "id":"subtitle",
+        "label":"Sub Title"
+      },
+      {
+        "type":"textarea",
+        "id":"heading",
+        "label":"Heading"
+      },
+      {
+        "type":"textarea",
+        "id":"subheading",
+        "label":"Sub Heading"
+      },
+      {
+        "type":"textarea",
+        "id":"content",
+        "label":"Content"
+      }      
+    ],
+    "blocks":[
+      {
+        "name":"Product Review Carousel",
+        "type":"carousel",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          },
+          {
+            "type":"inline_richtext",
+            "id":"content",
+            "label":"Content"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Product Review",
+        "category":"product"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

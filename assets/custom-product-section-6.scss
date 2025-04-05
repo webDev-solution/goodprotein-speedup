@@ -1,0 +1,32 @@
+
+[data-section-type="pdp-section-6"] {
+  @media screen and (max-width: 768px) {
+    padding: 30px 0!important;
+  }
+  h3 {
+    color: var(--color-pdp-nutrition-title);
+    font-family: Gelica Bk!important;
+    max-width: 350px;
+    margin: auto;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+      max-width: 280px;
+    }
+  }
+  .inner-product-section-6 {
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      gap: 0;
+      .product-section-box {
+        margin-top: 35px;
+      }
+    }
+    h4 {
+      color: var(--color-pdp-nutrition-text);
+      font-size: 22px;
+    }
+    p {
+      color: #414141;
+    }
+  }
+}

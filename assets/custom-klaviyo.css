@@ -1,0 +1,29 @@
+@font-face{
+  font-family:'Lato Black';
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+  src:url('https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Lato-Black.ttf?v=1694020689') format('truetype')
+}
+@font-face{
+  font-family:'Lato Bold';
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+  src:url('https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Lato-Bold.ttf?v=1694020689') format('truetype')
+}
+@font-face{
+  font-family:'Lato Regular';
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+  src:url('https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Lato-Regular.ttf?v=1694020689') format('truetype')
+}
+
+#klaviyo-bis-modal .form-group .form-control {
+  border-radius: 60px;
+}
+
+#klaviyo-bis-modal .control-group .btn {
+  border-radius: 60px;
+}

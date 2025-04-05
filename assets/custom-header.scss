@@ -1,0 +1,180 @@
+[data-menu-drawer-toggle] {
+  .close {
+    display: none;
+  }
+  &[aria-expanded="true"] {
+    .close {
+      display: inline-block;
+    }
+    .open {
+      display: none;
+    }
+  }
+}
+
+.sidebar-nav {
+  height: 100%;
+  background: #E9F6FD;
+  border-top: 1px solid #F3E9CA;
+  .header {
+    background: white;
+    border-bottom: 1px solid #F3E9CA;
+  }
+  .top {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #C1E4FB;
+    li {
+      border-bottom: 1px solid #9b9b9b;
+      &:last-child {
+        border: none;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+        img {
+          width: 55px;
+          height: auto;
+          margin-right: 20px;
+          padding: 5px;
+          background: white;
+        }
+        .badge {
+          font-size: 14px;
+          margin-left: 10px;
+          background: #FFE89E;
+          padding: 3px 10px;
+          border-radius: 14px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .bottom {
+    padding: 30px 20px;
+    background: #E9F6FD;
+    .language-selector {
+      .btn {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: 6px 20px 10px;
+      }
+    }
+    ul {
+      column-count: 2;
+    }
+  }
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.dropdown > label,
+.dropdown > a[role="button"] {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 0;
+  color: #333;
+  line-height: 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.dropdown > label:hover,
+.dropdown > a[role="button"]:hover,
+.dropdown > a[role="button"]:focus {
+  border-color: #333;
+}
+
+.dropdown > label:after,
+.dropdown > a[role="button"]:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.dropdown > label img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.dropdown > ul {
+  column-count: 1!important;
+  position: absolute;
+  z-index: 999;
+  display: block;
+  left: -100vw;
+  top: calc(1.5em + 14px);
+  border: 1px solid #8c8c8c;
+  background: #fff;
+  padding: 6px 0;
+  margin: 0;
+  list-style: none;
+  width: fit-content;
+  min-width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 3px 8px rgba(0,0,0,.15);
+  box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
+
+.dropdown > ul a {
+  display: flex;
+  align-items: center;
+  padding: 6px 15px;
+  text-decoration: none;
+  color: #333;
+  width: max-content;
+}
+
+.dropdown > ul a img {
+  width: 22px;
+  margin-right: 10px;
+}
+
+.dropdown > ul a:hover,
+.dropdown > ul a:focus {
+  background: #ececec;
+}
+
+.dropdown > input[type="checkbox"]:checked ~ ul,
+.dropdown > ul:target {
+  left: 0;
+}
+
+.dropdown > [type="checkbox"]:checked + label:after,
+.dropdown > ul:target ~ a:after {
+  content: "\f0d8";
+}
+
+.dropdown a.close {
+  display: none;
+}
+
+.dropdown > ul:target ~ a.close {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-indent: -100vw;
+  z-index: 1000;
+}

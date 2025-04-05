@@ -1,0 +1,252 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "c45e1c69-d05b-4dfe-9ad8-207d62ea8a9f": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "title_nJz6EG": {
+          "type": "title",
+          "settings": {
+            "title": "Get creative with these delicious, healthy recipes",
+            "heading_size": "heading-base"
+          }
+        },
+        "text_zRL6ME": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Lorem ipsum dolor sit amet, consectetu <br\/>adipiscing elit, sed do eiusmod tempor.<br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_nJz6EG",
+        "text_zRL6ME"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Banner_BananaCream_Desktop02_3.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-start",
+        "text_align": "text-left",
+        "color_scheme": "secondary",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "36480b97-660f-468c-b715-7d89d7a9f154": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "title": "Blog posts",
+        "blog": "recipes",
+        "post_limit": 3,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_post_excerpt": true,
+        "show_view_all": true,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "3963a99e-8815-462c-861b-ddef39582262": {
+      "type": "custom-blog-recipes",
+      "blocks": {
+        "template--14710833971309__3963a99e-8815-462c-861b-ddef39582262-1689187501d18a15e3-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Replo_test_Hero_Home-02.png",
+            "title": "",
+            "richtext": "<h4><strong>Oatmeal Pear <br\/>Chai Smoothie<\/strong><\/h4>",
+            "cta_url": "#",
+            "cta_text": "Read more",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "template--14710833971309__3963a99e-8815-462c-861b-ddef39582262-1689187501d18a15e3-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/replo-asset-_21.png",
+            "title": "",
+            "richtext": "<h4><strong>Mint Chocolate Smoothie<\/strong><\/h4>",
+            "cta_url": "#",
+            "cta_text": "Read more",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "27a0437b-608b-4921-8b9e-e1af2c6f1e81": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Banner_BananaCream_Desktop02_1d493939-58d9-4e68-a026-4fc18fa72b81.png",
+            "title": "",
+            "richtext": "<h4><strong>Salted Caramel Apple Pie Chia Smoothie\t\t\t\t\t\t\t\t\t\t<\/strong><\/h4>",
+            "cta_url": "#",
+            "cta_text": "Shop Now",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "13dd1fda-16a1-4821-b0b8-0f8641b7c026": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "richtext": "<h4>Watermelon &<br\/>Strawberry Smoothie\t\t\t\t\t\t\t\t\t\t<\/h4>",
+            "cta_url": "#",
+            "cta_text": "Read more",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "881cd513-a976-4625-9fed-b2bf18bcf75e": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Replo-test-Shake-LandingPage02.png",
+            "title": "",
+            "richtext": "<h4><strong>Chocolate<br\/>Brownie<\/strong><br\/><\/h4>",
+            "cta_url": "",
+            "cta_text": "Shop Now",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "c471ecfe-9070-45dc-9b89-794e27e01a61": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "richtext": "<h4><strong>Salted Caramel<br\/>Waffles<\/strong><br\/><\/h4>",
+            "cta_url": "",
+            "cta_text": "Shop Now",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "bd18185b-412d-446e-9cfb-615eda34015e": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "richtext": "<h4><strong>Chocolate<br\/>Brownie<\/strong><br\/><\/h4>",
+            "cta_url": "",
+            "cta_text": "Shop Now",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        },
+        "fa348be8-cc86-4bf9-a86f-3bfcd1b175ce": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "richtext": "<h4><strong>Salted Caramel<br\/>Waffles<\/strong><br\/><\/h4>",
+            "cta_url": "",
+            "cta_text": "Shop Now",
+            "place_content": "inherit",
+            "text_align": "inherit",
+            "text_overlay_color": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "template--14710833971309__3963a99e-8815-462c-861b-ddef39582262-1689187501d18a15e3-0",
+        "template--14710833971309__3963a99e-8815-462c-861b-ddef39582262-1689187501d18a15e3-1",
+        "27a0437b-608b-4921-8b9e-e1af2c6f1e81",
+        "13dd1fda-16a1-4821-b0b8-0f8641b7c026",
+        "881cd513-a976-4625-9fed-b2bf18bcf75e",
+        "c471ecfe-9070-45dc-9b89-794e27e01a61",
+        "bd18185b-412d-446e-9cfb-615eda34015e",
+        "fa348be8-cc86-4bf9-a86f-3bfcd1b175ce"
+      ],
+      "settings": {
+        "style": "full",
+        "height": "natural",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": false,
+        "auto_rotate": false,
+        "slide_speed": "5000",
+        "place_content": "place-content-center-start",
+        "text_align": "text-left",
+        "heading_size": "heading-base",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "fa701601-9c0e-4e0d-b191-93c88502647a": {
+      "type": "filterable-blogs",
+      "blocks": {
+        "template--14710833971309__fa701601-9c0e-4e0d-b191-93c88502647a-1689222845975da473-0": {
+          "type": "icon",
+          "settings": {
+            "text": "Smoothies",
+            "link": "shopify:\/\/blogs\/recipes"
+          }
+        },
+        "template--14710833971309__fa701601-9c0e-4e0d-b191-93c88502647a-1689222845975da473-1": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "link": "\/"
+          }
+        },
+        "template--14710833971309__fa701601-9c0e-4e0d-b191-93c88502647a-1689222845975da473-2": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "link": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--14710833971309__fa701601-9c0e-4e0d-b191-93c88502647a-1689222845975da473-0",
+        "template--14710833971309__fa701601-9c0e-4e0d-b191-93c88502647a-1689222845975da473-1",
+        "template--14710833971309__fa701601-9c0e-4e0d-b191-93c88502647a-1689222845975da473-2"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "blog": "recipes",
+        "tags": "Smoothies, Smoothie bowls, Snacks, Shakes, Bowls, Baked goods, Prebiotics, Keto",
+        "post_limit": 12,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_post_excerpt": true,
+        "show_view_all": true,
+        "title": "",
+        "max_width": 100,
+        "text_style": "body",
+        "color_scheme": "primary",
+        "use_gradient_background": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c45e1c69-d05b-4dfe-9ad8-207d62ea8a9f",
+    "36480b97-660f-468c-b715-7d89d7a9f154",
+    "3963a99e-8815-462c-861b-ddef39582262",
+    "fa701601-9c0e-4e0d-b191-93c88502647a"
+  ]
+}

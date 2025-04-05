@@ -1,0 +1,141 @@
+
+
+<div class="countdown-banner">
+    <div class="countdown-timer">
+        <div class="time-box">
+            <span id="days">00</span>
+            <span class="label">DAYS</span>
+        </div>
+        <div class="time-box">
+            <span id="hours">00</span>
+            <span class="label">HOURS</span>
+        </div>
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <span class="label">MIN</span>
+        </div>
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <span class="label">SEC</span>
+        </div>
+    </div>
+</div>
+
+<script>
+  // Parse the end date from the text input
+//  var countDownDate = new Date("{{ section.settings.end_date }}T23:59:59").getTime();
+  // Set the countdown end date to 12 PM Eastern Time (UTC-5) on the 18th
+  var countDownDate = new Date("{{ section.settings.end_date }}T17:00:00Z").getTime(); // 17:00 UTC = 12:00 PM EST
+  
+
+  // Countdown function to update every second
+  var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+      document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+      document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
+
+      if (distance < 0) {
+          clearInterval(x);
+          document.querySelector(".countdown-timer").innerHTML = "EXPIRED";
+      }
+  }, 1000);
+</script>
+
+<style>
+/* Overall Section Styling */
+.countdown-banner {
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+/* Neon Effect for Text */
+.banner-text h2 {
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff;
+    margin-bottom: 10px;
+}
+
+.banner-text h1 {
+    font-size: 60px;
+    color: #ff00aa;
+    text-shadow: 0 0 10px #ff00aa, 0 0 20px #ff00aa, 0 0 30px #ff00aa, 0 0 40px #ff00aa;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff;
+}
+
+/* Countdown Timer Styling */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.time-box {
+    background-color: #ff00aa;
+    border-radius: 12px;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    min-width: 80px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.time-box span.label {
+    display: block;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 5px;
+}
+</style>
+
+
+{% schema %}
+{
+  "name": "Countdown Timer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Main Heading",
+      "default": "VIP EARLY ACCESS"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Exclusive savings of up to 40% off"
+    },
+    {
+      "type": "text",
+      "id": "end_date",
+      "label": "Countdown End Date (YYYY-MM-DD)",
+      "default": "2024-11-30"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown Timer",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

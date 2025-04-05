@@ -1,0 +1,599 @@
+{% liquid
+  assign style = section.settings.style
+  assign height = section.settings.height
+  if height == 'natural'
+    assign crop = 'image-wrapper-none'
+  else
+    assign crop = 'image-wrapper ' | append: height
+  endif
+%}
+
+<style>
+  {% comment %} this is official style, other style will be removed {% endcomment %}
+  .promo-banner-text-saturn {
+    font-size: 60px;
+    font-family: 'Gelica Bk';
+    color: {{ section.settings.title_color }};
+    text-align: center;
+  }
+  .text-theme-basic p {
+    font-size: 32px;
+    font-family: 'Gelica Bk' !important;
+    color: {{ section.settings.body_text_color }};
+    text-align: center;
+    max-width: 70vw;
+  }
+  .banner-part-body-text-container {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .banner-part .bottom-button-ss {
+    background-color: {{ section.settings.button_color }};
+    color: {{ section.settings.button_label_color }};
+    font-size: 24px;
+    font-family: 'Gelica Bold';
+    padding: 11px 50px;
+  }
+  .brand-contents-saturn {
+    padding-bottom: 50px;
+  }
+  .small-text-contianer {
+    padding-bottom: 15px;
+    font-size: 24px;
+    font-family: 'Gelica Bk';
+    max-width: 80vw;
+    text-align: center;
+  }
+  .banner-part .image-container * {
+    height: 100%;
+  }
+  @media (max-width: 1024px) {
+    .promo-banner-text-saturn {
+      font-size: 48px;
+    }
+    .text-theme-basic p {
+      font-size: 24px;
+    }
+    .small-text-contianer {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    .brand-contents-saturn {
+      padding-bottom: 30px;
+    }
+    .text-theme-basic p {
+      width: 90vw;
+      font-size: 18px;
+      padding-right: 10px;
+      padding-left: 10px;
+      max-width: unset;
+    }
+    .promo-banner-text-saturn {
+      font-size: 32px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .banner-part .bottom-button-ss {
+      font-size: 24px;
+      padding: 11px 50px;
+    }
+    .banner-part .bottom-button-ss {
+      font-size: 18px;
+      padding: 7px 40px;
+    }
+    .small-text-contianer {
+      font-size: 16px;
+      max-width: unset;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  @media (max-width: 425px) {
+    .promo-banner-text-saturn {
+      font-size: 26px;
+    }
+    .text-theme-basic p {
+      width: 100vw;
+      font-size: 16px;
+      max-width: unset;
+    }
+    .brand-top-container-saturn .logo-image-saturn {
+      width: 50vw !important;
+    }
+    .banner-part .bottom-button-ss {
+      font-size: 16px;
+      padding: 6px 30px;
+    }
+    .small-text-contianer {
+      font-size: 14px;
+      max-width: unset;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+</style>
+
+<div
+  class="hoilday-image-countdown-overlay banner-part brand-top-container-saturn text-scheme-text bg-scheme-background overflow-hidden {% unless style == 'inset' %}full-bleed-section{% endunless %}  {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}"
+  data-color-scheme="{{ section.settings.color_scheme }}"
+  {% if customer %}
+    data-customer="true"
+    data-customer-id="{{customer.id}}"
+  {% else %}
+    data-customer="false"
+  {% endif %}
+>
+  <div class="section-content  {% if style == 'inset' %}py-section-vertical-spacing{% endif %}">
+    {% liquid
+      assign image_class = 'w-full'
+      if style == 'inset'
+        assign image_class = image_classs | append: ' media-style'
+      endif
+      if block.settings.heading_size == 'heading-template'
+        assign content_max_width = 'max-w-xl'
+      else
+        assign content_max_width = 'max-w-lg'
+      endif
+      if section.settings.display_content_below_image_on_mobile
+        assign content_class = 'lg:grid lg:absolute lg:inset-0 lg:w-full lg:h-full'
+        assign content_inset_class = 'max-w-site lg:py-5 lg:px-section mx-auto'
+        assign card_container_class = 'lg:card-container'
+        assign card_content_class = 'lg:card py-5 lg:py-10 lg:px-section'
+        assign card_border_class = 'lg:card-border'
+      else
+        assign content_class = 'grid absolute inset-0 w-full h-full'
+        assign content_inset_class = 'max-w-site py-5 px-section mx-auto'
+        assign card_container_class = 'card-container'
+        assign card_content_class = 'card py-5 py-10 px-section'
+        assign card_border_class = 'card-border'
+      endif
+    %}
+
+    <div class="absolute z-10  lg:bg-transparent h-full w-100vw image-container">
+      <div class="{% if crop contains 'slideshow' %}lg:h-full{% endif %} {% if style == 'inset' %}max-w-site px-5 lg:px-10 py-5 mx-auto{% endif %}">
+        <div class="{{ crop }} {% if style == 'inset' %}media-style-container{% endif %}">
+          {% if section.settings.image != blank %}
+            {% if section.settings.image_mobile != blank %}
+              <div class="hidden lg:block">
+            {% endif %}
+            {{
+              section.settings.image
+              | image_url: width: 2000
+              | image_tag: sizes: '100vw', class: image_class, loading: 'lazy'
+            }}
+            {% if section.settings.image_mobile != blank %}
+              </div>
+            {% endif %}
+            {% if section.settings.image_mobile != blank %}
+              <div class="lg:hidden">
+                {{
+                  section.settings.image_mobile
+                  | image_url: width: 1200
+                  | image_tag: sizes: '100vw', class: image_class, loading: 'lazy'
+                }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="w-full {% unless height == 'natural' %}absolute top-0 left-0 right-0 bottom-0{% endunless %}">
+              {{
+                'lifestyle-1'
+                | placeholder_svg_tag: 'block text-scheme-placeholder-foreground fill-current bg-neutral-100'
+              }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <!-- ************************************ -->
+    <div class="relative z-100 lg:bg-transparent brand-contents-saturn">
+      <div>
+        <img src="{{ section.settings.top_logo_image | img_url: '2000x500'  }}" class="logo-image-saturn" />
+      </div>
+      <div class="promo-banner-text-saturn">
+        {% if request.path contains '/fr' %}
+          {% if section.settings.a_gift_from_us_to_you_fr %}
+            {{ section.settings.a_gift_from_us_to_you_fr }}
+          {% else %}
+            {{ section.settings.a_gift_from_us_to_you }}
+          {% endif %}
+        {% else %}
+          {{ section.settings.a_gift_from_us_to_you }}
+        {% endif %}
+      </div>
+      <div class=" z-10  text-scheme-text place-content-end-center text-center banner-part-body-text-container">
+        <div class="">
+            <div class="  max-w-lg">
+              <div class="break-words  ">
+                <div class="rte text-theme-basic">
+                  <p>
+                    {% if request.path contains '/fr' %}
+                      {% if section.settings.bottom_text_fr %}
+                        {{ section.settings.bottom_text_fr }}
+                      {% else %}
+                        {{ section.settings.bottom_text }}
+                      {% endif %}
+                    {% else %}
+                      {{ section.settings.bottom_text }}
+                    {% endif %}
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="small-text-contianer">
+        {% if request.path contains '/fr' %}
+          {% if section.settings.bottom_text_fr %}
+            {{ section.settings.small_text_fr }}
+          {% else %}
+            {{ section.settings.small_text }}
+          {% endif %}
+        {% else %}
+          {{ section.settings.small_text }}
+        {% endif %}
+      </div>
+      <div class="button-container">
+        {% if section.settings.button_label and section.settings.button_link %}
+          <a href="{{ section.settings.button_link }}" class="btn button bottom-button-ss">
+            {{ section.settings.button_label }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<div id="show-now-goodprotein"></div>
+<style>
+  .brand-contents-saturn {
+    top: 0px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 100%;
+    z-index: 100;
+  }
+  .brand-contents-saturn .green-text-saturn {
+    font-family: Lato;
+    font-size: clamp(15px, 2vw, 3rem);
+    font-weight: 800;
+    /* line-height: 34.7px; */
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #265917;
+    width: 70%;
+  }
+  .brand-contents-saturn .red-text-saturn{
+    padding-top: 50px;
+    font-family: Lato;
+    font-size: clamp(10px, 2vw, 3rem);
+    font-weight: 800;
+    /* line-height: 38.3px; */
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #C82700;
+  }
+  .brand-contents-saturn .width-60vw-saturn {
+    width: {{ section.settings.a_gift_from_us_to_you_width }}vw;
+  }
+  .brand-contents-saturn .width-77vw-saturn {
+    width: {{ section.settings.holiday_dash_image_width }}vw;
+  }
+  .brand-top-container-saturn .logo-image-saturn {
+    max-width: 450px;
+    width: 30vw;
+    margin: 3vw;
+  }
+  @media (max-width: 500px) {
+    .brand-top-container-saturn .logo-image-saturn {
+      margin: 10px 0px; /* New padding for screens between 1400px and 1500px */
+    }
+  }
+
+  .brand-top-container-saturn .brand-main-image-saturn {
+    margin: 30px 0;
+  }
+  .brand-top-container-saturn {
+    height: auto;
+  }
+  .brand-top-container-saturn .red-text-saturn {
+    padding-bottom: 30px;
+  }
+  /* Mobile Responsive Design */
+  @media only screen and (max-width: 768px) {
+    .promo-banner-title-saturn {
+      font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+  
+    .promo-banner-subtitle-saturn {
+      font-size: 16px; /* Adjust paragraph size for smaller screens */
+    }
+  }
+</style>
+
+{%- liquid
+  assign stickers = section.blocks | where: 'type', 'sticker'
+  assign shape_dividers = section.blocks | where: 'type', 'shape_divider'
+  for sticker in stickers
+    render 'block-sticker' with block: sticker, section: section
+  endfor
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+{% schema %}
+{
+  "name": "Banner Part",
+  "class": "banner-section",
+  "settings": [
+    {
+      "id": "top_logo_image",
+      "type": "image_picker",
+      "label": "Logo",
+      "info": "Upload a logo for the top of the section."
+    },
+    {
+      "id": "a_gift_from_us_to_you",
+      "type": "text",
+      "label": "Title(EN)"
+    },
+    {
+      "id": "a_gift_from_us_to_you_fr",
+      "type": "text",
+      "label": "Title(FR)"
+    },
+    {
+      "id": "title_color",
+      "type": "color",
+      "label": "Title Color",
+      "default": "#ff0052"
+    },
+    {
+      "id": "bottom_text",
+      "type": "text",
+      "label": "Subtitle(EN)"
+    },
+    {
+      "id": "bottom_text_fr",
+      "type": "text",
+      "label": "Subtitle(FR)"
+    },
+    {
+      "id": "body_text_color",
+      "type": "color",
+      "label": "Text Color",
+      "default": "#008000"
+    },
+    {
+      "id": "small_text",
+      "type": "text",
+      "label": "Text(EN)"
+    },
+    {
+      "id": "small_text_fr",
+      "type": "text",
+      "label": "Text(FR)"
+    },
+    {
+      "id": "small_text_color",
+      "type": "color",
+      "label": "Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Color"
+    },
+    {
+      "type": "color",
+      "id": "button_label_color",
+      "label": "Button Lable Color",
+      "default": "#ffffff"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Background Image"
+    },
+    {
+      "id": "image_mobile",
+      "type": "image_picker",
+      "label": "Background Image - mobile"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "display_on_card",
+      "label": "Display text overlay on a card",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "display_content_below_image_on_mobile",
+      "label": "Display content below image on mobile",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "style",
+      "label": "Style",
+      "default": "full",
+      "options": [
+        {
+          "value": "inset",
+          "label": "Inset"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Height",
+      "options": [
+        {
+          "value": "natural",
+          "label": "Natural"
+        },
+        {
+          "value": "pt-screen-height",
+          "label": "Screen height"
+        },
+        {
+          "value": "pt-three-quarters-screen-height",
+          "label": "Three quarters screen height"
+        },
+        {
+          "value": "pt-two-thirds-screen-height",
+          "label": "Two thirds screen height"
+        },
+        {
+          "value": "pt-half-screen-height",
+          "label": "Half screen height"
+        },
+        {
+          "value": "pt-600",
+          "label": "600px"
+        },
+        {
+          "value": "pt-700",
+          "label": "700px"
+        },
+        {
+          "value": "pt-800",
+          "label": "800px"
+        }
+      ],
+      "default": "natural"
+    },
+    {
+      "type": "select",
+      "id": "place_content",
+      "label": "Content position",
+      "options": [
+        {
+          "value": "place-content-start-start",
+          "label": "Top left"
+        },
+        {
+          "value": "place-content-start-center",
+          "label": "Top center"
+        },
+        {
+          "value": "place-content-start-end",
+          "label": "Top right"
+        },
+        {
+          "value": "place-content-center-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "place-content-center-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "place-content-center-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "place-content-end-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "place-content-end-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "place-content-end-end",
+          "label": "Bottom right"
+        }
+      ],
+      "default": "place-content-center-center"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-center"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color Scheme"
+      },
+    {
+      "type": "checkbox",
+      "id": "use_gradient_background",
+      "label": "Use gradient for background"
+    },
+    {
+      "type": "select",
+      "id": "text_overlay_color",
+      "label": "Text overlay color",
+      "default": "same_as_section",
+      "options": [
+        {
+          "value": "same_as_section",
+          "label": "Follow color scheme"
+        },
+        {
+          "value": "white",
+          "label": "White"
+        },
+        {
+          "value": "black",
+          "label": "Black"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Part"
+    }
+  ]
+}
+{% endschema %}

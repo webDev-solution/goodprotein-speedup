@@ -1,0 +1,199 @@
+{% liquid
+  assign section_color = 'primary'
+  assign current_variant = product.selected_or_first_available_variant
+  assign section.id = 'ajax'
+
+  assign product_form_id = 'product-form-' | append: section.id
+%}
+
+
+
+<style>
+  .common_small_icons{
+    background-color: {{ product.metafields.custom.megamenu_backgroud_color }};
+  }
+  .covered_main_product_image .image-wrapper img{
+    background: {{ product.metafields.custom.megamenu_backgroud_color }};
+  }
+</style>
+
+{{ 'custom-product.scss.css' | asset_url | stylesheet_tag }}
+
+<section id="productQuickview"
+  data-section-type="product" 
+  class="text-scheme-text bg-scheme-background background--true pdp-color-{{product.metafields.custom.background_color | handleize }}  relative overflow-hiddenx"
+  data-color-scheme="{{ section_color }}"
+  x-data="
+    ThemeSection_Product({
+      product: {{ product | json | escape }},
+      variant: {{ current_variant | json | escape }},
+      featuredMediaID: {{ featured_media.id | json }},
+      template: {{ template | json | escape }},
+      thumbnailsPosition: {{ section.settings.thumbnails_position | json | escape }},
+      showThumbnailsOnMobile: {{ section.settings.show_thumbnails_on_mobile | json }}
+    })"
+  data-product-section
+  >
+
+  <div class="section-content flavours_py-section-vertical-spacing py-section-vertical-spacing lg:px-section max-w-site mx-auto relative z-10">
+    <div class="lg:grid lg:grid-cols-12 page-width">
+      <div class="product-content flavours_content_right col-span-full lg:px-0 ">
+        <div class="product-block-container w-full max-w-full lg:grid lg:grid-cols-12">
+          <div class="lg:col-span-10 lg:col-start-2 relative">
+            <div class="prod-block-star">
+              {% if product.metafields.custom.review_product != blank %}
+              {% render 'junip-product-summary', product: all_products[product.metafields.custom.review_product] %}
+              {% else %}
+              {% render 'junip-product-summary', product: product %}
+              {% endif %}
+            </div>
+            <div class="{{ block_base_classes }} break-words" {{ block.shopify_attributes }}>
+              <h2 class="font-heading heading-template {{ block.settings.text_align }}">
+                {% if product.title contains 'All-in-One Shake' %}
+                  All-in-One Shake
+                {% elsif product.title contains 'Boisson tout-en-un' %}
+                  Boisson tout-en-un
+                {% elsif product.title contains 'Shake tout-en-un' %}
+                  Shake tout-en-un
+                {% else %} 
+                  {{ product.title }}
+                {% endif %}
+              </h2>
+            </div>
+            
+            {% render 'product-block-price',
+              product: product,
+              block: block,
+              block_base_classes: block_base_classes,
+            %}
+
+            <div class="product-block falvour_select-boxes dropdown">
+              <div class="select-falvour-box">
+                <label>{{block.settings.label}}</label>
+                {% if block.settings.type == 'dropdown' %}
+                <select name="falvour-box">
+                  {% for product_free in collections[block.settings.collection].products %}
+                    {% if product_free.metafields.custom.megamenu_backgroud_color != blank %}
+                      {% unless product_free.tags contains 'special product' %} 
+                       {% unless product_free.tags contains 'hidden product' %}
+                      <option data-color="{{ product_free.metafields.custom.megamenu_backgroud_color }}" data-image="{{ product_free.metafields.custom.circle_image | img_url: 'medium' }}" value="{{ product_free.url }}" {% if product.handle == product_free.handle %} selected {% endif %}>{{ product_free.title | remove: " - All-in-One Shake" | remove: ' - Shake tout-en-un' | remove: 'Green Superfood Juice - ' | remove: 'Jus de superaliments verts - '| remove: '- Boisson tout-en-un' }}</option>
+                      {% endunless %}  
+                    {% endunless %}  
+                  {% endif %}
+                  {% endfor %}
+                </select>
+                
+                <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+                            
+                <script>
+                  function formatState (state) {
+                    if (!state.id) { return state.text; }
+                    var $state = $(
+                      '<div class="flavour-option"><span class="flavour-bg"></span> <span class="flavour-text"></span></div>'
+                    );
+                
+                    $state.find(".flavour-text").text(state.text);
+                    $state.find(".flavour-bg").css('background-color',state.element.attributes[0].value);
+                    $state.find(".flavour-bg").html('<img src="'+state.element.attributes[1].value+'"/>');
+
+                    return $state;
+                  };
+
+                  $("[name=falvour-box]").select2({
+                    templateSelection: formatState,
+                    templateResult: formatState,
+                    minimumResultsForSearch: -1
+
+                  });
+
+                  // $('.product-block-variant-picker select').select2();
+
+                  $('body').on('change','[name=falvour-box]',function(){
+                    window.location = $(this).val();
+                  });
+                </script>
+                {% else %}
+                <div class="desktop_flavours_list">
+                  {% for product_free in collections[block.settings.collection].products %}
+                    {% if product_free.metafields.custom.megamenu_backgroud_color != blank %}
+                      {% unless product_free.tags contains 'special product' %} 
+                       {% unless product_free.tags contains 'hidden product' %}
+                        <div class="inner_shakes">
+                          <a href="{{ product_free.url }}">
+                              <span class="tooltip flavours_color{% if product.handle == product_free.handle %} active{% endif %} {{block.settings.size}}" style="background-color: {{ product_free.metafields.custom.megamenu_backgroud_color }};">
+                                {% if product_free.metafields.custom.circle_image != blank %}
+                                  <img loading="lazy" src="{{ product_free.metafields.custom.circle_image | img_url: 'medium' }}">
+                                {% endif %}
+                                <span class="tooltiptext" style="background-color: {{ product_free.metafields.custom.megamenu_backgroud_color }};">
+                                  {% if product_free.title contains 'All-in-One-Shake' %}
+                                    All in One Shake
+                                  {% elsif product_free.title contains 'Shake tout-en-un' %}
+                                    Shake tout-en-un
+                                  {% else %} {{ product_free.title }}{% endif %}
+                                </span>
+                              </span>
+                          </a>
+                        </div>
+                      {% endunless %}
+                    {% endunless %} 
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                {% endif %}
+              </div>
+              {% liquid
+                assign label_class = 'block font-secondary text-scheme-text'
+                render 'product-block-variant-picker', product: product, block: block, label_class: label_class, block_base_classes: block_base_classes
+              %}
+            </div>
+            {% if product.metafields.custom.one_time_purchase %} 
+              {{ product.metafields.custom.one_time_purchase }}
+            {% endif %} 
+
+
+            <div class="flavours_buy_qty product-block">          
+              {% render 'product-block-buy-buttons',
+                product: product,
+                product_form_id: product_form_id,
+                label_class: label_class,
+                current_variant: current_variant,
+                block: block,
+                block_base_classes: block_base_classes,
+              %}
+            </div>
+
+            <div class="cart_msg">
+                {% if settings.cart_type == 'page' or settings.open_modal_on_add_to_cart == false %}
+                <div
+                  class="mt-4 mb-8 text-theme-basic rte"
+                  tabindex="-1"
+                  x-ref="added"
+                  x-show="addedToCart"
+                  x-cloak
+                  x-transition:enter="transition ease duration-300"
+                  x-transition:enter-start="opacity-0"
+                  x-transition:enter-end="opacity-100"
+                  x-transition:leave="transition ease duration-300"
+                  x-transition:leave-start="opacity-100"
+                  x-transition:leave-end="opacity-0"
+                >
+            
+                  {{ 'products.product.added_to_cart' | t }}!
+                  {{ 'products.product.add_to_cart_confirm_html' | t: cart_url: routes.cart_url, link_url: routes.all_products_collection_url }}.
+                </div>    
+              {% endif %}   
+            </div>
+            <div class="notice_message_flavours">
+                <ly-as-1187440>60-day Satisfaction Guarantee</ly-as-1187440> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M17.026 22.957c10.957-11.421-2.326-20.865-10.384-13.309l2.464 2.352h-9.106v-8.947l2.232 2.229c14.794-13.203 31.51 7.051 14.794 17.675z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% unless request.design_mode %}
+  <script src="{{ 'vendor-product.bundle.min.js' | asset_url }}" type="module"></script>
+  <script src="{{ 'product.js' | asset_url }}" type="module"></script>
+{% endunless %}

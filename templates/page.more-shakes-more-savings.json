@@ -1,0 +1,950 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "custom_image_countdown_overlay_fdTwbG": {
+      "type": "holiday-image-countdown-overlay",
+      "blocks": {
+        "text_qKexDe": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Save 15%<\/p>"
+          }
+        },
+        "text_bRpht7": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Save 25%<\/p>"
+          }
+        },
+        "text_q7FgEm": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Save 35%<\/p>"
+          }
+        },
+        "text_bpjEFw": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Orders of $50+<\/p>"
+          }
+        },
+        "text_tbgaaj": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Orders of $125+<\/p>"
+          }
+        },
+        "text_rf6wP3": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Orders of $200+<\/p>"
+          }
+        },
+        "text_a8brNi": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p><strong>Code: RESTOCK15<\/strong><\/p>"
+          }
+        },
+        "text_kWYtbC": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p><strong>Code: RESTOCK25<\/strong><\/p>"
+          }
+        },
+        "text_VFQjzb": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p><strong>Code: RESTOCK35<\/strong><\/p>"
+          }
+        },
+        "button_EfcHV8": {
+          "type": "button",
+          "settings": {
+            "cta_url_1": "#show-now-goodprotein",
+            "cta_text_1": "Shop Offers",
+            "cta_url_2": "",
+            "cta_text_2": ""
+          }
+        },
+        "countdown_zkbWWa": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "end_date": "2024-11-18"
+          }
+        }
+      },
+      "block_order": [
+        "text_qKexDe",
+        "text_bRpht7",
+        "text_q7FgEm",
+        "text_bpjEFw",
+        "text_tbgaaj",
+        "text_rf6wP3",
+        "text_a8brNi",
+        "text_kWYtbC",
+        "text_VFQjzb",
+        "button_EfcHV8",
+        "countdown_zkbWWa"
+      ],
+      "custom_css": [
+        ".hoilday-image-countdown-overlay {min-height: calc(39vw + 100px);}",
+        "@media only screen and (max-width: 767px) {.text-scheme-text {padding-top: 0px !important; padding-bottom: 0px !important; } .countdown-banner {margin-top: -150px; }}",
+        ".text-scheme-text.bg-scheme-background.overflow-hidden {background-color: #c2e4f2;}"
+      ],
+      "settings": {
+        "top_logo_image": "shopify:\/\/shop_images\/Logo-Website.png",
+        "a_gift_from_us_to_you": "shopify:\/\/shop_images\/More_shakes_More_Savings_2.svg",
+        "a_gift_from_us_to_you_fr": "shopify:\/\/shop_images\/Plus_de_shakes_plus_d_economies.svg",
+        "a_gift_from_us_to_you_width": 60,
+        "holiday_dash_image_width": 77,
+        "bottom_text": "Offer ends January 4th, 2025. Don’t miss out!",
+        "bottom_text_fr": "L’offre se termine le 4 janvier 2025. Ne manquez pas cette occasion!",
+        "image": "shopify:\/\/shop_images\/adjusted_solid_banner_BAE8F2.png",
+        "image_mobile": "shopify:\/\/shop_images\/adjusted_solid_banner_BAE8F2.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-start-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "main_345": {
+      "type": "holiday-main-list-collections",
+      "blocks": {
+        "13b0706d-6b53-4ec8-87b3-4e572cba2962": {
+          "type": "collection",
+          "settings": {
+            "collection": "superfood-shake",
+            "product_number_c": 15,
+            "row": 5,
+            "image_shape": "default",
+            "title_en": "shopify:\/\/shop_images\/Accessories111.png",
+            "title_fr": "shopify:\/\/shop_images\/Accessories111_fr.png"
+          }
+        },
+        "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "functional-wellness-menu",
+            "product_number_c": 6,
+            "row": 3,
+            "image_shape": "same_as_section",
+            "title_en": "shopify:\/\/shop_images\/Accessories222.png",
+            "title_fr": "shopify:\/\/shop_images\/Accessories222_fr.png"
+          }
+        },
+        "5be6a2ba-78df-4740-baf8-90eb280a6555": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "accessories-1",
+            "product_number_c": 3,
+            "row": 3,
+            "image_shape": "same_as_section",
+            "title_en": "shopify:\/\/shop_images\/Accessories.png",
+            "title_fr": "shopify:\/\/shop_images\/Accessories_fr.png"
+          }
+        }
+      },
+      "block_order": [
+        "13b0706d-6b53-4ec8-87b3-4e572cba2962",
+        "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f",
+        "5be6a2ba-78df-4740-baf8-90eb280a6555"
+      ],
+      "custom_css": [
+        "section {\/* background: #278546; *\/ display: block;}",
+        ".product-tile_cover {padding: 0px !important;}",
+        "ul {grid-gap: 1rem !important;}",
+        "@media (min-width: 750px) {section {display: block !important; }}"
+      ],
+      "settings": {
+        "new_year_page_discount_text": "Up to 40% OFF",
+        "new_year_page_discount_text_fr": "Jusqu'à -40%",
+        "new_year_page_discount_text_color": "#ffffff",
+        "new_year_page_discount_text_background": "#ea1f59",
+        "new_year_page_discount_text_font_size": 10,
+        "new_year_page_discount_badge_size": 46,
+        "layout": "grid",
+        "main_background_color": "#2994c1",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "",
+        "no_products": 10,
+        "show_collection_description": false,
+        "show_view_all": false,
+        "display_on_card": true,
+        "enable_quick_buy": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "slideshow_focus": "center",
+        "mobile_slide_width": "three_fifths",
+        "desktop_slide_width": 35,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "main_123": {
+      "type": "holiday-main-list-collections",
+      "blocks": {
+        "13b0706d-6b53-4ec8-87b3-4e572cba2962": {
+          "type": "collection",
+          "settings": {
+            "collection": "superfood-shake",
+            "product_number_c": 5,
+            "row": 5,
+            "image_shape": "default",
+            "title_en": "shopify:\/\/shop_images\/Accessories111.png",
+            "title_fr": "shopify:\/\/shop_images\/Accessories111_fr.png"
+          }
+        },
+        "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "functional-wellness-menu",
+            "product_number_c": 6,
+            "row": 3,
+            "image_shape": "same_as_section",
+            "title_en": "shopify:\/\/shop_images\/Accessories222.png",
+            "title_fr": "shopify:\/\/shop_images\/Accessories222_fr.png"
+          }
+        },
+        "5be6a2ba-78df-4740-baf8-90eb280a6555": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories-1",
+            "product_number_c": 3,
+            "row": 3,
+            "image_shape": "same_as_section",
+            "title_en": "shopify:\/\/shop_images\/Accessories.png",
+            "title_fr": "shopify:\/\/shop_images\/Accessories_fr.png"
+          }
+        }
+      },
+      "block_order": [
+        "13b0706d-6b53-4ec8-87b3-4e572cba2962",
+        "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f",
+        "5be6a2ba-78df-4740-baf8-90eb280a6555"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "section {\/* background: #278546; *\/ display: none;}",
+        "ul {padding: 0 10rem;}",
+        ".product-tile_cover {padding: 0px !important;}",
+        "ul {grid-gap: 1rem !important;}",
+        "@media (max-width: 1450px) {ul {padding: 0px; }}",
+        "@media (min-width: 1450px) and (max-width: 1500px) {ul {padding: 0 5rem; }}",
+        "@media (min-width: 750px) and (max-width: 1250px) {.lg\\:grid-cols-5 {grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }}",
+        "@media (max-width: 750px) {section {display: block !important; }}"
+      ],
+      "settings": {
+        "new_year_page_discount_text": "Up to 40% OFF",
+        "new_year_page_discount_text_fr": "Jusqu'à -40%",
+        "new_year_page_discount_text_color": "#ffffff",
+        "new_year_page_discount_text_background": "#ea1f59",
+        "new_year_page_discount_text_font_size": 10,
+        "new_year_page_discount_badge_size": 46,
+        "layout": "grid",
+        "main_background_color": "#2994c1",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "",
+        "no_products": 10,
+        "show_collection_description": false,
+        "show_view_all": false,
+        "display_on_card": true,
+        "enable_quick_buy": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "slideshow_focus": "center",
+        "mobile_slide_width": "three_fifths",
+        "desktop_slide_width": 35,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "video_with_text_overlay_q7wcVp": {
+      "type": "holiday-video-with-text-overlay",
+      "blocks": {
+        "shape_divider_4UP3Pf": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "section_color_scheme": "#2994c1",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
+        "sticker_GVHFVV": {
+          "type": "sticker",
+          "disabled": true,
+          "settings": {
+            "text": "Sticker",
+            "shape": "star_1",
+            "width": 100,
+            "sticker_font_size": "1.563rem",
+            "image": "shopify:\/\/shop_images\/almost_gone.png",
+            "half_image_width_on_mobile": false,
+            "horizontal_position": 38,
+            "vertical_position": 26,
+            "rotate": 0,
+            "show_sticker_on_mobile": true,
+            "show_sticker_on_desktop": true,
+            "rotation_animation": "none",
+            "enable_parallax": false,
+            "parallax_speed": 3,
+            "color": "bg-scheme-background text-scheme-text",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_4UP3Pf",
+        "sticker_GVHFVV"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".py-section-vertical-spacing {padding: 0px !important;}",
+        "p {font-size: 18px; color: black;}",
+        "h2 {color: black;}",
+        ".section-content .text-scheme-text > div {max-width: 450px; position: relative; left: 90px;}",
+        "@media (max-width: 950px) {.section-content .text-scheme-text > div {left: 0; max-width: 950px; text-align: center; background: radial-gradient(#ffffff, transparent); }}",
+        ".inline-block.push-btn {padding-bottom: 20px;}",
+        ".top-text-flavour-saturn {padding-top: 20px;}"
+      ],
+      "settings": {
+        "video_url": "",
+        "crop": "cinematic",
+        "crop_desktop": "cinematic",
+        "fallback_image": "shopify:\/\/shop_images\/oie_arxUKX4JrtEn.png",
+        "fallback_image_FR": "shopify:\/\/shop_images\/oie_zdCn6P8J4Ouf.png",
+        "title_color": "#265917",
+        "display_on_card": false,
+        "style": "inset",
+        "place_content": "place-content-center-center",
+        "text_align": "text-left",
+        "title": "Gingerbread Cookie",
+        "heading_size": "heading-base",
+        "richtext": "<p><strong>Tastes like those sweet-yet-spicy \u2028Holiday cookies, fresh from the oven.<\/strong><\/p>",
+        "cta_url": "shopify:\/\/products\/gingerbread-cookie-all-in-one-shake",
+        "cta_text": "Add Cart",
+        "color_scheme": "scheme-2f7b4285-3ceb-4acd-ad87-858359b9ec54",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "ss_comparison_table_2_tttYRr": {
+      "type": "holiday-ss-comparison-table-2",
+      "blocks": {
+        "item_rCeWmx": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Curbs sweet cravings",
+            "first_icon": "yes",
+            "second_icon": "yes",
+            "third_icon": "yes"
+          }
+        },
+        "item_nLYzrf": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Provide essential nutrients",
+            "first_icon": "yes",
+            "second_icon": "yes",
+            "third_icon": "yes"
+          }
+        },
+        "item_cmV8XM": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Supports your immune system",
+            "first_icon": "yes",
+            "second_icon": "yes",
+            "third_icon": "no"
+          }
+        },
+        "item_mzUHUD": {
+          "type": "item",
+          "settings": {
+            "row_heading": "100% natural and plant based",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_3UrCMa": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Easy to digest",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_mxiirz": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Supports gut flora",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_gJ4dX3": {
+          "type": "item",
+          "settings": {
+            "row_heading": "No unpleasant aftertaste",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        }
+      },
+      "block_order": [
+        "item_rCeWmx",
+        "item_nLYzrf",
+        "item_cmV8XM",
+        "item_mzUHUD",
+        "item_3UrCMa",
+        "item_mxiirz",
+        "item_gJ4dX3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title_image": "shopify:\/\/shop_images\/good_protein_more_like_great_protain.png",
+        "title_image_fr": "shopify:\/\/shop_images\/good_protein_more_like_great_protain_fr.png",
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "assistant_n4",
+        "heading_size": 50,
+        "heading_height": 100,
+        "heading_align": "center",
+        "table_mt": 50,
+        "table_radius": 10,
+        "table_border_thickness": 3,
+        "table_column_active": "1",
+        "table_column_active_radius": 10,
+        "first_heading": "Good protein",
+        "second_heading": "Them",
+        "third_heading": "",
+        "table_heading_custom": false,
+        "table_heading_font": "assistant_n4",
+        "table_heading_size": 24,
+        "table_heading_size_mobile": 10,
+        "table_heading_height": 100,
+        "table_heading_align": "center",
+        "table_heading_padding_horizontal": 18,
+        "table_heading_padding_horizontal_mobile": 4,
+        "table_heading_padding_vertical": 20,
+        "table_heading_padding_vertical_mobile": 10,
+        "table_row_padding_horizontal": 20,
+        "table_row_padding_horizontal_mobile": 4,
+        "table_row_padding_vertical": 20,
+        "table_row_padding_vertical_mobile": 10,
+        "table_row_heading_custom": false,
+        "table_row_heading_font": "assistant_n4",
+        "table_row_heading_size": 26,
+        "table_row_heading_size_mobile": 10,
+        "table_row_heading_height": 100,
+        "table_row_heading_align": "center",
+        "table_icon_size": 32,
+        "table_icon_size_mobile": 20,
+        "heading_color": "#ffffff",
+        "table_border_color": "#c82700",
+        "table_heading_color": "#c82700",
+        "table_heading_active_color": "#ffffff",
+        "table_column_active_bg_color": "#c82700",
+        "table_row_heading_color": "#040200",
+        "table_icon_color": "#c82700",
+        "table_icon_active_color": "#ffffff",
+        "background_color": "#c2e4f2",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 150,
+        "border_thickness": 0
+      }
+    },
+    "custom_image_countdown_overlay_HNDtx8": {
+      "type": "custom-image-countdown-overlay",
+      "custom_css": [
+        ".section-content {background: #c2e4f2 !important; padding: 10vw; padding-top: 5vw; padding-bottom: 0px;}",
+        "@media (max-width: 768px) {.section-content {padding: 0px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_with_three_sentences.png",
+        "image_mobile": "shopify:\/\/shop_images\/image_with_three_sentences.png",
+        "image_fr": "shopify:\/\/shop_images\/image_with_three_sentences_fr.png",
+        "image_mobile_fr": "shopify:\/\/shop_images\/image_with_three_sentences_fr.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "comparison_table_7h99r4": {
+      "type": "holiday-comparison-table",
+      "blocks": {
+        "row_BamgkJ": {
+          "type": "row",
+          "settings": {
+            "title": "Curbs sweet cravings",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check-mark",
+            "column_3_text": "",
+            "column_4_icon": "check_close",
+            "column_4_text": ""
+          }
+        },
+        "row_XxJXUa": {
+          "type": "row",
+          "settings": {
+            "title": "Provide essential nutients",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check-mark",
+            "column_3_text": "",
+            "column_4_icon": "check_close",
+            "column_4_text": ""
+          }
+        },
+        "row_gTrN8K": {
+          "type": "row",
+          "settings": {
+            "title": "Supports your immune system",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check-mark",
+            "column_3_text": "",
+            "column_4_icon": "check_close",
+            "column_4_text": ""
+          }
+        },
+        "row_CtE7g3": {
+          "type": "row",
+          "settings": {
+            "title": "100% natural and plant based",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check_close",
+            "column_3_text": "",
+            "column_4_icon": "",
+            "column_4_text": ""
+          }
+        },
+        "row_4NE996": {
+          "type": "row",
+          "settings": {
+            "title": "Easy to disest",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check_close",
+            "column_3_text": "",
+            "column_4_icon": "",
+            "column_4_text": ""
+          }
+        },
+        "row_LyGiWy": {
+          "type": "row",
+          "settings": {
+            "title": "Supports gun flora",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check_close",
+            "column_3_text": "",
+            "column_4_icon": "",
+            "column_4_text": ""
+          }
+        },
+        "row_pFDeyD": {
+          "type": "row",
+          "settings": {
+            "title": "No unpleasant",
+            "column_1_icon": "check-mark",
+            "column_1_text": "",
+            "column_2_icon": "",
+            "column_2_text": "",
+            "column_3_icon": "check_close",
+            "column_3_text": "",
+            "column_4_icon": "",
+            "column_4_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_BamgkJ",
+        "row_XxJXUa",
+        "row_gTrN8K",
+        "row_CtE7g3",
+        "row_4NE996",
+        "row_LyGiWy",
+        "row_pFDeyD"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".product-other-body-template--16191026921581__ss_comparison_table_2_tttYRr {max-width: 800px;}",
+        "@media (min-width: 768px) {.product-other-grid-template--16191026921581__ss_comparison_table_2_tttYRr {grid-template-columns: 50% 25% 25%; }}"
+      ],
+      "settings": {
+        "title_image": "shopify:\/\/shop_images\/good_protein_more_like_great_protain.png",
+        "display_on_card": true,
+        "title": "",
+        "highlighted_column": "4",
+        "column_1_title": "Good Protain",
+        "column_2_title": "",
+        "enable_column_3": true,
+        "column_3_title": "Them",
+        "enable_column_4": false,
+        "column_4_title": "Column 4",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "060cabc4-f307-455f-93e9-eaf63f9ccdb3": {
+      "type": "holiday-product-section-5",
+      "blocks": {
+        "56ce42b4-4687-4dc0-90b1-9482ef283191": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red_vegan_with_text.png",
+            "image_fr": "shopify:\/\/shop_images\/red_vegan_with_text_fr.png",
+            "heading": "Vegan"
+          }
+        },
+        "81ce0d08-94b8-4b82-bbfc-5e4c81591111": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red_non_gmo_with_text.png",
+            "image_fr": "shopify:\/\/shop_images\/red_non_gmo_with_text_fr.png",
+            "heading": "Non-GMO"
+          }
+        },
+        "50886930-165d-4909-8e29-952a31b54646": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red_dairy_free_with_text.png",
+            "image_fr": "shopify:\/\/shop_images\/red_dairy_free_with_text_fr.png",
+            "heading": "Dairy-Free"
+          }
+        },
+        "d4e7033c-f783-425d-bf5c-f00466ec590f": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red_no_added_sugar_with_text.png",
+            "image_fr": "shopify:\/\/shop_images\/red_no_added_sugar_with_text_fr.png",
+            "heading": "No Added Sugar"
+          }
+        },
+        "4b4d4bfc-50ac-4387-b738-b9d2ca977ba7": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red_gluten_free_with_text.png",
+            "image_fr": "shopify:\/\/shop_images\/red_gluten_free_with_text_fr.png",
+            "heading": "Gluten-Free"
+          }
+        },
+        "43c269f9-c10c-47b4-ad83-3333bd216532": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/red_keto_with_text.png",
+            "image_fr": "shopify:\/\/shop_images\/red_keto_with_text_fr.png",
+            "heading": "Keto"
+          }
+        },
+        "47afb551-e4e8-45df-8141-e12a50538ddd": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#2994c1",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": "reverse"
+          }
+        }
+      },
+      "block_order": [
+        "56ce42b4-4687-4dc0-90b1-9482ef283191",
+        "81ce0d08-94b8-4b82-bbfc-5e4c81591111",
+        "50886930-165d-4909-8e29-952a31b54646",
+        "d4e7033c-f783-425d-bf5c-f00466ec590f",
+        "4b4d4bfc-50ac-4387-b738-b9d2ca977ba7",
+        "43c269f9-c10c-47b4-ad83-3333bd216532",
+        "47afb551-e4e8-45df-8141-e12a50538ddd"
+      ],
+      "custom_css": [
+        ".product-section-5-carousel {display: flex; justify-content: space-evenly; margin-top: 0px !important;}",
+        "img {height: 100px; width: auto; aspect-ratio: auto; object-fit: contain; margin-top: 4vw; margin-bottom: 4vw;}",
+        "figure {width: unset;}",
+        ".pdp-section-5 > div {max-width: 1500px;}"
+      ],
+      "settings": {
+        "nutrition_image": "shopify:\/\/shop_images\/NutritionFacts-VanillaMilkshake_1.png",
+        "content": "<strong>Ingredients:<\/strong> Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Flavours, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Broccoli*, Spirulina*, Chlorella*, Acai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans). <strong>*Organic Ingredients <\/strong>— May Contain: Peanuts",
+        "product_image": "shopify:\/\/shop_images\/icon.png",
+        "background_gradient": "linear-gradient(180deg, rgba(194, 228, 242, 1) 100%, rgba(142, 204, 243, 1) 100%)",
+        "background_gradient_icon": "#c2e4f2"
+      }
+    },
+    "product_video_carousel_bAcmiB": {
+      "type": "holiday-product-video-carousel",
+      "blocks": {
+        "d9ad31d4-fe3f-45c8-9769-41c0101c410f": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/image_1.png",
+            "video_link": "",
+            "fr_image": "shopify:\/\/shop_images\/image_1.png",
+            "fr_video_link": "",
+            "review_body": "“ Tasty Breakfast I Can Count on!\nIt has a really nice peanut butter flavour and it's not chalky at all. It blends up really smoothly with my almond milk and a banana.”",
+            "review_header": "Lisa M LaVallee"
+          }
+        },
+        "247693e3-878b-40c8-bc42-6d01fb3f9600": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/image_d60b9b52-f4c7-474c-b804-18800f2740a1.png",
+            "video_link": "",
+            "fr_image": "shopify:\/\/shop_images\/image_d60b9b52-f4c7-474c-b804-18800f2740a1.png",
+            "fr_video_link": "",
+            "review_body": " “Best tasting vanilla protein...\nBest tasting vanilla protein shake I have ever had! And it keeps me going (feeling more full) longer than my old protein did).”",
+            "review_header": "Theresa Laird"
+          }
+        },
+        "481c3263-1c4e-4352-8093-806c1be1321c": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/image_2.png",
+            "video_link": "",
+            "fr_image": "shopify:\/\/shop_images\/image_2.png",
+            "fr_video_link": "",
+            "review_body": " “The Best\nOf all the protein powders, this is the best I’ve ever had. No aftertaste.”",
+            "review_header": "Melanie Genest"
+          }
+        },
+        "e5b35c6a-72b6-4db3-b215-1b926f2899e2": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/image_3.png",
+            "video_link": "",
+            "fr_image": "shopify:\/\/shop_images\/image_3.png",
+            "fr_video_link": "",
+            "review_body": " “Yummmmm\nTastes delicious!! I love blending it with frozen bananas and almond milk. A healthy drink that tastes like a treat!”",
+            "review_header": "Kendra Madge"
+          }
+        },
+        "2d93a8a2-e525-40a5-90ba-b84f1033b0cf": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/image_4_bbbcbe8b-29be-475a-aacc-4ac56fcc206f.png",
+            "video_link": "",
+            "fr_image": "shopify:\/\/shop_images\/image_4_bbbcbe8b-29be-475a-aacc-4ac56fcc206f.png",
+            "fr_video_link": "",
+            "review_body": " ”Thank You! I'm impressed, it's excellent, a must. This is my favourite flavor but I like the others too!”",
+            "review_header": "Claudine Brasseur"
+          }
+        },
+        "20ccd199-380c-41d1-b416-b78bc013d92e": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/image_5.png",
+            "video_link": "",
+            "fr_image": "shopify:\/\/shop_images\/image_5.png",
+            "fr_video_link": "",
+            "review_body": " “I love the flavour...\nI love the flavour of this protein powder. I found it mixed so easily in my shaker cup, which was great when I was camping and had no blender.”",
+            "review_header": "Roxanne Crooks"
+          }
+        }
+      },
+      "block_order": [
+        "d9ad31d4-fe3f-45c8-9769-41c0101c410f",
+        "247693e3-878b-40c8-bc42-6d01fb3f9600",
+        "481c3263-1c4e-4352-8093-806c1be1321c",
+        "e5b35c6a-72b6-4db3-b215-1b926f2899e2",
+        "2d93a8a2-e525-40a5-90ba-b84f1033b0cf",
+        "20ccd199-380c-41d1-b416-b78bc013d92e"
+      ],
+      "custom_css": [
+        "div {background: #2994c1;}",
+        ".inner_product-video-carousel.slick-initialized.slick-slider {margin-bottom: 0px !important; padding-bottom: 30px !important;}",
+        ".product-section {max-width: unset !important; padding: 0 12vw !important;}",
+        ".image-title-container-saturn {display: flex; justify-content: center; padding-top: 3rem;}"
+      ],
+      "settings": {
+        "more_2000_five_star_reviews": "shopify:\/\/shop_images\/more_2000_five_star_reviews.png",
+        "more_2000_five_star_reviews_fr": "shopify:\/\/shop_images\/more_2000_five_star_reviews_fr.png",
+        "bg_color": "",
+        "itme_show": 3,
+        "subtitle": "<span class=\"review-star\"><i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i><\/span>",
+        "heading": "",
+        "subheading": "",
+        "content": ""
+      }
+    },
+    "faq_igMTLR": {
+      "type": "holiday-faq",
+      "blocks": {
+        "question_a6V893": {
+          "type": "question",
+          "settings": {
+            "question": "What is your 60-day Satisfaction Guarantee?",
+            "answer": "<p>If you’re trying us for the first time and aren’t totally thrilled, no stress! If your bag is at least half full and wish to return it within 60 days of your delivery date, we’ll give you a full refund minus a 15% return fee. Prefer to exchange? No problem! You can swap your original item(s) for a different flavour with a $5 shipping fee (fees waived with subscription), and you can do this up to 2 times a year.<\/p><p>For second (or third, or fourth, or... you get the jist!) purchases, you can only exchange an open bag for a different flavour with $5 shipping fee (unless you're subscribed, and then it's free!). You can enjoy up to 2 swaps a year.<\/p><p>For any order-related issues, like if you receive the wrong product or a damaged product, just let us know at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\">info@goodprotein.ca<\/a>, and we'll sort it out quickly.<\/p><p>Just a heads-up: accessories like the Shaker Bottle are excluded from this policy. <\/p><p><a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\" title=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\">Click here<\/a> to view the complete terms & conditions of our 60-day Satisfaction Guarantee, or contact us at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\">info@goodprotein.ca<\/a> for more details!covering the return shipping. <\/p>"
+          }
+        },
+        "question_mWJJTe": {
+          "type": "question",
+          "settings": {
+            "question": "Is the All-in-One Superfood Shake a meal replacement?",
+            "answer": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.<\/p>"
+          }
+        },
+        "question_wftG6q": {
+          "type": "question",
+          "settings": {
+            "question": "How long does delivery take?",
+            "answer": "<p>In general, delivery can take up to 10 business days depending on the area. You’ll be able to track your order in real time, the entire time it makes its way to you. You can also opt in to receiving text message alerts about your order as it gets processed, shipped and delivered.<\/p>"
+          }
+        },
+        "shape_divider_pAD7FQ": {
+          "type": "shape_divider",
+          "disabled": true,
+          "settings": {
+            "target_section": "above",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
+        "shape_divider_VcRyqX": {
+          "type": "shape_divider",
+          "disabled": true,
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "question_a6V893",
+        "question_mWJJTe",
+        "question_wftG6q",
+        "shape_divider_pAD7FQ",
+        "shape_divider_VcRyqX"
+      ],
+      "custom_css": [
+        ".image-title-saturn {display: flex; justify-content: center;}",
+        "svg path {fill: white;}",
+        "section {background: #2994c1; color: white;}",
+        ".card.p-4 {background: unset; padding: 15px; font-size: 20px; border-radius: 0px !important;}",
+        ".card.p-4 h3 {border-bottom: 3px solid white; padding: 0 10px 10px 0;}"
+      ],
+      "settings": {
+        "title_image_url": "shopify:\/\/shop_images\/frequently_asked_questions.png",
+        "title_image_url_fr": "shopify:\/\/shop_images\/frequently_asked_questions_fr.png",
+        "display_on_card": true,
+        "heading_text_style": "body",
+        "two_columns_desktop": false,
+        "title": "Frequently Asked Questions",
+        "richtext": "",
+        "btn_text": "",
+        "btn_link": "shopify:\/\/pages\/faq-1",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "video_with_text_overlay_q7wcVp_2": {
+      "type": "holiday-bottom-video-with-text-overlay",
+      "custom_css": [
+        ".section-content {max-height: 600px;}",
+        "p {font-size: 18px; color: black;}",
+        "h2 {font-size: 80px;}",
+        "@media (max-width: 750px) {h2 {font-size: 30px; margin-bottom: 5px; } .mt-5 {margin-top: 0px !important; } .push-btn-surface {font-size: 15px; } .bottom-logo-saturn {padding-top: 10px; }}",
+        ".place-content-start-start {place-content: center center;}",
+        ".place-content-start-start .text-scheme-text > div {display: flex; flex-direction: column; align-items: center;}"
+      ],
+      "settings": {
+        "bottom_logo_url": "shopify:\/\/shop_images\/Logo-Website.png",
+        "video_url": "",
+        "crop": "cinematic",
+        "crop_desktop": "cinematic",
+        "fallback_image": "shopify:\/\/shop_images\/oie_W2ERFYG91IeU.png",
+        "bottom_section_sentence_color": "#ea1f59",
+        "display_on_card": false,
+        "style": "full",
+        "place_content": "place-content-start-start",
+        "text_align": "text-center",
+        "title": "Don't miss out",
+        "heading_size": "heading-template",
+        "richtext": "",
+        "cta_url": "#show-now-goodprotein",
+        "cta_text": "Shop Now",
+        "color_scheme": "scheme-b904bffd-d5b1-4203-82ce-f18898db4802",
+        "use_gradient_background": true,
+        "text_overlay_color": "same_as_section"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_image_countdown_overlay_fdTwbG",
+    "main_345",
+    "main_123",
+    "video_with_text_overlay_q7wcVp",
+    "ss_comparison_table_2_tttYRr",
+    "custom_image_countdown_overlay_HNDtx8",
+    "comparison_table_7h99r4",
+    "060cabc4-f307-455f-93e9-eaf63f9ccdb3",
+    "product_video_carousel_bAcmiB",
+    "faq_igMTLR",
+    "video_with_text_overlay_q7wcVp_2"
+  ]
+}

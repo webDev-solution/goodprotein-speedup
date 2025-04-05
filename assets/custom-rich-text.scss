@@ -1,0 +1,28 @@
+.text-scheme-text {
+  .junip-product-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    .junip-product-review-average {
+      font-size: 36px;
+      font-family: Gelica Bold!important;
+      font-weight: 800;
+      margin-right: 10px;
+    }
+    .junip-star-ratings-container {
+      .junip-star {
+        height: 40px;
+        padding: 3px;
+        width: 40px;
+      }
+    }
+    .junip-product-review-count {
+      width: 100%;
+      font-size: var(--font-size-xl);
+      line-height: var(--base-line-height);
+      font-family: Gelica Bold !important;
+    }
+  }
+}

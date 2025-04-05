@@ -1,0 +1,91 @@
+{% style %}
+  #shopify-section-{{section.id}} [data-section-type="pdp-usps-bar"] {
+    --color-pdp-usps: {{section.settings.color_bg}};
+    --color-pdp-usps-text: {{section.settings.color_text}};
+  }
+{% endstyle %}
+
+<div data-section-type="pdp-usps-bar" class="product-section product-usps product-section-padding background--{{section.settings.background}} pdp-color-{{product.metafields.custom.background_color | handleize }}">
+  <div class="page-width">
+    <div class="inner-product-section inner-product-usps">
+      {% for block in section.blocks %}
+        <div class="product-usps-col-1 one-third-product">
+          <div class="product-section-box product-usps-box">
+            <div class="product-usps-icon">
+              {% if block.settings.image %}
+                <figure>{{ block.settings.image | image_url: height: 35 | image_tag: lazy: 'loading' }}</figure>
+              {% endif %}
+            </div>
+            <div class="product-usps-content">
+              <h4>{{ block.settings.heading }}</h4>
+              <p>{{ block.settings.content }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product USPS",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "background",
+      "label": "Use background",
+      "default": true
+    },
+    {
+      "type":"color",
+      "id":"color_bg",
+      "label":"BG Color",
+      "default": "#f8eedc"
+    },
+    {
+      "type":"color",
+      "id":"color_text",
+      "label":"Accent",
+      "default": "#684500"
+    }
+  ],
+  "max_blocks":3,
+  "blocks":[
+    {
+      "type":"usps",
+      "name":"USPS",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"inline_richtext",
+          "id":"heading",
+          "label":"Heading"
+        },
+        {
+          "type":"inline_richtext",
+          "id":"content",
+          "label":"Content"
+        }
+      ]
+    }
+  ],
+  
+  "presets":[
+    {
+      "name":"Product USPS",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

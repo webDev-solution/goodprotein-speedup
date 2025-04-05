@@ -1,0 +1,823 @@
+{% if product.type == 'Hidden' %}
+  <script>
+    window.location.href = '/';
+  </script>
+{% endif %}
+{% style %}
+  #shopify-section-{{section.id}} [data-color-scheme] {
+    {% if section.settings.color_background != blank %}
+    
+    {% endif %}
+    {% if section.settings.color_accent != blank %}
+   
+    {% endif %}
+    --color-pdp-background: {{section.settings.color_background}};
+    --color-pdp-accent: {{section.settings.color_accent}};
+    --color-pdp-media-background: {{section.settings.color_background}};
+    --color-pdp-title-color: {{section.settings.text_color}};
+    --color-pdp-accent-title-color: {{section.settings.accent_text_color}};
+    --color-pdp-media-color: {{section.settings.color_media}};
+  }
+{% endstyle %}
+{% if template.name != 'product' %}
+  {% assign product_handle = page.metafields.custom.related_product %}
+  {% if product_handle %}
+    {% assign product = all_products[product_handle] %}
+  {% endif %}
+{% endif %}
+
+{%- liquid
+  render 'sample-pack-product-template', section: section
+  assign current_variant = product.selected_or_first_available_variant
+-%}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ shop.url | append: product.url | json }},
+    {%- if product.featured_media -%}
+      {%- assign media_size = product.featured_media.preview_image.width | append: 'x' -%}
+      "image": [
+        {{ product.featured_media | image_url: width: media_size | prepend: "https:" | json }}
+      ],
+    {%- endif -%}
+    "description": {{ product.description | strip_html | json }},
+    {%- if current_variant.sku != blank -%}
+      "sku": {{ current_variant.sku | json }},
+    {%- endif -%}
+    "brand": {
+      "@type": "Thing",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [
+      {%- for variant in product.variants -%}
+        {
+          "@type" : "Offer",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : {{ variant.price | divided_by: 100.00 | json }},
+          "priceCurrency" : {{ cart.currency.iso_code | json }},
+          "url" : {{ shop.url | append: variant.url | json }}
+        }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+    ]
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Sample Pack",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Right Block Contents"
+    },
+    {
+      "type": "product",
+      "id": "related_product",
+      "label": "Related Product"
+    },
+    {
+      "id": "right_block_title",
+      "type": "text",
+      "label": "Title(Desktop)",
+      "default": "One shake for all your needs–no matter what the day brings."
+    },
+    {
+      "id": "right_block_title_mobile",
+      "type": "text",
+      "label": "Title(Mobile)",
+      "default": "Try our top 5 Flavours"
+    },
+    {
+      "id": "button_label",
+      "type": "text",
+      "label": "Button label",
+      "default": "Shop Simple Pack"
+    },
+    {
+      "type": "range",
+      "id": "block_padding",
+      "label": "Block padding",
+      "min": 0,
+      "max": 100,
+      "default": 20,
+      "step": 5,
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "select",
+      "id": "crop",
+      "label": "Crop",
+      "options": [
+        {
+          "value": "",
+          "label": "No crop"
+        },
+        {
+          "value": "aspect-w-4 aspect-h-3",
+          "label": "Landscape"
+        },
+        {
+          "value": "aspect-w-1 aspect-h-1",
+          "label": "Square"
+        },
+        {
+          "value": "aspect-w-3 aspect-h-4",
+          "label": "Portrait"
+        }
+      ],
+      "default": "aspect-w-1 aspect-h-1"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "Image shape",
+      "default":"default",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_ellipse",
+          "label": "Ellipse",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_pill",
+          "label": "Pill",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_archway",
+          "label": "Archway",
+          "group": "Fit to image"
+        },
+        {
+          "value": "diamond",
+          "label": "Diamond",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_1",
+          "label": "Triangle 1",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_2",
+          "label": "Triangle 2",
+          "group": "Basic"
+        },
+        {
+          "value": "pentagon",
+          "label": "Pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "hexagon",
+          "label": "Hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "heptagon",
+          "label": "Heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "octagon",
+          "label": "Octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_pentagon",
+          "label": "Rounded pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_hexagon",
+          "label": "Rounded hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_heptagon",
+          "label": "Rounded heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_octagon",
+          "label": "Rounded octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "star_1",
+          "label": "Star 1",
+          "group": "Circular"
+        },
+        {
+          "value": "star_2",
+          "label": "Star 2",
+          "group": "Circular"
+        },
+        {
+          "value": "star_3",
+          "label": "Star 3",
+          "group": "Circular"
+        },
+        {
+          "value": "star_4",
+          "label": "Star 4",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_1",
+          "label": "Scalloped circle 1",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_2",
+          "label": "Scalloped circle 2",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_3",
+          "label": "Scalloped circle 3",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_4",
+          "label": "Scalloped circle 4",
+          "group": "Circular"
+        },
+        {
+          "value": "parallelogram",
+          "label": "Parallelogram",
+          "group": "Square"
+        },
+        {
+          "value": "scalloped_square",
+          "label": "Scalloped",
+          "group": "Square"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf",
+          "group": "Square"
+        },
+        {
+          "value": "clipped_square",
+          "label": "Clipped",
+          "group": "Square"
+        },
+        {
+          "value": "convex_square",
+          "label": "Convex",
+          "group": "Square"
+        },
+        {
+          "value": "twisted_square",
+          "label": "Twisted",
+          "group": "Square"
+        },
+        {
+          "value": "trapeze",
+          "label": "Trapeze",
+          "group": "Square"
+        },
+        {
+          "value": "blob",
+          "label": "Blob",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag",
+          "label": "Zig zag",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag_tear",
+          "label": "Zig zag tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wave_tear",
+          "label": "Wave tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "flower",
+          "label": "Flower",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "concave",
+          "label": "Concave",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "cross",
+          "label": "Cross",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "quatrefoil",
+          "label": "Quatrefoil",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wind",
+          "label": "Wind",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "heart",
+          "label": "Heart",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "mirrored_pyramids",
+          "label": "Mirrored pyramids",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "plus",
+          "label": "Plus",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "double_pill",
+          "label": "Double pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "triple_pill",
+          "label": "Triple pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "crown",
+          "label": "Crown",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "abstract_star",
+          "label": "Abstract star",
+          "group": "Miscellaneous"
+        }
+      ],
+      "info": "Selecting some shapes will crop images. Does not apply to videos or models. [Learn more](https://help.switchthemes.co/)"
+    },
+    {
+      "type": "select",
+      "id": "desktop_media_width",
+      "label": "Desktop media width",
+      "options": [
+        {
+          "value": "lg:col-span-6_lg:col-span-6",
+          "label": "One half"
+        },
+        {
+          "value": "lg:col-span-7_lg:col-span-5",
+          "label": "Three fifths"
+        },
+        {
+          "value": "lg:col-span-8_lg:col-span-4",
+          "label": "Two thirds"
+        }
+      ],
+      "default": "lg:col-span-6_lg:col-span-6"
+    },
+    {
+      "type": "select",
+      "id": "display",
+      "label": "Display type",
+      "options": [
+        {
+          "value": "fit",
+          "label": "Fit"
+        },
+        {
+          "value": "background",
+          "label": "Has background"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_slideshow_arrows_on_desktop",
+      "label": "Show slideshow arrows on desktop",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_image_zoom",
+      "label": "Enable image zoom",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "Enable video looping",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay_videos_on_desktop",
+      "label": "Autoplay videos on desktop",
+      "default": true
+    },
+    {
+      "type": "radio",
+      "id": "media_mobile_width",
+      "label": "Mobile media size",
+      "default": "w-4/5",
+      "options": [
+        {
+          "value": "w-full",
+          "label": "Full width"
+        },
+        {
+          "value": "w-4/5",
+          "label": "Four fifths"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Thumbnails"
+    },
+    {
+      "type": "radio",
+      "id": "thumbnails_position",
+      "label": "Position",
+      "default": "under",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left of featured image"
+        },
+        {
+          "value": "under",
+          "label": "Underneath featured image"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "thumbnail_crop",
+      "label": "Crop",
+      "options": [
+        {
+          "value": "",
+          "label": "No crop"
+        },
+        {
+          "value": "aspect-w-4 aspect-h-3",
+          "label": "Landscape"
+        },
+        {
+          "value": "aspect-w-1 aspect-h-1",
+          "label": "Square"
+        },
+        {
+          "value": "aspect-w-3 aspect-h-4",
+          "label": "Portrait"
+        }
+      ],
+      "default": "aspect-w-1 aspect-h-1"
+    },
+    {
+      "type": "select",
+      "id": "thumbnail_shape",
+      "label": "Shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_ellipse",
+          "label": "Ellipse",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_pill",
+          "label": "Pill",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_archway",
+          "label": "Archway",
+          "group": "Fit to image"
+        },
+        {
+          "value": "diamond",
+          "label": "Diamond",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_1",
+          "label": "Triangle 1",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_2",
+          "label": "Triangle 2",
+          "group": "Basic"
+        },
+        {
+          "value": "pentagon",
+          "label": "Pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "hexagon",
+          "label": "Hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "heptagon",
+          "label": "Heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "octagon",
+          "label": "Octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_pentagon",
+          "label": "Rounded pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_hexagon",
+          "label": "Rounded hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_heptagon",
+          "label": "Rounded heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_octagon",
+          "label": "Rounded octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "star_1",
+          "label": "Star 1",
+          "group": "Circular"
+        },
+        {
+          "value": "star_2",
+          "label": "Star 2",
+          "group": "Circular"
+        },
+        {
+          "value": "star_3",
+          "label": "Star 3",
+          "group": "Circular"
+        },
+        {
+          "value": "star_4",
+          "label": "Star 4",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_1",
+          "label": "Scalloped circle 1",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_2",
+          "label": "Scalloped circle 2",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_3",
+          "label": "Scalloped circle 3",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_4",
+          "label": "Scalloped circle 4",
+          "group": "Circular"
+        },
+        {
+          "value": "parallelogram",
+          "label": "Parallelogram",
+          "group": "Square"
+        },
+        {
+          "value": "scalloped_square",
+          "label": "Scalloped",
+          "group": "Square"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf",
+          "group": "Square"
+        },
+        {
+          "value": "clipped_square",
+          "label": "Clipped",
+          "group": "Square"
+        },
+        {
+          "value": "convex_square",
+          "label": "Convex",
+          "group": "Square"
+        },
+        {
+          "value": "twisted_square",
+          "label": "Twisted",
+          "group": "Square"
+        },
+        {
+          "value": "trapeze",
+          "label": "Trapeze",
+          "group": "Square"
+        },
+        {
+          "value": "blob",
+          "label": "Blob",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag",
+          "label": "Zig zag",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag_tear",
+          "label": "Zig zag tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wave_tear",
+          "label": "Wave tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "flower",
+          "label": "Flower",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "concave",
+          "label": "Concave",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "cross",
+          "label": "Cross",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "quatrefoil",
+          "label": "Quatrefoil",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wind",
+          "label": "Wind",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "heart",
+          "label": "Heart",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "mirrored_pyramids",
+          "label": "Mirrored pyramids",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "plus",
+          "label": "Plus",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "double_pill",
+          "label": "Double pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "triple_pill",
+          "label": "Triple pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "crown",
+          "label": "Crown",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "abstract_star",
+          "label": "Abstract star",
+          "group": "Miscellaneous"
+        }
+      ],
+      "default": "default",
+      "info": "Selecting some shapes will crop the image. [Learn more](https://help.switchthemes.co/shapes/guides/style-images-with-shapes.html)"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_media_shadow",
+      "label": "Hide media shadow",
+      "default": false
+    },
+    {
+      "type": "radio",
+      "id": "thumbnail_size",
+      "label": "Thumbnail size",
+      "default": "large",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_thumbnails_on_mobile",
+      "label": "Show thumbnails on mobile",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Color schema"
+    },
+    {
+      "type":"color",
+      "id":"color_accent",
+      "label":"Accent",
+      "default": "#fecb28"
+    },
+    {
+      "type": "color",
+      "id": "color_background",
+      "label": "Color background",
+      "default": "#fff9e9"
+    },
+    {
+      "type": "color",
+      "id": "color_media",
+      "label": "Media background color",
+      "default": "#f8eedc"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#785b00",
+    },
+    {
+      "type": "color",
+      "id": "accent_text_color",
+      "label": "Accent text color",
+      "default": "#000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icons",
+      "name": "Icon",
+      "settings": [
+        {
+          "id": "icon",
+          "type": "image_picker",
+          "label": "Select Icon"
+        },
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "text",
+          "type": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

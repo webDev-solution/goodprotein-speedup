@@ -1,0 +1,198 @@
+{
+  "sections": {
+    "7ab2a58d-a585-4922-9861-fdef492ec993": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Banner_BananaCream_Desktop02_5f463e8f-624d-4681-b3b0-533ec9bd9752.png",
+        "image_mobile": "shopify:\/\/shop_images\/Replo-test-Shake-LandingPage.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": false,
+        "style": "inset",
+        "height": "natural",
+        "place_content": "place-content-center-start",
+        "text_align": "text-left",
+        "color_scheme": "tertiary",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "f2c28d5e-e1be-4a8f-967f-2be34925189c": {
+      "type": "full-image-with-text",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "image": "shopify:\/\/shop_images\/Recettes-DEC_matchapancake_4cd2945e-d565-4ede-9487-db83326c281c.png",
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "image_size": "three_fifths",
+        "disable_media_style": false,
+        "title": "The Good Protein Digest",
+        "heading_size": "heading-template",
+        "richtext": "<p>Lorem ipsum dolor sit amet, consectetur<br\/>adipiscing elit, sed do eiusmod tempor.<\/p>",
+        "text_alignment": "text-left",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e": {
+      "type": "blog-link-list",
+      "blocks": {
+        "template--14599517110381__9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e-1685508348c2c13730-0": {
+          "type": "icon",
+          "settings": {
+            "text": "Recipes",
+            "link": "shopify:\/\/blogs\/recipes"
+          }
+        },
+        "template--14599517110381__9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e-1685508348c2c13730-1": {
+          "type": "icon",
+          "settings": {
+            "text": "Health",
+            "link": "shopify:\/\/blogs\/blog-test"
+          }
+        },
+        "template--14599517110381__9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e-1685508348c2c13730-2": {
+          "type": "icon",
+          "settings": {
+            "text": "Community",
+            "link": "\/"
+          }
+        },
+        "b89f5b51-1b4f-43a0-942e-7d75edb919ec": {
+          "type": "icon",
+          "settings": {
+            "text": "Stories",
+            "link": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--14599517110381__9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e-1685508348c2c13730-0",
+        "template--14599517110381__9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e-1685508348c2c13730-1",
+        "template--14599517110381__9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e-1685508348c2c13730-2",
+        "b89f5b51-1b4f-43a0-942e-7d75edb919ec"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "max_width": 100,
+        "text_style": "body",
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "display_on_card": true,
+        "show_blog_title": true,
+        "show_tags": true,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_post_excerpt": true,
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "6132acbc-018f-43ad-8f79-4664dadbc8e9": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "title": "Featured Articles",
+        "blog": "recipes",
+        "post_limit": 3,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_post_excerpt": true,
+        "show_view_all": false,
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "d614ff95-a8f7-4fd1-8b90-7551faaec3ca": {
+      "type": "blog-posts-new",
+      "settings": {
+        "display_on_card": true,
+        "title": "Featured Articles",
+        "blog": "recipes",
+        "post_limit": 3,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_post_excerpt": true,
+        "show_view_all": false,
+        "color_scheme": "secondary",
+        "use_gradient_background": false
+      }
+    },
+    "26b53e7a-05cf-4462-94e6-f853e59726e0": {
+      "type": "filterable-blogs",
+      "blocks": {
+        "template--14709916270701__26b53e7a-05cf-4462-94e6-f853e59726e0-1689222845975da473-0": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "link": "\/"
+          }
+        },
+        "template--14709916270701__26b53e7a-05cf-4462-94e6-f853e59726e0-1689222845975da473-1": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "link": "\/"
+          }
+        },
+        "template--14709916270701__26b53e7a-05cf-4462-94e6-f853e59726e0-1689222845975da473-2": {
+          "type": "icon",
+          "settings": {
+            "text": "",
+            "link": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--14709916270701__26b53e7a-05cf-4462-94e6-f853e59726e0-1689222845975da473-0",
+        "template--14709916270701__26b53e7a-05cf-4462-94e6-f853e59726e0-1689222845975da473-1",
+        "template--14709916270701__26b53e7a-05cf-4462-94e6-f853e59726e0-1689222845975da473-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "blog": "",
+        "tags": "Smoothies, Smoothie bowls, Snacks, Shakes, Bowls, Baked goods, Prebiotics, Keto",
+        "post_limit": 3,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": true,
+        "show_post_excerpt": true,
+        "show_view_all": true,
+        "title": "",
+        "max_width": 100,
+        "text_style": "body",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "7ab2a58d-a585-4922-9861-fdef492ec993",
+    "f2c28d5e-e1be-4a8f-967f-2be34925189c",
+    "9ac7877e-3eeb-48d0-b64f-d6d2dabb8b1e",
+    "main",
+    "6132acbc-018f-43ad-8f79-4664dadbc8e9",
+    "d614ff95-a8f7-4fd1-8b90-7551faaec3ca",
+    "26b53e7a-05cf-4462-94e6-f853e59726e0"
+  ]
+}

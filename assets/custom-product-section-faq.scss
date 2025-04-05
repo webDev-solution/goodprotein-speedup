@@ -1,0 +1,23 @@
+
+[data-section-type="pdp-section-faq"] {
+  background: var(--color-pdp-section-faq);
+  .product-faq {
+    display: none;
+    @media screen and (max-width: 768px) {
+      padding: 20px 0;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .load-more {
+    color: #ff8b4e;
+    display: block;
+    margin-left: auto;
+    float: right;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 3px solid;
+  }
+}

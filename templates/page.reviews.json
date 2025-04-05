@@ -1,0 +1,370 @@
+{
+  "sections": {
+    "00ac0dd9-49cc-46b6-967e-fd182820be49": {
+      "type": "rich-text",
+      "blocks": {
+        "1e8db4fb-2655-43ab-8bb8-5ea27b349703": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "1e8db4fb-2655-43ab-8bb8-5ea27b349703"
+      ],
+      "custom_css": [
+        "h2 {font-size: 42px;}",
+        "h3 {font-size: 36px;}"
+      ],
+      "settings": {
+        "title": "Enjoyed by Thousands",
+        "heading_size": "heading-base",
+        "site_review": true,
+        "rich_text": "<p>We’re inspired everyday by the thousands of Good Protein enthousiasts sharing success stories about living healthier more sustainable lives!<\/p>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-1\/3",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "80b5859e-0e41-4d69-83d4-a517f4685e6c": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "73159347-4d86-48eb-ae67-8a5d82cada13": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "73159347-4d86-48eb-ae67-8a5d82cada13"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 32px;}"
+      ],
+      "settings": {
+        "image_mobile": "shopify:\/\/shop_images\/Replo-test-Shake-LandingPage.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": false,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "tertiary",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "168901170412b05458": {
+      "type": "apps",
+      "blocks": {
+        "28f595ec-f2b6-4990-988e-674285a8682d": {
+          "type": "shopify:\/\/apps\/junip\/blocks\/junip-review-carousel\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "reviewsType": "product_reviews",
+            "product": "",
+            "showSummary": false,
+            "title": "Happy Customers and Counting",
+            "paddingTop": 48,
+            "paddingBottom": 48,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "28f595ec-f2b6-4990-988e-674285a8682d"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "section {background-color: #f7eaf0;}"
+      ],
+      "settings": {}
+    },
+    "1689011400df54757d": {
+      "type": "apps",
+      "blocks": {
+        "82e1250b-b855-426a-b35c-0800608fd7f6": {
+          "type": "shopify:\/\/apps\/junip\/blocks\/junip-reviews\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "settings": {
+            "layout": "grid",
+            "reviewsType": "product_reviews",
+            "showSummary": true,
+            "reviewsCount": 12,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "82e1250b-b855-426a-b35c-0800608fd7f6"
+      ],
+      "settings": {}
+    },
+    "94c8c93c-b603-4dff-961b-274f17425232": {
+      "type": "image-with-text",
+      "blocks": {
+        "774605e3-3afb-4682-bc95-e975f9987bf7": {
+          "type": "shape_divider",
+          "disabled": true,
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "774605e3-3afb-4682-bc95-e975f9987bf7"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "display_on_card": false,
+        "image": "shopify:\/\/shop_images\/DSC00915_47fe12f8-dfc2-4762-96ae-c7db76409585.jpg",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default_pill",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "left",
+        "img_width": "100%",
+        "image_size": "half",
+        "max_width": 100,
+        "text_style": "body",
+        "disable_media_style": true,
+        "subtitle": "",
+        "title": "Ready To Start Eating Healthier?",
+        "heading_size": "heading-template",
+        "richtext": "<p>Only you know if you’ll like Good Protein. That’s why we offer a 100% money-back guarantee. Simply try it yourself. If you don’t absolutely love it. We will refund your money. <\/p>",
+        "ingredient_text": "",
+        "text_alignment": "text-left",
+        "ingredient_link_t": "",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_label": "Try it Risk-Free",
+        "color_scheme": "quaternary"
+      }
+    },
+    "ce6f529a-9f77-4c68-b2c4-909039960cd3": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14709471150189__ce6f529a-9f77-4c68-b2c4-909039960cd3-16890130638b766d90-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/USED_-_Recettes-DEC_superberries.png",
+            "title": "Our Story",
+            "text": "",
+            "cta_link": "shopify:\/\/pages\/our-story-2",
+            "cta_text": "Learn More",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14709471150189__ce6f529a-9f77-4c68-b2c4-909039960cd3-16890130638b766d90-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Replo-008.png",
+            "title": "Recipes",
+            "text": "",
+            "cta_link": "shopify:\/\/blogs\/recipes",
+            "cta_text": "Learn more",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14709471150189__ce6f529a-9f77-4c68-b2c4-909039960cd3-16890130638b766d90-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Replo-004.png",
+            "title": "Our Ingredients",
+            "text": "",
+            "cta_link": "shopify:\/\/pages\/our-ingredients",
+            "cta_text": "Learn more",
+            "color_scheme": "primary"
+          }
+        },
+        "82920b2a-2e42-4f97-9462-2811c6da635a": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14709471150189__ce6f529a-9f77-4c68-b2c4-909039960cd3-16890130638b766d90-0",
+        "template--14709471150189__ce6f529a-9f77-4c68-b2c4-909039960cd3-16890130638b766d90-1",
+        "template--14709471150189__ce6f529a-9f77-4c68-b2c4-909039960cd3-16890130638b766d90-2",
+        "82920b2a-2e42-4f97-9462-2811c6da635a"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "remove_space_top": false,
+        "display_on_card": false,
+        "slideshow_on_mobile": true,
+        "display_full_width": true,
+        "title": "",
+        "text": "",
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "ea2ef844-61a8-4a1f-8116-4f1c8242082d": {
+      "type": "full-image-with-text",
+      "disabled": true,
+      "custom_css": [
+        "section {background-color: #fff9e9;}"
+      ],
+      "settings": {
+        "display_on_card": false,
+        "image": "shopify:\/\/shop_images\/DSC00915_1.jpg",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "image_size": "half",
+        "disable_media_style": false,
+        "title": "Ready To Start Eating Healthier?",
+        "heading_size": "heading-base",
+        "richtext": "<p>Only you know if you’ll like Good Protein. That’s why we offer a 100% money-back guarantee. Simply try it yourself. If you don’t absolutely love it. We will refund your money.<\/p>",
+        "text_alignment": "text-center",
+        "button_link": "shopify:\/\/products\/mixed-berries-all-in-one-shake",
+        "button_label": "Try it Risk-Free",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "5ddfb7bb-33da-42e3-aaed-ea3208f96c1a": {
+      "type": "smooth_scroll_img",
+      "custom_css": [
+        "section {background-color: #ffffff;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Banner-10-15-02_8b04585e-87d3-45aa-a030-f41a2def5990.png"
+      }
+    },
+    "rich_text_yVyrBN": {
+      "type": "rich-text",
+      "blocks": {
+        "shape_divider_CQcXtX": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_CQcXtX"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Ready To Start Eating Healthier?",
+        "heading_size": "heading-template",
+        "site_review": false,
+        "rich_text": "<p>Only you know if you’ll like Good Protein. That’s why we offer a 100% money-back guarantee. Simply try it yourself. If you don’t absolutely love it. We will refund your money.<\/p>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-1\/2",
+        "button_link": "shopify:\/\/products\/vanilla-cupcake-all-in-one-shake",
+        "button_label": "Try it Risk-Free",
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "image_with_text_kBUmEB": {
+      "type": "image-with-text",
+      "blocks": {
+        "shape_divider_Hxm4DH": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_Hxm4DH"
+      ],
+      "settings": {
+        "display_on_card": false,
+        "image": "shopify:\/\/shop_images\/Good_Protein_image_original_354937_8dfd71a7-ed7d-46b9-9d3f-d5318c561a2c.jpg",
+        "crop": "",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "img_width": "100%",
+        "image_size": "half",
+        "max_width": 100,
+        "text_style": "body",
+        "disable_media_style": false,
+        "subtitle": "",
+        "title": "Ready To Start Eating Healthier?",
+        "heading_size": "heading-template",
+        "richtext": "<p>Only you know if you’ll like Good Protein. That’s why we offer a<span style=\"text-decoration:underline\"> <\/span><a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\" title=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\"><span style=\"text-decoration:underline\">60-day Satisfaction Guarantee<\/span><\/a><span style=\"text-decoration:underline\">.<\/span> Simply try it yourself. If you don’t absolutely love it. We will refund your money.<\/p>",
+        "ingredient_text": "",
+        "text_alignment": "text-center",
+        "ingredient_link_t": "",
+        "button_link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+        "button_label": "Try it Risk-Free",
+        "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209"
+      }
+    }
+  },
+  "order": [
+    "00ac0dd9-49cc-46b6-967e-fd182820be49",
+    "main",
+    "80b5859e-0e41-4d69-83d4-a517f4685e6c",
+    "168901170412b05458",
+    "1689011400df54757d",
+    "94c8c93c-b603-4dff-961b-274f17425232",
+    "ce6f529a-9f77-4c68-b2c4-909039960cd3",
+    "ea2ef844-61a8-4a1f-8116-4f1c8242082d",
+    "5ddfb7bb-33da-42e3-aaed-ea3208f96c1a",
+    "rich_text_yVyrBN",
+    "image_with_text_kBUmEB"
+  ]
+}

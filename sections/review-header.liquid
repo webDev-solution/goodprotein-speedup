@@ -1,0 +1,368 @@
+
+{% style %}
+  .review-title-container-ss {
+    background-color: #FFFCEE;
+  }
+  .review-title-wrapper-ss {
+    background-color: {{ section.settings.background_color }};
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .review-five-star-container-ss {
+    display: flex;
+    {% comment %} justify-content: space-between; {% endcomment %}
+  }
+  .stars-group {
+    display: flex;
+    margin-right: 30px;
+    justify-content: center;
+  }
+  .review-title-wrapper-ss .star {
+    width: 33px;
+    height: 30px;
+  }
+  .review-description {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+  }
+  .reivew-text-ss {
+    margin-top: 3px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .review-star-text-wrapper-ss {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  .review-title-ss {
+    font-size: 80px;
+    padding-top: 20px;
+    color: {{ section.settings.title_color }};
+    text-align: center;
+  }
+  .junip-review-carousel-more-rating.junip-mb-2 {
+    display: none;
+  }
+  .junip-mt-1.junip-mb-2 {
+    display: none;
+  }
+  .reivew-swiper-container-ss {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .reivew-swiper-container-ss .review-swiper-slide {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 30px;
+    margin-right: 20px;
+    min-height: 340px;
+    display: flex;
+  }
+  .reivew-swiper-container-ss .swiper-slide>div {
+    display: flex;
+    flex-direction: column;
+  }
+  .reivew-swiper-container-ss .review-title-ss {
+    font-size: 22px;
+    font-family: 'Gelica Bk';
+    color: black;
+    text-align: left;
+  }
+  .reivew-swiper-container-ss .review-text-ss {
+    font-size: 20px;
+  }
+  .reivew-swiper-container-ss .review-footer-ss {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .reivew-swiper-container-ss  .review-auther-name {
+    font-weight: bold;
+  }
+  .reivew-swiper-container-ss  .verified-buyer-badge {
+    font-size: 13px;
+  }
+  .reivew-swiper-container-ss .swiper-button-prev,
+  .reivew-swiper-container-ss .swiper-button-next {
+    top: var(--swiper-navigation-top-offset, 68%);
+  }
+  .reivew-swiper-container-ss .swiper-button-next {
+    right: 100px;
+  }
+  .reivew-swiper-container-ss .swiper-button-prev {
+    left: 100px;
+  }
+  @media (min-width: 769px) and (max-width: 1300px) {
+    .reivew-swiper-container-ss {
+      width: 84%;
+    }  .reivew-swiper-container-ss .swiper-button-next {
+      right: 50px;
+    }
+    .reivew-swiper-container-ss .swiper-button-prev {
+      left: 50px;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1439px) {
+    .review-title-ss {
+      font-size: 60px;
+    }
+  }
+  @media (max-width: 768px) {
+    .review-title-wrapper-ss {
+      background-color: {{ section.settings.background_color }};
+      border-top-left-radius: 20px; 
+      border-top-right-radius: 20px;
+      padding-top: 30px;
+    }
+    .review-star-text-wrapper-ss {
+      flex-direction: column;
+    }
+    .review-title-ss {
+      font-size: 28px;
+      padding-top: 10px;
+    }
+    .junip-review-carousel {
+      padding-top: 16px !important;
+    }
+    .reivew-swiper-container-ss {
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+    .reivew-swiper-container-ss .review-swiper-slide {
+      padding: 20px 15px;
+    }
+    .review-title-wrapper-ss .star {
+      width: 24px;
+      height: 24px;
+    }
+    .reivew-swiper-container-ss .review-title-ss {
+      font-size: 18px;
+    }
+    .reivew-swiper-container-ss .review-text-ss {
+      font-size: 16px;
+    }
+    .reivew-swiper-container-ss .review-auther-name {
+      font-size: 14px;
+    }
+    .reivew-swiper-container-ss  .verified-buyer-badge {
+      font-size: 11px;
+    }
+    .reivew-text-ss {
+      font-weight: bold;
+    }
+    .reivew-swiper-container-ss .review-swiper-slide {
+      min-height: 240px;
+    }
+    .reivew-swiper-container-ss .review-star-text-wrapper-ss {
+      align-items: baseline;
+    }
+    
+    .reivew-swiper-container-ss .swiper-button-next {
+      right: 10px !important;
+    }
+    .reivew-swiper-container-ss .swiper-button-prev {
+      left: 10px !important;
+    }
+  }
+  @media (min-width: 769px) {
+    .junip-review-carousel {
+      padding-right: 110px !important;
+      padding-left: 110px !important;
+    }
+  }
+{% endstyle %}
+<div class="review-title-container-ss" id="">
+  <div class="review-title-wrapper-ss">
+    <div class="">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'stars' %}
+            {% assign star_color = block.settings.star_color %}
+            <div class="review-star-text-wrapper-ss">
+              <div class="stars-group {{ star_color }}">
+                <div class="star">
+                  {% render 'icon-fat-star', color: star_color  %}
+                </div>
+                <div class="star">
+                  {% render 'icon-fat-star', color: star_color  %}
+                </div>
+                <div class="star">
+                  {% render 'icon-fat-star', color: star_color  %}
+                </div>
+                <div class="star">
+                  {% render 'icon-fat-star', color: star_color  %}
+                </div>
+                <div class="star">
+                  {% render 'icon-fat-star', color: star_color  %}
+                </div>
+              </div>
+              <div class="reivew-text-ss">
+                <P>{{ block.settings.review_description }}</p>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    <h3 class="review-title-ss"> {{ section.settings.title }}</h3>
+    <div class="reivew-swiper-container-ss overflow-hidden">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == "review" %}
+            <div class="swiper-slide review-swiper-slide">
+              <div>
+                <div class="review-star-text-wrapper-ss">
+                  <div class="stars-group {{ star_color }}">
+                    <div class="star">
+                      {% render 'icon-fat-star', color: star_color  %}
+                    </div>
+                    <div class="star">
+                      {% render 'icon-fat-star', color: star_color  %}
+                    </div>
+                    <div class="star">
+                      {% render 'icon-fat-star', color: star_color  %}
+                    </div>
+                    <div class="star">
+                      {% render 'icon-fat-star', color: star_color  %}
+                    </div>
+                    <div class="star">
+                      {% render 'icon-fat-star', color: star_color  %}
+                    </div>
+                  </div>
+                </div>
+                <div class="review-title-ss">{{ block.settings.review_title }}</div>
+                <div class="review-text-ss">{{ block.settings.review_text }}</div>
+                <div class="review-footer-ss">
+                  <div class="review-auther-name">{{ block.settings.review_auther }}</div>
+                  {% if block.settings.isverified %}
+                    <div class="verified-buyer-badge">Verified Buyer</div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    var reivewSwiperContainer = new Swiper(".reivew-swiper-container-ss", {
+      loop: true,
+      autoplay: false,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Review Header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "color schema"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tried, Tested, and Loved"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#0066CC"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#C2E4F2"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"stars",
+      "name":"Stars",
+      "settings":[
+        {
+          "type":"color",
+          "id":"star_color",
+          "label":"Star Color",
+          "default": "#F7C255"
+        },
+        {
+          "type":"text",
+          "id":"review_description",
+          "label":"Reviews Description",
+          "default": "20,000+ Verified 5-Star Reviews"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type":"text",
+          "id":"review_title",
+          "label":"Review Title"
+        },
+        {
+          "type":"text",
+          "id":"review_text",
+          "label":"Review Text"
+        },
+        {
+          "type":"text",
+          "id":"review_auther",
+          "label":"Auther"
+        },
+        {
+          "type":"checkbox",
+          "id":"isverified",
+          "label":"Verified",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Review Header"
+    }
+  ]
+}
+{% endschema %}

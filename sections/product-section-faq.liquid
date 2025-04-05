@@ -1,0 +1,348 @@
+
+{{'custom-product-section-faq.scss.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{section.id}} [data-section-type="pdp-section-faq"] {
+    --color-pdp-section-faq: {{section.settings.color_bg}};
+  }
+{% endstyle %}
+
+<div data-section-type="pdp-section-faq" class="background--{{section.settings.background}} pdp-color-{{product.metafields.custom.background_color | handleize }} product-section product-section-faq product-section-padding">
+  <div class="page-width">
+    <h3>{{ section.settings.heading }}</h3>
+    <div class="inner-product-section inner-product-section-faq">
+       <div class="left-product-section-faq">
+          <div class="product-section-box product-section-tab" >
+            <div class="top-product-section-tab">
+              {% assign tabs = section.settings.tabs | split: "," %}
+              <ul>
+                <li><a href="#" class="faq-active" data-tab="all"><ly-as-1363302>All</ly-as-1363302></a></li>
+                {% for tab in tabs %}
+                    <li><a href="#" data-tab="{{ tab | handleize }}">{{ tab }}</a></li> 
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="top-product-section-content">
+                {% for block in section.blocks %}
+                  {% case block.type %}
+                    {% when 'faq' %}
+                    <div class="product-faq active" data-content="{{ block.settings.category | handleize }}" {% if forloop.index > 5 %}style="display: none;"{% endif %}>
+                      <h4 class="product-faq-tile">{{ block.settings.title }}</h4>
+                      <div class="product-faq-content">
+                        {{ block.settings.content }}
+                      </div>
+                    </div>
+                  {% endcase %}
+                {% endfor %}
+            </div>
+            <a href="#" class="load-more"><ly-as-1363303>SEE MORE</ly-as-1363303></a>
+          </div>
+       </div>
+      <div class="right-product-section-faq">
+          <div class="product-section-box product-chat">
+             <h5>{{ section.settings.chat_heading }}</h5>
+            {{ section.settings.chat_content }}
+          </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+{% liquid
+  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+%}
+
+<script>
+  $('body').on('click','.top-product-section-tab ul li a', function(e){
+    e.preventDefault();
+    var tab = $(this).data('tab');
+    if($(this).hasClass('faq-active')) return;
+    $('.top-product-section-tab ul li a').removeClass('faq-active');
+    $(this).addClass('faq-active');
+    if(tab=='all'){
+      $('.product-faq').addClass('active');
+      if ($('.product-faq').length > 5) {
+        $('.product-section-tab .load-more').show();
+        $('.product-faq').each(function (index) {
+          console.log(index)
+          if (index > 4) {
+            $(this).hide()
+          } else {
+            $(this).show();
+          }
+        })
+      } else {
+        $('.product-faq').show()
+        $('.product-section-tab .load-more').hide();
+      }
+    } else {
+      $('.product-faq').removeClass('active')
+      $('.product-faq[data-content="'+tab+'"]').addClass('active');
+      console.log($('.product-faq[data-content="'+tab+'"]').length)
+      if ($('.product-faq[data-content="'+tab+'"]').length > 5) {
+        $('.product-faq[data-content="'+tab+'"]').each(function (index) {
+          if (index > 4) {
+            $(this).hide()
+          } else {
+            $(this).show();
+          }
+        })
+        $('.product-section-tab .load-more').show();
+      } else {
+        $('.product-faq[data-content="'+tab+'"]').show()
+        $('.product-section-tab .load-more').hide();
+      }
+    }
+  });
+
+  $('body').on('click', '.product-section-tab .load-more', function (e) {
+    e.preventDefault();
+    $('.product-faq.active').show();
+    $(this).hide();
+  })
+
+   $('body').on('click','.product-faq-tile', function(e){
+     e.preventDefault();
+     $(this).toggleClass('faq-active');
+     $(this).next().slideToggle();
+   });
+</script>
+
+{% schema %}
+  {
+    "name": "Product FAQ",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "background",
+        "label": "Use background",
+        "default": true
+      },
+      {
+        "type":"text",
+        "id":"heading",
+        "label":"Heading"
+      },
+      {
+        "type":"textarea",
+        "id":"tabs",
+        "label":"Tabs",
+        "info":"Please put camma for separate tab"
+      },
+      {
+        "type":"header",
+        "content":"Chat"
+      },
+      {
+        "type":"text",
+        "id":"chat_heading",
+        "label":"Chat Heading"
+      },
+      {
+        "type":"html",
+        "id":"chat_content",
+        "label":"Chat Content"
+      },
+      {
+        "type": "header",
+        "content": "color_schema"
+      },
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background color",
+        "default": "#fcf7e4"
+      }
+    ],
+    "blocks":[
+      {
+        "name":"Prpduct FAQ",
+        "type":"faq",
+        "settings":[
+          {
+            "type":"inline_richtext",
+            "id":"title",
+            "label":"Title"
+          },
+          {
+            "type":"richtext",
+            "id":"content",
+            "label":"Content"
+          },
+          {
+            "type":"text",
+            "id":"category",
+            "label":"Category"
+          }
+        ]
+      },
+      {
+        "name": "Shape divider",
+        "type": "shape_divider",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "radio",
+            "label": "Target section",
+            "id": "target_section",
+            "default": "above",
+            "options": [
+              {
+                "value": "above",
+                "label": "Section above"
+              },
+              {
+                "value": "below",
+                "label": "Section below"
+              }
+            ],
+            "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+          },
+          {
+            "type": "select",
+            "label": "Target section color scheme",
+            "id": "target_section_color_scheme",
+            "default": "secondary",
+            "options": [
+              {
+                "value": "primary",
+                "label": "Primary"
+              },
+              {
+                "value": "secondary",
+                "label": "Secondary"
+              },
+              {
+                "value": "tertiary",
+                "label": "Tertiary"
+              },
+              {
+                "value": "quaternary",
+                "label": "Quaternary"
+              }
+            ],
+            "info": "Select the color scheme of the target section"
+          },
+          {
+            "type": "select",
+            "label": "Style",
+            "id": "style",
+            "default": "large-waves_1200x84",
+            "options": [
+              {
+                "value": "round",
+                "label": "Round"
+              },
+              {
+                "value": "large-waves_1200x84",
+                "label": "Large waves",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "medium-waves_1200x43",
+                "label": "Medium waves",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "small-waves_1200x20",
+                "label": "Small waves",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "large-zig-zag_1200x65",
+                "label": "Large zig zag",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "medium-zig-zag_1200x37",
+                "label": "Medium zig zag",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "small-zig-zag_1200x21",
+                "label": "Small zig zag",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "waves-1-asymmetrical_1440x261",
+                "label": "Waves 1",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "waves-2-asymmetrical_1440x330",
+                "label": "Waves 2",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "tilt-1-asymmetrical_1440x101",
+                "label": "Tilt 1",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "tilt-2-asymmetrical_1440x293",
+                "label": "Tilt 2",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "mountains-1-asymmetrical_1440x293",
+                "label": "Mountains 1",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "mountains-2-asymmetrical_1440x325",
+                "label": "Mountains 2",
+                "group": "Asymmetrical"
+              }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "id": "flip_horizontal",
+            "label": "Flip horizontal"
+          },
+          {
+            "type": "header",
+            "content": "Animation"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_animation",
+            "label": "Enable animation",
+            "info": "Asymmetrical shape dividers will sway when animated."
+          },
+          {
+            "type": "radio",
+            "id": "animation_direction",
+            "label": "Direction",
+            "options": [
+              {
+                "value": "",
+                "label": "Right to left"
+              },
+              {
+                "value": "reverse",
+                "label": "Left to right"
+              }
+            ],
+            "default": ""
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Product Section FAQ",
+        "category":"product"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

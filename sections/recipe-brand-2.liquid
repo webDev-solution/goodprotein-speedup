@@ -1,0 +1,224 @@
+{% liquid
+  assign crop = 'image-wrapper-none'
+  assign brand_image = article.metafields.custom.featured_banner_image_english
+  assign brand_image_mobile = article.metafields.custom.featured_banner_image_mobile_
+  assign video_link = article.metafields.custom.video
+  #assign video_link =  article.metafields.custom.video | split: 'v=' | last
+  assign enable_video = section.settings.enable_video
+  assign recipe_title = article.title
+  assign recipe_description = article.metafields.custom.banner_description
+  assign recipe_condition = article.metafields.custom.banner_tag
+  if article.metafields.custom.banner_text_color != blank
+    assign recipe_header_text_color = article.metafields.custom.banner_text_color
+  else
+    assign recipe_header_text_color = "#000000"
+  endif
+  if article.metafields.custom.banner_background_color != blank
+    assign recipe_header_background_color = article.metafields.custom.banner_background_color
+  else
+    assign recipe_header_background_color = "#ffffff"
+  endif
+
+  if enable_video
+    assign background_width = 100 | minus: section.settings.video_width
+    assign video_width = section.settings.video_width
+  endif
+
+  assign content_class = 'lg:grid lg:absolute lg:inset-0 lg:w-full lg:h-full'
+  assign content_class_without_lg = 'grid absolute inset-0 w-full h-full'
+  assign content_max_width = 'max-w-2xl'
+%}
+
+{{'recipe-brand.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .recipe-header-content-container {
+    width: {{ background_width }}vw;
+  }
+  .recipe-header-bottom-wave-mobile {
+    display: none;
+  }
+  .recipe-header-bottom-wave-mobile img {
+    width: 100%;
+  }
+  .recipe-header-bottom-wave {
+    bottom: -1px !important;
+    scale: 1.05;
+  }
+  .recipe-header-bottom-wave img {
+    width: 100vw;
+  }
+  #shopify-section-{{ section.id }} .break-words * {
+    color: {{ recipe_header_text_color }};
+  }
+  .recipe-header-container {
+    position: relative;
+  }
+  @media (max-width: 989px) {
+    .recipe-header-container {
+      position: relative;
+    }
+    .recipe-header-bottom-wave {
+      display: none;
+    }
+    .recipe-header-content-container {
+      width: 100%;
+      z-index: 99;
+      position: relative;
+      background: white;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    .recipe-header-bottom-wave-mobile {
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+    }
+    #shopify-section-{{ section.id }} .break-words * {
+      color: #000000;
+    }
+    #shopify-section-{{ section.id }} .break-words * {
+      color: {{ recipe_header_background_color }};
+    }
+  }
+{% endstyle %}
+
+<div class="recipe-brand-2 text-scheme-text bg-scheme-background overflow-hidden ">
+  <div class="section-content ">
+    <div class="relative z-10 lg:bg-transparent h-full">
+      <div>
+        <div class="recipe-header-container {{ crop }}" {% unless section.settings.enable_video %} style="height: unset !important;"{% endunless %}>
+          {% if section.settings.enable_video and video_link != blank %}
+            {% style %}
+              .brand-video-container {
+                display: flex;
+                justify-content: {{ section.settings.video_position }};
+                background-color: {{ recipe_header_background_color }};
+                width: 100%;
+              }
+              .brand-video-container video {
+                max-width: {{ video_width }}vw;
+              }
+              .brand-video-real-container {
+                max-width: {{ video_width }}vw;
+              }
+              @media (max-width: 989px) {
+                .brand-video-container video {
+                  width: 100vw;
+                }
+                .brand-video-real-container {
+                  width: 100vw !important;
+                  max-width: unset;
+                }
+                .brand-video-real-container video {
+                  width: 100vw;
+                }
+              }
+            {% endstyle %}
+            <div class="brand-video-container"></div>
+            <div class="brand-video-real-container">
+              <video playsinline="playsinline" class="video" preload="metadata" poster="{{ video_link.poster }}"><source src="{{ video_link.value }}" type="video/mp4"><img src="{{ video_link.poster }}"></video>
+            </div>
+            <div class="recipe-header-bottom-wave-mobile">
+              <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/recipe-wave-mobile.png?v=1743273638" />
+            </div>
+          {% else %}
+            {% if brand_image != blank %}
+              {% if brand_image_mobile != blank %}
+                <div class="hidden lg:block">
+              {% endif %}
+              {{ brand_image | image_url: width: 2000 | image_tag: sizes: '100vw', class: 'w-full', loading: 'lazy' }}
+              {% if brand_image_mobile != blank %}
+                </div>
+              {% endif %}
+              {% if brand_image_mobile != blank %}
+                <div class="lg:hidden">
+                  {{ brand_image_mobile | image_url: width: 1200 | image_tag: sizes: '100vw', class: "w-full", loading: 'lazy' }}
+                </div>
+              {% endif %}
+              <div class="recipe-header-bottom-wave-mobile">
+                <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/recipe-wave-mobile.png?v=1743273638" />
+              </div>
+            {% else %}
+              <div class="w-full absolute top-0 left-0 right-0 bottom-0">
+                {{ 'lifestyle-1' | placeholder_svg_tag: 'block text-scheme-placeholder-foreground fill-current bg-neutral-100' }}
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="recipe-header-content-container py-section py-section-vertical-spacing {{ content_class }} z-10  text-scheme-text">
+        <div class="{{ content_max_width }}">
+          <div class="break-words ">
+            <h2>{{ recipe_title }}</h2>
+            <p>{{ recipe_description }}</p>
+            <p>{{ recipe_condition }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="recipe-header-bottom-wave absolute bottom-0">
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/recipe-wave.png?v=1743270776" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script> 
+  $('.video').parent().click(function () {
+    if($(this).children(".video").get(0).paused){
+      $(this).children(".video").get(0).play();   
+      $(this).children(".playpause").fadeOut();
+    }else{       
+      $(this).children(".video").get(0).pause();
+    $(this).children(".playpause").fadeIn();
+      }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Recipe Brand 2",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image and Video"
+    },
+    {
+      "id": "enable_video",
+      "type": "checkbox",
+      "label": "Enable video",
+      "default": false
+    },
+    {
+      "id": "video_width",
+      "type": "range",
+      "label": "Video width (%)",
+      "min": 20,
+      "max": 80,
+      "default": 40
+    },
+    {
+      "id": "video_position",
+      "type": "radio",
+      "label": "Video position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "flex-start"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recipe Brand 2",
+    }
+  ]
+}
+{% endschema %}

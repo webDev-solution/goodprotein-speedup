@@ -1,0 +1,33 @@
+
+[data-section-type="pdp-section-2"] {
+  h3 {
+    max-width: 600px;
+  }
+  background: var(--color-pdp-section-2);
+  .inner-product-section {
+    padding: 50px 0 70px;
+    margin: 0 -30px;
+    @media screen and (max-width: 768px) {
+      margin: 0 -10px;
+    }
+    @media screen and (max-width: 480px) {
+      margin: 0;
+      padding-top: 20px;
+      flex-wrap: wrap;
+    }
+    .product-section-box {
+      margin: 0 30px;
+      width: 100%;
+      @media screen and (max-width: 768px) {
+        margin: 0 10px;
+      }
+      @media screen and (max-width: 480px) {
+        margin: 20px 0;
+      }
+      img {
+        border-radius: 36px;
+      }
+    }
+
+  }
+}

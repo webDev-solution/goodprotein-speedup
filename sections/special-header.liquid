@@ -1,0 +1,385 @@
+{% style %}
+.special-header-container-ss--{{ section.id }} {
+  background-color: {{ section.settings.background_color }};
+  padding: {{ section.settings.padding_vertical_for_desktop }}px 0px;
+  width: 100%;
+  {% if section.settings.is_original_header %}
+    margin-top: {{ section.settings.top_margin_desktop }}px;
+  {% else %}
+    position: fixed;
+    z-index: 88888;
+    top: 0px;
+  {% endif %}
+  border-bottom: 2px solid {{ section.settings.border_color }};
+}
+.special-header-container-ss--{{ section.id }} .special-header-ss {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  padding-left: calc(var(--section-x-padding) + 28px);
+  color: {{ section.settings.title_color }};
+  font-family: 'Gelica SBd';
+}
+.special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss {
+  display: flex;
+  align-items: center;
+}
+.special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss img {
+  margin-right: 20px;
+  height: 50px;
+  width: auto;
+}
+.special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss div {
+  font-size: 32px;
+}
+.special-header-container-ss--{{ section.id }} .special-header-ss .special-header-right-ss a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Gelica SBd' !important;
+  color: {{ section.settings.button_text_color }};
+  background-color: {{ section.settings.button_background_color }};
+}
+.special-header-container-ss--{{ section.id }} .special-header-ss .special-header-right-ss a:hover {
+  /* background-color: #333; */
+}
+.special-header-right-ss .without-padding-button-ss {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  font-size: 22px;
+  background-color: transparent !important;
+}
+#shopify-section-announcement-bar,
+#shopify-section-header {
+  display: none !important;
+}
+.special-header-right-ss {
+  display: flex;
+  align-items: center;
+}
+.special-header-right-ss button {
+  color: black;
+}
+.special-header-right-ss a {
+  color: black;
+}
+.special-header-right-ss svg {
+  width: 24px;
+  height: 24px;
+}
+.header__item-count-ss {
+  background-color: black !important;
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss img {
+    height: 34px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss div {
+    font-size: 20px;
+  }
+  .special-header-container-ss--{{ section.id }} {
+    padding: 10px 0px;
+    {% if section.settings.is_original_header %}
+      margin-top: 57px;
+    {% endif %}
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-right-ss a {
+    padding: 6px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .special-header-right-ss svg {
+    width: 16px;
+    height: 16px;
+  }
+  .header__item-count-ss {
+    background: black;
+    width: 0.95rem;
+    height: 0.95rem;
+    min-width: 0.95rem;
+    top: 7px;
+    font-size: 0.5rem;
+  }
+  .special-header-container-ss--{{ section.id }} {
+    border-width: 1px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss {
+    padding: 0 14px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss img {
+    height: {{ section.settings.image_height_for_mobile }}px;
+    margin-right: 5px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss div {
+    font-size: 13px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-right-ss a {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  .special-header-right-ss .without-padding-button-ss {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 13px !important;
+  } 
+  .special-header-container-ss--{{ section.id }} {
+    padding: 8px 0;
+  }
+  #shopify-section-announcement-bar,
+  #shopify-section-header {
+    display: none !important;
+  }
+  .special-header-container-ss--{{ section.id }} {
+    {% if section.settings.is_original_header %}
+      margin-top: {{ section.settings.top_margin_mobile }}px;
+    {% endif %}
+  }
+}
+@media (max-width: 435px) {
+  .special-header-right-ss .without-padding-button-ss {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 12px !important;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss {
+    padding: 0 10px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss div {
+    font-size: {% if request.path contains '/fr' %}10.5{% else %}12{% endif %}px;
+  }
+}
+@media (max-width: 374px) {
+  .special-header-container-ss--{{ section.id }} .special-header-ss {
+    padding: 0 5px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss {
+    padding: 0 10px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-left-ss div {
+    font-size: 10px;
+  }
+  .special-header-container-ss--{{ section.id }} .special-header-ss .special-header-right-ss a {
+    font-size: 10px;
+  }
+  .special-header-right-ss .without-padding-button-ss {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    font-size: 11px;
+  } 
+}
+{% endstyle %}
+
+{% if template.name != 'product' %}
+  {% assign product_handle = page.metafields.custom.related_product %}
+  {% if product_handle %}
+    {% assign product = all_products[product_handle] %}
+  {% endif %}
+{% endif %}
+
+<div class="special-header-container-ss--{{ section.id }} special-header-container-ss">
+  <div class="special-header-ss">
+    <div class="special-header-left-ss">
+      {% if section.settings.image_link %}
+        <a href="{{ section.settings.image_link }}">
+      {% endif %}
+      <img src="{{ section.settings.left_image | img_url: 'master' }}" alt="Left Image">
+      {% if section.settings.image_link %}
+        </a>
+      {% endif %}
+      <div>{{ section.settings.title }}</div>
+    </div>
+    <div class="special-header-right-ss">
+      {% if section.settings.add_cart %}
+        <a id="quick-buy-btn-{{ product.variants[0].id }}" class="btn quick-buy-btn special-header-button-ss button {% unless section.settings.is_padding %}without-padding-button-ss{% endunless %}" data-product-id="{{ product.variants[0].id }}" data-variant-id="{{ product.variants[0].id }}">{{ section.settings.button_label }}</a>
+      {% else %}
+        {% if section.settings.button_link != blank %}
+          <a class="special-header-button-ss button btn {% unless section.settings.is_padding %}without-padding-button-ss{% endunless %}" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        {% endif %}
+      {% endif %}
+      {% if section.settings.add_cart_2 %}
+        <a id="quick-buy-btn-{{ product.variants[0].id }}" class="btn quick-buy-btn special-header-button-ss button {% unless section.settings.is_padding %}without-padding-button-ss{% endunless %}" data-product-id="{{ product.variants[0].id }}" data-variant-id="{{ product.variants[0].id }}">{{ section.settings.button_label_2 }}</a>
+      {% else %}
+        {% if section.settings.button_link_2 != blank %}
+          <a class="special-header-button-ss button btn {% unless section.settings.is_padding %}without-padding-button-ss{% endunless %}" href="{{ section.settings.button_link_2 }}">{{ section.settings.button_label_2 }}</a>
+        {% endif %}
+      {% endif %}
+      {% if section.settings.show_cart_button %}
+        <div class="relative my-auto align-middle">
+          <button
+            class="js-enabled whitespace-nowrap {% if show_icons %}{{ icon_link_classes }}{% else %}{{ link_classes }}{% endif %}"
+            type="button"
+            id="CartButton"
+            @click.prevent="$store.modals.open('cart')"
+            >
+            <span class="inline-block fill-current align-top">
+                {%- render 'icon-cart' -%}
+                <span class="visually-hidden">{{ 'layout.cart.title' | t }} </span>
+              </span>
+          </button>
+          <noscript>
+            <a
+              class="whitespace-nowrap {{ link_classes }}"
+              href="{{ routes.cart_url }}"
+            >
+              <span class="inline-block w-6 h-6 fill-current align-top">
+                {%- render 'icon-cart' -%}
+                <span class="visually-hidden">{{ 'layout.cart.title' | t }} </span>
+              </span>
+            </a>
+          </noscript>
+          {% if cart.item_count != 0 %}
+            <span class="header__item-count header__item-count-ss tracking-normal absolute -bottom-1.5 -right-1.5 w-5 h-5 bg-scheme-text text-scheme-background rounded-full text-[0.625rem] flex items-center justify-center">{{ cart.item_count }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Special Header",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Special Header"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_original_header",
+      "label": "Use original header",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_margin_desktop",
+      "label": "Top margin desktop",
+      "default": 59,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "range",
+      "id": "top_margin_mobile",
+      "label": "Top margin mobile",
+      "default": 59,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical_for_desktop",
+      "label": "Vertical Padding(Desktop)",
+      "default": 20,
+      "min": 1,
+      "max": 30
+    },
+    {
+      "type": "range",
+      "id": "image_height_for_mobile",
+      "label": "Image Height(Mobile)",
+      "default": 14,
+      "min": 1,
+      "max": 30
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left image"
+    },
+    {
+      "type": "url",
+      "id": "image_link",
+      "label": "Image Link"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Welcome GoodProtein"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_cart",
+      "label": "Add to Cart 1",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Link Text 1",
+      "default": "Get Started"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "URL 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_cart_2",
+      "label": "Add to Cart 2",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_label_2",
+      "label": "Link Text 2",
+      "default": "Add To Cart"
+    },
+    {
+      "type": "url",
+      "id": "button_link_2",
+      "label": "URL 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart_button",
+      "label": "Show Cart",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "is_padding",
+      "label": "Padding",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#9DDAF4"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#9DDAF4"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#9ddaf4"
+    }
+  ]
+}
+{% endschema %}

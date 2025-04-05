@@ -1,0 +1,86 @@
+reward-banner-section {
+  display: block;
+  h2 {
+    color: rgb(2, 50, 70);
+    font-family: Montserrat;
+    font-size: calc(clamp(34px, 3.7vw, 72px) * 84 / 100);
+  }
+  h3 {
+    font-family: Montserrat;
+    font-size: calc(clamp(24px, 3.7vw, 72px) * 84 / 100);
+  }
+  .rte {
+    color: rgb(102, 106, 108);
+    p {
+      font-family: Montserrat;
+      font-size: calc(clamp(16px, 2vw, 20px) * 80 / 100);
+    }
+  }
+}
+
+
+raise-check-gift-card-balance-saturn {
+  font-family: Montserrat;
+  h2 {
+    color: rgb(2, 50, 70);
+    font-family: Montserrat;
+    font-size: calc(clamp(34px, 3.7vw, 72px) * 84 / 100);
+  }
+  .gift-card-input-container-saturn {
+    margin-top: 14px;
+    h4 {
+      font-family: Montserrat;
+      font-size: calc(clamp(20px, 2.5vw, 36px) * 84 / 100);
+      padding: 3px 0;
+    }
+    h5 {
+      font-family: Montserrat;
+      font-size: calc(clamp(16px, 2vw, 24px) * 84 / 100);
+      padding: 3px 0;
+    }
+  }
+  .check-your-gift-card-explain {
+    color: rgb(51, 51, 51);
+    padding: 7px 0;
+  }
+  input {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: calc(clamp(15px, 1.5vw, 24px) * 84 / 100);
+    font-weight: 200;
+    display: block;
+    width: 100%;
+  }
+  .gift-card-error-text-saturn {
+    display: none;
+  }
+  .button-container-saturn {
+    padding: 15px 40px;
+    margin: 20px 0 0 0;
+    /* display: inline-block; */
+    background: linear-gradient(rgb(2, 50, 70) 0%, rgb(2, 55, 77) 100%);
+    background: linear-gradient(rgb(142, 204, 243) 0%, rgb(177, 220, 247) 100%);
+    color: white;
+  }
+  .button-2-container-saturn {
+    padding: 15px 40px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+    background: linear-gradient(rgb(2, 50, 70) 0%, rgb(2, 55, 77) 100%);
+    background: linear-gradient(rgb(142, 204, 243) 0%, rgb(177, 220, 247) 100%);
+    color: white;
+  }
+  .gift-card-result-container-saturn {
+    display: none;
+  }
+  .gift-card-error-text-saturn {
+    color: red;
+  }
+  .gift-card-result-container-saturn {
+    h4 {
+      font-family: Montserrat;
+      font-size: calc(clamp(16px, 2vw, 24px) * 84 / 100);
+      padding: 3px 0;
+    }
+  }
+}

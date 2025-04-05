@@ -1,0 +1,366 @@
+{{'custom-product-section-3.scss.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{section.id}} [data-section-type="pdp-section-3"] {
+    --color-pdp-section-3: {{section.settings.color_bg}};
+    --color-pdp-section-3-text: {{section.settings.color_text}};
+  }
+{% endstyle %}
+
+<div data-section-type="pdp-section-3" class="product-section product-section-3 product-section-padding">
+  <div class="page-width">
+    <div class="reviews_wrap">
+      {% if section.settings.subtitle %}
+      <h5>{{ section.settings.subtitle }}</h5>
+      {% endif  %}
+      <h3>{{ section.settings.heading }}</h3>
+      <h4>{{ section.settings.subheading }}</h4>
+      <div class="product-section-3-carousel {{section.settings.display_mobile_icons}}">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'image' %}
+            {% cycle '<div dir="rtl" class="inner-carousel">', '', '', '', '', '', '<div class="inner-carousel">', '', '', '', '', '' %}
+            <div class="product-section-box img_wrap3">
+              <figure>
+                 <img src="{{ block.settings.image | image_url: width: 400  }}" alt="" width="" height="" />
+              </figure>
+              <h5>{{ block.settings.heading }}</h5>
+            </div>
+            {% cycle '', '', '', '', '', '</div>', '', '', '', '', '', '' %}
+          {% endcase %}
+        {% endfor %}
+        </div>
+      </div>
+      <div class="bottom text-center">
+        {% if section.settings.button_link != blank %}
+          <a href="{{section.settings.button_link}}" class="btn push-btn medium-up--hide" >{{section.settings.button_title}}</a>
+        {% endif %}
+      </div>
+    </div>    
+  </div>
+</div>
+
+{%- liquid
+  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    function slick_slider(){
+      $('#shopify-section-{{ section.id }} .product-section-3-carousel').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows:true,
+        prevArrow:'<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow:'<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              centerPadding: '60px',
+              slidesToShow: 3,
+              autoplaySpeed: 0,
+              speed: 5000,
+              cssEase: 'linear',
+              slide: '.product-section-box:not(.small-hide)'
+            }
+          }
+        ]
+      });
+    }
+
+    function mobile_slick_slider(){
+      $('#shopify-section-{{ section.id }} .product-section-3-carousel .inner-carousel').each(function (index) {
+        
+        var direction = false
+        if (index % 2 == 0) {
+          direction = true
+        }
+        console.log(direction)
+        $(this).slick({
+          infinite: true,
+          autoplay: true,
+          arrows:false,
+          slidesToShow: 3,
+          rtl: direction,
+          autoplaySpeed: 0,
+          speed: 5000,
+          cssEase: 'linear',
+          prevArrow:'<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+          nextArrow:'<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+        });
+      })
+      
+    }
+    var viewportWidth = $(window).width();
+
+    if (viewportWidth < 769) {
+        mobile_slick_slider();
+    } else {
+        slick_slider();
+    }
+  });
+
+  
+</script>
+{% schema %}
+  {
+    "name": "Product superfoods",
+    "settings": [
+      {
+        "type":"number",
+        "id":"itme_show",
+        "label":"Show Per Item",
+        "default":6
+      },
+      {
+        "type":"textarea",
+        "id":"subtitle",
+        "label":"Sub Title"
+      },
+      {
+        "type":"textarea",
+        "id":"heading",
+        "label":"Heading"
+      },
+      {
+        "type":"textarea",
+        "id":"subheading",
+        "label":"Sub Heading"
+      },
+      {
+        "type": "select",
+        "id": "display_mobile_icons",
+        "label": "Mobile icon style",
+        "options": [
+          {
+            "value": "carousel",
+            "label": "Carousel"
+          },
+          {
+            "value": "grid",
+            "label": "Grid"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "button"
+      },
+      {
+        "type": "text",
+        "id": "button_title",
+        "label": "Button title"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "header",
+        "content": "color schema"
+      },
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "background color",
+        "default": "#ffedb2"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text color",
+        "default": "#000"
+      }
+    ],
+    "blocks":[
+      {
+        "type":"image",
+        "name":"Image",
+        "settings":[
+          {
+            "type":"image_picker",
+            "id":"image",
+            "label":"Image"
+          },
+          {
+            "type":"textarea",
+            "id":"heading",
+            "label":"Heading"
+          }
+        ]
+      },
+      {
+        "name": "Shape divider",
+        "type": "shape_divider",
+        "limit": 2,
+        "settings": [
+          {
+            "type": "radio",
+            "label": "Target section",
+            "id": "target_section",
+            "default": "above",
+            "options": [
+              {
+                "value": "above",
+                "label": "Section above"
+              },
+              {
+                "value": "below",
+                "label": "Section below"
+              }
+            ],
+            "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+          },
+          {
+            "type": "select",
+            "label": "Target section color scheme",
+            "id": "target_section_color_scheme",
+            "default": "secondary",
+            "options": [
+              {
+                "value": "primary",
+                "label": "Primary"
+              },
+              {
+                "value": "secondary",
+                "label": "Secondary"
+              },
+              {
+                "value": "tertiary",
+                "label": "Tertiary"
+              },
+              {
+                "value": "quaternary",
+                "label": "Quaternary"
+              }
+            ],
+            "info": "Select the color scheme of the target section"
+          },
+          {
+            "type": "select",
+            "label": "Style",
+            "id": "style",
+            "default": "large-waves_1200x84",
+            "options": [
+              {
+                "value": "round",
+                "label": "Round"
+              },
+              {
+                "value": "large-waves_1200x84",
+                "label": "Large waves",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "medium-waves_1200x43",
+                "label": "Medium waves",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "small-waves_1200x20",
+                "label": "Small waves",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "large-zig-zag_1200x65",
+                "label": "Large zig zag",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "medium-zig-zag_1200x37",
+                "label": "Medium zig zag",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "small-zig-zag_1200x21",
+                "label": "Small zig zag",
+                "group": "Symmetrical"
+              },
+              {
+                "value": "waves-1-asymmetrical_1440x261",
+                "label": "Waves 1",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "waves-2-asymmetrical_1440x330",
+                "label": "Waves 2",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "tilt-1-asymmetrical_1440x101",
+                "label": "Tilt 1",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "tilt-2-asymmetrical_1440x293",
+                "label": "Tilt 2",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "mountains-1-asymmetrical_1440x293",
+                "label": "Mountains 1",
+                "group": "Asymmetrical"
+              },
+              {
+                "value": "mountains-2-asymmetrical_1440x325",
+                "label": "Mountains 2",
+                "group": "Asymmetrical"
+              }
+            ]
+          },
+          {
+            "type": "checkbox",
+            "id": "flip_horizontal",
+            "label": "Flip horizontal"
+          },
+          {
+            "type": "header",
+            "content": "Animation"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_animation",
+            "label": "Enable animation",
+            "info": "Asymmetrical shape dividers will sway when animated."
+          },
+          {
+            "type": "radio",
+            "id": "animation_direction",
+            "label": "Direction",
+            "options": [
+              {
+                "value": "",
+                "label": "Right to left"
+              },
+              {
+                "value": "reverse",
+                "label": "Left to right"
+              }
+            ],
+            "default": ""
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name":"Product Section 3",
+        "category":"product"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

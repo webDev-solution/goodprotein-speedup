@@ -1,0 +1,29 @@
+[data-section-type="pdp-section-5"] {
+  background: var(--color-pdp-section-5);
+  .inner-product-section {
+    .right-product-section-5 {
+      img {
+        border-radius: 30px;
+      }
+      div {
+        margin-top: 50px;
+        max-width: 610px;
+        line-height: 1.4;
+      }
+    }
+  }
+  .product-section-5-carousel {
+    justify-content: center;
+    margin: 40px auto!important;
+    .product-section-box {
+      margin: 20px 10px;
+      figure {
+        width: 80px;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        background-color: var(--color-pdp-section-5-icon);
+      }
+    }
+  }
+}

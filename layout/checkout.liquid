@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+          {% render 'datalayer-head' %}
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0"
+    >
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    <style>
+      .checkout-trust{
+        display:none;
+      }
+      .checkout-trust__title {
+          font-weight: bold;
+          color: #30A2E2;
+          text-align: center;
+        }
+
+        .checkout-trust__wrapper {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          margin: 20px 0;
+        }
+
+        .checkout-trust__item {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+        }
+
+        .checkout-trust__content {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+        }
+
+        .checkout-trust__item img {
+          max-width: 30px;
+          object-fit: contain;
+          width: 100%;
+        }
+
+        .checkout-trust__content span {
+          font-weight: bold;
+          color: black;
+          font-size: 13px;
+        }
+
+        .checkout-trust__content p {
+          font-size: 12px;
+        }
+
+        #trust-mobile {
+          display: none;
+        }
+
+      @media screen and (max-width: 999px) {
+        #trust-desktop {
+          display: none !important;
+        }
+        #trust-mobile {
+          display: block !important;
+        }
+        .scroll-background.mobile {
+          display: block !important;
+        }
+        .scroll-background.desktop {
+          /* display: none !important; */
+        }
+      }
+
+      /* scroll stuff  from 1.0*/
+
+      @keyframes moveSlide {
+        0% {
+          background-position: 0;
+        }
+        100% {
+          background-position: -1200px;
+        }
+      }
+      .scroll-background {
+        position: relative;
+        height: 150px;
+        width: 100vw;
+        display: none;
+      }
+
+      .scroll-background.mobile {
+        display: none;
+      }
+
+      .scroll-background .scroll-background-title {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 150px;
+        color: white;
+        z-index: 10;
+        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+      }
+
+      @media (max-width: 999px) {
+        .scroll-background .scroll-background-title {
+          font-size: 1.6rem;
+        }
+      }
+
+      .scroll-background .scroll-background__inner {
+        width: 100%;
+        height: 150px;
+        top: 0;
+        left: 0;
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+        animation: moveSlide 50s linear infinite;
+        background-image: url(//cdn.shopify.com/s/files/1/0012/5573/5405/files/Banner-Checkout-10-15_2_copy.jpg?v=1687888538);
+      }
+    </style>
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+  
+  {% include 'friendbuy' %}
+</head>
+  <body>
+    
+        {% render 'datalayer-checkout' %}
+        
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+    
+    <div class="scroll-background desktop">
+<!--       <h1 class="scroll-background-title">THE OBVIOUS CHOICE</h1> -->
+      <div class="scroll-background__inner"></div>
+    </div>
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+
+            <div class="new_timer_placement"><div class="countdownholder"></div></div>
+
+            {{ breadcrumb }}
+            <style>
+                            #obvi-breadcrumb-progress-bar {
+                                width: 75%;
+                                padding-top: 1.5rem;
+                                padding-bottom: .5rem;
+                                margin: 0 auto;
+                                display: none;
+                            }
+
+                            .progress-bar-container {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                position: relative;
+                                height: 15px;
+                            }
+
+                            .progress-bar-empty {
+                                width: 98%;
+                                height: 100%;
+                                position: absolute;
+                                left: 2px;
+                                background-color: white;
+                                border-radius: 10px;
+                                border: 2px solid #fecb29;
+                            }
+
+                            .progress-bar-fill {
+                                width: 0%;
+                                height: 100%;
+                                position: absolute;
+                                left: 2px;
+                                background-color:#fecb29;
+                                border: 2px solid #fecb29;
+                                border-radius: 25px;
+                                transition: .5s;
+                            }
+
+                            .progress-bar-container .ball {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 40px;
+                                width: 40px;
+                                font-weight: bold;
+                                color: #000;
+                                background-color: white;
+                                border: 2px solid #fecb29;
+                                border-radius: 50%;
+                                z-index: 1;
+                                font-size: 20px;
+                            }
+
+                            .progress-bar-container .filled {
+                                background-color: #fecb29 !important;
+                                color: black !important;
+                            }
+
+              /*               .current {
+                                box-shadow: 0 0 5px rgb(246 72 153 / 70%);
+                                -moz-box-shadow: 0 0 5px rgb(246 72 153 / 70%);
+                                -webkit-box-shadow: 0 0 5px rgb(246 72 153 / 70%);
+                                -o-box-shadow: 0 0 5px rgb(246 72 153 / 70%);
+                            } */
+
+                            @media screen and (max-width: 999px) {
+                                #obvi-breadcrumb-progress-bar {
+                                    padding-top: .5rem;
+                                    padding-bottom: 1.5rem;
+                                }
+                            }
+                            .order-summary__sections {
+                              height: 100%!important;
+                          }
+            </style>
+            <div id="obvi-breadcrumb-progress-bar">
+              <div class="progress-bar-container">
+                <div class="progress-bar-empty"></div>
+                <div class="progress-bar-fill"></div>
+                <div class="ball current" id="b1">1</div>
+                <div class="ball" id="b2">2</div>
+                <div class="ball" id="b3">3</div>
+              </div>
+            </div>
+            <script>
+
+              const balls = document.querySelectorAll('ball')
+              const progressBar = document.getElementById('obvi-breadcrumb-progress-bar')
+              const fillBar = document.querySelector('.progress-bar-fill')
+              const ballOne = document.getElementById('b1')
+              const ballTwo = document.getElementById('b2')
+              const ballThree = document.getElementById('b3')
+              const step = Shopify.Checkout.step
+
+              window.addEventListener('load', () => {
+                  console.log(step)
+                  if(step === "contact_information") {
+                      ballOne.classList.add('current')
+                  } else if(step === "shipping_method") {
+
+                      ballOne.classList.add('filled')
+                      ballTwo.classList.add('current')
+
+                      setTimeout(() => {
+                          fillBar.style.width = "50%"
+                      }, 1000)
+
+                  } else if(step === "payment_method") {
+
+                      ballOne.classList.add('filled')
+                      ballTwo.classList.add('filled')
+                      ballThree.classList.add('current')
+
+                      setTimeout(() => {
+                          fillBar.style.width = "98%"
+                      }, 1000)
+
+                  } else {
+                      progressBar.style.display = "none !important;"
+                  }
+              })
+            </script>
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          
+          <div class="checkout-trust" id="trust-mobile">
+            <h4 class="checkout-trust__title">WHY OVER 100K+ CANADIANS LOVE GOOD PROTEIN</h4>
+            <div class="checkout-trust__wrapper">
+              <div class="checkout-trust__item">
+                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/guarantee2.svg?v=1687845513">
+                <div class="checkout-trust__content">
+                  <span>60-DAY SATISFACTION GUARANTEE</span>
+                  <p>
+                    Not loving something? Send it back within 60 days and get your money back
+                  </p>
+                </div>
+              </div>
+
+              <div class="checkout-trust__item">
+                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/canadian-flag2.svg?v=1687845513">
+                <div class="checkout-trust__content">
+                  <span>PROUDLY CANADIAN</span>
+                  <p>All our products are 100% made in Canada and shipped from here</p>
+                </div>
+              </div>
+
+              <div class="checkout-trust__item">
+                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/secured-lock2.svg?v=1687845513">
+                <div class="checkout-trust__content">
+                  <span>SECURE PAYMENTS</span>
+                  <p>
+                    Every transaction guarantees the security of your personal information during the payment process
+                  </p>
+                </div>
+              </div>
+
+              <div class="checkout-trust__item">
+                <img loading="lazy" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VA_logomark_1.psd.png?v=1687846050">
+                <div class="checkout-trust__content">
+                  <span>VITAMIN ANGELS SUPPORTER</span>
+                  <p>
+                    Every order improves nutrition and health outcomes for pregnant women, infants, and young children worldwide
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>          
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+            <div
+              id="influence-slider-init"
+              data-shop="goodproteinca.myshopify.com"
+              data-base-url="https://dashboard.influence.io"
+            ></div>
+
+            <div class="checkout-trust" id="trust-desktop">
+              <h4 class="checkout-trust__title">WHY OVER 100K+ CANADIANS LOVE GOOD PROTEIN</h4>
+              <div class="checkout-trust__wrapper">
+                <div class="checkout-trust__item">
+                  <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/guarantee2.svg?v=1687845513">
+                  <div class="checkout-trust__content">
+                    <span>60-DAY SATISFACTION GUARANTEE</span>
+                    <p>
+                      Not loving something? Send it back within 60 days and get your money back
+                    </p>
+                  </div>
+                </div>
+
+                <div class="checkout-trust__item">
+                  <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/canadian-flag2.svg?v=1687845513">
+                  <div class="checkout-trust__content">
+                    <span>PROUDLY CANADIAN</span>
+                    <p>All our products are 100% made in Canada and shipped from here</p>
+                  </div>
+                </div>
+
+                <div class="checkout-trust__item">
+                  <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/secured-lock2.svg?v=1687845513">
+                  <div class="checkout-trust__content">
+                    <span>SECURE PAYMENTS</span>
+                    <p>
+                      Every transaction guarantees the security of your personal information during the payment process
+                    </p>
+                  </div>
+                </div>
+
+                <div class="checkout-trust__item">
+                  <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VA_logomark_1.psd.png?v=1687846050">
+                  <div class="checkout-trust__content">
+                    <span>VITAMIN ANGELS SUPPORTER</span>
+                    <p>
+                      Every order improves nutrition and health outcomes for pregnant women, infants, and young children worldwide
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+    <!-- countdown timer script -->
+    <script>
+      function createCookie(a,b,c){if(c){var d=new Date;d.setTime(d.getTime()+c*60*1e3);var e="; expires="+d.toUTCString()}else var e="";document.cookie=a+"="+b+e+"; path=/"}function readCookie(a){for(var b=a+"=",c=document.cookie.split(";"),d=0;d<c.length;d++){for(var e=c[d];" "==e.charAt(0);)e=e.substring(1,e.length);if(0==e.indexOf(b))return e.substring(b.length,e.length)}return null}function eraseCookie(a){createCookie(a,"",-1)}function crtmedir(a){var b=document.createDocumentFragment(),c=document.createElement("div");for(c.innerHTML=a;c.firstChild;)b.appendChild(c.firstChild);return b}function startTimer(start, duration, display){var diff,minutes,seconds;function timer(){diff=duration-(((Date.now()-start)/1000)|0);minutes=(diff / 60)|0;seconds = (diff % 60)|0;minutes = minutes < 10 ? "0" + minutes : minutes;seconds = seconds < 10 ? "0" + seconds : seconds;display.textContent = minutes + ":" + seconds; if (diff <= 0){clearInterval(inti);document.getElementById("countdownhere").innerHTML = "Order reservation ended.";start = Date.now() + 1000;}};timer();var inti = setInterval(timer, 1000);}var pdm = crtmedir('<div class="countdownholder"><div id="countdownhere" style="display:block;text-align:center;background:#ffe8a2;padding:10px 20px;border:1px solid #ffe8a2;font-size:14px;color:#000;font-weight:normal;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:20px 0px">We are reserving your cart for <span id="time"></span> minutes!</div></div>');if(window.location.href.indexOf('checkout') > -1 && document.location.href.indexOf('thank_you') === -1 && document.location.href.indexOf('orders') === -1){window.onload = function () { document.getElementsByClassName('new_timer_placement')[0].appendChild(pdm);var dolzina=10;var ten=60*dolzina;var starttime=Date.now();var xcnt=readCookie('prtcntdwn');if(xcnt){if(starttime<xcnt){ten=(xcnt-starttime)/1000;}else{eraseCookie('ptcntdwn');createCookie('prtcntdwn',Date.now()+(ten*1000),ten+1);}}else{createCookie('prtcntdwn',Date.now()+(ten*1000),ten+1);}display=document.querySelector('#time');startTimer(starttime, ten, display);};}
+    </script>
+  </body>
+
+<script>
+  var observer = new MutationObserver(function(mutations) {
+    if (document.querySelector('.BGGdy')) {
+        console.log("Hello checkout");
+         observer.disconnect();                 
+    }
+  });
+  
+  // Start observing
+  observer.observe(document.body, { //document.body is node target to observe
+      childList: true, //This is a must have for the observer with subtree
+      subtree: true //Set to true if changes must also be observed in descendants.
+  });  
+</script>  
+</html>

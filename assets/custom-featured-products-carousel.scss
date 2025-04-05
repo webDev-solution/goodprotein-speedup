@@ -1,0 +1,31 @@
+[data-section-type="featured-products-carousel"] {
+  .section-content {
+    .featured-carousel {
+      .slick-arrow {
+        font-size: 21px;
+        color: black;
+        z-index: 1;
+        &.slick-prev {
+          left: 0;
+        }
+        &.slick-next {
+          right: 0;
+        }
+      }
+      .carousel-item {
+        margin-bottom: 35px;
+        &.slick-center {
+          .featured-item {
+            scale: 1.2;
+            .featured-product-contnet {
+              a {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}

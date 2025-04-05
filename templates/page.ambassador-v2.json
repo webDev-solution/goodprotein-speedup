@@ -1,0 +1,253 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "ss_bonbon_hero_bFkiH3": {
+      "type": "ss-bonbon-hero",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ambassador-program-goodprotein.png",
+        "heading": "Become a Good Protein Ambassador",
+        "subheading": "<p>Whether your content enters around sharing recipes, workout tips, lifestyle inspo or your day-to-day, we want to partner with you!<\/p>",
+        "url_text": "Apply now!",
+        "url": "https:\/\/goodprotein.trysaral.com\/",
+        "svg-bg-color": "#ffe89f",
+        "text-color": "#0d004c",
+        "button-bg": "#0d004c",
+        "button-text-color": "#ffffff",
+        "heading-size": 48,
+        "subheading-size": 20,
+        "image_padding": 10,
+        "background-color": "#fff5d6",
+        "padding_top": 48,
+        "padding_bottom": 100,
+        "section-width": 80
+      }
+    },
+    "image_with_text_overlay_zCaDDB": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "title_MgzGAi": {
+          "type": "title",
+          "settings": {
+            "title": "Become a Good Protein Ambassador",
+            "heading_size": "heading-base"
+          }
+        },
+        "text_MPUn3M": {
+          "type": "text",
+          "settings": {
+            "richtext": "<p>Whether your content enters around sharing recipes, workout tips, lifestyle inspo or your day-to-day, we want to partner with you!<\/p>"
+          }
+        },
+        "button_4aG6rK": {
+          "type": "button",
+          "settings": {
+            "cta_url_1": "https:\/\/goodprotein.trysaral.com\/",
+            "cta_text_1": "Apply Now!",
+            "cta_url_2": "",
+            "cta_text_2": ""
+          }
+        },
+        "shape_divider_BM844c": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#e9f6fd",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_MgzGAi",
+        "text_MPUn3M",
+        "button_4aG6rK",
+        "shape_divider_BM844c"
+      ],
+      "custom_css": [
+        "p {font-size: 18px;}",
+        ".max-w-lg {max-width: 600px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ambassador-program-goodprotein_9e1409ff-db97-4525-ba82-b1e5581eecf3.png",
+        "image_mobile": "shopify:\/\/shop_images\/ambassador-program-goodprotein-mobile_8331fee6-9cc9-4a3e-bfed-5a4fd5b16d32.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": false,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-start-center",
+        "text_align": "text-center",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "ss_feature_9_tjLHpE": {
+      "type": "ss-feature-9",
+      "blocks": {
+        "feature_zcj3P8": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/gift_5fc4bc64-4b1d-401f-a9bf-41e9f7f1356e.svg",
+            "title": "<h3>Product gifting opportunities<\/h3>",
+            "text": "<p>Receive surprise Good Protein packages<\/p>"
+          }
+        },
+        "feature_pEXk77": {
+          "type": "feature",
+          "settings": {
+            "title": "<h4>Commission<\/h4>",
+            "text": "<p>Earn commission on your audience’s orders<\/p>"
+          }
+        },
+        "feature_yyYVfA": {
+          "type": "feature",
+          "settings": {
+            "title": "<h3>A discount for your audience<\/h3>",
+            "text": "<p>An exclusive discount code for your audience to use<\/p>"
+          }
+        },
+        "feature_jncn87": {
+          "type": "feature",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/flavour.svg",
+            "title": "<h3>Early access to new flavours<\/h3>",
+            "text": "<p>Receive sneak peeks<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "feature_zcj3P8",
+        "feature_pEXk77",
+        "feature_yyYVfA",
+        "feature_jncn87"
+      ],
+      "settings": {
+        "grid_gap": 48,
+        "grid_gap_mobile": 36,
+        "heading": "<h2>What you get 🤩<\/h2>",
+        "heading_custom": true,
+        "heading_font": "lato_n7",
+        "heading_size": 54,
+        "heading_size_mobile": 32,
+        "heading_height": 110,
+        "heading_align": "left",
+        "heading_align_mobile": "center",
+        "items_row": 2,
+        "items_row_mobile": 1,
+        "items_gap": 50,
+        "items_gap_mobile": 20,
+        "items_mt": 48,
+        "icon_size": 40,
+        "icon_size_mobile": 32,
+        "icon_padding_vertical": 16,
+        "icon_padding_vertical_mobile": 12,
+        "icon_padding_horizontal": 16,
+        "icon_padding_horizontal_mobile": 12,
+        "icon_radius": 50,
+        "icon_border_thickness": 0,
+        "icon_align": "left",
+        "icon_align_mobile": "left",
+        "icon_row": false,
+        "icon_row_mobile": true,
+        "hide_icon": false,
+        "title_custom": true,
+        "title_font": "lato_n4",
+        "title_size": 20,
+        "title_size_mobile": 18,
+        "title_height": 110,
+        "title_align": "left",
+        "title_align_mobile": "left",
+        "title_mt": 16,
+        "text_custom": true,
+        "text_font": "lato_n4",
+        "text_size": 18,
+        "text_size_mobile": 16,
+        "text_height": 150,
+        "text_align": "left",
+        "text_align_mobile": "left",
+        "text_mt": 16,
+        "image": "shopify:\/\/shop_images\/0652c9ef-516b-45c6-931b-947f47a24139.jpg",
+        "image_width": 40,
+        "image_width_mobile": 100,
+        "image_position": "row",
+        "image_row_position": "row-reverse",
+        "image_column_position": "column",
+        "image_column_position_mobile": "column",
+        "image_ratio": "portrait",
+        "image_ratio_mobile": "portrait",
+        "image_border_thickness": 0,
+        "image_radius": 6,
+        "hide_image": false,
+        "icon_bg_color": "#8eccf3",
+        "icon_border_color": "#fecb28",
+        "title_color": "#0a0a0a",
+        "text_color": "#0a0a0a",
+        "heading_color": "#0a0a0a",
+        "image_border_color": "rgba(0,0,0,0)",
+        "background_color": "#e9f6fd",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 72,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "rich_text_BGWFbp": {
+      "type": "rich-text",
+      "blocks": {
+        "shape_divider_J3paQ3": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_J3paQ3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "title": "Sounds like you?",
+        "heading_size": "heading-base",
+        "site_review": false,
+        "rich_text": "<h4>Apply by filling out the form!<\/h4>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-1\/2",
+        "button_link": "https:\/\/goodprotein.trysaral.com\/",
+        "button_label": "Apply now!",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ss_bonbon_hero_bFkiH3",
+    "image_with_text_overlay_zCaDDB",
+    "ss_feature_9_tjLHpE",
+    "rich_text_BGWFbp"
+  ]
+}

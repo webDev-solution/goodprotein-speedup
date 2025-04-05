@@ -1,0 +1,46 @@
+<style>
+  .review-five-star-container-ss {
+    display: flex;
+    {% comment %} justify-content: space-between; {% endcomment %}
+  }
+  .review-five-star-container-ss .stars-group {
+    display: flex;
+    margin-right: 30px;
+  }
+  .review-five-star-container-ss .star {
+    width: 45px;
+  }
+  .review-five-star-container-ss .review-description {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+  }
+</style>
+<div class="review-five-star-container-ss">
+  <div class="stars-group">
+    <div class="star">
+      {% render 'icon-fat-star', color: "#F7C255" %}
+    </div>
+    <div class="star">
+      {% render 'icon-fat-star', color: "#F7C255" %}
+    </div>
+    <div class="star">
+      {% render 'icon-fat-star', color: "#F7C255" %}
+    </div>
+    <div class="star">
+      {% render 'icon-fat-star', color: "#F7C255" %}
+    </div>
+    <div class="star">
+      {% render 'icon-fat-star', color: "#F7C255" %}
+    </div>
+  </div>
+  <div class="review-description">
+    <span class="">
+      {% if text %}
+        {{ text }}
+      {% else %}
+        20,000+ Verified 5-Star Reviews
+      {% endif %}
+    </span>
+  </div>
+</div>

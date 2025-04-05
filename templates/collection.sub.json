@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "sub-collection-product-grid",
+      "custom_css": [
+        "section {background-color: #fffaea;}"
+      ],
+      "settings": {
+        "display_on_card": true,
+        "enable_quick_buy": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "tab_menu": "collection-menu-shapes",
+        "tab_text_color": "#000000",
+        "tab_back_color": "#ffe89e",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "expand_filters": false,
+        "show_filter_count": false,
+        "enable_color_swatch_filters": false,
+        "collection_head_text_color": "#000000",
+        "collection_head_back_color": "#fff4d0",
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "product-grid"
+  ]
+}

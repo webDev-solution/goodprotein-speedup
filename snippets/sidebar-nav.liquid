@@ -1,0 +1,117 @@
+{%- assign base_font_class = base_font_class | replace: 'font-heading', 'font-main' %}
+<template data-should-teleport="#menu-drawer-slot">
+  <div
+    :data-modal-label="$store.modals.menuDrawer.contents === 'nav' ? '{{ section.settings.main_linklist.title }}' : false"
+    x-show="$store.modals.menuDrawer.contents === 'nav'"
+    class="sidebar-nav pb-4 {% if settings.enable_sidebar_nav_animation %} sidebar-nav--enable-transitions {% endif %}"
+  >
+
+    {% if section.settings.carousel_enable_1 == true or section.settings.carousel_enable_2 == true %}
+    <div class="drawer_carousel_block">
+      {% for i in (1..2) %}
+        {% capture carousel_enable %}carousel_enable_{{ i }}{% endcapture %}
+        {% capture carousel_img %}carousel_img_{{ i }}{% endcapture %}
+        {% capture carousel_heading %}carousel_heading_{{ i }}{% endcapture %}
+        {% capture carousel_btn_text %}carousel_btn_text_{{ i }}{% endcapture %}
+        {% capture carousel_btn_link %}carousel_btn_link_{{ i }}{% endcapture %}
+        {% capture carousel_back  %}carousel_back_{{ i }}{% endcapture %}
+        {% capture carousel_text %}carousel_text_{{ i }}{% endcapture %}
+        {% capture carousel_back_border  %}carousel_back_border_{{ i }}{% endcapture %}
+
+        {% if section.settings[carousel_enable] == true %}
+          <!-- <div class="carousel_inner_block" style="background: {{ section.settings[carousel_back] }};border-color: {{ section.settings[carousel_back_border] }};">   -->
+          <div class="carousel_inner_block" style="background-image: url('{{ section.settings[carousel_img] | img_url: 'medium' }}');background-repeat: no-repeat;border-color: {{ section.settings[carousel_back_border] }};">
+            <div class="caro_left">
+              {% comment %}
+              <div class="image">
+              {% if section.settings[carousel_img] != blank %}
+                    <img loading="lazy" src="{{ section.settings[carousel_img] | img_url: 'medium' }}">
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag }}
+                {% endif %}
+              </div>
+              {% endcomment %}
+            </div>
+            <div class="right_carou">
+            {% if section.settings[carousel_heading] != blank %}
+              <p style="color: {{ section.settings[carousel_text] }};">{{ section.settings[carousel_heading] }}</p>
+            {% endif %}
+            {% if section.settings[carousel_btn_text] != blank %}
+              <div class="button_wrapper">
+                <a class="btn" href="{{ section.settings[carousel_btn_link] }}">{{ section.settings[carousel_btn_text] }}</a>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif  %}
+      
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    <ul class="pb-5 top">
+      {% for block in section.blocks %}
+        {% if block.type == 'mobile_menu' %}
+        <li class="text-base lg:text-xl px-section" style="--first-delay-tap: {% increment first_delay_tap %};">
+            <a class="block py-4" href="{{ block.settings.link }}">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: '100x' | image_tag: loading: 'lazy' }}
+              {% endif %}
+              {% if block.settings.title != blank %}
+                {{ block.settings.title }}
+              {% endif %}  
+              {% if block.settings.badge_label != blank %}
+              <span class="badge" >{{block.settings.badge_label}}</span>
+              {% endif %}
+              
+            </a>
+        </li>
+        {% endif %}
+      {% endfor %}           
+    </ul>
+    <div class="bottom">
+      <div class="language-selector flex items-center justify-between">
+        {% if shop.customer_accounts_enabled %}
+        {% if customer %}
+          <div>
+            <a class="btn" href="{{ routes.account_url }}">{{ 'layout.customer.account' | t }}</a>
+          </div>
+        {% else %}
+          <div>
+            <a class="btn" href="https://goodprotein.ca/a/loop_subscriptions/customer" id="customer_login_link">Log in</a>
+          </div>
+        {% endif %}
+        {% endif %}
+        <div class="drawer_country_selection">
+          <div class="dropdown">
+            <input type="checkbox" id="my-dropdown" value="" name="my-checkbox">
+            <label for="my-dropdown" data-toggle="dropdown">
+              {% if request.locale.iso_code == 'fr' %}
+              French
+              {% else %}
+              English
+              {% endif %}
+            </label>
+            <ul>
+              <li><a href="{{ request.path | remove: '/fr' | prepend: '/fr' }}">French</a></li>
+              <li><a href="{{request.origin | append: request.path | remove: '/fr' }}">English</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+       
+      <ul class="my-5">
+        {% for link in section.settings.mobile_menu.links %}
+          <li>
+              <a class="block py-1.5" href="{{ link.url }}">
+                {{ link.title }}
+              </a>
+          </li>
+        {% endfor %}           
+      </ul>
+      {%- if section.settings.sidebar_show_social_icons -%}
+      {%- render 'social-icons', list_class: 'justify-start drawer_social_icon' -%}
+      {%- endif -%}
+    </div>
+  </div>
+</template>

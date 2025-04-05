@@ -1,0 +1,116 @@
+{{'custom-product-section-6.scss.css' | asset_url | stylesheet_tag }}
+
+{% if product.metafields.custom.nutrition_section != blank %}
+{% style %}
+#shopify-section-{{section.id}} [data-section-type="pdp-section-6"] {
+  --color-pdp-nutrition-title: {{section.settings.color_title}};
+  --color-pdp-nutrition-text: {{section.settings.color_text}};
+}
+{% endstyle %}
+<div data-section-type="pdp-section-6" class="product-section product-section-6 product-section-padding pdp-color-{{product.metafields.custom.background_color | handleize }}">
+  <div class="page-width">
+    <h3 style="max-width:{{ section.settings.max_width }}px">{{ product.metafields.custom.nutrition_section.value.title }}</h3>
+    <div class="inner-product-section inner-product-section-6">
+      <div class="product-section-6-col-1 one-third-product">
+        {% for i in (1..3) %}
+          {% assign title_handle = 'item_' | append: i | append: '_title' %}
+          {% assign text_handle = 'item_' | append: i | append: '_text' %}
+          <div class="product-section-box product-section-6-box">
+            <h4>{{ product.metafields.custom.nutrition_section.value[title_handle] }}</h4>
+            <p>{{ product.metafields.custom.nutrition_section.value[text_handle] }}</p>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="product-section-6-col-2 one-third-product">
+        {% if product.metafields.custom.nutrition_section.value.image != blank %}
+          <figure>
+            {{ product.metafields.custom.nutrition_section.value.image | image_url: width: 600 | image_tag: lazy: 'loading' }}
+          </figure>
+        {% endif %}
+      </div>
+      <div class="product-section-6-col-3 one-third-product">
+        {% for i in (4..6) %}
+          {% assign title_handle = 'item_' | append: i | append: '_title' %}
+          {% assign text_handle = 'item_' | append: i | append: '_text' %}
+          <div class="product-section-box product-section-6-box">
+            <h4>{{ product.metafields.custom.nutrition_section.value[title_handle] }}</h4>
+            <p>{{ product.metafields.custom.nutrition_section.value[text_handle] }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+{% schema %}
+{
+  "name": "Product Section 6",
+  "settings": [
+    {
+      "type":"textarea",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"text",
+      "id":"max_width",
+      "label":"Max width",
+      "default": "350"
+    },
+    {
+      "type":"image_picker",
+      "id":"image",
+      "label":"Image"
+    },
+    {
+      "type": "header",
+      "content": "color schema"
+    },
+    {
+      "type": "color",
+      "id": "color_title",
+      "label": "Title color",
+      "default": "#684500"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text color",
+      "default": "#684500"
+    }
+  ],
+  "max_blocks":6,
+  "blocks":[
+    {
+      "type":"content",
+      "name":"Content",
+      "settings":[
+        {
+          "type":"inline_richtext",
+          "id":"heading",
+          "label":"Heading"
+        },
+        {
+          "type":"inline_richtext",
+          "id":"content",
+          "label":"Content"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Product Section 6",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

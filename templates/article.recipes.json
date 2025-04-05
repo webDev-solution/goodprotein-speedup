@@ -1,0 +1,340 @@
+{
+  "sections": {
+    "1bd2bd17-752e-40c2-b53d-71ba5c50d7ca": {
+      "type": "raise-image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Replo-test-Shake-LandingPage02.png",
+        "image_mobile": "shopify:\/\/shop_images\/Replo-test-Shake-LandingPage.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "tertiary",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "featured-image": {
+      "type": "main-article-featured-image",
+      "custom_css": [
+        "@media screen and (min-width: 768px) and (max-width: 900px) {.pt-600 {padding-top: 400px; }}"
+      ],
+      "settings": {
+        "style": "full",
+        "image_type": "metafield_image",
+        "height": "natural",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "main": {
+      "type": "main-article",
+      "custom_css": [
+        ".gap-10 {gap: 4.5rem;}",
+        ".heading-template {font-size: 32px;}"
+      ],
+      "settings": {
+        "display_on_card": false,
+        "show_author": false,
+        "show_date": false,
+        "show_share_links": true,
+        "show_tags": false,
+        "tag": "Featured",
+        "type": "include",
+        "show_next_previous_links": false,
+        "side_media": "video",
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "3eb87f1f-befc-4081-81a5-21a6cb494ff7": {
+      "type": "featured-product",
+      "blocks": {
+        "359712e8-8dce-4f3a-a450-fcb306e29728": {
+          "type": "star_rating",
+          "settings": {
+            "display_on_card": false,
+            "type": "native"
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-0": {
+          "type": "title",
+          "settings": {
+            "display_on_card": false,
+            "text_align": "text-left"
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-1": {
+          "type": "price",
+          "settings": {
+            "display_on_card": false,
+            "show_on_sale_sticker": false,
+            "text_align": "text-left"
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-2": {
+          "type": "variant_picker",
+          "settings": {
+            "display_on_card": false,
+            "option_style": "drop_down",
+            "hide_option_labels": true,
+            "enable_color_swatches": false
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "display_on_card": false,
+            "show_price": false,
+            "enable_payment_button": false,
+            "show_pickup_availability": true
+          }
+        },
+        "c6b65590-9a3e-4f8f-a5dc-597f7fc1e374": {
+          "type": "shopify:\/\/apps\/junip\/blocks\/junip-review-carousel\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "disabled": true,
+          "settings": {
+            "reviewsType": "product_reviews",
+            "product": "",
+            "showSummary": true,
+            "title": "Reviews",
+            "paddingTop": 48,
+            "paddingBottom": 48,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "359712e8-8dce-4f3a-a450-fcb306e29728",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-0",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-1",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-2",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-3",
+        "c6b65590-9a3e-4f8f-a5dc-597f7fc1e374"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "section {background-color: #efe5cf;}"
+      ],
+      "settings": {
+        "title": "",
+        "product": "vanilla-cupcake-all-in-one-shake",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "media_mobile_width": "w-4\/5",
+        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
+        "enable_video_looping": true,
+        "thumbnails_position": "left",
+        "thumbnail_crop": "aspect-w-1 aspect-h-1",
+        "thumbnail_shape": "default",
+        "hide_media_shadow": false,
+        "thumbnail_size": "standard",
+        "show_thumbnails_on_mobile": false,
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "1221d484-51f2-480a-8217-61f5ea8fdc92": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "display_on_card": true,
+        "image": "shopify:\/\/shop_images\/quality.png",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "left",
+        "img_width": "100%",
+        "image_size": "third",
+        "max_width": 100,
+        "text_style": "body",
+        "disable_media_style": false,
+        "subtitle": "",
+        "title": "Try Good Protein risk free",
+        "heading_size": "heading-template",
+        "richtext": "<h3><strong>100% Money-Back Guarantee<\/strong><\/h3><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.<\/p>",
+        "ingredient_text": "",
+        "text_alignment": "text-left",
+        "ingredient_link_t": "",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "tertiary"
+      }
+    },
+    "1a41a1be-bf27-4553-91aa-c0b6a87bb3fb": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "title": "See more recipes",
+        "blog": "recipes",
+        "post_limit": 3,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": false,
+        "show_post_excerpt": false,
+        "show_view_all": false,
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "42399823-67af-4b73-a103-1d6280db3fcf": {
+      "type": "mixed-shape-product-grid",
+      "blocks": {
+        "template--14599516979309__42399823-67af-4b73-a103-1d6280db3fcf-1689172922db97ca10-0": {
+          "type": "product",
+          "settings": {
+            "product": "chai-latte-all-in-one-shake",
+            "image_shape": "default",
+            "rotate_image": 0
+          }
+        },
+        "template--14599516979309__42399823-67af-4b73-a103-1d6280db3fcf-1689172922db97ca10-1": {
+          "type": "product",
+          "settings": {
+            "product": "chocolate-fudge-all-in-one-shake",
+            "image_shape": "default",
+            "rotate_image": 0
+          }
+        },
+        "template--14599516979309__42399823-67af-4b73-a103-1d6280db3fcf-1689172922db97ca10-2": {
+          "type": "product",
+          "settings": {
+            "product": "cookies-cream-all-in-one-shake",
+            "image_shape": "convex_square",
+            "rotate_image": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14599516979309__42399823-67af-4b73-a103-1d6280db3fcf-1689172922db97ca10-0",
+        "template--14599516979309__42399823-67af-4b73-a103-1d6280db3fcf-1689172922db97ca10-1",
+        "template--14599516979309__42399823-67af-4b73-a103-1d6280db3fcf-1689172922db97ca10-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Featured Products",
+        "subheading": "",
+        "enable_quick_buy": true,
+        "display_on_card": false,
+        "products_per_row_mobile": "1",
+        "products_per_row_desktop": 3,
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "116211ac-7b05-4b3a-b948-bb38f68b9a0e": {
+      "type": "rich-text",
+      "blocks": {
+        "ea6564bf-f94c-4483-8b7f-dfa5a19c5c78": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#fff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "ea6564bf-f94c-4483-8b7f-dfa5a19c5c78"
+      ],
+      "custom_css": [
+        "h2 {font-size: 34px;}"
+      ],
+      "settings": {
+        "title": "Try Good Protein Risk-Free",
+        "heading_size": "heading-template",
+        "site_review": false,
+        "rich_text": "<h5><strong>100% Money-Back Guarantee<\/strong><\/h5><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.<\/p>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-1\/3",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_label": "Order here",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "0bb9e1b8-596b-4588-811c-fde07a9a5a23": {
+      "type": "featured-product",
+      "blocks": {
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-0": {
+          "type": "title",
+          "settings": {
+            "display_on_card": false,
+            "text_align": "text-left"
+          }
+        },
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-1": {
+          "type": "price",
+          "settings": {
+            "display_on_card": false,
+            "show_on_sale_sticker": false,
+            "text_align": "text-left"
+          }
+        },
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-2": {
+          "type": "variant_picker",
+          "settings": {
+            "display_on_card": false,
+            "option_style": "drop_down",
+            "hide_option_labels": true,
+            "enable_color_swatches": false
+          }
+        },
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "display_on_card": false,
+            "show_price": false,
+            "enable_payment_button": true,
+            "show_pickup_availability": true
+          }
+        }
+      },
+      "block_order": [
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-0",
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-1",
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-2",
+        "template--14599516979309__0bb9e1b8-596b-4588-811c-fde07a9a5a23-168917258258630301-3"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "product": "",
+        "crop": "",
+        "image_shape": "default",
+        "media_mobile_width": "w-full",
+        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
+        "enable_video_looping": true,
+        "thumbnails_position": "left",
+        "thumbnail_crop": "aspect-w-1 aspect-h-1",
+        "thumbnail_shape": "default",
+        "hide_media_shadow": false,
+        "thumbnail_size": "standard",
+        "show_thumbnails_on_mobile": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "1bd2bd17-752e-40c2-b53d-71ba5c50d7ca",
+    "featured-image",
+    "main",
+    "3eb87f1f-befc-4081-81a5-21a6cb494ff7",
+    "1221d484-51f2-480a-8217-61f5ea8fdc92",
+    "1a41a1be-bf27-4553-91aa-c0b6a87bb3fb",
+    "42399823-67af-4b73-a103-1d6280db3fcf",
+    "116211ac-7b05-4b3a-b948-bb38f68b9a0e",
+    "0bb9e1b8-596b-4588-811c-fde07a9a5a23"
+  ]
+}

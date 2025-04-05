@@ -1,0 +1,324 @@
+{
+  "sections": {
+    "featured-image": {
+      "type": "main-article-featured-image",
+      "blocks": {
+        "shape_divider_JRBfrF": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ff0000",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_JRBfrF"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 768px) and (max-width: 900px) {.pt-600 {padding-top: 400px; }}"
+      ],
+      "settings": {
+        "style": "full",
+        "image_type": "featured_image",
+        "height": "pt-600",
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "image_with_text_overlay_dpR9bA": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "title_fVW9Vq": {
+          "type": "title",
+          "settings": {
+            "title": "Image with text overlay",
+            "heading_size": "heading-base"
+          }
+        }
+      },
+      "block_order": [
+        "title_fVW9Vq"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "custom_image_countdown_overlay_AKJEhy": {
+      "type": "article-image-countdown-overlay",
+      "blocks": {
+        "shape_divider_CXRVKw": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": false,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_CXRVKw"
+      ],
+      "custom_css": [
+        ".pt-500 {padding-top: 500px;}",
+        ".px-sectionxxx {width: 100%; height: 100%; position: absolute; display: grid; top: 0; right: 0; bottom: 0; left: 0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/banner-mixed_berries.png",
+        "image_mobile": "shopify:\/\/shop_images\/Purple_Smoothie_Bowl-mobile.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "main": {
+      "type": "main-article2",
+      "custom_css": [
+        ".gap-10 {gap: 4.5rem;}",
+        ".heading-template {font-size: 32px;}",
+        ".section-content {padding-top: 10px !important;}"
+      ],
+      "settings": {
+        "display_on_card": false,
+        "show_author": false,
+        "show_date": false,
+        "show_share_links": false,
+        "show_tags": false,
+        "tag": "Featured",
+        "type": "exclude",
+        "show_next_previous_links": false,
+        "side_media": "image",
+        "color_scheme": "quaternary",
+        "use_gradient_background": false
+      }
+    },
+    "3eb87f1f-befc-4081-81a5-21a6cb494ff7": {
+      "type": "featured-product",
+      "blocks": {
+        "359712e8-8dce-4f3a-a450-fcb306e29728": {
+          "type": "star_rating",
+          "settings": {
+            "display_on_card": false,
+            "type": "native"
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-0": {
+          "type": "title",
+          "settings": {
+            "display_on_card": false,
+            "text_align": "text-left"
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-1": {
+          "type": "price",
+          "settings": {
+            "display_on_card": false,
+            "show_on_sale_sticker": false,
+            "text_align": "text-left"
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-2": {
+          "type": "variant_picker",
+          "settings": {
+            "display_on_card": false,
+            "option_style": "drop_down",
+            "hide_option_labels": true,
+            "enable_color_swatches": false
+          }
+        },
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "display_on_card": false,
+            "show_price": false,
+            "enable_payment_button": false,
+            "show_pickup_availability": true
+          }
+        },
+        "c6b65590-9a3e-4f8f-a5dc-597f7fc1e374": {
+          "type": "shopify:\/\/apps\/junip\/blocks\/junip-review-carousel\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "disabled": true,
+          "settings": {
+            "reviewsType": "product_reviews",
+            "product": "",
+            "showSummary": true,
+            "title": "Reviews",
+            "paddingTop": 48,
+            "paddingBottom": 48,
+            "containerClass": ""
+          }
+        }
+      },
+      "block_order": [
+        "359712e8-8dce-4f3a-a450-fcb306e29728",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-0",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-1",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-2",
+        "template--14599516979309__3eb87f1f-befc-4081-81a5-21a6cb494ff7-168737149084dc6b7e-3",
+        "c6b65590-9a3e-4f8f-a5dc-597f7fc1e374"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "section {background-color: #efe5cf;}"
+      ],
+      "settings": {
+        "title": "",
+        "product": "vanilla-cupcake-all-in-one-shake",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "media_mobile_width": "w-4\/5",
+        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
+        "enable_video_looping": true,
+        "thumbnails_position": "left",
+        "thumbnail_crop": "aspect-w-1 aspect-h-1",
+        "thumbnail_shape": "default",
+        "hide_media_shadow": false,
+        "thumbnail_size": "standard",
+        "show_thumbnails_on_mobile": false,
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "1221d484-51f2-480a-8217-61f5ea8fdc92": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "display_on_card": true,
+        "image": "shopify:\/\/shop_images\/quality.png",
+        "crop": "aspect-w-1 aspect-h-1",
+        "image_shape": "default",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "left",
+        "img_width": "100%",
+        "image_size": "third",
+        "max_width": 100,
+        "text_style": "body",
+        "disable_media_style": false,
+        "subtitle": "",
+        "title": "Try Good Protein risk free",
+        "heading_size": "heading-template",
+        "richtext": "<h3><strong>100% Money-Back Guarantee<\/strong><\/h3><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.<\/p>",
+        "ingredient_text": "",
+        "text_alignment": "text-left",
+        "ingredient_link_t": "",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "tertiary"
+      }
+    },
+    "1a41a1be-bf27-4553-91aa-c0b6a87bb3fb": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "title": "See more recipes",
+        "blog": "recipes",
+        "post_limit": 3,
+        "crop": "aspect-w-4 aspect-h-3",
+        "image_shape": "default",
+        "blog_show_author": false,
+        "blog_show_date": false,
+        "show_post_excerpt": false,
+        "show_view_all": false,
+        "color_scheme": "tertiary",
+        "use_gradient_background": false
+      }
+    },
+    "116211ac-7b05-4b3a-b948-bb38f68b9a0e": {
+      "type": "rich-text",
+      "blocks": {
+        "ea6564bf-f94c-4483-8b7f-dfa5a19c5c78": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#ffffff",
+            "style": "medium-waves_1200x43",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "ea6564bf-f94c-4483-8b7f-dfa5a19c5c78"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 34px;}"
+      ],
+      "settings": {
+        "logo_max_width": 120,
+        "title": "Try Good Protein Risk-Free",
+        "heading_size": "heading-template",
+        "site_review": false,
+        "rich_text": "<h5><strong>100% Money-Back Guarantee<\/strong><\/h5><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.<\/p>",
+        "display_on_card": false,
+        "content_width_desktop": "lg:w-1\/3",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_label": "Order here",
+        "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
+        "use_gradient_background": false
+      }
+    },
+    "full_image_with_text_i6wYTz": {
+      "type": "featured-product-for-recipe",
+      "custom_css": [],
+      "settings": {
+        "display_on_card": true,
+        "image": "shopify:\/\/shop_images\/Mockup880g-Unflavoured-T_1.png",
+        "crop": "",
+        "image_shape": "default",
+        "featured_background_color": "#614974",
+        "button_background_color": "#e8a8c7",
+        "blob_type": 1,
+        "rotate_image": 0,
+        "image_position": "right",
+        "image_size": "half",
+        "disable_media_style": false,
+        "title": "Image with text",
+        "heading_size": "heading-template",
+        "richtext": "",
+        "text_alignment": "text-left",
+        "button_link": "{{ article.url }}",
+        "button_label": "Buy now",
+        "color_scheme": "",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "featured-image",
+    "image_with_text_overlay_dpR9bA",
+    "custom_image_countdown_overlay_AKJEhy",
+    "main",
+    "3eb87f1f-befc-4081-81a5-21a6cb494ff7",
+    "1221d484-51f2-480a-8217-61f5ea8fdc92",
+    "1a41a1be-bf27-4553-91aa-c0b6a87bb3fb",
+    "116211ac-7b05-4b3a-b948-bb38f68b9a0e",
+    "full_image_with_text_i6wYTz"
+  ]
+}

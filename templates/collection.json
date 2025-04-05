@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        "section {background-color: #e9f6fd;}"
+      ],
+      "settings": {
+        "display_badge": false,
+        "new_year_page_discount_text": "-20%",
+        "new_year_page_discount_text_fr": "-20%",
+        "new_year_page_discount_text_color": "#ffffff",
+        "new_year_page_discount_text_background": "#ea1f59",
+        "new_year_page_discount_text_font_size": 13,
+        "new_year_page_discount_badge_size": 46,
+        "display_on_card": true,
+        "display_banner_image": false,
+        "display_content_below_image_on_mobile": true,
+        "enable_quick_buy": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "tab_menu": "collection-menu-shapes-samplepack",
+        "tab_text_color": "#ffffff",
+        "tab_back_color": "#0066cc",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "expand_filters": false,
+        "show_filter_count": false,
+        "enable_color_swatch_filters": false,
+        "collection_head_text_color": "#000000",
+        "collection_head_back_color": "#0066cc",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "product-grid"
+  ]
+}

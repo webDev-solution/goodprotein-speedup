@@ -1,0 +1,276 @@
+
+{{'custom-product-section-5.scss.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  #shopify-section-{{section.id}} [data-section-type="pdp-section-5"] {
+    --color-pdp-section-5: {{section.settings.background_color}};
+    --color-pdp-section-5-icon: {{section.settings.background_color_icon}};
+  }
+  #nutritional_facts-2 .product-section-5-carousel {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 5%;
+  }
+  #nutritional_facts-2 .product-section-5-carousel .product-section-box .image-wrapper-ss {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+  }
+  #nutritional_facts-2 .product-section-5-carousel .product-section-box {
+    max-width: 16%;
+    margin: 0px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #nutritional_facts-2 .product-section-5-carousel .product-section-box img {
+    object-fit: scale-down !important;
+  }
+  #nutritional_facts-2 .product-section-5-carousel .product-section-box h5 {
+    color: #0066CC;
+    text-align: center;
+    font-size: 24px;
+  }
+  #shopify-section-{{section.id}} .product-section-padding {
+    padding-bottom: 4%;
+    padding-top: 8% !important;
+  }
+  @media (max-width: 1024px) {
+    #nutritional_facts-2 {
+      padding-top: 3% !important;
+      padding-bottom: 3% !important;
+    }
+    #nutritional_facts-2 .product-section-5-carousel .product-section-box .image-wrapper-ss {
+      width: 60px;
+      height: 60px;
+    }
+    #nutritional_facts-2 .product-section-5-carousel .product-section-box h5 {
+      font-size: 10px;
+    }
+    #nutritional_facts-2 .product-section-5-carousel {
+      margin-bottom: 0px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    #nutritional_facts-2 {
+      padding-top: 3% !important;
+      padding-bottom: 3% !important;
+    }
+    #nutritional_facts-2 .product-section-5-carousel .product-section-box .image-wrapper-ss {
+      width: 40px;
+      height: 40px;
+    }
+    #nutritional_facts-2 .product-section-5-carousel .product-section-box h5 {
+      font-size: 10px;
+    }
+    #nutritional_facts-2 .product-section-5-carousel {
+      margin-bottom: 0px !important;
+    }
+  }
+{% endstyle %}
+<div data-section-type="pdp-section-5" class="product-section product-section-5 product-section-padding" id="nutritional_facts-2">
+  <div class="">
+    <div class="product-section-5-carousel">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'carousel' %}
+            <div class="product-section-box">
+              <div class="image-wrapper-ss">
+                <img src="{{ block.settings.image | img_url: 'master'  }}" alt="" width="" height="">
+              </div>
+              <h5>{{ block.settings.heading }}</h5>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% liquid
+  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+%}
+ 
+{% schema %}
+{
+  "name": "Good things",
+  "settings": [
+    {
+      "type": "header",
+      "content": "color schema"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#FFFCEE"
+    },
+    {
+      "type": "color",
+      "id": "background_color_icon",
+      "label": "Icon color",
+      "default": "#FFFCEE"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"carousel",
+      "name":"Carousel",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"text",
+          "id":"heading",
+          "label":"Heading"
+        }
+      ]
+    },
+    {
+      "name": "Shape divider",
+      "type": "shape_divider",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "radio",
+          "label": "Target section",
+          "id": "target_section",
+          "default": "above",
+          "options": [
+            {
+              "value": "above",
+              "label": "Section above"
+            },
+            {
+              "value": "below",
+              "label": "Section below"
+            }
+          ],
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+        },
+        {
+          "type": "color",
+          "label": "Target section color scheme",
+          "id": "color_bg",
+          "default": "#fff"
+        },
+        {
+          "type": "select",
+          "label": "Style",
+          "id": "style",
+          "default": "large-waves_1200x84",
+          "options": [
+            {
+              "value": "round",
+              "label": "Round"
+            },
+            {
+              "value": "large-waves_1200x84",
+              "label": "Large waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "medium-waves_1200x43",
+              "label": "Medium waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "small-waves_1200x20",
+              "label": "Small waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "large-zig-zag_1200x65",
+              "label": "Large zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "medium-zig-zag_1200x37",
+              "label": "Medium zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "small-zig-zag_1200x21",
+              "label": "Small zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "waves-1-asymmetrical_1440x261",
+              "label": "Waves 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "waves-2-asymmetrical_1440x330",
+              "label": "Waves 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "tilt-1-asymmetrical_1440x101",
+              "label": "Tilt 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "tilt-2-asymmetrical_1440x293",
+              "label": "Tilt 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-1-asymmetrical_1440x293",
+              "label": "Mountains 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-2-asymmetrical_1440x325",
+              "label": "Mountains 2",
+              "group": "Asymmetrical"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "flip_horizontal",
+          "label": "Flip horizontal"
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
+        },
+        {
+          "type": "radio",
+          "id": "animation_direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "",
+              "label": "Right to left"
+            },
+            {
+              "value": "reverse",
+              "label": "Left to right"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Good things",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}

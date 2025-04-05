@@ -1,0 +1,42 @@
+{
+  "wrapper": "div[data-color-scheme=primary].bg-scheme-background.text-scheme-text",
+  "sections": {
+    "17084628942b71af11": {
+      "type": "apps",
+      "blocks": {
+        "abra_banner_8yncCh": {
+          "type": "shopify:\/\/apps\/abra-promotions\/blocks\/banner\/daa1493a-23b5-48bb-8cb5-7ab1267b4642",
+          "settings": {
+            "name": "Cart banner",
+            "banner_background_color": "#ffe89f",
+            "banner_border_color": "#ffe89f",
+            "banner_color": "#232323",
+            "banner_icon_color": "#232323",
+            "banner_border_radius": 0,
+            "banner_font_size": 16,
+            "banner_icon_size": 16,
+            "banner_padding_y": 10,
+            "banner_padding_x": 10,
+            "text_align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "abra_banner_8yncCh"
+      ],
+      "settings": {}
+    },
+    "cart": {
+      "type": "cart",
+      "settings": {
+        "display_on_card": true,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "17084628942b71af11",
+    "cart"
+  ]
+}

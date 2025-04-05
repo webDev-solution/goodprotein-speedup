@@ -1,0 +1,176 @@
+{%- liquid
+  if settings.template_heading_size contains "2x"
+    assign price_text_size = 'text-base lg:text-lg'
+  else
+    assign price_text_size = 'text-base'
+  endif
+-%}
+<div
+  class="{{ block_base_classes }}  text-lg  {{ block.settings.text_align }} hidden"
+  :class="{ 'invisible': !current_variant }"
+  {{ block.shopify_attributes }}
+>
+
+  <span class="sr-only">{{ 'products.general.regular_price' | t }}</span>
+  <span
+    id="price-location-{{current_variant.id}}"
+    class="text-scheme-text {{ price_text_size }} updated-product-price"
+    x-html="formatMoney(current_price)"
+    :class="
+      {
+        'invisible': !current_variant
+      }"
+    data-product-price
+  >
+    {{ current_variant.price | money }}
+  </span>
+
+  {% if product.compare_at_price_max > product.price %}
+    <template x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
+      <span class="{{ price_text_size }}">
+        <span class="sr-only">{{ 'products.general.sale_price' | t }}</span>
+        <s data-compare-price
+          class="text-scheme-text updated-compare-at-price"
+          x-html="formatMoney(current_variant.compare_at_price)">
+          {% if current_variant.compare_at_price > current_variant.price %}
+            {{ current_variant.compare_at_price | money }}
+          {% endif %}
+        </s>
+      </span>
+    </template>
+  {% endif %}
+
+  <template x-if="current_variant && current_variant.unit_price">
+    <div class="text-sm text-scheme-text mt-2" data-unit-price-wrapper>
+      <span class="sr-only">
+        {{- 'products.product.unit_price_label' | t -}}
+      </span>
+      <span x-html="formatMoney(current_variant.unit_price)">
+        {{- current_variant.unit_price | money -}}
+      </span>
+      <span aria-hidden="true">
+        /
+      </span>
+      <span class="sr-only">
+        {{- 'general.accessibility.unit_price_separator' | t -}}
+      </span>
+      <span
+        x-html="
+          current_variant.unit_price_measurement.reference_value != 1 ? current_variant.unit_price_measurement.reference_value : ''
+        "
+      >
+        {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+          {{- current_variant.unit_price_measurement.reference_value -}}
+        {%- endif -%}
+      </span><!--
+      --><span x-html="current_variant.unit_price_measurement.reference_unit">
+        {{- current_variant.unit_price_measurement.reference_unit -}}
+      </span>
+    </div>
+  </template>
+
+  {%- if cart.taxes_included -%}
+    <div class="product__tax caption mt-1.5 text-sm">
+      {%- if cart.taxes_included -%}
+        {{ 'products.product.include_taxes' | t }}
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+
+  {%- if block.settings.show_on_sale_sticker -%}
+    {%- if product.compare_at_price_max > product.price -%}
+      {%- liquid
+        assign text = 'products.product.on_sale' | t
+        assign id = 'on-sale-sticker-' | append: product.id
+        assign shape = settings.on_sale_badge_shape
+      -%}
+      {%- render 'static-sticker-defs' with shape: settings.on_sale_badge_shape, id: id -%}
+      {%- render 'static-sticker',
+        static_id: id,
+        shape: shape,
+        id: id,
+        text: text,
+        vertical_position: 2,
+        horizontal_position: 90,
+        rotate: 15,
+        width: 120,
+        font_size: '1.563rem',
+        color: 'bg-scheme-accent text-scheme-accent-overlay'
+      %}
+    {%- endif -%}
+  {%- endif -%}
+</div>
+
+{% style %}
+  @media (min-width: 991px) {
+    .loop-one-time-purchase-option-price-container.custom-loop-one-time-purchase-option-price-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  .custom-loop-one-time-purchase-option-price-container {
+    font-weight: bold;
+  }
+  .loop-one-time-purchase-option-price-amount {
+    color: #2AA059;
+  }
+{% endstyle %}
+
+{% assign current_variant = product.variants[0] %}
+<div class="loop-one-time-purchase-option-position" id="loop-one-time-purchase-option-at-top">
+    <div class="loop-one-time-purchase-option loop-selected-selling-plan-group">
+        <label class="loop-one-time-purchase-option-label" for="loop-one-time-purchase-{{product.id}}">One-time Purchase</label>
+        <div class="loop-one-time-purchase-option-price-container custom-loop-one-time-purchase-option-price-container">
+            <div  class="loop-one-time-purchase-option-price-amount {{ current_variant.price | money }}">
+              {{current_variant.price | money}}
+            </div>
+            {% if current_variant.compare_at_price %}
+              <del class="_compare_price ">{{ current_variant.compare_at_price | money }} 99</del>
+            {% endif %}
+            <div class="loop-one-time-purchase-option-price-quantity media-max-width-768-display-none hidden">
+                each
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+  function updatePricesFromHTML() {
+    const updatedProductIdEl = document.querySelector('.updated-product-price');
+    const updatedCompareAtEl = document.querySelector('.updated-compare-at-price');
+
+    const priceValue = updatedProductIdEl?.innerHTML.trim();
+    const comparePriceValue = updatedCompareAtEl?.innerHTML.trim();
+
+    const oneTimePriceEl = document.querySelector('.loop-one-time-purchase-option-price-amount');
+    const comparePriceEl = document.querySelector('._compare_price');
+
+    if (priceValue && oneTimePriceEl) {
+        oneTimePriceEl.innerHTML = priceValue;
+    }
+
+    if (comparePriceValue && comparePriceEl) {
+        comparePriceEl.innerHTML = comparePriceValue;
+    }
+  }
+
+  // Observe changes in `.updated-product-price`
+  const targetNode = document.querySelector('.updated-product-price');
+
+  if (targetNode) {
+      const observer = new MutationObserver(() => {
+          updatePricesFromHTML();
+      });
+
+      observer.observe(targetNode, {
+          childList: true,
+          subtree: true
+      });
+
+      // Initial run on page load
+      updatePricesFromHTML();
+  }
+
+</script>

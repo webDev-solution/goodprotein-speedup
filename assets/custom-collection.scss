@@ -1,0 +1,106 @@
+.collections {
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+  .header-wrapper {
+    h2 {
+      font-size: 42px;
+      font-family: Gelica Bold !important;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+  }
+  .collections_tab_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    border-bottom: 1px solid #D9D9D9;
+    @media screen and (max-width: 768px) {
+      border: none;
+      display: block;
+    }
+    .collections_tab {
+      margin: 0;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      .collections_tab_wrap {
+        padding-right: 0;
+        .collections_tab_inner {
+          column-gap: 10px;
+          li {
+            padding: 7px 15px;
+            min-width: 70px;
+            border-radius: 30px;
+            a {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .collection_count {
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+  }
+  .filterbar {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+  .covered_content_collection {
+    
+    .collection__product_listings {
+      .collection_header {
+        .collection_header_inner {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          @media screen and (max-width: 768px) {
+            padding: 0;
+            margin-bottom: 10px;
+          }
+          a {
+            font-size: 26px;
+            @media screen and (max-width: 768px) {
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+          span {
+            font-size: 20px;
+            color: #4E4E4E;
+            @media screen and (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .product-tile {
+        .product-tile_cover {
+          @media screen and (max-width: 768px) {
+            padding: 0;
+            border-radius: 10px;
+          }
+          .product-tile-image {
+            overflow: hidden;
+          }
+        }
+        .product-tile-info  {
+          margin-top: 15px;
+          @media screen and (max-width: 768px) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

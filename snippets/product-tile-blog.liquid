@@ -1,0 +1,164 @@
+{% liquid
+  assign crop = crop | default: settings.product_tiles_aspect_ratio
+  assign shape = shape | default: settings.product_tile_media_shape
+  assign hover_image = blank
+  if settings.product_tiles_second_image_on_hover and  product.media.size > 1
+    assign hover_image = product.media[1]
+  endif
+  if enable_quick_buy
+    assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id
+    assign current_variant = product.selected_or_first_available_variant
+    assign featured_media = current_variant.featured_media | default: product.featured_media
+  endif 
+  if use_variant
+    assign target = product.selected_or_first_available_variant
+  else
+    assign target = product
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  if compare_at_price > price
+    assign on_sale = true
+  else
+    assign on_sale = false
+  endif
+  assign available = target.available | default: false
+  assign money_price = price | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+  endif
+
+  if target == product and product.price_varies
+    assign money_price = money_price | append: '+'
+  endif
+
+  if odd_even == 'odd'
+    assign rotate = 5
+  else
+    assign rotate = -5
+  endif
+%}
+{% if product and product != empty %}
+<div style="background: #F4E1CC; border-radius: 20px;"
+  class="product-tile relative {{ class }} {% if display_on_card %}text-scheme-text card-container{% endif %}" 
+  {% if settings.product_tiles_second_image_on_hover and  product.media.size > 1 %}
+  x-data="{ hover: false }"  @mouseleave="hover = false" @mouseover="hover = true" @focusin="hover = true" @focusout="hover = false"
+    {% endif %}
+>
+  <div
+    {% if enable_quick_buy %}
+    x-data="
+    ThemeSection_ProductQuickBuy({
+      product: {{ product | json | escape }},
+      variant: {{ current_variant | json | escape }},
+      featuredMediaID: {{ featured_media.id | json }}
+    })"
+    {% endif %} style="    background-color: #F4E1CC;  border-radius: 20px;"
+    class="product-tile_cover {% if display_on_card %}bg-scheme-card card {% if products_per_row_mobile == '2' %}p-2.5 lg:p-5{% else %}p-5{% endif %} h-full{% endif %}"
+    {% if template == 'collection' %}style="background-color: {{ product.metafields.custom.megamenu_backgroud_color }};{% endif %}">
+    {% if product.featured_media %}
+      <div class="relative {% unless display_on_card %}{% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}{% endunless %}">
+        {% render 'product-tile-media-image',
+            media: product.featured_media,
+            shape_id: shape_id,
+            shape: shape,
+            is_card: display_on_card,
+            crop: crop,
+            hover_image: hover_image,
+            container_id: section.id,
+            quick_buy: enable_quick_buy,
+            product: product,
+            index: index
+        %}
+      </div>
+    {% endif %}
+    <div class="product-tile mt-5 text-center break-words">
+      <a href="{{ product.url | within: collection }}" class="absolute top-0 left-0 w-full h-full z-10 block">
+        <span class="visually-hidden">{{ product.title }}</span>
+      </a>
+  <div class="rte mb-2.5">
+    {% render 'junip-product-summary', product: product %}
+  </div>
+  
+      <h3 class="font-body text-base product_title">
+      {{ product.title | escape }}
+    </h3> 
+  <div class="rte mt-2.5"></div>
+    <div class="mt-5 relative z-10">
+      <a href="{{ product.url | within: collection }}" class="inline-block push-btn"><span class="push-btn-surface"><ly-as-1384918>Try it today</ly-as-1384918></span></a>
+    </div>
+    </div>
+
+    {% if template == 'collection' and enable_quick_buy == false %}
+      <div class="p-2.5 lg:p-5 collection_hover_card text-center hover_card_{{ product.id }}" style="background-color: {{ product.metafields.custom.megamenu_backgroud_color | default: "#ffe89e" }};">
+    {% style %}
+      .hover_card_{{ product.id }}:hover{
+        background-color: {{ product.metafields.custom.megamenu_backgroud_color | default: "#ffe89e" }}99!important;
+      }
+    {% endstyle %}
+    <h3 class="font-body text-base product_title">
+      {% if product.title contains 'All-in-One Shake' %}
+        All-in-One Shake
+      {% elsif product.title contains 'Shake tout-en-un' %}
+        Shake tout-en-un
+      {% else %} 
+        {{ product.title }}
+      {% endif %}
+    </h3> 
+  <div class="shop_now_btn">
+  <a href="{{ product.url }}" class="btn"><ly-as-1384919>Shop now</ly-as-1384919></a>
+  </div>
+    </div>
+    {% endif %}
+  
+  
+  </div>
+  {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+
+
+      
+
+
+      {% assign is_new = false %}
+      {% assign low_stock = false %}
+      {% assign back_stock = false %}
+      {% for tag in product.tags %}
+        {% if tag == 'new' %}
+          {% assign is_new = true %}
+        {% endif %}
+        {% if tag == 'low_stock' %}
+          {% assign low_stock = true %}
+        {% endif %}
+        {% if tag == 'back_stock' %}
+          {% assign back_stock = true %}
+        {% endif %}
+      {% endfor %}
+  
+  {% if available and is_new and template == 'collection' %}
+    <div class="product_tag" style="color: #ff0404; background-color: #f1a1a1;">New</div>
+  {% endif %}
+  {% if available and low_stock and template == 'collection' %}
+    <div class="product_tag" style="color: #B85353; background-color: #FFD3AE;"><ly-as-1384921>Low Stock</ly-as-1384921></div>
+  {% endif %}
+  {% if available and back_stock and template == 'collection' %}
+    <div class="product_tag" style="color: {{ settings.badge_text }}; background-color: #f9c16d;"><ly-as-1384922>Back in Stock</ly-as-1384922></div>
+  {% endif %}
+  
+</div>
+{% else %}
+<div class="product-tile {{ class }} {% if display_on_card %}text-scheme-text card-container{% endif %}" x-data="{ hover: false }"  @mouseleave="hover = false" @mouseover="hover = true" @focusin="hover = true" @focusout="hover = false">
+  <div class="{% if display_on_card %}bg-scheme-card card p-5 h-full{% endif %}">
+    <div class="relative {% unless display_on_card %}{% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}{% endunless %}">
+      {% render 'media-image-placeholder', shape_id: shape_id, container_id: section.id, index: index, shape: shape, crop: crop, is_card: section.settings.display_on_card %}
+    </div>
+    <div class="product-tile mt-5 text-center">
+      <h3 class="font-body text-base">{{ 'sections.onboarding.product_title' | t }}</h3>
+      {% render 'price', price_class: "mt-2" %}
+    </div>
+  </div>
+  {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+</div>
+{% endif %}
+
+

@@ -1,0 +1,31 @@
+[data-section-type="featured-usps-bar"] {
+  padding: 40px 0;
+  .ups-row {
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .usps-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .usps-icon {
+      @media screen and (max-width: 768px) {
+        width: 27px;
+      }
+    }
+    h4 {
+      color: var(--color-pdp-usps-text);
+      font-size: 20px;
+    }
+    p {
+      color: var(--color-pdp-usps-text);
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

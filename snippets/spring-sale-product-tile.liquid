@@ -1,0 +1,629 @@
+{% liquid
+  assign crop = crop | default: settings.product_tiles_aspect_ratio
+  assign shape = shape | default: settings.product_tile_media_shape
+  assign hover_image = blank
+  if settings.product_tiles_second_image_on_hover and  product.media.size > 1
+    assign hover_image = product.media[1]
+  endif
+  if enable_quick_buy
+    assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: product.id
+    assign current_variant = product.selected_or_first_available_variant
+    assign featured_media = current_variant.featured_media | default: product.featured_media
+  endif 
+  if use_variant
+    assign target = product.selected_or_first_available_variant
+  else
+    assign target = product
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign price = target.price | default: 1999
+  if compare_at_price > price
+    assign on_sale = true
+  else
+    assign on_sale = false
+  endif
+  assign available = target.available | default: false
+  assign money_price = price | money
+  if settings.currency_code_enabled
+    assign money_price = price | money_with_currency
+  endif
+
+  if target == product and product.price_varies
+    assign money_price = money_price
+  endif
+
+  if odd_even == 'odd'
+    assign rotate = 5
+  else
+    assign rotate = -5
+  endif
+%}
+{% if product and product != empty %}
+   <div style="display: none"> {{ money_price }} {{ compare_at_price }}</div>
+<div
+  id="product-tile-{{ product.id }}"
+  data-product-handle="{{ product.handle }}"
+  data-variant-id="{{ current_variant.id }}"
+  class="holiday-product-tile-saturn product-tile relative {{ class }} {% if display_on_card %}text-scheme-text card-container{% endif %}" 
+  {% if settings.product_tiles_second_image_on_hover and  product.media.size > 1 %}
+  x-data="{ hover: false }"  @mouseleave="hover = false" @mouseover="hover = true" @focusin="hover = true" @focusout="hover = false"
+    {% endif %}
+>
+{%- if settings.show_on_discount_badges -%}
+  {% if product.metafields.custom.discount_percentage != blank %}
+    <div class="custom_discount_badge_left">{{ product.metafields.custom.discount_percentage }}</div>
+  {% endif %}                                        
+{% endif %} 
+
+{% assign is_new = false %}
+{% assign low_stock = false %}
+{% assign back_stock = false %}
+{% for tag in product.tags %}
+  {% if tag == 'new' %}
+    {% assign is_new = true %}
+  {% endif %}
+  {% if tag == 'low_stock' %}
+    {% assign low_stock = true %}
+  {% endif %}
+  {% if tag == 'back_stock' %}
+    {% assign back_stock = true %}
+  {% endif %}
+{% endfor %}
+
+{% if is_new %}
+  <div class="product_tag" style="color: #ff0404; background-color: #f1a1a1;">New</div>
+  <style>
+    .holiday-product-tile-saturn .product_tag{
+      color: #ff0404;
+      background-color: #f1a1a1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+      /* padding: 8px 30px 10px; */
+      font-size: 16px;
+      font-weight: 400;
+      /* border-radius: 0 20px; */
+      left: unset;
+      padding: 4px 15px 6px;
+      font-size: 17px;
+      border-radius: 0 10px;
+    }
+    @media (max-width: 767px){
+      .holiday-product-tile-saturn .product_tag{
+        font-size: 14px;
+      }    
+    }
+  </style>
+{% endif %}  
+  <div
+    {% if enable_quick_buy %}
+      x-data="
+      ThemeSection_ProductQuickView({
+        product: {{ product | json | escape }},
+        variant: {{ current_variant | json | escape }},
+        featuredMediaID: {{ featured_media.id | json }}
+      })"
+    {% endif %} 
+    >
+    <div class="product-tile_cover {% if display_on_card %}bg-scheme-card card {% if products_per_row_mobile == '2' %}p-2.5 lg:p-5{% else %}p-5{% endif %} h-full{% endif %}">
+      {% if product.featured_media %}
+        <div class="relative product-tile-image {% unless display_on_card %}{% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}{% endunless %}" style="background-color: {{ product.metafields.custom.megamenu_backgroud_color }};">
+          <a href="{{product.url}}">
+            {% render 'product-tile-media-image',
+              media: product.featured_media,
+              shape_id: shape_id,
+              shape: shape,
+              is_card: display_on_card,
+              crop: crop,
+              hover_image: hover_image,
+              container_id: section.id,
+              quick_buy: enable_quick_buy,
+              product: product,
+              index: index
+            %}
+          </a>
+          
+          {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+          {% assign is_new = false %}
+          {% assign low_stock = false %}
+          {% assign back_stock = false %}
+          {% for tag in product.tags %}
+            {% if tag == 'new' %}
+              {% assign is_new = true %}
+            {% endif %}
+            {% if tag == 'new flavour' %}
+              {% assign is_new_flavour = true %}
+            {% endif %}
+            {% if tag == 'low_stock' %}
+              {% assign low_stock = true %}
+            {% endif %}
+            {% if tag == 'back_stock' %}
+              {% assign back_stock = true %}
+            {% endif %}
+            {% if tag == 'out of stock' %}
+              {% assign available = false %}
+            {% endif %}
+          {% endfor %}
+
+          {% if section_settings.use_badge_all_page %}
+            {% if section_settings.badge_label != blank %}
+              <div class="product_tag custom_40_badge" style="background-size: 100% 100%;background-color: {{ section.settings.badge_background_color }};left: unset;right: -2px;color: #BC261B;position: absolute;font-weight: bold;top: -2px;width: {{ section.settings.badge_size }}px;height: {{ section.settings.badge_size }}px;display: inline-grid;z-index: 1;position: absolute;text-align: center;align-items: center;color: {{ section.settings.badge_text_color }};border-radius: 50%;font-size: {{ section.settings.badge_text_size }}px;padding: 5px;" product.metafields.custom.discount_percentage>
+                {{ section.settings.badge_label }}
+              </div>
+            {% endif %}
+          {% endif %}
+          {% if available and is_new and template == 'collection' %}
+            <div class="product_tag" style="color: {{ settings.badge_text }}; background-color: {{ settings.badge_back }};"><ly-as-1374482>New</ly-as-1374482></div>
+          {% endif %}
+          {% if available and is_new_flavour and template == 'collection' %}
+            <div class="product_tag" style="color: {{ settings.badge_text }}; background-color: {{ settings.badge_back }};"><ly-as-1334526>New Flavour</ly-as-1334526></div>
+          {% endif %}
+          {% if available and low_stock and template == 'collection' %}
+            <div class="product_tag" style="color: #B85353; background-color: #FFD3AE;"><ly-as-1334527>Low Stock</ly-as-1334527></div>
+          {% endif %}
+          {% if available and back_stock and template == 'collection' %}
+            <div class="product_tag" style="color: #fff; background-color: #26D797;"><ly-as-1334528>Back in Stock</ly-as-1334528></div>
+          {% endif %}
+          {% if available == false and template == 'collection' %}
+            <div class="product_tag" style="color: #fff; background-color: #ff000080;"><ly-as-1334529>Sold Out</ly-as-1334529></div>
+          {% endif %}
+{% comment %}
+          <div class="p-2.5 lg:p-5 collection_hover_card table-small-hide text-center hover_card_{{ product.id }}">
+      
+            <div class="shop_now_btn">
+            <!-- <a href="{{ product.url }}" class="btn"><ly-as-1334530>Shop now</ly-as-1334530></a> -->
+                <button id="trigger-btn--{{ product.id }}" class="btn"><ly-as-1334531>Quick Add</ly-as-1334531></button>
+            </div>
+          </div>
+        {% endcomment %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="product-tile-info mt-5 break-words">
+      {% comment %}
+      {% if product.metafields.custom.review_product != blank %}
+      {% render 'junip-product-summary', product: all_products[product.metafields.custom.review_product] %}
+      {% else %}
+      {% render 'junip-product-summary', product: product %}
+      {% endif %}
+  {% endcomment %}
+      <h3 class="font-body text-base product_title text-white font-size-1_2rem-saturn">
+        <a href="{{product.url}}">
+          {{ product.title 
+            | remove: " - All-in-One Shake"
+            | remove: ' - Shake tout-en-un' 
+            | remove: 'Green Superfood Juice - ' 
+            | remove: 'Jus de superaliments verts - '
+            | remove: ' - Green Apple'
+            | remove: ' - Pomme verte'
+            | remove: '- Boisson tout-en-un'
+          }}
+        </a>
+      </h3> 
+      {% comment %}
+        {% render 'holiday-price',
+          product: product,
+          price_class: 'mt-1.5',
+          compare_at_price: compare_at_price,
+          price: price,
+          money_price: money_price,
+          on_sale: on_sale,
+          discounted_percent: discounted_percent
+        %}
+      {% endcomment %}
+      {% render 'holiday-price',
+        price_class: "mt-2",
+        compare_at_price: compare_at_price,
+        money_price: money_price,
+      %}
+    </div>
+{% comment %}    
+    <div class="product-price text-center font-bold-green-saturn" id="product-price-{{ product.id }}" data-base-price="{{ current_variant.price | money }}">
+        <span>{{ current_variant.price | money }}</span>
+      </div>
+{% endcomment %}
+ {% if enable_quick_buy %} 
+   {% unless product.has_only_default_variant %}
+      {% if product.variants.size > 0 %}
+        <div class="product-sizes mt-2 padding-1rem-saturn hhhhhh">
+          <select class="size-selector {% if product.variants.size == 1 %} _hide_arrow {% endif %}" data-product-id="{{ product.id }}" style="width: 100%;" {% if product.variants.size == 1 %} disabled {% endif %}>
+            {% for variant in product.variants %}
+              {% if variant.available %}
+                <div style="display: none"></div>
+                <option value="{{ variant.id }}" data-price="{{ variant.price }}">{{ variant.title }}</option>
+              {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+      {% endif %}
+    {% endunless %}   
+            <!-- Quick Buy Button with data attributes -->
+      <button id="quick-buy-btn-{{ product.id }}" class="quick-buy-btn-{{ product.id }}-saturn btn quick-buy-btn {% if request.path contains '/new-year-2025' %}new-year-2025-add-button-saturn{% endif %}" data-product-id="{{ product.id }}" data-variant-id="{{ current_variant.id }}">
+        Add
+      </button>
+
+   <style>
+      @media (min-width: 10px) and (max-width: 767px) {
+        .size-selector {
+          font-size: 12px !important;
+        }
+        button.btn.quick-buy-btn {
+          font-size: 14px !important;
+        }
+        .holiday-product-tile-saturn .size-selector {
+          padding: 0.5rem 0.7rem;
+        }        
+      }
+      .font-bold-green-saturn {
+        color: #278546;
+        font-weight: bold;
+        font-size: 20px;
+      }
+     .new-year-2025-add-button-saturn {
+       background: #C2E4F2 !important;
+       border-color: #EA1F59 !important;
+       font-family: Gelica Bk !important;
+     }
+    </style>
+{% endif %}
+    {% comment %}
+    <img src="{{ 'minuse_25.png' | asset_url }}" alt="-25%" style="position: absolute;right: 0;" />
+    <img src="{{ discount_badge | image_url }}" loading="lazy" alt="-25%" style="position: absolute;right: 0;"  />
+    {% endcomment %}
+    
+    <ul>
+      {% for value in product %}
+        <li><strong>{{ value }}:</strong></li>
+      {% endfor %}
+    </ul>
+    
+    <div x-ref="modalContent">
+      <template data-should-teleport="#quickview-container">
+        <div {% if enable_quick_buy %}
+          x-data="
+          ThemeSection_ProductQuickBuy({
+            product: {{ product | json | escape }},
+            variant: {{ current_variant | json | escape }},
+            featuredMediaID: {{ featured_media.id | json }}
+          })"
+        {% endif %} 
+        id="quickview-content--{{product.id}}" class="product-quickview-content">
+          <div class="info">
+            {% if settings.product_tiles_show_vendor %}
+              <p class="mt-1">{{ product.vendor }}</p>
+            {% endif %}
+            {% if product.metafields.custom.review_product != blank %}
+            {% render 'junip-product-summary', product: all_products[product.metafields.custom.review_product] %}
+            {% else %}
+            {% render 'junip-product-summary', product: product %}
+            {% endif %}
+            <h3 class="font-body text-base product_title text-white">
+              {% if product.title contains 'All-in-One Shake' %}
+                  All-in-One Shake
+                {% elsif product.title contains 'Shake tout-en-un' %}
+                  Shake tout-en-un
+                {% else %} 
+                  {{ product.title }}
+                {% endif %}
+            </h3> 
+
+            <p class="subtitle" >{{product.metafields.custom.collection_sub_text}}</p>
+
+            <div class="purchase">
+                <div class="product-block product-block-price  text-lg  text-left">
+                  {% render 'product-block-price',
+                    product: product,
+                    block: block,
+                    block_base_classes: block_base_classes,
+                    discounted_percent: discounted_percent
+                  %}
+                </div>
+                
+                {% if enable_quick_buy %}
+                  <div>
+                  {% render 'product-tile-quick-buy'
+                    section: section,
+                    product: product,
+                    parent_collection: parent_collection,
+                    product_form_id: product_form_id,
+                    current_variant: current_variant,
+                    is_card: display_on_card
+                  %}
+                  </div>
+                {% endif %}
+            </div>
+            <div class="bottom justify-center">
+              <a class="text-center" href="{{product.url}}"><ly-as-1334534>See details</ly-as-1334534></a>
+            </div>
+          </div>
+          
+          <div data-section-type="pdp-usps-bar" class="product-section product-usps product-section-padding background--true pdp-color-scheme-15">
+            <svg width="583" height="47" viewBox="0 0 583 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M291.379 10.6961C394.095 27.0552 528.966 21.8055 585 10.6961V47H0V10.6961C55.2874 -0.413231 183.997 -6.4061 291.379 10.6961Z" fill="#FFEDB2"/>
+            </svg>              
+            <div class="page-width">
+              <div class="inner-product-section inner-product-usps">
+                
+                  <div class="product-usps-col-1 one-third-product">
+                    <div class="product-section-box product-usps-box">
+                      <div class="product-usps-icon">
+                        
+                          <figure><img src="//goodprotein.ca/cdn/shop/files/pd-17.png?height=35&amp;v=1699905662" alt="" srcset="//goodprotein.ca/cdn/shop/files/pd-17.png?height=35&amp;v=1699905662&amp;width=37 37w" width="37" height="35" lazy="loading"></figure>
+                        
+                      </div>
+                      <div class="product-usps-content">
+                        <h4><ly-as-1334535>16,000+ Verified Reviews</ly-as-1334535></h4>
+                        <p><ly-as-1334536>4.81 out of 5 stars average.</ly-as-1334536></p>
+                      </div> 
+                    </div>
+                  </div>
+                
+                  <div class="product-usps-col-1 one-third-product">
+                    <div class="product-section-box product-usps-box">
+                      <div class="product-usps-icon">
+                        
+                          <figure><img src="//goodprotein.ca/cdn/shop/files/pd-18.png?height=35&amp;v=1699905662" alt="" srcset="//goodprotein.ca/cdn/shop/files/pd-18.png?height=35&amp;v=1699905662&amp;width=35 35w" width="35" height="35" lazy="loading"></figure>
+                        
+                      </div>
+                      <div class="product-usps-content">
+                        <h4><ly-as-1334537>60-Day Satisfaction Guarantee</ly-as-1334537></h4>
+                        <p><ly-as-1334538>If you don’t love it, you don’t pay for it.</ly-as-1334538></p>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="product-usps-col-1 one-third-product">
+                    <div class="product-section-box product-usps-box">
+                      <div class="product-usps-icon">
+                        
+                          <figure><img src="//goodprotein.ca/cdn/shop/files/pd-19.png?height=35&amp;v=1699905662" alt="" srcset="//goodprotein.ca/cdn/shop/files/pd-19.png?height=35&amp;v=1699905662&amp;width=35 35w" width="35" height="35" lazy="loading"></figure>
+                        
+                      </div>
+                      <div class="product-usps-content">
+                        <h4><ly-as-1334539>Over 10 Million Shakes Sold</ly-as-1334539></h4>
+                        <p><ly-as-1334540>And more than 10 million cravings curbed.</ly-as-1334540></p>
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+    {% if settings.show_on_sale_and_sold_out_badges %}
+      {% if on_sale %}
+        {% liquid
+          assign text = 'products.product.on_sale' | t
+          assign id = 'on-sale-sticker-' | append: product.id
+          assign shape = settings.on_sale_badge_shape
+          assign vertical_position = 15
+          assign horizontal_position = 90
+          if rotate > 0
+            assign rotate = -5
+          else
+            assign rotate = 5
+          endif
+          if display_on_card
+            assign vertical_position = 5
+          endif
+        %}
+        {% render 'static-sticker',
+          static_id: 'on-sale',
+          shape: shape,
+          id: id,
+          text: text,
+          vertical_position: vertical_position,
+          horizontal_position: horizontal_position,
+          rotate: rotate,
+          width: 100,
+          font_size: '1.563rem',
+          color: 'bg-scheme-accent text-scheme-accent-overlay'
+        %}
+      {% endif %}
+      {% unless available %}
+        {% liquid
+          assign text = 'products.product.sold_out' | t
+          assign id = 'sold-out-sticker-' | append: product.id
+          assign vertical_position = 15
+          assign horizontal_position = 10
+          if rotate > 0
+            assign rotate = -5
+          else
+            assign rotate = 5
+          endif
+          if display_on_card
+            assign vertical_position = 5
+          endif
+        %}
+        {% render 'static-sticker',
+          static_id: 'sold-out',
+          id: id,
+          text: text,
+          vertical_position: vertical_position,
+          horizontal_position: horizontal_position,
+          rotate: rotate,
+          width: 100,
+          font_size: '1.563rem',
+          color: 'bg-scheme-text text-scheme-text-overlay'
+        %}
+      {% endunless %}
+    {% endif %}
+    {% assign metafield_badge = settings.product_tile_metafield_badge %}
+    {% if product.metafields.shapes_theme[metafield_badge] != blank %}
+      {% liquid
+        assign text = product.metafields.shapes_theme[metafield_badge].value
+        assign id = 'metafield-sticker-' | append: product.id
+        assign shape = settings.metafield_badge_shape
+        assign vertical_position = 15
+        if display_on_card
+          assign vertical_position = 5
+        endif
+        if on_sale and available
+          assign horizontal_position = 10
+        else
+          assign horizontal_position = 90
+        endif 
+        if on_sale and sold_out
+          if display_on_card
+            assign vertical_position = 30
+          else
+            assign vertical_position = 40
+          endif
+        endif
+        if rotate > 0
+          assign rotate = -5
+        else
+          assign rotate = 5
+        endif
+      %}
+      {% render 'static-sticker',
+        static_id: 'metafield-badge',
+        id: id,
+        text: text,
+        vertical_position: vertical_position,
+        horizontal_position: horizontal_position,
+        rotate: rotate,
+        width: 100,
+        font_size: '1.563rem',
+        color: 'bg-scheme-accent text-scheme-accent-overlay'
+      %}
+    {% endif %}
+  </div>
+</div>
+{% else %}
+<div class="product-tile {{ class }} {% if display_on_card %}text-scheme-text card-container{% endif %}" x-data="{ hover: false }"  @mouseleave="hover = false" @mouseover="hover = true" @focusin="hover = true" @focusout="hover = false">
+  <div class="{% if display_on_card %}bg-scheme-card card p-5 h-full{% endif %}">
+    <div class="relative {% unless display_on_card %}{% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}{% endunless %}">
+      {% render 'media-image-placeholder', shape_id: shape_id, container_id: section.id, index: index, shape: shape, crop: crop, is_card: section.settings.display_on_card %}
+    </div>
+    <div class="text-white product-tile mt-5 text-center">
+      <h3 class="font-body text-base">{{ 'sections.onboarding.product_title' | t }}</h3>
+      {% render 'holiday-price', price_class: "mt-2" %}
+    </div>
+  </div>
+  {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+</div>
+{% endif %}
+
+<style>
+  .holiday-product-tile-saturn {
+    background: rgba(255,255,255,0.6);
+    border-radius: 1rem;
+  }
+  .holiday-product-tile-saturn>div {
+    display: flex;
+    flex-direction: column;
+  }
+  .holiday-product-tile-saturn .product-tile-image {
+    background: rgba(0,0,0,0) !important;
+  }
+  .holiday-product-tile-saturn .product-tile_cover {
+    background: rgba(0,0,0,0) !important;
+  }
+  .holiday-product-tile-saturn h3 {
+    text-align: center;
+  }
+  .font-size-1_2rem-saturn {
+    font-size: 1.2rem !important;
+  }
+  .holiday-product-tile-saturn .size-selector {
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: red;
+  }
+  .padding-1rem-saturn {
+    padding: 0 1rem;
+  }
+  .holiday-product-tile-saturn button {
+    margin: 1rem 2rem;
+    padding: 0.5rem;
+    color: red;
+    border: 2px solid;
+  }
+</style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Listen for changes in all size selectors
+  document.querySelectorAll(".size-selector").forEach(function(selector) {
+    selector.addEventListener("change", function(event) {
+      const selectedVariantId = event.target.value;
+      const productId = event.target.getAttribute("data-product-id");
+      [ ...document.querySelectorAll(`#quick-buy-btn-${productId}`) ].forEach(quickBuyButton => {
+        // console.log(quickBuyButton, "pppppppppppppppp", "quickBuyButton");
+        if (quickBuyButton) {
+          quickBuyButton.setAttribute("data-variant-id", selectedVariantId);
+        }
+  
+        // Update the product variant id
+        const productTile = document.querySelector(`#product-tile-${productId}`);
+        if (productTile) {
+          productTile.setAttribute("data-variant-id", selectedVariantId);
+        }
+        
+        // Update the price display with the selected variant's price
+        const selectedOption = event.target.options[event.target.selectedIndex];
+        const variantPrice = selectedOption.getAttribute("data-price");
+        const priceContainer = document.querySelector(`#product-price-${productId} span`);
+        if (priceContainer) {
+          priceContainer.innerHTML = formatPrice(variantPrice);
+        }
+        const priceContainer2 = quickBuyButton.parentElement.querySelector('.price-item.price-item--regular.font-bold');
+        // console.log(priceContainer2, "pppppppppppppppppppppp", formatPrice(variantPrice), quickBuyButton);
+        if (priceContainer2) {
+          console.log(priceContainer2, "formatPrice(variantPrice)", formatPrice(variantPrice));
+          priceContainer2.innerHTML = formatPrice(variantPrice);
+        }
+
+        const priceContainer3 = quickBuyButton.parentElement.querySelector('.price-item.price-item--regular');
+        // console.log(priceContainer3, ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
+        if (priceContainer3) {
+          priceContainer3.innerHTML = formatPrice(variantPrice);
+        }
+      });
+
+      window.dispatchEvent(new CustomEvent('abra:render'))      
+    });
+  });
+
+  // Quick Buy button functionality
+  document.querySelectorAll(".quick-buy-btn").forEach(function(button) {
+    button.addEventListener("click", function(event) {
+      const variantId = event.target.getAttribute("data-variant-id");
+
+      // Example function to handle adding to cart
+      addToCart(variantId);
+    });
+  });
+
+  // Function to handle adding a product variant to the cart
+  function addToCart(variantId) {
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: variantId, quantity: 1 })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Optionally, handle success (like updating cart UI)
+    //  alert("Product added to cart!");
+    })
+    .catch(error => {
+      console.error("Error adding to cart:", error);
+    });
+  }
+
+  // Function to format the price as currency (assuming Shopify's default currency format)
+  function formatPrice(price) {
+    const formattedPrice = (price / 100).toFixed(2); // Adjust for Shopify's cents-based prices
+    return `$${formattedPrice}`; // Add currency symbol as needed
+  }
+});
+
+</script>            

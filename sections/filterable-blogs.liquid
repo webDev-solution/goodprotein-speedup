@@ -1,0 +1,871 @@
+{%- liquid
+  assign block_heading_level = 'h2'
+  assign icons = section.blocks | where: "type", "icon"
+-%}
+
+{% style %}
+.section-{{ section.id }}-settings {
+  margin: 0 auto;
+  padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+  padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  padding-left: {{ section.settings.padding_horizontal_mobile }}rem;
+  padding-right: {{ section.settings.padding_horizontal_mobile }}rem;
+}
+@media screen and (min-width: 750px) {
+  .section-{{ section.id }}-settings {
+    padding: 0 5rem;
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-left: {{ section.settings.padding_horizontal }}rem;
+    padding-right: {{ section.settings.padding_horizontal }}rem;
+  }
+}
+{% endstyle %}
+
+{%- liquid
+  assign block_heading_level = 'h2'
+  assign crop = section.settings.crop 
+  assign divisible_by_four =  section.settings.post_limit | modulo: 4
+  assign divisible_by_three =  section.settings.post_limit | modulo: 3
+  if divisible_by_four == 0
+    assign col_span = 'lg:col-span-2'
+  elsif divisible_by_three == 0
+    assign col_span = 'lg:col-span-4'
+  else
+    assign col_span = 'lg:col-span-6'
+  endif
+-%}
+
+   
+<section class="section-{{ section.id }}-settings relative text-scheme-text bg-scheme-background {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} relative overflow-hidden" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" >
+  <div class="custom-sec section-content relative z-10 py-section-vertical-spacing px-section max-w-site mx-auto">
+  <form>
+    {% if blog.all_tags.size > 0 %}
+       <div class="filter_tab">     
+        <div class="filter_tab_wrap" style="background-color: {{section.settings.color_tags_bg}}">
+          <ul class=" text-left">
+             {% assign all_tags = section.settings.tags | split: ", " %}
+   
+           {% for tag in all_tags %}
+                <li><label><input class="recipe-checkbox" type="checkbox" name="fl-colour" value="{{ tag | handle }}" id="{{ tag | handle }}" /> <span>{{ tag }}</span></label></li>
+           {% endfor %}  
+          </ul>
+        </div>
+       </div>
+    {% endif %}
+  </form> 
+
+
+{%- assign blog = blogs[section.settings.blog] -%}
+<div class="recipes">
+  {% paginate blog.articles by 100 %}
+<ul id="AjaxinatePagination2" class="section-content-top-margin grid grid-cols-3 lg:grid-cols-10 gap-4 list custom-gap-2">
+     
+      {% for article in blog.articles %}
+        {% comment if article.tags contains 'Smoothies' or article.tags contains 'Smoothie bowls' or article.tags contains 'Snacks' or article.tags contains 'Shakes'
+         or article.tags contains 'Bowls' or article.tags contains 'Baked goods' or article.tags contains 'Prebiotics' or article.tags contains 'Keto' %}
+       {% endcomment %}
+         {%- liquid
+          assign shape_id = section.id
+          if section.settings.image_shape == 'blob'
+            assign shape_id = section.id | append: '-' | append: forloop.index0
+          endif
+        -%}
+      {% unless article.tags contains 'Featured' %}
+      <li class="recipe filter {{ col_span }} {% if section.settings.display_on_card %}text-scheme-text card-container card-layout{% endif %}" 
+      data-category="{% for tag in article.tags %}{{ tag | handle }} {% endfor %}" {{ block.shopify_attributes }} {{ article.title }}>
+        <div class="relative {% if section.settings.display_on_card %}card card-inner p-0{% endif %} text-left">
+          {%- if article.image -%}
+            <div class="mb-0 {% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}">
+              <a href="{{ article.url }}">
+              {%- render 'media-image',
+                  media: article.image,
+                  shape: section.settings.image_shape,
+                  shape_id: shape_id,
+                  is_card: section.settings.display_on_card,
+                  crop: crop,
+                  container_id: section.id,
+                  index: forloop.index0
+              -%}
+            </a> 
+            </div>
+            {%- else -%}
+            <div class="mb-0 {% if settings.media_shadow_direction contains 'top' %}pt-media-shadow{% else %}pb-media-shadow{% endif %}">
+              <a href="{{ article.url }}">
+              {%- render 'media-image-placeholder',
+                  media: article.image,
+                  shape: section.settings.image_shape,
+                  shape_id: shape_id,
+                  is_card: section.settings.display_on_card,
+                  crop: crop,
+                  container_id: section.id,
+                  index: forloop.index0
+              -%}
+            </a> 
+            </div>
+          {%- endif -%}
+        </div>
+        {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}<div class="card-border"></div>{% endif %}
+      </li>
+      {% endunless %}
+  
+      
+       {% comment %}  
+        {% endif %}
+       {% endcomment %}  
+        {% endfor %}
+    </ul>
+    {% endpaginate %}
+  <div class="mt-10 text-center relative z-10">
+     <button class="inline-block push-btn" id="next"><span class="push-btn-surface">Load More</span></button>
+  </div>
+
+    {%- if section.settings.show_view_all and section.settings.post_limit < section.settings.blog.articles_count -%}
+    <div class="mt-10 text-center relative z-10">
+      <a href="{{ section.settings.blog.url }}" class="inline-block push-btn">
+        <span class="push-btn-surface">{{ 'blogs.article.read_more' | t }}</span>
+      </a>
+    </div>
+    {%- endif -%}
+    <div id="AjaxinatePagination2">
+      {% if paginate.next %}
+        <a class="inline-block push-btn" href="{{ paginate.next.url }}"><span class="push-btn-surface">Load More</span></a>
+      {% endif %}
+    </div>            	
+</div>
+ 
+</div>
+</section>
+  
+<style>
+
+  @media only screen and (min-width: 600px){
+.custom-sec {
+      max-width: 1000px;
+    margin: auto;
+  padding: 0;
+}
+    .filter_tab ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 50px;
+        gap: 15px;
+}
+    .custom-gap-2 {
+       gap: .7rem;
+     }
+  }
+
+   @media   only screen and (max-width: 599px){
+      .filter_tab_wrap ul{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        row-gap: 5px;
+      }
+     .custom-gap-2 {
+       gap: .3rem;
+     }
+
+   }
+
+  .filter_tab .filter_tab_wrap {
+    padding: 20px;
+    border-radius: 50px;
+}
+  
+  
+.ajax-load-more {
+  font-weight: bold;
+  font-size: 18px;
+  min-width: 200px;
+  padding: 20px;
+  color: var(--white);
+  background: var(--green);
+}
+
+input[type="checkbox"] {
+    accent-color: #fecb29;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+}
+  
+.continents-wrap {
+  float:left;
+  width:20%;
+  margin:0 5% 0 0;
+  padding:0;
+}		
+.flowers-wrap {
+  float:left;
+  width:20%;
+  margin:0 5% 0 0;
+  padding:0;
+  position:relative;
+}	
+.flowers {
+  float:left;
+  width:50%;
+}
+.flowers div {
+  float:left;
+  width:90%;
+  height:68px;
+  line-height:68px;
+  padding:0 5%;
+  background:#eee;
+  margin:0 0 1px;
+  position:relative;
+}	
+  @media (min-width: 989px)
+  {
+.mobile_filter_blog {
+    overflow: hidden;
+    height: 0;
+    transition: height .3s ease;
+  display: none;
+  opacity: 0;
+}
+  }
+
+  .filter_title {
+    position: absolute;
+    top: 15px;
+    font-size: 18px;
+    margin-left: calc(50% - 30px);
+  }
+  .mobile_filter_blog  {
+    width: 100%;
+  }
+  
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: #fff5d6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+  .recipe:not(.filter){
+    display: none !important;
+  }
+</style>
+
+<script>
+
+  $(document).ready(function(){
+
+      var list = $(".list .filter");
+      var numToShow = 20;
+      var button = $("#next");
+      var numInList = list.length;
+      list.hide();
+      if (numInList > numToShow) {
+        button.show();
+      }
+      list.slice(0, numToShow).show();
+
+      button.click(function(){
+          var showing = list.filter(':visible').length;
+          list.slice(showing - 1, showing + numToShow).fadeIn();
+          var nowShowing = list.filter(':visible').length;
+          if (nowShowing >= numInList) {
+            button.hide();
+          }
+      });
+
+});
+  
+
+// const list = document.querySelector("#AjaxinatePagination2");
+// const listItems = list.querySelectorAll("li");
+// const ajaxLoadMoreBtn = document.querySelector(".ajax-load-more");
+
+// let k = 6;
+// let j = 10;
+
+// ajaxLoadMoreBtn.addEventListener("click", function () {
+//   let range = `.filter:nth-child(n+${k}):nth-child(-n+${j})`;
+//   list
+//     .querySelectorAll(range)
+//     .forEach((elem) => (elem.style.display = "block"));
+
+//   if (listItems.length <= j) {
+//     this.remove();
+//   } else {
+//     k += 5;
+//     j += 5;
+//   }
+// });
+
+  
+</script>
+
+<script>
+
+var $filterCheckboxes = $('input[type="checkbox"]');
+var filterFunc = function() {
+  
+  var selectedFilters = {};
+
+  $filterCheckboxes.filter(':checked').each(function() {
+
+    if (!selectedFilters.hasOwnProperty(this.name)) {
+      selectedFilters[this.name] = [];
+    }
+
+    selectedFilters[this.name].push(this.value);
+  });
+
+  // create a collection containing all of the filterable elements
+  var $filteredResults = $('.recipe');
+
+  // loop over the selected filter name -> (array) values pairs
+  $.each(selectedFilters, function(name, filterValues) {
+
+    // filter each .flower element
+    $filteredResults = $filteredResults.filter(function() {
+      
+      var matched = false,
+        currentFilterValues = $(this).data('category').split(' ');
+
+      // loop over each category value in the current .flower's data-category
+      $.each(currentFilterValues, function(_, currentFilterValue) {
+
+        // if the current category exists in the selected filters array
+        // set matched to true, and stop looping. as we're ORing in each
+        // set of filters, we only need to match once
+
+        if ($.inArray(currentFilterValue, filterValues) != -1) {
+         
+          matched = true;
+          return false;
+        }
+      });
+    
+      // if matched is true the current .flower element is returned
+      return matched;
+    });
+  });
+  $('.recipe').removeClass('filter').filter($filteredResults).addClass('filter');
+  $('.recipe').hide().filter($filteredResults).show();
+ // $('.recipe').filter($filteredResults).addClass('active');
+
+  var list = $(".list .filter");
+      var numToShow = 20;
+      var button = $("#next");
+      var numInList = list.length;
+      list.hide();
+      if (numInList > numToShow) {
+        button.show();
+      }
+      list.slice(0, numToShow).show();
+      button.click(function(){
+          var showing = list.filter(':visible').length;
+          list.slice(showing - 1, showing + numToShow).fadeIn();
+          var nowShowing = list.filter(':visible').length;
+          if (nowShowing >= numInList) {
+            button.hide();
+          }
+      });
+}
+
+$filterCheckboxes.on('change', filterFunc);  
+
+
+  
+</script>
+
+{% schema %}
+{
+  "name": "Filterable Blog",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "display_on_card",
+      "label": "Display posts on cards",
+      "default": true
+    },
+    
+    {
+      "id": "blog",
+      "type": "blog",
+      "label": "Blog"
+    },
+    {
+      "id": "tags",
+      "type": "liquid",
+      "label": "Tags",
+      "default": "Smoothies, Smoothie bowls, Snacks, Shakes, Bowls, Baked goods, Prebiotics, Keto"
+    },
+    {
+      "type": "color",
+      "id": "color_tags_bg",
+      "label": "Tag list background color",
+      "default": "#ffe89e"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "label": "Posts",
+      "min": 3,
+      "max": 12,
+      "step": 3,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "crop",
+      "label": "Crop images",
+      "options": [
+        {
+          "value": "",
+          "label": "No crop"
+        },
+        {
+          "value": "aspect-w-4 aspect-h-3",
+          "label": "Landscape"
+        },
+        {
+          "value": "aspect-w-1 aspect-h-1",
+          "label": "Square"
+        },
+        {
+          "value": "aspect-w-3 aspect-h-4",
+          "label": "Portrait"
+        }
+      ],
+      "default": "aspect-w-4 aspect-h-3"
+    },
+    {
+      "type": "select",
+      "id": "image_shape",
+      "label": "Image shape",
+      "options": [
+        {
+          "value": "default",
+          "label": "Default",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_ellipse",
+          "label": "Ellipse",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_pill",
+          "label": "Pill",
+          "group": "Fit to image"
+        },
+        {
+          "value": "default_archway",
+          "label": "Archway",
+          "group": "Fit to image"
+        },
+        {
+          "value": "diamond",
+          "label": "Diamond",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_1",
+          "label": "Triangle 1",
+          "group": "Basic"
+        },
+        {
+          "value": "triangle_2",
+          "label": "Triangle 2",
+          "group": "Basic"
+        },
+        {
+          "value": "pentagon",
+          "label": "Pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "hexagon",
+          "label": "Hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "heptagon",
+          "label": "Heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "octagon",
+          "label": "Octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_pentagon",
+          "label": "Rounded pentagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_hexagon",
+          "label": "Rounded hexagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_heptagon",
+          "label": "Rounded heptagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "rounded_octagon",
+          "label": "Rounded octagon",
+          "group": "Polygons"
+        },
+        {
+          "value": "star_1",
+          "label": "Star 1",
+          "group": "Circular"
+        },
+        {
+          "value": "star_2",
+          "label": "Star 2",
+          "group": "Circular"
+        },
+        {
+          "value": "star_3",
+          "label": "Star 3",
+          "group": "Circular"
+        },
+        {
+          "value": "star_4",
+          "label": "Star 4",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_1",
+          "label": "Scalloped circle 1",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_2",
+          "label": "Scalloped circle 2",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_3",
+          "label": "Scalloped circle 3",
+          "group": "Circular"
+        },
+        {
+          "value": "scalloped_circle_4",
+          "label": "Scalloped circle 4",
+          "group": "Circular"
+        },
+        {
+          "value": "parallelogram",
+          "label": "Parallelogram",
+          "group": "Square"
+        },
+        {
+          "value": "scalloped_square",
+          "label": "Scalloped",
+          "group": "Square"
+        },
+        {
+          "value": "leaf",
+          "label": "Leaf",
+          "group": "Square"
+        },
+        {
+          "value": "clipped_square",
+          "label": "Clipped",
+          "group": "Square"
+        },
+        {
+          "value": "convex_square",
+          "label": "Convex",
+          "group": "Square"
+        },
+        {
+          "value": "twisted_square",
+          "label": "Twisted",
+          "group": "Square"
+        },
+        {
+          "value": "trapeze",
+          "label": "Trapeze",
+          "group": "Square"
+        },
+        {
+          "value": "blob",
+          "label": "Blob",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag",
+          "label": "Zig zag",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "zig_zag_tear",
+          "label": "Zig zag tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wave_tear",
+          "label": "Wave tear",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "flower",
+          "label": "Flower",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "concave",
+          "label": "Concave",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "cross",
+          "label": "Cross",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "quatrefoil",
+          "label": "Quatrefoil",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "wind",
+          "label": "Wind",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "heart",
+          "label": "Heart",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "mirrored_pyramids",
+          "label": "Mirrored pyramids",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "plus",
+          "label": "Plus",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "double_pill",
+          "label": "Double pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "triple_pill",
+          "label": "Triple pill",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "crown",
+          "label": "Crown",
+          "group": "Miscellaneous"
+        },
+        {
+          "value": "abstract_star",
+          "label": "Abstract star",
+          "group": "Miscellaneous"
+        }
+      ],
+      "info": "Selecting some shapes will crop the image. [Learn more](https://help.switchthemes.co/shapes/guides/style-images-with-shapes.html)"
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_author",
+      "label": "Show author",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_show_date",
+      "label": "Show date",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_post_excerpt",
+      "label": "Show post excerpt",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": true,
+      "label": "Enable \"View all\" button if blog includes more blog posts than shown"
+    },
+    
+    
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 50,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Icon max width",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "label": "Text style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Body"
+        },
+        {
+          "value": "heading",
+          "label": "Heading"
+        }
+      ],
+      "default": "body"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color Scheme"
+      },
+    {
+      "type": "checkbox",
+      "id": "use_gradient_background",
+      "label": "Use gradient for background"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding (inside)"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+       "type": "range",
+       "id": "padding_bottom",
+       "min": 0,
+       "max": 100,
+       "step": 4,
+       "unit": "px",
+       "label": "Padding Bottom",
+       "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "rem",
+      "label": "Padding Sides",
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal_mobile",
+      "min": 0,
+      "max": 15,
+      "step": 0.5,
+      "unit": "rem",
+      "label": "Padding Sides mobile",
+      "default": 1.5
+    }
+  ],
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Icon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Blog Category Link",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Filterable Blog",
+      "blocks": [
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        },
+        {
+          "type": "icon"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

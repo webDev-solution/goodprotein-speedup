@@ -1,0 +1,368 @@
+<div class="{{ block_base_classes }}" {{ block.shopify_attributes }}>
+  {% form 'product',
+    product,
+    id: product_form_id,
+    data-product-form: '',
+    data-product-handle: product.handle,
+    data-enable-history-state: 'true',
+    data-product-form: '',
+    x-ref: 'productForm'
+   ,data-loop-product-id:product.id %}
+{% comment %}
+  DO NOT modify this source code
+  LOOP WIDGET CODE STARTS
+{% endcomment %}
+{% assign template_exists = false %}
+{% capture template_content %}
+    {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endcapture %}
+
+{% if template_content contains 'Rendering loop-subscriptions' %}
+  {% assign template_exists = true %}
+{% endif %}
+
+{% if template_exists %}
+  {% render 'loop-subscriptions', type: 'product-widget', product: product %}
+{% endif %}
+    <div class="mb-2.5 payment_terms">
+      {{ form | payment_terms }}
+    </div>
+
+    <div class="{% if product.has_only_default_variant %}hidden{% else %}no-js{% endif %}">
+      <label class="{{ label_class }}" for="fallback-selector-{{ section.id }}">Variant</label>
+
+    {% if template == 'product.lp-product-shakes' %}
+      <input type="hidden" class="shakes_input_hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"
+      data-price="{{ product.variants[0].id }}"
+      data-done="{{ product.variants[1].id }}"
+      data-dtwo="{{ product.variants[2].id }}"
+      data-dthree="{{ product.variants[3].id }}">
+      {% else %}
+      <select x-ref="singleVariantSelector" name="id" id="fallback-selector-{{ section.id }}" class="font-secondary text-sm">
+        {% for variant in product.variants %}
+          <option
+            {% if variant == current_variant %}selected="selected"{% endif %}
+            {% unless variant.available %}disabled="disabled"{% endunless %}
+            x-bind:selected="currentVariantId === {{ variant.id }}"
+            value="{{ variant.id }}"
+          >
+            {{ variant.title }}
+          </option>
+        {% endfor %}
+      </select>
+      {% endif %}
+    </div>
+
+    {%- liquid
+      assign enable_payment_buttons = block.settings.enable_payment_button
+      assign button_text = 'products.product.add_to_cart' | t
+      if template == 'product.preorder'
+        assign enable_payment_buttons = false
+        assign button_text = 'products.product.preorder' | t
+      endif
+    -%}
+
+    {% if enable_payment_buttons %}
+      {% capture add_to_cart_class %}push-btn-surface push-btn-surface--secondary w-full{% endcapture %}
+    {% else %}
+      {% capture add_to_cart_class %}push-btn-surface w-full{% endcapture %}
+    {% endif %}
+
+    <div
+      class="wrap_quanty_btn"
+      {% if has_sticky_buy_buttons %}
+      x-intersect:enter="stickyAddToCartShown = false"
+      x-intersect:leave="stickyAddToCartShown = true"
+      {% endif %}
+    >
+      {% unless block.settings.hide_quantity %}
+        {% render 'product-block-quantity',
+          product_form_id: product_form_id,
+          label_class: label_class,
+          block: block,
+          block_base_classes: 'product-block-quantity',
+        %}  
+      {% endunless %}
+         
+      <div class="w-full">
+        <button
+          class="mb-1 push-btn-surface w-full add-to-cart-btn {% if template == 'product.lp-product-shakes' %} lp_shakes_button {% endif %}{% if product.available %}push-btn theme-button{% else %}btn text-sm lg:text-base after:hidden bg-scheme-secondary-background text-scheme-text{% endif %} theme-button w-full
+          {% if current_variant.available == false or product.tags contains 'out of stock' %}cursor-not-allowed{% endif %}"
+          type="submit"
+          :class="{ 'cursor-not-allowed': !currentVariantAvailable }"
+          :disabled="!currentVariantAvailable"
+          :aria-label="addToCartText"
+          {% if current_variant.available == false or product.tags contains 'out of stock' %}disabled="disabled"{% endif %}
+              data-cid="{{ product.selected_or_first_available_variant.id }}"
+        >
+          <span x-show="currentVariantAvailable">{{ button_text }}</span>
+          <span x-show="!currentVariantAvailable" style="display: none;">{{ 'products.product.sold_out' | t }}</span>
+          {%- if block.settings.show_price -%}
+
+            {% if product.metafields.custom.discount != blank %}
+              {% assign discount = product.metafields.custom.discount %}
+            {% else %}
+              {% assign discount = settings.discount %}
+            {% endif %}
+
+            <span x-show="currentVariantAvailable">&nbsp;&#8211;&nbsp;</span>
+            <span x-show="currentVariantAvailable" x-html="formatMoney((current_price - current_price * {{discount}} / 100))">{{ current_variant.price | money }}</span>
+            {% if product.compare_at_price_max > product.price %}
+              <template  x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
+                <span x-show="currentVariantAvailable" class="{{ price_text_size }}">
+                  <span class="sr-only">{{ 'products.general.sale_price' | t }}</span>
+                  <s data-compare-price
+                    x-html="formatMoney(current_variant.compare_at_price)">
+                    {% if current_variant.compare_at_price > current_variant.price %}
+                      {{ current_variant.compare_at_price | money }}
+                    {% endif %}
+                  </s>
+                </span>
+              </template>
+            {% endif %}
+          {%- endif -%}
+        </button>
+        {% if template == 'product.lp-product-shakes' %}
+          <!--
+              <a href="javascript:void(0);" class="push-btn-surface continue_to_checkout_shakes" style="width: 100%;margin-top: 10px;" disabled>
+                <svg  xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-10 0v-4c0-2.206 1.794-4 4-4s4 1.794 4 4v4h-8z"/></svg> Checkout
+              </a>  -->
+
+              <a href="javascript:void(0);" class="product-cart push-btn-surface continue_to_checkout_shakes gray-btn" style="width: 100%;margin-top: 10px;" disabled>
+                Select at least 1 bag
+              </a>
+
+              <div class="alert_message_shakes rte" style="margin-top: 16px;display:none;">
+      {{ 'products.product.added_to_cart' | t }}!
+            {{ 'products.product.add_to_cart_confirm_html' | t: cart_url: routes.cart_url, link_url: routes.all_products_collection_url }}.
+              </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- 
+      date: 11/27/2024,
+      action: add
+      section: collectafreerecipebookwhenyouaddthisitemtothecart
+      search: *****************************************************
+    -->
+    <div class="recipe-book-section">
+      <div class="notice-recipe-book">Get a Free Recipe Book with your order!</div>
+      {% assign product = all_products['digital-recipe-book'] %}
+      <div class="recipe-book-products">
+        <!-- Dynamically fetch or hardcode the related products here -->
+      {% if product != blank and product.available %}        
+        <div class="product-item-image available_produt">
+          {% if product.media[0] %}
+            <img src="{{ product.media[0].preview_image | img_url: '300x300' }}" alt="{{ product.title }}">
+          {% endif %}
+        </div>
+        <div class="product-item-label">
+          <p>{{ product.title }}</p>
+          <p class="price-container-sa">$ {{ product.price }} &nbsp;&nbsp; <span class="plan-price-sa">$ 14.99</span></p>
+        </div>
+        <!-- Add more products as needed -->
+      {% elsif product == blank %}
+        <div class="product-item-image">         
+            <img src="//goodprotein.ca/cdn/shop/files/Screenshot2024-10-21at4.48.28PM_300x300.png?v=1729626853" alt="Free Digital Recipe Book">
+        </div>
+        <div class="product-item-label">
+          <p>Free Digital Recipe Book</p>
+          <p class="price-container-sa">$ 0 &nbsp;&nbsp; <span class="plan-price-sa">$ 14.99</span></p>
+        </div>
+       {% endif %}
+      </div>
+    </div>
+    <!-- ***************************************************** end [collectafreerecipebookwhenyouaddthisitemtothecart] -->
+    
+    {% if product.metafields.custom.payment_text != blank %}
+    <p class="mt-2" >{{product.metafields.custom.payment_text}}</p>
+    {% endif %}
+   
+    {% if enable_payment_buttons %}
+      <div class="dynamic-payment-buttons mt-5 {% if settings.button_drop_shadow_size > 0 %}{{ settings.button_shadow_direction | replace: '_', ' ' }}{% endif %}">
+        {{ form | payment_button }}
+      </div>
+    {% endif %}
+  <span id="custom_wrap"></span>  
+  {% endform %}
+
+  {% if block.settings.show_pickup_availability %}
+    {% unless request.design_mode %}
+      <script src="{{ 'vendor-store-availability.bundle.min.js' | asset_url }}" type="module"></script>
+      <script src="{{ 'store-availability.aio.min.js' | asset_url }}" type="module"></script>
+    {% endunless %}
+    <template x-if="currentVariantId && currentVariantAvailable && currentVariantAvailabilityClosestLocation">
+      <div class="my-8 flex items-start" :class="{ 'opacity-50': $store.availability.loading }" :aria-busy="$store.availability.loading">
+        <div class="w-5 h-5 mt-[.0625rem] mr-1 basis-5 grow-0 shrink-0">
+          <template x-if="currentVariantAvailabilityClosestLocation && currentVariantAvailabilityClosestLocation.available">
+            {% render 'icon-in-stock' %}
+          </template>
+          <template x-if="currentVariantAvailabilityClosestLocation &&!currentVariantAvailabilityClosestLocation.available">
+            {% render 'icon-out-of-stock' %}
+          </template>
+        </div>
+        <div class="flex-auto">
+          <h2 x-html="currentVariantAvailabilityClosestLocation && currentVariantAvailabilityClosestLocation.pickup_text" class="text-sm"></h2>
+          <small
+            class="block mt-2 text-sm"
+            x-html="currentVariantAvailabilityClosestLocation && currentVariantAvailabilityClosestLocation.pickup_time"
+          ></small>
+          <button
+            type="button"
+            @click="$store.availability.current_variant = currentVariantId; $store.modals.open('availability')"
+            aria-haspopup="dialog"
+            class="mt-2 text-xs text-scheme-text"
+          >
+            <span x-html="currentVariantAvailabilityClosestLocation && currentVariantAvailabilityClosestLocation.modal_text"></span>
+          </button>
+        </div>
+      </div>
+    </template>
+    <div
+      class=""
+      data-product-title="{{ product.title | escape }}"
+      data-has-only-default-variant="{{ product.has_only_default_variant }}"
+      data-base-url="{{ routes.root_url }}"
+      x-ref="storeAvailabilityContainer"
+    >
+    </div>
+
+    <div x-data="ThemeComponent_StoreAvailabilityDrawer" x-cloak>
+      <div>
+        <template data-should-teleport="#right-drawer-slot">
+          <div :data-modal-label="$store.modals.rightDrawer.contents === 'availability' && $store.availability.current_variant === currentVariantId? '{{ product.title }}' : false" x-show="$store.modals.rightDrawer.contents === 'availability' && $store.availability.current_variant === currentVariantId">
+            <div class="h-screen flex flex-col">
+              <div class="px-section">
+                <div class="relative flex items-center justify-between border-scheme-text pt-5 pb-2.5 border-b-input border-scheme-text">
+                  <h1 id="ModalTitle" class="">
+                    <div class="font-heading text-lg">{{ product.title }}</div>
+                    <div x-text="currentVariantTitle"></div>
+                  </h1>
+                  <button @click.prevent="$store.modals.close('availability')" class="block top-0 ml-2.5">
+                    <span class="sr-only">{{ 'general.accessibility.close_modal' | t }}</span>
+                    <span class="inline-block w-6 h-6">{% render 'icon-close' %}</span>
+                  </button>
+                </div>
+              </div>
+              <ul class="px-section relative overflow-y-auto flex-auto" role="list">
+                <template x-for="item in currentVariantAvailabilityList" :key="item.name">
+                  <li class="py-5">
+                    <p class="font-heading text-md" x-text="item.name"></p>
+                    <div class="flex items-start my-2">
+                      <div class="inline-block w-2.5 h-4 mt-[.225rem] mr-1.5">
+                        <template x-if="item.available">
+                          {% render 'icon-in-stock' %}
+                        </template>
+                        <template x-if="!item.available">
+                          {% render 'icon-out-of-stock' %}
+                        </template>
+                      </div>
+                      <div>
+                        <p class="text-sm" x-text="item.text"></p>
+                      </div>
+                    </div>
+                    <address class="block not-italic mt-2 text-sm">
+                      <div x-html="item.address"></div>
+                      <template x-if="item.phone">
+                        <div class="mt-2">
+                          <a
+                            class="theme-link text-sm"
+                            :href="`tel:${item.phone.replace(' ', '')}`"
+                            x-text="item.phone"
+                          ></a>
+                        </div>
+                      </template>
+                    </address>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+  {% endif %}
+  <link rel="stylesheet" href="{{ 'payment-terms.aio.min.css' | asset_url }}">
+</div>
+
+<script>
+  var observer = new MutationObserver(function(mutations) {
+    if (document.querySelector('square-placement')) {
+        
+        observer.disconnect(); 
+        var after_pay = document.querySelector('square-placement');
+        var el = document.getElementById("custom_wrap");
+        // after_pay.style.display = 'none';
+        el.insertBefore(after_pay, el.children[0]);
+       if(document.querySelector("square-placement").shadowRoot){
+        document.querySelector("square-placement").shadowRoot.querySelector(".afterpay-main-text").style.fontSize = "14px!important";
+       }
+
+    }
+});
+
+// Start observing
+observer.observe(document.body, { //document.body is node target to observe
+    childList: true, //This is a must have for the observer with subtree
+    subtree: true //Set to true if changes must also be observed in descendants.
+});  
+
+
+  // Function to get the value of a URL parameter
+  function getParameterByName(name) {
+    const url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&'); // Escape special characters
+    const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    const results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Example usage: Getting the 'subs' parameter
+  var refParam = getParameterByName('subs');
+  console.log("subs = "+refParam); // Logs the value of 'subs' parameter, e.g., 12345
+  if(refParam == "save40") {
+    var observer = new MutationObserver(function(mutations) {
+      if (document.querySelectorAll('.custom_subscribe_wrap').length > 0) {
+          
+          observer.disconnect(); 
+          setTimeout(() => {
+            document.querySelectorAll('.custom_subscribe_wrap').forEach(element => {
+              if(element.style.display == "block"){
+                const radioInput = element.querySelector('input[type="radio"]');
+                if (radioInput) {
+                    // Trigger the click event
+                    radioInput.click();
+                    
+                    // Optionally log to confirm
+                    {% comment %} console.log('Radio input clicked:', radioInput); {% endcomment %}
+                }
+              }
+            });
+          }, 500);
+      }
+    });
+  
+    // Start observing
+    observer.observe(document.body, { //document.body is node target to observe
+        childList: true, //This is a must have for the observer with subtree
+        subtree: true //Set to true if changes must also be observed in descendants.
+    });  
+  }
+
+</script>
+
+<style>
+  afterpay-placement{
+    margin-top: 0px!important;
+  }
+  @media (max-width: 767px){
+    afterpay-placement{
+      margin-bottom: 0px!important;
+    }
+    
+  }
+</style>

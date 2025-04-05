@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "friend-page",
+      "custom_css": [
+        "section {background-color: #e9f6fd;}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

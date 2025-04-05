@@ -1,0 +1,379 @@
+{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %}
+<div class="aaaaaaaaaaaaaa product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
+  <div class="image-title-container-saturn">
+    {% if request.path contains '/fr' %}
+      {{ section.settings.more_2000_five_star_reviews_fr | image_url: width: 500 | image_tag }}
+    {% else %}
+      {{ section.settings.more_2000_five_star_reviews | image_url: width: 500 | image_tag }}
+    {% endif %}
+    
+  </div>
+  <h3 class="large-hide" >{{ section.settings.heading }}</h3>
+  {% if section.settings.subtitle %}
+    <h5>{{ section.settings.subtitle }}</h5>
+  {% endif %}
+  <h3 class="small-hide" >{{ section.settings.heading }}</h3>
+  <h4>{{ section.settings.subheading }}</h4>
+  <p>{{ section.settings.content }}</p>
+  <div class="inner_product-video-carousel">
+    {% for block in section.blocks %}
+      <div class="product-section-box product-video-box">
+        {% if request.locale.iso_code == 'fr' %}
+          {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+        {% else %}
+          {% assign image_link = block.settings.image | image_url: width: 600 %}
+        {% endif %}
+        {% if block.settings.video_type == 'other' %}
+          {% if request.locale.iso_code == 'fr' %}
+            {% assign video_link = block.settings.fr_video_link %}
+            {% assign video = true %}
+          {% else %}
+            {% assign video_link = block.settings.video_link %}
+            {% assign video = true %}
+          {% endif %}
+        {% else %}
+          {% if request.locale.iso_code == 'fr' %}
+            {% assign video_link = block.settings.fr_hosted_video %}
+            {% assign video = true %}
+          {% else %}
+            {% assign video_link = block.settings.hosted_video %}
+            {% assign video = true %}
+          {% endif %}
+        {% endif %}
+        {% if image_link != blank %}
+          {{image_link | image_tag: class: 'image', image_size: '400x' }}
+        {% endif %}
+        {% if video_link!= blank %} 
+          {{video_link | video_tag: class: 'video c_hidden', image_size: '400x' }}
+        {% endif %}
+
+        {% comment %}
+        <div class="ppppp222 review-body">{{ block.settings.review_body }}</div>
+        <div class="ppppp222 review-header">{{ block.settings.reveiw_header }}</div
+        {% endcomment %}
+        
+       <div class="playpause c_hidden"><i class="fa-solid fa-circle-play"></i></div>
+
+        {% if block.settings.review_body != blank %}
+          <div class="ppppp222 review-body">{{ block.settings.review_body }}</div>
+        {% endif %}
+        {% if block.settings.review_header != blank %}
+          <div class="ppppp222 review-header">{{ block.settings.review_header }}</div>
+        {% endif %}
+        
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script> 
+  $('.video').parent().click(function () {
+    if($(this).children(".video").get(0).paused){
+      $(this).children(".video").get(0).play();   
+      $(this).children(".playpause").fadeOut();
+    }else{       
+      $(this).children(".video").get(0).pause();
+    $(this).children(".playpause").fadeIn();
+      }
+  });
+  $(document).ready(function(){
+    var acc = document.getElementsByClassName("product-video-box");
+    for (var i = 0; i < acc.length; i++) {
+      // Prevent duplicate event listeners by checking if already attached
+      if (!acc[i].hasAttribute('data-listener')) {
+          acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
+        // Attach the event listener without using setTimeout inside
+        acc[i].addEventListener("click", function() {
+          if(this.querySelector("video")){
+            this.querySelector("img").style.display = "none";
+            this.querySelector("video").classList.remove("c_hidden");
+   //         this.querySelector(".playpause").classList.remove("c_hidden");
+          }
+        });
+      }
+    }
+  });
+
+  function playPause(v_el) { 
+    // var myVideo = document.getElementById(v_el);
+    // console.log(myVideo);
+    // if (myVideo.paused) 
+    //   myVideo.play(); 
+    // else 
+    //   myVideo.pause(); 
+  } 
+</script> 
+
+<style>
+  /* .product-section-box.product-video-box.slick-slide.slick-current.slick-active.slick-center {
+    opacity: 1;
+  } */
+  .product-section-box.product-video-box.slick-active {
+    opacity: 1 !important;
+  }
+  .product-section-box.product-video-box {
+    display: flex !important;
+    flex-direction: column;
+    opacity: 0;
+  }
+  @media (max-width: 300px) {
+    .product-section-box.product-video-box {
+      opacity: 1;
+    }
+  }
+  .product-section-box.product-video-box .ppppp222.review-body {
+    color: white;
+    font-size: 15px;
+  }
+  .product-section-box.product-video-box .ppppp222.review-header {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 2vw;
+  }
+
+  .product-section-box.product-video-box img {
+    border-radius: 50% !important;
+    padding: 2vw;
+  }
+  
+  #shopify-section-{{ section.id }} .product-video-carousel{
+    background-color:{{ section.settings.bg_color }};
+  }
+
+  .v_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-video-carousel .inner_product-video-carousel .slick-arrow {
+    font-size: 21px;
+    color: #fff !important;
+  }
+/*
+  .v_content {
+    height: 100px;
+    width: 45%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 100px; 
+    text-align: center;
+    background-color: grey;
+    margin: 5px;
+    border: 1px solid lightgrey;
+    display: none;
+  }
+*/
+  #loadMore {
+    width: 200px;
+    color: #000;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: 600;
+    text-underline-position: under;
+    text-decoration: underline;
+  }
+
+  .noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+  }  
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    function slick_slider(item_show){
+          console.log("uuuuuuuuuuuuu", item_show);
+      $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick({
+        centerMode: true,
+        slidesToShow: item_show,
+        autoplay: true,
+        autoplaySpeed: 200000,
+        swipeToSlide: true,
+        arrows:true,
+        prevArrow:'<button type="button" class="slick-prev"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow:'<button type="button" class="slick-next"><i class="fa-solid fa-chevron-right"></i></button>',
+        responsive: [
+          {
+            breakpoint: 300,
+            settings: 'unslick'
+          }
+        ]
+      });
+    }
+    var viewportWidthFirst = $(window).width();
+    if (viewportWidthFirst < 701) {
+      slick_slider(1);
+    } else {
+      slick_slider({{ section.settings.itme_show }});
+    }
+    
+      $(window).on('resize', function() {
+        var viewportWidth = $(window).width();
+
+        if (viewportWidth < 701) {
+          
+          $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
+          slick_slider(1);
+        } else {
+          $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
+            slick_slider({{ section.settings.itme_show }});
+        }
+    });
+    
+    $(document).ready(function(){
+      $(".v_content").slice(0, 4).show();
+      $("#loadMore").on("click", function(e){
+        e.preventDefault();
+        $(".v_content:hidden").slice(0, 4).slideDown();
+        if($(".v_content:hidden").length == 0) {
+          // $("#loadMore").text("No Content").addClass("noContent");
+        }
+      });    
+    })
+  });
+  
+</script>
+{% schema %}
+{
+  "name": "Product Video Carousel",
+  "settings": [
+    {
+      "type":"image_picker",
+      "id":"more_2000_five_star_reviews",
+      "label":"Image Title Select"
+    },
+    {
+      "type":"image_picker",
+      "id":"more_2000_five_star_reviews_fr",
+      "label":"Image Title Select FR"
+    },
+    {
+      "type":"color",
+      "id":"bg_color",
+      "label":"Bg Color"
+    },
+    {
+      "type":"number",
+      "id":"itme_show",
+      "label":"Show Per Item",
+      "default":6
+    },
+    {
+      "type":"textarea",
+      "id":"subtitle",
+      "label":"Sub Title"
+    },
+    {
+      "type":"textarea",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"subheading",
+      "label":"Sub Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"content",
+      "label":"Content"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"image",
+      "name":"Image",
+      "settings":[
+        {
+          "type":"select",
+          "id":"video_type",
+          "label":"Video Type",
+          "options":[
+            {
+              "value":"mp4",
+              "label":"MP4"
+            },
+            {
+              "value":"other",
+              "label":"YouTube/Vimeo"
+            }
+          ],
+          "default":"mp4"
+        },
+        {
+          "type": "header",
+          "content": "English video"
+        },
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"hosted_video",
+          "label":"Hosted Video"
+        },
+        {
+          "type": "header",
+          "content": "Frech video"
+        },
+        {
+          "type":"image_picker",
+          "id":"fr_image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"fr_video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"fr_hosted_video",
+          "label":"Hosted Video"
+        },
+        {
+          "type": "textarea",
+          "id": "review_body",
+          "label": "Please input review"
+        },
+        {
+          "type": "text",
+          "id": "review_header",
+          "label": "Please input Name"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Product Video Carousel",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

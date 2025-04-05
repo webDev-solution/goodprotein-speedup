@@ -1,0 +1,202 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "rich_text_cETRJF": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "logo_max_width": 120,
+        "title": "Ready To Start Eating Healthier?",
+        "heading_size": "heading-template",
+        "site_review": false,
+        "rich_text": "<p>Only you know if you’ll like Good Protein. That’s why we offer a<span style=\"text-decoration:underline\"> <\/span><a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\" title=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\"><span style=\"text-decoration:underline\">60-day Satisfaction Guarantee<\/span><\/a><span style=\"text-decoration:underline\">.<\/span> Simply try it yourself. If you don’t absolutely love it. We will refund your money.<\/p>",
+        "display_on_card": true,
+        "content_width_desktop": "lg:w-1\/2",
+        "button_link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+        "button_label": "Try it Risk-Free",
+        "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
+        "use_gradient_background": false
+      }
+    },
+    "featured_icon_columns_XthpRk": {
+      "type": "featured-icon-columns",
+      "blocks": {
+        "image_iiw9w9": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Pick your favourite flavour",
+            "feature_text": "Choose Subscribe & Save on most product pages.",
+            "feature_image": "shopify:\/\/shop_images\/Icon-_Heart_03.svg",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_qg9yqK": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Set your delivery frequency",
+            "feature_text": "Anywhere from 4 weeks to 3 months. You’re in control.",
+            "feature_image": "shopify:\/\/shop_images\/Icon-_Setup.svg",
+            "feature_url": "",
+            "hide_image": false
+          }
+        },
+        "image_aATAf9": {
+          "type": "image",
+          "settings": {
+            "feature_title": "Adjust as needed",
+            "feature_text": "Change your quantities. Change your items. Reschedule anytime.",
+            "feature_image": "shopify:\/\/shop_images\/Icon-_Control03_15068938-335d-43f0-b9f6-747864fedd13.svg",
+            "feature_url": "",
+            "hide_image": false
+          }
+        }
+      },
+      "block_order": [
+        "image_iiw9w9",
+        "image_qg9yqK",
+        "image_aATAf9"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "How does our subscription program work?",
+        "text": "",
+        "button_title": "",
+        "button_link": "",
+        "feature_row": 3,
+        "feature_row_mobile": 1,
+        "feature_gap": 20,
+        "feature_gap_mobile": 20,
+        "feature_padding_vertical": 0,
+        "feature_padding_horizontal": 0,
+        "feature_radius": 16,
+        "feature_border_thickness": 0,
+        "feature_shadow": false,
+        "feature_heading_custom": true,
+        "feature_heading_font": "lato_n4",
+        "feature_heading_size": 24,
+        "feature_heading_size_mobile": 20,
+        "feature_heading_height": 150,
+        "feature_heading_mt": 8,
+        "feature_text_custom": false,
+        "feature_text_font": "lato_n4",
+        "feature_text_size": 18,
+        "feature_text_size_mobile": 18,
+        "feature_text_height": 150,
+        "feature_text_mt": 4,
+        "feature_icon_size": 100,
+        "feature_icon_size_mobile": 100,
+        "feature_bg": "#ffffff",
+        "feature_border_color": "#000000",
+        "feature_shadow_color": "#000000",
+        "feature_heading_color": "#000000",
+        "feature_text_color": "#000000",
+        "feature_icon_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 80,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "faq_dgfKKQ": {
+      "type": "faq",
+      "blocks": {
+        "question_RxLrT8": {
+          "type": "question",
+          "settings": {
+            "question": "Can I cancel my subscription at any time?",
+            "answer": "<p>If you've benefited from an extra discount on your first subscription order, a minimum of two subscription orders are required before canceling. You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price.<\/p>"
+          }
+        },
+        "question_C6fKwq": {
+          "type": "question",
+          "settings": {
+            "question": "How do I manage my subscription?",
+            "answer": "<p>Once you’ve logged into your account, you can control everything yourself — we promise it’s easy. You’ll see when your next deliveries are planned., at the top of your dashboard. Going on a trip and want to skip your next delivery? Easy. Click the <strong>Skip order<\/strong>; below that, you’ll see an <strong>Edit<\/strong> button. Click that and you’ll be able to change which products or flavours you receive. Customize the frequency of your orders by clicking on <strong>Edit <\/strong>in the 'Subscription Plan' section. You can also put your subscription on pause or cancel it.<\/p>"
+          }
+        },
+        "question_ABXBAj": {
+          "type": "question",
+          "settings": {
+            "question": "Is it possible to change products from one subscription order to another?",
+            "answer": "<p>Yes, changing the products in each of your subscription orders is possible.<\/p><p> To do so, you’ll need to access your subscription, which you can do by clicking the Log In button on the top right corner of the page and entering your email address. Once you’ve clicked the link received by email, you’ll be able to access your account and take control of your subscription. <\/p><p>To modify your subscription, simply scroll down the page. The first button you’ll see is ''<strong>Skip  order<\/strong>'', which means your next scheduled shipment will be skipped. You can edit the frequency of your orders or manually enter a new date for your next charge, if, for example, you’re going to be away on vacation and want to schedule it for before you leave or after you return, by clicking on ''<strong>Re-schedule<\/strong>''.<\/p><p> You can add or remove items in your subscription by clicking ''<strong>Edit<\/strong>'' on the product you wish to change, but changes will only apply to orders that haven’t been charged and processed yet. <\/p><p> You can modify your personal or payment information easily at the bottom of your customer portal. If you have a discount count, you can apply it to specific subscription orders by entering your discount code, in the section right under your products.<\/p><p> If you want to cancel a subscription, you can click on ''<strong>Cancel subscription<\/strong>'', which is at the bottom of the list — but why would you want to do that?<\/p>"
+          }
+        },
+        "question_zb3BAP": {
+          "type": "question",
+          "settings": {
+            "question": "I've benefited from an extra discount on my first subscription order. Will the price stay the same for every order?",
+            "answer": "<p>If you've benefited from an extra discount on your first order, prices will adjust to the standard subscription discounts afterwards. Please see <a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions\"><span style=\"text-decoration:underline\">section 10 of our Terms & Conditions <\/span><\/a>for more details.<\/p>"
+          }
+        },
+        "question_e8DJGj": {
+          "type": "question",
+          "settings": {
+            "question": "What does a subscription entail?",
+            "answer": "<p>Put simply, a subscription allows you to save 20% on all of your orders; meaning you can take full advantage of our superfood blends — and discover all of their benefits — at a low price. We know what you’re thinking: that’s a great deal and you’re wondering how to subscribe. All it takes is opting in and receiving at least 2 shipments. You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price. Plus we're giving away free gifts on almost every order!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_RxLrT8",
+        "question_C6fKwq",
+        "question_ABXBAj",
+        "question_zb3BAP",
+        "question_e8DJGj"
+      ],
+      "disabled": true,
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "body",
+        "two_columns_desktop": false,
+        "title": "FAQ's",
+        "richtext": "<p>See below for our most frequently asked questions. If you don't see your answer or just want to say hello, send us an email at <a href=\"mailto:info@goodprotein.ca\"><span style=\"text-decoration:underline\">info@goodprotein.ca<\/span><\/a> !<\/p>",
+        "btn_text": "Read all FAQs",
+        "btn_link": "shopify:\/\/pages\/faq-1",
+        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
+        "use_gradient_background": false
+      }
+    },
+    "rich_text_kFUJpX": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "logo_max_width": 120,
+        "title": "Already Have An Account?",
+        "heading_size": "heading-base",
+        "site_review": false,
+        "rich_text": "<p>Easily access your account to add or remove items, manage your delivery frequency, skip shipments, or cancel your subscription.<\/p>",
+        "display_on_card": true,
+        "content_width_desktop": "lg:w-1\/2",
+        "button_link": "https:\/\/goodprotein.ca\/a\/loop_subscriptions\/customer",
+        "button_label": "Manage Subscription",
+        "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
+        "use_gradient_background": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_cETRJF",
+    "featured_icon_columns_XthpRk",
+    "faq_dgfKKQ",
+    "rich_text_kFUJpX"
+  ]
+}

@@ -1,0 +1,1074 @@
+{
+  "sections": {
+    "special-header": {
+      "type": "special-header",
+      "settings": {
+        "is_original_header": false,
+        "top_margin_desktop": 59,
+        "top_margin_mobile": 59,
+        "padding_vertical_for_desktop": 20,
+        "image_height_for_mobile": 14,
+        "left_image": "shopify:\/\/shop_images\/Vector.png",
+        "image_link": "",
+        "title": "Free Shipping On All Sample Pack Orders",
+        "add_cart": true,
+        "button_label": "Get Started",
+        "button_link": "#",
+        "add_cart_2": false,
+        "button_label_2": "Add To Cart",
+        "button_link_2": "",
+        "show_cart_button": false,
+        "is_padding": true,
+        "background_color": "#9ddaf4",
+        "border_color": "#9ddaf4",
+        "title_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#9ddaf4"
+      }
+    },
+    "special-header2": {
+      "type": "special-header",
+      "settings": {
+        "is_original_header": true,
+        "top_margin_desktop": 92,
+        "top_margin_mobile": 36,
+        "padding_vertical_for_desktop": 15,
+        "image_height_for_mobile": 24,
+        "left_image": "shopify:\/\/shop_images\/Logo-Website_2.png",
+        "image_link": "https:\/\/goodprotein.ca",
+        "title": "",
+        "add_cart": false,
+        "button_label": "Shop All",
+        "button_link": "shopify:\/\/collections\/all",
+        "add_cart_2": false,
+        "button_label_2": "Add To Cart",
+        "button_link_2": "",
+        "show_cart_button": true,
+        "is_padding": false,
+        "background_color": "#fffcee",
+        "border_color": "#9ddaf4",
+        "title_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#232323"
+      }
+    },
+    "main": {
+      "type": "sample-pack-main-product",
+      "blocks": {
+        "icons_UmHa4t": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Calque_1.png",
+            "title": "Free Shipping",
+            "text": "Free shipping on all Sample Packs"
+          }
+        },
+        "icons_4TriLe": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Calque_1_2.png",
+            "title": "30M+ Sold",
+            "text": "Over 20,000 verified reviews"
+          }
+        },
+        "icons_aFbVHA": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Calque_1_1.png",
+            "title": "Vegan",
+            "text": "100% plant-based and natural"
+          }
+        },
+        "icons_xT8K3m": {
+          "type": "icons",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/Calque_1_3.png",
+            "title": "Canadian",
+            "text": "Blends made in Canada"
+          }
+        }
+      },
+      "block_order": [
+        "icons_UmHa4t",
+        "icons_4TriLe",
+        "icons_aFbVHA",
+        "icons_xT8K3m"
+      ],
+      "custom_css": [],
+      "settings": {
+        "related_product": "sample-pack",
+        "right_block_title": "Discover Our Best-Selling Flavours",
+        "right_block_title_mobile": "Best-Selling Flavours Pack",
+        "button_label": "Try Now",
+        "block_padding": 40,
+        "crop": "",
+        "image_shape": "default",
+        "desktop_media_width": "lg:col-span-6_lg:col-span-6",
+        "display": "fit",
+        "show_slideshow_arrows_on_desktop": true,
+        "enable_image_zoom": true,
+        "enable_video_looping": true,
+        "autoplay_videos_on_desktop": true,
+        "media_mobile_width": "w-full",
+        "thumbnails_position": "under",
+        "thumbnail_crop": "aspect-w-1 aspect-h-1",
+        "thumbnail_shape": "default",
+        "hide_media_shadow": false,
+        "thumbnail_size": "large",
+        "show_thumbnails_on_mobile": false,
+        "color_accent": "#8eccf3",
+        "color_background": "#fffcee",
+        "color_media": "#8eccf3",
+        "text_color": "#000000",
+        "accent_text_color": "#000000"
+      }
+    },
+    "custom_image_countdown_overlay_33QqHN": {
+      "type": "title-image-button",
+      "blocks": {
+        "title_6Ti6xL": {
+          "type": "title",
+          "settings": {
+            "title": "What You'll Get",
+            "heading_size": "heading-base"
+          }
+        },
+        "text_dfy6Ec": {
+          "type": "text",
+          "settings": {
+            "richtext": "<h2>A little bit of everything—every flavour you’ve been dying to try, in one convenient pack<\/h2>"
+          }
+        },
+        "button_knf8iy": {
+          "type": "button",
+          "settings": {
+            "add_cart": true,
+            "cta_url_1": "",
+            "cta_text_1": "Get a Taste"
+          }
+        }
+      },
+      "block_order": [
+        "title_6Ti6xL",
+        "text_dfy6Ec",
+        "button_knf8iy"
+      ],
+      "custom_css": [
+        ".bottom-button-ss {bottom: 100px;}",
+        ".bottom-button-ss span {background-color: #62b5e5; color: #fffcee; font-size: 40px; font-family: \"Gelica SBd\";}",
+        "@media (max-width: 768px) {.text-theme-basic * {font-size: 16px; } .bottom-button-ss {bottom: 30px; } .bottom-button-ss span {font-size: 20px; padding: 7px 23px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Sample-Pack-bags_1.png",
+        "image_fr": "shopify:\/\/shop_images\/Sample-Pack-bags-FR_1.png",
+        "background_color": "#fffcee",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "horizontal_analysis_table_Pkqxfq": {
+      "type": "horizontal-analysis-table",
+      "blocks": {
+        "description_yNH3JD": {
+          "type": "description",
+          "settings": {
+            "title": "Vanilla Milkshake",
+            "icon_image": "shopify:\/\/shop_images\/Icon-Vanilla-Milkshake.svg",
+            "icon_label": "Vanilla Milkshake",
+            "icon_background_color": "#8eccf3",
+            "table_image": "shopify:\/\/shop_images\/Vanilla_Milkshake_copy.png",
+            "table_image_fr": "shopify:\/\/shop_images\/Vanille_copy.png",
+            "title_color": "#2994c1",
+            "richtext": "<p><strong>Ingredients:<\/strong><br\/>Protein blend (pea protein, milled golden flaxseed), Natural flavours, Soluble tapioca fibers, Coconut milk powder* (coconut milk powder*, tapioca maltodextrin*, acacia gum*), Medium chain triglycerides (medium chain triglycerides from coconut oil, tapioca maltodextrin), Acacia gum, Guar gum, Xanthan gum, Fruits, vegetables and mushrooms blend (spinach, broccoli, carrot, sweet potato, orange, apple, strawberry, sunflower seed, shiitake mushroom, maitake mushroom, pomegranate juice powder*, acai juice powder*, goji juice powder*, grape juice powder*, amla fruit powder*, cranberry powder*, aronia powder*, sea buckthorn juice powder*, camu camu powder*, acerola juice powder*), Rebaudioside M, Salt, Bacterial culture and enzymes blend (rice maltodextrin, Bacillus subtilis, bromelain, papain). *Organic ingredients<\/p><p><br\/>May contain: soybeans, eggs, peanuts, tree nuts, sesame, and fish. Produced in a facility that also processes wheat and milk. Good Protein follows strict allergen management protocols in all of our manufacturing facilities.<\/p>",
+            "richtext_fr": ""
+          }
+        },
+        "description_aKTeA4": {
+          "type": "description",
+          "settings": {
+            "title": "Chocolate Fudge",
+            "icon_image": "shopify:\/\/shop_images\/Icon-Chocolate-Fudge.svg",
+            "icon_label": "Chocolate Fudge",
+            "icon_background_color": "#c9a892",
+            "table_image": "shopify:\/\/shop_images\/Choco-fudge_copy.png",
+            "table_image_fr": "shopify:\/\/shop_images\/Fudge_copy.png",
+            "title_color": "#c9a892",
+            "richtext": "<p><strong>Ingredients:<\/strong><br\/>Protein blend (pea protein, milled golden flaxseed), Natural flavours, Tapioca soluble fibers, Coconut milk powder* (coconut milk powder*, tapioca maltodextrin*, acacia gum*), Alkalized cocoa powder, Medium chain triglycerides (medium chain triglycerides from coconut oil, tapioca maltodextrin), Acacia gum, Guar gum, Xanthan gum, Fruits, vegetables and mushrooms blend (spinach, broccoli, carrot, sweet potato, orange, apple, strawberry, sunflower seed, shiitake mushroom, maitake mushroom, pomegranate juice powder*, acai juice powder*, goji juice powder*, grape juice powder*, amla fruit powder*, cranberry powder*, aronia powder*, sea buckthorn juice powder*, camu camu powder*, acerola juice powder*), Rebaudioside M, Salt, Bacterial culture and enzymes blend (rice maltodextrin, Bacillus subtilis, bromelain, papain). *Organic ingredients<br\/><br\/>May contain: soybeans, eggs, peanuts, tree nuts, sesame, and fish. Produced in a facility that also processes wheat and milk. Good Protein follows strict allergen management protocols in all of our manufacturing facilities.<\/p>",
+            "richtext_fr": ""
+          }
+        },
+        "description_DhtRjc": {
+          "type": "description",
+          "settings": {
+            "title": "Strawberries & Cream",
+            "icon_image": "shopify:\/\/shop_images\/Icon-Strawberries-_-Cream.svg",
+            "icon_label": "Strawberries & Cream",
+            "icon_background_color": "#ffaec0",
+            "table_image": "shopify:\/\/shop_images\/Strawberries_copy.png",
+            "table_image_fr": "shopify:\/\/shop_images\/Fraise_copy.png",
+            "title_color": "#ffaec0",
+            "richtext": "<p><strong>Ingredients:<\/strong><br\/>Protein blend (pea protein, milled golden flaxseed), Natural flavours, Soluble Ingredients: tapioca fibers, Coconut milk powder* (coconut milk powder*, tapioca maltodextrin*, acacia gum*), Medium chain triglycerides (medium chain triglycerides from coconut oil, tapioca maltodextrin), Acacia gum, Guar gum, Xanthan gum, Beetroot colour, Fruits, vegetables and mushrooms blend (spinach, broccoli, carrot, sweet potato, orange, apple, strawberry, sunflower seeds, shiitake mushroom, maitake mushroom, pomegranate juice powder*, acai juice powder*, goji juice powder*, grape juice powder*, amla fruit powder*, cranberry powder*, aronia powder*, sea buckthom juice powder*, camu camu powder*, acerola juice powder*), Rebaudioside M, Salt, Citric acid, Bacterial culture and enzymes blend (rice maltodextrin, Bacillus subtilis, bromelain, papain). *Organic ingredients<br\/><br\/>May contain: soybeans, eggs, peanuts, tree nuts, sesame, and fish. Produced in a facility that also processes wheat and milk. Good Protein follows strict allergen management protocols in all of our manufacturing facilities.<\/p>",
+            "richtext_fr": ""
+          }
+        },
+        "description_nzFKmM": {
+          "type": "description",
+          "settings": {
+            "title": "Salted Caramel",
+            "icon_image": "shopify:\/\/shop_images\/Icon-Salted-Caramel.svg",
+            "icon_label": "Salted Caramel",
+            "icon_background_color": "#f3a55f",
+            "table_image": "shopify:\/\/shop_images\/Caramel_copy.png",
+            "table_image_fr": "shopify:\/\/shop_images\/CAramel_copy_15bacac2-2240-4904-bd8a-5b828957b5ad.png",
+            "title_color": "#f3a55f",
+            "richtext": "<p><strong>Ingredients:<\/strong><br\/>Protein blend (pea protein, milled golden flaxseed), Natural flavours, Soluble tapioca fibers, Coconut milk powder* (coconut milk powder*, tapioca maltodextrin, acacia gum*), Medium chain triglycerides (medium chain triglycerides from coconut oil, tapioca maltodextrin), Acacia gum, Guar gum, Xanthan gum, Salt, Fruits, vegetables and mushrooms blend (spinach, broccoli, carrot, sweet potato, orange, apple, strawberry, sunflower seeds, shiitake mushroom, maitake mushroom, pomegranate juice powder*, acai juice powder*, goji juice powder*, grape juice powder*, amla fruit powder*, cranberry powder*, aronia powder*, sea buckthom juice powder*, camu camu powder*, acerola juice powder*), Rebaudioside M, Beta-carotene, Beetroot colour, Bacterial culture and enzymes blend (rice maltodextrin, Bacillus subtilis, bromelain, papain), *Organic ingredients<br\/><br\/>May contain: soybeans, eggs, peanuts, tree nuts, sesame, and fish. Produced in a facility that also processes wheat and milk. Good Protein follows strict allergen management protocols in all of our manufacturing facilities.<\/p>",
+            "richtext_fr": ""
+          }
+        },
+        "description_7Hr8MR": {
+          "type": "description",
+          "settings": {
+            "title": "Peanut Butter",
+            "icon_image": "shopify:\/\/shop_images\/Icon-Peanut-Butter_3.svg",
+            "icon_label": "Peanut Butter",
+            "icon_background_color": "#ecc79f",
+            "table_image": "shopify:\/\/shop_images\/Peanut_Butter_copy.png",
+            "table_image_fr": "shopify:\/\/shop_images\/beurre-arachides_copy.png",
+            "title_color": "#ecc79f",
+            "richtext": "<p><strong>Ingredient:<\/strong><br\/>Protein blend (pea protein, milled golden flaxseed), Natural flavours, Soluble tapioca fibers, Peanut flour, Coconut milk powder* (coconut milk powder*, tapioca maltodextrin*, acacia gum*), Medium chain triglycerides (medium chain triglycerides from coconut oil, tapioca maltodextrin), Acacia gum, Guar gum, Xanthan gum, Fruits, vegetables and mushrooms blend (spinach, broccoli, carrot, sweet potato, orange, apple, strawberry, sunflower seed, shiitake mushroom, maitake mushroom, pomegranate juice powder*, acai juice powder, goji juice powder*, grape juice powder*, amla fruit powder*, cranberry powder*, aronia powder*, sea buckthom juice powder*, camu camu powder*, acerola juice powder), Salt, Rebaudioside M, Bacterial culture and enzymes blend (rice maltodextrin, Bacillus subtilis, bromelain, papain). *Organic ingredients<br\/><br\/>Contains:<strong> <\/strong>peanuts and sesame. May contain:<strong> <\/strong>soybeans, eggs, peanuts, tree nuts, sesame, and fish. Produced in a facility that also processes wheat and milk. Good Protein follows strict allergen management protocols in all of our manufacturing facilities.<\/p>",
+            "richtext_fr": "<p><strong>Ingrédients:<\/strong><br\/>Mélange de protéines (protéine de pois, graines de lin doré moulues), Arômes naturels, Fibres de tapioca solubles, Farine d’arachide, Poudre de lait de noix de coco* (poudre de noix de coco*, maltodextrine de tapioca*, gomme d’acacia*), Triglycérides à chaînes moyennes (triglycérides à chaînes moyennes d’huile de noix de coco, maltodextrine de tapioca), Gomme d’acacia, Gomme de guar, Gomme de xanthane, Mélange de fruits, de légumes et de champignons (épinard, brocoli, carotte, patate douce, orange, pomme, fraise, graines de tournesol, champignon shiitake, champignon maitake, poudre de jus de grenade*, poudre de jus d’açaï*, poudre de jus de baies de goji*, poudre de jus de raisin*, poudre de fruit amla*, poudre de canneberge*, poudre d’aronia*, poudre de jus d’argousier*, poudre de camu-camu*, poudre de jus d’acérola*), Sel, Rébaudioside M, Mélange de culture bactérienne et d’enzymes (maltodextrine de riz, Bacillus subtilis, bromélaïne, papaïne). *Ingrédients biologiques<br\/><br\/>Contient : arachides et sésame. Peut contenir : soya, œufs, arachides, noix et poisson. Produit dans une usine qui traite également du blé et du lait. Good Protein suit des protocoles stricts de gestion des allergènes dans toutes ses installations de fabrication.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "description_yNH3JD",
+        "description_aKTeA4",
+        "description_DhtRjc",
+        "description_nzFKmM",
+        "description_7Hr8MR"
+      ],
+      "settings": {
+        "table_title": "Vanilla Milkshake",
+        "title_color": "#62b5e5",
+        "padding_horizontal": 50,
+        "background_color": "#fffcee"
+      }
+    },
+    "title_image_button_y3e8kQ": {
+      "type": "title-image-button",
+      "blocks": {
+        "title_jVVBfH": {
+          "type": "title",
+          "settings": {
+            "title": "The All-in-One Shake",
+            "heading_size": "heading-base"
+          }
+        },
+        "text_HYBzHD": {
+          "type": "text",
+          "settings": {
+            "richtext": "<h2>All your body's favourite nutrients<\/h2>"
+          }
+        },
+        "button_VMyG4z": {
+          "type": "button",
+          "settings": {
+            "add_cart": true,
+            "cta_url_1": "",
+            "cta_text_1": "Try Now"
+          }
+        }
+      },
+      "block_order": [
+        "title_jVVBfH",
+        "text_HYBzHD",
+        "button_VMyG4z"
+      ],
+      "custom_css": [
+        ".bottom-button-ss {width: 100%; left: 0; bottom: 70px;}",
+        ".custom-btn-saturn {min-width: 300px;}",
+        ".image-wrapper-none {padding-bottom: 55px;}",
+        ".has-padding-top-ss {padding-top: 105px;}",
+        "@media (min-width: 900px) and (max-width: 1439px) {.heading-base {top: 20px; }}",
+        "@media (max-width: 768px) {.custom-btn-saturn {min-width: unset; } .bottom-button-ss {bottom: 30px; } .has-padding-bottom-ss {padding-bottom: 0px; } .has-padding-top-ss {padding-top: 80px; } .heading-base {font-size: 28px; padding: 0 10px; top: 24px; } .text-theme-basic {top: 43px; }}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/4.png",
+        "image_fr": "shopify:\/\/shop_images\/shake-ingredients.png",
+        "background_color": "#fffcee",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
+    "comparison_table_3_HHtPMD": {
+      "type": "comparison-table-3",
+      "blocks": {
+        "item_BmfzBz": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Curbs sweet cravings",
+            "first_icon": "yes",
+            "second_icon": "yes",
+            "third_icon": "yes"
+          }
+        },
+        "item_cYBfrz": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Provide essential nutrients",
+            "first_icon": "yes",
+            "second_icon": "yes",
+            "third_icon": "yes"
+          }
+        },
+        "item_byfzF3": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Supports your immune system",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_EghMr6": {
+          "type": "item",
+          "settings": {
+            "row_heading": "100% natural and plant based",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_r3Q3gN": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Easy to digest",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_m8JLHE": {
+          "type": "item",
+          "settings": {
+            "row_heading": "Supports gut flora",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "no"
+          }
+        },
+        "item_fHjbNd": {
+          "type": "item",
+          "settings": {
+            "row_heading": "No unpleasant aftertaste",
+            "first_icon": "yes",
+            "second_icon": "no",
+            "third_icon": "dont_know"
+          }
+        }
+      },
+      "block_order": [
+        "item_BmfzBz",
+        "item_cYBfrz",
+        "item_byfzF3",
+        "item_EghMr6",
+        "item_r3Q3gN",
+        "item_m8JLHE",
+        "item_fHjbNd"
+      ],
+      "settings": {
+        "heading": "<h1>US vs. Them<\/h1>",
+        "heading_custom": false,
+        "heading_font": "assistant_n4",
+        "heading_size": 10,
+        "heading_height": 100,
+        "heading_align": "left",
+        "background_color": "#c2e4f2",
+        "table_mt": 50,
+        "table_radius": 10,
+        "table_border_thickness": 3,
+        "table_column_active": "1",
+        "table_column_active_radius": 10,
+        "first_heading": "GoodProtein",
+        "second_heading": "Others",
+        "third_heading": "",
+        "table_heading_custom": false,
+        "table_heading_font": "assistant_n4",
+        "table_heading_size": 20,
+        "table_heading_size_mobile": 10,
+        "table_heading_height": 100,
+        "table_heading_align": "center",
+        "table_heading_padding_horizontal": 20,
+        "table_heading_padding_horizontal_mobile": 4,
+        "table_heading_padding_vertical": 20,
+        "table_heading_padding_vertical_mobile": 10,
+        "table_row_padding_horizontal": 20,
+        "table_row_padding_horizontal_mobile": 4,
+        "table_row_padding_vertical": 20,
+        "table_row_padding_vertical_mobile": 10,
+        "table_row_heading_custom": false,
+        "table_row_heading_font": "assistant_n4",
+        "table_row_heading_size": 26,
+        "table_row_heading_size_mobile": 10,
+        "table_row_heading_height": 100,
+        "table_row_heading_align": "left",
+        "table_icon_yes": "shopify:\/\/shop_images\/check-svgrepo-com_6.svg",
+        "table_icon_size": 48,
+        "table_icon_size_mobile": 20,
+        "heading_color": "#ea1f59",
+        "table_border_color": "#ea1f59",
+        "table_heading_color": "#000000",
+        "table_heading_active_color": "#ffffff",
+        "table_column_active_bg_color": "#ea1f59",
+        "table_row_heading_color": "#0066cc",
+        "table_icon_color": "#ea1f59",
+        "table_icon_active_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 150,
+        "border_thickness": 0
+      }
+    },
+    "6_good_thing_c7i4mm": {
+      "type": "6-good-things",
+      "blocks": {
+        "shape_divider_gR4CtJ": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "color_bg": "#c2e4f2",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
+        "carousel_LmHRYH": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Good_1.png",
+            "heading": "Vegan"
+          }
+        },
+        "carousel_ycJpBT": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Good_5.png",
+            "heading": "Non-GMO"
+          }
+        },
+        "carousel_anViWj": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Good_6.png",
+            "heading": "No sugar \u2028added"
+          }
+        },
+        "carousel_CRwQxJ": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Good_4.png",
+            "heading": "Promotes \u2028healthy gut flora"
+          }
+        },
+        "carousel_47np7a": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Good_3.png",
+            "heading": "Dairy-free"
+          }
+        },
+        "carousel_UF3Qpe": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Good_2.png",
+            "heading": "Gluten-free"
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_gR4CtJ",
+        "carousel_LmHRYH",
+        "carousel_ycJpBT",
+        "carousel_anViWj",
+        "carousel_CRwQxJ",
+        "carousel_47np7a",
+        "carousel_UF3Qpe"
+      ],
+      "settings": {
+        "background_color": "#fffcee",
+        "background_color_icon": "#fffcee"
+      }
+    },
+    "big_button_3XgCKL": {
+      "type": "big-button",
+      "settings": {
+        "button_link": "",
+        "button_label": "Taste the Difference",
+        "color": "#ffffff",
+        "button_background_color": "#62b5e5",
+        "font_size": 40,
+        "padding_horizontal": 50,
+        "padding_vertical": 10,
+        "border_radius": 50,
+        "max_width": 600,
+        "background_color": "#fffcee"
+      }
+    },
+    "63d86149-3de8-44e0-9fc5-522d7f858a28": {
+      "type": "video-carousel-bottom-text",
+      "blocks": {
+        "d9ad31d4-fe3f-45c8-9769-41c0101c410f": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/6._Samantha_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/6. Samantha_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/6._Samantha_1x1_FR.png",
+            "fr_video_link": "",
+            "review_text": "<p><strong>Jennifer Brown<\/strong><\/p><p>\"I love Good Protein because it’s super gentle on my stomach, where I’ve noticed that other protein powders make me feel bloated. It even has probiotics and digestive enzymes that help with a healthy gut flora!\"<\/p>"
+          }
+        },
+        "247693e3-878b-40c8-bc42-6d01fb3f9600": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/5._Bianka_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/5. Bianka.mp4",
+            "fr_image": "shopify:\/\/shop_images\/5._Bianka_1x1_FR_2.png",
+            "fr_video_link": "",
+            "review_text": "<p><strong>Sofia Martin<\/strong><\/p><p>\"What I love most is that it has all 9 essential amino acids, no added sugar, and it’s vegan, non-GMO, dairy-free, and gluten-free. It’s super clean, keeps me full, and tastes amazing—smooth, creamy, and easy to drink!\"<\/p>"
+          }
+        },
+        "481c3263-1c4e-4352-8093-806c1be1321c": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/4._Samantha_B_1x1_EN_1.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/4. Samantha B_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/4._Samantha_B_1x1_FR_1.png",
+            "fr_video_link": "",
+            "review_text": "<p><strong>Andie Wright<\/strong><\/p><p>\"Their whole formula is just perfection! The shakes are absolutely delicious—so creamy and full of flavor. I love how smooth they are with no chalky texture, and they make me feel great. I actually crave them daily!\"<\/p>"
+          }
+        },
+        "e5b35c6a-72b6-4db3-b215-1b926f2899e2": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/3._Brooke_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/3. Brooke_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/3._Brooke_1x1_FR.png",
+            "fr_video_link": "",
+            "review_text": "<p><strong>Tania Smith<\/strong><\/p><p>\"These shakes are so good, whether iced or blended into a smoothie. Either way, it feels like a treat! They’re super creamy, delicious, and each scoop packs 21g of protein. I seriously look forward to it every day!\"<\/p>"
+          }
+        },
+        "2d93a8a2-e525-40a5-90ba-b84f1033b0cf": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/2._Cassandra_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/2. Cassandra.mp4",
+            "fr_image": "shopify:\/\/shop_images\/2._Cassandra_1x1_FR_1.png",
+            "fr_video_link": "",
+            "review_text": "<p><strong>Lisa McQuad<\/strong><\/p><p>\"No gritty texture, no weird aftertaste—so rare for a plant-based shake! It’s packed with nutrition, tastes amazing, and actually satisfies. It’s smooth, easy to mix, and worth trying. Trust me, you won’t regret it!\"<\/p>"
+          }
+        },
+        "20ccd199-380c-41d1-b416-b78bc013d92e": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "image": "shopify:\/\/shop_images\/1._Andy_1x1_EN.png",
+            "video_link": "",
+            "hosted_video": "shopify:\/\/files\/videos\/1. Andy_1x1.mp4",
+            "fr_image": "shopify:\/\/shop_images\/1._Andy_1x1_FR.png",
+            "fr_video_link": "",
+            "review_text": "<p><strong>Steven Lamarre<\/strong><\/p><p>\"An amazing protein shake! The taste is great, the quality is top-notch, and I feel incredible after drinking it. It’s smooth, satisfying, and so easy on my stomach. Definitely one of the best I’ve tried!\"<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d9ad31d4-fe3f-45c8-9769-41c0101c410f",
+        "247693e3-878b-40c8-bc42-6d01fb3f9600",
+        "481c3263-1c4e-4352-8093-806c1be1321c",
+        "e5b35c6a-72b6-4db3-b215-1b926f2899e2",
+        "2d93a8a2-e525-40a5-90ba-b84f1033b0cf",
+        "20ccd199-380c-41d1-b416-b78bc013d92e"
+      ],
+      "settings": {
+        "bg_color": "#fffcee",
+        "itme_show": 5,
+        "subtitle": "",
+        "heading": "Real People, Real Reviews",
+        "subheading": "",
+        "content": ""
+      }
+    },
+    "61a57e3e-447e-444d-b855-b542499d6336": {
+      "type": "product-review-caurosel",
+      "blocks": {
+        "8e6243dc-c2f3-4ef0-9c4d-2b68fe41d50f": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/REPLO-test-Reviews-03_752cf64b-7f87-462b-ae9e-a9dcba3b62bc.png",
+            "content": "\"Had a nice energy boost and then used my sleep patch at night, loved it.\""
+          }
+        },
+        "3752eb57-57e0-4638-86a3-21883bd94bc4": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/REPLO_Review-002_abdd5f65-8df4-4286-8604-5c65fa2b070b.png",
+            "content": "\"Had a nice energy boost and then used my sleep patch at night, loved it.\""
+          }
+        },
+        "7a0437dd-92df-43c7-8279-15a2900a1a18": {
+          "type": "carousel",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/REPLO_Review-001_ad3d58fd-c8d3-439e-b78f-fbd61633c5fa.png",
+            "content": "\"Had a nice energy boost and then used my sleep patch at night, loved it.\""
+          }
+        },
+        "5c7381ff-8515-48c2-bb1c-20b353922883": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Replo-test-UGC01_a7d78b9d-e0e4-4d16-9104-73df31e64ee8.png",
+            "content": "\"Had a nice energy boost and then used my sleep patch at night, loved it.\""
+          }
+        },
+        "8ea9b05a-7f1d-4eec-8063-f19780fdfa9f": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/REPLO-test-Reviews-05_0f0fb2bc-1ae9-44f2-a499-670dd234973e.png",
+            "content": "\"Had a nice energy boost and then used my sleep patch at night, loved it.\""
+          }
+        },
+        "a3245452-61d0-4ac6-97d7-1e4ffc876664": {
+          "type": "carousel",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/REPLO-test-Reviews-01_1f1e196c-0050-43f0-9dae-a0e9672d8bbd.png",
+            "content": "\"Had a nice energy boost and then used my sleep patch at night, loved it.\""
+          }
+        }
+      },
+      "block_order": [
+        "8e6243dc-c2f3-4ef0-9c4d-2b68fe41d50f",
+        "3752eb57-57e0-4638-86a3-21883bd94bc4",
+        "7a0437dd-92df-43c7-8279-15a2900a1a18",
+        "5c7381ff-8515-48c2-bb1c-20b353922883",
+        "8ea9b05a-7f1d-4eec-8063-f19780fdfa9f",
+        "a3245452-61d0-4ac6-97d7-1e4ffc876664"
+      ],
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "heading": "100 000+ Happy Customers 🎉",
+        "subheading": "",
+        "content": ""
+      }
+    },
+    "5ff73161-1300-4a17-ab05-fa2199e59c9a": {
+      "type": "superfoods-carousel",
+      "blocks": {
+        "ce36f55d-6bc9-4777-b325-2a99cfddd199": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/yellowpeas.png",
+            "heading": "Yellow Peas"
+          }
+        },
+        "3808cfc0-bdf9-487a-8c78-bf39b775ce90": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Coconut.png",
+            "heading": "Coconut"
+          }
+        },
+        "f0ccd512-aa4b-4b5c-a094-dbb1cb1cdff0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tapioca-2.webp",
+            "heading": "Tapioca"
+          }
+        },
+        "image_jL7WVL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Broccoli.png",
+            "heading": "Broccoli"
+          }
+        },
+        "6e4f4285-48fc-4933-9007-88f5337da5b6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Golden_Flaxseed.png",
+            "heading": "Golden Flaxseeds"
+          }
+        },
+        "437ac6f4-cf11-4300-80db-7a8f104e6d2e": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Carottes.png",
+            "heading": "Carrots"
+          }
+        },
+        "5ddae44c-8a46-4f6a-9f37-f7c1eca8df9c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Shiitake_mushroom.png",
+            "heading": "Shiitake Mushroom"
+          }
+        },
+        "3abd10d9-addd-4f55-860d-fc2dad3f48d3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SPinard.webp",
+            "heading": "Spinach"
+          }
+        },
+        "image_KzbVA3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Orange.png",
+            "heading": "Orange"
+          }
+        },
+        "image_egFXwB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Alma_Fruit_1.png",
+            "heading": "Alma Fruit"
+          }
+        },
+        "image_VMPaw8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Aronia_9010a908-194c-4f07-95c8-bfb29aabc2fa.png",
+            "heading": "Aronia"
+          }
+        },
+        "image_cdczKG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Sweet_Potato.png",
+            "heading": "Sweet Potato"
+          }
+        },
+        "25a79ed9-1f36-4d70-937f-b2739d551292": {
+          "type": "shape_divider",
+          "disabled": true,
+          "settings": {
+            "target_section": "above",
+            "target_section_color_scheme": "primary",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        }
+      },
+      "block_order": [
+        "ce36f55d-6bc9-4777-b325-2a99cfddd199",
+        "3808cfc0-bdf9-487a-8c78-bf39b775ce90",
+        "f0ccd512-aa4b-4b5c-a094-dbb1cb1cdff0",
+        "image_jL7WVL",
+        "6e4f4285-48fc-4933-9007-88f5337da5b6",
+        "437ac6f4-cf11-4300-80db-7a8f104e6d2e",
+        "5ddae44c-8a46-4f6a-9f37-f7c1eca8df9c",
+        "3abd10d9-addd-4f55-860d-fc2dad3f48d3",
+        "image_KzbVA3",
+        "image_egFXwB",
+        "image_VMPaw8",
+        "image_cdczKG",
+        "25a79ed9-1f36-4d70-937f-b2739d551292"
+      ],
+      "settings": {
+        "itme_show": 6,
+        "subtitle": "",
+        "heading": "Superfoods, Essential Nutrients and  Plant-Based Ingredients.",
+        "subheading": "",
+        "button_title": "",
+        "button_link": "",
+        "color_bg": "#fffcee",
+        "color_text": "#000000"
+      }
+    },
+    "9bcc3e2d-da35-4c7e-92dc-c286ee68f5c1": {
+      "type": "product-section-2",
+      "blocks": {
+        "2551e668-2b78-4530-98aa-c6560db6ca8a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/satisfies-sweet-tooth.png"
+          }
+        },
+        "af1e274b-54df-48ea-821f-75f4c5896df8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/no-weird-aftertaste.png"
+          }
+        },
+        "6965a56d-3e83-4276-9418-1b1fb95ff791": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/blends-perfectly.png"
+          }
+        }
+      },
+      "block_order": [
+        "2551e668-2b78-4530-98aa-c6560db6ca8a",
+        "af1e274b-54df-48ea-821f-75f4c5896df8",
+        "6965a56d-3e83-4276-9418-1b1fb95ff791"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading": "Why do people love our\u2028 All-in-One Superfood Blend?",
+        "color_bg": "#e9f6fd"
+      }
+    },
+    "review_header_AGHgbx": {
+      "type": "review-header",
+      "blocks": {
+        "stars_KnMqkC": {
+          "type": "stars",
+          "settings": {
+            "star_color": "#f7c255",
+            "review_description": "20,000+ Verified 5-Star Reviews"
+          }
+        },
+        "review_PGyepj": {
+          "type": "review",
+          "settings": {
+            "review_title": "Great first flavour to try!",
+            "review_text": "Super straightforward–good vanilla flavour, not too sweet and makes a great base for smoothies or other recipes like pancakes.",
+            "review_auther": "Emily C.",
+            "isverified": true
+          }
+        },
+        "review_CKPFyE": {
+          "type": "review",
+          "settings": {
+            "review_title": "Chocolate Fudge is fantastic!",
+            "review_text": "Chocolate deliciousness! Smooth and creamy!",
+            "review_auther": "Cathie P",
+            "isverified": true
+          }
+        },
+        "review_zcq6yV": {
+          "type": "review",
+          "settings": {
+            "review_title": "My favourite protein powder",
+            "review_text": "Absolutely love the Strawberries & Cream protein powder! It tastes great, mixes well and is very gentle on my stomach.",
+            "review_auther": "Annelize L",
+            "isverified": true
+          }
+        },
+        "review_dETUMF": {
+          "type": "review",
+          "settings": {
+            "review_title": "Found a staple",
+            "review_text": "I have been struggling to get more protein and when I decided to try a powder I couldn’t resist Salted Caramel! It’s so good just mixed with nut-milk or blended into a smoothie! A staple going forward.",
+            "review_auther": "Kristen G",
+            "isverified": true
+          }
+        },
+        "review_Aq6kxC": {
+          "type": "review",
+          "settings": {
+            "review_title": "Don’t miss out!",
+            "review_text": "The texture is incredibly smooth, no clumping or grittiness. The peanut butter taste is spot-on and rich in flavour!",
+            "review_auther": "Zeinab R",
+            "isverified": true
+          }
+        }
+      },
+      "block_order": [
+        "stars_KnMqkC",
+        "review_PGyepj",
+        "review_CKPFyE",
+        "review_zcq6yV",
+        "review_dETUMF",
+        "review_Aq6kxC"
+      ],
+      "settings": {
+        "title": "Tried, Tested, and Loved",
+        "title_color": "#0066cc",
+        "background_color": "#c2e4f2"
+      }
+    },
+    "ee6e96ba-ba06-4f35-9fc6-a0282957f485": {
+      "type": "product-section-faq-new",
+      "blocks": {
+        "shape_divider_mjmKNK": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "color_bg": "#c2e4f2",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
+        "b9c2e0f0-fa6d-424e-86bd-0b0739a81516": {
+          "type": "faq",
+          "settings": {
+            "title": "<strong>How big are the samples?<\/strong>",
+            "content": "<p>There is one individual serving per sample (44g), which is the equivalent of one rounded scoop. Each pack contains 5 individually-packaged portions, with each one making a regular-sized shake.<\/p>",
+            "category": "Product"
+          }
+        },
+        "b8e550a3-ccdc-4a55-ac16-76b6f86f6864": {
+          "type": "faq",
+          "settings": {
+            "title": "<strong>Is the Sample Pack a subscription?<\/strong>",
+            "content": "<p>No, it’s a one-time purchase–no commitment.<\/p>",
+            "category": "shipping"
+          }
+        },
+        "e22484ef-89ba-4ff0-9a3e-ef357a1770e6": {
+          "type": "faq",
+          "settings": {
+            "title": "<strong>How long does delivery take?<\/strong>",
+            "content": "<p>In general, your package will arrive within 5-7 business days. Tracking will be provided–you can follow your package the entire time it makes its way to you!<\/p>",
+            "category": "product"
+          }
+        },
+        "adedff46-55c8-4e80-b187-a49ebbc88ee8": {
+          "type": "faq",
+          "settings": {
+            "title": "<strong>Can I buy more than one Sample Pack?<\/strong>",
+            "content": "<p>Of course! Many customers buy multiple packs to share with their friends and family, introducing them to the deliciousness of Good Protein!<\/p>",
+            "category": "subscription"
+          }
+        },
+        "faq_HHnj4R": {
+          "type": "faq",
+          "settings": {
+            "title": "<strong>Does the 60-Day Satisfaction Guarantee apply on Sample Packs?<\/strong>",
+            "content": "<p>The Sample Pack, like our accessories, is not covered by our 60-Day Satisfaction Guarantee. All Sample Pack orders are final sale.<\/p>",
+            "category": "product"
+          }
+        },
+        "a0b5c887-3258-46e4-bad0-fcf1d52efb43": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "title": "How much is shipping?",
+            "content": "<p>Deliveries in the majority of Canada are free for orders over $55. For any order falling under the minimum amount required, we charge a shipping fee of $10.95, $12.95 or $19.95 depending on the area. *See Section 12 our the Terms & Conditions.<\/p>",
+            "category": "shipping"
+          }
+        },
+        "faq_XW8ei6": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "title": "What does a subscription entail?",
+            "content": "<p>Put simply, a subscription allows you to save 20% on all of your orders; meaning you can take full advantage of our superfood blends — and discover all of their benefits — at a low price. We know what you’re thinking: that’s a great deal and you’re wondering how to subscribe. All it takes is opting in and receiving at least 2 shipments. <br\/>You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price.<\/p>",
+            "category": "subscription"
+          }
+        },
+        "faq_NeBdEV": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "title": "Where do your products come from?",
+            "content": "<p>We’re based in Quebec, Canada and we’re proud to say that all of our blends are made locally. Our ingredients come from renowned suppliers around the world, with the majority being based right here in Canada.<\/p>",
+            "category": "product"
+          }
+        },
+        "faq_xN4ikh": {
+          "type": "faq",
+          "disabled": true,
+          "settings": {
+            "title": "How long does delivery take?",
+            "content": "<p>In general, your package will arrive within 5-7 business days. Tracking will be provided–you can follow your package the entire time it makes its way to you!<\/p>",
+            "category": "shipping"
+          }
+        }
+      },
+      "block_order": [
+        "shape_divider_mjmKNK",
+        "b9c2e0f0-fa6d-424e-86bd-0b0739a81516",
+        "b8e550a3-ccdc-4a55-ac16-76b6f86f6864",
+        "e22484ef-89ba-4ff0-9a3e-ef357a1770e6",
+        "adedff46-55c8-4e80-b187-a49ebbc88ee8",
+        "faq_HHnj4R",
+        "a0b5c887-3258-46e4-bad0-fcf1d52efb43",
+        "faq_XW8ei6",
+        "faq_NeBdEV",
+        "faq_xN4ikh"
+      ],
+      "settings": {
+        "background": true,
+        "button_link": "",
+        "logo_link": "",
+        "heading": "FAQs",
+        "tabs": "Product, Subscription, Shipping",
+        "chat_heading": "Have any questions?",
+        "chat_content": "<p>Chat with our customer support team.<br> Monday - Friday 9am to 5pm (EST).<\/p>\n<p><a onclick=\"GorgiasChat.open();\" class=\"chat\">Start Chat <i class=\"fa-regular fa-comment-dots\"><\/i>\n<\/a><\/p>\n<p>You can also contact us via email:<\/p>\n<ul>\n<li><a href=\"https:\/\/goodprotein.ca\/pages\/contact\"><i class=\"fa-solid fa-envelope\"><\/i>info@goodprotein.ca<\/a><\/li>\n<\/ul>",
+        "color_bg": "#fffcee",
+        "bottom_image": "shopify:\/\/shop_images\/Logo-Website-Mobile.png"
+      }
+    },
+    "353fe27a-5e75-4e07-a74a-8858a1bf52db": {
+      "type": "product-section-1",
+      "disabled": true,
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/pd-2.png",
+        "image_position": "left",
+        "heading": "Every order makes a nutritional  impact for a mother or child.",
+        "sub_heading": "",
+        "content": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.<\/p>",
+        "max_width": "400",
+        "btn_text": "See Our Cause",
+        "btn_url": "#",
+        "image": "shopify:\/\/shop_images\/pd-1.png",
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "special-header",
+    "special-header2",
+    "main",
+    "custom_image_countdown_overlay_33QqHN",
+    "horizontal_analysis_table_Pkqxfq",
+    "title_image_button_y3e8kQ",
+    "comparison_table_3_HHtPMD",
+    "6_good_thing_c7i4mm",
+    "big_button_3XgCKL",
+    "63d86149-3de8-44e0-9fc5-522d7f858a28",
+    "61a57e3e-447e-444d-b855-b542499d6336",
+    "5ff73161-1300-4a17-ab05-fa2199e59c9a",
+    "9bcc3e2d-da35-4c7e-92dc-c286ee68f5c1",
+    "review_header_AGHgbx",
+    "ee6e96ba-ba06-4f35-9fc6-a0282957f485",
+    "353fe27a-5e75-4e07-a74a-8858a1bf52db"
+  ]
+}

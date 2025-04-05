@@ -2,6 +2,10 @@
 .shopify/
 .env
 .env.*          # Ignore environment-specific settings
+config.yml
+
+#git repo
+README.md
 
 # OS files
 .DS_Store

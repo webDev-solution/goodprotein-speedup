@@ -1,0 +1,77 @@
+<div class="shakes_flavours_list" style="margin-top: 30px;" data-price="{{ product.price }}">
+
+  <h6 style="margin-bottom: 15px;">Select flavours</h6>
+  
+  <div class="inner_flavours_list">
+{% for product_free in collections['superfood-shake'].products %}
+        <div class="free_product_with_add" data-id="{{ product_free.selected_or_first_available_variant.id }}">
+
+          <div class="free_image_product">
+            <div class="image">
+               <a href="{{  product_free.url }}"> <img loading="lazy" src="{{ product_free.featured_image.src | img_url: '300x' }}"></a>
+            </div>
+          </div>
+
+          <div class="free_prod_title">
+            <a href="{{  product_free.url }}">
+              {{ product_free.title 
+                | remove: " - All-in-One Shake"
+                | remove: ' - Shake tout-en-un' 
+                | remove: 'Green Superfood Juice - ' 
+                | remove: 'Jus de superaliments verts - '
+                | remove: ' - Green Apple'
+                | remove: ' - Pomme verte'
+              }}
+            </a>
+          </div>
+
+            <div class="covered_qty_shakes">
+              <div class="add_qty_shakes btn">
+                  ADD {% render 'icon-plus' %}
+            </div>
+      
+            <div class="quantity-selector">
+                  <button class="minus">-</button>
+                  <input type="number" id="quantity2" value="1" readonly>
+                  <button class="plus">+</button>
+            </div>
+            
+          </div>
+        </div>
+        {% endfor %}
+  </div>
+</div>
+
+  <div class="shakes_gift_list" style="margin-top: 30px;margin-bottom: 30px;    padding-right: 10px;">
+<h6 style="margin-bottom: 15px;text-align:center;">The more you buy, the more FREE Gifts you get!</h6>
+
+     {% assign product_free_gift = all_products[settings.choose_gift_product_1] %}
+     {% assign product_free_gift2 = all_products[settings.choose_gift_product_2] %}
+     {% assign product_free_gift3 = all_products[settings.choose_gift_product_3] %}
+     
+  <div class="wrapping_gift_shakes">
+    <div class="common_gift no_gift_block"  data-vid="{{ product_free_gift.selected_or_first_available_variant.id }}">
+          <span  style="display:none;">{% if product_free_gift.featured_image != blank %}
+            <img loading="lazy" src="{{ product_free_gift.featured_image.src | img_url: '300x' }}">
+            {% else %} {{ 'image' | placeholder_svg_tag }} {% endif %}</span>
+    </div>
+    
+     <div class="common_gift second_gift_block" data-vid="{{ product_free_gift2.selected_or_first_available_variant.id }}">
+          <span style="display:none;">{% if product_free_gift2.featured_image != blank %}
+            <img loading="lazy" src="{{ product_free_gift2.featured_image.src | img_url: '300x' }}">
+          {% else %} {{ 'image' | placeholder_svg_tag }} {% endif %}</span>
+    </div>
+     <div class="common_gift third_gift_block"
+       data-vid="{{ product_free_gift3.selected_or_first_available_variant.id }}">
+          <span style="display:none;">{% if product_free_gift3.featured_image != blank %}
+            <img loading="lazy" src="{{ product_free_gift3.featured_image.src | img_url: '300x' }}">
+          {% else %} {{ 'image' | placeholder_svg_tag }} {% endif %}</span>
+    </div>
+  </div>
+</div>
+
+<div class="covered_discount_amount">
+<div class="discount_message"><h6>You're saving <span class="discount_value">10%</span></h6></div>
+
+<div class="total_amount_of_product"><span class="total"></span> <span class="saving_amount"><span class="amount" style="color: red;"></span></span></div>
+</div>        

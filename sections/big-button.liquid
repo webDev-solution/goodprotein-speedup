@@ -1,0 +1,155 @@
+{% if template.name != 'product' %}
+  {% assign product_handle = page.metafields.custom.related_product %}
+  {% if product_handle %}
+    {% assign product = all_products[product_handle] %}
+  {% endif %}
+{% endif %}
+
+<style>
+  .big-button-containers-ss {
+    display: flex;
+    justify-content: center;
+    background-color: {{ section.settings.background_color }};
+  }
+
+  .big-button-wrapper-ss {
+    width: 100%;
+    max-width: {{ section.settings.max_width }}px;
+  }
+
+  .big-button-ss {
+    background-color: {{ section.settings.button_background_color }};
+    color: {{ section.settings.color }};
+    font-size: {{ section.settings.font_size }}px;
+    padding: {{ section.settings.padding_vertical }}px {{ section.settings.padding_horizontal }}px;
+    border-radius: {{ section.settings.border_radius }}px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Gelica SBd' !important;
+  }
+  .big-button-ss svg {
+    width: {{ section.settings.font_size }}px;
+    height: {{ section.settings.font_size }}px;
+    margin-left: 30px;
+  }
+  @media (max-width: 768px) {
+    .big-button-wrapper-ss {
+      width: unset;
+      max-width: unset;
+      display: inline-block;
+      margin: auto;
+    }
+    .big-button-ss {
+      font-size: 18px;
+    }
+    .big-button-ss svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+</style>
+
+<div class="big-button-containers-ss">
+  <div class="big-button-wrapper-ss">
+    <a id="quick-buy-btn-{{ product.variants[0].id }}" class="btn quick-buy-btn big-button-ss" data-product-id="{{ product.variants[0].id }}" data-variant-id="{{ product.variants[0].id }}">
+      {{ section.settings.button_label }}
+      {% render 'icon-right-arrow-bold' %}
+    </a>
+  </div>
+</div>
+ 
+{% schema %}
+{
+  "name": "Big Button",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Button Link"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Taste the Difference"
+    },
+    {
+      "type": "header",
+      "content": "color schema"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Color",
+      "default": "#62B5E5"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 70,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Padding Horizontal",
+      "min": 0,
+      "max": 70,
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "label": "Padding Vertical",
+      "min": 0,
+      "max": 70,
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "default": 50,
+      "min": 0,
+      "max": 70
+    },
+    {
+      "id": "max_width",
+      "type": "range",
+      "label": "Max width",
+      "default": 400,
+      "min": 100,
+      "max": 1000,
+      "step": 20
+    },
+    {
+      "id": "background_color",
+      "type": "color",
+      "label": "Background Color",
+      "default": "#FFFCEE"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Big Button",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}

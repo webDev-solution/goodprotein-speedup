@@ -1,0 +1,107 @@
+[data-section-type="pdp-section-3"] {
+  background: var(--color-pdp-section-3);
+  text-align: center;
+  padding-bottom: 50px;
+  color: var(--color-pdp-section-3-text);
+  h3 {
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-pdp-section-3-text);
+    margin-bottom: 15px;
+    line-height: 39px;
+    font-family: Gelica Bk/*!important*/;
+    &.large-hide {
+      display: none;
+    }
+  }
+  h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--color-pdp-section-3-text);
+    .review-star {
+      padding-left: 8px;
+      color: #eb7c95;
+    }
+  }
+  .product-section-3-carousel {
+    max-width: 1000px;
+    margin: 30px auto 0px;
+    width: 100%;
+    padding: 0 50px;
+    .slick-prev {
+      left: 0;
+      color: #000;
+    }
+    .slick-next {
+      right: 0;
+      color: #000;
+    }
+    .slick-arrow {
+      font-size: 21px;
+      overflow: hidden;
+      color: transparent;
+    }
+    
+    .slick-arrow {
+      font-size: 21px;
+      color: var(--color-pdp-section-3-text);
+    }
+    @media screen and (max-width: 768px) {
+      margin: 0 -15px;
+      width: calc(100% + 30px);
+      padding: 0;
+    }
+    &.large-hide {
+      @media screen and (min-width: 769px) {
+        display: none;
+      }
+    }
+    .small-hide {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .inner-carousel {
+      display: flex;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
+
+  &.background--true {
+    background: var(--color-pdp-section-3);
+  }
+  .reviews_wrap {
+    h3 {
+      margin-bottom: 15px;
+      @media screen and (max-width: 768px) {
+        font-size: 28px;
+        max-width: 300px;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+    }
+    h4 {
+      @media screen and (max-width: 768px) {
+        width: 254px;
+        margin: auto;
+      }
+    }
+  }
+  .inner_productimg_txt_wrap {
+    .left-product-section-1 {
+      @media screen and (max-width: 768px) {
+        padding: 0;
+        padding-bottom: 30px;
+      }
+      img {
+        border-radius: 0;
+      }
+      
+    }
+  }
+}

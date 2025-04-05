@@ -1,0 +1,44 @@
+{{ 'selectable-buttons-with-title.css' | asset_url | stylesheet_tag }}
+
+<section class="mb-5">
+  <div>
+    <h2 class="button-group-title-saturn">{{ section.settings.title_text }}</h2>
+  </div>
+  <div class="button-group-container-saturn">
+    {% assign all_tags = section.settings.tags | split: ", " %}
+
+    {% for tag in all_tags %}
+      <button>{{ tag }}</button>
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Button Group",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Title"
+      },
+      {
+        "type": "text",
+        "id": "title_text",
+        "label": "Title",
+      },
+      {
+        "type": "header",
+        "content": "Filter Tags"
+      },
+      {
+        "type": "textarea",
+        "id": "tags",
+        "label": "Tags"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Button Group-1"
+      }
+    ]
+  }
+{% endschema %}

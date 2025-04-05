@@ -1,0 +1,405 @@
+{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}
+<style>
+  .swiper-slide, .swiper-slide * {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+  .video-swiper-carousel-container {
+    overflow: hidden;
+  }
+  #watch-testimonial {
+    background-color: {{ section.settings.bg_color }};
+  }
+  .video-carousel-title-ss {
+    font-size: 80px !important;
+    line-height: unset !important;
+    max-width: unset !important;
+    text-align: center !important;
+  }
+  .swiper-slide, .swiper-slide * {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+  .video-swiper-carousel-container {
+    width: 80%;
+    margin: auto;
+  }
+  .video-swiper-carousel-container .swiper-button-next {
+    right: 100px;
+  }
+  .video-swiper-carousel-container .swiper-button-prev {
+    left: 100px;
+  }
+  
+  .video-swiper-carousel-container .swiper-slide img,
+  .video-swiper-carousel-container .swiper-slide video {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .video-swiper-carousel-container .swiper-slide img,
+  .video-swiper-carousel-container .swiper-slide video {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .video-swiper-carousel-container .swiper-slide .review-text-container {
+    padding: 30px;
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .video-swiper-carousel-container .swiper-slide .review-text-container p {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 769px) and (max-width: 1300px) {
+    .video-swiper-carousel-container {
+      width: 84%;
+      margin: auto;
+    }
+    .video-swiper-carousel-container .swiper-button-next {
+      right: 50px;
+    }
+    .video-swiper-carousel-container .swiper-button-prev {
+      left: 50px;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1439px) {
+    .video-carousel-title-ss {
+      font-size: 60px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    #watch-testimonial {
+      max-width: unset !important;
+    }
+    .video-carousel-title-ss {
+      font-size: 28px !important;
+      margin-bottom: 0px;
+    }
+    .review-text-container {
+      padding: 10px !important;
+    }
+    .video-swiper-carousel-container .swiper-slide img,
+    .video-swiper-carousel-container .swiper-slide video {
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
+    }
+    .video-swiper-carousel-container .swiper-slide img,
+    .video-swiper-carousel-container .swiper-slide video {
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
+    }
+    .video-swiper-carousel-container .swiper-slide .review-text-container p {
+      font-size: 12px !important;
+      line-height: 1.5;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 58% !important;
+    }
+    .swiper-button-next {
+      right: 10px !important;
+    }
+    .swiper-button-prev {
+      left: 10px !important;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 24px;
+    }
+    .video-swiper-carousel-container {
+      width: 86%;
+    }
+    #watch-testimonial {
+      padding-bottom: 20px !important;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 989px) {
+    #watch-testimonial {
+      max-width: unset !important;
+    }
+  }
+</style>
+<div class="product-section product-section-padding" id="watch-testimonial">
+  <h3 class="large-hide video-carousel-title-ss" >{{ section.settings.heading }}</h3>
+  {% if section.settings.subtitle %}
+    <h5>{{ section.settings.subtitle }}</h5>
+  {% endif %}
+  <h4>{{ section.settings.subheading }}</h4>
+  <p>{{ section.settings.content }}</p>
+  <div class=" video-swiper-carousel-container">
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="product-section-box product-video-box swiper-slide">
+          <div style="position: sticky">
+            {% if request.locale.iso_code == 'fr' %}
+              {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+            {% else %}
+              {% assign image_link = block.settings.image | image_url: width: 600 %}
+            {% endif %}
+            {% if block.settings.video_type == 'other' %}
+              {% if request.locale.iso_code == 'fr' %}
+                {% assign video_link = block.settings.fr_video_link %}
+                {% assign video = true %}
+              {% else %}
+                {% assign video_link = block.settings.video_link %}
+                {% assign video = true %}
+              {% endif %}
+            {% else %}
+              {% if request.locale.iso_code == 'fr' %}
+                {% assign video_link = block.settings.fr_hosted_video %}
+                {% assign video = true %}
+              {% else %}
+                {% assign video_link = block.settings.hosted_video %}
+                {% assign video = true %}
+              {% endif %}
+            {% endif %}
+            {% if image_link != blank %}
+              {{image_link | image_tag: class: 'image', image_size: '400x' }}
+            {% endif %}
+            {% if video_link!= blank %} 
+              {{video_link | video_tag: class: 'video c_hidden', image_size: '400x' }}
+            {% endif %}
+            <div class="playpause"><i class="fa-solid fa-circle-play {% if request.path contains '/fr' %}c_hidden{% endif %}"></i></div>
+          </div>
+          <div class="review-text-container">
+            {{ block.settings.review_text }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>    
+    <div class="swiper-button-next"></div>
+  </div>
+</div>
+
+<script> 
+  $('.video').parent().click(function () {
+    if($(this).children(".video").get(0).paused){
+      $(this).children(".video").get(0).play();   
+      $(this).children(".playpause").fadeOut();
+    }else{       
+      $(this).children(".video").get(0).pause();
+    $(this).children(".playpause").fadeIn();
+      }
+  });
+
+  $(document).ready(function(){
+    var acc = document.getElementsByClassName("product-video-box");
+    for (var i = 0; i < acc.length; i++) {
+      // Prevent duplicate event listeners by checking if already attached
+      if (!acc[i].hasAttribute('data-listener')) {
+          acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
+        // Attach the event listener without using setTimeout inside
+        acc[i].addEventListener("click", function() {
+          if(this.querySelector("video")){
+            this.querySelector("img").style.display = "none";
+            this.querySelector("video").classList.remove("c_hidden");
+   //         this.querySelector(".playpause").classList.remove("c_hidden");
+          }
+        });
+      }
+    }
+  });
+</script> 
+
+<style>
+  #shopify-section-{{ section.id }} .product-video-carousel{
+    background-color:{{ section.settings.bg_color }};
+  }
+
+  .v_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #loadMore {
+    width: 200px;
+    color: #000;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: 600;
+    text-underline-position: under;
+    text-decoration: underline;
+  }
+
+  .noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+  }  
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    var videoSwiper = new Swiper(".video-swiper-carousel-container", {
+      loop: true,
+      autoplay: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: "progressbar"
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1300: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        990: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        }
+      },
+      touchStartPreventDefault: false,
+      passiveListeners: true
+    });
+
+    $(document).ready(function(){
+      $(".v_content").slice(0, 4).show();
+      $("#loadMore").on("click", function(e){
+        e.preventDefault();
+        $(".v_content:hidden").slice(0, 4).slideDown();
+      });    
+    })
+  });
+  
+</script>
+{% schema %}
+{
+  "name": "New Video Carousel",
+  "settings": [
+    {
+      "type":"color",
+      "id":"bg_color",
+      "label":"Bg Color"
+    },
+    {
+      "type":"number",
+      "id":"itme_show",
+      "label":"Show Per Item",
+      "default":6
+    },
+    {
+      "type":"textarea",
+      "id":"subtitle",
+      "label":"Sub Title"
+    },
+    {
+      "type":"textarea",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"subheading",
+      "label":"Sub Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"content",
+      "label":"Content"
+    }
+  ],
+  "blocks":[
+    {
+      "type":"image",
+      "name":"Image",
+      "settings":[
+        {
+          "type":"select",
+          "id":"video_type",
+          "label":"Video Type",
+          "options":[
+            {
+              "value":"mp4",
+              "label":"MP4"
+            },
+            {
+              "value":"other",
+              "label":"YouTube/Vimeo"
+            }
+          ],
+          "default":"mp4"
+        },
+        {
+          "type": "header",
+          "content": "English video"
+        },
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"hosted_video",
+          "label":"Hosted Video"
+        },
+        {
+          "type": "header",
+          "content": "Frech video"
+        },
+        {
+          "type":"image_picker",
+          "id":"fr_image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"fr_video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"fr_hosted_video",
+          "label":"Hosted Video"
+        },
+        {
+          "type": "richtext",
+          "id": "review_text",
+          "label": "Review Text"
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"New Video Carousel",
+      "category":"product"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

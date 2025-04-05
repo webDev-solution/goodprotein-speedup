@@ -1,0 +1,5 @@
+/*
+Generated time: October 16, 2023 12:43
+This file was created by the app developer. Feel free to contact the original developer with any questions. It was minified (compressed) by AVADA. AVADA do NOT own this script.
+*/
+@media (prefers-reduced-motion:reduce){.marquee-container{padding-left:0;text-align:center;white-space:normal;display:block}.marquee span{display:none}.marquee span:first-child{display:inline}}.marquee-container{visibility:visible}@keyframes marquee{0%{transform:translateX(0);-webkit-transform:translateX(0)}100%{transform:translateX(-100%);-webkit-transform:translateX(-100%)}}@keyframes shift{to{-webkit-mask-position:100% 0;mask-position:100% 0}}

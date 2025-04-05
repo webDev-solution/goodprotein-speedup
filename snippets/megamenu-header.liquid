@@ -1,0 +1,133 @@
+    {% if link.title == 'shop' or link.title == 'Shop' or link.title == 'Boutique' %}
+
+    <a href="{{link.url}}" class="megamenu_custom_btn simple_menu_item items-stretch h-full relative font-main flex items-center transition normal-case text-scheme-text" aria-controls="menu0" aria-expanded="true">
+    {{ link.title }}
+    </a>
+
+
+    <div class="megamenu_top_covered">
+      <div class="covered_shop_menu">
+        <div class="left_part_megamenu">
+          {% assign count_left = 0 %}
+          {% for block in section.blocks %}
+            {%  if block.type == 'shop_megamenu' %}
+              {% assign count_left = count_left | plus: 1 %}
+              {% assign collection = collections[block.settings.choose_collection] %}           
+              {% if collection.handle != "" %}  
+                <h5 class="hover_left_content{% if count_left == 1 %} hovered{% endif %}" data-target="#target_{{ count_left }}">
+                  <a href="{{ block.settings.button_link }}">{{ collection.title }}</a>
+                {% if collection.products.size > 0 %}<span class="right_svg">{% render 'icon-chevron-down' %}</span>{% endif %}
+                </h5>
+              {% endif %}
+              {% if block.settings.button_label != blank %}
+                <h5 class="hover_left_content{% if count_left == 1 %} hovered{% endif %}" data-target="#target_{{ count_left }}">
+                  <a href="{{ block.settings.button_link }}" class="custom_left_link">
+                      {{ block.settings.button_label }}
+                  </a>
+                </h5>
+              {% endif %}
+            {% endif %}
+          {% endfor %}  
+          <h5 class="hover_left_content" data-target="#target_3">
+            {% if section.settings.shop_all_txt != blank %}
+              <a href="{{section.settings.shop_all_link}}" class="btn push-btn w-full" >{{section.settings.shop_all_txt}}</a>
+            {% endif %}
+          </h5>
+        </div>   
+        {% assign count = 0 %}
+        {% for block in section.blocks %}
+          {%  if block.type == 'shop_megamenu' %}
+            {% assign count = count | plus: 1 %}
+            <div class="right_part_megamenu" id="target_{{ count }}" {% unless count == 1 %}style="display:none;"{% endunless %}>
+              {% assign collection = collections[block.settings.choose_collection] %}           
+
+              {% for product in collection.products limit: 12 %}
+                {% unless product.tags contains 'special product' %}
+                  {% unless product.tags contains 'hidden product' %}
+                   {% unless product.tags contains 'original_formula' %}
+                  <div class="product_content_right">
+                    <a href="{{ product.url }}" class="inner_pro_list">
+                  
+                        <div class="product_img" style="background-color:{{ product.metafields.custom.megamenu_backgroud_color }};">
+                            {% if product.metafields.custom.megamenu_badge != blank %}
+                            <div class="badge" style="color: {{ settings.badge_text }}; background-color: {{ settings.badge_back }};">{{product.metafields.custom.megamenu_badge}}</div>
+                            {% endif %}
+                            <div class="image">
+                                {% if product.featured_image != blank %}
+                                <img loading="lazy" src="{{ product.featured_image.src | img_url: '300x' }}">
+                                {% else %}
+                                {{ 'product-1' | placeholder_svg_tag }}
+                                {% endif %}
+                            </div>
+                        </div>
+                      <div class="product_title">
+                        {% if product.title contains "Green Superfood Juice" %}
+                          Green Superfood Juice
+                        {% elsif product.title contains "Jus de superaliments verts" %}
+                          Jus de superaliments verts
+                        {% elsif product.title contains "Red Superfood Juice" %}
+                          Red Superfood Juice
+                        {% elsif product.title contains "Jus de superaliments rouges" %}
+                          Jus de superaliments rouges
+                        {% else %}
+                          {{ product.title 
+                            | remove: " - All-in-One Shake"
+                            | remove: ' - Shake tout-en-un' 
+                            | remove: 'Green Superfood Juice - ' 
+                            | remove: 'Jus de superaliments verts - '
+                            | remove: ' - Green Apple'
+                            | remove: ' - Pomme verte'
+                            | remove: '- Green Superfood Juice'
+                            | remove: '- Red Superfood Juice'
+                            | remove: '- Boisson tout-en-un'
+                          }}
+                        {% endif %}
+                      </div>
+                    </a>
+                  </div>
+                  {% endunless %}
+                {% endunless %} 
+              {% endunless %}  
+              {% endfor %}
+            </div> 
+          {% endif %}
+        {% endfor %}  
+      </div>
+    </div>
+    {% endif %}
+
+    {% if link_flag %}
+    <a href="{{link.url}}" class="megamenu_custom_btn simple_menu_item items-stretch h-full relative font-main flex items-center transition normal-case text-scheme-text" aria-controls="menu0" aria-expanded="true">
+    {{ link.title }}
+    </a>
+
+    <div class="megamenu_top_covered">
+      <div class="covered_shop_menu diff_menus_cover">
+        {% for block in section.blocks %}
+          {% if block.type == 'megamenu_layout_1' %}
+            {% for i in (1..4) %}
+              {% capture lay_menu %}lay_menu_{{ i }}{% endcapture %}
+              {% capture lay_menu_image %}lay_menu_image_{{ i }}{% endcapture %}
+              {% capture lay_menu_link %}lay_menu_link_{{ i }}{% endcapture %}
+              {% if block.settings[lay_menu] != blank %}
+              <div class="diff_megamenu_content">
+                <a href="{{ block.settings[lay_menu_link] }}">
+
+                  <div class="img_megamenu">
+                            {% if block.settings[lay_menu_image] != blank %}
+                                  <img loading="lazy" src="{{ block.settings[lay_menu_image] | img_url: '600x' }}">
+                              {% else %}
+                                {{ 'image' | placeholder_svg_tag }}
+                            {% endif %}
+
+                    <div class="heading">{{ block.settings[lay_menu] }}</div>
+                  </div>
+                </a>
+              </div>
+              {%  endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
