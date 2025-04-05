@@ -1,0 +1,30 @@
+# Shopify CLI/ThemeKit config
+.shopify/
+.env
+.env.*          # Ignore environment-specific settings
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (if using npm or theme extensions)
+node_modules/
+package-lock.json
+
+# Log files
+*.log
+logs/
+
+# Cache/temp files
+.cache/
+tmp/
+*.tmp
+
+# Build artifacts (if using tools like Tailwind, Webpack, etc.)
+dist/
+build/
+.sass-cache/
+*.map
+
+# VS Code settings
+.vscode/
