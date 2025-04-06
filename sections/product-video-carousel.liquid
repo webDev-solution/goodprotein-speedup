@@ -1,4 +1,7 @@
-{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-product-carousel.scss.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-carousel.scss.css' | asset_url }}">
+</noscript>
 <div class="product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
   <h3 class="large-hide" >{{ section.settings.heading }}</h3>
   {% if section.settings.subtitle %}

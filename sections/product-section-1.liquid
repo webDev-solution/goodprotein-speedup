@@ -1,4 +1,7 @@
-{{'custom-product-image-text.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-product-image-text.scss.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-image-text.scss.css' | asset_url }}">
+</noscript>
 
 <div data-section-type="pdp-section-1" data-color-scheme="{{ section.settings.color_scheme }}" class="relative text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.enable_mobile %} mobile {% endif %}">
 <div class="product-section product-section-padding product-section-1">

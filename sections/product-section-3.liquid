@@ -1,4 +1,7 @@
-{{'custom-product-section-3.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-product-section-3.scss.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-section-3.scss.css' | asset_url }}">
+</noscript>
 
 {% style %}
   #shopify-section-{{section.id}} [data-section-type="pdp-section-3"] {

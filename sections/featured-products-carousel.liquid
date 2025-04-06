@@ -1,5 +1,8 @@
 {% comment %} {{'custom-featured-products-carousel.scss.css' | asset_url | stylesheet_tag }} {% endcomment %}
-{{'custom-featured-products-carousel.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-featured-products-carousel.scss.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-featured-products-carousel.scss.css' | asset_url }}">
+</noscript>
 
 <section data-color-scheme="{{ section.settings.color_scheme }}" data-section-type="featured-products-carousel" class="py-12 bg-scheme-background">
   <div class="page-width">
