@@ -16,7 +16,13 @@
         <div class="carousel-item">
           <div class="featured-item">
             <a href="{{product.url}}" class="featured-image-wrapper">
-              <img class="featured-product-image" src="{{ product.featured_image | image_url }}" lazy="loading">
+              <img 
+                class="featured-product-image" 
+                src="{{ product.featured_image | image_url }}" 
+                loading="lazy"
+                width="{{ product.featured_image.width }}"
+                height="{{ product.featured_image.height }}"
+                alt="{{ product.featured_image.alt | escape }}">
             </a>
             <div class="featured-product-contnet text-center">
               <a href="{{product.url}}">

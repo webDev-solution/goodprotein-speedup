@@ -20,7 +20,14 @@
       </div>
       <div class="lg:col-span-4">
         <div class="featured-image-wrapper">
-          <img class="featured-image" src="{{ section.settings.image | image_url }}" lazy="loading">
+          <img 
+            class="featured-image" 
+            src="{{ section.settings.image | image_url }}" 
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            alt="{{ section.settings.image.alt | escape }}"
+          >
         </div>
       </div>
       <div class="lg:col-span-3 list pl-9">

@@ -25,7 +25,7 @@
             {% cycle '<div dir="rtl" class="inner-carousel">', '', '', '', '', '', '<div class="inner-carousel">', '', '', '', '', '' %}
             <div class="product-section-box img_wrap3">
               <figure>
-                 <img src="{{ block.settings.image | image_url: width: 400  }}" alt="" width="" height="" />
+                 <img src="{{ block.settings.image | image_url: width: 400  }}" alt="" width="400" height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}" loading="lazy" />
               </figure>
               <h5>{{ block.settings.heading }}</h5>
             </div>
