@@ -423,105 +423,93 @@
       </script>
 
     {% include 'friendbuy' %}
-    <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}" defer></script>
-    {% include 'store-credit-launcher' %}
-    <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
-
+    {% if template.name == 'product' %}
+      <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}" ></script>
+      {% include 'store-credit-launcher' %}
+      <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
+    {% endif %}
 
 
     <!-- Swiper.js CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </head>
   
-        <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-const intervalId = setInterval(checkCartDrawerStatus, 10);
-        function checkCartDrawerStatus() {
+    {% if template.name == 'product' %}
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const intervalId = setInterval(checkCartDrawerStatus, 10);
+          function checkCartDrawerStatus() {
             const targetNode = document.getElementById('CartPopup');
             // console.log("loop targetNode", targetNode)
             if (targetNode) {
-                clearInterval(intervalId);
-const targetNode = document.getElementById('CartPopup');
-// Options for the observer (which mutations to observe)
-const config = { attributes: true, childList: true, subtree: true };
-
-// Callback function to execute when mutations are observed
-const callback = function(mutationsList, observer) {
-    for(const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            // console.log('A child node has been added or removed.');
-        }
-        else if (mutation.type === 'attributes') {
-            // console.log(`The ${mutation.attributeName} attribute was modified.`);
-
-        }
-       helper();
-    }
-};
-
-// Create an observer instance linked to the callback function
-const observer = new MutationObserver(callback);
-
-// Start observing the target node for configured mutations
-observer.observe(targetNode, config);
-
-// To stop observing:
-// observer.disconnect();
+              clearInterval(intervalId);
+              // Options for the observer (which mutations to observe)
+              const config = { attributes: true, childList: true, subtree: true };
+              // Callback function to execute when mutations are observed
+              const callback = function(mutationsList, observer) {
+                for(const mutation of mutationsList) {
+                  if (mutation.type === 'childList') {
+                      // console.log('A child node has been added or removed.');
+                  }
+                  else if (mutation.type === 'attributes') {
+                      // console.log(`The ${mutation.attributeName} attribute was modified.`);
+                  }
+                  helper();
+                }
+              };
+              // Create an observer instance linked to the callback function
+              const observer = new MutationObserver(callback);
+              // Start observing the target node for configured mutations
+              observer.observe(targetNode, config);
+              // To stop observing:
+              // observer.disconnect();
             }
-        }
-
-
-
-
-    });
-function helper(){
-  // console.log("drawer opened")
-const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-upgrade-dropdown optgroup[label="Subscription plans"]');
-
-    // Loop through each optgroup
-    subscriptionOptGroups.forEach(optGroup => {
-        // Get all options within the current optgroup
-        const options = optGroup.querySelectorAll('option');
-
-        // Loop through each option and hide those with "Subscribe & Save"
-        options.forEach(option => {
-            if (option.textContent.includes('Bundle')) {
-                option.style.display = 'none';
-            }
+          }
         });
-    });
-}
+        function helper(){
+          // console.log("drawer opened")
+          const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-upgrade-dropdown optgroup[label="Subscription plans"]');
+          // Loop through each optgroup
+          subscriptionOptGroups.forEach(optGroup => {
+            // Get all options within the current optgroup
+            const options = optGroup.querySelectorAll('option');
+            // Loop through each option and hide those with "Subscribe & Save"
+            options.forEach(option => {
+                if (option.textContent.includes('Bundle')) {
+                    option.style.display = 'none';
+                }
+            });
+          });
+        }
       </script>
-<script src="{{ 'loop_bundle.js' | asset_url }}" defer></script>
-{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}<body data-color-scheme="primary">
+      <script src="{{ 'loop_bundle.js' | asset_url }}" ></script>
+    {% endif %}
+</head>
+{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}
+<body data-color-scheme="primary">
+  {% comment %}theme-check-disable MissingTemplate{% endcomment %}
+  <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
+  {% liquid
+    section 'announcement-bar'
+    if request.path contains 'pages/bfcm-2024'
+      section 'custom-header'
+    elsif request.path contains 'pages/holiday-2025'
+      section 'custom-holiday-header'
+    elsif request.path contains 'pages/new-year-2025'
+      section 'custom-holiday-header'
+    else
+      section 'header'
+    endif 
+  %}
 
-  
-  
-      {% comment %}theme-check-disable MissingTemplate{% endcomment %}
-      <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
-      {% liquid
-        section 'announcement-bar'
-        if request.path contains 'pages/bfcm-2024'
-          section 'custom-header'
-        elsif request.path contains 'pages/holiday-2025'
-          section 'custom-holiday-header'
-        elsif request.path contains 'pages/new-year-2025'
-          section 'custom-holiday-header'
-        else
-          section 'header'
-        endif 
-      %}
-
-     <main id="MainContent" class="overflow-hidden">
+  <main id="MainContent" class="overflow-hidden">
 
     {%- if request.path contains 'loop_subscriptions/bundle' or request.path contains 'loop_subscriptions/customer' -%}
       {% render 'loop_loader' %}
     {%- endif -%}
   
-        {{ content_for_layout }}
-      </main>
+    {{ content_for_layout }}
+  </main>
       {% section 'footer' %}
       {%- if template == 'index' -%}
         {%- section 'call-to-action' -%}
