@@ -119,6 +119,7 @@
             <div class="brand-video-container"></div>
             <div class="brand-video-real-container">
               <video playsinline="playsinline" class="video" preload="metadata" poster="{{ video_link.poster }}"><source src="{{ video_link.value }}" type="video/mp4"><img src="{{ video_link.poster }}"></video>
+              <div class="playpause"><i class="fa-solid fa-circle-play"></i></div>
             </div>
             <div class="recipe-header-bottom-wave-mobile">
               <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/recipe-wave-mobile.png?v=1743273638" />
@@ -174,7 +175,31 @@
     $(this).children(".playpause").fadeIn();
       }
   });
-</script>
+
+  $(document).ready(function(){
+    var acc = document.getElementsByClassName("product-video-box");
+    for (var i = 0; i < acc.length; i++) {
+      // Prevent duplicate event listeners by checking if already attached
+      if (!acc[i].hasAttribute('data-listener')) {
+          acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
+        // Attach the event listener without using setTimeout inside
+        acc[i].addEventListener("click", function() {
+          if(this.querySelector("video")){
+            this.querySelector("img").style.display = "none";
+            this.querySelector("video").classList.remove("c_hidden");
+   //         this.querySelector(".playpause").classList.remove("c_hidden");
+          }
+        });
+      }
+    }
+  });
+  
+  $('video').ready(function () {
+    setTimeout(function () {
+      document.querySelector(".playpause").classList.add("visible");
+    }, 1000); // 2 seconds
+  })
+</script> 
 
 {% schema %}
 {
