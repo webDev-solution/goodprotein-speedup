@@ -117,7 +117,7 @@
       '--ab-height',
       `${document.getElementById('AnnouncementBar').clientHeight}px`
     );
-    $(document).ready(function(){
+    document.addEventListener("DOMContentLoaded", function () {
       $('.slider-for').slick({
         autoplay:true,
         infinite: true,
