@@ -237,9 +237,11 @@
       </noscript>
       <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
       <script>
-        Fancybox.bind('[data-fancybox]', {
+        {% comment %} 
+         Fancybox.bind('[data-fancybox]', {
           // Custom options
-        });    
+         });
+        {% endcomment %}
       </script>
       <link rel="preload" href="{{ 'custom.aio.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
@@ -915,6 +917,9 @@ var afterpay_js_snippet_version = '1.1.6';
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    Fancybox.bind('[data-fancybox]', {
+      // Custom options
+    });    
     const modalContainer = document.querySelector(".modal-container-sanobu");
     const closeModalButton = document.querySelector(".close-modal-sanobu");
     let currentURL = window.location.href;
