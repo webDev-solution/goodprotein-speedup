@@ -1,3 +1,9 @@
+{% style %}
+  .upcart-trust-badge {
+    padding-top: 1rem;
+  }
+{% endstyle %}
+
 <div class="{{ block_base_classes }}" {{ block.shopify_attributes }}>
   {% form 'product',
     product,
@@ -140,12 +146,10 @@
       </div>
     </div>
 
-    <!-- 
-      date: 11/27/2024,
-      action: add
-      section: collectafreerecipebookwhenyouaddthisitemtothecart
-      search: *****************************************************
-    -->
+    {% if settings.upcart_trust_badge != blank %}
+      <img class="upcart-trust-badge" src="{{ settings.upcart_trust_badge | img_url: 'master' }}"/>
+    {% endif %}
+
     <div class="recipe-book-section">
       <div class="notice-recipe-book">Get a Free Recipe Book with your order!</div>
       {% assign product = all_products['digital-recipe-book'] %}
