@@ -2482,5 +2482,15 @@
         "info": "Additional product for all-in-one shack"
       }
     ]
+  },
+  {
+    "name": "Extra",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "upcart_trust_badge",
+        "label": "Upcart trust badge"
+      }
+    ]    
   }
 ]
