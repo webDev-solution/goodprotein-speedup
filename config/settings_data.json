@@ -202,6 +202,7 @@
           },
           "shop_megamenu_XptJQ8": {
             "type": "shop_megamenu",
+            "disabled": true,
             "settings": {
               "choose_collection": "bundles",
               "button_link": "",
