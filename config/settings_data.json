@@ -194,6 +194,7 @@
           },
           "shop_megamenu_NMfcJd": {
             "type": "shop_megamenu",
+            "disabled": true,
             "settings": {
               "choose_collection": "sample-pack",
               "button_link": "/collections/all#SamplePack",
@@ -272,6 +273,7 @@
           },
           "mobile_menu_TnfPUM": {
             "type": "mobile_menu",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/5SingleServingsEN-02.png",
               "title": "Sample Pack",
