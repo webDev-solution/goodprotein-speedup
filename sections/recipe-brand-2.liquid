@@ -142,7 +142,13 @@
                 <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/recipe-wave-mobile.png?v=1743273638" />
               </div>
             {% else %}
-              <div class="w-full absolute top-0 left-0 right-0 bottom-0" height="400px"></div>
+              {% style %}
+                .empty_background {
+                  background-color: {{ recipe_header_background_color }};
+                  height: 400px;
+                }
+              {% endstyle %}
+              <div class="w-full absolute top-0 left-0 right-0 bottom-0"></div>
             {% endif %}
           {% endif %}
         </div>
