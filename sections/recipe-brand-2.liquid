@@ -147,6 +147,11 @@
                   background-color: {{ recipe_header_background_color }};
                   height: 400px;
                 }
+                @media (max-width: 989px) {
+                  .empty_background {
+                    display: none;
+                  }
+                }
               {% endstyle %}
               <div class="w-full absolute top-0 left-0 right-0 bottom-0 empty_background"></div>
             {% endif %}
