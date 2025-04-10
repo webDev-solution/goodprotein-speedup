@@ -200,6 +200,14 @@
               "button_label": ""
             }
           },
+          "shop_megamenu_XptJQ8": {
+            "type": "shop_megamenu",
+            "settings": {
+              "choose_collection": "bundles",
+              "button_link": "",
+              "button_label": "Shop Now"
+            }
+          },
           "f6508123-846c-4f48-bbd6-ad628aae3a7e": {
             "type": "shop_megamenu",
             "settings": {
@@ -313,6 +321,7 @@
           "9fcbdb29-d0ed-4a43-b07e-d8c848ff5189",
           "63c2ea8f-c7ef-483c-97c7-b57dc1c86b28",
           "shop_megamenu_NMfcJd",
+          "shop_megamenu_XptJQ8",
           "f6508123-846c-4f48-bbd6-ad628aae3a7e",
           "72751344-9300-4ca5-90bb-c6771e62afdf",
           "bec7984c-51a3-4d79-b7b1-9682d702b9e4",
