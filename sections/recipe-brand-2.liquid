@@ -169,6 +169,11 @@
             <p>{{ recipe_description }}</p>
             <p>{{ recipe_condition }}</p>
           </div>
+          {% if video_link == blank or brand_image == blank %}
+            <div class="recipe-header-bottom-wave-mobile">
+              <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/recipe-wave-mobile.png?v=1743273638" />
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="recipe-header-bottom-wave absolute bottom-0">
