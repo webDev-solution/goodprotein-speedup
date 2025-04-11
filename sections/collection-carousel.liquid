@@ -1,6 +1,18 @@
+{}
+
 {%- liquid
   assign page_width = section.settings.page_width
+  assign section_background = section.settings.section_background
 -%}
+
+{% style %}
+.section-collection-carousel-container {
+  background-color: {{ section_background }};
+}
+
+.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a img{width:100%}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{text-align:center}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a p.price{text-align:center}
+
+{% endstyle %}
 <div class="{% if page_width %}page-container{% endif %} section-collection-carousel-container">
   <div class="collection-carousel-wrapper">
     <div class="
@@ -24,9 +36,9 @@
           {% for product in products %}
             <div class="swiper-slide">
               <a href="{{ product.url }}">
-                <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
-                {% comment %} <h3>{{ product.title }}</h3>
-                <p>{{ product.price | money }}</p> {% endcomment %}
+                <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
+                <h3>{{ product.title }}</h3>
+                <p class="price">{{ product.price | money }}</p>
               </a>
             </div>
           {% endfor %}
@@ -115,6 +127,12 @@
     {
       "type": "header",
       "content": "Design settings"
+    },
+    {
+      "type": "color",
+      "id": "section_background",
+      "label": "Section background",
+      "default": "#ffffff"
     },
     {
       "type": "checkbox",
