@@ -42,7 +42,7 @@
               <a href="{{ product.url }}">
                 <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
                 <h3>{{ product.title }}</h3>
-                <div class="junip-product-summary-stars" data-junip-product-id="ENTER PRODUCT ID"></div>
+                <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}"></div>
                 <p class="price">{{ product.price | money }}</p>
               </a>
 
