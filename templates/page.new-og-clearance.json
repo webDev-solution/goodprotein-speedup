@@ -51,7 +51,6 @@
     },
     "featured_products_carousel_DJfJac": {
       "type": "featured-products-carousel",
-      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -68,6 +67,7 @@
     },
     "collection_carousel_FBABhk": {
       "type": "collection-carousel",
+      "disabled": true,
       "settings": {
         "title": "Save 40% here...",
         "title_color": "#000000",
