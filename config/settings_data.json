@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "discount": "",
@@ -83,19 +92,19 @@
     "choose_gift_product_3": "shaker-classic",
     "sharing_display": "icons",
     "social_style": "icons",
-    "social_instagram_link": "https:\/\/www.instagram.com\/goodprotein\/",
-    "social_facebook_link": "https:\/\/www.facebook.com\/groups\/566004482304719",
+    "social_instagram_link": "https://www.instagram.com/goodprotein/",
+    "social_facebook_link": "https://www.facebook.com/groups/566004482304719",
     "social_twitter_link": "",
-    "social_tiktok_link": "https:\/\/www.tiktok.com\/@goodprotein",
-    "social_linkedin_link": "https:\/\/www.linkedin.com\/company\/good-protein\/",
+    "social_tiktok_link": "https://www.tiktok.com/@goodprotein",
+    "social_linkedin_link": "https://www.linkedin.com/company/good-protein/",
     "social_email_link": "",
     "cart_icon": "cart",
     "cart_notes_enable": false,
     "cart_type": "page",
     "open_modal_on_add_to_cart": true,
-    "favicon": "shopify:\/\/shop_images\/FavIcon-GP2024.png",
+    "favicon": "shopify://shop_images/FavIcon-GP2024.png",
     "additional_product_for_all_in_one_shack": "sample-pack",
-    "upcart_trust_badge": "shopify:\/\/shop_images\/Upcart_Trust_Badge_1743781791590.webp",
+    "upcart_trust_badge": "shopify://shop_images/Upcart_Trust_Badge_1743781791590.webp",
     "color_secondary_text": "#232323",
     "color_secondary_background": "#ffe89f",
     "color_secondary_accent": "#fff5d6",
@@ -113,12 +122,12 @@
     "button_color": "accent",
     "button_text_color": "automatic",
     "secondary_button_color": "match_background",
-    "checkout_logo_image": "shopify:\/\/shop_images\/Logo_GoodProtein_1_3e507601-94cd-4720-99d1-c68f441a8ec4.png",
+    "checkout_logo_image": "shopify://shop_images/Logo_GoodProtein_1_3e507601-94cd-4720-99d1-c68f441a8ec4.png",
     "checkout_logo_position": "center",
     "checkout_sidebar_background_color": "#f6f6f6",
     "checkout_accent_color": "#000000",
     "checkout_button_color": "#fecb28",
-    "First_img_gift": "shopify:\/\/shop_images\/EchantillonsMockups_2bags_db0cca2b-5c88-4703-b630-af3b3f14f6ba.png",
+    "First_img_gift": "shopify://shop_images/EchantillonsMockups_2bags_db0cca2b-5c88-4703-b630-af3b3f14f6ba.png",
     "enable_gift": true,
     "navigation_font": "font-main",
     "navigation_uppercase": false,
@@ -171,7 +180,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "superfood-shake",
-              "button_link": "\/collections\/superfood-shake#All-in-oneSuperfoodShake",
+              "button_link": "/collections/superfood-shake#All-in-oneSuperfoodShake",
               "button_label": ""
             }
           },
@@ -179,7 +188,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "functional-wellness-menu",
-              "button_link": "\/collections\/functional-wellness#FunctionalWellness",
+              "button_link": "/collections/functional-wellness#FunctionalWellness",
               "button_label": ""
             }
           },
@@ -187,7 +196,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "sample-pack",
-              "button_link": "\/collections\/all#SamplePack",
+              "button_link": "/collections/all#SamplePack",
               "button_label": ""
             }
           },
@@ -195,7 +204,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "bundles",
-              "button_link": "\/collections\/bundles#Bundles",
+              "button_link": "/collections/bundles#Bundles",
               "button_label": ""
             }
           },
@@ -204,17 +213,17 @@
             "settings": {
               "link_name": "Learn",
               "lay_menu_1": "Our Story",
-              "lay_menu_image_1": "shopify:\/\/shop_images\/Mega-Menu-01_aac197c1-0b73-4df9-bb9b-fcbfd09425ac.png",
-              "lay_menu_link_1": "shopify:\/\/pages\/our-story",
+              "lay_menu_image_1": "shopify://shop_images/Mega-Menu-01_aac197c1-0b73-4df9-bb9b-fcbfd09425ac.png",
+              "lay_menu_link_1": "shopify://pages/our-story",
               "lay_menu_2": "FAQ",
-              "lay_menu_image_2": "shopify:\/\/shop_images\/Mega-Menu-08.png",
-              "lay_menu_link_2": "shopify:\/\/pages\/faq-1",
+              "lay_menu_image_2": "shopify://shop_images/Mega-Menu-08.png",
+              "lay_menu_link_2": "shopify://pages/faq-1",
               "lay_menu_3": "Recipes",
-              "lay_menu_image_3": "shopify:\/\/shop_images\/Mega-Menu-03.png",
-              "lay_menu_link_3": "shopify:\/\/blogs\/recipes",
+              "lay_menu_image_3": "shopify://shop_images/Mega-Menu-03.png",
+              "lay_menu_link_3": "shopify://blogs/recipes",
               "lay_menu_4": "Ingredients",
-              "lay_menu_image_4": "shopify:\/\/shop_images\/INGREDIENTS-MENU-02.png",
-              "lay_menu_link_4": "shopify:\/\/pages\/ingredients"
+              "lay_menu_image_4": "shopify://shop_images/INGREDIENTS-MENU-02.png",
+              "lay_menu_link_4": "shopify://pages/ingredients"
             }
           },
           "bec7984c-51a3-4d79-b7b1-9682d702b9e4": {
@@ -222,7 +231,7 @@
             "disabled": true,
             "settings": {
               "choose_collection": "accessories-1",
-              "button_link": "shopify:\/\/collections\/accessories-1",
+              "button_link": "shopify://collections/accessories-1",
               "button_label": ""
             }
           },
@@ -230,43 +239,43 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "gift-card-1",
-              "button_link": "\/collections\/accessories#GiftCard",
+              "button_link": "/collections/accessories#GiftCard",
               "button_label": ""
             }
           },
           "mobile_menu_CzDc7D": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Mockup880g-VanillaMilkshake-T.png",
+              "image": "shopify://shop_images/Mockup880g-VanillaMilkshake-T.png",
               "title": "All-in-One Shake",
-              "link": "shopify:\/\/collections\/superfood-shake",
+              "link": "shopify://collections/superfood-shake",
               "badge_label": ""
             }
           },
           "mobile_menu_EJnzje": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Mockup-Plant-GreenSuperfoodJuice-GreenApple-T.png",
+              "image": "shopify://shop_images/Mockup-Plant-GreenSuperfoodJuice-GreenApple-T.png",
               "title": "Functional Wellness",
-              "link": "\/collections\/functional-wellness#FunctionalWellness",
+              "link": "/collections/functional-wellness#FunctionalWellness",
               "badge_label": ""
             }
           },
           "mobile_menu_TnfPUM": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify:\/\/shop_images\/5SingleServingsEN-02.png",
+              "image": "shopify://shop_images/5SingleServingsEN-02.png",
               "title": "Sample Pack",
-              "link": "shopify:\/\/products\/sample-pack",
+              "link": "shopify://products/sample-pack",
               "badge_label": ""
             }
           },
           "mobile_menu_RfGCf6": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify:\/\/shop_images\/TeamFav-Bundle-T.png",
+              "image": "shopify://shop_images/TeamFav-Bundle-T.png",
               "title": "Bundles",
-              "link": "\/collections\/bundles#Bundles",
+              "link": "/collections/bundles#Bundles",
               "badge_label": "Save 15%"
             }
           },
@@ -274,27 +283,27 @@
             "type": "mobile_menu",
             "disabled": true,
             "settings": {
-              "image": "shopify:\/\/shop_images\/Shaker-Pink-01.png",
+              "image": "shopify://shop_images/Shaker-Pink-01.png",
               "title": "Accessories",
-              "link": "shopify:\/\/products\/shaker-bottle-pink",
+              "link": "shopify://products/shaker-bottle-pink",
               "badge_label": ""
             }
           },
           "mobile_menu_gEh4d8": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Gift-Card_1.png",
+              "image": "shopify://shop_images/Gift-Card_1.png",
               "title": "Gift Card",
-              "link": "shopify:\/\/products\/giftcard",
+              "link": "shopify://products/giftcard",
               "badge_label": ""
             }
           },
           "mobile_menu_k9ywQn": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Website-05.png",
+              "image": "shopify://shop_images/Website-05.png",
               "title": "Shop All+",
-              "link": "https:\/\/goodprotein.ca\/collections\/superfood-shake",
+              "link": "https://goodprotein.ca/collections/superfood-shake",
               "badge_label": ""
             }
           }
@@ -318,8 +327,8 @@
         ],
         "custom_css": [],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Logo-Website.png",
-          "mobile_mneu_logo": "shopify:\/\/shop_images\/Logo-Website-Mobile.png",
+          "logo": "shopify://shop_images/Logo-Website.png",
+          "mobile_mneu_logo": "shopify://shop_images/Logo-Website-Mobile.png",
           "logo_max_width": 160,
           "label_text": "",
           "label_link": "",
@@ -331,7 +340,7 @@
           "show_collection_images": true,
           "crop": "aspect-w-1 aspect-h-1",
           "shop_all_txt": "Shop All",
-          "shop_all_link": "shopify:\/\/collections\/all",
+          "shop_all_link": "shopify://collections/all",
           "header_layout": "navigation_left_logo_center",
           "header_show_search": false,
           "sticky_header": true,
@@ -340,7 +349,7 @@
           "enable_overlay_on_collection_pages": false,
           "enable_overlay_on_product_pages": false,
           "overlay_text_color": "same_as_section",
-          "overlay_logo": "shopify:\/\/shop_images\/Logo-Website.png",
+          "overlay_logo": "shopify://shop_images/Logo-Website.png",
           "overlay_show_separator_border": false,
           "overlay_first_section_padding_top_desktop": 3,
           "overlay_first_section_padding_top_mobile": 3,
@@ -350,18 +359,18 @@
           "sidebar_show_footer_menu": false,
           "sidebar_show_social_icons": true,
           "carousel_enable_1": false,
-          "carousel_img_1": "shopify:\/\/shop_images\/BUNDLES-MENU-01_82c27504-1a90-4dfd-aa26-0b85ac5ac0f7.png",
+          "carousel_img_1": "shopify://shop_images/BUNDLES-MENU-01_82c27504-1a90-4dfd-aa26-0b85ac5ac0f7.png",
           "carousel_heading_1": "All-in-one Superfood Shakes",
           "carousel_btn_text_1": "Shop Flavours",
-          "carousel_btn_link_1": "https:\/\/goodprotein.ca\/products\/all-in-one-superfood-shake-creamy-vanilla",
+          "carousel_btn_link_1": "https://goodprotein.ca/products/all-in-one-superfood-shake-creamy-vanilla",
           "carousel_back_1": "#edd0b1",
           "carousel_text_1": "#000000",
           "carousel_back_border_1": "#fff9e9",
           "carousel_enable_2": false,
-          "carousel_img_2": "shopify:\/\/shop_images\/QUIZZ-MENU-01.png",
+          "carousel_img_2": "shopify://shop_images/QUIZZ-MENU-01.png",
           "carousel_heading_2": "Subscribe & Save BIG",
           "carousel_btn_text_2": "Try it today",
-          "carousel_btn_link_2": "https:\/\/goodprotein.ca\/pages\/subscribe-and-save",
+          "carousel_btn_link_2": "https://goodprotein.ca/pages/subscribe-and-save",
           "carousel_back_2": "#fae0e3",
           "carousel_text_2": "#000000",
           "carousel_back_border_2": "#fff9e9"
@@ -374,7 +383,7 @@
             "type": "index",
             "settings": {
               "text": "Free Shipping on Orders of $55+",
-              "link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+              "link": "shopify://products/vanilla-milkshake-all-in-one-shake",
               "button_label": "SHOP NOW"
             }
           },
@@ -382,7 +391,7 @@
             "type": "collection",
             "settings": {
               "text": "*60-day Satisfaction Guarantee",
-              "link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+              "link": "shopify://products/vanilla-milkshake-all-in-one-shake",
               "button_label": "Shop now"
             }
           },
@@ -399,7 +408,7 @@
             "type": "page",
             "settings": {
               "text": "Free Shipping on Orders of $55+",
-              "link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+              "link": "shopify://products/vanilla-milkshake-all-in-one-shake",
               "button_label": "SHOP NOW"
             }
           },
@@ -407,7 +416,7 @@
             "type": "blog",
             "settings": {
               "text": "Free Shipping on Orders of $55+",
-              "link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+              "link": "shopify://products/vanilla-milkshake-all-in-one-shake",
               "button_label": "SHOP NOW"
             }
           },
@@ -415,7 +424,7 @@
             "type": "article",
             "settings": {
               "text": "Free Shipping on Orders of $55+",
-              "link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+              "link": "shopify://products/vanilla-milkshake-all-in-one-shake",
               "button_label": "SHOP NOW"
             }
           },
@@ -438,7 +447,7 @@
           "index_yB4YRf"
         ],
         "custom_css": [
-          "section {\/* background-color: #8ECCF3; *\/ max-height: 55px; padding-right: 5px; padding-left: 5px;}",
+          "section {/* background-color: #8ECCF3; */ max-height: 55px; padding-right: 5px; padding-left: 5px;}",
           "h3 {color: #000000;}"
         ],
         "settings": {
@@ -446,7 +455,7 @@
           "home_page_only": false,
           "display": "slider",
           "text": "HOLIDAY SALE - GET 20% OFF SITEWIDE",
-          "link": "shopify:\/\/collections\/all",
+          "link": "shopify://collections/all",
           "button_label": "",
           "color_scheme": "scheme-b0412943-6a43-45a0-96ec-2e74046bb7ea",
           "use_gradient_background": false,
@@ -523,7 +532,7 @@
           "enable": false,
           "logo_max_width": 100,
           "title": "Age verification",
-          "text": "<p>Are you over 21 years of age?<\/p>",
+          "text": "<p>Are you over 21 years of age?</p>",
           "display_on_card": true,
           "mode": "buttons",
           "yes_button_text": "Yes",
@@ -542,7 +551,7 @@
           ".header__item-count {display: none;}"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Logo-Website_4.png",
+          "logo": "shopify://shop_images/Logo-Website_4.png",
           "logo_max_width": 170,
           "label_text": "",
           "label_link": "",
@@ -594,7 +603,7 @@
           ".header__item-count {display: none;}"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/Logo-Website_4.png",
+          "logo": "shopify://shop_images/Logo-Website_4.png",
           "logo_max_width": 170,
           "label_text": "",
           "label_link": "",
@@ -643,19 +652,19 @@
     "content_for_index": [],
     "blocks": {
       "16017602894386113438": {
-        "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-store-key\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+        "type": "shopify://apps/junip-product-reviews-ugc/blocks/junip-store-key/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
         "disabled": false,
         "settings": {
           "enablePreviewMode": true
         }
       },
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
         "settings": {}
       },
       "2296928500563504527": {
-        "type": "shopify:\/\/apps\/abra-promotions\/blocks\/abra\/daa1493a-23b5-48bb-8cb5-7ab1267b4642",
+        "type": "shopify://apps/abra-promotions/blocks/abra/daa1493a-23b5-48bb-8cb5-7ab1267b4642",
         "disabled": false,
         "settings": {
           "popup_preview": false,
@@ -686,34 +695,34 @@
         }
       },
       "10312807297210203588": {
-        "type": "shopify:\/\/apps\/aftersell\/blocks\/utm-triggers\/509ec35d-0632-4dfc-a105-fa799cd9d149",
+        "type": "shopify://apps/aftersell/blocks/utm-triggers/509ec35d-0632-4dfc-a105-fa799cd9d149",
         "disabled": false,
         "settings": {}
       },
       "14952540001915115444": {
-        "type": "shopify:\/\/apps\/upcart-cart-drawer\/blocks\/app-embed\/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
+        "type": "shopify://apps/upcart-cart-drawer/blocks/app-embed/af3da5fb-f5f7-40ec-8273-41bf50059d4b",
         "disabled": false,
         "settings": {}
       },
       "7527060306931716863": {
-        "type": "shopify:\/\/apps\/aftership-returns\/blocks\/app-embed\/5662b508-7909-4cab-9bd2-9fd183f178fe",
+        "type": "shopify://apps/aftership-returns/blocks/app-embed/5662b508-7909-4cab-9bd2-9fd183f178fe",
         "disabled": false,
         "settings": {}
       },
       "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
         "disabled": false,
         "settings": {}
       },
       "10605408327587305396": {
-        "type": "shopify:\/\/apps\/eg-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
+        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
         "disabled": false,
         "settings": {
           "version": "v3"
         }
       },
       "16477486064475509254": {
-        "type": "shopify:\/\/apps\/veeper-stop-coupon-leaks\/blocks\/cd-embed\/701f59c5-5a05-41c0-ad15-29147f0a6331",
+        "type": "shopify://apps/veeper-stop-coupon-leaks/blocks/cd-embed/701f59c5-5a05-41c0-ad15-29147f0a6331",
         "disabled": true,
         "settings": {
           "show_announcement": true,
@@ -724,12 +733,12 @@
         }
       },
       "9431293036029666034": {
-        "type": "shopify:\/\/apps\/veeper-stop-coupon-leaks\/blocks\/app-embed\/701f59c5-5a05-41c0-ad15-29147f0a6331",
+        "type": "shopify://apps/veeper-stop-coupon-leaks/blocks/app-embed/701f59c5-5a05-41c0-ad15-29147f0a6331",
         "disabled": false,
         "settings": {}
       },
       "14818028230436078177": {
-        "type": "shopify:\/\/apps\/langify\/blocks\/langify\/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
+        "type": "shopify://apps/langify/blocks/langify/b50c2edb-8c63-4e36-9e7c-a7fdd62ddb8f",
         "disabled": false,
         "settings": {
           "theme_id": "131763863661",
@@ -739,7 +748,7 @@
         }
       },
       "7079518687644006178": {
-        "type": "shopify:\/\/apps\/checkout-blocks\/blocks\/app-embed\/b0024ca5-9de8-4bf0-a92f-cd0783877ae2",
+        "type": "shopify://apps/checkout-blocks/blocks/app-embed/b0024ca5-9de8-4bf0-a92f-cd0783877ae2",
         "disabled": false,
         "settings": {
           "utm_id": true,
@@ -1294,7 +1303,7 @@
             "enable": false,
             "logo_max_width": 100,
             "title": "Age verification",
-            "text": "<p>Are you over 21 years of age?<\/p>",
+            "text": "<p>Are you over 21 years of age?</p>",
             "display_on_card": true,
             "mode": "buttons",
             "yes_button_text": "Yes",
@@ -1525,7 +1534,7 @@
             "enable": false,
             "logo_max_width": 100,
             "title": "Age verification",
-            "text": "<p>Are you over 21 years of age?<\/p>",
+            "text": "<p>Are you over 21 years of age?</p>",
             "display_on_card": true,
             "mode": "buttons",
             "yes_button_text": "Yes",
@@ -1768,7 +1777,7 @@
             "enable": false,
             "logo_max_width": 100,
             "title": "Age verification",
-            "text": "<p>Are you over 21 years of age?<\/p>",
+            "text": "<p>Are you over 21 years of age?</p>",
             "display_on_card": true,
             "mode": "buttons",
             "yes_button_text": "Yes",
