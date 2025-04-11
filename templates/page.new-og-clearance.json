@@ -49,6 +49,40 @@
         "text_overlay_color": "same_as_section"
       }
     },
+    "featured_products_carousel_DJfJac": {
+      "type": "featured-products-carousel",
+      "settings": {
+        "title": "",
+        "text": "",
+        "product_list": [
+          "bananas-cream-all-in-one-shake",
+          "banana-cream-all-in-one-superfood-shake-old",
+          "acai-berry-all-in-one-superfood-shake-old",
+          "chai-vanilla-all-in-one-superfood-shake-copy"
+        ],
+        "button_title": "",
+        "button_link": "",
+        "color_scheme": ""
+      }
+    },
+    "collection_carousel_FBABhk": {
+      "type": "collection-carousel",
+      "settings": {
+        "title": "Save 40% here...",
+        "title_color": "#000000",
+        "description": "",
+        "description_color": "#000000",
+        "use_custom_collection": true,
+        "collection": "superfood-shake",
+        "products": [],
+        "page_width": true,
+        "items_per_page_1024": 5,
+        "items_per_page_768": 3,
+        "items_per_page_480": 2,
+        "show_arrows": true,
+        "show_dots": true
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -262,6 +296,8 @@
   },
   "order": [
     "image_text_with_overlay_2_zpb8YX",
+    "featured_products_carousel_DJfJac",
+    "collection_carousel_FBABhk",
     "main",
     "17434436682af4c4ba",
     "174345558349d596c6",
