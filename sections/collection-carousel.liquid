@@ -14,11 +14,11 @@
   color: {{ section.settings.description_color }};
 }
 
-.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a img{width:100%}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{text-align:center}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a p.price{text-align:center}
+.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__title h2{text-align:center}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__description{text-align:center}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a img{width:100%}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{text-align:center;font-size:24px}@media(min-width: 1601px){.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{font-size:28px}}@media(max-width: 1024px){.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{font-size:18px}}@media(max-width: 768px){.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{font-size:16px}}@media(max-width: 425px){.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{font-size:14px}}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a p.price{text-align:center}
 
 {% endstyle %}
 <div class="{% if page_width %}page-container{% endif %} section-collection-carousel-container">
-  <div class="collection-carousel-wrapper">
+  <div class="collection-carousel-wrapper">\';[p]'
     <div class="collection-carousel__title">
       <h2 class="heading-style heading-base full_shadow">{{ section.settings.title }}</h2>
     </div>
@@ -42,7 +42,7 @@
               <a href="{{ product.url }}">
                 <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
                 <h3>{{ product.title }}</h3>
-                <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}"></div>
+                <div class="junip-product-summary-stars" data-junip-product-id="ENTER PRODUCT ID"></div>
                 <p class="price">{{ product.price | money }}</p>
               </a>
 
