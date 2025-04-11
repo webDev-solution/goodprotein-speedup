@@ -9,33 +9,6 @@
  */
 {
   "sections": {
-    "image_with_text_overlay_cnbmNL": {
-      "type": "image-with-text-overlay",
-      "blocks": {
-        "title_gkyXCx": {
-          "type": "title",
-          "settings": {
-            "title": "Our Shop OG Shake!",
-            "heading_size": "heading-base"
-          }
-        }
-      },
-      "block_order": [
-        "title_gkyXCx"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/e87abeb3-74ee-4650-8fde-25dc9371d39a.jpg",
-        "display_on_card": false,
-        "display_content_below_image_on_mobile": false,
-        "style": "full",
-        "height": "natural",
-        "place_content": "place-content-center-center",
-        "text_align": "text-center",
-        "color_scheme": "",
-        "use_gradient_background": false,
-        "text_overlay_color": "same_as_section"
-      }
-    },
     "image_text_with_overlay_2_zpb8YX": {
       "type": "image-text-with-overlay-2",
       "blocks": {
@@ -46,14 +19,27 @@
             "color": "#0b3376",
             "heading_size": "heading-base"
           }
+        },
+        "shape_divider_aceamT": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#fff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
         }
       },
       "block_order": [
-        "title_NimHT4"
+        "title_NimHT4",
+        "shape_divider_aceamT"
       ],
       "settings": {
+        "image": "shopify://shop_images/e87abeb3-74ee-4650-8fde-25dc9371d39a.jpg",
         "display_on_card": false,
-        "display_content_below_image_on_mobile": true,
+        "display_content_below_image_on_mobile": false,
         "style": "full",
         "height": "natural",
         "place_content": "place-content-center-center",
@@ -275,7 +261,6 @@
     }
   },
   "order": [
-    "image_with_text_overlay_cnbmNL",
     "image_text_with_overlay_2_zpb8YX",
     "main",
     "17434436682af4c4ba",
