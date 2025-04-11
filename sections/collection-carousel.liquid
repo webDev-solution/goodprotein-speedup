@@ -1,6 +1,169 @@
+{%- liquid
+  assign page_width = section.settings.page_width
+-%}
+<div class="{% if page_width %}page-container{% endif %} section-collection-carousel-container">
+  <div class="collection-carousel-wrapper">
+    <div class="
+      collection-carousel__title">
+      <h2 class="heading-style heading-base full_shadow">{{ section.settings.title }}</h2>
+    </div>
+    <div class="collection-carousel__description">
+      {{ section.settings.description }}
+    </div>
+    
+    {% if section.settings.use_custom_collection %}
+      {% assign collection = collections[section.settings.collection] %}
+      {% assign products = collection.products %}
+    {% else %}
+      {% assign products = section.settings.products %}
+    {% endif %}
+
+    {% if products.size > 0 %}
+      <div class="collection-carousel__products-container">
+        <div class="swiper-wrapper hidden">
+          {% for product in products %}
+            <div class="swiper-slide">
+              <a href="{{ product.url }}">
+                <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+                {% comment %} <h3>{{ product.title }}</h3>
+                <p>{{ product.price | money }}</p> {% endcomment %}
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <div class="no-products-description">No products</div>
+    {% endif %}
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".collection-carousel__products-container").classList.remove("hidden");
+    const collectionCarouselProductsContainer = new Swiper('.collection-carousel__products-container', {
+      breakpoints: {
+        1024: {
+          slidesPerView: {{ section.settings.items_per_page_1024 }},
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: {{ section.settings.items_per_page_768 }},
+          spaceBetween: 10,
+        },
+        0: {
+          slidesPerView: {{ section.settings.items_per_page_480 }},
+          spaceBetween: 5,
+        },
+      }
+    });
+  });
+</script>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Collection Carousel",
+  "class": "collection-carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Choose products"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_custom_collection",
+      "label": "Using Collection",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Products"
+    },
+    {
+      "type": "header",
+      "content": "Design settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "page_width",
+      "label": "Page max-width",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "items_per_page_1024",
+      "label": "Items per page (Desktop)",
+      "min": 1,
+      "max": 10,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "items_per_page_768",
+      "label": "Items per page (Tablet)",
+      "min": 1,
+      "max": 7,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "items_per_page_480",
+      "label": "Items per page (Mobile)",
+      "min": 1,
+      "max": 5,
+      "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show dots",
+      "default": true
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Collection Carousel"
+    }
+  ]
+}
 {% endschema %}
