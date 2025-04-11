@@ -2764,3 +2764,8 @@ select._hide_arrow{
 .btn-disabled {
   opacity: 0.7;
 }
+
+.page-container {
+  max-width: 1500px;
+  margin: auto;
+}
