@@ -15,8 +15,7 @@
 {% endstyle %}
 <div class="{% if page_width %}page-container{% endif %} section-collection-carousel-container">
   <div class="collection-carousel-wrapper">
-    <div class="
-      collection-carousel__title">
+    <div class="collection-carousel__title">
       <h2 class="heading-style heading-base full_shadow">{{ section.settings.title }}</h2>
     </div>
     <div class="collection-carousel__description">
@@ -58,11 +57,11 @@
       breakpoints: {
         1024: {
           slidesPerView: {{ section.settings.items_per_page_1024 }},
-          spaceBetween: 20,
+          spaceBetween: 40,
         },
         768: {
           slidesPerView: {{ section.settings.items_per_page_768 }},
-          spaceBetween: 10,
+          spaceBetween: 20,
         },
         0: {
           slidesPerView: {{ section.settings.items_per_page_480 }},
