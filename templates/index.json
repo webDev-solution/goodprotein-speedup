@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ss_hero_1_EwVwk9": {
@@ -6,8 +15,8 @@
         "slide_ajM4qV": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Homepage-Desktop-Hero-06.png",
-            "image_mobile": "shopify:\/\/shop_images\/Homepage-Mobile-Hero-02.png"
+            "image": "shopify://shop_images/Homepage-Desktop-Hero-06.jpg",
+            "image_mobile": "shopify://shop_images/Homepage-Mobile-Hero-02.jpg"
           }
         }
       },
@@ -31,7 +40,7 @@
         "subtitle_font_size": 20,
         "subtitle_color": "#232323",
         "button_text": "Taste the Difference",
-        "button_link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+        "button_link": "shopify://products/vanilla-milkshake-all-in-one-shake",
         "button_text_2": "",
         "button_link_2": "",
         "button_width": 330,
@@ -58,7 +67,7 @@
         "usps_LGP3NR": {
           "type": "usps",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1b1ba2ec453f9b128bd2fa51ce237fdf.png",
+            "image": "shopify://shop_images/1b1ba2ec453f9b128bd2fa51ce237fdf.png",
             "heading": "20,000+ Verified Reviews",
             "content": "4.78 out of 5 stars average."
           }
@@ -66,7 +75,7 @@
         "usps_MpDnJ4": {
           "type": "usps",
           "settings": {
-            "image": "shopify:\/\/shop_images\/cd5b8b8ebf6917cb0707406ea882e67a.png",
+            "image": "shopify://shop_images/cd5b8b8ebf6917cb0707406ea882e67a.png",
             "heading": "60-Day Satisfaction Guarantee",
             "content": "If you don’t love it, you don’t pay for it."
           }
@@ -74,7 +83,7 @@
         "usps_Xh4QTE": {
           "type": "usps",
           "settings": {
-            "image": "shopify:\/\/shop_images\/b09aec40eb21cc7c4a30026c78989275.png",
+            "image": "shopify://shop_images/b09aec40eb21cc7c4a30026c78989275.png",
             "heading": "Over 30 Million Shakes Sold",
             "content": "And over 30 million cravings curbed."
           }
@@ -93,7 +102,7 @@
       "type": "featured-products-carousel",
       "settings": {
         "title": "Flavours for All",
-        "text": "<p>From timeless classics to limited edition treats, we’ve got 13 shakes that taste just like your favourite desserts.<\/p>",
+        "text": "<p>From timeless classics to limited edition treats, we’ve got 13 shakes that taste just like your favourite desserts.</p>",
         "product_list": [
           "vanilla-milkshake-all-in-one-shake",
           "chocolate-fudge-all-in-one-shake",
@@ -109,7 +118,7 @@
           "salted-caramel-all-in-one-shake"
         ],
         "button_title": "Find your Flavour",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify://collections/all",
         "color_scheme": "scheme-37e9221f-c532-483e-b3c5-612012232c0b"
       }
     },
@@ -145,11 +154,11 @@
       ],
       "settings": {
         "title": "It’s All in Here",
-        "text": "<p>All the good stuff your body needs to promote holistic health.<\/p>",
+        "text": "<p>All the good stuff your body needs to promote holistic health.</p>",
         "button_title": "Take Your First Sip",
-        "button_link": "shopify:\/\/products\/peanut-butter-all-in-one-shake",
-        "image": "shopify:\/\/shop_images\/Vanilla-Transparent02.png",
-        "list": "<p><strong>✓<\/strong> Plant-based protein<\/p><p><strong>✓ <\/strong>Organic superfoods<\/p><p><strong>✓ <\/strong>Vitamins + minerals<\/p><p><strong>✓ <\/strong>Probiotics + fibres<\/p><p><strong>✓ <\/strong>Antioxidants<\/p><p><strong>✓ <\/strong>BCAAs<\/p><p><strong>✓ <\/strong>Omegas + MCTs<\/p>",
+        "button_link": "shopify://products/peanut-butter-all-in-one-shake",
+        "image": "shopify://shop_images/Vanilla-Transparent02.png",
+        "list": "<p><strong>✓</strong> Plant-based protein</p><p><strong>✓ </strong>Organic superfoods</p><p><strong>✓ </strong>Vitamins + minerals</p><p><strong>✓ </strong>Probiotics + fibres</p><p><strong>✓ </strong>Antioxidants</p><p><strong>✓ </strong>BCAAs</p><p><strong>✓ </strong>Omegas + MCTs</p>",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67"
       }
     },
@@ -160,10 +169,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/6._Samantha_1x1_EN.png",
+            "image": "shopify://shop_images/6._Samantha_1x1_EN.png",
             "video_link": "",
-            "hosted_video": "shopify:\/\/files\/videos\/6. Samantha_1x1.mp4",
-            "fr_image": "shopify:\/\/shop_images\/6._Samantha_1x1_FR.png",
+            "hosted_video": "shopify://files/videos/6. Samantha_1x1.mp4",
+            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.png",
             "fr_video_link": ""
           }
         },
@@ -171,10 +180,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/5._Bianka_1x1_EN.png",
+            "image": "shopify://shop_images/5._Bianka_1x1_EN.png",
             "video_link": "",
-            "hosted_video": "shopify:\/\/files\/videos\/5. Bianka.mp4",
-            "fr_image": "shopify:\/\/shop_images\/5._Bianka_1x1_FR_2.png",
+            "hosted_video": "shopify://files/videos/5. Bianka.mp4",
+            "fr_image": "shopify://shop_images/5._Bianka_1x1_FR_2.png",
             "fr_video_link": ""
           }
         },
@@ -182,10 +191,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/4._Samantha_B_1x1_EN_1.png",
+            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.png",
             "video_link": "",
-            "hosted_video": "shopify:\/\/files\/videos\/4. Samantha B_1x1.mp4",
-            "fr_image": "shopify:\/\/shop_images\/4._Samantha_B_1x1_FR_1.png",
+            "hosted_video": "shopify://files/videos/4. Samantha B_1x1.mp4",
+            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.png",
             "fr_video_link": ""
           }
         },
@@ -193,10 +202,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/3._Brooke_1x1_EN.png",
+            "image": "shopify://shop_images/3._Brooke_1x1_EN.png",
             "video_link": "",
-            "hosted_video": "shopify:\/\/files\/videos\/3. Brooke_1x1.mp4",
-            "fr_image": "shopify:\/\/shop_images\/3._Brooke_1x1_FR.png",
+            "hosted_video": "shopify://files/videos/3. Brooke_1x1.mp4",
+            "fr_image": "shopify://shop_images/3._Brooke_1x1_FR.png",
             "fr_video_link": ""
           }
         },
@@ -204,10 +213,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/2._Cassandra_1x1_EN.png",
+            "image": "shopify://shop_images/2._Cassandra_1x1_EN.png",
             "video_link": "",
-            "hosted_video": "shopify:\/\/files\/videos\/2. Cassandra.mp4",
-            "fr_image": "shopify:\/\/shop_images\/2._Cassandra_1x1_FR_1.png",
+            "hosted_video": "shopify://files/videos/2. Cassandra.mp4",
+            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.png",
             "fr_video_link": ""
           }
         },
@@ -215,10 +224,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/1._Andy_1x1_EN.png",
+            "image": "shopify://shop_images/1._Andy_1x1_EN.png",
             "video_link": "",
-            "hosted_video": "shopify:\/\/files\/videos\/1. Andy_1x1.mp4",
-            "fr_image": "shopify:\/\/shop_images\/1._Andy_1x1_FR.png",
+            "hosted_video": "shopify://files/videos/1. Andy_1x1.mp4",
+            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.png",
             "fr_video_link": ""
           }
         }
@@ -237,7 +246,7 @@
       "settings": {
         "bg_color": "",
         "itme_show": 4,
-        "subtitle": "4.78  <span class=\"review-star\"><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><i class=\"fa-solid fa-star\"><\/i><\/span>",
+        "subtitle": "4.78  <span class=\"review-star\"><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i></span>",
         "heading": "Don't just take our word for it…",
         "subheading": "300,000+ Satisfied Canadians",
         "content": "We're inspired every day by the Good Protein community sharing how our shakes have changed the way they think about nutrition."
@@ -261,84 +270,84 @@
         "image_TpJ8iM": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Broccoli.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Broccoli.png",
             "heading": "Broccoli"
           }
         },
         "image_RiNEFt": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/acai-berry.png",
+            "image": "shopify://shop_images/acai-berry.png",
             "heading": "Acai"
           }
         },
         "image_VYmdrR": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Orange.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Orange.png",
             "heading": "Orange"
           }
         },
         "image_YqEhh8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Coconut.webp",
+            "image": "shopify://shop_images/Coconut.webp",
             "heading": "Coconut"
           }
         },
         "image_LYc4bf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ingredients-Goji.png",
+            "image": "shopify://shop_images/ingredients-Goji.png",
             "heading": "Goji"
           }
         },
         "image_RzjxGM": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Shiitake_mushroom.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Shiitake_mushroom.png",
             "heading": "Shiitake Mushroom"
           }
         },
         "image_L3PGqd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/SPinard.webp",
+            "image": "shopify://shop_images/SPinard.webp",
             "heading": "Spinach"
           }
         },
         "image_CMbAy8": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pomme-grenade2.png",
+            "image": "shopify://shop_images/pomme-grenade2.png",
             "heading": "Pomegranate"
           }
         },
         "image_4CHEnN": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Sweet_Potato.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Sweet_Potato.png",
             "heading": "Sweet Potato"
           }
         },
         "image_t88iL7": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/1080-Grape.png",
+            "image": "shopify://shop_images/1080-Grape.png",
             "heading": "Grape"
           }
         },
         "image_KLzBfb": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ingredients-strawberrie.png",
+            "image": "shopify://shop_images/ingredients-strawberrie.png",
             "heading": "Strawberry"
           }
         },
         "image_cVnFUd": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Maitake_mushroom.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Maitake_mushroom.png",
             "heading": "Maitake Mushroom"
           }
         }
@@ -377,7 +386,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify:\/\/shop_images\/Website-Assets-20.png",
+        "image": "shopify://shop_images/Website-Assets-20.png",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
@@ -388,14 +397,14 @@
         "max_width": 100,
         "text_style": "body",
         "disable_media_style": false,
-        "subtitle": "<div class=\"stars\">\n<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"><\/path><\/svg><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"><\/path><\/svg><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"><\/path><\/svg><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"><\/path><\/svg><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"><\/path><\/svg>\n<\/div>\n<span>300,000+ Satisfied Canadians<\/span>",
+        "subtitle": "<div class=\"stars\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"></path></svg><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"29px\" height=\"29px\" fill=\"#FECB28FF\" class=\"r-1ut1xt0\" viewbox=\"0 0 16 16\"><path d=\"M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z\"></path></svg>\n</div>\n<span>300,000+ Satisfied Canadians</span>",
         "title": "Can healthy be tasty, too?",
         "heading_size": "heading-template",
-        "richtext": "<p>Let’s be honest, most plant-based shakes taste terrible. We set out to make superfood shakes that taste delicious. Because what good is a shake that you don’t want to drink?<\/p><p><\/p><h4><strong>“<\/strong>I love how good these taste AND they keep me from being hungry for HOURS.<br\/>These are my breakfast of choice!<strong>”<\/strong><\/h4><p>- Linda G<\/p>",
+        "richtext": "<p>Let’s be honest, most plant-based shakes taste terrible. We set out to make superfood shakes that taste delicious. Because what good is a shake that you don’t want to drink?</p><p></p><h4><strong>“</strong>I love how good these taste AND they keep me from being hungry for HOURS.<br/>These are my breakfast of choice!<strong>”</strong></h4><p>- Linda G</p>",
         "ingredient_text": "",
         "text_alignment": "text-center",
         "ingredient_link_t": "",
-        "button_link": "shopify:\/\/pages\/reviews",
+        "button_link": "shopify://pages/reviews",
         "button_label": "Read the Reviews",
         "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209"
       }
@@ -408,7 +417,7 @@
           "settings": {
             "feature_title": "Protein-<br>Packed",
             "feature_text": "",
-            "feature_image": "shopify:\/\/shop_images\/Icons-Homepage-01.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-01.png",
             "feature_url": "",
             "hide_image": false
           }
@@ -418,7 +427,7 @@
           "settings": {
             "feature_title": "Curbs <br>Cravings",
             "feature_text": "",
-            "feature_image": "shopify:\/\/shop_images\/Icons-Homepage-02.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-02.png",
             "feature_url": "",
             "hide_image": false
           }
@@ -428,7 +437,7 @@
           "settings": {
             "feature_title": "Supports Gut <br>Flora",
             "feature_text": "",
-            "feature_image": "shopify:\/\/shop_images\/Icons-Homepage-03.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-03.png",
             "feature_url": "",
             "hide_image": false
           }
@@ -438,7 +447,7 @@
           "settings": {
             "feature_title": "Smooth and <br>Creamy",
             "feature_text": "",
-            "feature_image": "shopify:\/\/shop_images\/Icons-Homepage-04.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-04.png",
             "feature_url": "",
             "hide_image": false
           }
@@ -448,7 +457,7 @@
           "settings": {
             "feature_title": "Ingredients <br>You Know",
             "feature_text": "",
-            "feature_image": "shopify:\/\/shop_images\/Icons-Homepage-05.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-05.png",
             "feature_url": "",
             "hide_image": false
           }
@@ -458,7 +467,7 @@
           "settings": {
             "feature_title": "Packed with <br>Nutrients",
             "feature_text": "",
-            "feature_image": "shopify:\/\/shop_images\/Icons-Homepage-06.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-06.png",
             "feature_url": "",
             "hide_image": false
           }
@@ -487,9 +496,9 @@
       ],
       "settings": {
         "title": "Shakes with Benefits",
-        "text": "<p>When we say All-in-One, we mean it. A balanced nutritional offering means you get all sorts of benefits, from your muscles to your gut to your taste buds.<\/p>",
+        "text": "<p>When we say All-in-One, we mean it. A balanced nutritional offering means you get all sorts of benefits, from your muscles to your gut to your taste buds.</p>",
         "button_title": "Try it today",
-        "button_link": "shopify:\/\/products\/vanilla-milkshake-all-in-one-shake",
+        "button_link": "shopify://products/vanilla-milkshake-all-in-one-shake",
         "feature_row": 6,
         "feature_row_mobile": 3,
         "feature_gap": 0,
@@ -543,7 +552,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify:\/\/shop_images\/vitamin-angels-nutritional-mission.webp",
+        "image": "shopify://shop_images/vitamin-angels-nutritional-mission.webp",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
@@ -554,10 +563,10 @@
         "max_width": 100,
         "text_style": "body",
         "disable_media_style": false,
-        "subtitle": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0012\/5573\/5405\/files\/VAlogo_Supporter_Stacked.png?v=1690812665\" class=\"icon\" loading=\"eager\">",
+        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.png?v=1690812665\" class=\"icon\" loading=\"eager\">",
         "title": "Every order makes a nutritional impact for a mother or child.",
         "heading_size": "heading-template",
-        "richtext": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.<\/p>",
+        "richtext": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.</p>",
         "ingredient_text": "",
         "text_alignment": "text-center",
         "ingredient_link_t": "",
@@ -577,15 +586,15 @@
         "video_url": "",
         "crop": "four-three",
         "crop_desktop": "cinematic",
-        "fallback_image": "shopify:\/\/shop_images\/Recipes-Banners-Homepage.png",
+        "fallback_image": "shopify://shop_images/Recipes-Banners-Homepage.png",
         "display_on_card": false,
         "style": "full",
         "place_content": "place-content-center-center",
         "text_align": "text-center",
         "title": "Mouth-Watering Recipes",
         "heading_size": "heading-base",
-        "richtext": "<p><strong>Our shakes are delicious on their own, but we’ve gone above and beyond to make sure that you can use our superfood blends to turn your favourite recipes into protein-packed treats.<\/strong><\/p>",
-        "cta_url": "shopify:\/\/blogs\/recipes",
+        "richtext": "<p><strong>Our shakes are delicious on their own, but we’ve gone above and beyond to make sure that you can use our superfood blends to turn your favourite recipes into protein-packed treats.</strong></p>",
+        "cta_url": "shopify://blogs/recipes",
         "cta_text": "Discover Recipes",
         "color_scheme": "scheme-37e9221f-c532-483e-b3c5-612012232c0b",
         "use_gradient_background": false,
@@ -598,11 +607,11 @@
         "image_position": "right",
         "heading": "Try Good Protein Risk-Free",
         "sub_heading": "60-Day Satisfaction Guarantee",
-        "content": "<p>Still not sure? Try Good Protein for a full 60 days to see if it's right for you. If you don't love it, our customer service team will take care of it.<\/p>",
+        "content": "<p>Still not sure? Try Good Protein for a full 60 days to see if it's right for you. If you don't love it, our customer service team will take care of it.</p>",
         "max_width": "450",
         "btn_text": "Try it Today",
-        "btn_url": "shopify:\/\/products\/mixed-berries-all-in-one-shake",
-        "image": "shopify:\/\/shop_images\/IMG_5296_1__enhanced_1.png",
+        "btn_url": "shopify://products/mixed-berries-all-in-one-shake",
+        "image": "shopify://shop_images/IMG_5296_1__enhanced_1.png",
         "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e"
       }
     }
