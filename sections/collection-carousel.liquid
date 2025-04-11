@@ -3,6 +3,8 @@
   assign section_background = section.settings.section_background
 -%}
 
+{{ 'collection-carousel.css' | asset_url | stylesheet_tag }}
+
 {% style %}
 .section-collection-carousel-container {
   background-color: {{ section_background }};
