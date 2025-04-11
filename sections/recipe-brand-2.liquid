@@ -1,7 +1,18 @@
 {% liquid
   assign crop = 'image-wrapper-none'
+  
   assign brand_image = article.metafields.custom.featured_banner_image_english
   assign brand_image_mobile = article.metafields.custom.featured_banner_image_mobile_
+
+  if request.path contains '/fr'
+    if article.metafields.custom.featured_banner_image_french != blank
+      assign brand_image = article.metafields.custom.featured_banner_image_french
+    endif
+    if article.metafields.custom.fr_mobile_featured_banner_image != blank
+      assign brand_image_mobile = article.metafields.custom.fr_mobile_featured_banner_image
+    endif
+  endif
+  
   assign video_link = article.metafields.custom.video
   #assign video_link =  article.metafields.custom.video | split: 'v=' | last
   assign enable_video = section.settings.enable_video
