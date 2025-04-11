@@ -1,5 +1,3 @@
-{}
-
 {%- liquid
   assign page_width = section.settings.page_width
   assign section_background = section.settings.section_background
@@ -8,6 +6,12 @@
 {% style %}
 .section-collection-carousel-container {
   background-color: {{ section_background }};
+}
+.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__title h2 {
+  color: {{ section.settings.title_color }};
+}
+.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__description {
+  color: {{ section.settings.description_color }};
 }
 
 .section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a img{width:100%}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a h3{text-align:center}.section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__products-container .swiper-slide>a p.price{text-align:center}
@@ -33,12 +37,18 @@
       <div class="collection-carousel__products-container overflow-hidden">
         <div class="swiper-wrapper hidden">
           {% for product in products %}
+            {% assign current_variant = product.selected_or_first_available_variant %}
             <div class="swiper-slide">
               <a href="{{ product.url }}">
                 <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
                 <h3>{{ product.title }}</h3>
+                <div class="junip-product-summary-stars" data-junip-product-id="ENTER PRODUCT ID"></div>
                 <p class="price">{{ product.price | money }}</p>
               </a>
+
+              <button id="quick-buy-btn-{{ product.id }}" class=" btn quick-buy-btn" data-product-id="{{ product.id }}" data-variant-id="{{ current_variant.id }}">
+                Add
+              </button>
             </div>
           {% endfor %}
         </div>
