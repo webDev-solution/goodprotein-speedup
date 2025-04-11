@@ -87,6 +87,7 @@
     },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "display_on_card": false,
         "color_scheme": "primary",
@@ -108,116 +109,6 @@
         "klaviyo_email_marketing_sms_form_embed_block_jB8xgD"
       ],
       "settings": {}
-    },
-    "174345558349d596c6": {
-      "type": "apps",
-      "settings": {}
-    },
-    "rich_text_cETRJF": {
-      "type": "rich-text",
-      "disabled": true,
-      "settings": {
-        "logo_max_width": 120,
-        "title": "Ready To Start Eating Healthier?",
-        "heading_size": "heading-template",
-        "site_review": false,
-        "rich_text": "<p>Only you know if you’ll like Good Protein. That’s why we offer a<span style=\"text-decoration:underline\"> </span><a href=\"https://goodprotein.ca/pages/termes-et-conditions?id=satisfaction\" title=\"https://goodprotein.ca/pages/termes-et-conditions?id=satisfaction\"><span style=\"text-decoration:underline\">60-day Satisfaction Guarantee</span></a><span style=\"text-decoration:underline\">.</span> Simply try it yourself. If you don’t absolutely love it. We will refund your money.</p>",
-        "display_on_card": true,
-        "content_width_desktop": "lg:w-1/2",
-        "button_link": "shopify://products/vanilla-milkshake-all-in-one-shake",
-        "button_label": "Try it Risk-Free",
-        "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
-        "use_gradient_background": false
-      }
-    },
-    "featured_icon_columns_XthpRk": {
-      "type": "featured-icon-columns",
-      "blocks": {
-        "image_iiw9w9": {
-          "type": "image",
-          "settings": {
-            "feature_title": "Pick your favourite flavour",
-            "feature_text": "Choose Subscribe & Save on most product pages.",
-            "feature_image": "shopify://shop_images/Icon-_Heart_03.svg",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_qg9yqK": {
-          "type": "image",
-          "settings": {
-            "feature_title": "Set your delivery frequency",
-            "feature_text": "Anywhere from 4 weeks to 3 months. You’re in control.",
-            "feature_image": "shopify://shop_images/Icon-_Setup.svg",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_aATAf9": {
-          "type": "image",
-          "settings": {
-            "feature_title": "Adjust as needed",
-            "feature_text": "Change your quantities. Change your items. Reschedule anytime.",
-            "feature_image": "shopify://shop_images/Icon-_Control03_15068938-335d-43f0-b9f6-747864fedd13.svg",
-            "feature_url": "",
-            "hide_image": false
-          }
-        }
-      },
-      "block_order": [
-        "image_iiw9w9",
-        "image_qg9yqK",
-        "image_aATAf9"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "How does our subscription program work?",
-        "text": "",
-        "button_title": "",
-        "button_link": "",
-        "feature_row": 3,
-        "feature_row_mobile": 1,
-        "feature_gap": 20,
-        "feature_gap_mobile": 20,
-        "feature_padding_vertical": 0,
-        "feature_padding_horizontal": 0,
-        "feature_radius": 16,
-        "feature_border_thickness": 0,
-        "feature_shadow": false,
-        "feature_heading_custom": true,
-        "feature_heading_font": "lato_n4",
-        "feature_heading_size": 24,
-        "feature_heading_size_mobile": 20,
-        "feature_heading_height": 150,
-        "feature_heading_mt": 8,
-        "feature_text_custom": false,
-        "feature_text_font": "lato_n4",
-        "feature_text_size": 18,
-        "feature_text_size_mobile": 18,
-        "feature_text_height": 150,
-        "feature_text_mt": 4,
-        "feature_icon_size": 100,
-        "feature_icon_size_mobile": 100,
-        "feature_bg": "#ffffff",
-        "feature_border_color": "#000000",
-        "feature_shadow_color": "#000000",
-        "feature_heading_color": "#000000",
-        "feature_text_color": "#000000",
-        "feature_icon_color": "#000000",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 100,
-        "padding_bottom": 100,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 80,
-        "border_thickness": 0,
-        "lazy": true
-      }
     },
     "faq_dgfKKQ": {
       "type": "faq",
@@ -265,7 +156,6 @@
         "question_zb3BAP",
         "question_e8DJGj"
       ],
-      "disabled": true,
       "settings": {
         "display_on_card": true,
         "heading_text_style": "body",
@@ -277,23 +167,6 @@
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false
       }
-    },
-    "rich_text_kFUJpX": {
-      "type": "rich-text",
-      "disabled": true,
-      "settings": {
-        "logo_max_width": 120,
-        "title": "Already Have An Account?",
-        "heading_size": "heading-base",
-        "site_review": false,
-        "rich_text": "<p>Easily access your account to add or remove items, manage your delivery frequency, skip shipments, or cancel your subscription.</p>",
-        "display_on_card": true,
-        "content_width_desktop": "lg:w-1/2",
-        "button_link": "https://goodprotein.ca/a/loop_subscriptions/customer",
-        "button_label": "Manage Subscription",
-        "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
-        "use_gradient_background": false
-      }
     }
   },
   "order": [
@@ -302,10 +175,6 @@
     "collection_carousel_FBABhk",
     "main",
     "17434436682af4c4ba",
-    "174345558349d596c6",
-    "rich_text_cETRJF",
-    "featured_icon_columns_XthpRk",
-    "faq_dgfKKQ",
-    "rich_text_kFUJpX"
+    "faq_dgfKKQ"
   ]
 }
