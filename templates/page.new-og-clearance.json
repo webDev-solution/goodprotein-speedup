@@ -24,7 +24,7 @@
           "type": "shape_divider",
           "settings": {
             "target_section": "below",
-            "section_color_scheme": "#fff",
+            "section_color_scheme": "#ffffff",
             "style": "large-waves_1200x84",
             "flip_horizontal": true,
             "enable_animation": false,
@@ -51,6 +51,7 @@
     },
     "featured_products_carousel_DJfJac": {
       "type": "featured-products-carousel",
+      "disabled": true,
       "settings": {
         "title": "",
         "text": "",
@@ -67,7 +68,6 @@
     },
     "collection_carousel_FBABhk": {
       "type": "collection-carousel",
-      "disabled": true,
       "settings": {
         "title": "Save 40% here...",
         "title_color": "#000000",
@@ -76,6 +76,7 @@
         "use_custom_collection": true,
         "collection": "superfood-shake",
         "products": [],
+        "section_background": "#ffffff",
         "page_width": true,
         "items_per_page_1024": 4,
         "items_per_page_768": 3,
@@ -101,21 +102,10 @@
           "settings": {
             "formId": ""
           }
-        },
-        "junip_junip_reviews_4zaFap": {
-          "type": "shopify://apps/junip/blocks/junip-reviews/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "settings": {
-            "layout": "grid",
-            "reviewsType": "all",
-            "showSummary": true,
-            "reviewsCount": 10,
-            "containerClass": ""
-          }
         }
       },
       "block_order": [
-        "klaviyo_email_marketing_sms_form_embed_block_jB8xgD",
-        "junip_junip_reviews_4zaFap"
+        "klaviyo_email_marketing_sms_form_embed_block_jB8xgD"
       ],
       "settings": {}
     },
