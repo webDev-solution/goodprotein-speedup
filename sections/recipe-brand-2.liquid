@@ -126,6 +126,11 @@
             </div>
           {% else %}
             {% if brand_image != blank %}
+              {% style %}
+                .recipe-header-container {
+                  height: auto;
+                }
+              {% endstyle %}
               {% if brand_image_mobile != blank %}
                 <div class="hidden lg:block">
               {% endif %}
