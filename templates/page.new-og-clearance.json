@@ -103,6 +103,35 @@
         "text_overlay_color": "same_as_section"
       }
     },
+    "replo_style_review_zGP6Uy": {
+      "type": "replo-style-review",
+      "blocks": {
+        "title_YVfcqC": {
+          "type": "title",
+          "settings": {
+            "title": "Happy customers",
+            "color": ""
+          }
+        },
+        "subtitle_8nVWa9": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "300000+ customers",
+            "color": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_YVfcqC",
+        "subtitle_8nVWa9"
+      ],
+      "settings": {
+        "page_width": true,
+        "background": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -192,6 +221,7 @@
     "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
     "image_text_with_overlay_2_38JBt3",
+    "replo_style_review_zGP6Uy",
     "main",
     "17434436682af4c4ba",
     "faq_dgfKKQ"
