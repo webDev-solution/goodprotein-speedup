@@ -119,11 +119,18 @@
             "subtitle": "300000+ customers",
             "color": ""
           }
+        },
+        "review_NHmGpT": {
+          "type": "review",
+          "settings": {
+            "review": ""
+          }
         }
       },
       "block_order": [
         "title_YVfcqC",
-        "subtitle_8nVWa9"
+        "subtitle_8nVWa9",
+        "review_NHmGpT"
       ],
       "settings": {
         "page_width": true,
