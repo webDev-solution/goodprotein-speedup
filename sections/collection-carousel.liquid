@@ -199,15 +199,15 @@
       },
       breakpoints: {
         1024: {
-          slidesPerView: {% if products_length < section.settings.items_per_page_1024 %} products_length {% else %} {{ section.settings.items_per_page_1024 }} {% endif %},
+          slidesPerView: {% if products_length < section.settings.items_per_page_1024 %} {{products_length}} {% else %} {{ section.settings.items_per_page_1024 }} {% endif %},
           spaceBetween: 0,
         },
         768: {
-          slidesPerView: {% if products_length < section.settings.items_per_page_768 %} products_length {% else %} {{ section.settings.items_per_page_768 }} {% endif %},
+          slidesPerView: {% if products_length < section.settings.items_per_page_768 %} {{products_length}} {% else %} {{ section.settings.items_per_page_768 }} {% endif %},
           spaceBetween: 0,
         },
         0: {
-          slidesPerView: {% if products_length < section.settings.items_per_page_480 %} products_length {% else %} {{ section.settings.items_per_page_480 }} {% endif %},
+          slidesPerView: {% if products_length < section.settings.items_per_page_480 %} {{products_length}} {% else %} {{ section.settings.items_per_page_480 }} {% endif %},
           spaceBetween: 0,
         },
       }
