@@ -29,9 +29,15 @@
             {% when 'review' %}
               <div class="swiper-slide">
                 <div class="replo-style-review-card">
-                  {% render 'five-star-rating' %}
+                  <div class="stars-wrapper">
+                    {% render 'icon-fat-star' %}
+                    {% render 'icon-fat-star' %}
+                    {% render 'icon-fat-star' %}
+                    {% render 'icon-fat-star' %}
+                    {% render 'icon-fat-star' %}
+                  </div>
                   <p>{{ block.settings.review }}</p>
-                  <div>
+                  <div class="customer">
                     {% if block.settings.customer_photo != blank %}
                       <img src="{{ block.settings.customer_photo | image_url: width: 100 }}" alt="Customer photo" />
                     {% endif %}
