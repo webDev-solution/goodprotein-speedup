@@ -191,10 +191,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.png",
+            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/4. Samantha B_1x1.mp4",
-            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.png",
+            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.webp",
             "fr_video_link": ""
           }
         },
