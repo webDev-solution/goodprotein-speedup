@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/Homepage-Desktop-Hero-06.jpg",
-            "image_mobile": "shopify://shop_images/Homepage-Mobile-Hero-02.jpg"
+            "image_mobile": "shopify://shop_images/Homepage-Mobile-Hero-02.webp"
           }
         }
       },
