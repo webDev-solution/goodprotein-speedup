@@ -1,0 +1,143 @@
+{%- liquid
+  assign page_width = section.settings.page_width
+-%}
+
+{% style %}
+  .sectoin-replo-style-review-container {
+    background-color: {{ section.settings.background }};
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{% endstyle %}
+
+<div class="sectoin-replo-style-review-container">
+  <div class="{% if page_width %}page-container{% endif %} replo-style-review-wrapper">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'title' %}
+          <h2 style="color: {{ block.settings.color }}">{{ block.settings.title }}</h2>
+        {% when 'subtitle' %}
+          <h3 style="color: {{ block.settings.color }}">{{ block.settings.subtitle }}</h3>
+      {% endcase %}
+    {% endfor %}
+    <div class="replo-style-review-carousel-container overflow-hidden">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'review' %}
+              <div class="swiper-slide">
+                <div class="replo-style-review-card">
+                  {% render 'five-star-rating' %}
+                  <p>{{ block.settings.review }}</p>
+                  <div>
+                    {% if block.settings.customer_photo != blank %}
+                      <img src="{{ block.settings.customer_photo | image_url: width: 100 }}" alt="Customer photo" />
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "replo-style-review",
+  "class": "replo-style-review",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Design settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "page_width",
+      "label": "Page max-width",
+      "default": true
+    },
+    {
+      "id": "background",
+      "type": "color",
+      "label": "Background color"
+    },
+    {
+      "id": "padding_top",
+      "type": "range",
+      "label": "Padding top",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "id": "padding_bottom",
+      "type": "range",
+      "label": "Padding bottom",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Title color"
+        }
+      ]
+    },
+    {
+      "type": "subtitle",
+      "name": "Subtitle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Subtitle color"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "id": "customer_photo",
+          "type": "image_picker",
+          "label": "Customer photo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "replo-style-review"
+    }
+  ]
+}
+{% endschema %}
