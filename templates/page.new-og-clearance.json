@@ -85,6 +85,21 @@
         "show_dots": true
       }
     },
+    "image_text_with_overlay_2_38JBt3": {
+      "type": "image-text-with-overlay-2",
+      "settings": {
+        "image": "shopify://shop_images/shake-ingredients.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -173,6 +188,7 @@
     "image_text_with_overlay_2_zpb8YX",
     "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
+    "image_text_with_overlay_2_38JBt3",
     "main",
     "17434436682af4c4ba",
     "faq_dgfKKQ"
