@@ -49,8 +49,8 @@
       {% assign products = section.settings.products %}
     {% endif %}
 
-    {% if products != blank %}
-      <div class="collection-carousel__products-container overflow-hidden hidden">
+    {% if products.size > 0 %}
+      <div class="collection-carousel__products-container-{{ section.id }} overflow-hidden hidden">
         <div class="swiper-wrapper ">
           {% for product in products %}
             {% assign current_variant = product.selected_or_first_available_variant %}
@@ -178,8 +178,8 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".collection-carousel__products-container").classList.remove("hidden");
-    const collectionCarouselProductsContainer = new Swiper('.collection-carousel__products-container', {
+    document.querySelector(".collection-carousel__products-container-{{ section.id }}").classList.remove("hidden");
+    const collectionCarouselProductsContainer = new Swiper('.collection-carousel__products-container-{{ section.id }}', {
       pagination: {
         el: ".icons-to-choose-description-swiper-pagination",
         type: "bullets",
