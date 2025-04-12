@@ -16,7 +16,6 @@
           "type": "title",
           "settings": {
             "title": "Image with text overlay",
-            "color": "#0b3376",
             "heading_size": "heading-base"
           }
         },
@@ -24,7 +23,7 @@
           "type": "shape_divider",
           "settings": {
             "target_section": "below",
-            "section_color_scheme": "#ffffff",
+            "section_color_scheme": "#e6f2ff",
             "style": "large-waves_1200x84",
             "flip_horizontal": true,
             "enable_animation": false,
@@ -44,6 +43,7 @@
         "height": "natural",
         "place_content": "place-content-center-center",
         "text_align": "text-center",
+        "background_color": "",
         "color_scheme": "",
         "use_gradient_background": false,
         "text_overlay_color": "same_as_section"
@@ -76,6 +76,8 @@
         "use_custom_collection": true,
         "collection": "superfood-shake",
         "products": [],
+        "top_padding": 40,
+        "bottom_padding": 40,
         "section_background": "#e6f2ff",
         "page_width": true,
         "items_per_page_1024": 4,
@@ -95,6 +97,7 @@
         "height": "natural",
         "place_content": "place-content-center-center",
         "text_align": "text-center",
+        "background_color": "#e6f2ff",
         "color_scheme": "",
         "use_gradient_background": false,
         "text_overlay_color": "same_as_section"
