@@ -20,6 +20,18 @@
 .section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__description {
   color: {{ section.settings.description_color }};
 }
+@media (min-width: 1501px) {
+  .swiper-button-next {
+    {% if page_width %}
+      right: calc(50% - 750px);
+    {% endif %}
+  }
+  .swiper-button-prev {
+    {% if page_width %}
+      left: calc(50% - 750px);
+    {% endif %}
+  }
+}
 {% endstyle %}
 <div class=" section-collection-carousel-container">
   <div class="collection-carousel-wrapper {% if page_width %}page-container{% endif %}">
