@@ -8,7 +8,7 @@
 {{ 'collection-carousel.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-#shopify-section-{{ section.id }}  .section-collection-carousel-container {
+#shopify-section-{{ section.id }} .section-collection-carousel-container {
   background-color: {{ section_background }};
   padding-top: {{ section_top_padding }}px;
   padding-bottom: {{ section_bottom_padding }}px;
@@ -174,10 +174,31 @@
       <div class="no-products-description">No products</div>
     {% endif %}
     {% style %}
+      @media (min-width: 1501px) {
+        .collection-carousel-wrapper-{{ section.id }} {
+          {% if products_length < section.settings.items_per_page_1024 %}
+            max-width: {% if page_width %} {{ products_length | times: 1500 | divided_by: section.settings.items_per_page_1024 }}px {% else %}{{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}% {% endif %};
+          {% endif %}
+        }
+      }
       .collection-carousel-wrapper-{{ section.id }} {
         {% if products_length < section.settings.items_per_page_1024 %}
-          max-width: {% if page_width %} {{ products_length | times: 1500 | divided_by: section.settings.items_per_page_1024 }}px {% else %}{{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}% {% endif %};
+          max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}%;
         {% endif %}
+      }
+      @media (max-width: 1024px) {
+        .collection-carousel-wrapper-{{ section.id }} {
+          {% if products_length < section.settings.items_per_page_768 %}
+            max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_768 }}%;
+          {% endif %}
+        }
+      }
+      @media (max-width: 768px) {
+        .collection-carousel-wrapper-{{ section.id }} {
+          {% if products_length < section.settings.items_per_page_480 %}
+            max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_480 }}%;
+          {% endif %}
+        }
       }
     {% endstyle %}
   </div>
