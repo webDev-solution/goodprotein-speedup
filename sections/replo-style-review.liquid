@@ -35,6 +35,10 @@
                     {% if block.settings.customer_photo != blank %}
                       <img src="{{ block.settings.customer_photo | image_url: width: 100 }}" alt="Customer photo" />
                     {% endif %}
+                    <div class="verification-badge-wrapper">
+                      {{ block.settings.client_name }}
+                      {% render 'icon-check-in-circle' %}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -132,6 +136,11 @@
           "id": "customer_photo",
           "type": "image_picker",
           "label": "Customer photo"
+        },
+        {
+          "id": "customer_name",
+          "type": "text",
+          "label": "Customer name"
         }
       ]
     }
