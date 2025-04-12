@@ -73,6 +73,20 @@
                   </span>
                 </div>
               </div>
+              {% unless product.has_only_default_variant %}
+                {% if product.variants.size > 0 %}
+                  <div class="product-sizes mt-2 padding-1rem-saturn">
+                    <select class="size-selector {% if product.variants.size == 1 %} _hide_arrow {% endif %}" data-product-id="{{ product.id }}" style="width: 100%;" {% if product.variants.size == 1 %} disabled {% endif %}>
+                      {% for variant in product.variants %}
+                        {% if variant.available %}
+                          <div style="display: none"></div>
+                          <option value="{{ variant.id }}" data-price="{{ variant.price }}">{{ variant.title }}</option>
+                        {% endif %}
+                      {% endfor %}
+                    </select>
+                  </div>
+                {% endif %}
+              {% endunless %}
               <button id="quick-buy-btn-{{ product.id }}" class=" btn quick-buy-btn" data-product-id="{{ product.id }}" data-variant-id="{{ current_variant.id }}">
                 Add
               </button>
