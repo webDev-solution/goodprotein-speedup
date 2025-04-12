@@ -105,7 +105,7 @@
         "bottom_padding": 40,
         "section_background": "#ffffff",
         "page_width": true,
-        "items_per_page_1024": 5,
+        "items_per_page_1024": 4,
         "items_per_page_768": 3,
         "items_per_page_480": 2,
         "show_arrows": true,
