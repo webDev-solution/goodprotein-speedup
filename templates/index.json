@@ -386,7 +386,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify://shop_images/Website-Assets-20.png",
+        "image": "shopify://shop_images/Website-Assets-20.webp",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
