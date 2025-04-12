@@ -182,10 +182,11 @@
         }
       }
       @media (min-width: 1025px) and (max-width: 1500px) {
-      .collection-carousel-wrapper-{{ section.id }} {
-        {% if products_length < section.settings.items_per_page_1024 %}
-          max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}%;
-        {% endif %}
+        .collection-carousel-wrapper-{{ section.id }} {
+          {% if products_length < section.settings.items_per_page_1024 %}
+            max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}%;
+          {% endif %}
+        }
       }
       @media (min-width: 769px) and (max-width: 1024px) {
         .collection-carousel-wrapper-{{ section.id }} {
