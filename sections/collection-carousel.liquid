@@ -186,7 +186,7 @@
           max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}%;
         {% endif %}
       }
-      @media (max-width: 1024px) {
+      @media (min-width: 769px) (max-width: 1024px) {
         .collection-carousel-wrapper-{{ section.id }} {
           {% if products_length < section.settings.items_per_page_768 %}
             max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_768 }}%;
