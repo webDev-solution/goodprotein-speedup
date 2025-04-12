@@ -156,7 +156,8 @@
         "page_width": true,
         "background": "#9fd0ff",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "review_star_color": "#408ae9"
       }
     },
     "main": {
