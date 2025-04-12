@@ -42,7 +42,7 @@
       {{ section.settings.description }}
     </div>
     
-    {% if section.settings.use_custom_collection %}
+    {% if section.settings.use_custom_collection != blank %}
       {% assign collection = collections[section.settings.collection] %}
       {% assign products = collection.products %}
     {% else %}
