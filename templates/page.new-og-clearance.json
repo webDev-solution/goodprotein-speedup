@@ -97,10 +97,12 @@
         "use_custom_collection": true,
         "collection": "",
         "products": [
-          "do-not-use-banana-cream-all-in-one-superfood-shake",
-          "chai-vanilla-all-in-one-superfood-shake-copy",
           "do-not-use-chocolate-all-in-one-superfood-shake",
-          "do-not-use-cookies-cream-all-in-one-superfood-shake"
+          "do-not-use-cookies-cream-all-in-one-superfood-shake",
+          "bananas-cream-all-in-one-shake",
+          "do-not-use-banana-cream-all-in-one-superfood-shake",
+          "bestsellers-bundle",
+          "chai-latte-all-in-one-shake"
         ],
         "top_padding": 40,
         "bottom_padding": 40,
