@@ -8,7 +8,7 @@
 {{ 'collection-carousel.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-.section-collection-carousel-container {
+#shopify-section-{{ section.id }}  .section-collection-carousel-container {
   background-color: {{ section_background }};
   padding-top: {{ section_top_padding }}px;
   padding-bottom: {{ section_bottom_padding }}px;
