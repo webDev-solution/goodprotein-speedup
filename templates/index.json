@@ -169,10 +169,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/6._Samantha_1x1_EN.png",
+            "image": "shopify://shop_images/6._Samantha_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/6. Samantha_1x1.mp4",
-            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.png",
+            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.webp",
             "fr_video_link": ""
           }
         },
