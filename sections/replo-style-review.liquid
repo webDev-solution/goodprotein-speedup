@@ -2,6 +2,8 @@
   assign page_width = section.settings.page_width
 -%}
 
+{{ 'replo-style-review.css' | asset_url | stylesheet_tag }}
+
 {% style %}
   .sectoin-replo-style-review-container {
     background-color: {{ section.settings.background }};
@@ -15,9 +17,9 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'title' %}
-          <h2 style="color: {{ block.settings.color }}">{{ block.settings.title }}</h2>
+          <h2 class="heading-style heading-base full_shadow" style="color: {{ block.settings.color }}">{{ block.settings.title }}</h2>
         {% when 'subtitle' %}
-          <h3 style="color: {{ block.settings.color }}">{{ block.settings.subtitle }}</h3>
+          <h3 class="" style="color: {{ block.settings.color }}">{{ block.settings.subtitle }}</h3>
       {% endcase %}
     {% endfor %}
     <div class="replo-style-review-carousel-container overflow-hidden">
