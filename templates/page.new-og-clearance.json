@@ -154,7 +154,7 @@
       ],
       "settings": {
         "page_width": true,
-        "background": "",
+        "background": "#9fd0ff",
         "padding_top": 40,
         "padding_bottom": 40
       }
