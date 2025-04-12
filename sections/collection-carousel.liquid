@@ -229,6 +229,12 @@
         window.dispatchEvent(new CustomEvent('abra:render'))      
       });
     });
+
+    // Function to format the price as currency (assuming Shopify's default currency format)
+    function formatPrice(price) {
+      const formattedPrice = (price / 100).toFixed(2); // Adjust for Shopify's cents-based prices
+      return `$${formattedPrice}`; // Add currency symbol as needed
+    }
   });
 </script>
 
