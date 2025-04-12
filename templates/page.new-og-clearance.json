@@ -87,6 +87,32 @@
         "show_dots": true
       }
     },
+    "collection_carousel_n73bgV": {
+      "type": "collection-carousel",
+      "settings": {
+        "title": "... Save 50% here",
+        "title_color": "#000000",
+        "description": "",
+        "description_color": "#000000",
+        "use_custom_collection": true,
+        "collection": "",
+        "products": [
+          "do-not-use-banana-cream-all-in-one-superfood-shake",
+          "chai-vanilla-all-in-one-superfood-shake-copy",
+          "do-not-use-chocolate-all-in-one-superfood-shake",
+          "do-not-use-cookies-cream-all-in-one-superfood-shake"
+        ],
+        "top_padding": 40,
+        "bottom_padding": 40,
+        "section_background": "#ffffff",
+        "page_width": true,
+        "items_per_page_1024": 5,
+        "items_per_page_768": 3,
+        "items_per_page_480": 2,
+        "show_arrows": true,
+        "show_dots": true
+      }
+    },
     "image_text_with_overlay_2_38JBt3": {
       "type": "image-text-with-overlay-2",
       "settings": {
@@ -248,6 +274,7 @@
     "image_text_with_overlay_2_zpb8YX",
     "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
+    "collection_carousel_n73bgV",
     "image_text_with_overlay_2_38JBt3",
     "replo_style_review_zGP6Uy",
     "main",
