@@ -5,10 +5,16 @@
 {{ 'replo-style-review.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  .sectoin-replo-style-review-container {
+  #shopify-section-{{ section.id }} .sectoin-replo-style-review-container {
     background-color: {{ section.settings.background }};
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+  #shopify-section-{{ section.id }} .stars-wrapper  {
+    color: {{ section.settings.review_star_color }};
+  }
+  #shopify-section-{{ section.id }} .verification-badge-wrapper  {
+    color: {{ section.settings.review_star_color }};
   }
 {% endstyle %}
 
@@ -94,6 +100,11 @@
       "max": 100,
       "step": 5,
       "unit": "px"
+    },
+    {
+      "id": "review_star_color",
+      "type": "color",
+      "label": "Review star color"
     }
   ],
   "blocks": [
