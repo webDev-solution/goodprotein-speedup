@@ -42,14 +42,14 @@
       {{ section.settings.description }}
     </div>
     
-    {% if section.settings.use_custom_collection != blank %}
+    {% if section.settings.use_custom_collection %}
       {% assign collection = collections[section.settings.collection] %}
       {% assign products = collection.products %}
     {% else %}
       {% assign products = section.settings.products %}
     {% endif %}
 
-    {% if products.size > 0 %}
+    {% if products != blank %}
       <div class="collection-carousel__products-container overflow-hidden hidden">
         <div class="swiper-wrapper ">
           {% for product in products %}
