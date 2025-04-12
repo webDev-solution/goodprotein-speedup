@@ -217,10 +217,10 @@
               "
               src="{{ image | img_url: '1600x' }}"
               srcset="
-                {{ image | img_url: '1024x' }} 1024w,
+                {{ image | img_url: '1280x' }} 1280w,
                 {{ image | img_url: '1440x' }} 1440w,
                 {{ image | img_url: '1600x' }} 1600w,
-                {{ image | img_url: '2000x' }} 2000w,
+                {{ image | img_url: '1920x' }} 1920w,
                 {{ image | img_url: 'master' }} 2400w
               "
               alt="{{ image.alt }}"
@@ -237,10 +237,10 @@
               class="ab-banner-image ab-banner-image--mobile"
               src="{{ image | img_url: '768x' }}"
               srcset="
+                {{ image | img_url: '320x' }} 320w,
                 {{ image | img_url: '375x' }} 375w,
-                {{ image | img_url: '500x' }} 500w,
-                {{ image | img_url: '768x' }} 768w,
-                {{ image | img_url: '990' }} 990w
+                {{ image | img_url: '415x' }} 415w,
+                {{ image | img_url: '768x' }} 768w
               "
               alt="{{ image.alt }}"
               sizes="100vw"
