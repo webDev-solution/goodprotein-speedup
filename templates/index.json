@@ -213,10 +213,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/2._Cassandra_1x1_EN.png",
+            "image": "shopify://shop_images/2._Cassandra_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/2. Cassandra.mp4",
-            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.png",
+            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.webp",
             "fr_video_link": ""
           }
         },
