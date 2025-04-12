@@ -12,6 +12,7 @@
   background-color: {{ section_background }};
   padding-top: {{ section_top_padding }}px;
   padding-bottom: {{ section_bottom_padding }}px;
+  width: 100%;
 }
 .section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__title h2 {
   color: {{ section.settings.title_color }};
@@ -20,8 +21,8 @@
   color: {{ section.settings.description_color }};
 }
 {% endstyle %}
-<div class="{% if page_width %}page-container{% endif %} section-collection-carousel-container">
-  <div class="collection-carousel-wrapper">
+<div class=" section-collection-carousel-container">
+  <div class="collection-carousel-wrapper {% if page_width %}page-container{% endif %}">
     <div class="collection-carousel__title">
       <h2 class="heading-style heading-base full_shadow">{{ section.settings.title }}</h2>
     </div>
@@ -147,6 +148,8 @@
             </div>
           {% endfor %}
         </div>
+
+        <div class="icons-to-choose-description-swiper-pagination"></div>
       </div>
     {% else %}
       <div class="no-products-description">No products</div>
