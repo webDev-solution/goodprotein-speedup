@@ -1,6 +1,8 @@
 {%- liquid
   assign page_width = section.settings.page_width
   assign section_background = section.settings.section_background
+  assign section_top_padding = section.settings.top_padding
+  assign section_bottom_padding = section.settings.bottom_padding
 -%}
 
 {{ 'collection-carousel.css' | asset_url | stylesheet_tag }}
@@ -8,6 +10,8 @@
 {% style %}
 .section-collection-carousel-container {
   background-color: {{ section_background }};
+  padding-top: {{ section_top_padding }}px;
+  padding-bottom: {{ section_bottom_padding }}px;
 }
 .section-collection-carousel-container .collection-carousel-wrapper .collection-carousel__title h2 {
   color: {{ section.settings.title_color }};
@@ -102,6 +106,71 @@
         },
       }
     });
+
+    // Quick Buy button functionality
+    document.querySelectorAll(".quick-buy-btn").forEach(function(button) {
+      button.addEventListener("click", function(event) {
+        const variantId = event.target.getAttribute("data-variant-id");
+
+        // Example function to handle adding to cart
+        addToCart(variantId);
+      });
+    });
+
+    // Function to handle adding a product variant to the cart
+    function addToCart(variantId) {
+      fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: variantId, quantity: 1 })
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Optionally, handle success (like updating cart UI)
+      //  alert("Product added to cart!");
+      })
+      .catch(error => {
+        console.error("Error adding to cart:", error);
+      });
+    }
+    
+    document.querySelectorAll(".size-selector").forEach(function(selector) {
+      selector.addEventListener("change", function(event) {
+        const selectedVariantId = event.target.value;
+        const productId = event.target.getAttribute("data-product-id");
+
+        [ ...document.querySelectorAll(`#quick-buy-btn-${productId}`) ].forEach(quickBuyButton => {
+          if (quickBuyButton) {
+            quickBuyButton.setAttribute("data-variant-id", selectedVariantId);
+          }
+    
+          // Update the product variant id
+          const productTile = document.querySelector(`#product-tile-${productId}`);
+          if (productTile) {
+            productTile.setAttribute("data-variant-id", selectedVariantId);
+          }
+          
+          // Update the price display with the selected variant's price
+          const selectedOption = event.target.options[event.target.selectedIndex];
+          const variantPrice = selectedOption.getAttribute("data-price");
+          const priceContainer = document.querySelector(`#product-price-${productId} span`);
+          if (priceContainer) {
+            priceContainer.innerHTML = formatPrice(variantPrice);
+          }
+          const priceContainer2 = quickBuyButton.parentElement.querySelector('.price-item.price-item--regular.font-bold');
+          if (priceContainer2) {
+            console.log(priceContainer2, "formatPrice(variantPrice)", formatPrice(variantPrice));
+            priceContainer2.innerHTML = formatPrice(variantPrice);
+          }
+  
+          const priceContainer3 = quickBuyButton.parentElement.querySelector('.price-item.price-item--regular');
+          if (priceContainer3) {
+            priceContainer3.innerHTML = formatPrice(variantPrice);
+          }
+        });
+        window.dispatchEvent(new CustomEvent('abra:render'))      
+      });
+    });
   });
 </script>
 
@@ -159,6 +228,26 @@
     {
       "type": "header",
       "content": "Design settings"
+    },
+    {
+      "id": "top_padding",
+      "type": "range",
+      "label": "Section Top Padding",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "id": "bottom_padding",
+      "type": "range",
+      "label": "Section Bottom Padding",
+      "min": 0,
+      "max": 100,
+      "default": 40,
+      "step": 5,
+      "unit": "px"
     },
     {
       "type": "color",
