@@ -57,9 +57,23 @@
                 </h3>
                 <div class="junip-product-summary-stars" data-junip-product-id="ENTER PRODUCT ID"></div>
               </a>
-              
+
+              {%- liquid
+                  assign price = current_variant.price
+                  assign compare_at_price = current_variant.compare_at_price
+
+                  if compare_at_price > price
+                    assign on_sale = true
+                  else
+                    assign on_sale = false
+                  endif
+
+                  assign money_price = price | money
+                  if settings.currency_code_enabled
+                    assign money_price = price | money_with_currency
+                  endif
+              -%}
               <div class="price
-                {%- if price_class %} {{ price_class }}{% endif -%}
                 {%- if compare_at_price > price %} price--on-sale {% endif -%}
                 {%- if product.price_varies == false and product.compare_at_price_varies %} price--no-compare{% endif -%}
                 ">
