@@ -96,7 +96,9 @@
         "description_color": "#000000",
         "use_custom_collection": false,
         "collection": "",
-        "products": [],
+        "products": [
+          "do-not-use-banana-cream-all-in-one-superfood-shake"
+        ],
         "top_padding": 40,
         "bottom_padding": 40,
         "section_background": "#ffffff",
