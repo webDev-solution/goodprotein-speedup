@@ -94,16 +94,9 @@
         "title_color": "#000000",
         "description": "",
         "description_color": "#000000",
-        "use_custom_collection": true,
+        "use_custom_collection": false,
         "collection": "",
-        "products": [
-          "do-not-use-chocolate-all-in-one-superfood-shake",
-          "do-not-use-cookies-cream-all-in-one-superfood-shake",
-          "bananas-cream-all-in-one-shake",
-          "do-not-use-banana-cream-all-in-one-superfood-shake",
-          "bestsellers-bundle",
-          "chai-latte-all-in-one-shake"
-        ],
+        "products": [],
         "top_padding": 40,
         "bottom_padding": 40,
         "section_background": "#ffffff",
