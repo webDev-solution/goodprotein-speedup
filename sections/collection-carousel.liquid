@@ -176,7 +176,7 @@
     {% style %}
       .collection-carousel-wrapper-{{ section.id }} {
         {% if products_length < section.settings.items_per_page_1024 %}
-          width: {% if page_width %} {{ products_length | times: 1500 | divided_by: section.settings.items_per_page_1024 }}px {% else %}{{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}% {% endif %};
+          max-width: {% if page_width %} {{ products_length | times: 1500 | divided_by: section.settings.items_per_page_1024 }}px {% else %}{{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}% {% endif %};
         {% endif %}
       }
     {% endstyle %}
