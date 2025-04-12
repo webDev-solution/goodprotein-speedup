@@ -218,7 +218,7 @@
               src="{{ image | img_url: '1600x' }}"
               srcset="
                 {{ image | img_url: '1024x' }} 1024w,
-                {{ image | img_url: '1200x' }} 1200w,
+                {{ image | img_url: '1440x' }} 1440w,
                 {{ image | img_url: '1600x' }} 1600w,
                 {{ image | img_url: '2000x' }} 2000w,
                 {{ image | img_url: 'master' }} 2400w
@@ -235,13 +235,10 @@
             {% assign image = block.settings.image_mobile %}
             <img
               class="ab-banner-image ab-banner-image--mobile"
-              src="{{ image | img_url: '375x' }}"
+              src="{{ image | img_url: '768x' }}"
               srcset="
-                {{ image | img_url: '325x' }} 325w,
                 {{ image | img_url: '375x' }} 375w,
-                {{ image | img_url: '425x' }} 425w,
                 {{ image | img_url: '500x' }} 500w,
-                {{ image | img_url: '620x' }} 620w, 
                 {{ image | img_url: '768x' }} 768w,
                 {{ image | img_url: '990' }} 990w
               "
