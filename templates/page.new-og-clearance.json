@@ -97,7 +97,9 @@
         "use_custom_collection": false,
         "collection": "",
         "products": [
-          "do-not-use-banana-cream-all-in-one-superfood-shake"
+          "chocolate-fudge-all-in-one-shake",
+          "bananas-cream-all-in-one-shake",
+          "chai-latte-all-in-one-shake"
         ],
         "top_padding": 40,
         "bottom_padding": 40,
