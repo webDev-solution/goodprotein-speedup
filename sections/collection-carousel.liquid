@@ -48,7 +48,7 @@
     {% else %}
       {% assign products = section.settings.products %}
     {% endif %}
-    {{ products.last }}
+    {{ products.size }}
     {% if products != blank %}
       <div class="collection-carousel__products-container collection-carousel__products-container-{{ section.id }} overflow-hidden hidden">
         <div class="swiper-wrapper ">
