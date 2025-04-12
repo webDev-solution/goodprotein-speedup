@@ -162,6 +162,12 @@
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".collection-carousel__products-container").classList.remove("hidden");
     const collectionCarouselProductsContainer = new Swiper('.collection-carousel__products-container', {
+      pagination: {
+        el: ".icons-to-choose-description-swiper-pagination",
+        type: "bullets",
+        clickable: true,
+        dynamicBullets: false
+      },
       breakpoints: {
         1024: {
           slidesPerView: {{ section.settings.items_per_page_1024 }},
