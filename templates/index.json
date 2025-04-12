@@ -176,6 +176,14 @@
             "fr_video_link": ""
           }
         },
+        "image_XPapVK": {
+          "type": "image",
+          "settings": {
+            "video_type": "mp4",
+            "video_link": "",
+            "fr_video_link": ""
+          }
+        },
         "247693e3-878b-40c8-bc42-6d01fb3f9600": {
           "type": "image",
           "settings": {
@@ -224,16 +232,17 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/1._Andy_1x1_EN.png",
+            "image": "shopify://shop_images/1._Andy_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/1. Andy_1x1.mp4",
-            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.png",
+            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.webp",
             "fr_video_link": ""
           }
         }
       },
       "block_order": [
         "d9ad31d4-fe3f-45c8-9769-41c0101c410f",
+        "image_XPapVK",
         "247693e3-878b-40c8-bc42-6d01fb3f9600",
         "481c3263-1c4e-4352-8093-806c1be1321c",
         "e5b35c6a-72b6-4db3-b215-1b926f2899e2",
