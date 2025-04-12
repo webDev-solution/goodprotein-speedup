@@ -76,7 +76,7 @@
         "use_custom_collection": true,
         "collection": "superfood-shake",
         "products": [],
-        "section_background": "#ffffff",
+        "section_background": "#e6f2ff",
         "page_width": true,
         "items_per_page_1024": 4,
         "items_per_page_768": 3,
