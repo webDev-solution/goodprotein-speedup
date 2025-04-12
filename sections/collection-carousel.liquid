@@ -150,6 +150,12 @@
         </div>
 
         <div class="icons-to-choose-description-swiper-pagination"></div>
+        <button class="video-text-btn-prev-{{ section.id }}">
+          <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle.png?v=1741981965" />
+        </button>
+        <button class="video-text-btn-next-{{ section.id }}">
+          <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" />
+        </button>
       </div>
     {% else %}
       <div class="no-products-description">No products</div>
@@ -167,6 +173,10 @@
         type: "bullets",
         clickable: true,
         dynamicBullets: false
+      },
+      navigation: {
+        nextEl: '.video-text-btn-next-{{ section.id }}',
+        prevEl: '.video-text-btn-prev-{{ section.id }}'
       },
       breakpoints: {
         1024: {
