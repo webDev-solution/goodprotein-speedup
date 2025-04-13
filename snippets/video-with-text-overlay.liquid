@@ -31,6 +31,7 @@
     <div class="{% if style == 'inset' %}media-style-container{% endif %}">
       {% if fallback_image %}
         <img
+          class="custom-img-txt"
           src="{{ fallback_image | img_url: '1600x' }}"
           srcset="
             {{fallback_image | img_url: '415x' }} 415w,
@@ -44,8 +45,6 @@
           width="{{fallback_image.width}}"
           height="{{fallback_image.height}}"
           loading="lazy"
-          decoding="async"
-          class="custom-img-txt"
           fetchpriority="low"
         />        
       {% elsif video %}
