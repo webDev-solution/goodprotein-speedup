@@ -84,7 +84,7 @@
       "custom_css": [
         ".bg-scheme-background {margin-top: 66px;}",
         "@media (max-width: 768px) {.bg-scheme-background {margin-top: 54px; }}",
-        "h2 {font-size: 72px;}",
+        "h2 {font-size: 72px; color: #084b6d;}",
         "@media (max-width: 1024px) {h2 {font-size: 60px; }}",
         "@media (max-width: 768px) {h2 {font-size: 48px; }}",
         "@media (max-width: 425px) {h2 {font-size: 42px; }}"
