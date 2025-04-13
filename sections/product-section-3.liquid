@@ -25,7 +25,19 @@
             {% cycle '<div dir="rtl" class="inner-carousel">', '', '', '', '', '', '<div class="inner-carousel">', '', '', '', '', '' %}
             <div class="product-section-box img_wrap3">
               <figure>
-                 <img src="{{ block.settings.image | image_url: width: 400  }}" alt="" width="400" height="{{ 400 | divided_by: block.settings.image.aspect_ratio | round }}" loading="lazy" />
+                 <img 
+                  loading="lazy" 
+                  src="{{ block.settings.image | image_url: width: 150  }}" 
+                  srcset="
+                    {{ block.settings.image | image_url: width: 142 }} 142w,
+                    {{ block.settings.image | image_url: width: 150 }} 150w,
+                    {{ block.settings.image | image_url: width: 256 }} 256w, 
+                    {{ block.settings.image | image_url: width: 400 }} 400w
+                  "
+                  width="150" height="{{ 150 | divided_by: block.settings.image.aspect_ratio | round }}"
+                  sizes="(max-width: 768px) 142px, 256px"
+                  alt="{{ block.settings.image.alt }}"
+                />                 
               </figure>
               <h5>{{ block.settings.heading }}</h5>
             </div>
