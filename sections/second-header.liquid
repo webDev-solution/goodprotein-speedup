@@ -285,7 +285,7 @@
               {{ link.title }}
             </a>
           {% endif %}
-{% endif %}
+        {% endif %}
 
         </li>
       {% endfor %}
@@ -371,44 +371,44 @@
   This is mandatory on mobile. On desktop only appears if menu icon layout is selected.
   {% endcomment %}
 {%- capture menu_icon -%}
-<button
-  class="{{ base_font_class }} js-enabled inline-block -m-1 p-1 {% unless layout contains 'menu_icon' %}lg:hidden{% endunless %}"
-  type="button"
-  x-bind:aria-expanded="$store.modals.menuDrawer.contents === 'nav'"
-  @click="$store.modals.toggle('nav')"
-  data-menu-drawer-toggle>
+  <button
+    class="{{ base_font_class }} js-enabled inline-block -m-1 p-1 {% unless layout contains 'menu_icon' %}lg:hidden{% endunless %}"
+    type="button"
+    x-bind:aria-expanded="$store.modals.menuDrawer.contents === 'nav'"
+    @click="$store.modals.toggle('nav')"
+    data-menu-drawer-toggle>
 
-  <span class="{% if show_icons %}visually-hidden{% endif %}">{{ 'layout.navigation.menu' | t }}</span>
-  {%- if show_icons -%}
-  <span class="block icon">
-    <span class="w-6 h-6 inline-block align-middle open">{% render 'icon-menu' %}</span>
-    <span class="w-6 h-6 inline-block align-middle close">{% render 'icon-close' %}</span>
-  </span>
-  {%- endif -%}
-</button>
-<noscript>
-  <div class="no-js-focus-wrapper">
-    <button
-      class="inline-block -m-1 p-1 {% unless layout contains 'menu_icon' %}lg:hidden{% endunless %}"
-      type="button"
-      data-menu-drawer-toggle>
-      <span class="{% if show_icons %}visually-hidden{% endif %}">{{ 'layout.navigation.menu' | t }}</span>
-      {%- if show_icons -%}
-      <span class="block icon">
-        <span class="w-6 h-6 inline-block align-middle">{% render 'icon-menu' %}</span>
-      </span>
-      {%- endif -%}
-    </button>
-    <div class="hidden no-js-focus-container absolute left-0 bottom-0 w-11/12 md:w-7/12 lg:w-5/12 py-section-vertical-spacing px-section transform translate-y-[calc(100%-var(--section-border-thickness))] z-100 {% if layout contains 'navigation_center' %}text-center{% elsif layout contains 'navigation_right'%}text-right{% endif %} max-h-three-quarters-screen-height overflow-hidden overflow-y-auto {{ dropdown_background }}  {{ dropdown_text }}">
-      {%- render 'no-js-sidebar-nav' %}
+    <span class="{% if show_icons %}visually-hidden{% endif %}">{{ 'layout.navigation.menu' | t }}</span>
+    {%- if show_icons -%}
+    <span class="block icon">
+      <span class="w-6 h-6 inline-block align-middle open">{% render 'icon-menu' %}</span>
+      <span class="w-6 h-6 inline-block align-middle close">{% render 'icon-close' %}</span>
+    </span>
+    {%- endif -%}
+  </button>
+  <noscript>
+    <div class="no-js-focus-wrapper">
+      <button
+        class="inline-block -m-1 p-1 {% unless layout contains 'menu_icon' %}lg:hidden{% endunless %}"
+        type="button"
+        data-menu-drawer-toggle>
+        <span class="{% if show_icons %}visually-hidden{% endif %}">{{ 'layout.navigation.menu' | t }}</span>
+        {%- if show_icons -%}
+        <span class="block icon">
+          <span class="w-6 h-6 inline-block align-middle">{% render 'icon-menu' %}</span>
+        </span>
+        {%- endif -%}
+      </button>
+      <div class="hidden no-js-focus-container absolute left-0 bottom-0 w-11/12 md:w-7/12 lg:w-5/12 py-section-vertical-spacing px-section transform translate-y-[calc(100%-var(--section-border-thickness))] z-100 {% if layout contains 'navigation_center' %}text-center{% elsif layout contains 'navigation_right'%}text-right{% endif %} max-h-three-quarters-screen-height overflow-hidden overflow-y-auto {{ dropdown_background }}  {{ dropdown_text }}">
+        {%- render 'no-js-sidebar-nav' %}
+      </div>
+    </div>
+  </noscript>
+  <div x-data>
+    <div>
+      {% render 'sidebar-nav', section: section, base_font_class: 'font-main' %}
     </div>
   </div>
-</noscript>
-<div x-data>
-  <div>
-    {% render 'sidebar-nav', section: section, base_font_class: 'font-main' %}
-  </div>
-</div>
 {%- endcapture -%}
 
 {%- capture cart_icon %}
@@ -530,25 +530,6 @@
         <div class="flex justify-between items-center">
           {% comment %} Left {% endcomment %}
           <div class="flex flex-grow {% unless layout contains 'search' %}w-1/3{% endunless %} {% if layout == 'logo_left_navigation_left' %}lg:w-2/3{% endif %} justify-start items-stretch">
-
-            {% if layout contains 'logo_center' %}
-              <div class="flex items-center z-10">{{ menu_icon }}</div>
-            {% endif %}
-
-            {% if layout contains 'logo_left' %}
-              <div class="lg:flex-grow-1 {% if layout == 'logo_left_navigation_left' %}mr-5 lg:mr-10{% endif %}">
-                {{ logo }}
-              </div>
-            {% endif %}
-            {% if layout contains 'navigation_left' %}
-              <div class="hidden lg:block">
-                {{ navigation }}
-              </div>
-            {% endif %}
-          </div>
-
-          {% comment %} Center {% endcomment %}
-          {% unless layout contains 'search' %}
             <div class="flex justify-center text-center {% if layout contains 'logo_center' %}flex-grow lg:flex-grow-0 lg:w-auto{% else %}w-0 flex-grow-0{% endif %} {% if layout contains 'navigation_center' %}lg:flex-grow {% unless has_feature_desktop_button and feature_desktop_link_position == 'right_of_cart' %}lg:w-3/4 xl:4/5{% else %}lg:w-1/3{% endunless %}{% endif %}">
               {% if layout contains 'logo_center' %}
                 {{ logo }}
@@ -558,6 +539,15 @@
                   {{ navigation }}
                 </div>
               {% endif %}
+            </div>
+          </div>
+
+          {% comment %} Center {% endcomment %}
+          {% unless layout contains 'search' %}
+            <div class="flex justify-center text-center {% if layout contains 'logo_center' %}flex-grow lg:flex-grow-0 lg:w-auto{% else %}w-0 flex-grow-0{% endif %} {% if layout contains 'navigation_center' %}lg:flex-grow {% unless has_feature_desktop_button and feature_desktop_link_position == 'right_of_cart' %}lg:w-3/4 xl:4/5{% else %}lg:w-1/3{% endunless %}{% endif %}">
+              <div class="announcement-text">
+                LAST CHANCE - CLEARANCE SALE ⚡
+              </div>
             </div>
           {% endunless %}
 
@@ -793,26 +783,6 @@
         "type":"url",
       "id":"label_link",
       "label":"Link"
-    },
-    {
-      "type": "header",
-      "content": "Menu"
-    },
-    {
-      "type": "link_list",
-      "id": "main_linklist",
-      "label": "Main menu",
-      "default": "main-menu"
-    },
-    {
-      "type": "link_list",
-      "id": "mobile_menu",
-      "label": "Mobile menu"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_all_navigation_links",
-      "label": "Enable links to drop-down link headings"
     },
     {
       "type": "checkbox",
