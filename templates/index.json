@@ -157,7 +157,7 @@
         "text": "<p>All the good stuff your body needs to promote holistic health.</p>",
         "button_title": "Take Your First Sip",
         "button_link": "shopify://products/peanut-butter-all-in-one-shake",
-        "image": "shopify://shop_images/Vanilla-Transparent02.png",
+        "image": "shopify://shop_images/Vanilla-Transparent02.webp",
         "list": "<p><strong>✓</strong> Plant-based protein</p><p><strong>✓ </strong>Organic superfoods</p><p><strong>✓ </strong>Vitamins + minerals</p><p><strong>✓ </strong>Probiotics + fibres</p><p><strong>✓ </strong>Antioxidants</p><p><strong>✓ </strong>BCAAs</p><p><strong>✓ </strong>Omegas + MCTs</p>",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67"
       }
@@ -169,10 +169,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/6._Samantha_1x1_EN.png",
+            "image": "shopify://shop_images/6._Samantha_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/6. Samantha_1x1.mp4",
-            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.png",
+            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.webp",
             "fr_video_link": ""
           }
         },
@@ -180,10 +180,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/5._Bianka_1x1_EN.png",
+            "image": "shopify://shop_images/5._Bianka_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/5. Bianka.mp4",
-            "fr_image": "shopify://shop_images/5._Bianka_1x1_FR_2.png",
+            "fr_image": "shopify://shop_images/5._Bianka_1x1_FR_2.webp",
             "fr_video_link": ""
           }
         },
@@ -191,10 +191,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.png",
+            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/4. Samantha B_1x1.mp4",
-            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.png",
+            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.webp",
             "fr_video_link": ""
           }
         },
@@ -202,10 +202,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/3._Brooke_1x1_EN.png",
+            "image": "shopify://shop_images/3._Brooke_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/3. Brooke_1x1.mp4",
-            "fr_image": "shopify://shop_images/3._Brooke_1x1_FR.png",
+            "fr_image": "shopify://shop_images/3._Brooke_1x1_FR.webp",
             "fr_video_link": ""
           }
         },
@@ -213,10 +213,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/2._Cassandra_1x1_EN.png",
+            "image": "shopify://shop_images/2._Cassandra_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/2. Cassandra.mp4",
-            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.png",
+            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.webp",
             "fr_video_link": ""
           }
         },
@@ -224,10 +224,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/1._Andy_1x1_EN.png",
+            "image": "shopify://shop_images/1._Andy_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/1. Andy_1x1.mp4",
-            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.png",
+            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.webp",
             "fr_video_link": ""
           }
         }
@@ -386,7 +386,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify://shop_images/Website-Assets-20.png",
+        "image": "shopify://shop_images/Website-Assets-20.webp",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
@@ -563,7 +563,7 @@
         "max_width": 100,
         "text_style": "body",
         "disable_media_style": false,
-        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.png?v=1690812665\" class=\"icon\" loading=\"eager\">",
+        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.webp?v=1744500340\" class=\"icon\" loading=\"eager\">",
         "title": "Every order makes a nutritional impact for a mother or child.",
         "heading_size": "heading-template",
         "richtext": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.</p>",
@@ -586,7 +586,7 @@
         "video_url": "",
         "crop": "four-three",
         "crop_desktop": "cinematic",
-        "fallback_image": "shopify://shop_images/Recipes-Banners-Homepage.png",
+        "fallback_image": "shopify://shop_images/Recipes-Banners-Homepage.webp",
         "display_on_card": false,
         "style": "full",
         "place_content": "place-content-center-center",
@@ -611,7 +611,7 @@
         "max_width": "450",
         "btn_text": "Try it Today",
         "btn_url": "shopify://products/mixed-berries-all-in-one-shake",
-        "image": "shopify://shop_images/IMG_5296_1__enhanced_1.png",
+        "image": "shopify://shop_images/IMG_5296_1__enhanced_1.webp",
         "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e"
       }
     }
