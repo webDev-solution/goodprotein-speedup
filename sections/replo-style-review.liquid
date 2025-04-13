@@ -19,7 +19,7 @@
 {% endstyle %}
 
 <div class="sectoin-replo-style-review-container">
-  <div class="{% if page_width %}page-container{% endif %} replo-style-review-wrapper">
+  <div class="{% if page_width %}page-container{% endif %} replo-style-review-wrapper replo-style-review-wrapper-{{ section.id }}">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'title' %}
@@ -28,11 +28,12 @@
           <h3 class="" style="color: {{ block.settings.color }}">{{ block.settings.subtitle }}</h3>
       {% endcase %}
     {% endfor %}
-    <div class="replo-style-review-carousel-container overflow-hidden">
+    <div class="replo-style-review-carousel-container replo-style-review-carousel-container-{{ section.id }} hidden overflow-hidden">
       <div class="swiper-wrapper">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'review' %}
+              {% assign review_count = forloop.index %}
               <div class="swiper-slide">
                 <div class="replo-style-review-card">
                   <div class="stars-wrapper">
@@ -57,9 +58,35 @@
           {% endcase %}
         {% endfor %}
       </div>
+      <div class="swiper-pagination-{{ section.id }}"></div>
+      <button class="btn-prev-{{ section.id }} swiper-button-prev">
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle.png?v=1741981965" />
+      </button>
+      <button class="btn-next-{{ section.id }} swiper-button-next">
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" />
+      </button>
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".replo-style-review-carousel-container-{{ section.id }}").classList.remove("hidden");
+    const collectionCarouselProductsContainer = new Swiper('.replo-style-review-carousel-container-{{ section.id }}', {
+      pagination: {
+        el: ".swiper-pagination-{{ section.id }}",
+        type: "bullets",
+        clickable: true,
+        dynamicBullets: false
+      },
+      navigation: {
+        nextEl: '.btn-next-{{ section.id }}',
+        prevEl: '.btn-prev-{{ section.id }}'
+      },
+      slidesPerView: 3
+    });
+  });
+</script>
 
 {% schema %}
 {
