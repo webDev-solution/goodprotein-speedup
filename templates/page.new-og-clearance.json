@@ -310,7 +310,7 @@
       "type": "second-footer",
       "settings": {
         "logo": "shopify://shop_images/Logo-Website_4.png",
-        "logo_max_width": 120,
+        "logo_max_width": 250,
         "bottom_menu": "footer-bottom-menu",
         "show_payment_icons": false,
         "show_country_selector": false,
