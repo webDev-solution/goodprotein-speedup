@@ -29,7 +29,7 @@
       {% endcase %}
     {% endfor %}
     <div class="replo-style-review-carousel-container replo-style-review-carousel-container-{{ section.id }} hidden overflow-hidden">
-      <div class="swiper-wrapper">
+      <div class="swiper-wrapper overflow-hidden">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'review' %}
