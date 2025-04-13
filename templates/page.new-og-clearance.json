@@ -246,6 +246,7 @@
         },
         "question_e8DJGj": {
           "type": "question",
+          "disabled": true,
           "settings": {
             "question": "What does a subscription entail?",
             "answer": "<p>Put simply, a subscription allows you to save 20% on all of your orders; meaning you can take full advantage of our superfood blends — and discover all of their benefits — at a low price. We know what you’re thinking: that’s a great deal and you’re wondering how to subscribe. All it takes is opting in and receiving at least 2 shipments. You can change or skip your orders at any time, but if you cancel your subscription before the second shipment has been received, you’ll be charged the regular price. Plus we're giving away free gifts on almost every order!</p>"
@@ -264,8 +265,8 @@
         "heading_text_style": "body",
         "two_columns_desktop": false,
         "title": "FAQ's",
-        "richtext": "<p>See below for our most frequently asked questions. If you don't see your answer or just want to say hello, send us an email at <a href=\"mailto:info@goodprotein.ca\"><span style=\"text-decoration:underline\">info@goodprotein.ca</span></a> !</p>",
-        "btn_text": "Read all FAQs",
+        "richtext": "",
+        "btn_text": "SHOP THE SALE",
         "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false
