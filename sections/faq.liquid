@@ -1,15 +1,16 @@
 {%- liquid
   assign block_heading_level = 'h2'
   assign title_position = section.settings.title_position
+  assign faq_style = section.settings.change_style
 -%}
 
-{% case section.settings.change_style %}
+{% case faq_style %}
   {% when "old" %}
     {{ 'faq-old-style.css' | asset_url | stylesheet_tag }}
 {% endcase %}
 
 <section
-  class="homepage_faq_section relative text-scheme-text bg-scheme-background overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}"
+  class="faq-{{ faq_style }}-style homepage_faq_section relative text-scheme-text bg-scheme-background overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}"
   data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}"
 >
   <div class="section-content max-w-site mx-auto px-section relative z-10 py-section-vertical-spacing">
