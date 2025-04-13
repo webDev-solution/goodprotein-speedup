@@ -521,6 +521,11 @@
   {% else %}
     :class="{ 'header-is-active' : menuIsActive }"
   {% endif %}
+  style="
+    position: fixed;
+    z-index: 51 !important;
+    top: 0px;
+    width: 100%;"
 >
   <div id="headerBorderWrap" class="headerBorderWrap">
     <div id="headerContainer"
@@ -632,7 +637,7 @@
             <script>
               $( document ).ready(function() {
                 let currentURL = window.location.href;
-                
+                console.log("test url", currentURL);
                 if(currentURL.includes("/fr")){
                   document.getElementById("_lang-en").classList.remove("hide");
                   document.getElementById("_lang-fr").classList.remove("show");
