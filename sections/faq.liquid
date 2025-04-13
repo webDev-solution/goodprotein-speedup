@@ -27,7 +27,7 @@
       </div>
     {% endif %}
 
-    <div class="{% if section.settings.title != '' or section.settings.richtext != blank %}section-content-top-margin{% endif %} {% unless section.settings.display_on_card %}border-scheme-text border-b-2{% endunless %} mx-auto grid grid-cols-1 gap-theme {% if section.settings.two_columns_desktop %}lg:grid-cols-2 max-w-7xl{% else %}max-w-2xl{% endif %}">
+    <div class="card-group {% if section.settings.title != '' or section.settings.richtext != blank %}section-content-top-margin{% endif %} {% unless section.settings.display_on_card %}border-scheme-text border-b-2{% endunless %} mx-auto grid grid-cols-1 gap-theme {% if section.settings.two_columns_desktop %}lg:grid-cols-2 max-w-7xl{% else %}max-w-2xl{% endif %}">
       {%- for block in section.blocks -%}
         {% if block.type == 'question' %}
           <div
