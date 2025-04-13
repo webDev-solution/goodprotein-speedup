@@ -581,8 +581,8 @@
         "p {font-size: 18px; color: black;}",
         "h2 {color: black;}",
         ".section-content .text-scheme-text > div {max-width: 550px;}",
-        "@media (max-width: 989px){.custom-img-txt{min-height: 450px; }}",
-        "@media (max-width: 767px){.custom-img-txt{min-height: 320px; }}"
+        "@media (max-width: 989px) {.custom-img-txt {min-height: 450px; object-fit: cover; object-position: center; }}",
+        "@media (max-width: 767px) {.custom-img-txt {min-height: 320px; }}"
       ],
       "settings": {
         "video_url": "",
