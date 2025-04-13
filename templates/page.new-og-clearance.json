@@ -77,7 +77,7 @@
         "collection": "superfood-shake",
         "products": [],
         "top_padding": 40,
-        "bottom_padding": 40,
+        "bottom_padding": 30,
         "section_background": "#e6f2ff",
         "page_width": true,
         "items_per_page_1024": 4,
@@ -101,7 +101,7 @@
           "bananas-cream-all-in-one-shake",
           "chai-latte-all-in-one-shake"
         ],
-        "top_padding": 40,
+        "top_padding": 30,
         "bottom_padding": 0,
         "section_background": "#e6f2ff",
         "page_width": true,
