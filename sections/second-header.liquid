@@ -768,22 +768,21 @@
 {% endstyle %}
 
 <script>
-  var headerElement = document.querySelector('#header-{{ section.id }}');
-  if (headerElement != undefined) {
-    window.addEventListener('scroll', function (evt) {
-      var rect = headerElement).getBoundingClientRect();
-      if (rect.bottom < rect.height) {
-        headerElement.style.position = "fixed";
-      } else {
-        headerElement.style.position = "sticky";
-      }
-    });
-  } else {
-    headerElement.style.position = "sticky";
-  }
- 
-    
-
+  document.addEventListener('DOMContentLoaded', function() {
+    var headerElement = document.querySelector('#header-{{ section.id }}');
+    if (!headerElement) {
+      window.addEventListener('scroll', function (evt) {
+        var rect = headerElement.getBoundingClientRect();
+        if (rect.bottom < rect.height) {
+          headerElement.style.position = "fixed";
+        } else {
+          headerElement.style.position = "sticky";
+        }
+      });
+    } else {
+      headerElement.style.position = "sticky";
+    }
+  });
 </script>
 
 
