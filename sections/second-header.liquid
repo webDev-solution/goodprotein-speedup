@@ -639,6 +639,8 @@
                 let currentURL = window.location.href;
                 let url = new URL(currentURL);
                 let domain = url.hostname;
+                if(path == "") path = "/";
+
                 if(currentURL.includes("/fr")){
                   document.getElementById("_lang-en-{{ section.id }}").classList.remove("hide");
                   document.getElementById("_lang-fr-{{ section.id }}").classList.remove("show");
@@ -655,7 +657,7 @@
                   document.getElementById("_lang-fr-{{ section.id }}").classList.add("show");
 
                   let path = url.pathname.replace('/fr', '');
-                  document.getElementById("_lang-fr-{{ section.id }}").href = path;
+                  document.getElementById("_lang-fr-{{ section.id }}").href = "/fr"+path;;
                 }
               });
               
