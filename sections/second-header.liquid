@@ -545,8 +545,8 @@
           {% comment %} Center {% endcomment %}
           {% unless layout contains 'search' %}
             <div class="flex justify-center text-center {% if layout contains 'logo_center' %}flex-grow lg:flex-grow-0 lg:w-auto{% else %}w-0 flex-grow-0{% endif %} {% if layout contains 'navigation_center' %}lg:flex-grow {% unless has_feature_desktop_button and feature_desktop_link_position == 'right_of_cart' %}lg:w-3/4 xl:4/5{% else %}lg:w-1/3{% endunless %}{% endif %}">
-              <div class="announcement-text">
-                LAST CHANCE - CLEARANCE SALE ⚡
+              <div class="announcement-text font-bold">
+                {{ section.settings.announcement_text }}
               </div>
             </div>
           {% endunless %}
@@ -624,51 +624,50 @@
               </div>
             </div>
             {% endif %}
-<!-- <span class="ly-custom-1024"></span> -->
-      <div class="ds_drawer_country_selection btn ">
-        <a  id="_lang-en"></a>
-        <a  id="_lang-fr">FR</a>
-      </div> 
-      <script>
-        $( document ).ready(function() {
-            let currentURL = window.location.href;
-          // console.log(currentURL);
-          // console.log("include_fr = " + currentURL.includes("/fr"));
-            if(currentURL.includes("/fr")){
-              document.getElementById("_lang-en").classList.remove("hide");
-              document.getElementById("_lang-fr").classList.remove("show");
-              document.getElementById("_lang-fr").classList.add("hide");
-              $("#_lang-en").text("EN");
-              document.getElementById("_lang-en").classList.add("show");
-              // console.log("fr, yes");
-            }
-            else{
-              document.getElementById("_lang-en").classList.remove("show");
-              document.getElementById("_lang-fr").classList.remove("hide");
-              document.getElementById("_lang-en").classList.add("hide");
-              $("#_lang-fr").text("FR")
-              document.getElementById("_lang-fr").classList.add("show");
-              // console.log("fr, no");
-            }
-        });        
-        document.getElementById("_lang-en").addEventListener("click", function(){
-          let currentURL = window.location.href; console.log("currentURL = " + currentURL);
-          let url = new URL(currentURL);
-          let domain = url.hostname;
-          let path = url.pathname.replace('/fr', ''); 
-          if(path == "") path = "/";
-          // console.log("path = " + path);
-          window.location.href = path;
-        });
-        document.getElementById("_lang-fr").addEventListener("click", function(){
-          let currentURL = window.location.href;
-          let url = new URL(currentURL);
-          let domain = url.hostname;
-          let path = url.pathname;
-          window.location.href = "/fr"+path;
-        });
-        
-      </script>                  
+            
+            <div class="ds_drawer_country_selection btn ">
+              <a  id="_lang-en"></a>
+              <a  id="_lang-fr">FR</a>
+            </div> 
+            <script>
+              $( document ).ready(function() {
+                let currentURL = window.location.href;
+                
+                if(currentURL.includes("/fr")){
+                  document.getElementById("_lang-en").classList.remove("hide");
+                  document.getElementById("_lang-fr").classList.remove("show");
+                  document.getElementById("_lang-fr").classList.add("hide");
+                  $("#_lang-en").text("EN");
+                  document.getElementById("_lang-en").classList.add("show");
+                  // console.log("fr, yes");
+                }
+                else{
+                  document.getElementById("_lang-en").classList.remove("show");
+                  document.getElementById("_lang-fr").classList.remove("hide");
+                  document.getElementById("_lang-en").classList.add("hide");
+                  $("#_lang-fr").text("FR")
+                  document.getElementById("_lang-fr").classList.add("show");
+                  // console.log("fr, no");
+                }
+                document.getElementById("_lang-en").addEventListener("click", function(){
+                  let currentURL = window.location.href; console.log("currentURL = " + currentURL);
+                  let url = new URL(currentURL);
+                  let domain = url.hostname;
+                  let path = url.pathname.replace('/fr', ''); 
+                  if(path == "") path = "/";
+                  // console.log("path = " + path);
+                  window.location.href = path;
+                });
+                document.getElementById("_lang-fr").addEventListener("click", function(){
+                  let currentURL = window.location.href;
+                  let url = new URL(currentURL);
+                  let domain = url.hostname;
+                  let path = url.pathname;
+                  window.location.href = "/fr"+path;
+                });
+              });
+              
+            </script>                  
           </div>
         </div>
       </div>
@@ -773,6 +772,11 @@
       "unit": "px",
       "label": "Custom logo width",
       "default": 100
+    },
+    {
+      "id": "announcement_text",
+      "type": "text",
+      "label": "Announcement text"
     },
     {
         "type":"text",
