@@ -271,6 +271,8 @@
         "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false,
+        "use_special_background": false,
+        "special_background": "#e6f2ff",
         "change_style": "old"
       }
     }
