@@ -637,6 +637,8 @@
             <script>
               $( document ).ready(function() {
                 let currentURL = window.location.href;
+                let url = new URL(currentURL);
+                let domain = url.hostname;
                 if(currentURL.includes("/fr")){
                   document.getElementById("_lang-en-{{ section.id }}").classList.remove("hide");
                   document.getElementById("_lang-fr-{{ section.id }}").classList.remove("show");
@@ -644,18 +646,20 @@
                   $("#_lang-en-{{ section.id }}").text("EN");
                   document.getElementById("_lang-en-{{ section.id }}").classList.add("show");
                   // console.log("fr, yes");
+                  document.getElementById("_lang-en-{{ section.id }}").href = path;
                 } else{
                   document.getElementById("_lang-en-{{ section.id }}").classList.remove("show");
                   document.getElementById("_lang-fr-{{ section.id }}").classList.remove("hide");
                   document.getElementById("_lang-en-{{ section.id }}").classList.add("hide");
                   $("#_lang-fr-{{ section.id }}").text("FR")
                   document.getElementById("_lang-fr-{{ section.id }}").classList.add("show");
-                  // console.log("fr, no");
-                  console.log("test url", currentURL);
+
+                  let path = url.pathname.replace('/fr', '');
+                  document.getElementById("_lang-fr-{{ section.id }}").href = path;
                 }
               });
               
-              document.getElementById("_lang-en-{{ section.id }}").addEventListener("click", function(){
+              {% comment %} document.getElementById("_lang-en-{{ section.id }}").addEventListener("click", function(){
                 let currentURL = window.location.href; console.log("currentURL = " + currentURL);
                 let url = new URL(currentURL);
                 let domain = url.hostname;
@@ -671,7 +675,7 @@
                 let domain = url.hostname;
                 let path = url.pathname;
                 window.location.href = "/fr"+path;
-              });
+              }); {% endcomment %}
             </script>                  
           </div>
         </div>
