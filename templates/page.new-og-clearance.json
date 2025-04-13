@@ -127,9 +127,16 @@
         "title_color": "#000000",
         "description": "",
         "description_color": "#000000",
-        "use_custom_collection": true,
+        "use_custom_collection": false,
         "collection": "superfood-shake",
-        "products": [],
+        "products": [
+          "do-not-use-cookies-cream-all-in-one-superfood-shake",
+          "creamy-vanilla-original-all-in-one-superfood-shake",
+          "do-not-use-chocolate-all-in-one-superfood-shake",
+          "gingerbread-cookie-all-in-one-shake",
+          "do-not-use-golden-turmeric-latte",
+          "do-not-use-green-apple-green-superfood-juice"
+        ],
         "top_padding": 40,
         "bottom_padding": 30,
         "section_background": "#e6f2ff",
