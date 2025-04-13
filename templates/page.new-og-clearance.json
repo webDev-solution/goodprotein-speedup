@@ -263,13 +263,15 @@
       "settings": {
         "display_on_card": true,
         "heading_text_style": "body",
+        "title_position": "center",
         "two_columns_desktop": false,
         "title": "FAQ's",
         "richtext": "",
         "btn_text": "SHOP THE SALE",
         "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
-        "use_gradient_background": false
+        "use_gradient_background": false,
+        "change_style": "old"
       }
     }
   },
