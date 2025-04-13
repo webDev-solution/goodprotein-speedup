@@ -639,7 +639,6 @@
                 let currentURL = window.location.href;
                 let url = new URL(currentURL);
                 let domain = url.hostname;
-                if(path == "") path = "/";
 
                 if(currentURL.includes("/fr")){
                   document.getElementById("_lang-en-{{ section.id }}").classList.remove("hide");
@@ -647,7 +646,10 @@
                   document.getElementById("_lang-fr-{{ section.id }}").classList.add("hide");
                   $("#_lang-en-{{ section.id }}").text("EN");
                   document.getElementById("_lang-en-{{ section.id }}").classList.add("show");
-                  // console.log("fr, yes");
+
+                  let path = url.pathname.replace('/fr', '');
+                  if(path == "") path = "/";
+                  
                   document.getElementById("_lang-en-{{ section.id }}").href = path;
                 } else{
                   document.getElementById("_lang-en-{{ section.id }}").classList.remove("show");
@@ -656,7 +658,7 @@
                   $("#_lang-fr-{{ section.id }}").text("FR")
                   document.getElementById("_lang-fr-{{ section.id }}").classList.add("show");
 
-                  let path = url.pathname.replace('/fr', '');
+                  
                   document.getElementById("_lang-fr-{{ section.id }}").href = "/fr"+path;;
                 }
               });
