@@ -83,7 +83,20 @@
         nextEl: '.btn-next-{{ section.id }}',
         prevEl: '.btn-prev-{{ section.id }}'
       },
-      slidesPerView: 3
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+      }
     });
   });
 </script>
