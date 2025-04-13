@@ -22,7 +22,9 @@
                 loading="lazy"
                 width="{{ product.featured_image.width }}"
                 height="{{ product.featured_image.height }}"
-                alt="{{ product.featured_image.alt | escape }}">
+                alt="{{ product.featured_image.alt | escape }}"
+                fetchpriority="low"
+              >
             </a>
             <div class="featured-product-contnet text-center">
               <a href="{{product.url}}">
