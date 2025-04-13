@@ -1,12 +1,12 @@
 {{ 'custom-header.scss.css' | asset_url | stylesheet_tag }}
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 {% style %}
-  #shopify-section-header {
+  /* #shopify-section-header {
     display: none;
   }
   #shopify-section-announcement-bar {
     display: none;
-  }
+  } */
 
   .announcement-text {
     font-family: Gelica Bk !important;
@@ -557,10 +557,11 @@
     :class="{ 'header-is-active' : menuIsActive }"
   {% endif %}
   style="
-    position: fixed;
+    position: sticky;
     z-index: 51 !important;
     top: 0px;
     width: 100%;"
+  id="header-{{ section.id }}"
 >
   <div id="headerBorderWrap" class="headerBorderWrap">
     <div id="headerContainer-{{ section.id }}"
@@ -767,17 +768,18 @@
 {% endstyle %}
 
 <script>
-  if (document.querySelector('#shopify-section-announcement-bar') != undefined) {
+  var headerElement = document.querySelector('#header-{{ section.id }}');
+  if (headerElement) != undefined) {
     window.addEventListener('scroll', function (evt) {
-      var rect = document.querySelector('#shopify-section-announcement-bar').getBoundingClientRect();
-      if (rect.top < -40) {
-        document.body.classList.add('scroll-header')
+      var rect = headerElement).getBoundingClientRect();
+      if (rect.bottom < rect.height) {
+        headerElement.style.position = "fixed";
       } else {
-        document.body.classList.remove('scroll-header')
+        headerElement.style.position = "sticky";
       }
     });
   } else {
-    document.body.classList.add('scroll-header')
+    headerElement.style.position = "sticky";
   }
  
     
