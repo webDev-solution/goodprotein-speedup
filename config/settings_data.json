@@ -512,7 +512,6 @@
           "h2 {font-size: 42px;}"
         ],
         "settings": {
-          "logo": "shopify://shop_images/Logo-Website_4.png",
           "logo_max_width": 270,
           "bottom_menu": "footer-bottom-menu",
           "show_payment_icons": false,
