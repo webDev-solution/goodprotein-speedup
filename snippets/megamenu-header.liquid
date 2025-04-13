@@ -115,7 +115,17 @@
 
                   <div class="img_megamenu">
                             {% if block.settings[lay_menu_image] != blank %}
-                                  <img loading="lazy" src="{{ block.settings[lay_menu_image] | img_url: '600x' }}">
+                                  <img 
+                                    loading="lazy"
+                                    src="{{ block.settings[lay_menu_image] | img_url: '265x' }}"
+                                    srcset="
+                                      {{ block.settings[lay_menu_image] | img_url: '166x' }} 166w,
+                                      {{ block.settings[lay_menu_image] | img_url: '265x' }} 265w,
+                                      {{ block.settings[lay_menu_image] | img_url: '325x' }} 325w,
+                                      {{ block.settings[lay_menu_image] | img_url: '400x' }} 400w
+                                    "
+                                    sizes="(min-width: 990px) 166px, 265px, 325px"
+                                  />
                               {% else %}
                                 {{ 'image' | placeholder_svg_tag }}
                             {% endif %}
