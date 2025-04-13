@@ -81,6 +81,10 @@
         "title_NimHT4",
         "shape_divider_aceamT"
       ],
+      "custom_css": [
+        ".bg-scheme-background {margin-top: 66px;}",
+        "@media (max-width: 768px) {.bg-scheme-background {margin-top: 54px; }}"
+      ],
       "settings": {
         "image": "shopify://shop_images/e87abeb3-74ee-4650-8fde-25dc9371d39a.jpg",
         "display_on_card": false,
