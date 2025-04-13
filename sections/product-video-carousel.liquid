@@ -39,7 +39,11 @@
           {{image_link | image_tag: class: 'image', image_size: '400x' }}
         {% endif %}
         {% if video_link!= blank %} 
-          {{video_link | video_tag: class: 'video c_hidden'}}
+          <video playsinline="playsinline" class="video c_hidden" preload="metadata">
+            {% for source in video_link.sources %}
+              <source src="{{ source.url }}" type="{{ source.mime_type }}">
+            {% endfor %}
+          </video>
         {% endif %}
         
 
