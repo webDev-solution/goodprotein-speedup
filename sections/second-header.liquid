@@ -649,7 +649,7 @@
 
                   let path = url.pathname.replace('/fr', '');
                   if(path == "") path = "/";
-                  
+
                   document.getElementById("_lang-en-{{ section.id }}").href = path;
                 } else{
                   document.getElementById("_lang-en-{{ section.id }}").classList.remove("show");
@@ -658,7 +658,7 @@
                   $("#_lang-fr-{{ section.id }}").text("FR")
                   document.getElementById("_lang-fr-{{ section.id }}").classList.add("show");
 
-                  
+                  let path = url.pathname;
                   document.getElementById("_lang-fr-{{ section.id }}").href = "/fr"+path;;
                 }
               });
