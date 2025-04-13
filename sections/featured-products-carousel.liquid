@@ -18,10 +18,16 @@
             <a href="{{product.url}}" class="featured-image-wrapper">
               <img 
                 class="featured-product-image" 
-                src="{{ product.featured_image | image_url }}" 
+                src="{{ product.featured_image | image_url: width: 265 }}" 
+                srcset="
+                  {{ product.featured_image | image_url: width: 185 }} 185w,
+                  {{ product.featured_image | image_url: width: 265 }} 265w,
+                  {{ product.featured_image | image_url: width: 400 }} 400w
+                "
+                sizes="(max-width: 600px) 185px, 265px"
                 loading="lazy"
-                width="{{ product.featured_image.width }}"
-                height="{{ product.featured_image.height }}"
+                width="265"
+                height="{{ 265 | divided_by: product.featured_image.aspect_ratio | round }}"
                 alt="{{ product.featured_image.alt | escape }}"
               >
             </a>
