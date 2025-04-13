@@ -631,30 +631,29 @@
             {% endif %}
             
             <div class="ds_drawer_country_selection btn ">
-              <a  id="_lang-en"></a>
-              <a  id="_lang-fr">FR</a>
+              <a  id="_lang-en-{{ section.id }}"></a>
+              <a  id="_lang-fr-{{ section.id }}">FR</a>
             </div> 
             <script>
               $( document ).ready(function() {
                 let currentURL = window.location.href;
-                console.log("test url", currentURL);
                 if(currentURL.includes("/fr")){
-                  document.getElementById("_lang-en").classList.remove("hide");
-                  document.getElementById("_lang-fr").classList.remove("show");
-                  document.getElementById("_lang-fr").classList.add("hide");
-                  $("#_lang-en").text("EN");
-                  document.getElementById("_lang-en").classList.add("show");
+                  document.getElementById("_lang-en-{{ section.id }}").classList.remove("hide");
+                  document.getElementById("_lang-fr-{{ section.id }}").classList.remove("show");
+                  document.getElementById("_lang-fr-{{ section.id }}").classList.add("hide");
+                  $("#_lang-en-{{ section.id }}").text("EN");
+                  document.getElementById("_lang-en-{{ section.id }}").classList.add("show");
                   // console.log("fr, yes");
                 } else{
-                  document.getElementById("_lang-en").classList.remove("show");
-                  document.getElementById("_lang-fr").classList.remove("hide");
-                  document.getElementById("_lang-en").classList.add("hide");
-                  $("#_lang-fr").text("FR")
-                  document.getElementById("_lang-fr").classList.add("show");
+                  document.getElementById("_lang-en-{{ section.id }}").classList.remove("show");
+                  document.getElementById("_lang-fr-{{ section.id }}").classList.remove("hide");
+                  document.getElementById("_lang-en-{{ section.id }}").classList.add("hide");
+                  $("#_lang-fr-{{ section.id }}").text("FR")
+                  document.getElementById("_lang-fr-{{ section.id }}").classList.add("show");
                   // console.log("fr, no");
                   console.log("test url", currentURL);
                 }
-                document.getElementById("_lang-en").addEventListener("click", function(){
+                document.getElementById("_lang-en-{{ section.id }}").addEventListener("click", function(){
                   let currentURL = window.location.href; console.log("currentURL = " + currentURL);
                   let url = new URL(currentURL);
                   let domain = url.hostname;
@@ -663,7 +662,7 @@
                   // console.log("path = " + path);
                   window.location.href = path;
                 });
-                document.getElementById("_lang-fr").addEventListener("click", function(){
+                document.getElementById("_lang-fr-{{ section.id }}").addEventListener("click", function(){
                   console.log("test url", currentURL);
                   let currentURL = window.location.href;
                   let url = new URL(currentURL);
