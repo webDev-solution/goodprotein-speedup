@@ -114,6 +114,9 @@
     },
     "image_text_with_overlay_2_38JBt3": {
       "type": "image-text-with-overlay-2",
+      "custom_css": [
+        ".py-section-vertical-spacing {padding: 0px !important;}"
+      ],
       "settings": {
         "image": "shopify://shop_images/shake-ingredients.png",
         "display_on_card": false,
