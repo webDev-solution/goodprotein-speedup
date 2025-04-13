@@ -769,8 +769,10 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    console.log("pppppppppppppp");
     var headerElement = document.querySelector('#header-{{ section.id }}');
     if (!headerElement) {
+      console.log("nnnnnnnnnnnnnnn");
       window.addEventListener('scroll', function (evt) {
         var rect = headerElement.getBoundingClientRect();
         if (rect.bottom < rect.height) {
