@@ -2,6 +2,8 @@
   assign block_heading_level = 'h2'
   assign title_position = section.settings.title_position
   assign faq_style = section.settings.change_style
+  assign use_special_background = section.settings.use_special_background
+  assign special_background = section.settings.special_background
 -%}
 
 {% case faq_style %}
@@ -11,7 +13,7 @@
 
 <section
   class="faq-{{ faq_style }}-style homepage_faq_section relative text-scheme-text bg-scheme-background overflow-hidden {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}"
-  data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}"
+  data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" {% if use_special_background %}style="background: {{  special_background }};"{% endif %}
 >
   <div class="section-content max-w-site mx-auto px-section relative z-10 py-section-vertical-spacing">
     {% if section.settings.title != blank %}
@@ -195,6 +197,17 @@
       "type": "checkbox",
       "id": "use_gradient_background",
       "label": "Use gradient for background"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_special_background",
+      "label": "Use special for background",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "special_background",
+      "label": "Special background color"
     },
     {
       "id": "change_style",
