@@ -36,7 +36,7 @@
           {% endif %}
         {% endif %}
         {% if image_link != blank %}
-          {{image_link | image_tag: class: 'image', image_size: '400x', fetchpriority:'low' }}
+          {{image_link | image_tag: class: 'image', image_size: '400x' }}
         {% endif %}
         {% if video_link!= blank %} 
           {{video_link | video_tag: class: 'video c_hidden', image_size: '400x' }}

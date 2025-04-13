@@ -30,7 +30,7 @@
         </div>
         {% if section.settings.image_position == 'right' %}
         <div class="right-product-section-1 lg:col-span-5">
-          <img src="{{ section.settings.image | img_url:'800x' }}" width="{{section.settings.image.width}}" height="{{section.settings.image.height}}" loading="lazy" fetchpriority="low"/>
+          <img src="{{ section.settings.image | img_url:'800x' }}" width="{{section.settings.image.width}}" height="{{section.settings.image.height}}" loading="lazy" />
         </div>
         {% endif %}
         
