@@ -557,7 +557,7 @@
     :class="{ 'header-is-active' : menuIsActive }"
   {% endif %}
   style="
-    position: sticky;
+    position: fixed;
     z-index: 51 !important;
     top: 0px;
     width: 100%;"
@@ -699,23 +699,6 @@
                 }
               });
               
-              {% comment %} document.getElementById("_lang-en-{{ section.id }}").addEventListener("click", function(){
-                let currentURL = window.location.href; console.log("currentURL = " + currentURL);
-                let url = new URL(currentURL);
-                let domain = url.hostname;
-                let path = url.pathname.replace('/fr', ''); 
-                if(path == "") path = "/";
-                // console.log("path = " + path);
-                window.location.href = path;
-              });
-              document.getElementById("_lang-fr-{{ section.id }}").addEventListener("click", function(){
-                console.log("test url", currentURL);
-                let currentURL = window.location.href;
-                let url = new URL(currentURL);
-                let domain = url.hostname;
-                let path = url.pathname;
-                window.location.href = "/fr"+path;
-              }); {% endcomment %}
             </script>                  
           </div>
         </div>
@@ -766,27 +749,6 @@
   }
   {%- endif -%}
 {% endstyle %}
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log("pppppppppppppp");
-    var headerElement = document.querySelector('#header-{{ section.id }}');
-    if (!headerElement) {
-      console.log("nnnnnnnnnnnnnnn");
-      window.addEventListener('scroll', function (evt) {
-        var rect = headerElement.getBoundingClientRect();
-        if (rect.bottom < rect.height) {
-          headerElement.style.position = "fixed";
-        } else {
-          headerElement.style.position = "sticky";
-        }
-      });
-    } else {
-      headerElement.style.position = "sticky";
-    }
-  });
-</script>
-
 
 {%- if predictive_search_enabled and request.design_mode == false -%}
   <script src="{{ 'modules-predictive-search.bundle.min.js' | asset_url }}" type="module"></script>
