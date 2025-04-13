@@ -2740,7 +2740,7 @@ select._hide_arrow{
 .margin-auto {
   margin: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .show-desktop {
     display: block;
   }
@@ -2748,7 +2748,7 @@ select._hide_arrow{
     display: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .show-desktop {
     display: none;
   }
