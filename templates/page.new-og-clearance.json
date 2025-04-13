@@ -188,31 +188,6 @@
         "review_star_color": "#408ae9"
       }
     },
-    "main": {
-      "type": "main-page",
-      "disabled": true,
-      "settings": {
-        "display_on_card": false,
-        "color_scheme": "primary",
-        "use_gradient_background": false
-      }
-    },
-    "17434436682af4c4ba": {
-      "type": "apps",
-      "blocks": {
-        "klaviyo_email_marketing_sms_form_embed_block_jB8xgD": {
-          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
-          "disabled": true,
-          "settings": {
-            "formId": ""
-          }
-        }
-      },
-      "block_order": [
-        "klaviyo_email_marketing_sms_form_embed_block_jB8xgD"
-      ],
-      "settings": {}
-    },
     "faq_dgfKKQ": {
       "type": "faq",
       "blocks": {
@@ -268,13 +243,38 @@
         "title": "FAQ's",
         "richtext": "",
         "btn_text": "SHOP THE SALE",
-        "btn_link": "shopify://pages/faq-1",
+        "btn_link": "#shopify-section-template--16697815105645__collection_carousel_FBABhk",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false,
         "use_special_background": true,
         "special_background": "#e6f2ff",
         "change_style": "old"
       }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "display_on_card": false,
+        "color_scheme": "primary",
+        "use_gradient_background": false
+      }
+    },
+    "17434436682af4c4ba": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_jB8xgD": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "disabled": true,
+          "settings": {
+            "formId": ""
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_jB8xgD"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -284,8 +284,8 @@
     "collection_carousel_n73bgV",
     "image_text_with_overlay_2_38JBt3",
     "replo_style_review_zGP6Uy",
+    "faq_dgfKKQ",
     "main",
-    "17434436682af4c4ba",
-    "faq_dgfKKQ"
+    "17434436682af4c4ba"
   ]
 }
