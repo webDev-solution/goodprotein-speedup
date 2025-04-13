@@ -9,6 +9,53 @@
  */
 {
   "sections": {
+    "second_header_F8bcmy": {
+      "type": "second-header",
+      "settings": {
+        "logo_max_width": 100,
+        "label_text": "",
+        "label_link": "",
+        "main_linklist": "main-menu",
+        "mobile_menu": "",
+        "show_all_navigation_links": false,
+        "showcase_second_level_links": false,
+        "showcase_first_level_collections": false,
+        "show_collection_images": false,
+        "crop": "aspect-w-1 aspect-h-1",
+        "shop_all_txt": "Shop All",
+        "shop_all_link": "",
+        "header_layout": "navigation_left_logo_center",
+        "header_show_search": false,
+        "sticky_header": false,
+        "show_icons": false,
+        "enable_overlay_on_homepage": false,
+        "enable_overlay_on_collection_pages": false,
+        "enable_overlay_on_product_pages": false,
+        "overlay_text_color": "white",
+        "overlay_show_separator_border": false,
+        "overlay_first_section_padding_top_desktop": 3,
+        "overlay_first_section_padding_top_mobile": 3,
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "dropdown_bg": "card",
+        "sidebar_show_footer_menu": false,
+        "sidebar_show_social_icons": false,
+        "carousel_enable_1": true,
+        "carousel_heading_1": "Save up to 30% When you bundle!",
+        "carousel_btn_text_1": "Create your bundle",
+        "carousel_btn_link_1": "",
+        "carousel_back_1": "#dbe9f5",
+        "carousel_text_1": "#000000",
+        "carousel_back_border_1": "#bedaf5",
+        "carousel_enable_2": true,
+        "carousel_heading_2": "Save up to 30% When you bundle!",
+        "carousel_btn_text_2": "Create your bundle",
+        "carousel_btn_link_2": "",
+        "carousel_back_2": "#dbe9f5",
+        "carousel_text_2": "#000000",
+        "carousel_back_border_2": "#bedaf5"
+      }
+    },
     "image_text_with_overlay_2_zpb8YX": {
       "type": "image-text-with-overlay-2",
       "blocks": {
@@ -278,6 +325,7 @@
     }
   },
   "order": [
+    "second_header_F8bcmy",
     "image_text_with_overlay_2_zpb8YX",
     "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
