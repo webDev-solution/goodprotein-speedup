@@ -224,7 +224,7 @@
                 {{ image | img_url: 'master' }} 2400w
               "
               alt="{{ image.alt }}"
-              sizes="100vw"
+              sizes="(min-width: 990px) 1024px, 1440px, 1600px, 2000px, 2400px"
               width="{{ image.width }}"
               height="{{ image.height }}"
               fetchpriority="high"  
@@ -243,7 +243,7 @@
                 {{ image | img_url: '768x' }} 768w
               "
               alt="{{ image.alt }}"
-              sizes="100vw"
+              sizes="(max-width: 989px) 768px, 415px, 375px, 320px"
               width="{{ image.width }}"
               height="{{ image.height }}"
               fetchpriority="high"            
