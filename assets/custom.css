@@ -928,6 +928,19 @@ display: -webkit-box;
   }
 }
 
+@media (max-width: 374px){
+  .ab-banner-content{
+    padding: 30px 5px;
+  }
+  .ab-banner-box{
+    max-width: 300px!important;
+    margin: 0 auto;
+  }
+  .ab-banner-review{
+    font-size: 13px;
+  }
+}
+
 /**/
 
 .covered_img_w_content_top .text-left{
