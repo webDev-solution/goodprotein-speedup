@@ -116,7 +116,9 @@ body, p {
 .c_hidden{
   display: none;
 }
-
+.c_hidden img{
+  display:none!important;
+}
 .simple_menu_item{
   padding:10px 18px;
 }
@@ -886,10 +888,6 @@ display: -webkit-box;
   .shakes_grid_layout .product-block-text{
         margin-top: 16px;
   }
-}
-
-.c_hidden img{
-  display:none!important;
 }
 
 @media (min-width: 990px) and (max-width: 1100px){
