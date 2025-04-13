@@ -26,6 +26,11 @@
   }
   footer .bottom_menu_part>* {
     width: 100%;
+    margin-top: 0px;
+    font-weight: bold;
+  }
+  footer .bottom_menu_part a {
+    text-decoration: underline;
   }
 {% endstyle %}
 <footer class="relative text-scheme-text bg-scheme-background px-section {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" data-section-id="{{ section.id }}" data-section-type="footer">
