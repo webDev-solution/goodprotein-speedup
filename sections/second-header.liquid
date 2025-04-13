@@ -7,6 +7,41 @@
   #shopify-section-announcement-bar {
     display: none;
   }
+
+  .announcement-text {
+    font-family: Gelica Bk !important;
+    font-size: 20px;
+  }
+  @media (max-width: 1200px) {
+    .announcement-text {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .announcement-text {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 768px) {
+    .announcement-text {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 1024px) {
+    #headerContainer-{{ section.id }}>div {
+      padding: 5px 0;
+    }
+  }
+  @media (max-width: 768px) {
+    #headerContainer-{{ section.id }}>div {
+      padding: 10px 0;
+    }
+  }
+  @media (max-width: 550px) {
+    #headerContainer-{{ section.id }}>div {
+      padding: 15px 0;
+    }
+  }
 {% endstyle %}
 {%- liquid
   assign color_scheme = section.settings.color_scheme | default: 'primary'
@@ -528,7 +563,7 @@
     width: 100%;"
 >
   <div id="headerBorderWrap" class="headerBorderWrap">
-    <div id="headerContainer"
+    <div id="headerContainer-{{ section.id }}"
           class="z-10">
       <div
         class="lg:py-0 px-section overflow-hidden">
