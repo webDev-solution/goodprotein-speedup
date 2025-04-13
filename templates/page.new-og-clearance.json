@@ -118,7 +118,7 @@
         "image": "shopify://shop_images/shake-ingredients.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
-        "style": "inset",
+        "style": "full",
         "height": "natural",
         "place_content": "place-content-center-center",
         "text_align": "text-center",
