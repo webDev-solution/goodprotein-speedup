@@ -645,14 +645,14 @@
                   $("#_lang-en").text("EN");
                   document.getElementById("_lang-en").classList.add("show");
                   // console.log("fr, yes");
-                }
-                else{
+                } else{
                   document.getElementById("_lang-en").classList.remove("show");
                   document.getElementById("_lang-fr").classList.remove("hide");
                   document.getElementById("_lang-en").classList.add("hide");
                   $("#_lang-fr").text("FR")
                   document.getElementById("_lang-fr").classList.add("show");
                   // console.log("fr, no");
+                  console.log("test url", currentURL);
                 }
                 document.getElementById("_lang-en").addEventListener("click", function(){
                   let currentURL = window.location.href; console.log("currentURL = " + currentURL);
@@ -664,6 +664,7 @@
                   window.location.href = path;
                 });
                 document.getElementById("_lang-fr").addEventListener("click", function(){
+                  console.log("test url", currentURL);
                   let currentURL = window.location.href;
                   let url = new URL(currentURL);
                   let domain = url.hostname;
