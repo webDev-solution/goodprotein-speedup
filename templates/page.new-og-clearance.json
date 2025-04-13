@@ -90,7 +90,7 @@
         "@media (max-width: 425px) {h2 {font-size: 42px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/Homepage-Desktop-Hero_2_1.png",
+        "image": "shopify://shop_images/Homepage-Desktop-Hero-06.webp",
         "display_on_card": false,
         "display_content_below_image_on_mobile": false,
         "style": "full",
