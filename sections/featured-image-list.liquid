@@ -3,6 +3,8 @@
     <link rel="stylesheet" href="{{ 'custom-featured-image-text.scss.css' | asset_url }}">
 </noscript>
 
+{% render 'lazy-style', asset: 'featured-image-text.css' %}
+
 <section data-section-type="featured-image-text" data-color-scheme="{{ section.settings.color_scheme }}" class="bg-scheme-background">
   <div class="page-width">
     <div class="grid lg:grid-cols-10">
