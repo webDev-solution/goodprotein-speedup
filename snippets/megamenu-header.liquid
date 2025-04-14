@@ -125,6 +125,8 @@
                                       {{ block.settings[lay_menu_image] | img_url: '400x' }} 400w
                                     "
                                     sizes="(min-width: 990px) 166px, 265px, 325px"
+                                    width="{{ block.settings[lay_menu_image].width }}"
+                                    height="{{ block.settings[lay_menu_image].width | divided_by: block.settings[lay_menu_image].aspect_ratio | round }}"
                                   />
                               {% else %}
                                 {{ 'image' | placeholder_svg_tag }}
