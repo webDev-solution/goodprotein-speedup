@@ -237,7 +237,7 @@
         "logo_3BcTUk": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/NFM_FeatureImage_Thumbnail_380x457_HOMEPAGE.webp",
+            "image": "shopify://shop_images/sobeys-logo.png",
             "link": ""
           }
         },
@@ -245,6 +245,13 @@
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/IGA_logo_svg.png",
+            "link": ""
+          }
+        },
+        "logo_jPK6K3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/1655400043417.jpg",
             "link": ""
           }
         }
@@ -255,7 +262,8 @@
         "logo_Yr37Cx",
         "logo_RXYDWw",
         "logo_3BcTUk",
-        "logo_xNcxGy"
+        "logo_xNcxGy",
+        "logo_jPK6K3"
       ],
       "settings": {
         "title": "",
