@@ -248,6 +248,20 @@
             "link": ""
           }
         },
+        "logo_Vx3kKh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Avril_Logo_officiel-e1529594497324.jpg",
+            "link": ""
+          }
+        },
+        "logo_QyjXNq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/b86b95b9e8a34d55c27e95b11aea6532fda4bb00_logo.png",
+            "link": ""
+          }
+        },
         "logo_jPK6K3": {
           "type": "logo",
           "settings": {
@@ -263,6 +277,8 @@
         "logo_RXYDWw",
         "logo_3BcTUk",
         "logo_xNcxGy",
+        "logo_Vx3kKh",
+        "logo_QyjXNq",
         "logo_jPK6K3"
       ],
       "settings": {
