@@ -3,6 +3,8 @@
 <!doctype html>
   <html class="no-js" lang="{{ request.locale.iso_code }}">
     <head>
+	<script src="{{ 'pandectes-rules.js' | file_url }}"></script>
+	
 
 
       <style>
@@ -15,7 +17,7 @@
       </style>
   
       
-	{% render 'pandectes-rules' %}
+	
 
 {% if handle contains 'limited-drop' %}
 <meta name="robots" content="noindex">

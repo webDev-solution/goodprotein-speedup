@@ -770,6 +770,11 @@
           "utm_term": true,
           "ref": true
         }
+      },
+      "24485436878348090000": {
+        "type": "shopify://apps/gdpr-cookie-consent/blocks/banner/58c0baa2-6cc1-480c-9ea6-38d6d559556a",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
