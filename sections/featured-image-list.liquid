@@ -3,7 +3,10 @@
     <link rel="stylesheet" href="{{ 'custom-featured-image-text.scss.css' | asset_url }}">
 </noscript>
 
-{% render 'lazy-style', asset: 'featured-image-text.css' %}
+<link rel="preload" href="{{ 'featured-image-text.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'featured-image-text.css' | asset_url }}">
+</noscript>
 
 <section data-section-type="featured-image-text" data-color-scheme="{{ section.settings.color_scheme }}" class="bg-scheme-background">
   <div class="page-width">
