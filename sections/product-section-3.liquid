@@ -31,11 +31,10 @@
                   srcset="
                     {{ block.settings.image | image_url: width: 142 }} 142w,
                     {{ block.settings.image | image_url: width: 150 }} 150w,
-                    {{ block.settings.image | image_url: width: 256 }} 256w, 
-                    {{ block.settings.image | image_url: width: 400 }} 400w
+                    {{ block.settings.image | image_url: width: 256 }} 256w
                   "
                   width="150" height="{{ 150 | divided_by: block.settings.image.aspect_ratio | round }}"
-                  sizes="(max-width: 768px) 142px, 256px"
+                  sizes="(min-width: 768px) 150px"
                   alt="{{ block.settings.image.alt }}"
                 />                 
               </figure>
