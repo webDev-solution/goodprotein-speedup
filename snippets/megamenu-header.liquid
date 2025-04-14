@@ -54,7 +54,7 @@
                             {% endif %}
                             <div class="image">
                                 {% if product.featured_image != blank %}
-                                <img loading="lazy" src="{{ product.featured_image.src | img_url: '300x' }}">
+                                <img loading="lazy" src="{{ product.featured_image.src | img_url: '128x' }}" width="128" height="{{ 128 | divided_by: product.featured_image.aspect_ratio | round }}">
                                 {% else %}
                                 {{ 'product-1' | placeholder_svg_tag }}
                                 {% endif %}
