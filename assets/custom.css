@@ -128,7 +128,9 @@ body, p {
 .product-video-box{
   cursor: pointer;
 }
-
+.custom_center{
+  margin: 0 auto;
+}
 .custom_img_wrap .image_ww_text .media-content img{
   max-width: 285px;
   margin: auto;
