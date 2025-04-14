@@ -202,6 +202,67 @@
         "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
         "use_gradient_background": false
       }
+    },
+    "logo_list_jPJdfQ": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_7anPhJ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/idwLo-noin_1744650551944.jpg",
+            "link": ""
+          }
+        },
+        "logo_Cn9WFC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/271775185_489709682517972_152783591143842136_n.jpg",
+            "link": ""
+          }
+        },
+        "logo_Yr37Cx": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/31_36F4G4xL.jpg",
+            "link": ""
+          }
+        },
+        "logo_RXYDWw": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Metro_Inc__logo_svg.png",
+            "link": ""
+          }
+        },
+        "logo_3BcTUk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/NFM_FeatureImage_Thumbnail_380x457_HOMEPAGE.webp",
+            "link": ""
+          }
+        },
+        "logo_xNcxGy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/IGA_logo_svg.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_7anPhJ",
+        "logo_Cn9WFC",
+        "logo_Yr37Cx",
+        "logo_RXYDWw",
+        "logo_3BcTUk",
+        "logo_xNcxGy"
+      ],
+      "settings": {
+        "title": "",
+        "max_width": 100,
+        "color_scheme": "",
+        "use_gradient_background": false
+      }
     }
   },
   "order": [
@@ -209,6 +270,7 @@
     "rich_text_cETRJF",
     "featured_icon_columns_XthpRk",
     "faq_dgfKKQ",
-    "rich_text_kFUJpX"
+    "rich_text_kFUJpX",
+    "logo_list_jPJdfQ"
   ]
 }
