@@ -221,8 +221,25 @@
         "show_dots": true
       }
     },
+    "image_wto_2_ziiUfB": {
+      "type": "image-WTO-2",
+      "settings": {
+        "image": "shopify://shop_images/4-good-group.png",
+        "image_fr": "shopify://shop_images/shake-ingredients.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "inset",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
     "image_text_with_overlay_2_38JBt3": {
       "type": "image-text-with-overlay-2",
+      "disabled": true,
       "custom_css": [
         ".py-section-vertical-spacing {padding: 0px !important;}"
       ],
@@ -390,6 +407,7 @@
     "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
     "collection_carousel_n73bgV",
+    "image_wto_2_ziiUfB",
     "image_text_with_overlay_2_38JBt3",
     "replo_style_review_zGP6Uy",
     "faq_dgfKKQ",
