@@ -17,9 +17,11 @@
           <div class="featured-item">
             <a href="{{product.url}}" class="featured-image-wrapper">
               <img 
-                class="featured-product-image" 
-                src="{{ product.featured_image | image_url: width: 265 }}" 
-                srcset="
+                class="featured-product-image lazyload" 
+                data-sizes="auto" 
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-src="{{ product.featured_image | image_url: width: 265 }}" 
+                data-srcset="
                   {{ product.featured_image | image_url: width: 185 }} 185w,
                   {{ product.featured_image | image_url: width: 265 }} 265w,
                   {{ product.featured_image | image_url: width: 400 }} 400w

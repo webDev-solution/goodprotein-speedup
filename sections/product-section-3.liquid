@@ -27,8 +27,11 @@
               <figure>
                  <img 
                   loading="lazy" 
-                  src="{{ block.settings.image | image_url: width: 150  }}" 
-                  srcset="
+                  class="lazyload" 
+                  data-sizes="auto" 
+                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="{{ block.settings.image | image_url: width: 150  }}" 
+                  data-srcset="
                     {{ block.settings.image | image_url: width: 142 }} 142w,
                     {{ block.settings.image | image_url: width: 150 }} 150w,
                     {{ block.settings.image | image_url: width: 256 }} 256w
