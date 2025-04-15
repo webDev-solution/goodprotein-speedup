@@ -245,12 +245,12 @@
       <noscript>
           <link rel="stylesheet" href="{{ 'base.bundle.aio.min.css' | asset_url }}">
       </noscript>
-{% comment %} 
-      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+      <link rel="preload" href="{{ 'font-awesome.all.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+          <link rel="stylesheet" href="{{ 'font-awesome.all.min.css' | asset_url }}">
       </noscript>
-{% endcomment %}
+
       <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
