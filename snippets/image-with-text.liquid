@@ -43,7 +43,7 @@
 <div class="px-section relative z-10 max-w-site mx-auto">
   <div class="{% if display_on_card %}card-container{% endif %}">
     <div class="{% if display_on_card %}card p-0 lg:p-10{% endif %} section-content mx-auto relative z-10 text_alignment">
-      <div class="custom_img_wrap image_ww_text grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense gap-10">
+      <div class="mobile-friendly-image-with-text custom_img_wrap image_ww_text grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense gap-10">
         <div class="{{ image_width_desktop }} covered_img_w_top">
           {%- if image != blank -%}
             {%- render 'media-image',
