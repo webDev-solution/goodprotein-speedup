@@ -14,6 +14,9 @@
       assign image_mobile = section.settings.image_mobile_fr
     endif
   endif
+
+  assign use_special_background = section.settings.use_special_background
+  assign special_background = section.settings.special_background
 -%}
 
 {% liquid
@@ -37,7 +40,7 @@
   {% endif %}
   
 >
-  <div class="section-content  {% if style == 'inset' %}py-section-vertical-spacing{% endif %}">
+  <div class="section-content  {% if style == 'inset' %}py-section-vertical-spacing{% endif %}"  {% if use_special_background %}style="background: {{ special_background }};"{% endif %}>
     {% liquid
       assign image_class = 'w-full'
       if style == 'inset'
@@ -328,11 +331,22 @@
         "type": "color_scheme",
         "id": "color_scheme",
         "label": "Color Scheme"
-      },
+    },
     {
       "type": "checkbox",
       "id": "use_gradient_background",
       "label": "Use gradient for background"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_special_background",
+      "label": "Use special for background",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "special_background",
+      "label": "Special background color"
     },
     {
       "type": "select",
