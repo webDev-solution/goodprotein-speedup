@@ -215,16 +215,16 @@
                   ab-banner-image--desktop
                 {% endif %}
               "
-              src="{{ image | img_url: '1500x' }}"
+              src="{{ image | img_url: '1600x' }}"
               srcset="
                 {{ image | img_url: '1024x' }} 1024w,
                 {{ image | img_url: '1440x' }} 1440w,
-                {{ image | img_url: '1500x' }} 1500w,
+                {{ image | img_url: '1600x' }} 1600w,
                 {{ image | img_url: '2000x' }} 2000w,
                 {{ image | img_url: 'master' }} 2400w
               "
               alt="{{ image.alt }}"
-              sizes="(min-width: 990px) 1500px, 1440px, 2000px, 2400px, 1024px"
+              sizes="(min-width: 990px) 1600px, 1440px, 2000px, 2400px, 1024px"
               width="{{ image.width }}"
               height="{{ image.height }}"
               fetchpriority="high"  
