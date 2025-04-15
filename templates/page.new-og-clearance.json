@@ -55,6 +55,42 @@
         "carousel_back_border_2": "#bedaf5"
       }
     },
+    "image_wto_2_dxQ6JY": {
+      "type": "image-WTO-2",
+      "blocks": {
+        "title_aMjUWt": {
+          "type": "title",
+          "settings": {
+            "title": "Shop Our OG Shakes!",
+            "color": "#084b6d",
+            "heading_size": "heading-base"
+          }
+        }
+      },
+      "block_order": [
+        "title_aMjUWt"
+      ],
+      "custom_css": [
+        ".bg-scheme-background {margin-top: 66px;}",
+        "@media (max-width: 768px) {.bg-scheme-background {margin-top: 54px; }}",
+        "h2 {font-size: 72px;}",
+        "@media (max-width: 1024px) {h2 {font-size: 60px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 48px; }}",
+        "@media (max-width: 425px) {h2 {font-size: 42px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Homepage-Desktop-Hero-06_1_1_1.webp",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": false,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
+    },
     "image_text_with_overlay_2_zpb8YX": {
       "type": "image-text-with-overlay-2",
       "blocks": {
@@ -336,6 +372,7 @@
   },
   "order": [
     "second_header_F8bcmy",
+    "image_wto_2_dxQ6JY",
     "image_text_with_overlay_2_zpb8YX",
     "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
