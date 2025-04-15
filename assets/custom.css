@@ -329,7 +329,7 @@ li:hover button:not(.btn), #headerContainer li:hover > a:not(.btn){
 }
 .product_content_right .inner_pro_list .product_img{
   width: 100%;
-  max-width: 130px;
+  max-width: 128px;
   margin: 0 auto;
   padding: 0px;
   position: relative;
