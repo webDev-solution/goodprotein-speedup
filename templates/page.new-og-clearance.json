@@ -100,6 +100,8 @@
         "text_align": "text-center",
         "color_scheme": "",
         "use_gradient_background": false,
+        "use_special_background": false,
+        "special_background": "",
         "text_overlay_color": "same_as_section"
       }
     },
@@ -234,6 +236,8 @@
         "text_align": "text-center",
         "color_scheme": "",
         "use_gradient_background": false,
+        "use_special_background": true,
+        "special_background": "#e6f2ff",
         "text_overlay_color": "same_as_section"
       }
     },
