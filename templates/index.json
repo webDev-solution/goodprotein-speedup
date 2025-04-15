@@ -415,9 +415,9 @@
         "image_UYCt9j": {
           "type": "image",
           "settings": {
-            "feature_title": "Protein-<br>Packed",
+            "feature_title": "Protein-Packed",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-01.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-01_320x_5411c049-a8a2-4f59-b2d6-a2c59f12542f.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -425,9 +425,9 @@
         "image_Btyx4j": {
           "type": "image",
           "settings": {
-            "feature_title": "Curbs <br>Cravings",
+            "feature_title": "Curbs Cravings",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-02.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-01_320x_5411c049-a8a2-4f59-b2d6-a2c59f12542f.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -435,9 +435,9 @@
         "image_UHrW7y": {
           "type": "image",
           "settings": {
-            "feature_title": "Supports Gut <br>Flora",
+            "feature_title": "Supports Gut Flora",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-03.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-03_320x_291d7160-8077-4699-bce6-4f5fb99f940b.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -445,9 +445,9 @@
         "image_fnFxcn": {
           "type": "image",
           "settings": {
-            "feature_title": "Smooth and <br>Creamy",
+            "feature_title": "Smooth and Creamy",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-04.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-04_320x_8f42fc9e-4096-4b08-bffb-4dc928082c2d.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -455,9 +455,9 @@
         "image_zt37aQ": {
           "type": "image",
           "settings": {
-            "feature_title": "Ingredients <br>You Know",
+            "feature_title": "Ingredients You Know",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-05.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-05_320x_80883fed-aa52-4bfb-b483-65b0a7fe21f2.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -465,9 +465,9 @@
         "image_JzdQLM": {
           "type": "image",
           "settings": {
-            "feature_title": "Packed with <br>Nutrients",
+            "feature_title": "Packed with Nutrients",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-06.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-06_320x_76e14123-8b46-484d-8bae-c186c20bee37.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -563,7 +563,7 @@
         "max_width": 100,
         "text_style": "body",
         "disable_media_style": false,
-        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.webp?v=1744500340\" class=\"icon\" loading=\"eager\" width=\"260\" height=\"140\">",
+        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.webp?v=1744500340&amp;width=260\" class=\"icon\" loading=\"eager\" width=\"260\" height=\"140\">",
         "title": "Every order makes a nutritional impact for a mother or child.",
         "heading_size": "heading-template",
         "richtext": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.</p>",
@@ -581,7 +581,7 @@
         "p {font-size: 18px; color: black;}",
         "h2 {color: black;}",
         ".section-content .text-scheme-text > div {max-width: 550px;}",
-        "@media (max-width: 989px) {.custom-img-txt {min-height: 450px; object-fit: cover; object-position: center; }}",
+        "@media (max-width: 989px) {.custom-img-txt {/* min-height: 450px; */ object-fit: cover; object-position: center; }}",
         "@media (max-width: 767px) {.custom-img-txt {min-height: 320px; }}"
       ],
       "settings": {
