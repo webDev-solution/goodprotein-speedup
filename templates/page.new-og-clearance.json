@@ -65,10 +65,22 @@
             "color": "#084b6d",
             "heading_size": "heading-base"
           }
+        },
+        "shape_divider_7AWNtJ": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "below",
+            "section_color_scheme": "#e6f2ff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
         }
       },
       "block_order": [
-        "title_aMjUWt"
+        "title_aMjUWt",
+        "shape_divider_7AWNtJ"
       ],
       "custom_css": [
         ".bg-scheme-background {margin-top: 66px;}",
@@ -117,6 +129,7 @@
         "title_NimHT4",
         "shape_divider_aceamT"
       ],
+      "disabled": true,
       "custom_css": [
         ".bg-scheme-background {margin-top: 66px;}",
         "@media (max-width: 768px) {.bg-scheme-background {margin-top: 54px; }}",
