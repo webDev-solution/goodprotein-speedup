@@ -3,7 +3,12 @@
     <link rel="stylesheet" href="{{ 'custom-product-image-text.scss.css' | asset_url }}">
 </noscript>
 
-<div data-section-type="pdp-section-1" data-color-scheme="{{ section.settings.color_scheme }}" class="relative text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.enable_mobile %} mobile {% endif %}">
+<link rel="preload" href="{{ 'mobile-friendly-product-section-1.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'mobile-friendly-product-section-1.css' | asset_url }}">
+</noscript>
+
+<div data-section-type="pdp-section-1" data-color-scheme="{{ section.settings.color_scheme }}" class="mobile-friendly-product-section-1 relative text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.enable_mobile %} mobile {% endif %}">
 <div class="product-section product-section-padding product-section-1">
     <div class="inner_productimg_txt_wrap page-width">
       <div class="inner-product-section-1 grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense gap-10">
