@@ -177,10 +177,10 @@
         ".py-section-vertical-spacing {padding: 0px !important;}"
       ],
       "settings": {
-        "image": "shopify://shop_images/shake-ingredients.png",
+        "image": "shopify://shop_images/4-good-group.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
-        "style": "full",
+        "style": "inset",
         "height": "natural",
         "place_content": "place-content-center-center",
         "text_align": "text-center",
