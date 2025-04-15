@@ -36,7 +36,17 @@
           {% endif %}
         {% endif %}
         {% if image_link != blank %}
-          {{image_link | image_tag: class: 'image', image_size: '258x' }}
+          <img 
+            class="image lazyload" 
+            data-sizes="auto" 
+            srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-src="{{ image_link }}" 
+            sizes="258"
+            loading="lazy"
+            width="258"
+            height="258"
+            alt=""
+          >          
         {% endif %}
         {% if video_link!= blank %} 
           <video playsinline="playsinline" class="video c_hidden aaa" preload="metadata">
