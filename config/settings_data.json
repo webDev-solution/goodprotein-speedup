@@ -264,7 +264,7 @@
           "mobile_menu_TnfPUM": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify://shop_images/5SingleServingsEN-02.png",
+              "image": "shopify://shop_images/5SingleServingsEN-02.webp",
               "title": "Sample Pack",
               "link": "shopify://products/sample-pack",
               "badge_label": ""
@@ -301,7 +301,7 @@
           "mobile_menu_k9ywQn": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify://shop_images/Website-05.png",
+              "image": "shopify://shop_images/Website-05.webp",
               "title": "Shop All+",
               "link": "https://goodprotein.ca/collections/superfood-shake",
               "badge_label": ""
