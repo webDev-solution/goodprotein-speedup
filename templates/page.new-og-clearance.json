@@ -131,11 +131,10 @@
         "collection": "superfood-shake",
         "products": [
           "do-not-use-cookies-cream-all-in-one-superfood-shake",
-          "creamy-vanilla-original-all-in-one-superfood-shake",
-          "do-not-use-chocolate-all-in-one-superfood-shake",
           "gingerbread-cookie-all-in-one-shake",
-          "do-not-use-golden-turmeric-latte",
-          "do-not-use-green-apple-green-superfood-juice"
+          "mixed-berries-all-in-one-shake",
+          "mini-eggs-all-in-one-shake",
+          "golden-turmeric-latte"
         ],
         "top_padding": 40,
         "bottom_padding": 30,
