@@ -36,17 +36,43 @@
           {% endif %}
         {% endif %}
         {% if image_link != blank %}
-          <img 
-            class="image lazyload" 
-            data-sizes="auto" 
-            srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            data-src="{{ image_link }}" 
-            sizes="258"
-            loading="lazy"
-            width="258"
-            height="258"
-            alt=""
-          >          
+          {% if request.locale.iso_code == 'fr' %}
+            <img 
+              class="image lazyload" 
+              data-sizes="auto" 
+              srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="{{ block.settings.fr_image | image_url: width: 258 }}" 
+              data-srcset="
+                {{ block.settings.fr_image | image_url: width: 130 }} 130w,
+                {{ block.settings.fr_image | image_url: width: 160 }} 160w,
+                {{ block.settings.fr_image | image_url: width: 185 }} 185w,
+                {{ block.settings.fr_image | image_url: width: 258 }} 258w
+              "
+              sizes="(max-width: 600px) 185px, 160px"
+              loading="lazy"
+              width="258"
+              height="258"
+              alt=""
+            >    
+          {% else %}
+            <img 
+              class="image lazyload" 
+              data-sizes="auto" 
+              srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="{{ block.settings.image | image_url: width: 258 }}" 
+              data-srcset="
+                {{ block.settings.image | image_url: width: 130 }} 130w,
+                {{ block.settings.image | image_url: width: 160 }} 160w,
+                {{ block.settings.image | image_url: width: 185 }} 185w,
+                {{ block.settings.image | image_url: width: 258 }} 258w
+              "
+              sizes="(max-width: 600px) 185px, 160px"
+              loading="lazy"
+              width="258"
+              height="258"
+              alt=""
+            >              
+          {% endif %}      
         {% endif %}
         {% if video_link!= blank %} 
           <video playsinline="playsinline" class="video c_hidden aaa" preload="metadata">
