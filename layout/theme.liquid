@@ -99,7 +99,9 @@
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
       <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
       <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+      
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      {% comment %} <script src="{{'jquery.min.js' | asset_url}}" defer></script> {% endcomment %}
       
  
 
@@ -240,37 +242,43 @@
       <noscript>
           <link rel="stylesheet" href="{{ 'base.bundle.aio.min.css' | asset_url }}">
       </noscript>
-      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      
+      <link rel="preload" href="{{'slick.min.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+          <link rel="stylesheet" href="{{'slick.min.css' | asset_url}}">
       </noscript>
-      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      
+      <link rel="preload" href="{{'slick-theme.min.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
-      </noscript>
-      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+          <link rel="stylesheet" href="{{'slick-theme.min.css' | asset_url}}">
       </noscript>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" defer></script>
-  
-      <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
-      </noscript>      
-      <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-      <noscript>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
-      </noscript>
-      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js" defer></script>
-      <script>
-        {% comment %} 
-         Fancybox.bind('[data-fancybox]', {
-          // Custom options
-         });
-        {% endcomment %}
-      </script>
+      <script src="{{'slick.min.js'|asset_url}}" defer></script>
+
+      {% if template == 'product' %}
+        <link rel="preload" href="{{'fancybox.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{'fancybox.css' | asset_url}}">
+        </noscript>
+        
+        <script src="{{'fancybox.umd.js' | asset_url}}" defer></script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            Fancybox.bind('[data-fancybox]', {
+              // Custom options
+            });
+          });
+        </script>
+      {% endif %}
+
+      {% if template == 'product' or template == 'collection' %}
+        <link rel="preload" href="{{ 'select2.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{ 'select2.min.css' | asset_url }}">
+        </noscript>
+      {% endif %}
+      
       <link rel="preload" href="{{ 'custom.aio.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
           <link rel="stylesheet" href="{{ 'custom.aio.min.css' | asset_url }}">
@@ -457,8 +465,8 @@
 
 
     <!-- Swiper.js CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="{{swiper-bundle.min.css | asset_url}}" />
+    <script src="{{swiper-bundle.min.js | asset_url}}"></script>
   
     {% if template.name == 'product' %}
       <script>
@@ -933,9 +941,7 @@ var afterpay_js_snippet_version = '1.1.6';
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    Fancybox.bind('[data-fancybox]', {
-      // Custom options
-    });    
+    
     const modalContainer = document.querySelector(".modal-container-sanobu");
     const closeModalButton = document.querySelector(".close-modal-sanobu");
     let currentURL = window.location.href;
