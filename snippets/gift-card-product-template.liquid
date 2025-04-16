@@ -50,7 +50,7 @@
   }
 </style>
 
-{{ 'custom-product.scss.css' | asset_url | stylesheet_tag }}
+{{ 'custom-product.css' | asset_url | stylesheet_tag }}
 
 <section
   data-section-type="product" 
@@ -68,7 +68,7 @@
   data-product-section
   >
 
-  <div class="product-sticky-bar ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp">
+  <div class="product-sticky-bar ">
     <div class="container">
       <div class="featured-content">
         {{ product.featured_media | img_url: '400x' | img_tag: loading: 'lazy' }}
