@@ -1,0 +1,9 @@
+[data-section-type=text-cilumns-width-images] .section-content .content {
+  max-width: 900px;
+  margin: auto;
+  margin-top: 30px;
+}
+[data-section-type=text-cilumns-width-images] .section-content .content p {
+  line-height: 27px;
+  text-align: center;
+}
