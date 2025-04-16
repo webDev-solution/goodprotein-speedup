@@ -21,7 +21,7 @@
   item_count: columns.size
 -%}
 
-{{ 'custom-text-columns-width-images.css' | asset_url | stylesheet_tag }}
+{{ 'custom-text-columns-width-images.scss.css' | asset_url | stylesheet_tag }}
 
 {%- render 'static-sticker-defs' with shape: section.settings.index_shape, id: index_id -%}
 <section data-section-type="text-cilumns-width-images" class="aaaaaaaaa text_column_with_images_top relative text-scheme-text bg-scheme-background  {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} relative overflow-hidden" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" >
