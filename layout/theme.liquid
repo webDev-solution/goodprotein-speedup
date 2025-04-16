@@ -242,6 +242,11 @@
       <noscript>
           <link rel="stylesheet" href="{{ 'base.bundle.aio.min.css' | asset_url }}">
       </noscript>
+
+      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      </noscript>      
       
       <link rel="preload" href="{{'slick.min.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
