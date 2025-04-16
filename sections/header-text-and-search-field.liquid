@@ -14,11 +14,8 @@
               {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
               {%- assign image_size_2x = image_size | times: 2 -%}
               <img 
-                  class="lazyload" 
-                  data-sizes="auto" 
-                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                  data-src="{{ section.settings.logo | image_url: width: image_size }}"
-                  data-srcset="{{ section.settings.logo | image_url: width: image_size }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
+                  src="{{ section.settings.logo | image_url: width: image_size }}"
+                  srcset="{{ section.settings.logo | image_url: width: image_size }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
                   width="{{ image_size }}"
                   height="auto"
                   loading="lazy"

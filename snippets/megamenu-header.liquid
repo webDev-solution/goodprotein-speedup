@@ -55,11 +55,7 @@
                             <div class="image">
                                 {% if product.featured_image != blank %}
                                 <img 
-                                  class="lazyload" 
-                                  data-sizes="auto" 
-                                  srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                  data-src="{{ product.featured_image.src | img_url: '128x' }}" 
-                                  data-srcset="{{ product.featured_image.src | img_url: '128x' }} 128w"
+                                  src="{{ product.featured_image.src | img_url: '128x' }}" 
                                   loading="lazy"
                                   width="128" 
                                   height="{{ 128 | divided_by: product.featured_image.aspect_ratio | round }}"
@@ -126,11 +122,8 @@
                             {% if block.settings[lay_menu_image] != blank %}
                                   <img 
                                     loading="lazy"
-                                    class="lazyload" 
-                                    data-sizes="auto" 
-                                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                    data-src="{{ block.settings[lay_menu_image] | img_url: '265x' }}"
-                                    data-srcset="
+                                    src="{{ block.settings[lay_menu_image] | img_url: '265x' }}"
+                                    srcset="
                                       {{ block.settings[lay_menu_image] | img_url: '166x' }} 166w,
                                       {{ block.settings[lay_menu_image] | img_url: '265x' }} 265w,
                                       {{ block.settings[lay_menu_image] | img_url: '325x' }} 325w,
