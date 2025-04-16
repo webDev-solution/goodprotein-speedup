@@ -277,7 +277,7 @@
         </script>
       {% endif %}
 
-      {% if template == 'product' or template == 'collection' %}
+      {% if template.name == 'product' or template.name == 'collection' %}
         <link rel="preload" href="{{ 'select2.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="{{ 'select2.min.css' | asset_url }}">
