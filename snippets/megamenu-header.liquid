@@ -59,6 +59,7 @@
                                   data-sizes="auto" 
                                   srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                                   data-src="{{ product.featured_image.src | img_url: '128x' }}" 
+                                  data-srcset="{{ product.featured_image.src | img_url: '128x' }} 128w"
                                   loading="lazy"
                                   width="128" 
                                   height="{{ 128 | divided_by: product.featured_image.aspect_ratio | round }}"
