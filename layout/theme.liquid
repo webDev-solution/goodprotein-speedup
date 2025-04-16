@@ -260,7 +260,7 @@
 
       <script src="{{'slick.min.js'|asset_url}}" defer></script>
 
-      {% if template == 'product' %}
+      {% if template.name == 'product' %}
         <link rel="preload" href="{{'fancybox.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="{{'fancybox.css' | asset_url}}">
