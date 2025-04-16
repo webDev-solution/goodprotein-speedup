@@ -462,7 +462,7 @@
       </script>
 
     {% include 'friendbuy' %}
-    {% if template.name == 'product' %}
+    {% if template.name == 'product' or template.name == 'collection' %}
       <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}" ></script>
       {% include 'store-credit-launcher' %}
       <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
