@@ -39,7 +39,7 @@
   item_count: collection.products_count
 -%}
 
-{{'custom-collection.scss.css' | asset_url | stylesheet_tag }}
+{{'custom-collection.css' | asset_url | stylesheet_tag }}
 
 <section class="relative grid text-scheme-text bg-scheme-background  {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %}"
   data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}"
