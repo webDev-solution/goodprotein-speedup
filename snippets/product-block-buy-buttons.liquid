@@ -2,6 +2,15 @@
   .upcart-trust-badge {
     padding-top: 1rem;
   }
+  .purchase-note {
+    text-align: right;
+    padding-right: 5%;
+    font-size: 14px;
+    position: relative;
+    top: 10px;
+    color: {{ product.metafields.custom.circle_image_background }};
+    font-weight: bold;
+  }
 {% endstyle %}
 
 <div class="{{ block_base_classes }}" {{ block.shopify_attributes }}>
@@ -147,7 +156,7 @@
     </div>
 
     {% if product.metafields.custom.purchase_note != blank %}
-      <div class="hide hidden">
+      <div class="purchase-note">
         {{ product.metafields.custom.purchase_note }}
       </div>
     {% endif %}
