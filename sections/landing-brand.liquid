@@ -381,6 +381,12 @@
               <div class="break-words {% if section.settings.display_on_card == true %}{{ card_content_class }}{% endif %} ">
                 {{ content }}
               </div>
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'bottom_text' %}
+                    <p style="color: {{ block.settings.color }}">{{ block.settings.text }}</p>
+                {% endcase %}
+              {% endfor %}
               {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}
                 <div class="{{ card_border_class }}"></div>
               {% endif %}
@@ -716,6 +722,22 @@
           "type": "richtext",
           "id": "richtext",
           "label": "Text"
+        }
+      ]
+    },
+    {
+      "name": "Info",
+      "type": "bottom_text",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Info text"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Text color"
         }
       ]
     },
