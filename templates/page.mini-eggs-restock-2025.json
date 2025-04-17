@@ -91,6 +91,13 @@
             "color": "#f1f0e1",
             "background_color": "#530d7c"
           }
+        },
+        "bottom_text_fQywKc": {
+          "type": "bottom_text",
+          "settings": {
+            "text": "Maximum of 3 units per order",
+            "color": ""
+          }
         }
       },
       "block_order": [
@@ -104,7 +111,8 @@
         "text_a8brNi",
         "text_kWYtbC",
         "text_VFQjzb",
-        "button_EfcHV8"
+        "button_EfcHV8",
+        "bottom_text_fQywKc"
       ],
       "custom_css": [
         "@media only screen and (max-width: 767px) {.text-scheme-text {padding-top: 0px !important; padding-bottom: 0px !important; } .countdown-banner {margin-top: -150px; }}",
