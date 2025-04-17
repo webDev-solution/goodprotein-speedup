@@ -100,7 +100,7 @@
       <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
       <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
       
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+       <script src="{{ 'jquery.min.js' | asset_url }}"></script>
       {% comment %} <script src="{{'jquery.min.js' | asset_url}}" defer></script> {% endcomment %}
       
  
@@ -260,7 +260,7 @@
 
       <script src="{{'slick.min.js'|asset_url}}" defer></script>
 
-      {% if template == 'product' %}
+      {% if template.name == 'product' %}
         <link rel="preload" href="{{'fancybox.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="{{'fancybox.css' | asset_url}}">
@@ -277,7 +277,7 @@
         </script>
       {% endif %}
 
-      {% if template == 'product' or template == 'collection' %}
+      {% if template.name == 'product' or template.name == 'collection' %}
         <link rel="preload" href="{{ 'select2.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript>
             <link rel="stylesheet" href="{{ 'select2.min.css' | asset_url }}">
@@ -464,7 +464,7 @@
       </script>
 
     {% include 'friendbuy' %}
-    {% if template.name == 'product' %}
+    {% if template.name == 'product' or template.name == 'collection' %}
       <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}" ></script>
       {% include 'store-credit-launcher' %}
       <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
