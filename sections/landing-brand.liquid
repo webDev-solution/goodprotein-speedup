@@ -261,6 +261,14 @@
   .landing-brand .image-wrapper-none img {
     min-height: 300px;
   }
+  .landing-brand .bottom-text {
+    margin-top: 10px;
+  }
+  @media (max-width: 600px) {
+    .landing-brand .bottom-text {
+      font-size: 10px;
+    }
+  }
 </style>
 
 <div
@@ -384,7 +392,7 @@
               {% for block in section.blocks %}
                 {% case block.type %}
                   {% when 'bottom_text' %}
-                    <p style="color: {{ block.settings.color }}">{{ block.settings.text }}</p>
+                    <p class="bottom-text" style="color: {{ block.settings.color }}">{{ block.settings.text }}</p>
                 {% endcase %}
               {% endfor %}
               {% if section.settings.display_on_card and settings.card_show_border_on_shadow %}
