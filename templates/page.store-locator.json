@@ -262,6 +262,13 @@
             "link": ""
           }
         },
+        "logo_rdK8xk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/1200px-Bulk_Barn_Logo.jpg",
+            "link": ""
+          }
+        },
         "logo_jPK6K3": {
           "type": "logo",
           "settings": {
@@ -279,6 +286,7 @@
         "logo_xNcxGy",
         "logo_Vx3kKh",
         "logo_QyjXNq",
+        "logo_rdK8xk",
         "logo_jPK6K3"
       ],
       "settings": {
