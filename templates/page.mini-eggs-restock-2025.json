@@ -96,7 +96,7 @@
           "type": "bottom_text",
           "settings": {
             "text": "Maximum of 3 units per order",
-            "color": ""
+            "color": "#530d7c"
           }
         }
       },
