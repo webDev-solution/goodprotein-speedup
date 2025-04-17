@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,55 +24,55 @@
         "text_qKexDe": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Save 15%<\/p>"
+            "richtext": "<p>Save 15%</p>"
           }
         },
         "text_bRpht7": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Save 25%<\/p>"
+            "richtext": "<p>Save 25%</p>"
           }
         },
         "text_q7FgEm": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Save 35%<\/p>"
+            "richtext": "<p>Save 35%</p>"
           }
         },
         "text_bpjEFw": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Orders of $50+<\/p>"
+            "richtext": "<p>Orders of $50+</p>"
           }
         },
         "text_tbgaaj": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Orders of $125+<\/p>"
+            "richtext": "<p>Orders of $125+</p>"
           }
         },
         "text_rf6wP3": {
           "type": "text",
           "settings": {
-            "richtext": "<p>Orders of $200+<\/p>"
+            "richtext": "<p>Orders of $200+</p>"
           }
         },
         "text_a8brNi": {
           "type": "text",
           "settings": {
-            "richtext": "<p><strong>Code: RESTOCK15<\/strong><\/p>"
+            "richtext": "<p><strong>Code: RESTOCK15</strong></p>"
           }
         },
         "text_kWYtbC": {
           "type": "text",
           "settings": {
-            "richtext": "<p><strong>Code: RESTOCK25<\/strong><\/p>"
+            "richtext": "<p><strong>Code: RESTOCK25</strong></p>"
           }
         },
         "text_VFQjzb": {
           "type": "text",
           "settings": {
-            "richtext": "<p><strong>Code: RESTOCK35<\/strong><\/p>"
+            "richtext": "<p><strong>Code: RESTOCK35</strong></p>"
           }
         },
         "button_EfcHV8": {
@@ -102,15 +111,15 @@
         ".text-scheme-text.bg-scheme-background.overflow-hidden {background-color: #c2e4f2;}"
       ],
       "settings": {
-        "top_logo_image": "shopify:\/\/shop_images\/Logo-Website.png",
-        "a_gift_from_us_to_you": "shopify:\/\/shop_images\/More_shakes_More_Savings_2.svg",
-        "a_gift_from_us_to_you_fr": "shopify:\/\/shop_images\/Plus_de_shakes_plus_d_economies.svg",
+        "top_logo_image": "shopify://shop_images/Logo-Website.png",
+        "a_gift_from_us_to_you": "shopify://shop_images/More_shakes_More_Savings_2.svg",
+        "a_gift_from_us_to_you_fr": "shopify://shop_images/Plus_de_shakes_plus_d_economies_4.svg",
         "a_gift_from_us_to_you_width": 60,
         "holiday_dash_image_width": 77,
         "bottom_text": "Offer ends January 4th, 2025. Don’t miss out!",
         "bottom_text_fr": "L’offre se termine le 4 janvier 2025. Ne manquez pas cette occasion!",
-        "image": "shopify:\/\/shop_images\/adjusted_solid_banner_BAE8F2.png",
-        "image_mobile": "shopify:\/\/shop_images\/adjusted_solid_banner_BAE8F2.png",
+        "image": "shopify://shop_images/adjusted_solid_banner_BAE8F2.png",
+        "image_mobile": "shopify://shop_images/adjusted_solid_banner_BAE8F2.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
         "style": "full",
@@ -132,8 +141,8 @@
             "product_number_c": 15,
             "row": 5,
             "image_shape": "default",
-            "title_en": "shopify:\/\/shop_images\/Accessories111.png",
-            "title_fr": "shopify:\/\/shop_images\/Accessories111_fr.png"
+            "title_en": "shopify://shop_images/Accessories111.png",
+            "title_fr": "shopify://shop_images/Accessories111_fr.png"
           }
         },
         "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f": {
@@ -143,8 +152,8 @@
             "product_number_c": 6,
             "row": 3,
             "image_shape": "same_as_section",
-            "title_en": "shopify:\/\/shop_images\/Accessories222.png",
-            "title_fr": "shopify:\/\/shop_images\/Accessories222_fr.png"
+            "title_en": "shopify://shop_images/Accessories222.png",
+            "title_fr": "shopify://shop_images/Accessories222_fr.png"
           }
         },
         "5be6a2ba-78df-4740-baf8-90eb280a6555": {
@@ -155,8 +164,8 @@
             "product_number_c": 3,
             "row": 3,
             "image_shape": "same_as_section",
-            "title_en": "shopify:\/\/shop_images\/Accessories.png",
-            "title_fr": "shopify:\/\/shop_images\/Accessories_fr.png"
+            "title_en": "shopify://shop_images/Accessories.png",
+            "title_fr": "shopify://shop_images/Accessories_fr.png"
           }
         }
       },
@@ -166,7 +175,7 @@
         "5be6a2ba-78df-4740-baf8-90eb280a6555"
       ],
       "custom_css": [
-        "section {\/* background: #278546; *\/ display: block;}",
+        "section {/* background: #278546; */ display: block;}",
         ".product-tile_cover {padding: 0px !important;}",
         "ul {grid-gap: 1rem !important;}",
         "@media (min-width: 750px) {section {display: block !important; }}"
@@ -206,8 +215,8 @@
             "product_number_c": 5,
             "row": 5,
             "image_shape": "default",
-            "title_en": "shopify:\/\/shop_images\/Accessories111.png",
-            "title_fr": "shopify:\/\/shop_images\/Accessories111_fr.png"
+            "title_en": "shopify://shop_images/Accessories111.png",
+            "title_fr": "shopify://shop_images/Accessories111_fr.png"
           }
         },
         "b42bd57a-bf52-49e8-a5fa-c8a040d9bc9f": {
@@ -217,8 +226,8 @@
             "product_number_c": 6,
             "row": 3,
             "image_shape": "same_as_section",
-            "title_en": "shopify:\/\/shop_images\/Accessories222.png",
-            "title_fr": "shopify:\/\/shop_images\/Accessories222_fr.png"
+            "title_en": "shopify://shop_images/Accessories222.png",
+            "title_fr": "shopify://shop_images/Accessories222_fr.png"
           }
         },
         "5be6a2ba-78df-4740-baf8-90eb280a6555": {
@@ -228,8 +237,8 @@
             "product_number_c": 3,
             "row": 3,
             "image_shape": "same_as_section",
-            "title_en": "shopify:\/\/shop_images\/Accessories.png",
-            "title_fr": "shopify:\/\/shop_images\/Accessories_fr.png"
+            "title_en": "shopify://shop_images/Accessories.png",
+            "title_fr": "shopify://shop_images/Accessories_fr.png"
           }
         }
       },
@@ -240,7 +249,7 @@
       ],
       "disabled": true,
       "custom_css": [
-        "section {\/* background: #278546; *\/ display: none;}",
+        "section {/* background: #278546; */ display: none;}",
         "ul {padding: 0 10rem;}",
         ".product-tile_cover {padding: 0px !important;}",
         "ul {grid-gap: 1rem !important;}",
@@ -296,7 +305,7 @@
             "shape": "star_1",
             "width": 100,
             "sticker_font_size": "1.563rem",
-            "image": "shopify:\/\/shop_images\/almost_gone.png",
+            "image": "shopify://shop_images/almost_gone.png",
             "half_image_width_on_mobile": false,
             "horizontal_position": 38,
             "vertical_position": 26,
@@ -329,8 +338,8 @@
         "video_url": "",
         "crop": "cinematic",
         "crop_desktop": "cinematic",
-        "fallback_image": "shopify:\/\/shop_images\/oie_arxUKX4JrtEn.png",
-        "fallback_image_FR": "shopify:\/\/shop_images\/oie_zdCn6P8J4Ouf.png",
+        "fallback_image": "shopify://shop_images/oie_arxUKX4JrtEn.png",
+        "fallback_image_FR": "shopify://shop_images/oie_zdCn6P8J4Ouf.png",
         "title_color": "#265917",
         "display_on_card": false,
         "style": "inset",
@@ -338,8 +347,8 @@
         "text_align": "text-left",
         "title": "Gingerbread Cookie",
         "heading_size": "heading-base",
-        "richtext": "<p><strong>Tastes like those sweet-yet-spicy \u2028Holiday cookies, fresh from the oven.<\/strong><\/p>",
-        "cta_url": "shopify:\/\/products\/gingerbread-cookie-all-in-one-shake",
+        "richtext": "<p><strong>Tastes like those sweet-yet-spicy  Holiday cookies, fresh from the oven.</strong></p>",
+        "cta_url": "shopify://products/gingerbread-cookie-all-in-one-shake",
         "cta_text": "Add Cart",
         "color_scheme": "scheme-2f7b4285-3ceb-4acd-ad87-858359b9ec54",
         "use_gradient_background": false,
@@ -424,8 +433,8 @@
       ],
       "custom_css": [],
       "settings": {
-        "title_image": "shopify:\/\/shop_images\/good_protein_more_like_great_protain.png",
-        "title_image_fr": "shopify:\/\/shop_images\/good_protein_more_like_great_protain_fr.png",
+        "title_image": "shopify://shop_images/good_protein_more_like_great_protain.png",
+        "title_image_fr": "shopify://shop_images/good_protein_more_like_great_protain_fr.png",
         "heading": "",
         "heading_custom": false,
         "heading_font": "assistant_n4",
@@ -491,10 +500,10 @@
         "@media (max-width: 768px) {.section-content {padding: 0px; }}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/image_with_three_sentences.png",
-        "image_mobile": "shopify:\/\/shop_images\/image_with_three_sentences.png",
-        "image_fr": "shopify:\/\/shop_images\/image_with_three_sentences_fr.png",
-        "image_mobile_fr": "shopify:\/\/shop_images\/image_with_three_sentences_fr.png",
+        "image": "shopify://shop_images/image_with_three_sentences.png",
+        "image_mobile": "shopify://shop_images/image_with_three_sentences.png",
+        "image_fr": "shopify://shop_images/image_with_three_sentences_fr.png",
+        "image_mobile_fr": "shopify://shop_images/image_with_three_sentences_fr.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
         "style": "full",
@@ -623,7 +632,7 @@
         "@media (min-width: 768px) {.product-other-grid-template--16191026921581__ss_comparison_table_2_tttYRr {grid-template-columns: 50% 25% 25%; }}"
       ],
       "settings": {
-        "title_image": "shopify:\/\/shop_images\/good_protein_more_like_great_protain.png",
+        "title_image": "shopify://shop_images/good_protein_more_like_great_protain.png",
         "display_on_card": true,
         "title": "",
         "highlighted_column": "4",
@@ -643,48 +652,48 @@
         "56ce42b4-4687-4dc0-90b1-9482ef283191": {
           "type": "carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red_vegan_with_text.png",
-            "image_fr": "shopify:\/\/shop_images\/red_vegan_with_text_fr.png",
+            "image": "shopify://shop_images/red_vegan_with_text.png",
+            "image_fr": "shopify://shop_images/red_vegan_with_text_fr.png",
             "heading": "Vegan"
           }
         },
         "81ce0d08-94b8-4b82-bbfc-5e4c81591111": {
           "type": "carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red_non_gmo_with_text.png",
-            "image_fr": "shopify:\/\/shop_images\/red_non_gmo_with_text_fr.png",
+            "image": "shopify://shop_images/red_non_gmo_with_text.png",
+            "image_fr": "shopify://shop_images/red_non_gmo_with_text_fr.png",
             "heading": "Non-GMO"
           }
         },
         "50886930-165d-4909-8e29-952a31b54646": {
           "type": "carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red_dairy_free_with_text.png",
-            "image_fr": "shopify:\/\/shop_images\/red_dairy_free_with_text_fr.png",
+            "image": "shopify://shop_images/red_dairy_free_with_text.png",
+            "image_fr": "shopify://shop_images/red_dairy_free_with_text_fr.png",
             "heading": "Dairy-Free"
           }
         },
         "d4e7033c-f783-425d-bf5c-f00466ec590f": {
           "type": "carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red_no_added_sugar_with_text.png",
-            "image_fr": "shopify:\/\/shop_images\/red_no_added_sugar_with_text_fr.png",
+            "image": "shopify://shop_images/red_no_added_sugar_with_text.png",
+            "image_fr": "shopify://shop_images/red_no_added_sugar_with_text_fr.png",
             "heading": "No Added Sugar"
           }
         },
         "4b4d4bfc-50ac-4387-b738-b9d2ca977ba7": {
           "type": "carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red_gluten_free_with_text.png",
-            "image_fr": "shopify:\/\/shop_images\/red_gluten_free_with_text_fr.png",
+            "image": "shopify://shop_images/red_gluten_free_with_text.png",
+            "image_fr": "shopify://shop_images/red_gluten_free_with_text_fr.png",
             "heading": "Gluten-Free"
           }
         },
         "43c269f9-c10c-47b4-ad83-3333bd216532": {
           "type": "carousel",
           "settings": {
-            "image": "shopify:\/\/shop_images\/red_keto_with_text.png",
-            "image_fr": "shopify:\/\/shop_images\/red_keto_with_text_fr.png",
+            "image": "shopify://shop_images/red_keto_with_text.png",
+            "image_fr": "shopify://shop_images/red_keto_with_text_fr.png",
             "heading": "Keto"
           }
         },
@@ -716,9 +725,9 @@
         ".pdp-section-5 > div {max-width: 1500px;}"
       ],
       "settings": {
-        "nutrition_image": "shopify:\/\/shop_images\/NutritionFacts-VanillaMilkshake_1.png",
-        "content": "<strong>Ingredients:<\/strong> Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Flavours, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Broccoli*, Spirulina*, Chlorella*, Acai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans). <strong>*Organic Ingredients <\/strong>— May Contain: Peanuts",
-        "product_image": "shopify:\/\/shop_images\/icon.png",
+        "nutrition_image": "shopify://shop_images/NutritionFacts-VanillaMilkshake_1.png",
+        "content": "<strong>Ingredients:</strong> Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Flavours, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Broccoli*, Spirulina*, Chlorella*, Acai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans). <strong>*Organic Ingredients </strong>— May Contain: Peanuts",
+        "product_image": "shopify://shop_images/icon.png",
         "background_gradient": "linear-gradient(180deg, rgba(194, 228, 242, 1) 100%, rgba(142, 204, 243, 1) 100%)",
         "background_gradient_icon": "#c2e4f2"
       }
@@ -730,9 +739,9 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/image_1.png",
+            "image": "shopify://shop_images/image_1.png",
             "video_link": "",
-            "fr_image": "shopify:\/\/shop_images\/image_1.png",
+            "fr_image": "shopify://shop_images/image_1.png",
             "fr_video_link": "",
             "review_body": "“ Tasty Breakfast I Can Count on!\nIt has a really nice peanut butter flavour and it's not chalky at all. It blends up really smoothly with my almond milk and a banana.”",
             "review_header": "Lisa M LaVallee"
@@ -742,9 +751,9 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/image_d60b9b52-f4c7-474c-b804-18800f2740a1.png",
+            "image": "shopify://shop_images/image_d60b9b52-f4c7-474c-b804-18800f2740a1.png",
             "video_link": "",
-            "fr_image": "shopify:\/\/shop_images\/image_d60b9b52-f4c7-474c-b804-18800f2740a1.png",
+            "fr_image": "shopify://shop_images/image_d60b9b52-f4c7-474c-b804-18800f2740a1.png",
             "fr_video_link": "",
             "review_body": " “Best tasting vanilla protein...\nBest tasting vanilla protein shake I have ever had! And it keeps me going (feeling more full) longer than my old protein did).”",
             "review_header": "Theresa Laird"
@@ -754,9 +763,9 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/image_2.png",
+            "image": "shopify://shop_images/image_2.png",
             "video_link": "",
-            "fr_image": "shopify:\/\/shop_images\/image_2.png",
+            "fr_image": "shopify://shop_images/image_2.png",
             "fr_video_link": "",
             "review_body": " “The Best\nOf all the protein powders, this is the best I’ve ever had. No aftertaste.”",
             "review_header": "Melanie Genest"
@@ -766,9 +775,9 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/image_3.png",
+            "image": "shopify://shop_images/image_3.png",
             "video_link": "",
-            "fr_image": "shopify:\/\/shop_images\/image_3.png",
+            "fr_image": "shopify://shop_images/image_3.png",
             "fr_video_link": "",
             "review_body": " “Yummmmm\nTastes delicious!! I love blending it with frozen bananas and almond milk. A healthy drink that tastes like a treat!”",
             "review_header": "Kendra Madge"
@@ -778,9 +787,9 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/image_4_bbbcbe8b-29be-475a-aacc-4ac56fcc206f.png",
+            "image": "shopify://shop_images/image_4_bbbcbe8b-29be-475a-aacc-4ac56fcc206f.png",
             "video_link": "",
-            "fr_image": "shopify:\/\/shop_images\/image_4_bbbcbe8b-29be-475a-aacc-4ac56fcc206f.png",
+            "fr_image": "shopify://shop_images/image_4_bbbcbe8b-29be-475a-aacc-4ac56fcc206f.png",
             "fr_video_link": "",
             "review_body": " ”Thank You! I'm impressed, it's excellent, a must. This is my favourite flavor but I like the others too!”",
             "review_header": "Claudine Brasseur"
@@ -790,9 +799,9 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify:\/\/shop_images\/image_5.png",
+            "image": "shopify://shop_images/image_5.png",
             "video_link": "",
-            "fr_image": "shopify:\/\/shop_images\/image_5.png",
+            "fr_image": "shopify://shop_images/image_5.png",
             "fr_video_link": "",
             "review_body": " “I love the flavour...\nI love the flavour of this protein powder. I found it mixed so easily in my shaker cup, which was great when I was camping and had no blender.”",
             "review_header": "Roxanne Crooks"
@@ -814,11 +823,11 @@
         ".image-title-container-saturn {display: flex; justify-content: center; padding-top: 3rem;}"
       ],
       "settings": {
-        "more_2000_five_star_reviews": "shopify:\/\/shop_images\/more_2000_five_star_reviews.png",
-        "more_2000_five_star_reviews_fr": "shopify:\/\/shop_images\/more_2000_five_star_reviews_fr.png",
+        "more_2000_five_star_reviews": "shopify://shop_images/more_2000_five_star_reviews.png",
+        "more_2000_five_star_reviews_fr": "shopify://shop_images/more_2000_five_star_reviews_fr.png",
         "bg_color": "",
         "itme_show": 3,
-        "subtitle": "<span class=\"review-star\"><i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i> <i class=\"fa-solid fa-star\"><\/i><\/span>",
+        "subtitle": "<span class=\"review-star\"><i class=\"fa-solid fa-star\"></i> <i class=\"fa-solid fa-star\"></i> <i class=\"fa-solid fa-star\"></i> <i class=\"fa-solid fa-star\"></i> <i class=\"fa-solid fa-star\"></i></span>",
         "heading": "",
         "subheading": "",
         "content": ""
@@ -831,21 +840,21 @@
           "type": "question",
           "settings": {
             "question": "What is your 60-day Satisfaction Guarantee?",
-            "answer": "<p>If you’re trying us for the first time and aren’t totally thrilled, no stress! If your bag is at least half full and wish to return it within 60 days of your delivery date, we’ll give you a full refund minus a 15% return fee. Prefer to exchange? No problem! You can swap your original item(s) for a different flavour with a $5 shipping fee (fees waived with subscription), and you can do this up to 2 times a year.<\/p><p>For second (or third, or fourth, or... you get the jist!) purchases, you can only exchange an open bag for a different flavour with $5 shipping fee (unless you're subscribed, and then it's free!). You can enjoy up to 2 swaps a year.<\/p><p>For any order-related issues, like if you receive the wrong product or a damaged product, just let us know at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\">info@goodprotein.ca<\/a>, and we'll sort it out quickly.<\/p><p>Just a heads-up: accessories like the Shaker Bottle are excluded from this policy. <\/p><p><a href=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\" title=\"https:\/\/goodprotein.ca\/pages\/termes-et-conditions?id=satisfaction\">Click here<\/a> to view the complete terms & conditions of our 60-day Satisfaction Guarantee, or contact us at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\">info@goodprotein.ca<\/a> for more details!covering the return shipping. <\/p>"
+            "answer": "<p>If you’re trying us for the first time and aren’t totally thrilled, no stress! If your bag is at least half full and wish to return it within 60 days of your delivery date, we’ll give you a full refund minus a 15% return fee. Prefer to exchange? No problem! You can swap your original item(s) for a different flavour with a $5 shipping fee (fees waived with subscription), and you can do this up to 2 times a year.</p><p>For second (or third, or fourth, or... you get the jist!) purchases, you can only exchange an open bag for a different flavour with $5 shipping fee (unless you're subscribed, and then it's free!). You can enjoy up to 2 swaps a year.</p><p>For any order-related issues, like if you receive the wrong product or a damaged product, just let us know at <a href=\"https://goodprotein.ca/pages/contact\" title=\"https://goodprotein.ca/pages/contact\">info@goodprotein.ca</a>, and we'll sort it out quickly.</p><p>Just a heads-up: accessories like the Shaker Bottle are excluded from this policy. </p><p><a href=\"https://goodprotein.ca/pages/termes-et-conditions?id=satisfaction\" title=\"https://goodprotein.ca/pages/termes-et-conditions?id=satisfaction\">Click here</a> to view the complete terms & conditions of our 60-day Satisfaction Guarantee, or contact us at <a href=\"https://goodprotein.ca/pages/contact\" title=\"https://goodprotein.ca/pages/contact\">info@goodprotein.ca</a> for more details!covering the return shipping. </p>"
           }
         },
         "question_mWJJTe": {
           "type": "question",
           "settings": {
             "question": "Is the All-in-One Superfood Shake a meal replacement?",
-            "answer": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.<\/p>"
+            "answer": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.</p>"
           }
         },
         "question_wftG6q": {
           "type": "question",
           "settings": {
             "question": "How long does delivery take?",
-            "answer": "<p>In general, delivery can take up to 10 business days depending on the area. You’ll be able to track your order in real time, the entire time it makes its way to you. You can also opt in to receiving text message alerts about your order as it gets processed, shipped and delivered.<\/p>"
+            "answer": "<p>In general, delivery can take up to 10 business days depending on the area. You’ll be able to track your order in real time, the entire time it makes its way to you. You can also opt in to receiving text message alerts about your order as it gets processed, shipped and delivered.</p>"
           }
         },
         "shape_divider_pAD7FQ": {
@@ -888,15 +897,15 @@
         ".card.p-4 h3 {border-bottom: 3px solid white; padding: 0 10px 10px 0;}"
       ],
       "settings": {
-        "title_image_url": "shopify:\/\/shop_images\/frequently_asked_questions.png",
-        "title_image_url_fr": "shopify:\/\/shop_images\/frequently_asked_questions_fr.png",
+        "title_image_url": "shopify://shop_images/frequently_asked_questions.png",
+        "title_image_url_fr": "shopify://shop_images/frequently_asked_questions_fr.png",
         "display_on_card": true,
         "heading_text_style": "body",
         "two_columns_desktop": false,
         "title": "Frequently Asked Questions",
         "richtext": "",
         "btn_text": "",
-        "btn_link": "shopify:\/\/pages\/faq-1",
+        "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false
       }
@@ -912,11 +921,11 @@
         ".place-content-start-start .text-scheme-text > div {display: flex; flex-direction: column; align-items: center;}"
       ],
       "settings": {
-        "bottom_logo_url": "shopify:\/\/shop_images\/Logo-Website.png",
+        "bottom_logo_url": "shopify://shop_images/Logo-Website.png",
         "video_url": "",
         "crop": "cinematic",
         "crop_desktop": "cinematic",
-        "fallback_image": "shopify:\/\/shop_images\/oie_W2ERFYG91IeU.png",
+        "fallback_image": "shopify://shop_images/oie_W2ERFYG91IeU.png",
         "bottom_section_sentence_color": "#ea1f59",
         "display_on_card": false,
         "style": "full",
