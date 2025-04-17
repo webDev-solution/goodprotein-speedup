@@ -202,7 +202,7 @@
       "type": "collection-carousel",
       "settings": {
         "title": "... And 50% here",
-        "title_color": "#000000",
+        "title_color": "#084b6d",
         "description": "",
         "description_color": "#000000",
         "use_custom_collection": false,
