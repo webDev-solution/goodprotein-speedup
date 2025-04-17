@@ -125,7 +125,7 @@
         "image": "shopify://shop_images/adjusted_solid_banner_BAE8F2_1.png",
         "image_mobile": "shopify://shop_images/adjusted_solid_banner_BAE8F2_333e2d55-3d0c-42ce-a4b7-1ff53f76dde8.png",
         "display_on_card": false,
-        "display_content_below_image_on_mobile": true,
+        "display_content_below_image_on_mobile": false,
         "style": "full",
         "height": "natural",
         "place_content": "place-content-start-center",
