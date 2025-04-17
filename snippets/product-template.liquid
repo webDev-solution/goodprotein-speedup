@@ -1,4 +1,4 @@
-
+{% comment %}
 {% if request.path contains '/mini-eggs-all-in-one-shake' %}
   <script>
     const redirects = {
@@ -15,7 +15,7 @@
     }
   </script>
 {% endif %}
-
+{% endcomment %}
 
 {% liquid
   assign section_color = section.settings.color_scheme
