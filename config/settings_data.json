@@ -249,7 +249,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "gift-card-1",
-              "button_link": "/collections/accessories#GiftCard",
+              "button_link": "shopify://products/giftcard",
               "button_label": ""
             }
           },
