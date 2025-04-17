@@ -146,6 +146,12 @@
       </div>
     </div>
 
+    {% if product.metafields.custom.purchase_note != blank %}
+      <div class="hide hidden">
+        {{ product.metafields.custom.purchase_note }}
+      </div>
+    {% endif %}
+    
     {% if settings.upcart_trust_badge != blank %}
       <img class="upcart-trust-badge" src="{{ settings.upcart_trust_badge | img_url: 'master' }}"/>
     {% endif %}
