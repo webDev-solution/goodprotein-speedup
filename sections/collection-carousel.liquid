@@ -1,4 +1,4 @@
-{%- liquid
+>{%- liquid
   assign page_width = section.settings.page_width
   assign section_background = section.settings.section_background
   assign section_top_padding = section.settings.top_padding
@@ -80,7 +80,10 @@
                     | remove: 'Shake de superaliments tout-en-un - '
                   }}
                 </h3>
-                <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}" data-product-rating-count="{{ product.metafields.junip.rating_count }}"></div>
+                <!-- <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}" data-product-rating-count=""></div> -->
+              <div>
+                <span>{{ product.metafields.junip.rating_count }}</span>
+              </div>
               </a>
 
               {%- liquid
