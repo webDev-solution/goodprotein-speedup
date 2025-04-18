@@ -161,7 +161,8 @@
     "image_wto_2_ziiUfB": {
       "type": "image-WTO-2",
       "custom_css": [
-        ".py-section-vertical-spacing {padding: 0px; max-width: 1200px;}"
+        ".py-section-vertical-spacing {padding: 0px;}",
+        ".max-w-site {max-width: 1200px;}"
       ],
       "settings": {
         "image": "shopify://shop_images/4-good-group.png",
