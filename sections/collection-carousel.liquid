@@ -143,6 +143,10 @@
                 </div>
               </div>
 
+              <button id="quick-buy-btn-{{ product.id }}" class=" btn quick-buy-btn" data-product-id="{{ product.id }}" data-variant-id="{{ current_variant.id }}">
+                Add To Cart
+              </button>
+              
               {% unless product.has_only_default_variant %}
                 {% if product.variants.size > 0 %}
                   <div class="product-sizes mt-2 padding-1rem-saturn">
@@ -157,18 +161,15 @@
                   </div>
                 {% endif %}
               {% endunless %}
-              <button id="quick-buy-btn-{{ product.id }}" class=" btn quick-buy-btn" data-product-id="{{ product.id }}" data-variant-id="{{ current_variant.id }}">
-                Add
-              </button>
             </div>
           {% endfor %}
         </div>
 
-        <div class="icons-to-choose-description-swiper-pagination"></div>
-        <button class="video-text-btn-prev-{{ section.id }} swiper-button-prev">
+        <div class="swiper-pagination-{{ section.id }} swiper-pagination"></div>
+        <button class="btn-prev-{{ section.id }} swiper-button-prev">
           <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle.png?v=1741981965" />
         </button>
-        <button class="video-text-btn-next-{{ section.id }} swiper-button-next">
+        <button class="btn-next-{{ section.id }} swiper-button-next">
           <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" />
         </button>
       </div>
@@ -183,14 +184,14 @@
           {% endif %}
         }
       }
-      @media (min-width: 1025px) and (max-width: 1500px) {
+      @media (min-width: 1024px) and (max-width: 1500px) {
         .collection-carousel-wrapper-{{ section.id }} {
           {% if products_length < section.settings.items_per_page_1024 %}
             max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_1024 }}%;
           {% endif %}
         }
       }
-      @media (min-width: 769px) and (max-width: 1024px) {
+      @media (min-width: 769px) and (max-width: 1023px) {
         .collection-carousel-wrapper-{{ section.id }} {
           {% if products_length < section.settings.items_per_page_768 %}
             max-width: {{ products_length | times: 100 | divided_by: section.settings.items_per_page_768 }}%;
@@ -213,14 +214,14 @@
     document.querySelector(".collection-carousel__products-container-{{ section.id }}").classList.remove("hidden");
     const collectionCarouselProductsContainer = new Swiper('.collection-carousel__products-container-{{ section.id }}', {
       pagination: {
-        el: ".icons-to-choose-description-swiper-pagination",
+        el: ".swiper-pagination-{{ section.id }}",
         type: "bullets",
         clickable: true,
         dynamicBullets: false
       },
       navigation: {
-        nextEl: '.video-text-btn-next-{{ section.id }}',
-        prevEl: '.video-text-btn-prev-{{ section.id }}'
+        nextEl: '.btn-next-{{ section.id }}',
+        prevEl: '.btn-prev-{{ section.id }}'
       },
       breakpoints: {
         1024: {
