@@ -36,6 +36,11 @@
 
 <script type="text/javascript" async="true" src="https://widgets.juniphq.com/v1/junip_shopify.js"></script>
 
+{% assign products = section.settings.products %}
+{% for product in products %}
+  <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}"></div>
+{% endfor %}
+
 <div class=" section-collection-carousel-container">
   <div class="collection-carousel-wrapper collection-carousel-wrapper-{{ section.id }} {% if page_width %}page-container{% endif %}">
     <div class="collection-carousel__title">
