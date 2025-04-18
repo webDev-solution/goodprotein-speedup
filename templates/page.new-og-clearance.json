@@ -105,72 +105,6 @@
         "text_overlay_color": "same_as_section"
       }
     },
-    "image_text_with_overlay_2_zpb8YX": {
-      "type": "image-text-with-overlay-2",
-      "blocks": {
-        "title_NimHT4": {
-          "type": "title",
-          "settings": {
-            "title": "Shop Our OG Shakes!",
-            "heading_size": "heading-base"
-          }
-        },
-        "shape_divider_aceamT": {
-          "type": "shape_divider",
-          "settings": {
-            "target_section": "below",
-            "section_color_scheme": "#e6f2ff",
-            "style": "large-waves_1200x84",
-            "flip_horizontal": true,
-            "enable_animation": false,
-            "animation_direction": ""
-          }
-        }
-      },
-      "block_order": [
-        "title_NimHT4",
-        "shape_divider_aceamT"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".bg-scheme-background {margin-top: 66px;}",
-        "@media (max-width: 768px) {.bg-scheme-background {margin-top: 54px; }}",
-        "h2 {font-size: 72px; color: #084b6d;}",
-        "@media (max-width: 1024px) {h2 {font-size: 60px; }}",
-        "@media (max-width: 768px) {h2 {font-size: 48px; }}",
-        "@media (max-width: 425px) {h2 {font-size: 42px; }}"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Homepage-Desktop-Hero-06.webp",
-        "display_on_card": false,
-        "display_content_below_image_on_mobile": false,
-        "style": "full",
-        "height": "natural",
-        "place_content": "place-content-center-center",
-        "text_align": "text-center",
-        "background_color": "",
-        "color_scheme": "",
-        "use_gradient_background": false,
-        "text_overlay_color": "same_as_section"
-      }
-    },
-    "featured_products_carousel_DJfJac": {
-      "type": "featured-products-carousel",
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "text": "",
-        "product_list": [
-          "bananas-cream-all-in-one-shake",
-          "banana-cream-all-in-one-superfood-shake-old",
-          "acai-berry-all-in-one-superfood-shake-old",
-          "chai-vanilla-all-in-one-superfood-shake-copy"
-        ],
-        "button_title": "",
-        "button_link": "",
-        "color_scheme": ""
-      }
-    },
     "collection_carousel_FBABhk": {
       "type": "collection-carousel",
       "settings": {
@@ -178,8 +112,8 @@
         "title_color": "#000000",
         "description": "",
         "description_color": "#000000",
-        "use_custom_collection": false,
-        "collection": "superfood-shake",
+        "use_custom_collection": true,
+        "collection": "40-og-shakes",
         "products": [
           "gingerbread-cookie-all-in-one-shake",
           "mixed-berries-all-in-one-shake",
@@ -410,8 +344,6 @@
   "order": [
     "second_header_F8bcmy",
     "image_wto_2_dxQ6JY",
-    "image_text_with_overlay_2_zpb8YX",
-    "featured_products_carousel_DJfJac",
     "collection_carousel_FBABhk",
     "collection_carousel_n73bgV",
     "image_wto_2_ziiUfB",
