@@ -73,16 +73,14 @@
                 </h3>
                 {% comment %} <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}" data-product-rating-count="{{ card product.metafields.junip.rating_count }}"></div> {% endcomment %}
                  <div class="review-star-container">
-                    <div>
                       {% render 'icon-fat-star', color: "#084B6DFF" %}
                       {% render 'icon-fat-star', color: "#084B6DFF" %}
                       {% render 'icon-fat-star', color: "#084B6DFF" %}
                       {% render 'icon-fat-star', color: "#084B6DFF" %}
                       {% render 'icon-fat-star', color: "#084B6DFF" %}
-                    </div>
-                    <span>
-                      {{ product.metafields.spr.reviews | split:'"reviewCount": "' | last | split: '",' | first | plus : 0}}
-                    </span>
+                      <span>
+                        954
+                      </span>
                  </div>
               </a>
 
