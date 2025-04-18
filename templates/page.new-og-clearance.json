@@ -205,14 +205,14 @@
         "title_YVfcqC": {
           "type": "title",
           "settings": {
-            "title": "300 000+",
+            "title": "300,000+",
             "color": "#ffffff"
           }
         },
         "subtitle_8nVWa9": {
           "type": "subtitle",
           "settings": {
-            "subtitle": "Happy customers",
+            "subtitle": "Happy Customers",
             "color": "#ffffff"
           }
         },
@@ -237,7 +237,7 @@
           "settings": {
             "review": "This protein powder is the first one I have tried that tastes great, is a fine texture that is not gritty and does not cause bloating or gas. Highly recommend!",
             "customer_photo": "shopify://shop_images/ugc-protein-shakes-5-01_fb04f28f-13ac-4faa-b262-99e7f69c1d37.webp",
-            "customer_name": "Emma. T."
+            "customer_name": "Surya. T."
           }
         }
       },
