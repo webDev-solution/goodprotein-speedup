@@ -35,6 +35,7 @@
 {% endstyle %}
 
 <script type="text/javascript" async="true" src="https://widgets.juniphq.com/v1/junip_shopify.js"></script>
+<span class="junip-store-key" data-store-key="{{ shop.metafields.junip.store_key }}"></span>
 
 {% assign products = section.settings.products %}
 {% for product in products %}
