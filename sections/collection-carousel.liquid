@@ -33,10 +33,6 @@
   }
 }
 {% endstyle %}
-
-<script type="text/javascript" async="true" src="https://widgets.juniphq.com/v1/junip_shopify.js"></script>
-<span class="junip-store-key" data-store-key="{{ shop.metafields.junip.store_key }}"></span>
-
 <div class=" section-collection-carousel-container">
   <div class="collection-carousel-wrapper collection-carousel-wrapper-{{ section.id }} {% if page_width %}page-container{% endif %}">
     <div class="collection-carousel__title">
@@ -76,7 +72,14 @@
                   }}
                 </h3>
                 {% comment %} <div class="junip-product-summary-stars" data-junip-product-id="{{ product.id }}" data-product-rating-count="{{ card product.metafields.junip.rating_count }}"></div> {% endcomment %}
-                 <div>
+                 <div class="review-star-container">
+                    <div>
+                      {% render 'icon-fat-star', color: "#084B6DFF" %}
+                      {% render 'icon-fat-star', color: "#084B6DFF" %}
+                      {% render 'icon-fat-star', color: "#084B6DFF" %}
+                      {% render 'icon-fat-star', color: "#084B6DFF" %}
+                      {% render 'icon-fat-star', color: "#084B6DFF" %}
+                    </div>
                     <span>
                       {{ product.metafields.spr.reviews | split:'"reviewCount": "' | last | split: '",' | first | plus : 0}}
                     </span>
