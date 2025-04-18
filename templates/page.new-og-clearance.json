@@ -139,8 +139,8 @@
         "title_color": "#084b6d",
         "description": "",
         "description_color": "#000000",
-        "use_custom_collection": false,
-        "collection": "",
+        "use_custom_collection": true,
+        "collection": "50-off-og-shakes",
         "products": [
           "chocolate-fudge-all-in-one-shake",
           "bananas-cream-all-in-one-shake",
