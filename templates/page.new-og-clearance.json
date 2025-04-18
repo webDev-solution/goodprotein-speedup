@@ -68,6 +68,7 @@
         },
         "shape_divider_7AWNtJ": {
           "type": "shape_divider",
+          "disabled": true,
           "settings": {
             "target_section": "below",
             "section_color_scheme": "#e6f2ff",
@@ -91,7 +92,7 @@
         "@media (max-width: 425px) {h2 {font-size: 40px; }}"
       ],
       "settings": {
-        "image": "shopify://shop_images/og-clearance-brand.webp",
+        "image": "shopify://shop_images/banner-old_sku-test19.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": false,
         "style": "full",
