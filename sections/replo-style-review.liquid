@@ -50,7 +50,7 @@
                         <img src="{{ block.settings.customer_photo | image_url: width: 100 }}" alt="Customer photo" />
                       {% endif %}
                       <div class="verification-badge-wrapper">
-                        {{ block.settings.customer_name }}
+                        -{{ block.settings.customer_name }}
                         {% render 'icon-check-in-circle' %}
                       </div>
                     </div>
@@ -88,15 +88,15 @@
       breakpoints: {
         1024: {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 24,
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 16,
         },
         0: {
           slidesPerView: 1,
-          spaceBetween: 10,
+          spaceBetween: 8,
         },
       }
     });
