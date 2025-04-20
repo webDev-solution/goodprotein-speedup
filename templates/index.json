@@ -15,8 +15,8 @@
         "slide_ajM4qV": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/Homepage-Desktop-Hero-06.png",
-            "image_mobile": "shopify://shop_images/Homepage-Mobile-Hero-02.png"
+            "image": "shopify://shop_images/minieggs_Header_web_desktop_2.png",
+            "image_mobile": "shopify://shop_images/minieggs_Header_web_mobile_2.png"
           }
         }
       },
@@ -31,16 +31,16 @@
         "interval": 5,
         "review_text": "20,000+ 5-Star Reviews",
         "review_count": 5,
-        "title": "The Best Tasting All-in-One Shake",
+        "title": "Mini Eggs Is Back",
         "title_font_size": 38,
         "title_color": "#232323",
         "use_custom_font": false,
         "header_font_family": "lato_n4",
-        "subtitle": "A delicious, nutrient dense shake that is designed to curb your sweet cravings and give your body everything it needs to thrive.",
+        "subtitle": "Our most popular limited edition is back by popular demand. Grab it before it's gone (again)!",
         "subtitle_font_size": 20,
         "subtitle_color": "#232323",
-        "button_text": "Taste the Difference",
-        "button_link": "shopify://products/vanilla-milkshake-all-in-one-shake",
+        "button_text": "Order Now",
+        "button_link": "shopify://products/mini-eggs-all-in-one-shake",
         "button_text_2": "",
         "button_link_2": "",
         "button_width": 330,
