@@ -102,12 +102,22 @@
 
               {% unless product.has_only_default_variant %}
                 {% if product.variants.size > 0 %}
-                  <div class="product-sizes padding-1rem-saturn">
-                    <select class="size-selector {% if product.variants.size == 1 %} _hide_arrow {% endif %}" data-product-id="{{ product.id }}"  {% if product.variants.size == 1 %} disabled {% endif %}>
+                  <div class="product-sizes mt-2 padding-1rem-saturn">
+                    {%- liquid
+                      assign product_size = 0
+                      for variant in product.variants
+                        unless variant.metafields.custom.solt_out
+                          assign product_size = product_size | plus: 1
+                        endunless
+                      endfor
+                    -%}
+                    <select class="size-selector {% if product_size == 1 %} _hide_arrow {% endif %}" data-product-id="{{ product.id }}"  {% if product.variants.size == 1 %} disabled {% endif %}>
                       {% for variant in product.variants %}
                         {% if variant.available %}
                           <div style="display: none"></div>
-                          <option value="{{ variant.id }}" data-price="{{ variant.price }}">{{ variant.title }}</option>
+                          {% unless variant.metafields.custom.solt_out %}
+                            <option value="{{ variant.id }}" data-price="{{ variant.price }}">{{ variant.title }}</option>
+                          {% endunless %}
                         {% endif %}
                       {% endfor %}
                     </select>
