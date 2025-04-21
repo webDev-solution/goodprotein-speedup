@@ -111,7 +111,7 @@
                         endunless
                       endfor
                     -%}
-                    <select class="size-selector {% if product_size == 1 %} _hide_arrow {% endif %}" data-product-id="{{ product.id }}"  {% if product.variants.size == 1 %} disabled {% endif %}>
+                    <select class="size-selector {% if product_size == 1 %} _hide_arrow {% endif %}" data-product-id="{{ product.id }}"  {% if product_size == 1 %} disabled {% endif %}>
                       {% for variant in product.variants %}
                         {% if variant.available %}
                           <div style="display: none"></div>
