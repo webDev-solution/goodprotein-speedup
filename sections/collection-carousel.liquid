@@ -106,7 +106,7 @@
                     {%- liquid
                       assign product_size = 0
                       for variant in product.variants
-                        unless variant.metafields.custom.solt_out
+                        unless variant.metafields.custom.sold_out
                           assign product_size = product_size | plus: 1
                         endunless
                       endfor
@@ -115,7 +115,7 @@
                       {% for variant in product.variants %}
                         {% if variant.available %}
                           <div style="display: none"></div>
-                          {% unless variant.metafields.custom.solt_out %}
+                          {% unless variant.metafields.custom.sold_out %}
                             <option value="{{ variant.id }}" data-price="{{ variant.price }}">{{ variant.title }}</option>
                           {% endunless %}
                         {% endif %}
