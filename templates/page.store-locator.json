@@ -292,7 +292,7 @@
       "settings": {
         "title": "",
         "enable_carousel": true,
-        "carousel_rate": 5,
+        "carousel_rate": 2,
         "max_width": 160,
         "color_scheme": "",
         "use_gradient_background": false
