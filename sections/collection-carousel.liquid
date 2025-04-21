@@ -56,7 +56,7 @@
             {% assign current_variant = product.selected_or_first_available_variant %}
             {% assign products_length = forloop.index %}
             <div class="swiper-slide">
-              <div>
+              <a>
                 <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
                 <h3>
                   {{ product.title 
@@ -82,7 +82,7 @@
                         ({{ product.metafields.custom.review_count }})
                       </span>
                  </div>
-              </div>
+              </a>
 
               {%- liquid
                   assign price = current_variant.price
