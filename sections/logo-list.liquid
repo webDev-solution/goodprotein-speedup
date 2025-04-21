@@ -1,15 +1,139 @@
 {%- liquid
   assign logos = section.blocks | where: "type", "logo"
+  assign enable_carousel = section.settings.enable_carousel
 -%}
 
+{% if enable_carousel %}
+  {% style %}
+    .logo-list-carosel-container {
+      position: relative;
+      width: 100%; /* Adjust to your layout */
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .first-carousel-body,
+    .second-carousel-body {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      flex-wrap: nowrap;
+    }
+
+    /* First Slide: Comes in first, slides out left */
+    .first-carousel-body {
+      left: 20px;
+      animation-name: slideFirst;
+    }
+
+    /* Second Slide: Starts right, slides into view */
+    .second-carousel-body {
+      left: calc(100% - 20px);
+      animation-name: slideSecond;
+    }
+
+    @keyframes slideFirst {
+      0% { left: 20px;}
+      99.99% { left: calc(-100% + 20px);}
+      100% { left: 20px; }
+    }
+
+    @keyframes slideSecond {
+      0% { left: calc(100% + 20px); }
+      99.99% { left: 20px;}
+      100% { left: calc(100% + 20px);}
+    }
+
+    @keyframes slideFirstForLargeScreen {
+      0% { left: 0% }
+      99.5% { left: -100% }
+      100% { left: 0; }
+    }
+
+    @keyframes slideSecondForLargeScreen {
+      0% { left: 100%; }
+      99.5% { left: 0%; }
+      100% { left: 100%; }
+    }
+
+    @keyframes slideFirstForLargeScreen {
+      0% { left: 0% }
+      99.5% { left: -100% }
+      100% { left: 0; }
+    }
+
+    @keyframes slideSecondForLargeScreen {
+      0% { left: 100%; }
+      99.99% { left: 0 }
+      100% { left: 100%; }
+    }
+
+    @keyframes slideFirstForSmallScreen {
+      0% { left: 0% }
+      99.99% { left: -800px }
+      100% { left: 0; }
+    }
+
+    @keyframes slideSecondForSmallScreen {
+      0% { left: 800px; }
+      99.5% { left: 0%; }
+      100% { left: 800px; }
+    }
+
+    @media (min-width: 1181px) {
+      .first-carousel-body {
+        left: 0px;
+      }
+      .first-carousel-body {
+        animation-name: slideFirstForLargeScreen;
+      }
+      .second-carousel-body {
+        left: 100%;
+      }
+      .second-carousel-body {
+        animation-name: slideSecondForLargeScreen;
+      }
+    }
+    @media (max-width: 768px) {
+      .logo-list-carosel-container {
+        height: 100px;
+      }
+      .first-carousel-body li,
+      .second-carousel-body li {
+        margin-right: 0.75rem;
+        margin-left: 0.75rem;
+        margin-top: 0rem;
+      }
+      .first-carousel-body {
+        left: 0px;
+        min-width: 800px;
+      }
+      .first-carousel-body {
+        animation-name: slideFirstForSmallScreen;
+      }
+      .second-carousel-body {
+        left: 800px;
+        min-width: 800px;
+      }
+      .second-carousel-body {
+        animation-name: slideSecondForSmallScreen;
+      }
+    }
+  {% endstyle %}
+{% endif %}
+
 <section class="relative text-scheme-text bg-scheme-background  {% if section.settings.use_gradient_background %}bg-scheme-gradient{% endif %} relative overflow-hidden" data-color-scheme="{{ section.settings.color_scheme | default: 'primary' }}" >
-  <div class="section-content relative z-10 py-section-vertical-spacing px-section custom_center">
+  <div class="section-content relative z-10 py-section-vertical-spacing px-section" {% if enable_carousel %}style="margin: auto"{% endif %}>
     {% if section.settings.title != '' %}
     <h2 class="text-center font-heading  heading-base heading-style break-words {{ settings.heading_drop_shadow_style }}">{{ section.settings.title }}</h2>
     {% endif %}
 
-    <div class="{% if section.settings.title != '' %}section-content-top-margin{% endif %}">
-      <ul id="icon-row-{{ section.id }}" class="flex flex-wrap lg:flex-nowrap items-center justify-center -mt-5 lg:mt-0 lg:-mx-5">
+    <div class="{% if section.settings.title != '' %}section-content-top-margin{% endif %} {% if enable_carousel %}logo-list-carosel-container{% endif %}">
+      <ul id="icon-row-{{ section.id }}" class="{% if enable_carousel %}absolute first-carousel-body{% endif %} flex flex-wrap lg:flex-nowrap items-center justify-center -mt-5 lg:mt-0 lg:-mx-5">
         {% for block in logos %}
             {% if block.settings.image != blank %}
             <li class="relative block mt-4 lg:mt-0 mx-5" data-fade-in style="max-width: {{ section.settings.max_width }}px">
@@ -28,6 +152,27 @@
           {% endif %}
         {% endfor %}
       </ul>
+      {% if enable_carousel %}
+        <ul id="icon-row-{{ section.id }}-clone" class="{% if enable_carousel %}absolute second-carousel-body{% endif %} flex flex-wrap lg:flex-nowrap items-center justify-center -mt-5 lg:mt-0 lg:-mx-5">
+          {% for block in logos %}
+              {% if block.settings.image != blank %}
+              <li class="relative block mt-4 lg:mt-0 mx-5" data-fade-in style="max-width: {{ section.settings.max_width }}px">
+                {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="block">
+                {%- endif -%} 
+                  {{ block.settings.image | image_url: width: 500 | image_tag }}
+                {%- if block.settings.link != blank -%}
+                </a>
+                {%- endif -%}
+              </li>
+            {% else %}
+              <li class="relative block mt-4 lg:mt-0 mx-5"  style="max-width: {{ section.settings.max_width }}px">
+                {{ 'logo' | placeholder_svg_tag: 'placeholder-svg w-full h-full text-scheme-text fill-current bg-neutral-100' }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
   </div>  
 
@@ -63,6 +208,20 @@
       "type": "text",
       "id": "title",
       "label": "Heading"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "Enable Carousel",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "carousel_rate",
+      "label": "Carousel rate",
+      "min": 1,
+      "max": 10,
+      "default": 5
     },
     {
       "type": "range",
