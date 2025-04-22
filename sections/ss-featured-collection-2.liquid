@@ -704,7 +704,7 @@
                       {% endif %}
                       >
                       <a href="{{ item.url }}?subs=save40" class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
-                        <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}" {% if lazy %}lazy="loading"{% endif %}>
+                        <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}" {% if lazy %}loading="lazy"{% endif %}>
                         {% if item.images.size > 1 %}
                           {% for img in item.images %}
                             {% if forloop.index == 2 %}
@@ -822,7 +822,7 @@
               {% for item in items limit:product_show %}
                   <a href="{{ item.url }}" class="featured-collection-item-{{ section.id }}">
                     <div class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
-                      <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}" {% if lazy %}lazy="loading"{% endif %}>
+                      <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}" {% if lazy %}loading="lazy"{% endif %}>
                       {% if item.images.size > 1 %}
                         {% for img in item.images %}
                           {% if forloop.index == 2 %}

@@ -1,4 +1,4 @@
-{{'custom-product-section-6.scss.css' | asset_url | stylesheet_tag }}
+{{'custom-product-section-6.css' | asset_url | stylesheet_tag }}
 
 {% if product.metafields.custom.nutrition_section != blank %}
 {% style %}
@@ -24,7 +24,7 @@
       <div class="product-section-6-col-2 one-third-product">
         {% if product.metafields.custom.nutrition_section.value.image != blank %}
           <figure>
-            {{ product.metafields.custom.nutrition_section.value.image | image_url: width: 600 | image_tag: lazy: 'loading' }}
+            <img src="{{ product.metafields.custom.nutrition_section.value.image | image_url: width: 600  }}" alt="" width="600" height="{{ 600 | divided_by: block.settings.image.aspect_ratio | round }}" loading="lazy" />
           </figure>
         {% endif %}
       </div>

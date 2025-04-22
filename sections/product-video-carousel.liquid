@@ -1,4 +1,7 @@
-{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-product-carousel.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-carousel.css' | asset_url }}">
+</noscript>
 <div class="product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
   <h3 class="large-hide" >{{ section.settings.heading }}</h3>
   {% if section.settings.subtitle %}
@@ -11,9 +14,9 @@
     {% for block in section.blocks %}
       <div class="product-section-box product-video-box">
         {% if request.locale.iso_code == 'fr' %}
-          {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+          {% assign image_link = block.settings.fr_image | image_url: width: 258 %}
         {% else %}
-          {% assign image_link = block.settings.image | image_url: width: 600 %}
+          {% assign image_link = block.settings.image | image_url: width: 258 %}
         {% endif %}
         {% if block.settings.video_type == 'other' %}
           {% if request.locale.iso_code == 'fr' %}
@@ -33,10 +36,14 @@
           {% endif %}
         {% endif %}
         {% if image_link != blank %}
-          {{image_link | image_tag: class: 'image', image_size: '400x' }}
+          {{image_link | image_tag: class: 'image', image_size: '258x' }}
         {% endif %}
         {% if video_link!= blank %} 
-          {{video_link | video_tag: class: 'video c_hidden', image_size: '400x' }}
+          <video playsinline="playsinline" class="video c_hidden aaa" preload="metadata">
+            {% for source in video_link.sources %}
+              <source src="{{ source.url }}" type="{{ source.mime_type }}">
+            {% endfor %}
+          </video>
         {% endif %}
         
 

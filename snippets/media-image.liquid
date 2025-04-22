@@ -12,7 +12,21 @@
 {%- if shape contains 'default' or shape == '' or shape == blank -%}
 <div class="media-{{ media_id }} media-style-container  {% if settings.media_drop_shadow_size == 0 %}media-no-shadow{% endif %} {% if disable_media_style %}media-style-none{% endif %} {% if is_card %}media-style-is-card{% endif %} {{ shape | split: '_' | last }}">
   <div class="{% unless crop == '' or crop == blank or crop == 'natural' %}image-wrapper {{ crop }}{% endunless %} media-content">
-    {{ media | image_url: width: 2000 | image_tag: class: media_class, loading: 'lazy', sizes: sizes, onerror: 'this.style.color="currentColor"', onload: 'this.style.color="currentColor"' }}
+    <img 
+      class="{{ media_class }}" 
+      src="{{ media | image_url: width: 580 }}" 
+      srcset="
+        {{ media | image_url: width: 280 }} 280w,
+        {{ media | image_url: width: 335 }} 335w,
+        {{ media | image_url: width: 385 }} 385w,
+        {{ media | image_url: width: 580 }} 580w
+      "
+      sizes="{{ sizes | default: '(min-width: 768px) 100vw, 580px' }}"
+      loading="lazy"
+      alt="{{ media.alt | escape }}"
+      width="{{ media.width }}"
+      height="{{ media.height }}"
+    >
   </div>
   {%- if settings.media_drop_shadow_size > 0 and is_card == false and settings.media_show_border_on_shadow and disable_media_style == false -%}
     <div class="media-drop-shadow-border w-full h-full"></div>

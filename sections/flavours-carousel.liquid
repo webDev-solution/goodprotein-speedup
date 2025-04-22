@@ -1,4 +1,7 @@
-{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %}
+<link rel="preload" href="{{ 'custom-product-carousel.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-carousel.css' | asset_url }}">
+</noscript>
 <style>
   .flavours-carousel .inner_product-video-carousel .product-video-box {
     margin-bottom: 0px;

@@ -13,7 +13,16 @@
           <div class="product-section-box product-usps-box">
             <div class="product-usps-icon">
               {% if block.settings.image %}
-                <figure>{{ block.settings.image | image_url: height: 35 | image_tag: lazy: 'loading' }}</figure>
+                {% comment %} <figure>{{ block.settings.image | image_url: height: 35 | image_tag: lazy: 'loading' }}</figure> {% endcomment %}
+                <figure>
+                  {{ block.settings.image | image_url: width: 35 | image_tag: 
+                    loading: 'lazy',
+                    width: '35',
+                    height: 'auto',
+                    sizes: '(max-width: 768px) 27px, 27px',
+                    alt: block.settings.image.alt | default: 'Image'
+                  }}
+                </figure>                 
               {% endif %}
             </div>
             <div class="product-usps-content">

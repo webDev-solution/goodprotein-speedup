@@ -1,5 +1,8 @@
 {% comment %} {{'custom-ups-bar.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %} {% endcomment %}
-{{'custom-ups-bar.scss.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %}
+<link rel="preload" href="{{ 'custom-ups-bar.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-ups-bar.css' | asset_url }}">
+</noscript>
 
 <div data-section-type="featured-usps-bar" style="background: {{section.settings.bg_color}};">
   <div class="page-width">
@@ -9,7 +12,16 @@
           <div class="usps-box">
             <div class="usps-icon">
               {% if block.settings.image %}
-                <figure>{{ block.settings.image | image_url: height: 35 | image_tag: lazy: 'loading' }}</figure>
+                {% comment %} <figure>{{ block.settings.image | image_url: height: 35 | image_tag: loading: 'lazy' }}</figure> {% endcomment %}
+                <figure>
+                  {{ block.settings.image | image_url: width: 35 | image_tag: 
+                    loading: 'lazy',
+                    width: '35',
+                    height: 'auto',
+                    sizes: '(max-width: 768px) 27px, 27px',
+                    alt: block.settings.image.alt | default: 'Image'
+                  }}
+                </figure>
               {% endif %}
             </div>
             <div class="usps-content">

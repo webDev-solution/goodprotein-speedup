@@ -1,0 +1,83 @@
+account-section {
+  background: #E9F6FD;
+}
+account-section .info {
+  font-size: 20px;
+}
+account-section .info p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+account-section .info p.h2 {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+account-section .info .small, account-section .info a {
+  font-size: 0.75em;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+account-section .info #textToCopy {
+  display: inline;
+  margin-left: 5px;
+}
+account-section .info #copyButton {
+  line-height: 0;
+  top: -2px;
+  position: relative;
+  cursor: pointer;
+}
+account-section .info #copyButton img {
+  display: inline;
+  width: 21px;
+}
+account-section .info a {
+  text-decoration: underline;
+}
+account-section .card {
+  z-index: initial;
+  height: 100%;
+  padding-bottom: 60px;
+}
+account-section .card .badge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #0066CC;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 12px;
+}
+account-section .card p {
+  line-height: 1.5;
+}
+account-section .card .buttons {
+  position: absolute;
+  bottom: 20px;
+}
+account-section .card .buttons button {
+  text-decoration: underline;
+}
+account-section [data-address] [data-address-form] {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  padding: 0;
+}
+account-section [data-address] [data-address-form]:not(.hidden) {
+  display: flex;
+}
+account-section [data-address] [data-address-form] form {
+  background: white;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  max-height: 100vh;
+  overflow: auto;
+}

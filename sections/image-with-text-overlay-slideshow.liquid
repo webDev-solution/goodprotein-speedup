@@ -215,35 +215,38 @@
                   ab-banner-image--desktop
                 {% endif %}
               "
-              src="{{ image | img_url: '500x' }}"
+              src="{{ image | img_url: '1600x' }}"
               srcset="
-                {{ image | img_url: '500x' }} 500w,
-                {{ image | img_url: '800x' }} 800w,
-                {{ image | img_url: '1200x' }} 1200w,
+                {{ image | img_url: '1024x' }} 1024w,
+                {{ image | img_url: '1440x' }} 1440w,
                 {{ image | img_url: '1600x' }} 1600w,
                 {{ image | img_url: '2000x' }} 2000w,
                 {{ image | img_url: 'master' }} 2400w
               "
               alt="{{ image.alt }}"
+              sizes="(min-width: 990px) 1600px, 1440px, 2000px, 2400px, 1024px"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              fetchpriority="high"  
             >
-          {% if section.settings.lazy_load %} loading="lazy" {% endif %}
           {% endif %}
 
           {% if block.settings.image_mobile != blank %}
             {% assign image = block.settings.image_mobile %}
             <img
               class="ab-banner-image ab-banner-image--mobile"
-              src="{{ image | img_url: '500x' }}"
+              src="{{ image | img_url: '768x' }}"
               srcset="
-                {{ image | img_url: '500x' }} 500w,
-                {{ image | img_url: '800x' }} 800w,
-                {{ image | img_url: '1200x' }} 1200w,
-                {{ image | img_url: '1600x' }} 1600w,
-                {{ image | img_url: '2000x' }} 2000w,
-                {{ image | img_url: 'master' }} 2400w
+                {{ image | img_url: '320x' }} 320w,
+                {{ image | img_url: '375x' }} 375w,
+                {{ image | img_url: '415x' }} 415w,
+                {{ image | img_url: '768x' }} 768w
               "
               alt="{{ image.alt }}"
-              {% if section.settings.lazy_load %} loading="lazy" {% endif %}
+              sizes="(max-width: 989px) 415px, 375px, 768px, 320px"
+              width="{{ image.width }}"
+              height="{{ image.height }}"
+              fetchpriority="high"            
             >
           {% endif %}
         </div>

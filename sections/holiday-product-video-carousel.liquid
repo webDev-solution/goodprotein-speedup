@@ -1,5 +1,8 @@
-{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %}
-<div class="aaaaaaaaaaaaaa product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
+<link rel="preload" href="{{ 'custom-product-carousel.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-carousel.css' | asset_url }}">
+</noscript>
+<div class="product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
   <div class="image-title-container-saturn">
     {% if request.path contains '/fr' %}
       {{ section.settings.more_2000_five_star_reviews_fr | image_url: width: 500 | image_tag }}

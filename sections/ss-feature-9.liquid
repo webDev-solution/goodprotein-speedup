@@ -474,7 +474,7 @@ For inquiries or permissions, contact daniel@section.store
                 {% unless hide_icon %}
                   <div class="features-icon-{{ section.id }}">
                     {% if block.settings.icon != blank %}
-                      <img src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.icon.alt }}" {% if lazy %}lazy="loading"{% endif %}>
+                      <img src="{{ block.settings.icon | image_url }}" alt="{{ block.settings.icon.alt }}" {% if lazy %}loading="lazy"{% endif %}>
                     {% else %}
                       {% case forloop.index %}
                         {% when 1 %}
@@ -508,7 +508,7 @@ For inquiries or permissions, contact daniel@section.store
         {% unless hide_image %}
           <div class="features-image-{{ section.id }}">
             {% if image != blank %}
-              <img src="{{ image | image_url }}" alt="{{ image.alt }}" {% if lazy %}lazy="loading"{% endif %}>
+              <img src="{{ image | image_url }}" alt="{{ image.alt }}" {% if lazy %}loading="lazy"{% endif %}>
             {% else %}
               {{ 'image' | placeholder_svg_tag }}
             {% endif %}

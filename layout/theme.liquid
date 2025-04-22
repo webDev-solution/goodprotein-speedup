@@ -77,9 +77,11 @@
           "https://campaign.fbot.me/" + friendbuyAPI.merchantId + "/campaigns.js",
         ]);
       </script>
+{% comment %} 
       <!-- Begin: Northbeam pixel -->
       <script>(function(){var r;(n=r=r||{}).A="identify",n.B="trackPageView",n.C="fireEmailCaptureEvent",n.D="fireCustomGoal",n.E="firePurchaseEvent";var n="//j.northbeam.io/ota-sp/c124bfc4-86b5-4dfa-b945-1ff6f526e822.js";function t(n){for(var e=[],r=1;r<arguments.length;r++)e[r-1]=arguments[r];a.push({fnName:n,args:e})}var a=[],e=((e={_q:a})[r.A]=function(n,e){return t(r.A,n,e)},e[r.B]=function(){return t(r.B)},e[r.C]=function(n,e){return t(r.C,n,e)},e[r.D]=function(n,e){return t(r.D,n,e)},e[r.E]=function(n){return t(r.E,n)},window.Northbeam=e,document.createElement("script"));e.async=!0,e.src=n,document.head.appendChild(e);})()</script>
       <!-- End: Northbeam pixel -->  
+{% endcomment %}
       <link rel='preconnect dns-prefetch' href='https://triplewhale-pixel.web.app/' crossorigin />
 
       <script>
@@ -87,7 +89,6 @@
       window.TriplePixelData={TripleName:"goodproteinca.myshopify.com",ver:"1.9.0"},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","application/json")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1;try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push(location.href),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)},E=A[H]=function(t,e){return"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e]),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("//conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,url:window.location.href,ref:document.referrer,ver:window.TriplePixelData.ver},O("//api.config-security.com/",5,p),O("//triplewhale-pixel.web.app/dot1.9.txt",5)))}}("","TriplePixel",localStorage);
       /* << TriplePixel :: end*/
       </script>
-
       
       {% render 'replo-head' %}
 
@@ -100,8 +101,11 @@
       <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
       <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
       <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  
+      
+       <script src="{{ 'jquery.min.js' | asset_url }}"></script>
+      {% comment %} <script src="{{'jquery.min.js' | asset_url}}" defer></script> {% endcomment %}
+      
+ 
 
       {%- liquid
         assign main_font = settings.type_main_font
@@ -124,7 +128,7 @@
         {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
         {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
       </title>
-
+{% comment %}
       <script>
         window["friendbuyAPI"] = friendbuyAPI = window["friendbuyAPI"] || [];
       
@@ -146,12 +150,38 @@
           "https://campaign.fbot.me/" + friendbuyAPI.merchantId + "/campaigns.js",
         ]);
       </script>
-  
+{% endcomment %}  
       {% if page_description %}
         <meta name="description" content="{{ page_description | escape }}">
       {% endif %}
   
       {%- render 'meta-tags' -%}
+
+      <link
+        rel="preload"
+        as="image"
+        href="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Desktop-Hero-06_1600x.webp?v=1744492683"
+        imagesrcset="
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Desktop-Hero-06_1024x.webp?v=1744492683 1024w,
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Desktop-Hero-06_1440x.webp?v=1744492683 1440w,
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Desktop-Hero-06_1600x.webp?v=1744492683 1600w,
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Desktop-Hero-06_2000x.webp?v=1744492683 2000w
+        "
+        imagesizes="100vw"
+      />    
+      
+      <link
+        rel="preload"
+        as="image"
+        href="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Mobile-Hero-02_768x.webp?v=1744492496"
+        imagesrcset="
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Mobile-Hero-02_320x.webp?v=1744492496 320w,
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Mobile-Hero-02_375x.webp?v=1744492496 375w,
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Mobile-Hero-02_415x.webp?v=1744492496 415w
+          https://cdn.shopify.com/s/files/1/0012/5573/5405/files/Homepage-Mobile-Hero-02_768x.webp?v=1744492496 768w,
+        "
+        imagesizes="100vw"
+      />
   
       {{ content_for_header }}
 
@@ -212,30 +242,72 @@
 
       <script src="{{ 'abra.js' | asset_url }}" defer></script>
 
-      <link rel="stylesheet" href="{{ 'base.bundle.aio.min.css' | asset_url }}">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+      <link rel="preload" href="{{ 'base.bundle.aio.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="{{ 'base.bundle.aio.min.css' | asset_url }}">
+      </noscript>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-      <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-      <script>
-        Fancybox.bind('[data-fancybox]', {
-          // Custom options
-        });    
-      </script>
-      <link rel="stylesheet" href="{{ 'custom.aio.min.css' | asset_url }}">
-      <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+      <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      </noscript>      
 
-      {{'custom-quickview.scss.css' | asset_url | stylesheet_tag }}
+      <link rel="preload" href="{{'slick.min.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="{{'slick.min.css' | asset_url}}">
+      </noscript>
+      
+      <link rel="preload" href="{{'slick-theme.min.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="{{'slick-theme.min.css' | asset_url}}">
+      </noscript>
+
+      <script src="{{'slick.min.js'|asset_url}}" defer></script>
+
+      {% if template.name == 'product' %}
+        <link rel="preload" href="{{'fancybox.css' | asset_url}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{'fancybox.css' | asset_url}}">
+        </noscript>
+        
+        <script src="{{'fancybox.umd.js' | asset_url}}" defer></script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            Fancybox.bind('[data-fancybox]', {
+              // Custom options
+            });
+          });
+        </script>
+      {% endif %}
+
+      {% if template.name == 'product' or template.name == 'collection' %}
+        <link rel="preload" href="{{ 'select2.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="{{ 'select2.min.css' | asset_url }}">
+        </noscript>
+      {% endif %}
+      
+      <link rel="preload" href="{{ 'custom.aio.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="{{ 'custom.aio.min.css' | asset_url }}">
+      </noscript>
+      <link rel="preload" href="{{ 'custom.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+      </noscript>
+
+      <link rel="preload" href="{{ 'custom-quickview.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <noscript>
+          <link rel="stylesheet" href="{{ 'custom-quickview.css' | asset_url }}">
+      </noscript>
 
       {% if template contains 'customers' %}
       {% comment %}theme-check-disable ParserBlockingScriptTag{% endcomment %}
-      {{ "shopify_common.js" | shopify_asset_url | script_tag }}
-      {{ "customer_area.js" | shopify_asset_url | script_tag }}
+      {% comment %}{{ "shopify_common.js" | shopify_asset_url | script_tag }}{% endcomment %}
+      <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer></script>
+      {% comment %}{{ "customer_area.js" | shopify_asset_url | script_tag }}{% endcomment %}
+      <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer></script>
       {% comment %}theme-check-enable ParserBlockingScriptTag{% endcomment %}
       {% endif %}
 
@@ -396,105 +468,93 @@
       </script>
 
     {% include 'friendbuy' %}
-    <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}"></script>
-    {% include 'store-credit-launcher' %}
-    <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
-
+    {% if template.name == 'product' or template.name == 'collection' %}
+      <script type="text/javascript" id="loop-subscription-script" src="{{ 'loop-widget-custom.js' | asset_url }}" ></script>
+      {% include 'store-credit-launcher' %}
+      <style class="loop-style"> {% render 'loop-widget-custom.css.liquid' %} </style>
+    {% endif %}
 
 
     <!-- Swiper.js CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </head>
+    <link rel="stylesheet" href="{{swiper-bundle.min.css | asset_url}}" />
+    <script src="{{swiper-bundle.min.js | asset_url}}"></script>
   
-        <script>
-    document.addEventListener('DOMContentLoaded', () => {
-
-const intervalId = setInterval(checkCartDrawerStatus, 10);
-        function checkCartDrawerStatus() {
+    {% if template.name == 'product' %}
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const intervalId = setInterval(checkCartDrawerStatus, 10);
+          function checkCartDrawerStatus() {
             const targetNode = document.getElementById('CartPopup');
             // console.log("loop targetNode", targetNode)
             if (targetNode) {
-                clearInterval(intervalId);
-const targetNode = document.getElementById('CartPopup');
-// Options for the observer (which mutations to observe)
-const config = { attributes: true, childList: true, subtree: true };
-
-// Callback function to execute when mutations are observed
-const callback = function(mutationsList, observer) {
-    for(const mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            // console.log('A child node has been added or removed.');
-        }
-        else if (mutation.type === 'attributes') {
-            // console.log(`The ${mutation.attributeName} attribute was modified.`);
-
-        }
-       helper();
-    }
-};
-
-// Create an observer instance linked to the callback function
-const observer = new MutationObserver(callback);
-
-// Start observing the target node for configured mutations
-observer.observe(targetNode, config);
-
-// To stop observing:
-// observer.disconnect();
+              clearInterval(intervalId);
+              // Options for the observer (which mutations to observe)
+              const config = { attributes: true, childList: true, subtree: true };
+              // Callback function to execute when mutations are observed
+              const callback = function(mutationsList, observer) {
+                for(const mutation of mutationsList) {
+                  if (mutation.type === 'childList') {
+                      // console.log('A child node has been added or removed.');
+                  }
+                  else if (mutation.type === 'attributes') {
+                      // console.log(`The ${mutation.attributeName} attribute was modified.`);
+                  }
+                  helper();
+                }
+              };
+              // Create an observer instance linked to the callback function
+              const observer = new MutationObserver(callback);
+              // Start observing the target node for configured mutations
+              observer.observe(targetNode, config);
+              // To stop observing:
+              // observer.disconnect();
             }
-        }
-
-
-
-
-    });
-function helper(){
-  // console.log("drawer opened")
-const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-upgrade-dropdown optgroup[label="Subscription plans"]');
-
-    // Loop through each optgroup
-    subscriptionOptGroups.forEach(optGroup => {
-        // Get all options within the current optgroup
-        const options = optGroup.querySelectorAll('option');
-
-        // Loop through each option and hide those with "Subscribe & Save"
-        options.forEach(option => {
-            if (option.textContent.includes('Bundle')) {
-                option.style.display = 'none';
-            }
+          }
         });
-    });
-}
+        function helper(){
+          // console.log("drawer opened")
+          const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-upgrade-dropdown optgroup[label="Subscription plans"]');
+          // Loop through each optgroup
+          subscriptionOptGroups.forEach(optGroup => {
+            // Get all options within the current optgroup
+            const options = optGroup.querySelectorAll('option');
+            // Loop through each option and hide those with "Subscribe & Save"
+            options.forEach(option => {
+                if (option.textContent.includes('Bundle')) {
+                    option.style.display = 'none';
+                }
+            });
+          });
+        }
       </script>
-<script src="{{ 'loop_bundle.js' | asset_url }}"></script>
-{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}<body data-color-scheme="primary">
+      <script src="{{ 'loop_bundle.js' | asset_url }}" ></script>
+    {% endif %}
+</head>
+{% comment %}ly_liquid_scripts_begin{% endcomment %}{% capture ly_liquid_content %}{% comment %}ly_liquid_scripts_end{% endcomment %}
+<body data-color-scheme="primary">
+  {% comment %}theme-check-disable MissingTemplate{% endcomment %}
+  <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
+  {% liquid
+    section 'announcement-bar'
+    if request.path contains 'pages/bfcm-2024'
+      section 'custom-header'
+    elsif request.path contains 'pages/holiday-2025'
+      section 'custom-holiday-header'
+    elsif request.path contains 'pages/new-year-2025'
+      section 'custom-holiday-header'
+    else
+      section 'header'
+    endif 
+  %}
 
-  
-  
-      {% comment %}theme-check-disable MissingTemplate{% endcomment %}
-      <a class="skip-link" href="#MainContent">{{ "general.accessibility.skip_to_content" | t }}</a>
-      {% liquid
-        section 'announcement-bar'
-        if request.path contains 'pages/bfcm-2024'
-          section 'custom-header'
-        elsif request.path contains 'pages/holiday-2025'
-          section 'custom-holiday-header'
-        elsif request.path contains 'pages/new-year-2025'
-          section 'custom-holiday-header'
-        else
-          section 'header'
-        endif 
-      %}
-
-     <main id="MainContent" class="overflow-hidden">
+  <main id="MainContent" class="overflow-hidden">
 
     {%- if request.path contains 'loop_subscriptions/bundle' or request.path contains 'loop_subscriptions/customer' -%}
       {% render 'loop_loader' %}
     {%- endif -%}
   
-        {{ content_for_layout }}
-      </main>
+    {{ content_for_layout }}
+  </main>
       {% section 'footer' %}
       {%- if template == 'index' -%}
         {%- section 'call-to-action' -%}
@@ -513,7 +573,7 @@ const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-up
       {% render 'modal' %}
       {% render 'manage-plan-modal' %}
       <script src="{{ 'modals.js' | asset_url }}" type="module"></script>
-      {{'custom.js' | asset_url | script_tag }}
+      <script src="{{ 'custom.js' | asset_url }}" defer></script>
 
       {% comment %}theme-check-enable LiquidTag{% endcomment %}
       {%- if settings.show_on_sale_and_sold_out_badges -%}
@@ -523,7 +583,7 @@ const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-up
       {%- render 'static-sticker-defs' with shape: settings.metafield_badge_shape, id: 'metafield-badge' -%}
       {% comment %}theme-check-enable MissingTemplate{% endcomment %}
 
-    {{ 'ajaxinate.min.js' | asset_url | script_tag }}
+      <script src="{{ 'ajaxinate.min.js' | asset_url }}" defer></script>
   
     {% render 'junip-store-key' %}
 
@@ -600,7 +660,7 @@ const subscriptionOptGroups = document.querySelectorAll('.upcart-subscription-up
 
   
 <!-- BEGIN app snippet: veeperapp -->
-<script src="https://cdn.sdk.veeperapp.com/listener.js?shop=goodproteinca.myshopify.com" ></script> 
+<script src="https://cdn.sdk.veeperapp.com/listener.js?shop=goodproteinca.myshopify.com" defer></script> 
 <!-- End app snippert-->  
 
  
@@ -661,7 +721,7 @@ var afterpay_current_variant = {{ product.selected_or_first_available_variant | 
 var afterpay_cart_total_price = {{ cart.total_price | json }};
 var afterpay_js_snippet_version = '1.1.6';
 </script>
-<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js"></script>
+<script type="text/javascript" src="https://static.afterpay.com/shopify-afterpay-javascript.js" defer></script>
 {% else %}
 <!-- Afterpay disabled: {{ cart.currency.iso_code }} != {{ shop.currency }} -->
 {% endif %}
@@ -892,6 +952,7 @@ var afterpay_js_snippet_version = '1.1.6';
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    
     const modalContainer = document.querySelector(".modal-container-sanobu");
     const closeModalButton = document.querySelector(".close-modal-sanobu");
     let currentURL = window.location.href;

@@ -1,4 +1,7 @@
-{{'custom-modal.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-modal.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-modal.css' | asset_url }}">
+</noscript>
 
 <div id="manage-plan-modal" class="modal">
   <div class="modal-content">

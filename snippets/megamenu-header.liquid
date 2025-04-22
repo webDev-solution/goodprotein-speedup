@@ -54,7 +54,12 @@
                             {% endif %}
                             <div class="image">
                                 {% if product.featured_image != blank %}
-                                <img loading="lazy" src="{{ product.featured_image.src | img_url: '300x' }}">
+                                <img 
+                                  src="{{ product.featured_image.src | img_url: '128x' }}" 
+                                  loading="lazy"
+                                  width="128" 
+                                  height="{{ 128 | divided_by: product.featured_image.aspect_ratio | round }}"
+                                >
                                 {% else %}
                                 {{ 'product-1' | placeholder_svg_tag }}
                                 {% endif %}
@@ -115,7 +120,19 @@
 
                   <div class="img_megamenu">
                             {% if block.settings[lay_menu_image] != blank %}
-                                  <img loading="lazy" src="{{ block.settings[lay_menu_image] | img_url: '600x' }}">
+                                  <img 
+                                    loading="lazy"
+                                    src="{{ block.settings[lay_menu_image] | img_url: '265x' }}"
+                                    srcset="
+                                      {{ block.settings[lay_menu_image] | img_url: '166x' }} 166w,
+                                      {{ block.settings[lay_menu_image] | img_url: '265x' }} 265w,
+                                      {{ block.settings[lay_menu_image] | img_url: '325x' }} 325w,
+                                      {{ block.settings[lay_menu_image] | img_url: '400x' }} 400w
+                                    "
+                                    sizes="(min-width: 990px) 166px, 265px, 325px"
+                                    width="256"
+                                    height="{{ 256 | divided_by: block.settings[lay_menu_image].aspect_ratio | round }}"
+                                  />
                               {% else %}
                                 {{ 'image' | placeholder_svg_tag }}
                             {% endif %}

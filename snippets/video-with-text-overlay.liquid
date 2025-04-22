@@ -26,14 +26,34 @@
   endcase
 %}
 
-<div class="relative z-10 lg:bg-transparent {{ container_class }}" style="background: url({{fallback_image | img_url: '2048x' }}); background-repeat: no-repeat; background-size: cover;" >
+<div class="relative z-10 lg:bg-transparent {{ container_class }}" >
   <div class="{% if style == 'inset' %}max-w-site px-5 lg:px-10 py-5 mx-auto{% endif %}">
     <div class="{% if style == 'inset' %}media-style-container{% endif %}">
-      {% render 'background-video',
-        video: video,
-        fallback_image: fallback_image,
-        component_id: section.id
-      %}
+      {% if fallback_image %}
+        <img
+          class="custom-img-txt"
+          src="{{ fallback_image | img_url: '1600x' }}"
+          srcset="
+            {{fallback_image | img_url: '415x' }} 415w,
+            {{fallback_image | img_url: '768x' }} 768w,
+            {{ fallback_image | img_url: '1024x' }} 1024w,
+            {{ fallback_image | img_url: '1600x' }} 1600w,
+            {{ fallback_image | img_url: '2048x' }} 2048w
+          "
+          sizes="100vw"
+          alt="Recipes Banner"
+          width="{{fallback_image.width}}"
+          height="{{fallback_image.height}}"
+          loading="lazy"
+          fetchpriority="low"
+        />        
+      {% elsif video %}
+        {% render 'background-video',
+          video: video,
+          fallback_image: fallback_image,
+          component_id: section.id
+        %}
+      {% endif %}
     </div>
   </div>
   <div

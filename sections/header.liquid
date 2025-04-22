@@ -1,4 +1,7 @@
-{{ 'custom-header.scss.css' | asset_url | stylesheet_tag }}  {% comment %} scss {% endcomment %}
+<link rel="preload" href="{{ 'custom-header.scss.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-header.scss.css' | asset_url }}">
+</noscript>
 {% comment %}theme-check-disable TemplateLength{% endcomment %}
 {%- liquid
   assign color_scheme = section.settings.color_scheme | default: 'primary'
@@ -56,7 +59,7 @@
         {% capture image_size %}{{ section.settings.logo_max_width | escape }}x{% endcapture %}
         {% capture image_size_2x %}{{ section.settings.logo_max_width | times: 2 }}x{% endcapture %}
         <div style="max-width: {{ section.settings.logo_max_width }}px;">
-          <img src="{{ logo | image_url: width: image_size_2x }}" alt="{{ shop.name }}" width="{{ logo.width }}" height="{{ logo.height }}" loading="lazy">
+          <img src="{{ logo | image_url: width: image_size_2x }}" alt="{{ shop.name }}" width="{{ logo.width }}" height="{{ logo.height }}">
         </div>
       </a>
     {% else %}

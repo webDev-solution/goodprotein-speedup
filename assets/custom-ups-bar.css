@@ -1,0 +1,33 @@
+[data-section-type=featured-usps-bar] {
+  padding: 40px 0;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=featured-usps-bar] .ups-row {
+    margin-top: 30px;
+  }
+  [data-section-type=featured-usps-bar] .ups-row:first-child {
+    margin-top: 0;
+  }
+}
+[data-section-type=featured-usps-bar] .usps-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=featured-usps-bar] .usps-box .usps-icon {
+    width: 27px;
+  }
+}
+[data-section-type=featured-usps-bar] .usps-box h4 {
+  color: var(--color-pdp-usps-text);
+  font-size: 20px;
+}
+[data-section-type=featured-usps-bar] .usps-box p {
+  color: var(--color-pdp-usps-text);
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=featured-usps-bar] .usps-box p {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,20 @@
+[data-section-type=featured-products-carousel] .section-content .featured-carousel .slick-arrow {
+  font-size: 21px;
+  color: black;
+  z-index: 1;
+}
+[data-section-type=featured-products-carousel] .section-content .featured-carousel .slick-arrow.slick-prev {
+  left: 0;
+}
+[data-section-type=featured-products-carousel] .section-content .featured-carousel .slick-arrow.slick-next {
+  right: 0;
+}
+[data-section-type=featured-products-carousel] .section-content .featured-carousel .carousel-item {
+  margin-bottom: 35px;
+}
+[data-section-type=featured-products-carousel] .section-content .featured-carousel .carousel-item.slick-center .featured-item {
+  scale: 1.2;
+}
+[data-section-type=featured-products-carousel] .section-content .featured-carousel .carousel-item.slick-center .featured-item .featured-product-contnet a {
+  font-weight: bold;
+}

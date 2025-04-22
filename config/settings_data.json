@@ -223,16 +223,16 @@
             "settings": {
               "link_name": "Learn",
               "lay_menu_1": "Our Story",
-              "lay_menu_image_1": "shopify://shop_images/Mega-Menu-01_aac197c1-0b73-4df9-bb9b-fcbfd09425ac.png",
+              "lay_menu_image_1": "shopify://shop_images/Mega-Menu-01_400x_f6addddf-9e62-43e3-8f05-7f91360bd71d.webp",
               "lay_menu_link_1": "shopify://pages/our-story",
               "lay_menu_2": "FAQ",
-              "lay_menu_image_2": "shopify://shop_images/Mega-Menu-08.png",
+              "lay_menu_image_2": "shopify://shop_images/Mega-Menu-08_400x_2418271f-20c9-4170-8d93-6a399b65e151.webp",
               "lay_menu_link_2": "shopify://pages/faq-1",
               "lay_menu_3": "Recipes",
-              "lay_menu_image_3": "shopify://shop_images/Mega-Menu-03.png",
+              "lay_menu_image_3": "shopify://shop_images/Mega-Menu-03_400x_4c8b8354-708f-4481-8752-629809ea948f.webp",
               "lay_menu_link_3": "shopify://blogs/recipes",
               "lay_menu_4": "Ingredients",
-              "lay_menu_image_4": "shopify://shop_images/INGREDIENTS-MENU-02.png",
+              "lay_menu_image_4": "shopify://shop_images/INGREDIENTS-MENU-02_400x_164982e5-e109-4818-995c-b6c808ae00e2.webp",
               "lay_menu_link_4": "shopify://pages/ingredients"
             }
           },
@@ -249,7 +249,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "gift-card-1",
-              "button_link": "shopify://products/giftcard",
+              "button_link": "/collections/accessories#GiftCard",
               "button_label": ""
             }
           },
@@ -275,7 +275,7 @@
             "type": "mobile_menu",
             "disabled": true,
             "settings": {
-              "image": "shopify://shop_images/5SingleServingsEN-02.png",
+              "image": "shopify://shop_images/5SingleServingsEN-02.webp",
               "title": "Sample Pack",
               "link": "shopify://products/sample-pack",
               "badge_label": ""
@@ -312,7 +312,7 @@
           "mobile_menu_k9ywQn": {
             "type": "mobile_menu",
             "settings": {
-              "image": "shopify://shop_images/Website-05.png",
+              "image": "shopify://shop_images/Website-05.webp",
               "title": "Shop All+",
               "link": "https://goodprotein.ca/collections/superfood-shake",
               "badge_label": ""

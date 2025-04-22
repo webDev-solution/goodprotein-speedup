@@ -1,5 +1,8 @@
 {% comment %} {{'custom-featured-products-carousel.scss.css' | asset_url | stylesheet_tag }} {% endcomment %}
-{{'custom-featured-products-carousel.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-featured-products-carousel.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-featured-products-carousel.css' | asset_url }}">
+</noscript>
 
 <section data-color-scheme="{{ section.settings.color_scheme }}" data-section-type="featured-products-carousel" class="py-12 bg-scheme-background">
   <div class="page-width">
@@ -13,7 +16,20 @@
         <div class="carousel-item">
           <div class="featured-item">
             <a href="{{product.url}}" class="featured-image-wrapper">
-              <img class="featured-product-image" src="{{ product.featured_image | image_url }}" lazy="loading">
+              <img 
+                class="featured-product-image" 
+                src="{{ product.featured_image | image_url: width: 265 }}" 
+                srcset="
+                  {{ product.featured_image | image_url: width: 185 }} 185w,
+                  {{ product.featured_image | image_url: width: 265 }} 265w,
+                  {{ product.featured_image | image_url: width: 400 }} 400w
+                "
+                sizes="(max-width: 600px) 185px, 265px"
+                loading="lazy"
+                width="265"
+                height="{{ 265 | divided_by: product.featured_image.aspect_ratio | round }}"
+                alt="{{ product.featured_image.alt | escape }}"
+              >
             </a>
             <div class="featured-product-contnet text-center">
               <a href="{{product.url}}">
@@ -50,7 +66,7 @@
   endfor
 -%}
 
-{{'custom-featured-products-carousel.js' | asset_url | script_tag }}
+<script src="{{ 'custom-featured-products-carousel.js' | asset_url }}" defer></script>
 
 {% schema %}
 {

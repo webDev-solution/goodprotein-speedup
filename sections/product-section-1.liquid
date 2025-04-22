@@ -1,18 +1,26 @@
-{{'custom-product-image-text.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-product-image-text.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-product-image-text.css' | asset_url }}">
+</noscript>
 
-<div data-section-type="pdp-section-1" data-color-scheme="{{ section.settings.color_scheme }}" class="relative text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.enable_mobile %} mobile {% endif %}">
+<link rel="preload" href="{{ 'mobile-friendly-product-section-1.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'mobile-friendly-product-section-1.css' | asset_url }}">
+</noscript>
+
+<div data-section-type="pdp-section-1" data-color-scheme="{{ section.settings.color_scheme }}" class="mobile-friendly-product-section-1 relative text-scheme-text bg-scheme-background relative overflow-hidden {% if section.settings.enable_mobile %} mobile {% endif %}">
 <div class="product-section product-section-padding product-section-1">
     <div class="inner_productimg_txt_wrap page-width">
       <div class="inner-product-section-1 grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense gap-10">
         {% if section.settings.image_position == 'left' %}
         <div class="right-product-section-1 lg:col-span-5">
-          <img src="{{ section.settings.image | img_url:'800x' }}" width="" height=""/>
+          <img src="{{ section.settings.image | img_url:'800x' }}" width="{{section.settings.image.width}}" height="{{section.settings.image.height}}" loading="lazy"/>
         </div>
         {% endif %}
         <div class="left-product-section-1 lg:col-span-7">
           <div class="product-section-box">
             {% if section.settings.logo %}
-            <img src="{{ section.settings.logo | img_url:'600x' }}" width="" height=""/>
+            <img src="{{ section.settings.logo | img_url:'600x' }}" width="{{section.settings.logo.width}}" height="{{section.settings.logo.height}}" loading="lazy"/>
             {% endif %}
             <h2 class="heading-template">{{ section.settings.heading }}</h2>
             {% if section.settings.sub_heading %}    
@@ -27,7 +35,7 @@
         </div>
         {% if section.settings.image_position == 'right' %}
         <div class="right-product-section-1 lg:col-span-5">
-          <img src="{{ section.settings.image | img_url:'800x' }}" width="" height=""/>
+          <img src="{{ section.settings.image | img_url:'800x' }}" width="{{section.settings.image.width}}" height="{{section.settings.image.height}}" loading="lazy" />
         </div>
         {% endif %}
         

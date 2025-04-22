@@ -116,7 +116,9 @@ body, p {
 .c_hidden{
   display: none;
 }
-
+.c_hidden img{
+  display:none!important;
+}
 .simple_menu_item{
   padding:10px 18px;
 }
@@ -242,7 +244,7 @@ li:hover button:not(.btn), #headerContainer li:hover > a:not(.btn){
 .megamenu_top_covered h5{
   padding: 15px 20px 15px 35px;
   cursor:pointer;
-      position: relative;
+  position: relative;
 }
 .megamenu_top_covered .right_svg{
   position: absolute;
@@ -329,7 +331,7 @@ li:hover button:not(.btn), #headerContainer li:hover > a:not(.btn){
 }
 .product_content_right .inner_pro_list .product_img{
   width: 100%;
-  max-width: 130px;
+  max-width: 128px;
   margin: 0 auto;
   padding: 0px;
   position: relative;
@@ -674,6 +676,12 @@ footer .section-content{
   .tagline_social_block .drawer_social_icon{
     margin-bottom: 30px;
   }
+  .ab-banner-image--desktop{
+    display: block;
+  }
+  .ab-banner-image--mobile{
+    display: none;
+  }
 }
 @media (max-width: 768px){
   .newsltter_input_btn button{
@@ -718,6 +726,12 @@ footer .section-content{
   }
   .feature-icon-list{
     margin-top: -55px;
+  }
+  .ab-banner-image--desktop{
+    display: none;
+  }
+  .ab-banner-image--mobile{
+    display: block;
   }
 }
 
@@ -923,6 +937,19 @@ display: -webkit-box;
 @media (max-width: 400px){
   .wrapping_gift_shakes .common_gift{
     min-height: 100px;
+  }
+}
+
+@media (max-width: 374px){
+  .ab-banner-content{
+    padding: 30px 5px;
+  }
+  .ab-banner-box{
+    max-width: 300px!important;
+    margin: 0 auto;
+  }
+  .ab-banner-review{
+    font-size: 13px;
   }
 }
 

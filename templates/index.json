@@ -157,7 +157,7 @@
         "text": "<p>All the good stuff your body needs to promote holistic health.</p>",
         "button_title": "Take Your First Sip",
         "button_link": "shopify://products/peanut-butter-all-in-one-shake",
-        "image": "shopify://shop_images/Vanilla-Transparent02.png",
+        "image": "shopify://shop_images/Vanilla-Transparent02.webp",
         "list": "<p><strong>✓</strong> Plant-based protein</p><p><strong>✓ </strong>Organic superfoods</p><p><strong>✓ </strong>Vitamins + minerals</p><p><strong>✓ </strong>Probiotics + fibres</p><p><strong>✓ </strong>Antioxidants</p><p><strong>✓ </strong>BCAAs</p><p><strong>✓ </strong>Omegas + MCTs</p>",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67"
       }
@@ -169,10 +169,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/6._Samantha_1x1_EN.png",
+            "image": "shopify://shop_images/6._Samantha_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/6. Samantha_1x1.mp4",
-            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.png",
+            "fr_image": "shopify://shop_images/6._Samantha_1x1_FR.webp",
             "fr_video_link": ""
           }
         },
@@ -180,10 +180,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/5._Bianka_1x1_EN.png",
+            "image": "shopify://shop_images/5._Bianka_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/5. Bianka.mp4",
-            "fr_image": "shopify://shop_images/5._Bianka_1x1_FR_2.png",
+            "fr_image": "shopify://shop_images/5._Bianka_1x1_FR_2.webp",
             "fr_video_link": ""
           }
         },
@@ -191,10 +191,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.png",
+            "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/4. Samantha B_1x1.mp4",
-            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.png",
+            "fr_image": "shopify://shop_images/4._Samantha_B_1x1_FR_1.webp",
             "fr_video_link": ""
           }
         },
@@ -202,10 +202,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/3._Brooke_1x1_EN.png",
+            "image": "shopify://shop_images/3._Brooke_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/3. Brooke_1x1.mp4",
-            "fr_image": "shopify://shop_images/3._Brooke_1x1_FR.png",
+            "fr_image": "shopify://shop_images/3._Brooke_1x1_FR.webp",
             "fr_video_link": ""
           }
         },
@@ -213,10 +213,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/2._Cassandra_1x1_EN.png",
+            "image": "shopify://shop_images/2._Cassandra_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/2. Cassandra.mp4",
-            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.png",
+            "fr_image": "shopify://shop_images/2._Cassandra_1x1_FR_1.webp",
             "fr_video_link": ""
           }
         },
@@ -224,10 +224,10 @@
           "type": "image",
           "settings": {
             "video_type": "mp4",
-            "image": "shopify://shop_images/1._Andy_1x1_EN.png",
+            "image": "shopify://shop_images/1._Andy_1x1_EN.webp",
             "video_link": "",
             "hosted_video": "shopify://files/videos/1. Andy_1x1.mp4",
-            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.png",
+            "fr_image": "shopify://shop_images/1._Andy_1x1_FR.webp",
             "fr_video_link": ""
           }
         }
@@ -270,84 +270,84 @@
         "image_TpJ8iM": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ingrdients_2024_-_Broccoli.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Broccoli.webp",
             "heading": "Broccoli"
           }
         },
         "image_RiNEFt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/acai-berry.png",
+            "image": "shopify://shop_images/acai-berry.webp",
             "heading": "Acai"
           }
         },
         "image_VYmdrR": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ingrdients_2024_-_Orange.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Orange.webp",
             "heading": "Orange"
           }
         },
         "image_YqEhh8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Coconut.webp",
+            "image": "shopify://shop_images/Coconut_435e5583-6564-4c6f-aeef-ba002a91c280.webp",
             "heading": "Coconut"
           }
         },
         "image_LYc4bf": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ingredients-Goji.png",
+            "image": "shopify://shop_images/ingredients-Goji.webp",
             "heading": "Goji"
           }
         },
         "image_RzjxGM": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ingrdients_2024_-_Shiitake_mushroom.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Shiitake_mushroom.webp",
             "heading": "Shiitake Mushroom"
           }
         },
         "image_L3PGqd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/SPinard.webp",
+            "image": "shopify://shop_images/SPinard_bbe59a6c-24c3-41e7-a39d-43f20fe19170.webp",
             "heading": "Spinach"
           }
         },
         "image_CMbAy8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/pomme-grenade2.png",
+            "image": "shopify://shop_images/pomme-grenade2.webp",
             "heading": "Pomegranate"
           }
         },
         "image_4CHEnN": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ingrdients_2024_-_Sweet_Potato.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Sweet_Potato.webp",
             "heading": "Sweet Potato"
           }
         },
         "image_t88iL7": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1080-Grape.png",
+            "image": "shopify://shop_images/1080-Grape.webp",
             "heading": "Grape"
           }
         },
         "image_KLzBfb": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ingredients-strawberrie.png",
+            "image": "shopify://shop_images/ingredients-strawberrie.webp",
             "heading": "Strawberry"
           }
         },
         "image_cVnFUd": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Ingrdients_2024_-_Maitake_mushroom.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Maitake_mushroom.webp",
             "heading": "Maitake Mushroom"
           }
         }
@@ -386,7 +386,7 @@
       ],
       "settings": {
         "display_on_card": false,
-        "image": "shopify://shop_images/Website-Assets-20.png",
+        "image": "shopify://shop_images/Website-Assets-20.webp",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
@@ -415,9 +415,9 @@
         "image_UYCt9j": {
           "type": "image",
           "settings": {
-            "feature_title": "Protein-<br>Packed",
+            "feature_title": "Protein-Packed",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-01.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-01_320x_5411c049-a8a2-4f59-b2d6-a2c59f12542f.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -425,9 +425,9 @@
         "image_Btyx4j": {
           "type": "image",
           "settings": {
-            "feature_title": "Curbs <br>Cravings",
+            "feature_title": "Curbs Cravings",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-02.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-02_320x_960650ad-5f5d-419c-959d-a258938bf6d0.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -435,9 +435,9 @@
         "image_UHrW7y": {
           "type": "image",
           "settings": {
-            "feature_title": "Supports Gut <br>Flora",
+            "feature_title": "Supports Gut Flora",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-03.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-03_320x_291d7160-8077-4699-bce6-4f5fb99f940b.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -445,9 +445,9 @@
         "image_fnFxcn": {
           "type": "image",
           "settings": {
-            "feature_title": "Smooth and <br>Creamy",
+            "feature_title": "Smooth and Creamy",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-04.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-04_320x_8f42fc9e-4096-4b08-bffb-4dc928082c2d.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -455,9 +455,9 @@
         "image_zt37aQ": {
           "type": "image",
           "settings": {
-            "feature_title": "Ingredients <br>You Know",
+            "feature_title": "Ingredients You Know",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-05.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-05_320x_80883fed-aa52-4bfb-b483-65b0a7fe21f2.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -465,9 +465,9 @@
         "image_JzdQLM": {
           "type": "image",
           "settings": {
-            "feature_title": "Packed with <br>Nutrients",
+            "feature_title": "Packed with Nutrients",
             "feature_text": "",
-            "feature_image": "shopify://shop_images/Icons-Homepage-06.png",
+            "feature_image": "shopify://shop_images/Icons-Homepage-06_320x_76e14123-8b46-484d-8bae-c186c20bee37.webp",
             "feature_url": "",
             "hide_image": false
           }
@@ -563,7 +563,7 @@
         "max_width": 100,
         "text_style": "body",
         "disable_media_style": false,
-        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.png?v=1690812665\" class=\"icon\" loading=\"eager\">",
+        "subtitle": "<img src=\"https://cdn.shopify.com/s/files/1/0012/5573/5405/files/VAlogo_Supporter_Stacked.webp?v=1744500340&amp;width=260\" class=\"icon\" loading=\"lazy\" width=\"260\" height=\"140\">",
         "title": "Every order makes a nutritional impact for a mother or child.",
         "heading_size": "heading-template",
         "richtext": "<p>We are proud to partner with Vitamin Angels, a compassionate non-profit organization that provides life-changing vitamins to millions of mothers and children in more than 70 countries.</p>",
@@ -580,13 +580,16 @@
       "custom_css": [
         "p {font-size: 18px; color: black;}",
         "h2 {color: black;}",
-        ".section-content .text-scheme-text > div {max-width: 550px;}"
+        ".section-content .text-scheme-text > div {max-width: 550px;}",
+        "@media (max-width: 989px) {.custom-img-txt {/* min-height: 450px; */ object-fit: cover; object-position: center; }}",
+        "@media (max-width: 767px) {.custom-img-txt {min-height: 320px; }}",
+        ".lg\\:bg-transparent {height: auto; aspect-ratio: var(--tw-aspect-w) / var(--tw-aspect-h); --tw-aspect-w: 2.35; --tw-aspect-h: 1;}"
       ],
       "settings": {
         "video_url": "",
         "crop": "four-three",
         "crop_desktop": "cinematic",
-        "fallback_image": "shopify://shop_images/Recipes-Banners-Homepage.png",
+        "fallback_image": "shopify://shop_images/Recipes-Banners-Homepage.webp",
         "display_on_card": false,
         "style": "full",
         "place_content": "place-content-center-center",
@@ -611,7 +614,7 @@
         "max_width": "450",
         "btn_text": "Try it Today",
         "btn_url": "shopify://products/mixed-berries-all-in-one-shake",
-        "image": "shopify://shop_images/IMG_5296_1__enhanced_1.png",
+        "image": "shopify://shop_images/IMG_5296_1__enhanced_1.webp",
         "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e"
       }
     }

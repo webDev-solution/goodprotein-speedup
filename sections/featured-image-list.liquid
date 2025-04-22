@@ -1,4 +1,12 @@
-{{'custom-featured-image-text.scss.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'custom-featured-image-text.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'custom-featured-image-text.css' | asset_url }}">
+</noscript>
+
+<link rel="preload" href="{{ 'featured-image-text.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="{{ 'featured-image-text.css' | asset_url }}">
+</noscript>
 
 <section data-section-type="featured-image-text" data-color-scheme="{{ section.settings.color_scheme }}" class="bg-scheme-background">
   <div class="page-width">
@@ -17,7 +25,19 @@
       </div>
       <div class="lg:col-span-4">
         <div class="featured-image-wrapper">
-          <img class="featured-image" src="{{ section.settings.image | image_url }}" lazy="loading">
+          <img 
+            class="featured-image"
+            src="{{ section.settings.image | image_url: width: 384 }}" 
+            srcset="{{ section.settings.image | image_url: width: 384 }},
+                    {{ section.settings.image | image_url: width: 300 }},
+                    {{ section.settings.image | image_url: width: 245 }}, 
+                    {{ section.settings.image | image_url: width: 190 }}
+            " 
+            loading="lazy"
+            width="384"
+            height="447"
+            alt="{{ section.settings.image.alt | escape }}"
+          >
         </div>
       </div>
       <div class="lg:col-span-3 list pl-9">

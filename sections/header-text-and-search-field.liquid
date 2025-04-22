@@ -13,7 +13,8 @@
             <a href="{{ routes.root_url }}" class="footer-logo-image break-words">
               {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
               {%- assign image_size_2x = image_size | times: 2 -%}
-              <img src="{{ section.settings.logo | image_url: width: image_size }}"
+              <img 
+                  src="{{ section.settings.logo | image_url: width: image_size }}"
                   srcset="{{ section.settings.logo | image_url: width: image_size }} 1x, {{ section.settings.logo | image_url: width: image_size_2x }} 2x"
                   width="{{ image_size }}"
                   height="auto"

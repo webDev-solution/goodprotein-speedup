@@ -1,0 +1,224 @@
+[data-section-type=product].background--true {
+  background: var(--color-pdp-background);
+}
+[data-section-type=product] .product-media .splide__arrows {
+  display: none;
+}
+[data-section-type=product] .product-block-title h1 {
+  color: var(--color-pdp-title-color);
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=product] .flavours_buy_qty {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=product] #custom_wrap square-placement {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=product] .flavours_py-section-vertical-spacing {
+    padding-bottom: 20px;
+  }
+}
+
+#watch-testimonial h3.large-hide {
+  display: none;
+}
+#watch-testimonial p {
+  max-width: 500px;
+  margin: 20px auto;
+}
+@media screen and (max-width: 768px) {
+  #watch-testimonial {
+    max-width: initial;
+    padding: 40px 20px;
+  }
+  #watch-testimonial h3 {
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  #watch-testimonial h3.small-hide {
+    display: none;
+  }
+  #watch-testimonial h3.large-hide {
+    display: block;
+  }
+  #watch-testimonial .video_container {
+    margin: 0 -10px;
+    width: calc(100% + 20px);
+  }
+}
+
+[data-section-type=pdp-usps-bar].background--true {
+  background: var(--color-pdp-usps);
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-usps-bar].background--true .product-usps-box .product-usps-icon {
+    width: 27px;
+  }
+}
+[data-section-type=pdp-usps-bar].background--true .product-usps-box h4, [data-section-type=pdp-usps-bar].background--true .product-usps-box p {
+  color: var(--color-pdp-usps-text);
+}
+
+[data-section-type=pdp-section-6] h3 {
+  color: var(--color-pdp-nutrition-title);
+}
+[data-section-type=pdp-section-6] .inner-product-section-6 h4 {
+  color: var(--color-pdp-nutrition-text);
+}
+[data-section-type=pdp-section-6] .inner-product-section-6 p {
+  color: #414141;
+}
+
+[data-section-type=pdp-section-5].background--true {
+  background: var(--color-pdp-section-5);
+}
+[data-section-type=pdp-section-5] .inner-product-section .right-product-section-5 img {
+  border-radius: 30px;
+}
+[data-section-type=pdp-section-5] .product-section-5-carousel {
+  justify-content: center;
+  margin: 40px auto !important;
+}
+[data-section-type=pdp-section-5] .product-section-5-carousel .product-section-box {
+  margin: 20px 10px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-5] .product-section-5-carousel .product-section-box {
+    margin: 10px auto !important;
+  }
+}
+[data-section-type=pdp-section-5] .product-section-5-carousel .product-section-box figure {
+  width: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: var(--color-pdp-section-5-icon);
+}
+
+.product-review-caurosel .product-review-box {
+  max-width: 350px;
+}
+@media screen and (max-width: 768px) {
+  .product-review-caurosel .product-review-box {
+    max-width: 220px;
+  }
+}
+
+[data-section-type=pdp-section-7].background--true {
+  background: var(--color-pdp-section-7);
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-7] h3 {
+    max-width: 300px;
+    margin: 10px auto;
+    line-height: 30px;
+  }
+  [data-section-type=pdp-section-7] h3 br {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-7] h4 br {
+    display: none;
+  }
+}
+[data-section-type=pdp-section-7] .product-section-7-carousel {
+  justify-content: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-7] .product-section-7-carousel {
+    margin: 0 -20px;
+    margin-top: 40px;
+  }
+}
+[data-section-type=pdp-section-7] .product-section-7-carousel .product-section-box {
+  margin: 0 30px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-7] .product-section-7-carousel .product-section-box {
+    margin: 20px 10px;
+    min-width: initial;
+    width: calc(50% - 20px);
+  }
+}
+[data-section-type=pdp-section-7] .product-section-7-carousel .product-section-box figure {
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--color-pdp-section-7-icon);
+  width: 100px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-7] .product-section-7-carousel .product-section-box figure {
+    width: 100px;
+  }
+}
+[data-section-type=pdp-section-7] .product-section-7-carousel .product-section-box figure img {
+  width: 100%;
+  margin: auto;
+}
+
+@media screen and (min-width: 769px) {
+  [data-section-type=pdp-section-3] .product-section-3-carousel.large-hide {
+    display: none;
+  }
+}
+[data-section-type=pdp-section-3].background--true {
+  background: var(--color-pdp-section-3);
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-3] .reviews_wrap h3 {
+    font-size: 26px;
+  }
+}
+[data-section-type=pdp-section-3] .inner_productimg_txt_wrap .left-product-section-1 img {
+  border-radius: 0;
+}
+
+[data-section-type=pdp-section-2].background--true {
+  background: var(--color-pdp-section-2);
+}
+[data-section-type=pdp-section-2] .inner-product-section {
+  padding: 50px 0 70px;
+  margin: 0 -30px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-2] .inner-product-section {
+    margin: 0 -10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  [data-section-type=pdp-section-2] .inner-product-section {
+    margin: 0;
+    padding-top: 20px;
+    flex-wrap: wrap;
+  }
+}
+[data-section-type=pdp-section-2] .inner-product-section .product-section-box {
+  margin: 0 30px;
+}
+@media screen and (max-width: 768px) {
+  [data-section-type=pdp-section-2] .inner-product-section .product-section-box {
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  [data-section-type=pdp-section-2] .inner-product-section .product-section-box {
+    margin: 20px 0;
+  }
+}
+
+[data-section-type=pdp-section-1].background--true {
+  background: var(--color-pdp-section-1);
+}
+
+[data-section-type=pdp-section-faq].background--true {
+  background: var(--color-pdp-section-faq);
+}

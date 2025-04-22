@@ -266,7 +266,7 @@
 
             <div class="mt-10">
               {% form 'new_comment', article %}
-                <h2 class="font-heading heading-secondary text-secondary text-center">{{ 'blogs.comments.title' | t }}</h3>
+                <h2 class="font-heading heading-secondary text-secondary text-center">{{ 'blogs.comments.title' | t }}</h2>
 
                 <div>
                 {{ form.errors | default_errors }}
@@ -422,7 +422,7 @@
 </style>
 
 <script>
-  $(document).ready(function(){
+  document.addEventListener("DOMContentLoaded", function () {
      $('.blog_slider').slick({ 
         slidesToShow: 5,
         slidesToScroll: 1,
