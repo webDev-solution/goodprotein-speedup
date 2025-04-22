@@ -22,7 +22,7 @@
         {{ media | image_url: width: 580 }} 580w
       "
       sizes="{{ sizes | default: '(min-width: 768px) 100vw, 580px' }}"
-      loading="lazy"
+      loading="eager"
       alt="{{ media.alt | escape }}"
       width="{{ media.width }}"
       height="{{ media.height }}"
