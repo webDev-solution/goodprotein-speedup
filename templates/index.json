@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/minieggs_Header_web_desktop_2.webp",
-            "image_mobile": "shopify://shop_images/minieggs_Header_web_mobile_2.png"
+            "image_mobile": "shopify://shop_images/minieggs_Header_web_mobile_2.webp"
           }
         }
       },
