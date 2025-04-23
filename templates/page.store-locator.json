@@ -93,6 +93,13 @@
             "image": "shopify://shop_images/1655400043417.jpg",
             "link": ""
           }
+        },
+        "logo_gBjqME": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Fortinos_logo.png",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -105,7 +112,8 @@
         "logo_Vx3kKh",
         "logo_QyjXNq",
         "logo_rdK8xk",
-        "logo_jPK6K3"
+        "logo_jPK6K3",
+        "logo_gBjqME"
       ],
       "custom_css": [],
       "settings": {
