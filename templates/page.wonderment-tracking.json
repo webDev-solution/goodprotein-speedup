@@ -352,7 +352,9 @@
     },
     "image_text_with_overlay_2_aJfBUD": {
       "type": "image-text-with-overlay-2",
-      "custom_css": [],
+      "custom_css": [
+        ".section-content {width: 75%; margin: auto;}"
+      ],
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/asset_abe87c17f87b416f866979690ad11e9c.png",
