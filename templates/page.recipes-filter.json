@@ -44,6 +44,15 @@
     "holiday_product_video_carousel_mn7HKw": {
       "type": "flavours-carousel",
       "blocks": {
+        "image_rkMLbt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-icon_peanut.png",
+            "flavour_label": "peanut butter",
+            "flavour_tag": "peanut butter",
+            "product_tag": "all-in-one shake"
+          }
+        },
         "image_fjiEWK": {
           "type": "image",
           "settings": {
@@ -59,15 +68,6 @@
             "image": "shopify://shop_images/product-icon_cookies.png",
             "flavour_label": "Cookies & Cream",
             "flavour_tag": "Cookies & Cream",
-            "product_tag": "all-in-one shake"
-          }
-        },
-        "image_rkMLbt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/product-icon_peanut.png",
-            "flavour_label": "peanut butter",
-            "flavour_tag": "peanut butter",
             "product_tag": "all-in-one shake"
           }
         },
@@ -209,9 +209,9 @@
         }
       },
       "block_order": [
+        "image_rkMLbt",
         "image_fjiEWK",
         "image_Faz7wm",
-        "image_rkMLbt",
         "image_LriUWc",
         "image_D4TWHY",
         "image_Vframn",
