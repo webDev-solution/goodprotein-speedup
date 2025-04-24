@@ -190,6 +190,9 @@
     },
     "blog_posts_N9gH6J": {
       "type": "blog-posts",
+      "custom_css": [
+        ".section-content-top-margin {padding: 70px;}"
+      ],
       "name": "Blog posts",
       "settings": {
         "display_on_card": true,
