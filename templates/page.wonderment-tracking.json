@@ -190,11 +190,12 @@
     },
     "blog_posts_N9gH6J": {
       "type": "blog-posts",
+      "disabled": true,
       "custom_css": [
         ".section-content-top-margin {padding: 10px 70px;}",
         ".push-btn {line-height: 20px; padding: 10px 40px; background: #f26d7d; color: #fff; font-weight: 700; border-radius: 999px;}",
         ".push-btn-surface {background: #f26d7d; color: #fff;}",
-        ".mt-10 {margin-top: 0px!important;}"
+        ".mt-10 {margin-top: 0px !important;}"
       ],
       "name": "Blog posts",
       "settings": {
@@ -218,6 +219,7 @@
         "image_8VbfYX": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/asset_7e21378d4d524b6d93446aecb63e49f9.png",
             "image_shape": "default",
             "rotate_image": 0,
             "button_text": "",
@@ -227,6 +229,7 @@
         "image_VfTfqf": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/asset_2b43cdb9bc2f4c73aea779c96df7ea84.png",
             "image_shape": "default",
             "rotate_image": 0,
             "button_text": "",
@@ -248,7 +251,6 @@
         "image_VfTfqf",
         "image_H4k4Jn"
       ],
-      "disabled": true,
       "name": "Collage",
       "settings": {
         "title": "",
@@ -285,6 +287,67 @@
         "button_link": "",
         "color_scheme": ""
       }
+    },
+    "text_columns_with_images_yTkHQD": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_QkUWjj": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/asset_7e21378d4d524b6d93446aecb63e49f9.png",
+            "title": "",
+            "text": "",
+            "cta_link": "https://goodprotein.ca/blogs/recipes/strawberry-shortcake-smoothie?_sc_p=lid%3A0c70b2274942465abb51ae4ea779a3f7-9003320.1745427473*seg%3Aaftership-S10029",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "column_weiJpw": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/asset_2b43cdb9bc2f4c73aea779c96df7ea84.png",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        },
+        "column_VcJtti": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/asset_f4ac082ecda24d6bb2ec5fc07f8953cf.png",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "same_as_section"
+          }
+        }
+      },
+      "block_order": [
+        "column_QkUWjj",
+        "column_weiJpw",
+        "column_VcJtti"
+      ],
+      "name": "Text columns with images",
+      "settings": {
+        "remove_space_top": false,
+        "display_on_card": true,
+        "slideshow_on_mobile": false,
+        "display_full_width": true,
+        "title": "",
+        "text": "",
+        "crop": "",
+        "image_shape": "default",
+        "show_index_on_blocks": false,
+        "index_shape": "star_1",
+        "color_scheme": "",
+        "use_gradient_background": false
+      }
     }
   },
   "order": [
@@ -297,6 +360,7 @@
     "kno",
     "blog_posts_N9gH6J",
     "collage_iTNT6j",
-    "featured_products_carousel_yPrKRr"
+    "featured_products_carousel_yPrKRr",
+    "text_columns_with_images_yTkHQD"
   ]
 }
