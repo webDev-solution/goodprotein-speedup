@@ -74,7 +74,7 @@
         "image_LriUWc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_3.png",
+            "image": "shopify://shop_images/product-icon_caramel.png",
             "flavour_label": "Salted Caramel",
             "flavour_tag": "Salted Caramel",
             "product_tag": "all-in-one shake"
@@ -83,7 +83,7 @@
         "image_Vframn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_4.png",
+            "image": "shopify://shop_images/product-icon_banana.png",
             "flavour_label": "Bananas & Cream",
             "flavour_tag": "Bananas & Cream",
             "product_tag": "all-in-one shake"
@@ -92,7 +92,7 @@
         "image_LDqALH": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_5.png",
+            "image": "shopify://shop_images/product-icon_chai.png",
             "flavour_label": "Chai Latte",
             "flavour_tag": "Chai Latte",
             "product_tag": "all-in-one shake"
@@ -101,7 +101,7 @@
         "image_H6Mdxy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_6.png",
+            "image": "shopify://shop_images/product-icon_moka.png",
             "flavour_label": "Mocha",
             "flavour_tag": "mocha",
             "product_tag": "all-in-one shake"
@@ -110,7 +110,7 @@
         "image_43qr4h": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_7.png",
+            "image": "shopify://shop_images/product-icon_choco-mint.png",
             "flavour_label": "Mint Chocolate Chips",
             "flavour_tag": "Mint Chocolate Chips",
             "product_tag": "all-in-one shake"
@@ -118,9 +118,8 @@
         },
         "image_fj7ELC": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_8.png",
+            "image": "shopify://shop_images/product-icon_mixedberries-11.png",
             "flavour_label": "mixed berries",
             "flavour_tag": "mixed berries",
             "product_tag": "all-in-one shake"
@@ -129,7 +128,7 @@
         "image_D4TWHY": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_9.png",
+            "image": "shopify://shop_images/product-icon_unflavored.png",
             "flavour_label": "unflavored",
             "flavour_tag": "unflavored",
             "product_tag": "all-in-one shake"
@@ -138,7 +137,7 @@
         "image_tLkKJ8": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_10.png",
+            "image": "shopify://shop_images/product-icon_greenapple.png",
             "flavour_label": "green apple",
             "flavour_tag": "green apple",
             "product_tag": "green superfood juice"
@@ -147,7 +146,7 @@
         "image_fx9tyE": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_11.png",
+            "image": "shopify://shop_images/product-icon_mixedberries-17.png",
             "flavour_label": "mixed berries",
             "flavour_tag": "mixed berries",
             "product_tag": "green superfood juice, red superfood juice, all-in-one shake"
@@ -156,7 +155,7 @@
         "image_EPXaKP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_12.png",
+            "image": "shopify://shop_images/product-icon_tropicalfruit.png",
             "flavour_label": "tropical fruits",
             "flavour_tag": "tropical fruits",
             "product_tag": "green superfood juice"
@@ -175,7 +174,7 @@
         "image_LWwwdi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_14.png",
+            "image": "shopify://shop_images/product-icon_turmeric.png",
             "flavour_label": "turmeric chai",
             "flavour_tag": "turmeric chai",
             "product_tag": "golden turmeric latte"
@@ -184,7 +183,7 @@
         "image_TWdwd9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Rectangle_26_15.png",
+            "image": "shopify://shop_images/product-icon_collagen.png",
             "flavour_label": "cocount",
             "flavour_tag": "cocount",
             "product_tag": "plant-based collagen booster"
