@@ -349,6 +349,24 @@
         "color_scheme": "",
         "use_gradient_background": false
       }
+    },
+    "image_text_with_overlay_2_aJfBUD": {
+      "type": "image-text-with-overlay-2",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/asset_abe87c17f87b416f866979690ad11e9c.png",
+        "image_mobile": "shopify://shop_images/asset_abe87c17f87b416f866979690ad11e9c.png",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "full",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "background_color": "",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "text_overlay_color": "same_as_section"
+      }
     }
   },
   "order": [
@@ -362,6 +380,7 @@
     "blog_posts_N9gH6J",
     "collage_iTNT6j",
     "featured_products_carousel_yPrKRr",
-    "text_columns_with_images_yTkHQD"
+    "text_columns_with_images_yTkHQD",
+    "image_text_with_overlay_2_aJfBUD"
   ]
 }
