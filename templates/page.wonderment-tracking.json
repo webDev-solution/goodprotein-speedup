@@ -255,28 +255,29 @@
         "use_gradient_background": false
       }
     },
-    "featured_collection_TUWb3E": {
-      "type": "featured-collection",
-      "name": "Featured collection",
+    "featured_products_carousel_yPrKRr": {
+      "type": "featured-products-carousel",
+      "name": "Featured product carousel",
       "settings": {
         "title": "Best Sellers",
-        "subheading": "",
-        "collection": "superfood-shake",
-        "no_products": 4,
-        "show_view_all": false,
-        "enable_quick_buy": false,
-        "display_on_card": true,
-        "layout": "carousel",
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 4,
-        "slideshow_focus": "center",
-        "mobile_slide_width": "three_fifths",
-        "desktop_slide_width": 30,
-        "autoscroll_mode": "1",
-        "product_tiles_aspect_ratio": "",
-        "image_shape": "",
-        "color_scheme": "",
-        "use_gradient_background": false
+        "text": "",
+        "product_list": [
+          "vanilla-milkshake-all-in-one-shake",
+          "chocolate-fudge-all-in-one-shake",
+          "strawberries-cream-all-in-one-shake",
+          "peanut-butter-all-in-one-shake",
+          "mixed-berries-all-in-one-shake",
+          "unflavoured-all-in-one-shake",
+          "mint-chocolate-chip-all-in-one-shake",
+          "bananas-cream-all-in-one-shake",
+          "chai-latte-all-in-one-shake",
+          "cookies-cream-all-in-one-shake",
+          "mocha-all-in-one-shake",
+          "salted-caramel-all-in-one-shake"
+        ],
+        "button_title": "",
+        "button_link": "",
+        "color_scheme": ""
       }
     }
   },
@@ -290,6 +291,6 @@
     "kno",
     "blog_posts_N9gH6J",
     "collage_iTNT6j",
-    "featured_collection_TUWb3E"
+    "featured_products_carousel_yPrKRr"
   ]
 }
