@@ -165,8 +165,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/product-icon_tropicalfruit.png",
-            "flavour_label": "tropical fruits",
-            "flavour_tag": "tropical fruits",
+            "flavour_label": "tropical fruit",
+            "flavour_tag": "tropical fruit",
             "product_tag": "green superfood juice"
           }
         },
