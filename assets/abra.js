@@ -17,17 +17,17 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
-setTimeout(() => {
+  setTimeout(() => {
     document.querySelectorAll(".swiper-slide select").forEach(function(select) {
-    console.log("select", select)
-        var variantId = select.value;
-        var container = select.closest("[data-abra-container]");
-        if (container && variantId) {
-          container.setAttribute("data-variant-id", variantId);
-        }
-        setTimeout(() => {
-      window.Abra?.render();
-    }, 150);
-      });
-}, 3000)
+      var variantId = select.value;
+      var container = select.closest("[data-abra-container]");
+      if (container && variantId) {
+        container.setAttribute("data-variant-id", variantId);
+      }
+      
+      setTimeout(() => {
+        window.Abra?.render();
+      }, 150);
+    });
+  }, 2000);
 });
