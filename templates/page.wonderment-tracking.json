@@ -271,9 +271,9 @@
         "products_per_row_desktop": 4,
         "slideshow_focus": "center",
         "mobile_slide_width": "three_fifths",
-        "desktop_slide_width": 40,
+        "desktop_slide_width": 30,
         "autoscroll_mode": "1",
-        "product_tiles_aspect_ratio": "",
+        "product_tiles_aspect_ratio": "aspect-w-1 aspect-h-1",
         "image_shape": "",
         "color_scheme": "",
         "use_gradient_background": false
