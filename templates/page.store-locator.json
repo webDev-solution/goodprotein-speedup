@@ -100,6 +100,13 @@
             "image": "shopify://shop_images/Fortinos_logo.png",
             "link": ""
           }
+        },
+        "logo_NVjcHn": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Costco_Wholesale_logo_2010-10-26_svg.webp",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -113,7 +120,8 @@
         "logo_QyjXNq",
         "logo_rdK8xk",
         "logo_jPK6K3",
-        "logo_gBjqME"
+        "logo_gBjqME",
+        "logo_NVjcHn"
       ],
       "custom_css": [],
       "settings": {
