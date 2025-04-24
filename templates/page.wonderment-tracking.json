@@ -192,7 +192,7 @@
       "type": "blog-posts",
       "custom_css": [
         ".section-content-top-margin {padding: 10px 70px;}",
-        ".push-btn {line-height: 20px; padding: 10px 16px; background: var(--btp-btn-bg-color); border-color: var(--btp-btn-bor-color); border-width: var(--btp-btn-bor-width); font-size: var(--btp-btn-font-size); color: var(--btp-btn-font-color); border-radius: var(--btp-btn-bor-rad); font-weight: 700;}"
+        ".push-btn {line-height: 20px; padding: 15px 40px; background: #F26D7D; color:#FFF; font-weight: 700; border-radius: 9999px;}"
       ],
       "name": "Blog posts",
       "settings": {
