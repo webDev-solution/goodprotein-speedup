@@ -15,7 +15,7 @@
         "track_your_order": {
           "type": "html",
           "settings": {
-            "section_html": "<style>\n  .wndr-sx--heading {\n    font-size: 2.5rem;\n    text-align: center;\n  }\n  .wonderment-ab-container > div > form {\n     margin-top: 20px;\n  }\n  .tp-form-header.tp-search-header {\n    display: none !important;\n  }\n</style>\n<h2 class=\"wndr-sx--heading\">Track your order</h2>"
+            "section_html": "<style>\n  .wndr-sx--heading {\n    font-size: 2.5rem;\n    text-align: center;\npadding-top: 20px;\n  }\n  .wonderment-ab-container > div > form {\n     margin-top: 20px;\n  }\n  .tp-form-header.tp-search-header {\n    display: none !important;\n  }\n</style>\n<h2 class=\"wndr-sx--heading\">Track your order</h2>"
           }
         }
       },
