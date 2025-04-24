@@ -80,6 +80,15 @@
             "product_tag": "all-in-one shake"
           }
         },
+        "image_D4TWHY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-icon_unflavored.png",
+            "flavour_label": "unflavored",
+            "flavour_tag": "unflavored",
+            "product_tag": "all-in-one shake"
+          }
+        },
         "image_Vframn": {
           "type": "image",
           "settings": {
@@ -122,15 +131,6 @@
             "image": "shopify://shop_images/product-icon_mixedberries-11.png",
             "flavour_label": "mixed berries",
             "flavour_tag": "mixed berries",
-            "product_tag": "all-in-one shake"
-          }
-        },
-        "image_D4TWHY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/product-icon_unflavored.png",
-            "flavour_label": "unflavored",
-            "flavour_tag": "unflavored",
             "product_tag": "all-in-one shake"
           }
         },
@@ -195,12 +195,12 @@
         "image_Faz7wm",
         "image_rkMLbt",
         "image_LriUWc",
+        "image_D4TWHY",
         "image_Vframn",
         "image_LDqALH",
         "image_H6Mdxy",
         "image_43qr4h",
         "image_fj7ELC",
-        "image_D4TWHY",
         "image_tLkKJ8",
         "image_fx9tyE",
         "image_EPXaKP",
