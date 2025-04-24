@@ -55,7 +55,7 @@
           {% for product in products %}
             {% assign current_variant = product.selected_or_first_available_variant %}
             {% assign products_length = forloop.index %}
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-product-handle="{{ product.handle }}">
               <a>
                 <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.title }}">
                 <h3>
