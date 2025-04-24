@@ -29,5 +29,5 @@ document.addEventListener("DOMContentLoaded", function() {
         window.Abra?.render();
       }, 150);
     });
-  }, 2000);
+  }, 3000);
 });
