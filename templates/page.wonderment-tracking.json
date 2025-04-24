@@ -352,13 +352,14 @@
     },
     "image_text_with_overlay_2_aJfBUD": {
       "type": "image-text-with-overlay-2",
+      "custom_css": [],
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/asset_abe87c17f87b416f866979690ad11e9c.png",
         "image_mobile": "shopify://shop_images/asset_abe87c17f87b416f866979690ad11e9c.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
-        "style": "full",
+        "style": "inset",
         "height": "natural",
         "place_content": "place-content-center-center",
         "text_align": "text-center",
