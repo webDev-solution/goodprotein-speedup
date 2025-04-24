@@ -16,7 +16,7 @@
     .second-carousel-body {
       position: absolute;
       top: 0;
-      width: 100%;
+      width: 130%;
       height: 100%;
       animation-duration: {{ section.settings.carousel_duration }}s;
       animation-iteration-count: infinite;
@@ -32,44 +32,44 @@
 
     /* Second Slide: Starts right, slides into view */
     .second-carousel-body {
-      left: calc(100% - 20px);
+      left: calc(130% - 20px);
       animation-name: slideSecond;
     }
 
     @keyframes slideFirst {
       0% { left: 20px;}
-      99.99% { left: calc(-100% + 20px);}
+      99.99% { left: calc(-130% + 20px);}
       100% { left: 20px; }
     }
 
     @keyframes slideSecond {
-      0% { left: calc(100% + 20px); }
+      0% { left: calc(130% + 20px); }
       99.99% { left: 20px;}
-      100% { left: calc(100% + 20px);}
+      100% { left: calc(130% + 20px);}
     }
 
     @keyframes slideFirstForLargeScreen {
       0% { left: 0% }
-      99.5% { left: -100% }
+      99.5% { left: -130% }
       100% { left: 0; }
     }
 
     @keyframes slideSecondForLargeScreen {
-      0% { left: 100%; }
+      0% { left: 130%; }
       99.5% { left: 0%; }
-      100% { left: 100%; }
+      100% { left: 130%; }
     }
 
     @keyframes slideFirstForLargeScreen {
       0% { left: 0% }
-      99.5% { left: -100% }
+      99.5% { left: -130% }
       100% { left: 0; }
     }
 
     @keyframes slideSecondForLargeScreen {
-      0% { left: 100%; }
+      0% { left: 130%; }
       99.99% { left: 0 }
-      100% { left: 100%; }
+      100% { left: 130%; }
     }
 
     @keyframes slideFirstForSmallScreen {
@@ -218,11 +218,10 @@
     {
       "type": "range",
       "id": "carousel_duration",
-      "label": "Carousel duration",
+      "label": "Slide Rotation Time",
       "min": 5,
       "max": 20,
-      "default": 12,
-      "unit": "sec"
+      "default": 12
     },
     {
       "type": "range",
