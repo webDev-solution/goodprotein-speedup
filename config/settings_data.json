@@ -30,7 +30,7 @@
     "heading_uppercase": false,
     "heading_letterspacing": 0,
     "base_heading_size": "2xl:5xl",
-    "template_heading_size": "sm:sm",
+    "template_heading_size": "2xl:4xl",
     "secondary_heading_size": "xl:xl",
     "type_main_font": "neue_haas_unica_n5",
     "header_font": "font-main",
