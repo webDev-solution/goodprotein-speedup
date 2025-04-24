@@ -9,7 +9,9 @@
     select.addEventListener("change", function(e) {
       var variantId = e.target.value;
       var container = select.closest("[data-abra-container]");
-      container.setAttribute("data-variant-id", variantId);
-    })
-  })
+      if (container && variantId) {
+        container.setAttribute("data-variant-id", variantId);
+      }
+    });
+  });
 })();
