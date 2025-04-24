@@ -152,6 +152,15 @@
             "product_tag": "green superfood juice, red superfood juice, all-in-one shake"
           }
         },
+        "image_gCip7n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-icon_milkshake.png",
+            "flavour_label": "Vanilla Milkshake",
+            "flavour_tag": "Vanilla Milkshake",
+            "product_tag": "all-in-one shake"
+          }
+        },
         "image_EPXaKP": {
           "type": "image",
           "settings": {
@@ -197,15 +206,6 @@
             "flavour_tag": "Vanilla Cupcake",
             "product_tag": "all-in-one shake"
           }
-        },
-        "image_gCip7n": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/product-icon_milkshake.png",
-            "flavour_label": "Vanilla Milkshake",
-            "flavour_tag": "Vanilla Milkshake",
-            "product_tag": "all-in-one shake"
-          }
         }
       },
       "block_order": [
@@ -221,12 +221,12 @@
         "image_fj7ELC",
         "image_tLkKJ8",
         "image_fx9tyE",
+        "image_gCip7n",
         "image_EPXaKP",
         "image_ntm4gX",
         "image_LWwwdi",
         "image_TWdwd9",
-        "image_m4RxpG",
-        "image_gCip7n"
+        "image_m4RxpG"
       ],
       "custom_css": [
         ".slick-slider {margin-bottom: 0px !important; padding-bottom: 0px !important;}",
