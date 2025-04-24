@@ -18,12 +18,14 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".swiper-slide select").forEach(function(select) {
+    console.log("select", select)
         var variantId = select.value;
         var container = select.closest("[data-abra-container]");
         if (container && variantId) {
           container.setAttribute("data-variant-id", variantId);
         }
-        
-        window.Abra?.render();
+        setTimeout(() => {
+      window.Abra?.render();
+    }, 150);
       });
 });
