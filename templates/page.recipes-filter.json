@@ -188,6 +188,24 @@
             "flavour_tag": "cocount",
             "product_tag": "plant-based collagen booster"
           }
+        },
+        "image_m4RxpG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-icon_cupcake.png",
+            "flavour_label": "Vanilla Cupcake",
+            "flavour_tag": "Vanilla Cupcake",
+            "product_tag": "all-in-one shake"
+          }
+        },
+        "image_gCip7n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/product-icon_milkshake.png",
+            "flavour_label": "Vanilla Milkshake",
+            "flavour_tag": "Vanilla Milkshake",
+            "product_tag": "all-in-one shake"
+          }
         }
       },
       "block_order": [
@@ -206,7 +224,9 @@
         "image_EPXaKP",
         "image_ntm4gX",
         "image_LWwwdi",
-        "image_TWdwd9"
+        "image_TWdwd9",
+        "image_m4RxpG",
+        "image_gCip7n"
       ],
       "custom_css": [
         ".slick-slider {margin-bottom: 0px !important; padding-bottom: 0px !important;}",
