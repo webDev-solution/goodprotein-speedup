@@ -193,7 +193,8 @@
       "custom_css": [
         ".section-content-top-margin {padding: 10px 70px;}",
         ".push-btn {line-height: 20px; padding: 10px 40px; background: #f26d7d; color: #fff; font-weight: 700; border-radius: 999px;}",
-        ".push-btn-surface {background: #f26d7d; color: #fff;}"
+        ".push-btn-surface {background: #f26d7d; color: #fff;}",
+        ".mt-10 {margin-top: 0px!important;}"
       ],
       "name": "Blog posts",
       "settings": {
