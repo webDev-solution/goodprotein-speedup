@@ -17,7 +17,8 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll(".swiper-slide select").forEach(function(select) {
+setTimeout(() => {
+    document.querySelectorAll(".swiper-slide select").forEach(function(select) {
     console.log("select", select)
         var variantId = select.value;
         var container = select.closest("[data-abra-container]");
@@ -28,4 +29,5 @@ document.addEventListener("DOMContentLoaded", function() {
       window.Abra?.render();
     }, 150);
       });
+}, 3000)
 });
