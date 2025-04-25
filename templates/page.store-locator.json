@@ -127,7 +127,7 @@
       "settings": {
         "title": "",
         "enable_carousel": true,
-        "carousel_duration": 30,
+        "carousel_duration": 40,
         "carousel_logo_container_width": 160,
         "carousel_logo_container_width_mobile": 1100,
         "max_width": 250,
