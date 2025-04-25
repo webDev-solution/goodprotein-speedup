@@ -1,6 +1,7 @@
 {%- liquid
   assign logos = section.blocks | where: "type", "logo"
   assign enable_carousel = section.settings.enable_carousel
+  assign carousel_logo_container_width = section.settings.carousel_logo_container_width
 -%}
 
 {% if enable_carousel %}
@@ -16,7 +17,7 @@
     .second-carousel-body {
       position: absolute;
       top: 0;
-      width: 130%;
+      width: {{ carousel_logo_container_width }}%;
       height: 100%;
       animation-duration: {{ section.settings.carousel_duration }}s;
       animation-iteration-count: infinite;
@@ -32,44 +33,44 @@
 
     /* Second Slide: Starts right, slides into view */
     .second-carousel-body {
-      left: calc(130% - 20px);
+      left: calc({{ carousel_logo_container_width }}%; - 20px);
       animation-name: slideSecond;
     }
 
     @keyframes slideFirst {
       0% { left: 20px;}
-      99.99% { left: calc(-130% + 20px);}
+      99.99% { left: calc(-{{ carousel_logo_container_width }}%; + 20px);}
       100% { left: 20px; }
     }
 
     @keyframes slideSecond {
-      0% { left: calc(130% + 20px); }
+      0% { left: calc({{ carousel_logo_container_width }}%; + 20px); }
       99.99% { left: 20px;}
-      100% { left: calc(130% + 20px);}
+      100% { left: calc({{ carousel_logo_container_width }}%; + 20px);}
     }
 
     @keyframes slideFirstForLargeScreen {
       0% { left: 0% }
-      99.5% { left: -130% }
+      99.5% { left: -{{ carousel_logo_container_width }}%; }
       100% { left: 0; }
     }
 
     @keyframes slideSecondForLargeScreen {
-      0% { left: 130%; }
+      0% { left: {{ carousel_logo_container_width }}%;; }
       99.5% { left: 0%; }
-      100% { left: 130%; }
+      100% { left: {{ carousel_logo_container_width }}%;; }
     }
 
     @keyframes slideFirstForLargeScreen {
       0% { left: 0% }
-      99.5% { left: -130% }
+      99.5% { left: -{{ carousel_logo_container_width }}%; }
       100% { left: 0; }
     }
 
     @keyframes slideSecondForLargeScreen {
-      0% { left: 130%; }
+      0% { left: {{ carousel_logo_container_width }}%; }
       99.99% { left: 0 }
-      100% { left: 130%; }
+      100% { left: {{ carousel_logo_container_width }}%; }
     }
 
     @keyframes slideFirstForSmallScreen {
@@ -213,7 +214,7 @@
       "type": "checkbox",
       "id": "enable_carousel",
       "label": "Enable Carousel",
-      "default": false
+      "default": true
     },
     {
       "type": "range",
@@ -222,6 +223,16 @@
       "min": 5,
       "max": 20,
       "default": 12
+    },
+    {
+      "type": "range",
+      "id": "carousel_logo_container_width",
+      "label": "Carousel Logo Container Width(Desktop)",
+      "min": 100,
+      "max": 200,
+      "unit": "%",
+      "step": 5,
+      "default": 150
     },
     {
       "type": "range",
