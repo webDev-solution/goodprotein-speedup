@@ -1,7 +1,4 @@
-<link rel="preload" href="{{ 'custom-product-carousel.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-    <link rel="stylesheet" href="{{ 'custom-product-carousel.css' | asset_url }}">
-</noscript>
+{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}
 <style>
   .flavours-carousel .inner_product-video-carousel .product-video-box {
     margin-bottom: 0px;
@@ -17,7 +14,11 @@
     {% for block in section.blocks %}
       <div class="product-section-box product-video-box">
         {% if request.locale.iso_code == 'fr' %}
-          {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+          {% if block.settings.fr_image != blank %}
+            {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+          {% else %}
+            {% assign image_link = block.settings.image | image_url: width: 600 %}
+          {% endif %}
         {% else %}
           {% assign image_link = block.settings.image | image_url: width: 600 %}
         {% endif %}
