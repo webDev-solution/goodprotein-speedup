@@ -352,6 +352,13 @@
             echo main_font_bolder | font_face: font_display: 'swap'
           endif
         -%}
+
+        {% if template contains 'product' %}
+          #modals-menuDrawer {
+            top: 54px !important;
+            info: "theme.liqid - 356";
+          }
+        {% endif %}
   
         {% if settings.heading_uppercase -%}
           {%- capture heading_capitalize -%}uppercase{%- endcapture -%}
