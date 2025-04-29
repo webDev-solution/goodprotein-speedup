@@ -114,6 +114,7 @@
         "button_EfcHV8",
         "bottom_text_fQywKc"
       ],
+      "disabled": true,
       "custom_css": [
         "@media only screen and (max-width: 767px) {.text-scheme-text {padding-top: 0px !important; padding-bottom: 0px !important; } .countdown-banner {margin-top: -150px; }}",
         ".text-scheme-text.bg-scheme-background.overflow-hidden {background-color: #c2e4f2;}"
@@ -292,78 +293,6 @@
         "use_gradient_background": false
       }
     },
-    "video_with_text_overlay_q7wcVp": {
-      "type": "holiday-video-with-text-overlay",
-      "blocks": {
-        "shape_divider_4UP3Pf": {
-          "type": "shape_divider",
-          "settings": {
-            "target_section": "above",
-            "section_color_scheme": "#2994c1",
-            "style": "large-waves_1200x84",
-            "flip_horizontal": true,
-            "enable_animation": false,
-            "animation_direction": ""
-          }
-        },
-        "sticker_GVHFVV": {
-          "type": "sticker",
-          "disabled": true,
-          "settings": {
-            "text": "Sticker",
-            "shape": "star_1",
-            "width": 100,
-            "sticker_font_size": "1.563rem",
-            "image": "shopify://shop_images/almost_gone.png",
-            "half_image_width_on_mobile": false,
-            "horizontal_position": 38,
-            "vertical_position": 26,
-            "rotate": 0,
-            "show_sticker_on_mobile": true,
-            "show_sticker_on_desktop": true,
-            "rotation_animation": "none",
-            "enable_parallax": false,
-            "parallax_speed": 3,
-            "color": "bg-scheme-background text-scheme-text",
-            "color_scheme": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "shape_divider_4UP3Pf",
-        "sticker_GVHFVV"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".py-section-vertical-spacing {padding: 0px !important;}",
-        "p {font-size: 18px; color: black;}",
-        "h2 {color: black;}",
-        ".section-content .text-scheme-text > div {max-width: 450px; position: relative; left: 90px;}",
-        "@media (max-width: 950px) {.section-content .text-scheme-text > div {left: 0; max-width: 950px; text-align: center; background: radial-gradient(#ffffff, transparent); }}",
-        ".inline-block.push-btn {padding-bottom: 20px;}",
-        ".top-text-flavour-saturn {padding-top: 20px;}"
-      ],
-      "settings": {
-        "video_url": "",
-        "crop": "cinematic",
-        "crop_desktop": "cinematic",
-        "fallback_image": "shopify://shop_images/oie_arxUKX4JrtEn.png",
-        "fallback_image_FR": "shopify://shop_images/oie_zdCn6P8J4Ouf.png",
-        "title_color": "#265917",
-        "display_on_card": false,
-        "style": "inset",
-        "place_content": "place-content-center-center",
-        "text_align": "text-left",
-        "title": "Gingerbread Cookie",
-        "heading_size": "heading-base",
-        "richtext": "<p><strong>Tastes like those sweet-yet-spicy  Holiday cookies, fresh from the oven.</strong></p>",
-        "cta_url": "shopify://products/gingerbread-cookie-all-in-one-shake",
-        "cta_text": "Add Cart",
-        "color_scheme": "scheme-2f7b4285-3ceb-4acd-ad87-858359b9ec54",
-        "use_gradient_background": false,
-        "text_overlay_color": "same_as_section"
-      }
-    },
     "ss_comparison_table_2_tttYRr": {
       "type": "holiday-ss-comparison-table-2",
       "blocks": {
@@ -524,137 +453,6 @@
         "text_overlay_color": "same_as_section"
       }
     },
-    "comparison_table_7h99r4": {
-      "type": "holiday-comparison-table",
-      "blocks": {
-        "row_BamgkJ": {
-          "type": "row",
-          "settings": {
-            "title": "Curbs sweet cravings",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check-mark",
-            "column_3_text": "",
-            "column_4_icon": "check_close",
-            "column_4_text": ""
-          }
-        },
-        "row_XxJXUa": {
-          "type": "row",
-          "settings": {
-            "title": "Provide essential nutients",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check-mark",
-            "column_3_text": "",
-            "column_4_icon": "check_close",
-            "column_4_text": ""
-          }
-        },
-        "row_gTrN8K": {
-          "type": "row",
-          "settings": {
-            "title": "Supports your immune system",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check-mark",
-            "column_3_text": "",
-            "column_4_icon": "check_close",
-            "column_4_text": ""
-          }
-        },
-        "row_CtE7g3": {
-          "type": "row",
-          "settings": {
-            "title": "100% natural and plant based",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check_close",
-            "column_3_text": "",
-            "column_4_icon": "",
-            "column_4_text": ""
-          }
-        },
-        "row_4NE996": {
-          "type": "row",
-          "settings": {
-            "title": "Easy to disest",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check_close",
-            "column_3_text": "",
-            "column_4_icon": "",
-            "column_4_text": ""
-          }
-        },
-        "row_LyGiWy": {
-          "type": "row",
-          "settings": {
-            "title": "Supports gun flora",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check_close",
-            "column_3_text": "",
-            "column_4_icon": "",
-            "column_4_text": ""
-          }
-        },
-        "row_pFDeyD": {
-          "type": "row",
-          "settings": {
-            "title": "No unpleasant",
-            "column_1_icon": "check-mark",
-            "column_1_text": "",
-            "column_2_icon": "",
-            "column_2_text": "",
-            "column_3_icon": "check_close",
-            "column_3_text": "",
-            "column_4_icon": "",
-            "column_4_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "row_BamgkJ",
-        "row_XxJXUa",
-        "row_gTrN8K",
-        "row_CtE7g3",
-        "row_4NE996",
-        "row_LyGiWy",
-        "row_pFDeyD"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".product-other-body-template--16191026921581__ss_comparison_table_2_tttYRr {max-width: 800px;}",
-        "@media (min-width: 768px) {.product-other-grid-template--16191026921581__ss_comparison_table_2_tttYRr {grid-template-columns: 50% 25% 25%; }}"
-      ],
-      "settings": {
-        "title_image": "shopify://shop_images/good_protein_more_like_great_protain.png",
-        "display_on_card": true,
-        "title": "",
-        "highlighted_column": "4",
-        "column_1_title": "Good Protain",
-        "column_2_title": "",
-        "enable_column_3": true,
-        "column_3_title": "Them",
-        "enable_column_4": false,
-        "column_4_title": "Column 4",
-        "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
-        "use_gradient_background": false
-      }
-    },
     "060cabc4-f307-455f-93e9-eaf63f9ccdb3": {
       "type": "holiday-product-section-5",
       "blocks": {
@@ -741,6 +539,77 @@
         "background_gradient_icon": "#ffb9db"
       }
     },
+    "review_header_GUGp6V": {
+      "type": "review-header",
+      "blocks": {
+        "stars_yQc6Vt": {
+          "type": "stars",
+          "settings": {
+            "star_color": "#F7C255",
+            "review_description": "20,000+ Verified 5-Star Reviews"
+          }
+        },
+        "review_TwCwik": {
+          "type": "review",
+          "settings": {
+            "review_title": "Great first flavour to try!",
+            "review_text": "Super straightforward–good vanilla flavour, not too sweet and makes a great base for smoothies or other recipes like pancakes.",
+            "review_auther": "Emily C.",
+            "isverified": true
+          }
+        },
+        "review_jEytbJ": {
+          "type": "review",
+          "settings": {
+            "review_title": "Chocolate Fudge is fantastic!",
+            "review_text": "Chocolate deliciousness! Smooth and creamy!",
+            "review_auther": "Cathie P",
+            "isverified": true
+          }
+        },
+        "review_HiYbUz": {
+          "type": "review",
+          "settings": {
+            "review_title": "My favourite protein powder",
+            "review_text": "Absolutely love the Strawberries & Cream protein powder! It tastes great, mixes well and is very gentle on my stomach.",
+            "review_auther": "Annelize L",
+            "isverified": true
+          }
+        },
+        "review_UyKBCL": {
+          "type": "review",
+          "settings": {
+            "review_title": "Found a staple",
+            "review_text": "I have been struggling to get more protein and when I decided to try a powder I couldn’t resist Salted Caramel! It’s so good just mixed with nut-milk or blended into a smoothie! A staple going forward.",
+            "review_auther": "Kristen G",
+            "isverified": true
+          }
+        },
+        "review_EMxxXf": {
+          "type": "review",
+          "settings": {
+            "review_title": "Don’t miss out!",
+            "review_text": "The texture is incredibly smooth, no clumping or grittiness. The peanut butter taste is spot-on and rich in flavour!",
+            "review_auther": "Zeinab R",
+            "isverified": true
+          }
+        }
+      },
+      "block_order": [
+        "stars_yQc6Vt",
+        "review_TwCwik",
+        "review_jEytbJ",
+        "review_HiYbUz",
+        "review_UyKBCL",
+        "review_EMxxXf"
+      ],
+      "name": "Review Header",
+      "settings": {
+        "title": "Tried, Tested, and Loved",
+        "title_color": "#efede9",
+        "background_color": "#cb9ed5"
+      }
+    },
     "product_video_carousel_bAcmiB": {
       "type": "holiday-product-video-carousel",
       "blocks": {
@@ -825,6 +694,7 @@
         "2d93a8a2-e525-40a5-90ba-b84f1033b0cf",
         "20ccd199-380c-41d1-b416-b78bc013d92e"
       ],
+      "disabled": true,
       "custom_css": [
         "div {background: #cb9ed5;}",
         ".inner_product-video-carousel.slick-initialized.slick-slider {margin-bottom: 0px !important; padding-bottom: 30px !important;}",
@@ -954,11 +824,10 @@
     "custom_image_countdown_overlay_fdTwbG",
     "main_345",
     "main_123",
-    "video_with_text_overlay_q7wcVp",
     "ss_comparison_table_2_tttYRr",
     "custom_image_countdown_overlay_HNDtx8",
-    "comparison_table_7h99r4",
     "060cabc4-f307-455f-93e9-eaf63f9ccdb3",
+    "review_header_GUGp6V",
     "product_video_carousel_bAcmiB",
     "faq_igMTLR",
     "video_with_text_overlay_q7wcVp_2"
