@@ -136,6 +136,59 @@
         "text_overlay_color": "same_as_section"
       }
     },
+    "image_with_text_overlay_slideshow_Tn9jDg": {
+      "type": "image-with-text-overlay-slideshow",
+      "blocks": {
+        "slide_DtTEy4": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/minieggs_Header_web_desktop_2_2.webp",
+            "image_mobile": "shopify://shop_images/minieggs_Header_web_mobile_2_d40d4124-73a9-4449-a936-a423fe6d6271.webp"
+          }
+        }
+      },
+      "block_order": [
+        "slide_DtTEy4"
+      ],
+      "name": "Slideshow-HP",
+      "settings": {
+        "vertical_alignment": "center",
+        "horizontal_alignment": "flex-start",
+        "text_alignment": "center",
+        "max_width": "400",
+        "interval": 5,
+        "review_text": "20,000+ 5-Star Reviews",
+        "review_count": 5,
+        "title": "Mini Eggs Is test",
+        "title_font_size": 38,
+        "title_color": "#232323",
+        "use_custom_font": false,
+        "header_font_family": "lato_n4",
+        "subtitle": "Our most popular limited edition is back by popular demand. Grab it before it's gone (again)!",
+        "subtitle_font_size": 20,
+        "subtitle_color": "#232323",
+        "button_text": "Order Now",
+        "button_link": "shopify://products/mini-eggs-all-in-one-shake",
+        "button_text_2": "",
+        "button_link_2": "",
+        "button_width": 330,
+        "button_color": "#ffffff",
+        "button_background_color": "#cb9ed5",
+        "button_color_hover": "#232323",
+        "button_background_color_hover": "#fff9e9",
+        "button_font_size": 28,
+        "button_border_radius": 40,
+        "button_border_color": "#ffffff",
+        "button_border_thickness": 0,
+        "height": 580,
+        "height_mobile": 600,
+        "background-color": "#535353",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "section-width": 120,
+        "lazy_load": true
+      }
+    },
     "main_345": {
       "type": "landing-collections",
       "blocks": {
@@ -545,7 +598,7 @@
         "stars_yQc6Vt": {
           "type": "stars",
           "settings": {
-            "star_color": "#F7C255",
+            "star_color": "#f7c255",
             "review_description": "20,000+ Verified 5-Star Reviews"
           }
         },
@@ -822,6 +875,7 @@
   "order": [
     "main",
     "custom_image_countdown_overlay_fdTwbG",
+    "image_with_text_overlay_slideshow_Tn9jDg",
     "main_345",
     "main_123",
     "ss_comparison_table_2_tttYRr",
