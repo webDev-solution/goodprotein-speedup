@@ -15,7 +15,8 @@
         "h1 {color: #00acea;}",
         ".py-section-vertical-spacing {padding-bottom: 0px;}",
         "@media (max-width: 989px) {.mt-5 {margin-top: 0px; } h1 {margin-bottom: 0px; font-size: calc(var(--template-heading-size) * 1.5); }}",
-        "@media (max-width: 550px) {h1 {font-size: var(--template-heading-size); }}"
+        "@media (max-width: 600px) {h1 {font-size: calc(var(--template-heading-size) * 1.2); }}",
+        "@media (max-width: 425px) {h1 {font-size: var(--template-heading-size); }}"
       ],
       "settings": {
         "display_on_card": false,
