@@ -12,7 +12,8 @@
     "main": {
       "type": "main-page",
       "custom_css": [
-        "h1 {color: #00ACEA;}"
+        "h1 {color: #00acea;}",
+        ".py-section-vertical-spacing {padding-bottom: 0px;}"
       ],
       "settings": {
         "display_on_card": false,
