@@ -120,8 +120,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/product-icon_choco-mint.png",
-            "flavour_label": "Mint Chocolate Chips",
-            "flavour_tag": "Mint Chocolate Chips",
+            "flavour_label": "Mint Chocolate Chip",
+            "flavour_tag": "Mint Chocolate Chip",
             "product_tag": "all-in-one shake"
           }
         },
