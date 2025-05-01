@@ -127,6 +127,7 @@
         },
         "image_fj7ELC": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/product-icon_mixedberries-11.png",
             "flavour_label": "mixed berries",
@@ -138,7 +139,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/product-icon_greenapple.png",
-            "flavour_label": "green apple",
+            "flavour_label": "Green apple",
             "flavour_tag": "green apple",
             "product_tag": "green superfood juice"
           }
