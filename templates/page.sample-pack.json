@@ -169,7 +169,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Sample-Pack-bags_1.png",
-        "image_fr": "shopify://shop_images/Sample-Pack-bags-FR_1.png",
+        "image_fr": "shopify://shop_images/sample-pack-list-FR.png",
         "background_color": "#fffcee",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
