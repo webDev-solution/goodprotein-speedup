@@ -194,12 +194,12 @@ a.sweetness {
 }
 
 #quick-drawer-slot {
-  background: #FFEDB2;
+  background: #8eccf3;
   max-width: 585px;
 }
 #quick-drawer-slot #quickview-container .product-quickview-content .info {
   padding: 50px;
-  background: #FFFAEA;
+  background: #e9f6fd;
   padding-bottom: 100px;
 }
 @media screen and (max-width: 768px) {
