@@ -328,6 +328,7 @@
     },
     "image_text_with_overlay_2_aJfBUD": {
       "type": "image-text-with-overlay-2",
+      "disabled": true,
       "custom_css": [
         ".section-content {width: 75%; margin: auto;}"
       ],
@@ -347,9 +348,47 @@
         "text_overlay_color": "same_as_section"
       }
     },
+    "image_wto_2_Nw3Qfa": {
+      "type": "image-WTO-2",
+      "blocks": {
+        "button_jWYeJd": {
+          "type": "button",
+          "settings": {
+            "cta_url_1": "shopify://pages/refer-a-friend",
+            "cta_text_1": "Refer a friend",
+            "cta_url_2": "",
+            "cta_text_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_jWYeJd"
+      ],
+      "custom_css": [
+        ".section-content {width: 75%; margin: auto;}",
+        "a .push-btn-surface {color: white; font-size: 1.8vw; /* font-family: Gelica Bold; */ background-color: #ff6670; border-radius: 1vw; padding: 1vw 2.2vw; letter-spacing: 1px;}",
+        "@media (min-width: 990px) {.relative.mt-5 {top: 13.5vw; }}",
+        "@media (max-width: 989px) {.mt-5 {margin-top: 0px; } .px-section {padding: 0px; }}",
+        "@media (max-width: 550px) {a .push-btn-surface {font-size: 13px; padding: 7px 20px; }}"
+      ],
+      "name": "Image with text Overlay-2",
+      "settings": {
+        "image": "shopify://shop_images/refer-a-friend.webp",
+        "display_on_card": false,
+        "display_content_below_image_on_mobile": true,
+        "style": "inset",
+        "height": "natural",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "use_special_background": false,
+        "special_background": "",
+        "text_overlay_color": "same_as_section"
+      }
+    },
     "featured_products_carousel_yPrKRr": {
       "type": "featured-products-carousel",
-      "disabled": true,
       "name": "Featured product carousel",
       "settings": {
         "title": "Best Sellers",
@@ -386,6 +425,7 @@
     "collage_iTNT6j",
     "text_columns_with_images_yTkHQD",
     "image_text_with_overlay_2_aJfBUD",
+    "image_wto_2_Nw3Qfa",
     "featured_products_carousel_yPrKRr"
   ]
 }
