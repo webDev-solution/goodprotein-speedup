@@ -246,8 +246,19 @@
                         
                       </div>
                       <div class="product-usps-content">
-                        <h4><ly-as-1334535>20,000+ Verified Reviews</ly-as-1334535></h4>
-                        <p><ly-as-1334536>4.81 out of 5 stars average.</ly-as-1334536></p>
+                        <h4><ly-as-1334535>
+                          {% if request.path contains '/fr' %}
+                            20,000+ avis vérifiés
+                          {% else %}
+                            20,000+ Verified Reviews
+                          {% endif %}
+                          </ly-as-1334535></h4>
+                        <p><ly-as-1334536>
+                          {% if request.path contains '/fr' %}
+                            4.81 étoiles sur 5 en moyenne.
+                          {% else %}
+                            4.81 out of 5 stars average.
+                          {% endif %}</ly-as-1334536></p>
                       </div> 
                     </div>
                   </div>
@@ -260,8 +271,18 @@
                         
                       </div>
                       <div class="product-usps-content">
-                        <h4><ly-as-1334537>60-Day Satisfaction Guarantee</ly-as-1334537></h4>
-                        <p><ly-as-1334538>If you don’t love it, you don’t pay for it.</ly-as-1334538></p>
+                        <h4><ly-as-1334537>
+                          {% if request.path contains '/fr' %}
+                            Garantie de satisfaction de 60 jours
+                          {% else %}
+                            60-Day Satisfaction Guarantee
+                          {% endif %}</ly-as-1334537></h4>
+                        <p><ly-as-1334538>
+                          {% if request.path contains '/fr' %}
+                            Si tu ne l’aimes pas, tu ne le paies pas.
+                          {% else %}
+                            If you don’t love it, you don’t pay for it.
+                          {% endif %}</ly-as-1334538></p>
                       </div>
                     </div>
                   </div>
@@ -274,8 +295,18 @@
                         
                       </div>
                       <div class="product-usps-content">
-                        <h4><ly-as-1334539>Over 20 Million Shakes Sold</ly-as-1334539></h4>
-                        <p><ly-as-1334540>And more than 20 million cravings curbed.</ly-as-1334540></p>
+                        <h4><ly-as-1334539>
+                          {% if request.path contains '/fr' %}
+                            Plus de 20 millions de shakes vendus
+                          {% else %}
+                            Over 20 Million Shakes Sold
+                          {% endif %}</ly-as-1334539></h4>
+                        <p><ly-as-1334540>
+                          {% if request.path contains '/fr' %}
+                            Et plus de 20 millions de fringales comblées.
+                          {% else %}
+                            And more than 20 million cravings curbed.
+                          {% endif %}</ly-as-1334540></p>
                       </div>
                     </div>
                   </div>
