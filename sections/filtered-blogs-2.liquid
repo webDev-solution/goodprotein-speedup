@@ -734,7 +734,7 @@
         } else {
           flavourSelected = tag;
         }
-
+        console.log("flavourSelected", flavourSelected);
         
         [ ...domFlavourSelector ].forEach(randomItem => {
           if (randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue.substring(1, randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue.length - 1) != tag) {
