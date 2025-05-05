@@ -738,7 +738,7 @@
       item.addEventListener("click", function () {
         // 
         // main -> setFilteredPostList
-        const tag = item.querySelector('.flavour-tag-saturn').innerHTML.trim();
+        const tag = item.querySelector('.flavour-tag-saturn').dataset.tagValue;
 
         if (tag == "all") {
           flavourSelected = "";
@@ -748,7 +748,7 @@
 
         
         [ ...domFlavourSelector ].forEach(randomItem => {
-          if (randomItem.querySelector('.flavour-tag-saturn').innerHTML.trim() != tag) {
+          if (randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue != tag) {
             randomItem.classList.remove("active");
           } else {
             randomItem.classList.add("active");
