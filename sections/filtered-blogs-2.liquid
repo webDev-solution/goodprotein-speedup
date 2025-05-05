@@ -451,8 +451,8 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (this.dataset.tagValue.trim() != "all") {
-          secondCategory = this.innerHTML.trim();
+        if (this.dataset.tagValue != "all") {
+          secondCategory = this.dataset.tagValue;
         } else {
           secondCategory = "";
         }
@@ -466,8 +466,8 @@
     });
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (item.dataset.tagValue.trim() != "all") {
-          topCategory = item.innerHTML.trim();
+        if (item.dataset.tagValue != "all") {
+          topCategory = item.dataset.tagValue;
         } else {
           topCategory = "";
         }
