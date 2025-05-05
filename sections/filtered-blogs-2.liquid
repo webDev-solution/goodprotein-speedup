@@ -439,10 +439,6 @@
 
     const postLimite = 12;
     var pageNumber = 1;
-    
-    // --- multi selelctor for flavour ---
-    // var flavourSelected = [];
-    // ---
 
     domTopCategory[0].classList.add("active");
     domSecondCategory[0].classList.add("active");
@@ -510,6 +506,7 @@
       } 
 
       if (topCategory) {
+        console.log("topCategory", topCategory);
         allPostList.forEach(item => {
           if (item.recipe_type.toLowerCase() == topCategory.toLowerCase()) {
             tempPostList.push(item);
@@ -520,6 +517,7 @@
       }
 
       if (secondCategory) {
+        console.log("secondCategory", secondCategory);
         for (let index = 0; index < tempPostList.length;) {
           if (tempPostList[index].product.toLowerCase() != secondCategory.toLowerCase()) {
             tempPostList.splice(index, 1);
@@ -696,16 +694,7 @@
       // var eachCarouselWidth = 120;
       var maxShowFlavourCount = 12;
       var viewportWidth = $(window).width();
-
-      // if (viewportWidth < minWidthForFullCarousel) {
-      //   $('.flavours-carousel .inner_product-video-carousel').slick('unslick');
-      //   if 
-      //   slick_slider(Math.floor(viewportWidth / eachCarouselWidth));
-      // } else {
-      //   $('.flavours-carousel .inner_product-video-carousel').slick('unslick');
       
-      //   slick_slider(maxShowFlavourCount);
-      // }
       $('.flavours-carousel .inner_product-video-carousel').slick("unslick");
       var viewportWidth = $(window).width();
       if (maxShowFlavourCount > showFlavourItemCount) {
