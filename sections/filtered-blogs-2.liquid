@@ -478,7 +478,6 @@
       }
     });
     
-    console.log("test", domTopCategory, domSecondCategory, domFlavourSelector);
     var topCategory = "";
     var secondCategory = "";
     var flavourSelected = "";
@@ -498,7 +497,6 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        console.log("test item", this);
         if (this.innerHTML != "all") {
           secondCategory = this.innerHTML ;
         } else {
@@ -549,7 +547,6 @@
     showBlogs();
     createPageNavigation();
     
-    console.log("test allPostList", allPostList);
 
     function setFilteredPostList () {
       // changed filter condition
@@ -558,7 +555,6 @@
       while(tempPostList.length > 0) {
         tempPostList.pop();
       } 
-            console.log("topCategory", topCategory);
 
       if (topCategory) {
         allPostList.forEach(item => {
@@ -601,7 +597,6 @@
       }
 
       filteredPostList = tempPostList.slice((pageNumber - 1) * postLimite, pageNumber * postLimite);
-      console.log("test filteredPostList", filteredPostList);
       showBlogs();
       createPageNavigation();
     }
@@ -677,7 +672,6 @@
     var showFlavourItemCount = 0;
     
     function changeFlavourCarousel () {
-      console.log("test changeFlavourCarousel");
       showFlavourItemCount = 0;
       var maxShowFlavourCount = 14;
       var flavoursCarouselContainer = $('.flavours-carousel .inner_product-video-carousel');
@@ -688,10 +682,6 @@
       })
       
       flavoursCarouselContainer.slick('unslick');
-      // console.log("test $('.flavours-carousel .inner_product-video-carousel')", $('.flavours-carousel .inner_product-video-carousel'));
-      // restUncarouseledDom.forEach(item => {
-      //   flavoursCarouselContainer[0].appendChild(item);
-      // });
       while(restUncarouseledDom.length > 0) {
         flavoursCarouselContainer[0].appendChild(restUncarouseledDom.pop());
         
@@ -711,7 +701,6 @@
       
       var viewportWidth = $(window).width();
       if (maxShowFlavourCount > showFlavourItemCount) {
-        // $('.flavours-carousel')[0].style.padding = '0 ' + (12 + (100 - 24) * (maxShowFlavourCount - showFlavourItemCount) / maxShowFlavourCount / 2) + 'vw';
         if (viewportWidth < minWidthForFullCarousel) {
           if (Math.floor(viewportWidth / eachCarouselWidth) >= showFlavourItemCount) {
             $('.flavours-carousel')[0].style.padding = '0 ' + (12 + (100 - 24) * (Math.floor(viewportWidth / eachCarouselWidth) - showFlavourItemCount) / Math.floor(viewportWidth / eachCarouselWidth) / 2) + 'vw';
@@ -749,25 +738,12 @@
     }
 
     $(window).on('resize', function() {
-      console.log("test, showFlavourItemCount", showFlavourItemCount);
-      // var minWidthForFullCarousel = 1150;
-      // var eachCarouselWidth = 120;
-      var maxShowFlavourCount = 12;
+      var maxShowFlavourCount = 14;
       var viewportWidth = $(window).width();
 
-      // if (viewportWidth < minWidthForFullCarousel) {
-      //   $('.flavours-carousel .inner_product-video-carousel').slick('unslick');
-      //   if 
-      //   slick_slider(Math.floor(viewportWidth / eachCarouselWidth));
-      // } else {
-      //   $('.flavours-carousel .inner_product-video-carousel').slick('unslick');
-      
-      //   slick_slider(maxShowFlavourCount);
-      // }
       $('.flavours-carousel .inner_product-video-carousel').slick("unslick");
       var viewportWidth = $(window).width();
       if (maxShowFlavourCount > showFlavourItemCount) {
-        // $('.flavours-carousel')[0].style.padding = '0 ' + (12 + (100 - 24) * (maxShowFlavourCount - showFlavourItemCount) / maxShowFlavourCount / 2) + 'vw';
         if (viewportWidth < minWidthForFullCarousel) {
           if (Math.floor(viewportWidth / eachCarouselWidth) >= showFlavourItemCount) {
             $('.flavours-carousel')[0].style.padding = '0 ' + (12 + (100 - 24) * (Math.floor(viewportWidth / eachCarouselWidth) - showFlavourItemCount) / Math.floor(viewportWidth / eachCarouselWidth) / 2) + 'vw';
@@ -803,13 +779,6 @@
         } else {
           flavourSelected = tag;
         }
-        // --- multi selelctor for flavour ---
-        // if (flavourSelected.indexOf(tag) == -1) {
-        //   flavourSelected.push(tag);
-        // } else {
-        //   flavourSelected.splice(flavourSelected.indexOf(tag), 1);
-        // }
-        // ---
 
         
         [ ...domFlavourSelector ].forEach(randomItem => {
