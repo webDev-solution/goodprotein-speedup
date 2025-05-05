@@ -8,7 +8,7 @@
     {% assign all_tags = section.settings.tags | split: ", " %}
 
     {% for tag in all_tags %}
-      <button>{{ tag }}</button>
+      <button  data-tag-value="{{ tag }}">{{ tag }}</button>
     {% endfor %}
   </div>
 </section>
