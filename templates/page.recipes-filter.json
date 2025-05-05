@@ -98,6 +98,14 @@
             "product_tag": "all-in-one shake"
           }
         },
+        "image_8bQ3J7": {
+          "type": "image",
+          "settings": {
+            "flavour_label": "",
+            "flavour_tag": "",
+            "product_tag": ""
+          }
+        },
         "image_LDqALH": {
           "type": "image",
           "settings": {
@@ -216,6 +224,7 @@
         "image_LriUWc",
         "image_D4TWHY",
         "image_Vframn",
+        "image_8bQ3J7",
         "image_LDqALH",
         "image_H6Mdxy",
         "image_43qr4h",
@@ -241,7 +250,7 @@
       "settings": {
         "carousel_title": "Flavours",
         "bg_color": "#ffffff",
-        "itme_show": 12
+        "itme_show": 14
       }
     },
     "raise_image_with_text_overlay_MhEe8t": {
