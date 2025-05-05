@@ -497,7 +497,7 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (this.innerHTML.toLowerCase() != "all" || this.innerHTML.toLowerCase() != "tous") {
+        if (this.innerHTML.toLowerCase() != "all" || this.innerHTML != "Tous") {
           secondCategory = this.innerHTML ;
         } else {
           secondCategory = "";
@@ -512,7 +512,7 @@
     });
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (item.innerHTML.toLowerCase()  != "all" || item.innerHTML.toLowerCase() != "tous") {
+        if (item.innerHTML.toLowerCase()  != "all" || item.innerHTML != "Tous") {
           topCategory = item.innerHTML ;
         } else {
           topCategory = "";
@@ -772,9 +772,9 @@
       item.addEventListener("click", function () {
         // 
         // main -> setFilteredPostList
-        const tag = item.querySelector('.flavour-tag-saturn').innerHTML.trim().toLowerCase() ;
+        const tag = item.querySelector('.flavour-tag-saturn').innerHTML.trim() ;
 
-        if (tag == "all" || tag == "tous") {
+        if (tag == "all" || tag == "Tous") {
           flavourSelected = "";
         } else {
           flavourSelected = tag;
