@@ -418,6 +418,52 @@
 </style>
 
 <script>
+  //   $(document).ready(function(){
+
+  //       var list = $(".list .filter");
+  //       var numToShow = 20;
+  //       var button = $("#next");
+  //       var numInList = list.length;
+  //       list.hide();
+  //       if (numInList > numToShow) {
+  //         button.show();
+  //       }
+  //       list.slice(0, numToShow).show();
+
+  //       button.click(function(){
+  //           var showing = list.filter(':visible').length;
+  //           list.slice(showing - 1, showing + numToShow).fadeIn();
+  //           var nowShowing = list.filter(':visible').length;
+  //           if (nowShowing >= numInList) {
+  //             button.hide();
+  //           }
+  //       });
+
+  // });
+
+  // const list = document.querySelector("#AjaxinatePagination2");
+  // const listItems = list.querySelectorAll("li");
+  // const ajaxLoadMoreBtn = document.querySelector(".ajax-load-more");
+
+  // let k = 6;
+  // let j = 10;
+
+  // ajaxLoadMoreBtn.addEventListener("click", function () {
+  //   let range = `.filter:nth-child(n+${k}):nth-child(-n+${j})`;
+  //   list
+  //     .querySelectorAll(range)
+  //     .forEach((elem) => (elem.style.display = "block"));
+
+  //   if (listItems.length <= j) {
+  //     this.remove();
+  //   } else {
+  //     k += 5;
+  //     j += 5;
+  //   }
+  // });
+</script>
+
+<script>
   document.addEventListener("DOMContentLoaded", function() {
     const domTopCategory = document.querySelectorAll('.button-group-container-saturn')[0].children;
     const domSecondCategory = document.querySelectorAll('.button-group-container-saturn')[1].children;
@@ -432,6 +478,7 @@
       }
     });
     
+    console.log("test", domTopCategory, domSecondCategory, domFlavourSelector);
     var topCategory = "";
     var secondCategory = "";
     var flavourSelected = "";
@@ -439,6 +486,10 @@
 
     const postLimite = 12;
     var pageNumber = 1;
+    
+    // --- multi selelctor for flavour ---
+    // var flavourSelected = [];
+    // ---
 
     domTopCategory[0].classList.add("active");
     domSecondCategory[0].classList.add("active");
@@ -447,8 +498,9 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (this.dataset.tagValue != "all") {
-          secondCategory = this.dataset.tagValue.substring(1, this.dataset.tagValue.length - 1);
+        console.log("test item", this);
+        if (this.innerHTML.trim() != "all") {
+          secondCategory = this.innerHTML.trim();
         } else {
           secondCategory = "";
         }
@@ -462,8 +514,8 @@
     });
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (item.dataset.tagValue != "all") {
-          topCategory = item.dataset.tagValue.substring(1, item.dataset.tagValue.length - 1);
+        if (item.innerHTML.trim() != "all") {
+          topCategory = item.innerHTML.trim();
         } else {
           topCategory = "";
         }
@@ -496,6 +548,8 @@
     });
     showBlogs();
     createPageNavigation();
+    
+    console.log("test allPostList", allPostList);
 
     function setFilteredPostList () {
       // changed filter condition
@@ -504,9 +558,9 @@
       while(tempPostList.length > 0) {
         tempPostList.pop();
       } 
+            console.log("topCategory", topCategory);
 
       if (topCategory) {
-        console.log("topCategory", topCategory);
         allPostList.forEach(item => {
           if (item.recipe_type.toLowerCase() == topCategory.toLowerCase()) {
             tempPostList.push(item);
@@ -517,7 +571,6 @@
       }
 
       if (secondCategory) {
-        console.log("secondCategory", secondCategory);
         for (let index = 0; index < tempPostList.length;) {
           if (tempPostList[index].product.toLowerCase() != secondCategory.toLowerCase()) {
             tempPostList.splice(index, 1);
@@ -548,6 +601,7 @@
       }
 
       filteredPostList = tempPostList.slice((pageNumber - 1) * postLimite, pageNumber * postLimite);
+      console.log("test filteredPostList", filteredPostList);
       showBlogs();
       createPageNavigation();
     }
@@ -566,7 +620,7 @@
       // changed filter condition
       pageNumber = 1;
       var pageNavigationNumber = document.querySelector(".page-navigation-number");
-      pageNavigationNumber.innerHTML = "";
+      pageNavigationNumber.innerHTML.trim() = "";
       let pageCount = Math.ceil(tempPostList.length / postLimite);
       if (pageCount) {
         document.querySelector(".pageNavigationContainer").style.display = "flex";
@@ -576,7 +630,7 @@
       }
       for (let i = 1; i <= pageCount; i ++) {
         let spanPageNumber = document.createElement("span");
-        spanPageNumber.innerHTML = i;
+        spanPageNumber.innerHTML.trim() = i;
         spanPageNumber.addEventListener("click", function () {
           pageNumber = i;
           changePageNavigation();
@@ -623,6 +677,7 @@
     var showFlavourItemCount = 0;
     
     function changeFlavourCarousel () {
+      console.log("test changeFlavourCarousel");
       showFlavourItemCount = 0;
       var maxShowFlavourCount = 12;
       var flavoursCarouselContainer = $('.flavours-carousel .inner_product-video-carousel');
@@ -633,6 +688,10 @@
       })
       
       flavoursCarouselContainer.slick('unslick');
+      // console.log("test $('.flavours-carousel .inner_product-video-carousel')", $('.flavours-carousel .inner_product-video-carousel'));
+      // restUncarouseledDom.forEach(item => {
+      //   flavoursCarouselContainer[0].appendChild(item);
+      // });
       while(restUncarouseledDom.length > 0) {
         flavoursCarouselContainer[0].appendChild(restUncarouseledDom.pop());
         
@@ -649,6 +708,19 @@
       } else {
         showFlavourItemCount = maxShowFlavourCount;
       }
+      // [ ...domFlavourSelector ].forEach(item => {
+      //   item.classList.remove("active");
+      //   if (item.querySelector(".product-tag-saturn").innerHTML.trim() == secondCategory) {
+      //     console.log("test, lllllllll")
+      //     item.style.display = "flex";
+      //     showFlavourItemCount ++;
+      //   } else {
+      //     // item.style.display = "none !important";
+      //     // item.remove();
+      //     item.classList.add("hidden-s");
+      //     console.log("test, bbbbbbb", item)
+      //   }
+      // });
       
       var viewportWidth = $(window).width();
       if (maxShowFlavourCount > showFlavourItemCount) {
@@ -690,11 +762,21 @@
     }
 
     $(window).on('resize', function() {
+      console.log("test, showFlavourItemCount", showFlavourItemCount);
       // var minWidthForFullCarousel = 1150;
       // var eachCarouselWidth = 120;
       var maxShowFlavourCount = 12;
       var viewportWidth = $(window).width();
+
+      // if (viewportWidth < minWidthForFullCarousel) {
+      //   $('.flavours-carousel .inner_product-video-carousel').slick('unslick');
+      //   if 
+      //   slick_slider(Math.floor(viewportWidth / eachCarouselWidth));
+      // } else {
+      //   $('.flavours-carousel .inner_product-video-carousel').slick('unslick');
       
+      //   slick_slider(maxShowFlavourCount);
+      // }
       $('.flavours-carousel .inner_product-video-carousel').slick("unslick");
       var viewportWidth = $(window).width();
       if (maxShowFlavourCount > showFlavourItemCount) {
@@ -724,20 +806,28 @@
     function clickFlavourItem() {
       domFlavourSelector = document.querySelector('.flavours-carousel').querySelector(".slick-track").children;
       [ ...domFlavourSelector ].forEach(item => {
+      // domFlavourSelector[item.querySelector('.flavour-tag-saturn').innerHTML.trim()] = item;
       item.addEventListener("click", function () {
         // 
         // main -> setFilteredPostList
-        const tag = item.querySelector('.flavour-tag-saturn').dataset.tagValue.substring(1, item.querySelector('.flavour-tag-saturn').dataset.tagValue.length - 1);
+        const tag = item.querySelector('.flavour-tag-saturn').innerHTML.trim();
 
         if (tag == "all") {
           flavourSelected = "";
         } else {
           flavourSelected = tag;
         }
-        console.log("flavourSelected", flavourSelected);
+        // --- multi selelctor for flavour ---
+        // if (flavourSelected.indexOf(tag) == -1) {
+        //   flavourSelected.push(tag);
+        // } else {
+        //   flavourSelected.splice(flavourSelected.indexOf(tag), 1);
+        // }
+        // ---
+
         
         [ ...domFlavourSelector ].forEach(randomItem => {
-          if (randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue.substring(1, randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue.length - 1) != tag) {
+          if (randomItem.querySelector('.flavour-tag-saturn').innerHTML.trim() != tag) {
             randomItem.classList.remove("active");
           } else {
             randomItem.classList.add("active");
