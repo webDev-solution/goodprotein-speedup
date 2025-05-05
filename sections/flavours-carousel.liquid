@@ -26,7 +26,7 @@
           {{image_link | image_tag: class: 'image', image_size: '400x' }}
         {% endif %}
         <div class="item-label-saturn">{{ block.settings.flavour_label }}</div>
-        <div class="hidden flavour-tag-saturn">{{ block.settings.flavour_tag }}</div>
+        <div class="hidden flavour-tag-saturn" data-tag-value="{{ block.settings.flavour_tag }}">{{ block.settings.flavour_tag }}</div>
         <div class="hidden product-tag-saturn">{{ block.settings.product_tag }}</div>
        <div class="playpause c_hidden"><i class="fa-solid fa-circle-play"></i></div>
       </div>
