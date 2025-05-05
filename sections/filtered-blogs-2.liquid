@@ -499,8 +499,8 @@
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
         console.log("test item", this);
-        if (this.innerHTML.trim() != "all") {
-          secondCategory = this.innerHTML.trim();
+        if (this.innerHTML  != "all") {
+          secondCategory = this.innerHTML ;
         } else {
           secondCategory = "";
         }
@@ -514,8 +514,8 @@
     });
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (item.innerHTML.trim() != "all") {
-          topCategory = item.innerHTML.trim();
+        if (item.innerHTML  != "all") {
+          topCategory = item.innerHTML ;
         } else {
           topCategory = "";
         }
@@ -536,10 +536,10 @@
     [ ...domAllPost ].forEach((item, index) => {
       allPostList.push({
         dom: item,
-        label: item.querySelector(".article-title-saturn").innerHTML.trim(),
-        recipe_type: item.querySelector(".article-recipe-type").innerHTML.trim(),
-        product: item.querySelector(".article-product").innerHTML.trim(),
-        flavour: item.querySelector(".article-flavour").innerHTML.trim()
+        label: item.querySelector(".article-title-saturn").innerHTML ,
+        recipe_type: item.querySelector(".article-recipe-type").innerHTML ,
+        product: item.querySelector(".article-product").innerHTML ,
+        flavour: item.querySelector(".article-flavour").innerHTML 
       });
       tempPostList.push(allPostList[index]);
       if (index < postLimite) {
@@ -620,7 +620,7 @@
       // changed filter condition
       pageNumber = 1;
       var pageNavigationNumber = document.querySelector(".page-navigation-number");
-      pageNavigationNumber.innerHTML.trim() = "";
+      pageNavigationNumber.innerHTML  = "";
       let pageCount = Math.ceil(tempPostList.length / postLimite);
       if (pageCount) {
         document.querySelector(".pageNavigationContainer").style.display = "flex";
@@ -630,7 +630,7 @@
       }
       for (let i = 1; i <= pageCount; i ++) {
         let spanPageNumber = document.createElement("span");
-        spanPageNumber.innerHTML.trim() = i;
+        spanPageNumber.innerHTML  = i;
         spanPageNumber.addEventListener("click", function () {
           pageNumber = i;
           changePageNavigation();
@@ -648,7 +648,7 @@
       filteredPostList = tempPostList.slice((pageNumber - 1) * postLimite, pageNumber * postLimite);
       var pageNavigationNumber = document.querySelector(".page-navigation-number");
       [ ...pageNavigationNumber.children ].forEach(item => {
-        if (item.innerHTML.trim() == pageNumber) {
+        if (item.innerHTML  == pageNumber) {
           item.classList.add("active");
         } else {
           item.classList.remove("active");
@@ -698,7 +698,7 @@
       }
       if (secondCategory) {
         [...flavoursCarouselContainer[0].children].forEach(item => {
-          if (item.querySelector(".product-tag-saturn").innerHTML.trim().includes(secondCategory)) {
+          if (item.querySelector(".product-tag-saturn").innerHTML .includes(secondCategory)) {
             showFlavourItemCount ++;
           } else {
             restUncarouseledDom.push(item);
@@ -710,7 +710,7 @@
       }
       // [ ...domFlavourSelector ].forEach(item => {
       //   item.classList.remove("active");
-      //   if (item.querySelector(".product-tag-saturn").innerHTML.trim() == secondCategory) {
+      //   if (item.querySelector(".product-tag-saturn").innerHTML  == secondCategory) {
       //     console.log("test, lllllllll")
       //     item.style.display = "flex";
       //     showFlavourItemCount ++;
@@ -806,11 +806,11 @@
     function clickFlavourItem() {
       domFlavourSelector = document.querySelector('.flavours-carousel').querySelector(".slick-track").children;
       [ ...domFlavourSelector ].forEach(item => {
-      // domFlavourSelector[item.querySelector('.flavour-tag-saturn').innerHTML.trim()] = item;
+      // domFlavourSelector[item.querySelector('.flavour-tag-saturn').innerHTML ] = item;
       item.addEventListener("click", function () {
         // 
         // main -> setFilteredPostList
-        const tag = item.querySelector('.flavour-tag-saturn').innerHTML.trim();
+        const tag = item.querySelector('.flavour-tag-saturn').innerHTML ;
 
         if (tag == "all") {
           flavourSelected = "";
@@ -827,7 +827,7 @@
 
         
         [ ...domFlavourSelector ].forEach(randomItem => {
-          if (randomItem.querySelector('.flavour-tag-saturn').innerHTML.trim() != tag) {
+          if (randomItem.querySelector('.flavour-tag-saturn').innerHTML  != tag) {
             randomItem.classList.remove("active");
           } else {
             randomItem.classList.add("active");
