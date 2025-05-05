@@ -452,7 +452,7 @@
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
         if (this.dataset.tagValue != "all") {
-          secondCategory = this.dataset.tagValue;
+          secondCategory = this.dataset.tagValue.substring(1, this.dataset.tagValue.length - 2);
         } else {
           secondCategory = "";
         }
@@ -467,7 +467,7 @@
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
         if (item.dataset.tagValue != "all") {
-          topCategory = item.dataset.tagValue;
+          topCategory = item.dataset.tagValue.substring(1, item.dataset.tagValue.length - 2);
         } else {
           topCategory = "";
         }
@@ -738,7 +738,7 @@
       item.addEventListener("click", function () {
         // 
         // main -> setFilteredPostList
-        const tag = item.querySelector('.flavour-tag-saturn').dataset.tagValue;
+        const tag = item.querySelector('.flavour-tag-saturn').dataset.tagValue.substring(1, item.querySelector('.flavour-tag-saturn').dataset.tagValue.length - 2);
 
         if (tag == "all") {
           flavourSelected = "";
@@ -748,7 +748,7 @@
 
         
         [ ...domFlavourSelector ].forEach(randomItem => {
-          if (randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue != tag) {
+          if (randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue.substring(1, randomItem.querySelector('.flavour-tag-saturn').dataset.tagValue.length - 2) != tag) {
             randomItem.classList.remove("active");
           } else {
             randomItem.classList.add("active");
