@@ -451,7 +451,7 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (this.innerHTML.trim() != "all") {
+        if (this.dataset.tagValue.trim() != "all") {
           secondCategory = this.innerHTML.trim();
         } else {
           secondCategory = "";
@@ -466,7 +466,7 @@
     });
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (item.innerHTML.trim() != "all") {
+        if (item.dataset.tagValue.trim() != "all") {
           topCategory = item.innerHTML.trim();
         } else {
           topCategory = "";
