@@ -497,7 +497,7 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (this.innerHTML.toLowerCase() != "all" || this.innerHTML != "Tous") {
+        if (this.innerHTML.toLowerCase() != "all" && this.innerHTML != "Tous") {
           secondCategory = this.innerHTML ;
         } else {
           secondCategory = "";
@@ -512,7 +512,7 @@
     });
     [...domTopCategory].forEach(item => {
       item.addEventListener("click", function () {
-        if (item.innerHTML.toLowerCase()  != "all" || item.innerHTML != "Tous") {
+        if (item.innerHTML.toLowerCase()  != "all" && item.innerHTML != "Tous") {
           topCategory = item.innerHTML ;
         } else {
           topCategory = "";
