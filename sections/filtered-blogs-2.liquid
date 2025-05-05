@@ -418,52 +418,6 @@
 </style>
 
 <script>
-  //   $(document).ready(function(){
-
-  //       var list = $(".list .filter");
-  //       var numToShow = 20;
-  //       var button = $("#next");
-  //       var numInList = list.length;
-  //       list.hide();
-  //       if (numInList > numToShow) {
-  //         button.show();
-  //       }
-  //       list.slice(0, numToShow).show();
-
-  //       button.click(function(){
-  //           var showing = list.filter(':visible').length;
-  //           list.slice(showing - 1, showing + numToShow).fadeIn();
-  //           var nowShowing = list.filter(':visible').length;
-  //           if (nowShowing >= numInList) {
-  //             button.hide();
-  //           }
-  //       });
-
-  // });
-
-  // const list = document.querySelector("#AjaxinatePagination2");
-  // const listItems = list.querySelectorAll("li");
-  // const ajaxLoadMoreBtn = document.querySelector(".ajax-load-more");
-
-  // let k = 6;
-  // let j = 10;
-
-  // ajaxLoadMoreBtn.addEventListener("click", function () {
-  //   let range = `.filter:nth-child(n+${k}):nth-child(-n+${j})`;
-  //   list
-  //     .querySelectorAll(range)
-  //     .forEach((elem) => (elem.style.display = "block"));
-
-  //   if (listItems.length <= j) {
-  //     this.remove();
-  //   } else {
-  //     k += 5;
-  //     j += 5;
-  //   }
-  // });
-</script>
-
-<script>
   document.addEventListener("DOMContentLoaded", function() {
     const domTopCategory = document.querySelectorAll('.button-group-container-saturn')[0].children;
     const domSecondCategory = document.querySelectorAll('.button-group-container-saturn')[1].children;
@@ -478,7 +432,6 @@
       }
     });
     
-    console.log("test", domTopCategory, domSecondCategory, domFlavourSelector);
     var topCategory = "";
     var secondCategory = "";
     var flavourSelected = "";
@@ -498,7 +451,6 @@
     clickFlavourItem();
     [...domSecondCategory].forEach(item => {
       item.addEventListener("click", function () {
-        console.log("test item", this);
         if (this.innerHTML.trim() != "all") {
           secondCategory = this.innerHTML.trim();
         } else {
@@ -548,8 +500,6 @@
     });
     showBlogs();
     createPageNavigation();
-    
-    console.log("test allPostList", allPostList);
 
     function setFilteredPostList () {
       // changed filter condition
@@ -558,7 +508,6 @@
       while(tempPostList.length > 0) {
         tempPostList.pop();
       } 
-            console.log("topCategory", topCategory);
 
       if (topCategory) {
         allPostList.forEach(item => {
@@ -601,7 +550,6 @@
       }
 
       filteredPostList = tempPostList.slice((pageNumber - 1) * postLimite, pageNumber * postLimite);
-      console.log("test filteredPostList", filteredPostList);
       showBlogs();
       createPageNavigation();
     }
@@ -620,7 +568,7 @@
       // changed filter condition
       pageNumber = 1;
       var pageNavigationNumber = document.querySelector(".page-navigation-number");
-      pageNavigationNumber.innerHTML.trim() = "";
+      pageNavigationNumber.innerHTML = "";
       let pageCount = Math.ceil(tempPostList.length / postLimite);
       if (pageCount) {
         document.querySelector(".pageNavigationContainer").style.display = "flex";
@@ -630,7 +578,7 @@
       }
       for (let i = 1; i <= pageCount; i ++) {
         let spanPageNumber = document.createElement("span");
-        spanPageNumber.innerHTML.trim() = i;
+        spanPageNumber.innerHTML = i;
         spanPageNumber.addEventListener("click", function () {
           pageNumber = i;
           changePageNavigation();
@@ -677,7 +625,6 @@
     var showFlavourItemCount = 0;
     
     function changeFlavourCarousel () {
-      console.log("test changeFlavourCarousel");
       showFlavourItemCount = 0;
       var maxShowFlavourCount = 12;
       var flavoursCarouselContainer = $('.flavours-carousel .inner_product-video-carousel');
@@ -688,10 +635,6 @@
       })
       
       flavoursCarouselContainer.slick('unslick');
-      // console.log("test $('.flavours-carousel .inner_product-video-carousel')", $('.flavours-carousel .inner_product-video-carousel'));
-      // restUncarouseledDom.forEach(item => {
-      //   flavoursCarouselContainer[0].appendChild(item);
-      // });
       while(restUncarouseledDom.length > 0) {
         flavoursCarouselContainer[0].appendChild(restUncarouseledDom.pop());
         
@@ -708,19 +651,6 @@
       } else {
         showFlavourItemCount = maxShowFlavourCount;
       }
-      // [ ...domFlavourSelector ].forEach(item => {
-      //   item.classList.remove("active");
-      //   if (item.querySelector(".product-tag-saturn").innerHTML.trim() == secondCategory) {
-      //     console.log("test, lllllllll")
-      //     item.style.display = "flex";
-      //     showFlavourItemCount ++;
-      //   } else {
-      //     // item.style.display = "none !important";
-      //     // item.remove();
-      //     item.classList.add("hidden-s");
-      //     console.log("test, bbbbbbb", item)
-      //   }
-      // });
       
       var viewportWidth = $(window).width();
       if (maxShowFlavourCount > showFlavourItemCount) {
@@ -762,7 +692,6 @@
     }
 
     $(window).on('resize', function() {
-      console.log("test, showFlavourItemCount", showFlavourItemCount);
       // var minWidthForFullCarousel = 1150;
       // var eachCarouselWidth = 120;
       var maxShowFlavourCount = 12;
@@ -806,7 +735,6 @@
     function clickFlavourItem() {
       domFlavourSelector = document.querySelector('.flavours-carousel').querySelector(".slick-track").children;
       [ ...domFlavourSelector ].forEach(item => {
-      // domFlavourSelector[item.querySelector('.flavour-tag-saturn').innerHTML.trim()] = item;
       item.addEventListener("click", function () {
         // 
         // main -> setFilteredPostList
@@ -817,13 +745,6 @@
         } else {
           flavourSelected = tag;
         }
-        // --- multi selelctor for flavour ---
-        // if (flavourSelected.indexOf(tag) == -1) {
-        //   flavourSelected.push(tag);
-        // } else {
-        //   flavourSelected.splice(flavourSelected.indexOf(tag), 1);
-        // }
-        // ---
 
         
         [ ...domFlavourSelector ].forEach(randomItem => {
