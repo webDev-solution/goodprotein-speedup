@@ -389,6 +389,7 @@
     },
     "featured_products_carousel_yPrKRr": {
       "type": "featured-products-carousel",
+      "disabled": true,
       "name": "Featured product carousel",
       "settings": {
         "title": "Best Sellers",
