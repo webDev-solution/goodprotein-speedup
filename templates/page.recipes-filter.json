@@ -84,8 +84,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/product-icon_unflavored.png",
-            "flavour_label": "unflavored",
-            "flavour_tag": "unflavored",
+            "flavour_label": "unflavoured",
+            "flavour_tag": "unflavoured",
             "product_tag": "all-in-one shake"
           }
         },
@@ -194,8 +194,8 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/product-icon_collagen.png",
-            "flavour_label": "cocount",
-            "flavour_tag": "cocount",
+            "flavour_label": "coconut",
+            "flavour_tag": "coconut",
             "product_tag": "plant-based collagen booster"
           }
         },
