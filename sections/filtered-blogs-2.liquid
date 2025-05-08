@@ -114,12 +114,12 @@
     <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" />
   </button>
 </div>
-{% style %}
+{% comment %} {% style %}
 {% assign item_container_max_width = flavour_length | times: section.settings.item_max_width %}
 .flavour-carousel-{{ section.id }} {
   max-width: {% if item_container_max_width > 1440 %}1440{% else %}{{ item_container_max_width }}{% endif %}px !important;
 }
-{% endstyle %}
+{% endstyle %} {% endcomment %}
 <script>
   const flavourCarousel = document.querySelector('.flavour-carousel-{{ section.id }}');
   const windowsWidth = window.innerWidth;
@@ -128,7 +128,7 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".flavour-carousel-{{ section.id }}").classList.remove("hidden");
-    flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px' : itemContainerMaxWidth * flavourCount + 'px';
+    flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px !important' : itemContainerMaxWidth * flavourCount + 'px !important';
     var itemMaxWidth = {{ section.settings.item_max_width }};
 
     var breakpoints = {
