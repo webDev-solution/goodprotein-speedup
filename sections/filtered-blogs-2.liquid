@@ -121,12 +121,12 @@
 }
 {% endstyle %} {% endcomment %}
 <script>
-  const flavourCarousel = document.querySelector('.flavour-carousel-{{ section.id }}');
-  const windowsWidth = window.innerWidth;
-  const flavourCount = flavourCarousel.querySelectorAll('.swiper-slide.non-hide').length;
-  const itemMaxWidth = {{ section.settings.item_max_width }};
-
   document.addEventListener("DOMContentLoaded", () => {
+    const flavourCarousel = document.querySelector('.flavour-carousel-{{ section.id }}');
+    const windowsWidth = window.innerWidth;
+    const flavourCount = flavourCarousel.querySelectorAll('.swiper-slide.non-hide').length;
+    const itemMaxWidth = {{ section.settings.item_max_width }};
+
     document.querySelector(".flavour-carousel-{{ section.id }}").classList.remove("hidden");
     flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px !important' : itemContainerMaxWidth * flavourCount + 'px !important';
     var itemMaxWidth = {{ section.settings.item_max_width }};
@@ -152,11 +152,12 @@
       },
       breakpoints: breakpoints
     });
-  });
-  windows.resize(() => {
-    if (flavourCarousel) {
-      flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px' : itemContainerMaxWidth * flavourCount + 'px';
-    }
+
+    windows.resize(() => {
+      if (flavourCarousel) {
+        flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px' : itemContainerMaxWidth * flavourCount + 'px';
+      }
+    });
   });
 </script>
 {% schema %}
