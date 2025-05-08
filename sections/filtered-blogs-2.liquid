@@ -121,9 +121,14 @@
 }
 {% endstyle %}
 <script>
+  const flavourCarousel = document.querySelector('.flavour-carousel-{{ section.id }}');
+  const windowsWidth = window.innerWidth;
+  const flavourCount = flavourCarousel.querySelectorAll('.swiper-slide.non-hide').length;
+  const itemMaxWidth = {{ section.settings.item_max_width }};
+
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".flavour-carousel-{{ section.id }}").classList.remove("hidden");
-
+    flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px' : itemContainerMaxWidth * flavourCount + 'px';
     var itemMaxWidth = {{ section.settings.item_max_width }};
 
     var breakpoints = {
@@ -149,12 +154,7 @@
     });
   });
   windows.resize(() => {
-    const flavourCarousel = document.querySelector('.flavour-carousel-{{ section.id }}');
-    const windowsWidth = window.innerWidth;
-    const flavourCount = flavourCarousel.querySelectorAll('.swiper-slide.non-hide').length;
-    const itemMaxWidth = {{ section.settings.item_max_width }};
     if (flavourCarousel) {
-      const itemMaxWidth = {{ section.settings.item_max_width }};
       flavourCarousel.style.maxWidth = itemMaxWidth * flavourCount > 1440 ? '1440px' : itemContainerMaxWidth * flavourCount + 'px';
     }
   });
