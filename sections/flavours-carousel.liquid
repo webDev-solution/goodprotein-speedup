@@ -150,7 +150,7 @@
     $(window).on('resize', function() {
       var viewportWidth = $(window).width();
 
-      if (viewportWidth < 3000) {
+      if (viewportWidth < 300) {
         $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
         slick_slider(Math.floor(viewportWidth / 105));
       } else {
