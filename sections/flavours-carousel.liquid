@@ -139,8 +139,8 @@
     
     function showSlickSlider () {
       if ($(window).width() < 1300) {
-        console.log("test, window width", $(window).width(), Math.floor($(window).width() / 95));
-        slick_slider(Math.floor($(window).width() / 95));
+        console.log("test, window width", $(window).width(), Math.floor($(window).width() / 105));
+        slick_slider(Math.floor($(window).width() / 105));
       } else {
         slick_slider({{ section.settings.itme_show }});
       }
@@ -152,7 +152,7 @@
 
       if (viewportWidth < 1300) {
         $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
-        slick_slider(Math.floor(viewportWidth / 95));
+        slick_slider(Math.floor(viewportWidth / 105));
       } else {
         $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
         slick_slider({{ section.settings.itme_show }});
