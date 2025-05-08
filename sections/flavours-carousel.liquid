@@ -138,7 +138,7 @@
 
     
     function showSlickSlider () {
-      if ($(window).width() < 1440) {
+      if ($(window).width() < 110) {
         console.log("test, window width", $(window).width(), Math.floor($(window).width() / 85));
         slick_slider(Math.floor($(window).width() / 85));
       } else {
@@ -150,7 +150,7 @@
     $(window).on('resize', function() {
       var viewportWidth = $(window).width();
 
-      if (viewportWidth < 1440) {
+      if (viewportWidth < 1100) {
         $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
         slick_slider(Math.floor(viewportWidth / 85));
       } else {
