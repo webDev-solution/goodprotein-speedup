@@ -230,9 +230,6 @@
         "image_m4RxpG"
       ],
       "custom_css": [
-        ".slick-slider {margin-bottom: 0px !important; padding-bottom: 0px !important;}",
-        "@media (max-width: 1024px) {.slick-slider {padding-bottom: 0px !important; }}",
-        "@media (max-width: 425px) {.slick-slider {padding-bottom: 0px !important; }}",
         ".product-section {max-width: unset !important; padding: 0 12vw;}",
         "@media (max-width: 600px) {.product-section {padding: 0px 49px; }}",
         ".image-title-container-saturn {display: flex; justify-content: center; padding-top: 3rem;}",
