@@ -1,40 +1,42 @@
-{{'custom-product-carousel.scss.css' | asset_url | stylesheet_tag }}
+{{'custom-product-carousel.css' | asset_url | stylesheet_tag }}
 <style>
+  .flavours-carousel {
+    max-width: 1440px;
+    margin: auto;
+  }
+  @media (max-width: 1440px) {
+    .flavours-carousel {
+      width: 90%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .flavours-carousel {
+      width: 90%;
+    }
+  }
+  @media (max-width: 768px) {
+    .flavours-carousel {
+      width: 80%;
+    }
+  }
+
   .flavours-carousel .inner_product-video-carousel .product-video-box {
     margin-bottom: 0px;
   }
   .flavours-carousel .carousel-title {
     margin-bottom: 15px;
-  }.item-label-saturn
-</style>
-<div class="flavours-carousel product-section product-video-carousel  product-section-padding page-width" id="watch-testimonial">
-  <!-- <div class="inner_product-video-carousel" style="display: none !important"> -->
-  <h2 class="m-3 carousel-title">{{ section.settings.carousel_title }}</h2>
-  <div class="inner_product-video-carousel" style="opacity: 0; border-bottom: 2px solid #2998FF; padding-bottom: 5px !important">
-    {% for block in section.blocks %}
-      <div class="product-section-box product-video-box" style="border-radius: 0px !important">
-        {% if request.locale.iso_code == 'fr' %}
-          {% if block.settings.fr_image != blank %}
-            {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
-          {% else %}
-            {% assign image_link = block.settings.image | image_url: width: 600 %}
-          {% endif %}
-        {% else %}
-          {% assign image_link = block.settings.image | image_url: width: 600 %}
-        {% endif %}
-        {% if image_link != blank %}
-          {{image_link | image_tag: class: 'image', image_size: '400x' }}
-        {% endif %}
-        <div class="item-label-saturn" {% if request.path contains '/fr' %}style="text-transform: none !important"{% endif %}>{{ block.settings.flavour_label }}</div>
-        <div class="hidden flavour-tag-saturn" data-tag-value="!{{ block.settings.flavour_tag }}!">{{ block.settings.flavour_tag }}</div>
-        <div class="hidden product-tag-saturn">{{ block.settings.product_tag }}</div>
-       <div class="playpause c_hidden"><i class="fa-solid fa-circle-play"></i></div>
-      </div>
-    {% endfor %}
-  </div>    
-</div>
+    text-align: center;
+  }
 
-<style>
+  .swiper-button-prev:after {
+    content: '';
+    display: none;
+  }
+  .swiper-button-next:after {
+    content: '';
+    display: none;
+  }
+  
   #shopify-section-{{ section.id }} .product-video-carousel{
     background-color:{{ section.settings.bg_color }};
   }
@@ -45,20 +47,6 @@
     justify-content: center;
     align-items: center;
   }
-/*
-  .v_content {
-    height: 100px;
-    width: 45%;
-    color: #fff;
-    font-size: 24px;
-    line-height: 100px; 
-    text-align: center;
-    background-color: grey;
-    margin: 5px;
-    border: 1px solid lightgrey;
-    display: none;
-  }
-*/
   #loadMore {
     width: 200px;
     color: #000;
@@ -82,88 +70,97 @@
   .item-label-saturn {
     text-transform: capitalize;
     font-size: 13px;
+    text-align: center;
+    padding-top: 5px;
   }
-  @media (max-width: 1500px) {
+  @media (max-width: 1024px) {
     .item-label-saturn {
       font-size: 12px;
     }
   }
-  @media (max-width: 1400px) {
+  @media (max-width: 768px) {
     .item-label-saturn {
-      font-size: 10px;
-    }
-  }
-  /* @media (max-width: 1300px) {
-    .item-label-saturn {
-      font-size: 10px;
-    }
-  } */
-  @media (max-width: 1200px) {
-    .item-label-saturn {
-      font-size: 11px;
-    }
-  }
-  @media (max-width: 1100px) {
-    .item-label-saturn {
-      font-size: 10px;
-    }
-  }
-  @media (max-width: 550px) {
-    .item-label-saturn {
-      font-size: 9px;
+      font-size: 12px;
     }
   }
 </style>
+<div class="flavours-carousel flavours-carousel-{{ section.id }} hidden overflow-hidden"  style="margin: auto; padding: 20px 0 0 0px; background-color:{{ section.settings.bg_color }};">
+  <!-- <div class="inner_product-video-carousel" style="display: none !important"> -->
+  <h2 class="m-3 carousel-title">{{ section.settings.carousel_title }}</h2>
+  <div class="swiper-wrapper" style="padding-bottom: 5px;">
+    {% for block in section.blocks %}
+      {% assign flavour_length = forloop.index %}
+      <div class="product-section-box product-video-box swiper-slide non-hide">
+        {% if request.locale.iso_code == 'fr' %}
+          {% if block.settings.fr_image != blank %}
+            {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+          {% else %}
+            {% assign image_link = block.settings.image | image_url: width: 600 %}
+          {% endif %}
+        {% else %}
+          {% assign image_link = block.settings.image | image_url: width: 600 %}
+        {% endif %}
+        {% if image_link != blank %}
+          {{image_link | image_tag: class: 'image', image_size: '400x' }}
+        {% endif %}
+        <div class="item-label-saturn">{{ block.settings.flavour_label }}</div>
+        <div class="hidden flavour-tag-saturn" data-tag-value="!{{ block.settings.flavour_tag }}!">{{ block.settings.flavour_tag }}</div>
+        <div class="hidden product-tag-saturn">{{ block.settings.product_tag }}</div>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="btn-prev-{{ section.id }} swiper-button-prev">
+    <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle.png?v=1741981965" />
+  </button>
+  <button class="btn-next-{{ section.id }} swiper-button-next">
+    <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" />
+  </button>
+</div>
+<div class="flavour-carousel-bottom-line" style="border-bottom: 2px solid #2998FF; width: 90%; margin: auto"></div>
+<div class="hidden flavour-icon-max-width">{{ section.settings.item_max_width }}</div>
 <script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    function slick_slider(item_show){
-      $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick({
-        centerMode: true,
-        slidesToShow: item_show,
-        autoplay: true,
-        autoplaySpeed: 20000,
-        swipeToSlide: true,
-        arrows:true,
-        prevArrow:'<button type="button" class="slick-prev"><img width="38px" height="38px" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle.png?v=1741981965" /></button>',
-        nextArrow:'<button type="button" class="slick-next"><img width="38px" height="38px" src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" /></button>',
-        // responsive: [
-        //   {
-        //     breakpoint: 768,
-        //     settings: 'unslick'
-        //   }
-        // ]
-      });
-      $('#shopify-section-{{ section.id }} .inner_product-video-carousel')[0].style.opacity = 1;
+  document.addEventListener("DOMContentLoaded", () => {
+    const flavoursContainer =  document.querySelector(".flavours-carousel-{{ section.id }}");
+    flavoursContainer.classList.remove("hidden");
+
+    const itemMaxWidth = {{ section.settings.item_max_width }};
+    const itemCount = {{ flavour_length }};
+
+    if (itemCount * itemMaxWidth < window.innerWidth) {
+      document.querySelector(".flavours-carousel-{{ section.id }}").style.maxWidth = itemCount * itemMaxWidth + "px";
     }
-
-    
-    function showSlickSlider () {
-      if ($(window).width() < 1300) {
-        console.log("test, window width", $(window).width(), Math.floor($(window).width() / 105));
-        slick_slider(Math.floor($(window).width() / 105));
-      } else {
-        slick_slider({{ section.settings.itme_show }});
-      }
-    }
-
-    showSlickSlider();
-    $(window).on('resize', function() {
-      var viewportWidth = $(window).width();
-
-      if (viewportWidth < 1300) {
-        $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
-        slick_slider(Math.floor(viewportWidth / 105));
-      } else {
-        $('#shopify-section-{{ section.id }} .inner_product-video-carousel').slick('unslick');
-        slick_slider({{ section.settings.itme_show }});
+    window.addEventListener("resize", function() {
+      if (itemCount * itemMaxWidth < window.innerWidth) {
+        document.querySelector(".flavours-carousel-{{ section.id }}").style.maxWidth = itemCount * itemMaxWidth + "px";
       }
     });
+
+    var breakpoints = {
+      3000: {
+        slidesPerView: Math.ceil(3000 / itemMaxWidth),
+        spaceBetween: 30,
+      }
+    };
+
+    for (let i = 1; i < (3000 / itemMaxWidth); i++) {
+      breakpoints[3000 - (i * itemMaxWidth)] = {
+        slidesPerView: (Math.ceil((3000 - (i * itemMaxWidth)) / itemMaxWidth) > itemCount ? itemCount : Math.ceil((3000 - (i * itemMaxWidth)) / itemMaxWidth)),
+        spaceBetween: parseInt((i * itemMaxWidth) / 300),
+      };
+    }
+
+    const collectionCarouselProductsContainer = new Swiper('.flavours-carousel-{{ section.id }}', {
+      navigation: {
+        nextEl: '.btn-next-{{ section.id }}',
+        prevEl: '.btn-prev-{{ section.id }}'
+      },
+      breakpoints: breakpoints
+    });
   });
-  
 </script>
 {% schema %}
 {
-  "name": "Carousel",
+  "name": "Flavour Carousel",
   "settings": [
     {
       "type": "text",
@@ -180,7 +177,39 @@
       "id":"itme_show",
       "label":"Show Per Item",
       "default":6
-    }
+    },
+    {
+      "type": "range",
+      "id": "item_max_width",
+      "label": "Item Max Width",
+      "min": 50,
+      "max": 150,
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "items_per_page_1024",
+      "label": "Items per page (Desktop)",
+      "min": 1,
+      "max": 15,
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "items_per_page_768",
+      "label": "Items per page (Tablet)",
+      "min": 1,
+      "max": 10,
+      "default": 7
+    },
+    {
+      "type": "range",
+      "id": "items_per_page_480",
+      "label": "Items per page (Mobile)",
+      "min": 1,
+      "max": 5,
+      "default": 3
+    },
   ],
   "blocks":[
     {
