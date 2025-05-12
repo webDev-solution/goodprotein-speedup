@@ -145,7 +145,7 @@
     for (let i = 1; i < (3000 / itemMaxWidth); i++) {
       breakpoints[3000 - (i * itemMaxWidth)] = {
         slidesPerView: (Math.ceil((3000 - (i * itemMaxWidth)) / itemMaxWidth) > itemCount ? itemCount : Math.ceil((3000 - (i * itemMaxWidth)) / itemMaxWidth)),
-        spaceBetween: parseInt((i * itemMaxWidth) / 200),
+        spaceBetween: parseInt((i * itemMaxWidth) / 300),
       };
     }
 
