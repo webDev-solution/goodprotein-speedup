@@ -626,7 +626,8 @@
         };
       }
 
-      flavoursContainer.style.maxWidth = flavourIconsCount * flavourIconWidth + "px";
+      const maxWidthTemp = flavourIconsCount * flavourIconWidth > 1440 ? 1440 : flavourIconsCount * flavourIconWidth;
+      flavoursContainer.style.maxWidth = flavourIconsCount * maxWidthTemp + "px";
 
       const collectionCarouselProductsContainerD = new Swiper('.flavours-carousel', {
         navigation: {
