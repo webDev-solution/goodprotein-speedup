@@ -8,6 +8,7 @@
   justify-content: center;
 }
 .button-group-container-saturn button {
+    font-weight: 500;
     padding: 7px 32px;
     border: 1.5px solid black;
     border-radius: 31px;
