@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "featured-image": {
@@ -81,8 +90,8 @@
         ".px-sectionxxx {width: 100%; height: 100%; position: absolute; display: grid; top: 0; right: 0; bottom: 0; left: 0;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/banner-mixed_berries.png",
-        "image_mobile": "shopify:\/\/shop_images\/Purple_Smoothie_Bowl-mobile.png",
+        "image": "shopify://shop_images/banner-mixed_berries.png",
+        "image_mobile": "shopify://shop_images/Purple_Smoothie_Bowl-mobile.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": true,
         "style": "full",
@@ -168,7 +177,7 @@
           }
         },
         "c6b65590-9a3e-4f8f-a5dc-597f7fc1e374": {
-          "type": "shopify:\/\/apps\/junip\/blocks\/junip-review-carousel\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
+          "type": "shopify://apps/junip/blocks/junip-review-carousel/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
           "disabled": true,
           "settings": {
             "reviewsType": "product_reviews",
@@ -198,7 +207,7 @@
         "product": "vanilla-cupcake-all-in-one-shake",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default",
-        "media_mobile_width": "w-4\/5",
+        "media_mobile_width": "w-4/5",
         "desktop_media_width": "lg:col-span-6_lg:col-span-6",
         "enable_video_looping": true,
         "thumbnails_position": "left",
@@ -217,7 +226,7 @@
       "custom_css": [],
       "settings": {
         "display_on_card": true,
-        "image": "shopify:\/\/shop_images\/quality.png",
+        "image": "shopify://shop_images/quality.png",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default",
         "blob_type": 1,
@@ -231,7 +240,7 @@
         "subtitle": "",
         "title": "Try Good Protein risk free",
         "heading_size": "heading-template",
-        "richtext": "<h3><strong>100% Money-Back Guarantee<\/strong><\/h3><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.<\/p>",
+        "richtext": "<h3><strong>100% Money-Back Guarantee</strong></h3><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.</p>",
         "ingredient_text": "",
         "text_alignment": "text-left",
         "ingredient_link_t": "",
@@ -285,10 +294,10 @@
         "title": "Try Good Protein Risk-Free",
         "heading_size": "heading-template",
         "site_review": false,
-        "rich_text": "<h5><strong>100% Money-Back Guarantee<\/strong><\/h5><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.<\/p>",
+        "rich_text": "<h5><strong>100% Money-Back Guarantee</strong></h5><p>Shake up your daily nutrition! Try Good Protein for 60 days and see how you feel! If you don’t absolutely love it, for any reason, we’ll refund your money.</p>",
         "display_on_card": false,
-        "content_width_desktop": "lg:w-1\/3",
-        "button_link": "shopify:\/\/collections\/all",
+        "content_width_desktop": "lg:w-1/3",
+        "button_link": "shopify://collections/all",
         "button_label": "Order here",
         "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
         "use_gradient_background": false
@@ -299,7 +308,7 @@
       "custom_css": [],
       "settings": {
         "display_on_card": true,
-        "image": "shopify:\/\/shop_images\/Mockup880g-Unflavoured-T_1.png",
+        "image": "shopify://shop_images/Mockup880g-Unflavoured-T_1.png",
         "crop": "",
         "image_shape": "default",
         "featured_background_color": "#614974",
