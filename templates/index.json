@@ -168,6 +168,7 @@
       "blocks": {
         "d9ad31d4-fe3f-45c8-9769-41c0101c410f": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "image": "shopify://shop_images/6._Samantha_1x1_EN.webp",
@@ -179,6 +180,7 @@
         },
         "247693e3-878b-40c8-bc42-6d01fb3f9600": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "image": "shopify://shop_images/5._Bianka_1x1_EN.webp",
@@ -190,6 +192,7 @@
         },
         "481c3263-1c4e-4352-8093-806c1be1321c": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "image": "shopify://shop_images/4._Samantha_B_1x1_EN_1.webp",
@@ -201,6 +204,7 @@
         },
         "e5b35c6a-72b6-4db3-b215-1b926f2899e2": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "image": "shopify://shop_images/3._Brooke_1x1_EN.webp",
@@ -212,6 +216,7 @@
         },
         "2d93a8a2-e525-40a5-90ba-b84f1033b0cf": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "image": "shopify://shop_images/2._Cassandra_1x1_EN.webp",
@@ -223,6 +228,7 @@
         },
         "20ccd199-380c-41d1-b416-b78bc013d92e": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "image": "shopify://shop_images/1._Andy_1x1_EN.webp",
@@ -252,6 +258,21 @@
         "subheading": "300,000+ Satisfied Canadians",
         "content": "We're inspired every day by the Good Protein community sharing how our shakes have changed the way they think about nutrition."
       }
+    },
+    "1747337948992460d3": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_mhPMHH": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "zarcuc2hswann"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_mhPMHH"
+      ],
+      "settings": {}
     },
     "product_section_3_cx3tcV": {
       "type": "product-section-3",
@@ -626,6 +647,7 @@
     "featured_products_carousel_6LMyGk",
     "featured_image_list_PkfMML",
     "product_video_carousel_bAcmiB",
+    "1747337948992460d3",
     "product_section_3_cx3tcV",
     "image_with_text_ghiRAV",
     "featured_icon_columns_GGzkeD",
