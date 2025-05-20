@@ -1067,8 +1067,30 @@ var afterpay_js_snippet_version = '1.1.6';
       })
       .catch(error => console.log('error', error));
   });
+</script>
 
-  {% if page.handle == 'summer-2025-contest' %}
+{% endif %}
+<style>
+  .loop_cp_body_marked_for_cancellation {
+    margin-top: 2em !important;
+}
+  .modal-content .buttons .btn {
+    background: #1B66CC !important;
+    
+  }
+  .modal-content h2{
+    color: #1B66CC !important;
+  }
+  #pause-btn{
+    color: #fff !important;
+  }
+  .modal-content p {
+    color: #1B66CC !important;
+  }
+</style>
+
+<script>
+    {% if page.handle == 'summer-2025-contest' %}
     // Summer Contest.
     var x = setInterval(function(){ console.log('interval');
         var form = document.querySelector('section form');
@@ -1100,23 +1122,3 @@ var afterpay_js_snippet_version = '1.1.6';
 
   {% endif %}
 </script>
-
-{% endif %}
-<style>
-  .loop_cp_body_marked_for_cancellation {
-    margin-top: 2em !important;
-}
-  .modal-content .buttons .btn {
-    background: #1B66CC !important;
-    
-  }
-  .modal-content h2{
-    color: #1B66CC !important;
-  }
-  #pause-btn{
-    color: #fff !important;
-  }
-  .modal-content p {
-    color: #1B66CC !important;
-  }
-</style>
