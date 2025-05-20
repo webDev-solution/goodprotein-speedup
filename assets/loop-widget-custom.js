@@ -1351,8 +1351,8 @@ function updatePriceInUI({ productId }) {
   }
   if (variant.compare_at_price > 0) {
     let percent = (variant.compare_at_price - variant.price) * 100 / variant.compare_at_price; console.log("- " + Math.round(percent) + "%");
-    document.querySelector(".igSavingsPercentage")?.innerHTML = "- " + Math.round(percent) + "%";
-    document.querySelector(".grid-product__tag")?.classList.remove("hide");
+    document.querySelector(".igSavingsPercentage").innerHTML = "- " + Math.round(percent) + "%";
+    document.querySelector(".grid-product__tag").classList.remove("hide");
   }
   else if (document.querySelector(".grid-product__tag") != undefined) {
     document.querySelector(".grid-product__tag").classList.add("hide");
@@ -1360,8 +1360,8 @@ function updatePriceInUI({ productId }) {
 
   if (product_percent > 0) {
     let percent = product_percent;
-    document.querySelector(".igSavingsPercentage")?.innerHTML = "- " + Math.round(percent) + "%";
-    document.querySelector(".grid-product__tag")?.classList.remove("hide");
+    document.querySelector(".igSavingsPercentage").innerHTML = "- " + Math.round(percent) + "%";
+    document.querySelector(".grid-product__tag").classList.remove("hide");
   }
   else if (document.querySelector(".grid-product__tag") != undefined) {
     document.querySelector(".grid-product__tag").classList.add("hide");
