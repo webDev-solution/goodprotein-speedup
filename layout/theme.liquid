@@ -1098,7 +1098,7 @@ var afterpay_js_snippet_version = '1.1.6';
           console.log(form, 'form');
           var submitButton = document.querySelector('section form button');
           var requiredFields = form.querySelectorAll('[aria-required]');
-          
+          console.log(requiredFields, 'requiredFields');
           function checkForm() { 
             let allFilled = true;
             requiredFields.forEach(field => {
