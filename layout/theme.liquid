@@ -1067,6 +1067,28 @@ var afterpay_js_snippet_version = '1.1.6';
       })
       .catch(error => console.log('error', error));
   });
+
+  // Summer Contest.
+  const form = document.getElementById('myForm');
+  const submitButton = document.getElementById('submitButton');
+  const requiredFields = form.querySelectorAll('input[required]');
+  
+  function checkForm() {
+    let allFilled = true;
+    requiredFields.forEach(field => {
+      if (field.value.length === 0) {
+        allFilled = false;
+      }
+    });
+  
+    if (allFilled) {
+      submitButton.removeAttribute('disabled');
+    } else {
+      submitButton.setAttribute('disabled', 'disabled');
+    }
+  }
+  
+  form.addEventListener('input', checkForm);
 </script>
 
 {% endif %}
