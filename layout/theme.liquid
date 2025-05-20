@@ -1070,26 +1070,34 @@ var afterpay_js_snippet_version = '1.1.6';
 
   {% if page.handle == 'summer-2025-contest' %}
     // Summer Contest.
-    const form = document.querySelector('section form');
-    const submitButton = document.querySelector('section form button');
-    const requiredFields = form.querySelectorAll('[aria-required]');
-    
-    function checkForm() {
-      let allFilled = true;
-      requiredFields.forEach(field => {
-        if (field.value.length === 0) {
-          allFilled = false;
+    var x = setInterval(function(){
+        var form = document.querySelector('section form');
+        if(form){
+          console.log(form, 'form');
+          var submitButton = document.querySelector('section form button');
+          var requiredFields = form.querySelectorAll('[aria-required]');
+          
+          function checkForm() {
+            let allFilled = true;
+            requiredFields.forEach(field => {
+              if (field.value.length === 0) {
+                allFilled = false;
+              }
+            });
+          
+            if (allFilled) {
+              submitButton.removeAttribute('disabled');
+            } else {
+              submitButton.setAttribute('disabled', 'disabled');
+            }
+          }
+          
+          form.addEventListener('input', checkForm);
+          clearInterval(x);
         }
-      });
-    
-      if (allFilled) {
-        submitButton.removeAttribute('disabled');
-      } else {
-        submitButton.setAttribute('disabled', 'disabled');
-      }
-    }
-    
-    form.addEventListener('input', checkForm);
+      
+    }, 500);
+
   {% endif %}
 </script>
 
