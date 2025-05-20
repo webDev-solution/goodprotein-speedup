@@ -1070,9 +1070,9 @@ var afterpay_js_snippet_version = '1.1.6';
 
   {% if page.handle == 'summer-2025-contest' %}
     // Summer Contest.
-    const form = document.getElementById('myForm');
-    const submitButton = document.getElementById('submitButton');
-    const requiredFields = form.querySelectorAll('input[required]');
+    const form = document.querySelector('section form');
+    const submitButton = document.querySelector('section form button');
+    const requiredFields = form.querySelectorAll('[aria-required]');
     
     function checkForm() {
       let allFilled = true;
