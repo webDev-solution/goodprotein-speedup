@@ -395,7 +395,7 @@
     document.querySelectorAll('[data-address-edit]').forEach(function(button) {
       button.addEventListener('click', function(evt) {
         var formId = button.dataset.addressEdit;
-        console.log(formId)
+        console.log(formId, "formId")
         var editButton = document.getElementById('EditFormButton_' + formId);
         var editAddress = document.getElementById('EditAddress_' + formId);
 
