@@ -1,6 +1,537 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{'custom-product-carousel.css' | asset_url | stylesheet_tag }}
+<style>
+  .swiper-slide, .swiper-slide * {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
   }
+  .video-swiper-carousel-container {
+    overflow: hidden;
+  }
+  .video-carousel-title-ss {
+    font-size: calc(var(--full-width-font-size) * 0.9) !important;
+    padding-bottom: var(--full-width-space-above-header);
+    line-height: unset !important;
+    max-width: unset !important;
+    text-align: center !important;
+  }
+  .swiper-slide, .swiper-slide * {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+  }
+  .video-swiper-carousel-container {
+    margin-right: max(35px, var(--full-width-padding));
+    margin-left: max(35px, var(--full-width-padding));
+  }
+  .video-swiper-carousel-container .swiper-button-next {
+    right: 30px;
+  }
+  .video-swiper-carousel-container .swiper-button-prev {
+    left: 30px;
+  }
+  
+  .video-swiper-carousel-container .swiper-slide img,
+  .video-swiper-carousel-container .swiper-slide video {
+    border-radius: 20px;
+  }
+  .video-swiper-carousel-container .swiper-slide img,
+  .video-swiper-carousel-container .swiper-slide video {
+    border-radius: 20px;
+  }
+  @media (min-width: 769px) and (max-width: 1300px) {
+    .video-swiper-carousel-container .swiper-button-next {
+      right: 10px;
+    }
+    .video-swiper-carousel-container .swiper-button-prev {
+      left: 10px;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1439px) {
+    .video-carousel-title-ss {
+      font-size: 60px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .video-carousel-title-ss {
+      font-size: 28px !important;
+      margin-bottom: 0px;
+    }
+    .video-swiper-carousel-container .swiper-slide img,
+    .video-swiper-carousel-container .swiper-slide video {
+      border-radius: 13px;
+    }
+    .video-swiper-carousel-container .swiper-slide img,
+    .video-swiper-carousel-container .swiper-slide video {
+      border-radius: 13px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 50% !important;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      font-size: 24px;
+    }
+    .video-swiper-carousel-container .swiper-button-next {
+      right: 5px !important;
+    }
+    .video-swiper-carousel-container .swiper-button-prev {
+      left: 5px !important;
+    }
+  }
+
+  .swiper-button-prev:after {
+    content: '';
+    display: none;
+  }
+  .swiper-button-next:after {
+    content: '';
+    display: none;
+  }
+  .responsive-btn {
+    font-size: var(--full-width-input-font-size);
+    padding: var(--full-width-button-padding);
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: var(--full-width-padding) auto var(--full-width-padding) auto;
+    width: unset;
+  }
+  .d-flex {
+    display: flex;
+  }
+</style>
+
+{% liquid
+  assign button_text = section.settings.bottom_button_label
+  assign button_link = section.settings.bottom_button_url
+  assign is_white_arrow = section.settings.is_white_arrow
+%}
+
+{% style %}
+.responsive-video-carousel-container {
+  background-color: {{ section.settings.bg_color }};
+  padding-top: var(--full-width-space-above-header);
+  /* padding-bottom: var(--full-width-padding); */
+}
+.responsive-video-carousel-container .responsive-video-text {
+  color: {{ section.settings.text_color }}
+}
+{% endstyle %}
+
+<div class="product-section product-section-padding responsive-video-carousel-container">
+  <h3 class="large-hide video-carousel-title-ss responsive-video-text" >{{ section.settings.heading }}</h3>
+  <h4 class="responsive-video-text">{{ section.settings.subheading }}</h4>
+  <p class="responsive-video-text">{{ section.settings.content }}</p>
+  <div class=" video-swiper-carousel-container video-swiper-carousel-container-{{ section.id }} hide">
+    <div class="swiper-button-prev">
+      {% if is_white_arrow %}
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle_cbfa9320-cef5-4b14-a0d4-ec9150ff4069.png?v=1747800734" />
+      {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle.png?v=1741981965" />
+      {% endif %}
+    </div>
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        <div class="product-section-box product-video-box swiper-slide">
+          <div style="position: sticky">
+            {% if request.locale.iso_code == 'fr' %}
+              {% assign image_link = block.settings.fr_image | image_url: width: 600 %}
+            {% else %}
+              {% assign image_link = block.settings.image | image_url: width: 600 %}
+            {% endif %}
+            {% if block.settings.video_type == 'other' %}
+              {% if request.locale.iso_code == 'fr' %}
+                {% assign video_link = block.settings.fr_video_link %}
+                {% assign video = true %}
+              {% else %}
+                {% assign video_link = block.settings.video_link %}
+                {% assign video = true %}
+              {% endif %}
+            {% else %}
+              {% if request.locale.iso_code == 'fr' %}
+                {% assign video_link = block.settings.fr_hosted_video %}
+                {% assign video = true %}
+              {% else %}
+                {% assign video_link = block.settings.hosted_video %}
+                {% assign video = true %}
+              {% endif %}
+            {% endif %}
+            {% if image_link != blank %}
+              {{image_link | image_tag: class: 'image', image_size: '400x' }}
+            {% endif %}
+            {% if video_link!= blank %} 
+              {{video_link | video_tag: class: 'video c_hidden', image_size: '400x' }}
+            {% endif %}
+            <div class="playpause"><i class="fa-solid fa-circle-play {% if section.settings.show_play_button_for_fr != true %} {% if request.path contains '/fr' %}c_hidden{% endif %}{% endif %}"></i></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>    
+    <div class="swiper-button-next">
+      {% if is_white_arrow %}
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle_8bc74ec7-707c-4c8c-b235-c6ed841d027b.png?v=1747800734" />
+      {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle.png?v=1741981965" />
+      {% endif %}
+    </div>
+  </div>
+  {% if button_text != blank %}
+    <div class="d-flex">
+      <a class="btn responsive-btn" href="{{ button_link }}">
+        {{ button_text }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+{%- liquid
+  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+<script> 
+  $('.video').parent().click(function () {
+    if($(this).children(".video").get(0).paused){
+      $(this).children(".video").get(0).play();   
+      $(this).children(".playpause").fadeOut();
+    }else{       
+      $(this).children(".video").get(0).pause();
+    $(this).children(".playpause").fadeIn();
+      }
+  });
+
+  $(document).ready(function(){
+    var acc = document.getElementsByClassName("product-video-box");
+    for (var i = 0; i < acc.length; i++) {
+      // Prevent duplicate event listeners by checking if already attached
+      if (!acc[i].hasAttribute('data-listener')) {
+          acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
+        // Attach the event listener without using setTimeout inside
+        acc[i].addEventListener("click", function() {
+          if(this.querySelector("video")){
+            this.querySelector("img").style.display = "none";
+            this.querySelector("video").classList.remove("c_hidden");
+   //         this.querySelector(".playpause").classList.remove("c_hidden");
+          }
+        });
+      }
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    document.querySelector(".video-swiper-carousel-container-{{ section.id }}").classList.remove("hide");
+    var videoSwiper = new Swiper(".video-swiper-carousel-container-{{ section.id }}", {
+      loop: true,
+      autoplay: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: "progressbar"
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        1600: {
+          slidesPerView: {{ section.settings.itme_show }},
+          spaceBetween: 20
+        },
+        1500: {
+          slidesPerView: 5,
+          spaceBetween: 20
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        700: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        },
+        0: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        }
+      },
+      touchStartPreventDefault: false,
+      passiveListeners: true
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Responsive Video Carousel",
+  "settings": [
+    {
+      "type":"text",
+      "id":"heading",
+      "label":"Heading"
+    },
+    {
+      "type":"text",
+      "id":"subheading",
+      "label":"Sub Heading"
+    },
+    {
+      "type":"textarea",
+      "id":"content",
+      "label":"Content"
+    },
+    {
+      "id": "text_color",
+      "type": "color",
+      "label": "Text Color"
+    },
+    {
+      "type":"color",
+      "id":"bg_color",
+      "label":"Bg Color"
+    },
+    {
+      "type":"number",
+      "id":"itme_show",
+      "label":"Show Per Item",
+      "default":6
+    },
+    {
+      "type": "checkbox",
+      "id": "show_play_button_for_fr",
+      "label": "Show Play Button(Only FR)",
+      "default": true
+    },
+    {
+      "id": "bottom_button_label",
+      "type": "text",
+      "label": "Bottom Button Label",
+      "default": "Discover More Recipes",
+    },
+    {
+      "id": "bottom_button_url",
+      "type": "url",
+      "label": "Bottom Button Link"
+    },
+    {
+      "id": "is_white_arrow",
+      "type": "checkbox",
+      "label": "White Arrow",
+      "default": false
+    }
+  ],
+  "blocks":[
+    {
+      "type":"image",
+      "name":"Image",
+      "settings":[
+        {
+          "type":"select",
+          "id":"video_type",
+          "label":"Video Type",
+          "options":[
+            {
+              "value":"mp4",
+              "label":"MP4"
+            },
+            {
+              "value":"other",
+              "label":"YouTube/Vimeo"
+            }
+          ],
+          "default":"mp4"
+        },
+        {
+          "type": "header",
+          "content": "English video"
+        },
+        {
+          "type":"image_picker",
+          "id":"image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"hosted_video",
+          "label":"Hosted Video"
+        },
+        {
+          "type": "header",
+          "content": "Frech video"
+        },
+        {
+          "type":"image_picker",
+          "id":"fr_image",
+          "label":"Image"
+        },
+        {
+          "type":"video_url",
+          "id":"fr_video_link",
+          "label":"Video link",
+          "accept": [
+             "youtube",
+             "vimeo"
+          ]
+        },
+        {
+          "type":"video",
+          "id":"fr_hosted_video",
+          "label":"Hosted Video"
+        }
+      ]
+    },
+    {
+      "name": "Shape divider",
+      "type": "shape_divider",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "radio",
+          "label": "Target section",
+          "id": "target_section",
+          "default": "above",
+          "options": [
+            {
+              "value": "above",
+              "label": "Section above"
+            },
+            {
+              "value": "below",
+              "label": "Section below"
+            }
+          ],
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+        },
+        {
+          "type": "color",
+          "label": "Target section color scheme",
+          "id": "section_color_scheme",
+          "default": "#fff"
+        },
+        {
+          "type": "select",
+          "label": "Style",
+          "id": "style",
+          "default": "large-waves_1200x84",
+          "options": [
+            {
+              "value": "large-waves_1200x84",
+              "label": "Large waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "medium-waves_1200x43",
+              "label": "Medium waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "small-waves_1200x20",
+              "label": "Small waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "large-zig-zag_1200x65",
+              "label": "Large zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "medium-zig-zag_1200x37",
+              "label": "Medium zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "small-zig-zag_1200x21",
+              "label": "Small zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "waves-1-asymmetrical_1440x261",
+              "label": "Waves 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "waves-2-asymmetrical_1440x330",
+              "label": "Waves 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "tilt-1-asymmetrical_1440x101",
+              "label": "Tilt 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "tilt-2-asymmetrical_1440x293",
+              "label": "Tilt 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-1-asymmetrical_1440x293",
+              "label": "Mountains 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-2-asymmetrical_1440x325",
+              "label": "Mountains 2",
+              "group": "Asymmetrical"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "flip_horizontal",
+          "label": "Flip horizontal"
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
+        },
+        {
+          "type": "radio",
+          "id": "animation_direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "",
+              "label": "Right to left"
+            },
+            {
+              "value": "reverse",
+              "label": "Left to right"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets":[
+    {
+      "name":"Responsive Video Carousel",
+      "category":"product"
+    }
+  ]
+}
 {% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
