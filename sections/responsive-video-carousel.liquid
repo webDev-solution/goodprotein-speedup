@@ -25,10 +25,10 @@
     margin-left: max(35px, var(--full-width-padding));
   }
   .video-swiper-carousel-container .swiper-button-next {
-    right: 30px;
+    right: 27px;
   }
   .video-swiper-carousel-container .swiper-button-prev {
-    left: 30px;
+    left: 27px;
   }
   
   .video-swiper-carousel-container .swiper-slide img,
@@ -39,7 +39,7 @@
   .video-swiper-carousel-container .swiper-slide video {
     border-radius: 20px;
   }
-  @media (min-width: 769px) and (max-width: 1300px) {
+  @media (min-width: 769px) and (max-width: 1439px) {
     .video-swiper-carousel-container .swiper-button-next {
       right: 10px;
     }
@@ -100,6 +100,26 @@
   }
   .d-flex {
     display: flex;
+  }
+  @media (max-width: 768px) {
+    .playpause {
+      scale: 0.9;
+    }
+  }
+  @media (max-width: 550px) {
+    .playpause {
+      scale: 0.8;
+    }
+  }
+  @media (max-width: 425px) {
+    .playpause {
+      scale: 0.7;
+    }
+  }
+  @media (max-width: 360px) {
+    .playpause {
+      scale: 0.75;
+    }
   }
 </style>
 
