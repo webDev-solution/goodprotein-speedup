@@ -1,6 +1,366 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% liquid
+  assign wonderment_order_header = section.settings.wonderment_order_header
+  assign header_tag = section.settings.header_tag
+  assign hide_original_header = section.settings.hide_original_header
+  assign background_color = section.settings.background_color
+  assign border_color = section.settings.border_color
+  assign header_color = section.settings.header_color
+  assign active_color = section.settings.active_color
+%}
+
+
+<style>
+  /* ***************** 1920px and more ********************** */
+  :root {
+    --full-width-padding: 80px;
+    --full-width-padding-horizontal: 50px;
+    --full-width-border: 50px;
+    --full-width-font-size: 124px;
+    --full-width-input-font-size: 40px;
+    --full-width-input-padding: 24px;
+    --full-width-input-border-radius: 6px;
+    --full-width-space-between-header-input: 20px;
+    --full-width-space-between-input-button: 40px;
+    --full-width-space-above-header: 50px;
+    --full-width-button-padding: 24px 60px;
+    --full-width-input-width: 1000px;
   }
+  
+  @media (max-width: 1919px) {
+    :root {
+      --full-width-padding: 60px;
+      --full-width-padding-horizontal: 40px;
+      --full-width-border: 40px;
+      --full-width-font-size: 110px;
+      --full-width-input-font-size: 36px;
+      --full-width-input-padding: 22px;
+      --full-width-input-border-radius: 5px;
+      --full-width-space-between-header-input: 18px;
+      --full-width-space-between-input-button: 35px;
+      --full-width-space-above-header: 45px;
+      --full-width-button-padding: 22px 50px;
+      --full-width-input-width: 900px;
+    }
+  }
+  
+  @media (max-width: 1599px) {
+    :root {
+      --full-width-padding: 50px;
+      --full-width-padding-horizontal: 34px;
+      --full-width-border: 34px;
+      --full-width-font-size: 96px;
+      --full-width-input-font-size: 32px;
+      --full-width-input-padding: 20px;
+      --full-width-input-border-radius: 4px;
+      --full-width-space-between-header-input: 16px;
+      --full-width-space-between-input-button: 30px;
+      --full-width-space-above-header: 40px;
+      --full-width-button-padding: 20px 48px;
+      --full-width-input-width: 800px;
+    }
+  }
+  
+  @media (max-width: 1439px) {
+    :root {
+      --full-width-padding: 40px;
+      --full-width-padding-horizontal: 30px;
+      --full-width-border: 30px;
+      --full-width-font-size: 82px;
+      --full-width-input-font-size: 28px;
+      --full-width-input-padding: 18px;
+      --full-width-input-border-radius: 3px;
+      --full-width-space-between-header-input: 14px;
+      --full-width-space-between-input-button: 25px;
+      --full-width-space-above-header: 35px;
+      --full-width-button-padding: 18px 42px;
+      --full-width-input-width: 700px;
+    }
+  }
+  
+  @media (max-width: 1023px) {
+    :root {
+      --full-width-padding: 30px;
+      --full-width-padding-horizontal: 24px;
+      --full-width-border: 24px;
+      --full-width-font-size: 68px;
+      --full-width-input-font-size: 24px;
+      --full-width-input-padding: 16px;
+      --full-width-input-border-radius: 3px;
+      --full-width-space-between-header-input: 12px;
+      --full-width-space-between-input-button: 20px;
+      --full-width-space-above-header: 30px;
+      --full-width-button-padding: 16px 36px;
+      --full-width-input-width: 600px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --full-width-padding: 30px;
+      --full-width-padding-horizontal: 20px;
+      --full-width-border: 30px;
+      --full-width-font-size: 54px;
+      --full-width-input-font-size: 20px;
+      --full-width-input-padding: 14px;
+      --full-width-input-border-radius: 2px;
+      --full-width-space-between-header-input: 10px;
+      --full-width-space-between-input-button: 18px;
+      --full-width-space-above-header: 25px;
+      --full-width-button-padding: 14px 30px;
+      --full-width-input-width: 500px;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    :root {
+      --full-width-padding: 20px;
+      --full-width-padding-horizontal: 20px;
+      --full-width-border: 20px;
+      --full-width-font-size: 40px;
+      --full-width-input-font-size: 18px;
+      --full-width-input-padding: 12px;
+      --full-width-input-border-radius: 1px;
+      --full-width-space-between-header-input: 8px;
+      --full-width-space-between-input-button: 14px;
+      --full-width-space-above-header: 20px;
+      --full-width-button-padding: 12px 24px;
+      --full-width-input-width: 80%;
+    }
+  }
+  
+  @media (max-width: 424px) {
+    :root {
+      --full-width-padding: 16px;
+      --full-width-padding-horizontal: 16px;
+      --full-width-border: 18px;
+      --full-width-font-size: 32px;
+      --full-width-input-font-size: 16px;
+      --full-width-input-padding: 10px;
+      --full-width-input-border-radius: 1px;
+      --full-width-space-between-header-input: 6px;
+      --full-width-space-between-input-button: 10px;
+      --full-width-space-above-header: 16px;
+      --full-width-button-padding: 10px 20px;
+      --full-width-input-width: 80%;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    :root {
+      --full-width-padding: 14px;
+      --full-width-padding-horizontal: 14px;
+      --full-width-border: 14px;
+      --full-width-font-size: 28px;
+      --full-width-input-font-size: 14px;
+      --full-width-input-padding: 8px;
+      --full-width-input-border-radius: 1px;
+      --full-width-space-between-header-input: 5px;
+      --full-width-space-between-input-button: 8px;
+      --full-width-space-above-header: 14px;
+      --full-width-button-padding: 8px 16px;
+      --full-width-input-width: 80%;
+    }
+  }
+</style>
+<style>
+  #shopify-section-announcement-bar {
+    display: none !important;
+  }
+  #shopify-section-header {
+    display: none !important;
+  }
+  #shopify-section-footer {
+    display: none !important;
+  }
+</style>
+
+{% style %}
+  {% if hide_original_header %}
+    .tp-form-header.tp-search-header {
+      display: none !important;
+    }
+  {% endif %}
+
+  #shopify-block-wonderment .wonderment-ab-container.wonderment-ab-default-container {
+    margin-top: 0px !important;
+  }
+  #shopify-block-wonderment>div>div>form {
+    margin-top: 0px !important;
+  }
+  #shopify-block-wonderment .tp-search-input.input.search {
+    margin-bottom: 0px !important;
+  }
+
+  .wonderment-order-header-conatiner {
+    padding-top: var(--full-width-padding);
+    padding-left: var(--full-width-padding);
+    padding-right: var(--full-width-padding);
+    background-color: {{ border_color }};
+  }
+
+  .wonderment-order-header {
+    text-align: center;
+    color: {{ header_color }};
+    background-color: {{ background_color }};
+    border-top-left-radius: var(--full-width-border);
+    border-top-right-radius: var(--full-width-border);
+    font-size: calc(var(--full-width-font-size) * 0.9);
+    padding-top: var(--full-width-space-above-header);
+    padding-bottom: var(--full-width-space-between-header-input);
+    font-family: Gelica Bold !important;
+  }
+
+  #shopify-block-wonderment {
+    padding-bottom: var(--full-width-padding-horizontal);
+    padding-left: var(--full-width-padding);
+    padding-right: var(--full-width-padding);
+    background-color: {{ border_color }};
+  }
+
+  #shopify-block-wonderment .wonderment-ab-container.wonderment-ab-default-container,
+  #shopify-block-wonderment>div>div>form {
+    margin-top: 0px !important;
+  }
+
+  #shopify-block-wonderment > div {
+    background-color: {{ background_color }};
+    border-bottom-left-radius: var(--full-width-border);
+    border-bottom-right-radius: var(--full-width-border);
+  }
+
+  #shopify-block-wonderment .tp-form.tp-search-form {
+    width: var(--full-width-input-width);
+  }
+
+  #shopify-block-wonderment .tp-search-input.input.search {
+    background: white;
+    font-size: var(--full-width-input-font-size);
+    padding: var(--full-width-input-padding);
+    text-align: center;
+    font-weight: bold;
+    border-width: var(--full-width-input-border-radius);
+    border-color: {{ active_color }};
+  }
+
+  #shopify-block-wonderment .btn.tp-track-button.tp-search-button.button {
+    font-size: var(--full-width-input-font-size);
+    padding: var(--full-width-button-padding);
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: var(--full-width-space-between-input-button) 0 var(--full-width-padding) 0;
+    width: unset;
+  }
+{% endstyle %}
+
+
+{% if hide_original_header %}
+  <div class="wonderment-order-header-conatiner">
+    <{{ header_tag }} class="wonderment-order-header-{{ section.id }} wonderment-order-header">
+      {{ wonderment_order_header }}
+    </{{ header_tag }}>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Wonderment Controller",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Wonderment Order Header"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_original_header",
+      "label": "Hide Original Header",
+      "default": false,
+      "info": "This will hide the original header of the Wonderment Order Widget. If you want to use your own header, please check this box."
+    },
+    {
+      "type": "text",
+      "id": "wonderment_order_header",
+      "label": "Header Text",
+      "default": "Track Your Order",
+      "info": "This is the header for the Wonderment Order Widget. It will be displayed at the top of the widget."
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Custom Header Color",
+      "default": "#F1F0E1"
+    },
+    {
+      "id": "header_tag",
+      "type": "select",
+      "label": "Header Tag",
+      "default": "h2",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+    },
+    {
+      "type": "header",
+      "content": "Design"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#62B5E5"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#F1F0E1"
+    },
+    {
+      "type": "color",
+      "id": "active_color",
+      "label": "Input Border Color",
+      "default": "#0072BC"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wonderment Controller",
+    }
+  ]
+}
 {% endschema %}
+
+<style>
+/* ***************** 1920px and more ********************** */
+/* ***************** 1600px and 1919 ********************** */
+/* ***************** 1440px and 1599 ********************** */
+/* ***************** 1024px and 1439 ********************** */
+/* ***************** 769px and 1023 ********************** */
+/* ***************** 551px and 768 ********************** */
+/* ***************** 425px and 550 ********************** */
+/* ***************** 361px and 424 ********************** */
+/* ***************** Max-width: 360px ***********************/
+</style>
