@@ -168,6 +168,7 @@
       "blocks": {
         "image_qUEeKH": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "video_type": "mp4",
             "video_link": "",
