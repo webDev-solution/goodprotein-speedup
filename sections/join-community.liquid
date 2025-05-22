@@ -1,6 +1,379 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% liquid
+  assign blocks = section.blocks
+  assign border_color = section.settings.border_color
+%}
+
+<style>
+  :root {
+    --full-width-subtitle-font-size: 60px;
+    --full-width-subdescription-font-size: 36px;
+    --full-width-button-text-font-size: 26px;
+    --full-width-button-padding: 20px 50px;
   }
+  
+  /* 1600px - 1919px */
+  @media (max-width: 1919px) {
+    :root {
+      --full-width-subtitle-font-size: 54px;
+      --full-width-subdescription-font-size: 32px;
+      --full-width-button-text-font-size: 24px;
+      --full-width-button-padding: 18px 44px;
+    }
+  }
+  
+  /* 1440px - 1599px */
+  @media (max-width: 1599px) {
+    :root {
+      --full-width-subtitle-font-size: 48px;
+      --full-width-subdescription-font-size: 28px;
+      --full-width-button-text-font-size: 22px;
+      --full-width-button-padding: 16px 40px;
+    }
+  }
+  
+  /* 1024px - 1439px */
+  @media (max-width: 1439px) {
+    :root {
+      --full-width-subtitle-font-size: 42px;
+      --full-width-subdescription-font-size: 24px;
+      --full-width-button-text-font-size: 20px;
+      --full-width-button-padding: 14px 36px;
+    }
+  }
+  
+  /* 769px - 1023px */
+  @media (max-width: 1023px) {
+    :root {
+      --full-width-subtitle-font-size: 28px;
+      --full-width-subdescription-font-size: 20px;
+      --full-width-button-text-font-size: 18px;
+      --full-width-button-padding: 12px 30px;
+    }
+  }
+  
+  /* 551px - 768px */
+  @media (max-width: 768px) {
+    :root {
+      --full-width-subtitle-font-size: 32px;
+      --full-width-subdescription-font-size: 20px;
+      --full-width-button-text-font-size: 18px;
+      --full-width-button-padding: 10px 26px;
+    }
+  }
+  
+  /* 425px - 550px */
+  @media (max-width: 550px) {
+    :root {
+      --full-width-subtitle-font-size: 26px;
+      --full-width-subdescription-font-size: 16px;
+      --full-width-button-text-font-size: 14px;
+      --full-width-button-padding: 10px 22px;
+    }
+  }
+  
+  /* 361px - 424px */
+  @media (max-width: 424px) {
+    :root {
+      --full-width-subtitle-font-size: 22px;
+      --full-width-subdescription-font-size: 16px;
+      --full-width-button-text-font-size: 14px;
+      --full-width-button-padding: 10px 22px;
+    }
+  }
+  
+  /* Max-width: 360px */
+  @media (max-width: 360px) {
+    :root {
+      --full-width-subtitle-font-size: 20px;
+      --full-width-subdescription-font-size: 12px;
+      --full-width-button-text-font-size: 12px;
+      --full-width-button-padding: 6px 16px;
+    }
+  }
+</style>
+  
+
+<style>
+  .join-community-container {
+    display: flex;
+    gap: var(--full-width-padding-horizontal);
+    padding-left: var(--full-width-padding);
+    padding-right: var(--full-width-padding);
+    background-color: {{ border_color }};
+    padding-bottom: clamp(40px, 10vw, 200px);
+  }
+  .join-community {
+    flex: 1;
+  }
+  .join-community-container .content-container {
+    {% comment %} height: 0px; {% endcomment %}
+    {% comment %} padding-bottom: calc(100% - var(--full-width-padding) * 0.75); {% endcomment %}
+    padding-top: calc(var(--full-width-padding) * 0.75);
+    padding-left: calc(var(--full-width-padding) * 0.75);
+    padding-right: calc(var(--full-width-padding) * 0.75);
+    top: 0px;
+  }
+  .join-community-container .content-container>h3,
+  .join-community-container .content-container>div {
+    margin-bottom: var(--full-width-input-padding);
+  }
+
+  .join-community-container .content-container .title {
+    font-size: var(--full-width-subtitle-font-size);
+    color: white;
+  }
+  .join-community-container .content-container .description {
+    color: white;
+    font-size: var(--full-width-subdescription-font-size);
+    font-weight: bold;
+  }
+  .join-community-container .content-container .button-container .btn{
+    font-size: var(--full-width-button-text-font-size);
+    padding: var(--full-width-button-padding);
+  }
+  @media (max-width: 768px) {
+    .join-community-container {
+      flex-direction: column;
+    }
+    .join-community-container .content-container {
+      {% comment %} padding-bottom: calc(100% - var(--full-width-padding)); {% endcomment %}
+      padding-top: var(--full-width-padding);
+      padding-left: var(--full-width-padding);
+      padding-right: var(--full-width-padding);
+    }
+    .join-community-container .content-container>h3 {
+      margin-bottom: 0px;
+    }
+    .join-community-container .content-container>div {
+      margin-bottom: var(--full-width-input-padding);
+    }
+  }
+</style>
+
+<div class="join-community-container">
+  {% for block in blocks %}
+    {% if block.type == "group" %}
+      <div class="join-community relative">
+        <div class="relative ">
+          <img src="{{ block.settings.image | image_url: width: image_size  }}" style="width: 100%" class="{% if block.settings.image_mobile != blank %}show-desktop{% endif %}" />
+          {% if block.settings.image_mobile != blank %}
+            <img src="{{ block.settings.image_mobile | image_url: width: image_size  }}" style="width: 100%" class="show-mobile" />
+          {% endif %}
+        </div>
+        <div class="content-container absolute w-full">
+          <h3 class="title">
+            {% if request.path contains '/fr' and block.settings.title_fr != blank %}
+              {{ block.settings._fr | replace: "[@new line]", "<br>" }}
+            {% else %}
+              {{ block.settings.title | replace: "[@new line]", "<br>" }}
+            {% endif %}
+          </h3>
+          <div class="description">
+            {{ block.settings.description }}
+          </div>
+          <div class="button-container">
+            <a class="btn" href="{{ block.settings.button_link }}">{{ block.settings.button_label }}</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{%- liquid
+  assign shape_dividers = section.blocks | where: "type", "shape_divider"
+  for shape_divider in shape_dividers
+    render 'block-shape-divider' with block: shape_divider, section: section
+  endfor
+-%}
+
+{% schema %}
+{
+  "name": "Join Community",
+  "settings": [
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Color",
+      "default": "#F1F0E1"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "group",
+      "name": "Group",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title(EN)",
+        },
+        {
+          "id": "title_fr",
+          "type": "text",
+          "label": "Title(FR)"
+        },
+        {
+          "id": "description",
+          "type": "text",
+          "label": "Description"
+        },
+        {
+          "id": "button_label",
+          "type": "text",
+          "label": "Button Text"
+        },
+        {
+          "id": "button_link",
+          "type": "url",
+          "label": "Button Link"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Background Image(Desktop)",
+        },
+        {
+          "id": "image_mobile",
+          "type": "image_picker",
+          "label": "Background Image(Mobile)"
+        }
+      ]
+    },
+    {
+      "name": "Shape divider",
+      "type": "shape_divider",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "radio",
+          "label": "Target section",
+          "id": "target_section",
+          "default": "above",
+          "options": [
+            {
+              "value": "above",
+              "label": "Section above"
+            },
+            {
+              "value": "below",
+              "label": "Section below"
+            }
+          ],
+          "info": "This will be the section that connects to the straight side of the divider. Best to use sections with a solid background color. [Learn more](https://help.switchthemes.co/shapes/style-blocks/shape-divider.html)"
+        },
+        {
+          "type": "color",
+          "label": "Target section color scheme",
+          "id": "section_color_scheme",
+          "default": "#fff"
+        },
+        {
+          "type": "select",
+          "label": "Style",
+          "id": "style",
+          "default": "large-waves_1200x84",
+          "options": [
+            {
+              "value": "large-waves_1200x84",
+              "label": "Large waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "medium-waves_1200x43",
+              "label": "Medium waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "small-waves_1200x20",
+              "label": "Small waves",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "large-zig-zag_1200x65",
+              "label": "Large zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "medium-zig-zag_1200x37",
+              "label": "Medium zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "small-zig-zag_1200x21",
+              "label": "Small zig zag",
+              "group": "Symmetrical"
+            },
+            {
+              "value": "waves-1-asymmetrical_1440x261",
+              "label": "Waves 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "waves-2-asymmetrical_1440x330",
+              "label": "Waves 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "tilt-1-asymmetrical_1440x101",
+              "label": "Tilt 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "tilt-2-asymmetrical_1440x293",
+              "label": "Tilt 2",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-1-asymmetrical_1440x293",
+              "label": "Mountains 1",
+              "group": "Asymmetrical"
+            },
+            {
+              "value": "mountains-2-asymmetrical_1440x325",
+              "label": "Mountains 2",
+              "group": "Asymmetrical"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "id": "flip_horizontal",
+          "label": "Flip horizontal"
+        },
+        {
+          "type": "header",
+          "content": "Animation"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_animation",
+          "label": "Enable animation",
+          "info": "Asymmetrical shape dividers will sway when animated."
+        },
+        {
+          "type": "radio",
+          "id": "animation_direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "",
+              "label": "Right to left"
+            },
+            {
+              "value": "reverse",
+              "label": "Left to right"
+            }
+          ],
+          "default": ""
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Join Community",
+    }
+  ]
+}
 {% endschema %}
