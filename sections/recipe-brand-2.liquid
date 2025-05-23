@@ -95,6 +95,26 @@
   }
 {% endstyle %}
 
+{% style %}
+.tolstoy-video-widget-container {
+  width: 200px;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 9999;
+  display: none;
+}
+{% endstyle %}
+
+<div class="tolstoy-video-widget-container">
+  <tolstoy-tile
+    data-tags="{% for tag in article.metafields.custom.featured_product.tags -%}{{ tag | escape }},{%- endfor %}"
+    class="tolstoy-tile"
+    data-publish-id= "{{ article.metafields.custom.tolstoy_media_id }}"
+    data-product-id="{{ article.metafields.custom.featured_product.id }}">
+ </tolstoy-tile>
+</div>
+
 <div class="recipe-brand-2 text-scheme-text bg-scheme-background overflow-hidden ">
   <div class="section-content ">
     <div class="relative z-10 lg:bg-transparent h-full">
@@ -203,42 +223,43 @@
     </div>
   </div>
 </div>
+{% if section.settings.enable_video and video_link != blank %}
+  <script> 
+    $('.video').parent().click(function () {
+      if($(this).children(".video").get(0).paused){
+        $(this).children(".video").get(0).play();   
+        $(this).children(".playpause").fadeOut();
+      }else{       
+        $(this).children(".video").get(0).pause();
+      $(this).children(".playpause").fadeIn();
+        }
+    });
 
-<script> 
-  $('.video').parent().click(function () {
-    if($(this).children(".video").get(0).paused){
-      $(this).children(".video").get(0).play();   
-      $(this).children(".playpause").fadeOut();
-    }else{       
-      $(this).children(".video").get(0).pause();
-    $(this).children(".playpause").fadeIn();
+    $(document).ready(function(){
+      var acc = document.getElementsByClassName("product-video-box");
+      for (var i = 0; i < acc.length; i++) {
+        // Prevent duplicate event listeners by checking if already attached
+        if (!acc[i].hasAttribute('data-listener')) {
+            acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
+          // Attach the event listener without using setTimeout inside
+          acc[i].addEventListener("click", function() {
+            if(this.querySelector("video")){
+              this.querySelector("img").style.display = "none";
+              this.querySelector("video").classList.remove("c_hidden");
+    //         this.querySelector(".playpause").classList.remove("c_hidden");
+            }
+          });
+        }
       }
-  });
-
-  $(document).ready(function(){
-    var acc = document.getElementsByClassName("product-video-box");
-    for (var i = 0; i < acc.length; i++) {
-      // Prevent duplicate event listeners by checking if already attached
-      if (!acc[i].hasAttribute('data-listener')) {
-          acc[i].setAttribute('data-listener', 'true'); // Mark listener as attached
-        // Attach the event listener without using setTimeout inside
-        acc[i].addEventListener("click", function() {
-          if(this.querySelector("video")){
-            this.querySelector("img").style.display = "none";
-            this.querySelector("video").classList.remove("c_hidden");
-   //         this.querySelector(".playpause").classList.remove("c_hidden");
-          }
-        });
-      }
-    }
-  });
-  
-  $('video').ready(function () {
-    setTimeout(function () {
-      document.querySelector(".playpause").classList.add("visible");
-    }, 1000); // 2 seconds
-  })
-</script> 
+    });
+    
+    $('video').ready(function () {
+      setTimeout(function () {
+        document.querySelector(".playpause").classList.add("visible");
+      }, 1000); // 2 seconds
+    })
+  </script> 
+{% endif %}
 
 {% schema %}
 {
