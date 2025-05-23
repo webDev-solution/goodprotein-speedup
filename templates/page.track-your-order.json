@@ -85,6 +85,17 @@
         "border_color": "#f1f0e1"
       }
     },
+    "tolstoy_video_carousel_widget_controller_rEzJr9": {
+      "type": "tolstoy-video-carousel-widget-controller",
+      "name": "Tolstoy Carousel +",
+      "settings": {
+        "app_block_id": "shopify-block-Ad0FZZ25HYTBoZGE0d__tolstoy_shoppable_video_quiz_carousel_block_JdP6KY",
+        "tolstoy_carousel_header": "Crave-Worthy Recipes",
+        "header_color": "#ffffff",
+        "header_tag": "h2",
+        "background_color": "#62B5E5"
+      }
+    },
     "174801721930e8d9ee": {
       "type": "apps",
       "blocks": {
@@ -369,6 +380,7 @@
     "wonderment_order_widget_controller_dpUpbw",
     "main",
     "join_community_mWQ9bt",
+    "tolstoy_video_carousel_widget_controller_rEzJr9",
     "174801721930e8d9ee",
     "responsive_video_carousel_VNhEUN",
     "video_carousel_bottom_text_JpBmyr",
