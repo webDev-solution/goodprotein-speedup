@@ -93,7 +93,7 @@
         "tolstoy_carousel_header": "Crave-Worthy Recipes",
         "header_color": "#ffffff",
         "header_tag": "h2",
-        "background_color": "#62B5E5"
+        "background_color": "#62b5e5"
       }
     },
     "174801721930e8d9ee": {
@@ -110,6 +110,14 @@
         "tolstoy_shoppable_video_quiz_carousel_block_JdP6KY"
       ],
       "settings": {}
+    },
+    "solo_button_jf7GKF": {
+      "type": "solo-button",
+      "name": "Solo Button",
+      "settings": {
+        "bottom_button_label": "Discover More Recipes",
+        "bottom_button_url": ""
+      }
     },
     "responsive_video_carousel_VNhEUN": {
       "type": "responsive-video-carousel",
@@ -382,6 +390,7 @@
     "join_community_mWQ9bt",
     "tolstoy_video_carousel_widget_controller_rEzJr9",
     "174801721930e8d9ee",
+    "solo_button_jf7GKF",
     "responsive_video_carousel_VNhEUN",
     "video_carousel_bottom_text_JpBmyr",
     "product_video_carousel_zwmigx"
