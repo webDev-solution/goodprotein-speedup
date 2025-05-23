@@ -9,11 +9,10 @@
 {% style %}
   /* normal css */
   .tolstoy-video-carousel-widget-controller {
-    background-color: {{ section.settings.bg_color }};
+    background-color: {{ background_color }};
     padding-top: var(--full-width-space-above-header);
   }
   .tolstoy-video-carousel-widget-controller .tolstoy-carousel-header {
-    background-color: {{ background_color }};
     font-size: calc(var(--full-width-font-size) * 0.9) !important;
     padding-bottom: var(--full-width-space-above-header);
     line-height: unset !important;
@@ -24,7 +23,7 @@
 
   /* special css */
   #{{ app_block_id }} {
-    background-color: {{ section.settings.bg_color }};
+    background-color: {{ background_color }};
   }
   #{{ app_block_id }} .tolstoy-carousel-container{
     margin-top: 0px !important;
