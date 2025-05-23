@@ -13,6 +13,7 @@
       "type": "wonderment-order-widget-controller",
       "name": "Wonderment Controller",
       "settings": {
+        "app_block_id": "shopify-block-AMGhuTldhY1JEOWt2a__wonderment",
         "hide_original_header": true,
         "wonderment_order_header": "Track Your Order",
         "header_color": "#f1f0e1",
