@@ -1,6 +1,7 @@
 {% liquid
   assign button_link = section.settings.button_link
-  assign button_text = section.settings.button_text
+  assign button_text = section.settings.bottom_button_label
+  assign background_color = section.settings.background_color
 %}
 
 {% style %}
@@ -18,7 +19,7 @@
   }
 {% endstyle %}
 
-<div class="d-flex">
+<div class="d-flex" style="background-color: {{ background_color }};">
   <a class="btn responsive-btn" href="{{ button_link }}">
     {{ button_text }}
   </a>
@@ -38,6 +39,11 @@
       "id": "bottom_button_url",
       "type": "url",
       "label": "Bottom Button Link"
+    },
+    {
+      "id": "background_color",
+      "type": "color",
+      "label": "Background Color"
     }
   ],
   "presets":[
