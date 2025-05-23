@@ -6,6 +6,7 @@
   assign border_color = section.settings.border_color
   assign header_color = section.settings.header_color
   assign active_color = section.settings.active_color
+  assign app_block_id = section.settings.app_block_id
 %}
 
 
@@ -181,13 +182,13 @@
     }
   {% endif %}
 
-  #shopify-block-wonderment .wonderment-ab-container.wonderment-ab-default-container {
+  #{{ app_block_id }} .wonderment-ab-container.wonderment-ab-default-container {
     margin-top: 0px !important;
   }
-  #shopify-block-wonderment>div>div>form {
+  #{{ app_block_id }}>div>div>form {
     margin-top: 0px !important;
   }
-  #shopify-block-wonderment .tp-search-input.input.search {
+  #{{ app_block_id }} .tp-search-input.input.search {
     margin-bottom: 0px !important;
   }
 
@@ -210,29 +211,29 @@
     font-family: Gelica Bold !important;
   }
 
-  #shopify-block-wonderment {
+  #{{ app_block_id }} {
     padding-bottom: var(--full-width-padding-horizontal);
     padding-left: var(--full-width-padding);
     padding-right: var(--full-width-padding);
     background-color: {{ border_color }};
   }
 
-  #shopify-block-wonderment .wonderment-ab-container.wonderment-ab-default-container,
-  #shopify-block-wonderment>div>div>form {
+  #{{ app_block_id }} .wonderment-ab-container.wonderment-ab-default-container,
+  #{{ app_block_id }}>div>div>form {
     margin-top: 0px !important;
   }
 
-  #shopify-block-wonderment > div {
+  #{{ app_block_id }} > div {
     background-color: {{ background_color }};
     border-bottom-left-radius: var(--full-width-border);
     border-bottom-right-radius: var(--full-width-border);
   }
 
-  #shopify-block-wonderment .tp-form.tp-search-form {
+  #{{ app_block_id }} .tp-form.tp-search-form {
     width: var(--full-width-input-width);
   }
 
-  #shopify-block-wonderment .tp-search-input.input.search {
+  #{{ app_block_id }} .tp-search-input.input.search {
     background: white;
     font-size: var(--full-width-input-font-size);
     padding: var(--full-width-input-padding);
@@ -242,7 +243,7 @@
     border-color: {{ active_color }};
   }
 
-  #shopify-block-wonderment .btn.tp-track-button.tp-search-button.button {
+  #{{ app_block_id }} .btn.tp-track-button.tp-search-button.button {
     font-size: var(--full-width-input-font-size);
     padding: var(--full-width-button-padding);
     text-align: center;
@@ -266,6 +267,11 @@
 {
   "name": "Wonderment Controller",
   "settings": [
+    {
+      "id": "app_block_id",
+      "type": "text",
+      "label": "App Block ID"
+    },
     {
       "type": "header",
       "content": "Wonderment Order Header"
