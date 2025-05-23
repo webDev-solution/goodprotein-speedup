@@ -116,7 +116,8 @@
       "name": "Solo Button",
       "settings": {
         "bottom_button_label": "Discover More Recipes",
-        "bottom_button_url": ""
+        "bottom_button_url": "",
+        "background_color": "#62b5e5"
       }
     },
     "responsive_video_carousel_VNhEUN": {
@@ -208,6 +209,7 @@
         "image_a8dmqL",
         "shape_divider_iBgXyC"
       ],
+      "disabled": true,
       "name": "Responsive Video Carousel",
       "settings": {
         "heading": "Crave-Worthy Recipes",
