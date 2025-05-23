@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
   <head>
+
+    <script>
+    window.Shopify = window.Shopify || {theme: {id: {{ theme.id }}, role: '{{ theme.role }}' } };
+    window._template = {
+        directory: "{{ template.directory }}",
+        name: "{{ template.name }}",
+        suffix: "{{ template.suffix }}"
+    };
+  </script>
+  <script type="module" blocking="render" fetchpriority="high" src="https://cdn.intelligems.io/esm/ece1500ee3e9/bundle.js" async></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta
