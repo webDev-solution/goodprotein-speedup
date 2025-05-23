@@ -1,6 +1,49 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{% liquid
+  assign button_link = section.settings.button_link
+  assign button_text = section.settings.button_text
+%}
+
+{% style %}
+  .responsive-btn {
+    font-size: var(--full-width-input-font-size);
+    padding: var(--full-width-button-padding);
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: var(--full-width-padding) auto var(--full-width-padding) auto;
+    width: unset;
   }
+  .d-flex {
+    display: flex;
+  }
+{% endstyle %}
+
+<div class="d-flex">
+  <a class="btn responsive-btn" href="{{ button_link }}">
+    {{ button_text }}
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Solo Button",
+  "settings": [
+    {
+      "id": "bottom_button_label",
+      "type": "text",
+      "label": "Bottom Button Label",
+      "default": "Discover More Recipes",
+    },
+    {
+      "id": "bottom_button_url",
+      "type": "url",
+      "label": "Bottom Button Link"
+    }
+  ],
+  "presets":[
+    {
+      "name":"Solo Button"
+    }
+  ]
+}
 {% endschema %}
