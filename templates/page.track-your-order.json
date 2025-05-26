@@ -116,7 +116,7 @@
       "name": "Solo Button",
       "settings": {
         "bottom_button_label": "Discover More Recipes",
-        "bottom_button_url": "",
+        "bottom_button_url": "https://goodprotein.ca/blogs/recipes",
         "background_color": "#62b5e5"
       }
     },
