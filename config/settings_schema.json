@@ -2099,6 +2099,18 @@
           }
         ],
         "default": "scalloped_circle_1"
+      },
+      {
+        "id": "use_gloable_config_to_show_recipe_book",
+        "type": "checkbox",
+        "label": "Use global config to show recipe book",
+        "default": false
+      },
+      {
+        "id": "show_recipe_book",
+        "type": "checkbox",
+        "label": "Show recipe book",
+        "default": false
       }
     ]
   },

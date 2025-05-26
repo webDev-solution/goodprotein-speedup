@@ -178,34 +178,42 @@
     {% if settings.upcart_trust_badge != blank %}
       <img class="upcart-trust-badge" src="{{ settings.upcart_trust_badge | img_url: 'master' }}"/>
     {% endif %}
-    <div class="recipe-book-section">
-      <div class="notice-recipe-book">Get a Free Recipe Book with your order!</div>
-      {% assign product = all_products['digital-recipe-book'] %}
-      <div class="recipe-book-products">
-        <!-- Dynamically fetch or hardcode the related products here -->
-      {% if product != blank and product.available %}        
-        <div class="product-item-image available_produt">
-          {% if product.media[0] %}
-            <img src="{{ product.media[0].preview_image | img_url: '300x300' }}" alt="{{ product.title }}">
-          {% endif %}
+    
+    {% if settings.use_gloable_config_to_show_recipe_book == true %}
+      {% assign show_recipe_book = settings.show_recipe_book %}
+    {% else %}
+      {% assign show_recipe_book = section.settings.show_recipe_book %}
+    {% endif %}
+    {% if show_recipe_book == true %}
+      <div class="recipe-book-section">
+        <div class="notice-recipe-book">Get a Free Recipe Book with your order!</div>
+        {% assign product = all_products['digital-recipe-book'] %}
+        <div class="recipe-book-products">
+          <!-- Dynamically fetch or hardcode the related products here -->
+        {% if product != blank and product.available %}        
+          <div class="product-item-image available_produt">
+            {% if product.media[0] %}
+              <img src="{{ product.media[0].preview_image | img_url: '300x300' }}" alt="{{ product.title }}">
+            {% endif %}
+          </div>
+          <div class="product-item-label">
+            <p>{{ product.title }}</p>
+            <p class="price-container-sa">$ {{ product.price }} &nbsp;&nbsp; <span class="plan-price-sa">$ 14.99</span></p>
+          </div>
+          <!-- Add more products as needed -->
+        {% elsif product == blank %}
+          <div class="product-item-image">         
+              <img src="//goodprotein.ca/cdn/shop/files/Screenshot2024-10-21at4.48.28PM_300x300.png?v=1729626853" alt="Free Digital Recipe Book">
+          </div>
+          <div class="product-item-label">
+            <p>Free Digital Recipe Book</p>
+            <p class="price-container-sa">$ 0 &nbsp;&nbsp; <span class="plan-price-sa">$ 14.99</span></p>
+          </div>
+        {% endif %}
         </div>
-        <div class="product-item-label">
-          <p>{{ product.title }}</p>
-          <p class="price-container-sa">$ {{ product.price }} &nbsp;&nbsp; <span class="plan-price-sa">$ 14.99</span></p>
-        </div>
-        <!-- Add more products as needed -->
-      {% elsif product == blank %}
-        <div class="product-item-image">         
-            <img src="//goodprotein.ca/cdn/shop/files/Screenshot2024-10-21at4.48.28PM_300x300.png?v=1729626853" alt="Free Digital Recipe Book">
-        </div>
-        <div class="product-item-label">
-          <p>Free Digital Recipe Book</p>
-          <p class="price-container-sa">$ 0 &nbsp;&nbsp; <span class="plan-price-sa">$ 14.99</span></p>
-        </div>
-       {% endif %}
       </div>
-    </div>
-    <!-- ***************************************************** end [collectafreerecipebookwhenyouaddthisitemtothecart] -->
+      <!-- ***************************************************** end [collectafreerecipebookwhenyouaddthisitemtothecart] -->
+    {% endif %}
     
     {% if product.metafields.custom.payment_text != blank %}
     <p class="mt-2" >{{product.metafields.custom.payment_text}}</p>
