@@ -163,8 +163,7 @@
     }
   }
 </style>
-{% comment %}
-<style>
+{% comment %} <style>
   #shopify-section-announcement-bar {
     display: none !important;
   }
@@ -174,8 +173,7 @@
   #shopify-section-footer {
     display: none !important;
   }
-</style>
-{% endcomment %}
+</style> {% endcomment %}
 
 {% style %}
   {% if hide_original_header %}
@@ -258,7 +256,7 @@
     padding-bottom: 0px !important;
     Padding-top: 0px !important;
   }
-  #{{ app_block_id }} .wonderment-ab-container {
+  #{{ app_block_id }} .wndr--flex-layout-container {
     padding-bottom: var(--full-width-space-above-header);
   }
   #{{ app_block_id }} .tp-shipment-event {
@@ -266,6 +264,9 @@
   }
   #{{ app_block_id }} .wndr--shipment-status-header {
     margin-top: 0px !important;
+  }
+  #{{ app_block_id }} .tp-tracker-block {
+    overflow: auto;
   }
 {% endstyle %}
 
