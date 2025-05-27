@@ -258,7 +258,8 @@
     Padding-top: 0px !important;
   }
   #{{ app_block_id }} .wndr--flex-layout-container {
-    padding-bottom: var(--full-width-space-above-header);
+    padding-bottom: calc(var(--full-width-space-above-header) * 0.5);
+    
   }
   #{{ app_block_id }} .tp-shipment-event {
     margin-bottom: 0px !important;
@@ -270,11 +271,14 @@
   #{{ app_block_id }} .tp-tracker-block {
     overflow: auto;
   }
+  #{{ app_block_id }} .tp-tracker-block .tp-date-display {
+    height: 2.2rem;
+  }
   #{{ app_block_id }} .wndr--shipment-details-container {
-    height: var(--wndr-block-height, 500px);
+    height: var(--wndr-block-height, 444px);
   }
   #{{ app_block_id }} .wndr--shipment-line-items-container {
-    height: var(--wndr-block-height, 500px);
+    height: var(--wndr-block-height, 444px);
   }
   #{{ app_block_id }} .tp-content-wrapper {
     padding-top: 1px;
@@ -284,6 +288,10 @@
   }
   #{{ app_block_id }} .wndr--show-shipment-btn {
     font-size: 16px;
+    padding: 12px 32px;
+  }
+  #{{ app_block_id }} .wndr--show-shipment-btn-containe {
+    padding: 12px;
   }
 {% endstyle %}
 
