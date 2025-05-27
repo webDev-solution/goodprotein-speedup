@@ -14,7 +14,7 @@
   /* ***************** 1920px and more ********************** */
   :root {
     --full-width-padding: 80px;
-    --full-width-padding-horizontal: 50px;
+    --full-width-padding-horizontal: 30px;
     --full-width-border: 50px;
     --full-width-font-size: 72px;
     --full-width-input-font-size: 28px;
@@ -30,7 +30,7 @@
   @media (max-width: 1919px) {
     :root {
       --full-width-padding: 60px;
-      --full-width-padding-horizontal: 40px;
+      --full-width-padding-horizontal: 26px;
       --full-width-border: 40px;
       --full-width-font-size: 64px;
       --full-width-input-font-size: 24px;
@@ -47,7 +47,7 @@
   @media (max-width: 1599px) {
     :root {
       --full-width-padding: 50px;
-      --full-width-padding-horizontal: 34px;
+      --full-width-padding-horizontal: 22px;
       --full-width-border: 34px;
       --full-width-font-size: 60px;
       --full-width-input-font-size: 22px;
@@ -64,7 +64,7 @@
   @media (max-width: 1439px) {
     :root {
       --full-width-padding: 40px;
-      --full-width-padding-horizontal: 30px;
+      --full-width-padding-horizontal: 20px;
       --full-width-border: 30px;
       --full-width-font-size: 60px;
       --full-width-input-font-size: 20px;
@@ -81,7 +81,7 @@
   @media (max-width: 1023px) {
     :root {
       --full-width-padding: 30px;
-      --full-width-padding-horizontal: 24px;
+      --full-width-padding-horizontal: 18px;
       --full-width-border: 24px;
       --full-width-font-size: 58px;
       --full-width-input-font-size: 22px;
@@ -98,7 +98,7 @@
   @media (max-width: 768px) {
     :root {
       --full-width-padding: 30px;
-      --full-width-padding-horizontal: 20px;
+      --full-width-padding-horizontal: 18px;
       --full-width-border: 30px;
       --full-width-font-size: 54px;
       --full-width-input-font-size: 20px;
@@ -115,7 +115,7 @@
   @media (max-width: 550px) {
     :root {
       --full-width-padding: 20px;
-      --full-width-padding-horizontal: 20px;
+      --full-width-padding-horizontal: 18px;
       --full-width-border: 20px;
       --full-width-font-size: 40px;
       --full-width-input-font-size: 18px;
@@ -207,7 +207,7 @@
     border-top-right-radius: var(--full-width-border);
     font-size: calc(var(--full-width-font-size) * 0.9);
     padding-top: calc(var(--full-width-space-above-header) * 0.5);
-    padding-bottom: var(--full-width-space-between-header-input);
+    /* padding-bottom: var(--full-width-space-between-header-input); */
     font-family: Gelica Bold !important;
   }
 
@@ -231,6 +231,7 @@
 
   #{{ app_block_id }} .tp-form.tp-search-form {
     width: var(--full-width-input-width);
+    padding-top: var(--full-width-space-between-header-input);
   }
 
   #{{ app_block_id }} .tp-search-input.input.search {
