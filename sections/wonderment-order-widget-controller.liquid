@@ -16,14 +16,14 @@
     --full-width-padding: 80px;
     --full-width-padding-horizontal: 30px;
     --full-width-border: 50px;
-    --full-width-font-size: 72px;
-    --full-width-input-font-size: 28px;
-    --full-width-input-padding: 20px;
+    --full-width-font-size: 64px;
+    --full-width-input-font-size: 24px;
+    --full-width-input-padding: 18px;
     --full-width-input-border-radius: 4px;
     --full-width-space-between-header-input: 20px;
     --full-width-space-between-input-button: 36px;
     --full-width-space-above-header: 42px;
-    --full-width-button-padding: 20px 56px;
+    --full-width-button-padding: 18px 50px;
     --full-width-input-width: 800px;
   }
   
@@ -32,14 +32,14 @@
       --full-width-padding: 60px;
       --full-width-padding-horizontal: 26px;
       --full-width-border: 40px;
-      --full-width-font-size: 64px;
-      --full-width-input-font-size: 24px;
+      --full-width-font-size: 56px;
+      --full-width-input-font-size: 22px;
       --full-width-input-padding: 16px;
       --full-width-input-border-radius: 4px;
       --full-width-space-between-header-input: 18px;
       --full-width-space-between-input-button: 32px;
       --full-width-space-above-header: 38px;
-      --full-width-button-padding: 20px 50px;
+      --full-width-button-padding: 18px 44px;
       --full-width-input-width: 720px;
     }
   }
@@ -49,14 +49,14 @@
       --full-width-padding: 50px;
       --full-width-padding-horizontal: 22px;
       --full-width-border: 34px;
-      --full-width-font-size: 60px;
-      --full-width-input-font-size: 22px;
+      --full-width-font-size: 48px;
+      --full-width-input-font-size: 20px;
       --full-width-input-padding: 14px;
       --full-width-input-border-radius: 4px;
       --full-width-space-between-header-input: 16px;
       --full-width-space-between-input-button: 28px;
       --full-width-space-above-header: 36px;
-      --full-width-button-padding: 18px 44px;
+      --full-width-button-padding: 18px 40px;
       --full-width-input-width: 640px;
     }
   }
@@ -66,14 +66,14 @@
       --full-width-padding: 40px;
       --full-width-padding-horizontal: 20px;
       --full-width-border: 30px;
-      --full-width-font-size: 60px;
-      --full-width-input-font-size: 20px;
+      --full-width-font-size: 44px;
+      --full-width-input-font-size: 18px;
       --full-width-input-padding: 14px;
       --full-width-input-border-radius: 3px;
       --full-width-space-between-header-input: 14px;
       --full-width-space-between-input-button: 24px;
       --full-width-space-above-header: 32px;
-      --full-width-button-padding: 18px 36px;
+      --full-width-button-padding: 16px 36px;
       --full-width-input-width: 560px;
     }
   }
@@ -83,8 +83,8 @@
       --full-width-padding: 30px;
       --full-width-padding-horizontal: 18px;
       --full-width-border: 24px;
-      --full-width-font-size: 58px;
-      --full-width-input-font-size: 22px;
+      --full-width-font-size: 40px;
+      --full-width-input-font-size: 18px;
       --full-width-input-padding: 16px;
       --full-width-input-border-radius: 3px;
       --full-width-space-between-header-input: 12px;
@@ -100,8 +100,8 @@
       --full-width-padding: 30px;
       --full-width-padding-horizontal: 18px;
       --full-width-border: 30px;
-      --full-width-font-size: 54px;
-      --full-width-input-font-size: 20px;
+      --full-width-font-size: 36px;
+      --full-width-input-font-size: 16px;
       --full-width-input-padding: 14px;
       --full-width-input-border-radius: 2px;
       --full-width-space-between-header-input: 10px;
@@ -117,8 +117,8 @@
       --full-width-padding: 20px;
       --full-width-padding-horizontal: 18px;
       --full-width-border: 20px;
-      --full-width-font-size: 40px;
-      --full-width-input-font-size: 18px;
+      --full-width-font-size: 32px;
+      --full-width-input-font-size: 16px;
       --full-width-input-padding: 12px;
       --full-width-input-border-radius: 1px;
       --full-width-space-between-header-input: 8px;
@@ -193,7 +193,7 @@
   }
 
   .wonderment-order-header-conatiner {
-    padding-top: calc(var(--full-width-padding-horizontal) * 0.8);
+    padding-top: calc(var(--full-width-padding-horizontal));
     padding-left: var(--full-width-padding);
     padding-right: var(--full-width-padding);
     background-color: {{ border_color }};
@@ -250,7 +250,7 @@
     text-align: center;
     font-weight: bold;
     text-transform: capitalize;
-    margin: var(--full-width-space-between-input-button) 0 var(--full-width-padding) 0;
+    margin: var(--full-width-space-between-input-button) 0 var(--full-width-padding-horizontal) 0;
     width: unset;
   }
   #{{ app_block_id }} .wndr--shipment-status-chip {
