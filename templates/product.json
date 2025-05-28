@@ -131,7 +131,7 @@
         "tolstoy_shoppable_video_quiz_stories_block_FjLGAC": {
           "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/stories-block/06fa8282-42ff-403e-b67c-1936776aed11",
           "settings": {
-            "publishId": "publishId"
+            "publishId": "cxa1n9yekjxqt"
           }
         }
       },
@@ -151,6 +151,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "show_recipe_book": false,
         "bought_count": "{{ product.metafields.custom.bought_counts_in_past_week.value }}",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default",
