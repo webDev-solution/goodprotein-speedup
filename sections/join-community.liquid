@@ -8,7 +8,7 @@
     --full-width-subtitle-font-size: 50px;
     --full-width-subdescription-font-size: 24px;
     --full-width-button-text-font-size: 22px;
-    --full-width-button-padding: 20px 40px;
+    --full-width-small-button-padding: 20px 40px;
   }
   
   /* 1600px - 1919px */
@@ -17,7 +17,7 @@
       --full-width-subtitle-font-size: 44px;
       --full-width-subdescription-font-size: 22px;
       --full-width-button-text-font-size: 20px;
-      --full-width-button-padding: 18px 36px;
+      --full-width-small-button-padding: 18px 36px;
     }
   }
   
@@ -27,7 +27,7 @@
       --full-width-subtitle-font-size: 40px;
       --full-width-subdescription-font-size: 20px;
       --full-width-button-text-font-size: 18px;
-      --full-width-button-padding: 16px 32px;
+      --full-width-small-button-padding: 16px 32px;
     }
   }
   
@@ -37,7 +37,7 @@
       --full-width-subtitle-font-size: 34px;
       --full-width-subdescription-font-size: 20px;
       --full-width-button-text-font-size: 18px;
-      --full-width-button-padding: 14px 30px;
+      --full-width-small-button-padding: 14px 30px;
     }
   }
   
@@ -47,7 +47,7 @@
       --full-width-subtitle-font-size: 32px;
       --full-width-subdescription-font-size: 20px;
       --full-width-button-text-font-size: 18px;
-      --full-width-button-padding: 12px 28px;
+      --full-width-small-button-padding: 12px 28px;
     }
   }
   
@@ -57,7 +57,7 @@
       --full-width-subtitle-font-size: 30px;
       --full-width-subdescription-font-size: 20px;
       --full-width-button-text-font-size: 18px;
-      --full-width-button-padding: 10px 26px;
+      --full-width-small-button-padding: 10px 26px;
     }
   }
   
@@ -67,7 +67,7 @@
       --full-width-subtitle-font-size: 26px;
       --full-width-subdescription-font-size: 16px;
       --full-width-button-text-font-size: 14px;
-      --full-width-button-padding: 10px 22px;
+      --full-width-small-button-padding: 10px 22px;
     }
   }
   
@@ -77,7 +77,7 @@
       --full-width-subtitle-font-size: 22px;
       --full-width-subdescription-font-size: 16px;
       --full-width-button-text-font-size: 14px;
-      --full-width-button-padding: 10px 22px;
+      --full-width-small-button-padding: 10px 22px;
     }
   }
   
@@ -87,7 +87,7 @@
       --full-width-subtitle-font-size: 20px;
       --full-width-subdescription-font-size: 12px;
       --full-width-button-text-font-size: 12px;
-      --full-width-button-padding: 6px 16px;
+      --full-width-small-button-padding: 6px 16px;
     }
   }
 </style>
@@ -129,7 +129,7 @@
   }
   .join-community-container .content-container .button-container .btn{
     font-size: var(--full-width-button-text-font-size);
-    padding: var(--full-width-button-padding);
+    padding: var(--full-width-small-button-padding);
   }
   @media (max-width: 768px) {
     .join-community-container {
@@ -163,7 +163,7 @@
         <div class="content-container absolute w-full">
           <h3 class="title">
             {% if request.path contains '/fr' and block.settings.title_fr != blank %}
-              {{ block.settings._fr | replace: "[@new line]", "<br>" }}
+              {{ block.settings.title_fr | replace: "[@new line]", "<br>" }}
             {% else %}
               {{ block.settings.title | replace: "[@new line]", "<br>" }}
             {% endif %}
