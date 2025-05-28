@@ -132,6 +132,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "show_recipe_book": false,
         "bought_count": "{{ product.metafields.custom.bought_counts_in_past_week.value }}",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default",
@@ -324,7 +325,7 @@
         "47afb551-e4e8-45df-8141-e12a50538ddd"
       ],
       "settings": {
-        "nutrition_image": "shopify://shop_images/NutritionFacts-VanillaMilkshake_1.png",
+        "nutrition_image": "shopify://shop_images/OrangeCreamPop-Valeur-Nutritive.png",
         "content": "<strong>Ingredients:</strong> Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Flavours, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Broccoli*, Spirulina*, Chlorella*, Acai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans). <strong>*Organic Ingredients </strong>— May Contain: Peanuts",
         "product_image": "{{ product.metafields.custom.ingredients_image.value }}",
         "background_gradient": "linear-gradient(180deg, rgba(215, 239, 255, 1) 77%, rgba(142, 204, 243, 1) 100%)",
