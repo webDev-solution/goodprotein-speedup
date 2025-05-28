@@ -11,7 +11,6 @@
   "sections": {
     "wonderment_order_widget_controller_dpUpbw": {
       "type": "wonderment-order-widget-controller",
-      "name": "Wonderment Controller",
       "settings": {
         "app_block_id": "shopify-block-AMGhuTldhY1JEOWt2a__wonderment",
         "hide_original_header": true,
@@ -43,7 +42,7 @@
           "type": "group",
           "settings": {
             "title": "Join the Club That’s All [@new line]About Feeling Good",
-            "title_fr": "",
+            "title_fr": "Rejoignez le club bien-être",
             "description": "Connect, share, thrive–together.",
             "button_label": "Join our Facebook Community",
             "button_link": "https://www.facebook.com/groups/goodprotein.ca",
@@ -80,14 +79,12 @@
         "group_F8baKA",
         "shape_divider_3yrDVY"
       ],
-      "name": "Join Community",
       "settings": {
         "border_color": "#f1f0e1"
       }
     },
     "tolstoy_video_carousel_widget_controller_rEzJr9": {
       "type": "tolstoy-video-carousel-widget-controller",
-      "name": "Tolstoy Carousel +",
       "settings": {
         "app_block_id": "shopify-block-Ad0FZZ25HYTBoZGE0d__tolstoy_shoppable_video_quiz_carousel_block_JdP6KY",
         "tolstoy_carousel_header": "Crave-Worthy Recipes",
@@ -113,7 +110,6 @@
     },
     "solo_button_jf7GKF": {
       "type": "solo-button",
-      "name": "Solo Button",
       "settings": {
         "bottom_button_label": "Discover More Recipes",
         "bottom_button_url": "https://goodprotein.ca/blogs/recipes",
@@ -210,7 +206,6 @@
         "shape_divider_iBgXyC"
       ],
       "disabled": true,
-      "name": "Responsive Video Carousel",
       "settings": {
         "heading": "Crave-Worthy Recipes",
         "subheading": "",
@@ -297,7 +292,6 @@
         "image_BfHCaH"
       ],
       "disabled": true,
-      "name": "New Video Carousel",
       "settings": {
         "bg_color": "",
         "itme_show": 6,
@@ -375,7 +369,6 @@
         "image_GJwyXd"
       ],
       "disabled": true,
-      "name": "Product Video Carousel",
       "settings": {
         "bg_color": "",
         "itme_show": 5,
