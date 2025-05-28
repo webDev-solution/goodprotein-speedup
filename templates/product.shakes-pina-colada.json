@@ -132,6 +132,7 @@
       ],
       "custom_css": [],
       "settings": {
+        "show_recipe_book": false,
         "bought_count": "{{ product.metafields.custom.bought_counts_in_past_week.value }}",
         "crop": "aspect-w-1 aspect-h-1",
         "image_shape": "default",
@@ -148,11 +149,11 @@
         "hide_media_shadow": false,
         "thumbnail_size": "large",
         "show_thumbnails_on_mobile": false,
-        "color_accent": "#8eccf3",
-        "color_background": "#d7efff",
-        "color_media": "#8eccf3",
-        "text_color": "#000000",
-        "accent_text_color": "#000000"
+        "color_accent": "#efd253",
+        "color_background": "#f2eecb",
+        "color_media": "#efd253",
+        "text_color": "#121212",
+        "accent_text_color": "#ffffff"
       }
     },
     "4e136310-1788-411b-a9dd-3d710b8d176d": {
@@ -190,8 +191,8 @@
       ],
       "settings": {
         "background": true,
-        "color_bg": "#8eccf3",
-        "color_text": "#000000"
+        "color_bg": "#efd253",
+        "color_text": "#ffffff"
       }
     },
     "9909ac29-18ad-4f26-b150-a3b5d3290043": {
@@ -327,8 +328,8 @@
         "nutrition_image": "shopify://shop_images/NutritionFacts-VanillaMilkshake_1.png",
         "content": "<strong>Ingredients:</strong> Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Flavours, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Broccoli*, Spirulina*, Chlorella*, Acai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans). <strong>*Organic Ingredients </strong>— May Contain: Peanuts",
         "product_image": "{{ product.metafields.custom.ingredients_image.value }}",
-        "background_gradient": "linear-gradient(180deg, rgba(215, 239, 255, 1) 77%, rgba(142, 204, 243, 1) 100%)",
-        "background_gradient_icon": "#8eccf3"
+        "background_gradient": "linear-gradient(180deg, rgba(242, 235, 203, 1) 77%, rgba(239, 210, 83, 1) 100%)",
+        "background_gradient_icon": "#efd253"
       }
     },
     "63d86149-3de8-44e0-9fc5-522d7f858a28": {
@@ -475,8 +476,8 @@
         "subtitle": "20,000+ Verified Reviews <span class=\"review-star\"><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i><i class=\"fa-solid fa-star\"></i></span>",
         "heading": "One shake to curb every craving and meet every need",
         "subheading": "A delicious, nutrient dense shake that is designed to curb your <br> sweet cravings and give your body everything it needs to thrive.",
-        "color_bg": "#d7efff",
-        "color_icon": "#8eccf3"
+        "color_bg": "#f2eecb",
+        "color_icon": "#efd253"
       }
     },
     "390cabc3-819b-46eb-b503-9825df6044e2": {
@@ -635,7 +636,7 @@
         "display_mobile_icons": "carousel",
         "button_title": "",
         "button_link": "",
-        "color_bg": "#d7efff",
+        "color_bg": "#f2eecb",
         "color_text": "#000000"
       }
     },
