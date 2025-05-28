@@ -279,9 +279,16 @@
   }
   #{{ app_block_id }} .wndr--shipment-details-container {
     height: var(--wndr-block-height, 420px);
+    border-radius: 10px;
   }
   #{{ app_block_id }} .wndr--shipment-line-items-container {
     height: var(--wndr-block-height, 420px);
+    border-radius: 10px;
+  }
+  #{{ app_block_id }} .wndr--shipment-line-items-container>.wndr-section-header,
+  #{{ app_block_id }} .wndr--shipment-details-container>.wndr-section-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   #{{ app_block_id }} .tp-content-wrapper {
     padding-top: 1px;
