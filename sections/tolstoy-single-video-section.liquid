@@ -1,13 +1,13 @@
 <div>
   <!-- Centered Tolstoy video -->
-  <div style="width: 100%; display: flex; justify-content: center;">
+  <div class="content-container-ss" style="width: 100%; display: flex; justify-content: center;">
     <div style="max-width: 400px; width: 100%;">
       <h3 style="text-align: center;">See it in action</h3>
       <tolstoy-stories data-tags="{% for tag in product.tags -%}{{ tag | escape }},{%- endfor %}" class="tolstoy-stories" data-publish-id="{{ section.settings.video_id }}" data-product-id="{{ product.id }}">
       </tolstoy-stories>
     </div>
   </div>
-  
+
   <!-- Spacer to separate from the text above -->
   <div style="height: 40px;"></div>
 </div>
