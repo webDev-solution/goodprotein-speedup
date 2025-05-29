@@ -9,6 +9,27 @@
  */
 {
   "sections": {
+    "video_with_text_overlay_7HPqq4": {
+      "type": "video-with-text-overlay",
+      "name": "Video with text overlay",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/803b71c9dca34d45b28cc48f6e9419fd.mp4",
+        "crop": "full-screen",
+        "crop_desktop": "same",
+        "display_on_card": false,
+        "style": "full",
+        "place_content": "place-content-center-center",
+        "text_align": "text-center",
+        "title": "Win 1 of 3 Ninja Swirl Blenders!",
+        "heading_size": "heading-base",
+        "richtext": "<p>Win a Ninja Swirl and make ice cream out of your favourite Good Protein flavour.</p>",
+        "cta_url": "shopify://collections",
+        "cta_text": "Shop Now",
+        "color_scheme": "scheme-37e9221f-c532-483e-b3c5-612012232c0b",
+        "use_gradient_background": false,
+        "text_overlay_color": "black"
+      }
+    },
     "main": {
       "type": "main-page",
       "custom_css": [
@@ -22,6 +43,108 @@
         "display_on_card": false,
         "color_scheme": "primary",
         "use_gradient_background": false
+      }
+    },
+    "ss_video_with_text_7_ngAr33": {
+      "type": "ss-video-with-text-7",
+      "blocks": {
+        "heading_jicVre": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Good-for-You Ice Cream? Believe It.</h2>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_size": 48,
+            "heading_size_mobile": 32,
+            "heading_height": 130,
+            "heading_mt": 0,
+            "heading_mt_mobile": 0,
+            "heading_color": "#ffffff"
+          }
+        },
+        "feature_9D3ULJ": {
+          "type": "feature",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/Group_136.png",
+            "heading": ""
+          }
+        },
+        "feature_FJWV46": {
+          "type": "feature",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/Group_137.png",
+            "heading": ""
+          }
+        },
+        "feature_kYqCDp": {
+          "type": "feature",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/Group_135.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_jicVre",
+        "feature_9D3ULJ",
+        "feature_FJWV46",
+        "feature_kYqCDp"
+      ],
+      "name": "SS - Video with text #7",
+      "settings": {
+        "layout_gap": 80,
+        "layout_gap_mobile": 28,
+        "content_horizontal_align": "center",
+        "content_horizontal_align_mobile": "center",
+        "content_vertical_align": "center",
+        "buttons_gap": 16,
+        "buttons_gap_mobile": 12,
+        "buttons_mt": 40,
+        "buttons_mt_mobile": 30,
+        "features_max_width": 100,
+        "features_max_width_mobile": 84,
+        "features_gap": 22,
+        "features_gap_mobile": 18,
+        "features_mt": 50,
+        "features_mt_mobile": 24,
+        "icon_size": 120,
+        "icon_size_mobile": 86,
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 13,
+        "heading_size_mobile": 11,
+        "heading_height": 150,
+        "heading_mt": 14,
+        "heading_mt_mobile": 12,
+        "video": "shopify://files/videos/ninja swirl.mp4",
+        "video_position": "right",
+        "video_position_mobile": "bottom",
+        "video_radius": 14,
+        "video_border_thickness": 0,
+        "video_ratio": "portrait",
+        "video_ratio_mobile": "portrait",
+        "icon_color": "#121212",
+        "heading_color": "#121212",
+        "video_border_color": "#121212",
+        "background_color": "#8eccf3",
+        "background_gradient": "",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1600,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
       }
     },
     "174345558349d596c6": {
@@ -231,7 +354,9 @@
     }
   },
   "order": [
+    "video_with_text_overlay_7HPqq4",
     "main",
+    "ss_video_with_text_7_ngAr33",
     "174345558349d596c6",
     "17434436682af4c4ba",
     "rich_text_cETRJF",
