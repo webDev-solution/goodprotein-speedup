@@ -549,7 +549,7 @@
         "item_7crKqi": {
           "type": "item",
           "settings": {
-            "row_heading": "100% natural plant-based",
+            "row_heading": "100% natural & plant-based",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "yes"
@@ -567,7 +567,7 @@
         "item_3QgLiF": {
           "type": "item",
           "settings": {
-            "row_heading": "Supports Gut Flora",
+            "row_heading": "Supports gut flora",
             "first_icon": "yes",
             "second_icon": "no",
             "third_icon": "no"
@@ -593,7 +593,7 @@
         "item_4yHVTF"
       ],
       "settings": {
-        "heading": "US vs Them",
+        "heading": "Us vs Them",
         "heading_custom": true,
         "heading_font": "lato_n7",
         "heading_size": 50,
@@ -658,10 +658,10 @@
       ],
       "settings": {
         "logo_max_width": 120,
-        "title": "What Makes it Different",
+        "title": "What Makes It Different",
         "heading_size": "heading-base",
         "site_review": false,
-        "rich_text": "<p>Our Superfood Shake is creamy, rich and tastes exactly like your favourite sweet snacks. It curbs cravings and will help keep you full longer. Packed with pre- and probiotics, our shake is easy to digest and good for your gut health. Making the healthy choice has never been so easy — or tasted so good.</p>",
+        "rich_text": "<p>Our All-in-One Shake is creamy, rich and tastes exactly like your favourite sweet snacks. It curbs cravings and will help keep you full longer. Packed with pre- and probiotics, our shake is easy to digest and good for your gut health. Making the healthy choice has never been so easy — or tasted so good.</p>",
         "display_on_card": false,
         "content_width_desktop": "lg:w-1/2",
         "button_link": "",
@@ -763,7 +763,7 @@
         "heading_Ajx4bi": {
           "type": "heading",
           "settings": {
-            "heading": "Our delicious, smooth and healthy mission",
+            "heading": "Our Delicious, Smooth and Healthy Mission",
             "heading_custom": true,
             "heading_font": "lato_n7",
             "header_size": 32,
@@ -934,8 +934,8 @@
         "title_position": "center",
         "two_columns_desktop": false,
         "title": "FAQ's",
-        "richtext": "<p>See below for our most frequently asked questions. If you don't see your answer or just want to say hello, send us an email at <a href=\"https://goodprotein.ca/pages/contact\" title=\"https://goodprotein.ca/pages/contact\"><span style=\"text-decoration:underline\">info@goodprotein.ca</span></a></p>",
-        "btn_text": "Read all FAQs",
+        "richtext": "<p>See below for our most frequently asked questions. If you can't find an answer to your question, please send us an email at <a href=\"mailto:info@goodprotein.ca\">info@goodprotein.ca</a> and provide as much information as possible (email address, order number, etc.).</p>",
+        "btn_text": "Read All FAQs",
         "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false,
