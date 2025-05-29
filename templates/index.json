@@ -619,7 +619,7 @@
       "settings": {
         "video_url": "",
         "crop": "four-three",
-        "crop_desktop": "cinematic",
+        "crop_desktop": "full-screen",
         "fallback_image": "shopify://shop_images/Recipes-Banners-Homepage.webp",
         "display_on_card": false,
         "style": "full",
