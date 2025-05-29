@@ -1015,7 +1015,7 @@
       ],
       "settings": {
         "logo_max_width": 120,
-        "title": "Already Have An Account?",
+        "title": "Already Have an Account?",
         "heading_size": "heading-template",
         "site_review": false,
         "rich_text": "<p>Easily access your account to add or remove items, manage your delivery frequency, skip shipments, or cancel your subscription.</p>",
