@@ -74,7 +74,7 @@
         "image_YmLmDV": {
           "type": "image",
           "settings": {
-            "feature_title": "Pick your favorite flavour",
+            "feature_title": "Pick your favourite flavour",
             "feature_text": "Choose Subscribe & Save on most product pages.",
             "feature_image": "shopify://shop_images/Icon-_Heart_03.svg",
             "feature_url": "",
@@ -186,8 +186,8 @@
         "feature_mWEKJA": {
           "type": "feature",
           "settings": {
-            "title": "<p><strong>Be the first to taste our new flavors</strong></p>",
-            "text": "<p>Our subscribers receive early access to new flavor launches.</p>"
+            "title": "<p><strong>Be the first to taste our new flavours</strong></p>",
+            "text": "<p>Our subscribers receive early access to new flavour launches.</p>"
           }
         }
       },
@@ -694,7 +694,7 @@
         "sub_heading_align": "left",
         "sub_heading_align_mobile": "center",
         "sub_heading_mt": 28,
-        "button": "Find your Protein",
+        "button": "Find Your Protein",
         "button_url": "shopify://products/vanilla-milkshake-all-in-one-shake",
         "button_custom": true,
         "button_font": "lato_n6",
@@ -889,8 +889,8 @@
         "title_position": "center",
         "two_columns_desktop": false,
         "title": "FAQ's",
-        "richtext": "<p>See below for our most frequently asked questions. If you don't see your answer or just want to say hello, send us an email at <a href=\"mailto:info@goodprotein.ca\"><span style=\"text-decoration:underline\">info@goodprotein.ca</span></a> !</p>",
-        "btn_text": "Read all FAQs",
+        "richtext": "<p>See below for our most frequently asked questions. If you can't find an answer to your question, feel free to send us an email at <a href=\"mailto:info@goodprotein.ca\">info@goodprotein.ca</a> ! Please make sure to provide as much information as possible (email address, order number, etc.).</p>",
+        "btn_text": "Read All FAQs",
         "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
         "use_gradient_background": false,
