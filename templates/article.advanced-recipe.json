@@ -73,6 +73,7 @@
     "tolstoy_single_video_section_7qie7W": {
       "type": "tolstoy-single-video-section",
       "settings": {
+        "title": "See it in Action",
         "video_id": "{{ article.metafields.custom.tolstoy_media_id.value }}"
       }
     },
