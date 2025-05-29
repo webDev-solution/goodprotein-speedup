@@ -3,7 +3,9 @@
   <!-- Centered Tolstoy video -->
   <div class="content-container-ss" style="width: 100%; display: flex; justify-content: center;">
     <div style="max-width: 1200px; width: 100%;">
-      <h2 style="text-align: center;"><Strong>See it in action</Strong></h2>
+      <h2 style="text-align: center;"><Strong>
+        {{ section.settings.title }}  
+      </Strong></h2>
       <tolstoy-stories data-tags="{% for tag in product.tags -%}{{ tag | escape }},{%- endfor %}" class="tolstoy-stories" data-publish-id="{{ section.settings.video_id }}" data-product-id="{{ product.id }}">
       </tolstoy-stories>
     </div>
@@ -21,6 +23,12 @@
     {
       "type": "header",
       "content": "Image and Video"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "title",
+      "default": "See it in action"
     },
     {
       "id": "video_id",
