@@ -525,6 +525,9 @@
         "image_JzdQLM",
         "shape_divider_QN6bbe"
       ],
+      "custom_css": [
+        ".cusom-padding-bottom {padding-bottom: 10vh;}"
+      ],
       "settings": {
         "title": "Shakes With Benefits",
         "text": "<p>When we say All-in-One, we mean it. A balanced nutritional offering means you get all sorts of benefits, from your muscles to your gut to your taste buds.</p>",
