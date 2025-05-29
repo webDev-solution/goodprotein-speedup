@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -14,7 +23,7 @@
       "disabled": true,
       "settings": {
         "display_on_card": true,
-        "image": "shopify:\/\/shop_images\/desktop-collection-2.jpg",
+        "image": "shopify://shop_images/desktop-collection-2.jpg",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
@@ -28,7 +37,7 @@
         "subtitle": "",
         "title": "85+ superfoods,",
         "heading_size": "heading-base",
-        "richtext": "<p><strong>nutrients and plant-based ingredients.<\/strong><\/p>",
+        "richtext": "<p><strong>nutrients and plant-based ingredients.</strong></p>",
         "ingredient_text": "",
         "text_alignment": "text-left",
         "ingredient_link_t": "",
@@ -55,7 +64,7 @@
         "text_apLnBY": {
           "type": "text",
           "settings": {
-            "text": "<p>Our shakes are made with nature’s most nutritious superfoods.<\/p>",
+            "text": "<p>Our shakes are made with nature’s most nutritious superfoods.</p>",
             "text_custom": true,
             "text_font": "lato_n4",
             "text_size": 22,
@@ -75,12 +84,12 @@
         "desktop_image_width": "33",
         "image_radius": 20,
         "layout": "text_first",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "icon_play_size": 30,
         "video_controls": true,
         "video_autoplay": false,
         "video_loop": false,
-        "image": "shopify:\/\/shop_images\/Ingredients-Hero_2.png",
+        "image": "shopify://shop_images/Ingredients-Hero_2.png",
         "desktop_content_alignment": "left",
         "content_padding_top": 36,
         "content_padding_bottom": 36,
@@ -131,7 +140,7 @@
       "disabled": true,
       "custom_css": [],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Ingredients-Hero_3.png",
+        "image": "shopify://shop_images/Ingredients-Hero_3.png",
         "display_on_card": false,
         "display_content_below_image_on_mobile": false,
         "style": "full",
@@ -150,7 +159,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/coconut-2.png",
+            "image": "shopify://shop_images/coconut-2.png",
             "title": "Coconut Milk",
             "text": "",
             "cta_link": "",
@@ -162,7 +171,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/yellowpeas.png",
+            "image": "shopify://shop_images/yellowpeas.png",
             "title": "Yellow Peas",
             "text": "",
             "cta_link": "",
@@ -174,7 +183,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/spinach_1.png",
+            "image": "shopify://shop_images/spinach_1.png",
             "title": "Spinach",
             "text": "",
             "cta_link": "",
@@ -186,7 +195,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Carottes.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Carottes.png",
             "title": "Carrot",
             "text": "",
             "cta_link": "",
@@ -198,7 +207,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/tapioca-fibre.png",
+            "image": "shopify://shop_images/tapioca-fibre.png",
             "title": "Tapioca Fiber",
             "text": "",
             "cta_link": "",
@@ -210,7 +219,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Sweet_Potato.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Sweet_Potato.png",
             "title": "Sweet Potato",
             "text": "",
             "cta_link": "",
@@ -222,7 +231,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Golden_Flaxseed.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Golden_Flaxseed.png",
             "title": "Golden Flaxseeds",
             "text": "",
             "cta_link": "",
@@ -234,7 +243,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Shiitake_mushroom.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Shiitake_mushroom.png",
             "title": "Shiitake Mushroom",
             "text": "",
             "cta_link": "",
@@ -263,8 +272,8 @@
         "display_on_card": false,
         "slideshow_on_mobile": false,
         "display_full_width": false,
-        "title": "All-in-one Shake",
-        "text": "<p>Our All-in-One Shakes not only offer 21g of complete plant-based protein, but also a powerful blend of essential nutrients, vitamins, and minerals, providing a complete and balanced solution to fuel your body and support overall well-being.<\/p>",
+        "title": "All-in-One Shake",
+        "text": "<p>Our All-in-One Shakes not only offer 21g of complete plant-based protein, but also a powerful blend of essential nutrients, vitamins, and minerals, providing a complete and balanced solution to fuel your body and support overall well-being.</p>",
         "crop": "",
         "image_shape": "default",
         "show_index_on_blocks": false,
@@ -280,7 +289,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Broccoli.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Broccoli.png",
             "title": "Broccoli",
             "text": "",
             "cta_link": "",
@@ -292,7 +301,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/ingredients-framboises_82443cab-97bf-4787-ad68-b202feb8ce6f.png",
+            "image": "shopify://shop_images/ingredients-framboises_82443cab-97bf-4787-ad68-b202feb8ce6f.png",
             "title": "Raspberry",
             "text": "",
             "cta_link": "",
@@ -304,7 +313,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/Ingrdients_2024_-_Orange.png",
+            "image": "shopify://shop_images/Ingrdients_2024_-_Orange.png",
             "title": "Orange",
             "text": "",
             "cta_link": "",
@@ -316,7 +325,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/1080-spirulina.png",
+            "image": "shopify://shop_images/1080-spirulina.png",
             "title": "Spirulina",
             "text": "",
             "cta_link": "",
@@ -328,7 +337,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/ingredients-chlorella_29dba027-af28-4ced-a10a-5ba84f6aede4.png",
+            "image": "shopify://shop_images/ingredients-chlorella_29dba027-af28-4ced-a10a-5ba84f6aede4.png",
             "title": "Chlorella",
             "text": "",
             "cta_link": "",
@@ -340,7 +349,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/ingredients-Goji.png",
+            "image": "shopify://shop_images/ingredients-Goji.png",
             "title": "Goji",
             "text": "",
             "cta_link": "",
@@ -352,7 +361,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/pomme-grenade2.png",
+            "image": "shopify://shop_images/pomme-grenade2.png",
             "title": "Pomegranate Juice",
             "text": "",
             "cta_link": "",
@@ -364,7 +373,7 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify:\/\/shop_images\/acai-berry.png",
+            "image": "shopify://shop_images/acai-berry.png",
             "title": "Acai Berry",
             "text": "",
             "cta_link": "",
@@ -394,7 +403,7 @@
         "slideshow_on_mobile": false,
         "display_full_width": false,
         "title": "Superfood Juices",
-        "text": "<p>From nutrient-packed fresh greens to powerhouse antioxidants, adaptogens and probiotics, our Superfood Juices offer all the flavour and benefits of fresh juice, without the complicated juicer or never-ending grocery list.<\/p>",
+        "text": "<p>From nutrient-packed fresh greens to powerhouse antioxidants, adaptogens and probiotics, our Superfood Juices offer all the flavour and benefits of fresh juice, without the complicated juicer or never-ending grocery list.</p>",
         "crop": "",
         "image_shape": "default",
         "show_index_on_blocks": false,
@@ -484,7 +493,7 @@
       "disabled": true,
       "settings": {
         "display_on_card": false,
-        "image": "shopify:\/\/shop_images\/Valeur_Nutritive_Shakes_2022_49d64248-94cb-4931-962a-f37f6b2ec6c1.png",
+        "image": "shopify://shop_images/Valeur_Nutritive_Shakes_2022_49d64248-94cb-4931-962a-f37f6b2ec6c1.png",
         "crop": "",
         "image_shape": "default",
         "blob_type": 1,
@@ -498,7 +507,7 @@
         "subtitle": "",
         "title": "All-In-One Plant Based Nutrition",
         "heading_size": "heading-template",
-        "richtext": "<p><strong>Ingredients: <\/strong>Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Strawberry & Cream Flavour, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Brocoli*, Spirulina*, Chlorella*, Açai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans).<strong>*Organic Ingredients<\/strong>— May Contain: Peanuts<\/p>",
+        "richtext": "<p><strong>Ingredients: </strong>Protein Blend (Pea Protein, Flaxseed, Fava Bean Protein), Soluble Tapioca Fiber, Coconut Milk*, Natural Strawberry & Cream Flavour, Organic Fruits and Vegetables Blend (Kale*, Spinach*, Brocoli*, Spirulina*, Chlorella*, Açai Juice*, Amla Fruit*, Goji*, Pomegranate Juice*, Acerola Juice*, Mangosteen*, Strawberry Juice*, Cranberry Juice*, Maqui Berry*, Jabuticaba Juice*), Sunflower Oil, Himalayan Pink Salt, Acacia Gum, Guar Gum, Xanthan Gum, Reb M (Rebaudioside M*), Digestive enzymes blend (protease, lipase, lactase, cellulase, amylase), Bacterial culture (Bacillus coagulans).<strong>*Organic Ingredients</strong>— May Contain: Peanuts</p>",
         "ingredient_text": "",
         "text_alignment": "text-left",
         "ingredient_link_t": "",
@@ -648,12 +657,13 @@
         "p {font-size: 18px;}"
       ],
       "settings": {
+        "logo_max_width": 120,
         "title": "What Makes it Different",
         "heading_size": "heading-base",
         "site_review": false,
-        "rich_text": "<p>Our Superfood Shake is creamy, rich and tastes exactly like your favourite sweet snacks. It curbs cravings and will help keep you full longer. Packed with pre- and probiotics, our shake is easy to digest and good for your gut health. Making the healthy choice has never been so easy — or tasted so good.<\/p>",
+        "rich_text": "<p>Our Superfood Shake is creamy, rich and tastes exactly like your favourite sweet snacks. It curbs cravings and will help keep you full longer. Packed with pre- and probiotics, our shake is easy to digest and good for your gut health. Making the healthy choice has never been so easy — or tasted so good.</p>",
         "display_on_card": false,
-        "content_width_desktop": "lg:w-1\/2",
+        "content_width_desktop": "lg:w-1/2",
         "button_link": "",
         "button_label": "Shop Now",
         "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
@@ -668,9 +678,9 @@
           "settings": {
             "svg_color": "#000000",
             "icon": "plant",
-            "image": "shopify:\/\/shop_images\/Fiche-Nut-Icons-Dec2023-01-01_1.svg",
+            "image": "shopify://shop_images/Fiche-Nut-Icons-Dec2023-01-01_1.svg",
             "question": "100% natural plant-based",
-            "answer": "<p>Our Superfood Shake is made with real, 100% natural plant-based ingredients. Packed with a balanced intake of nutrients - and perfected to taste just like your favourite sweet snacks - our unique superfood blend offers so much more than the average, boring protein powder.<\/p>"
+            "answer": "<p>Our Superfood Shake is made with real, 100% natural plant-based ingredients. Packed with a balanced intake of nutrients - and perfected to taste just like your favourite sweet snacks - our unique superfood blend offers so much more than the average, boring protein powder.</p>"
           }
         },
         "faq_XraW96": {
@@ -678,9 +688,9 @@
           "settings": {
             "svg_color": "#000000",
             "icon": "box",
-            "image": "shopify:\/\/shop_images\/ICONS-ONESHAKE-0-03_1_f8402d6f-ea74-432b-a9ab-489ea40c39db.svg",
+            "image": "shopify://shop_images/ICONS-ONESHAKE-0-03_1_f8402d6f-ea74-432b-a9ab-489ea40c39db.svg",
             "question": "Creamy texture and rich flavours",
-            "answer": "<p>No more gritty textures, unpleasant aftertastes, or bland flavours. We set out to do what others couldn’t: creating healthy, functional, plant based superfood shakes and juices that you’ll actually want to drink. So you can satisfy your body’s needs and your cravings, with the same sip.<\/p>"
+            "answer": "<p>No more gritty textures, unpleasant aftertastes, or bland flavours. We set out to do what others couldn’t: creating healthy, functional, plant based superfood shakes and juices that you’ll actually want to drink. So you can satisfy your body’s needs and your cravings, with the same sip.</p>"
           }
         },
         "faq_VqT4aB": {
@@ -688,9 +698,9 @@
           "settings": {
             "svg_color": "#000000",
             "icon": "bi-ecology",
-            "image": "shopify:\/\/shop_images\/Icon-websitess-02.svg",
+            "image": "shopify://shop_images/Icon-websitess-02.svg",
             "question": "Curbs sweet cravings",
-            "answer": "<p>A big part of our obsession with finding the best ingredients is about offering you a balanced intake of nutrients. With 21g of protein and 7g of fibre, our superfood shakes will fill you up and our carefully-crafted recipes are designed to taste like your favourite treats. Together, this helps our shakes curb your cravings.<\/p>"
+            "answer": "<p>A big part of our obsession with finding the best ingredients is about offering you a balanced intake of nutrients. With 21g of protein and 7g of fibre, our superfood shakes will fill you up and our carefully-crafted recipes are designed to taste like your favourite treats. Together, this helps our shakes curb your cravings.</p>"
           }
         },
         "faq_W6j8Rc": {
@@ -698,9 +708,9 @@
           "settings": {
             "svg_color": "#000000",
             "icon": "heart",
-            "image": "shopify:\/\/shop_images\/ICONS-ONESHAKE-0-02_1.svg",
+            "image": "shopify://shop_images/ICONS-ONESHAKE-0-02_1.svg",
             "question": "Easy to digest",
-            "answer": "<p>Using real, all-natural plant-based superfoods isn't better for your holistic health - it’s easier to digest. You'll never find anything artificial in our products, only real, all-natural, plant-based ingredients that are GMO-, dairy-, gluten- and soy-free. And with both pre- and probiotics, our shakes are easy on the stomach, so you can say goodbye to post-shake bloat.<\/p>"
+            "answer": "<p>Using real, all-natural plant-based superfoods isn't better for your holistic health - it’s easier to digest. You'll never find anything artificial in our products, only real, all-natural, plant-based ingredients that are GMO-, dairy-, gluten- and soy-free. And with both pre- and probiotics, our shakes are easy on the stomach, so you can say goodbye to post-shake bloat.</p>"
           }
         },
         "faq_LT9XAk": {
@@ -710,7 +720,7 @@
             "svg_color": "#000000",
             "icon": "time",
             "question": "What is your question?",
-            "answer": "<p>This is an answer<\/p>"
+            "answer": "<p>This is an answer</p>"
           }
         }
       },
@@ -729,7 +739,7 @@
         "title": "",
         "title_font_size": 42,
         "title_color": "#000000",
-        "image": "shopify:\/\/shop_images\/Ingredients-01.png",
+        "image": "shopify://shop_images/Ingredients-01.png",
         "arrow_color": "#000000",
         "icon_width": 60,
         "text_color": "#000000",
@@ -765,7 +775,7 @@
         "text_7eTnex": {
           "type": "text",
           "settings": {
-            "text": "<p>Those are the three things we’ve been obsessed with since Day One: making a healthier, smoother and more delicious shake is why Good Protein exists. We’ve spent years testing, tasting and sourcing the best ingredients to create plant-based shakes that taste exactly like your favourite sweet snacks and juices that are as satisfying as a freshly squeezed glass — all while offering your body everything it needs to thrive.<\/p>",
+            "text": "<p>Those are the three things we’ve been obsessed with since Day One: making a healthier, smoother and more delicious shake is why Good Protein exists. We’ve spent years testing, tasting and sourcing the best ingredients to create plant-based shakes that taste exactly like your favourite sweet snacks and juices that are as satisfying as a freshly squeezed glass — all while offering your body everything it needs to thrive.</p>",
             "text_custom": true,
             "text_font": "lato_n4",
             "text_size": 18,
@@ -777,7 +787,7 @@
           "type": "button",
           "settings": {
             "button_label": "Our Story",
-            "button_link": "https:\/\/goodprotein.ca\/pages\/our-story",
+            "button_link": "https://goodprotein.ca/pages/our-story",
             "button_custom": true,
             "button_font": "lato_n5",
             "button_size": 20,
@@ -807,12 +817,12 @@
         "desktop_image_width": "50",
         "image_radius": 20,
         "layout": "image_first",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "icon_play_size": 30,
         "video_controls": true,
         "video_autoplay": false,
         "video_loop": false,
-        "image": "shopify:\/\/shop_images\/Ingredients-Gif_e6aafa43-d159-400c-9990-619dd6a0b993.gif",
+        "image": "shopify://shop_images/Ingredients-Gif_e6aafa43-d159-400c-9990-619dd6a0b993.gif",
         "desktop_content_alignment": "left",
         "content_padding_top": 36,
         "content_padding_bottom": 36,
@@ -849,35 +859,35 @@
           "type": "question",
           "settings": {
             "question": "Is it a meal replacement?",
-            "answer": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.<\/p>"
+            "answer": "<p>Our signature superfood blend is not officially recognized as a meal replacement by government agencies in Canada. That said, it’s the perfect snack replacement! If you want a more robust intake of calories, you can add it to a smoothie with other fruits, vegetables, nuts and seeds.</p>"
           }
         },
         "question_mWJJTe": {
           "type": "question",
           "settings": {
             "question": "Can it help me lose weight?",
-            "answer": "<p>Our blends weren’t specifically created for weight loss, but they can easily be integrated into a healthy diet and training regimen that’s been designed for weight loss. Using high quality, functional superfood blends that are rich in nutrients is a great way to help achieve your goals. Talk to a healthcare professional before beginning any weight loss program and seek out a certified professional to design one tailored to you and your needs.<\/p>"
+            "answer": "<p>Our blends weren’t specifically created for weight loss, but they can easily be integrated into a healthy diet and training regimen that’s been designed for weight loss. Using high quality, functional superfood blends that are rich in nutrients is a great way to help achieve your goals. Talk to a healthcare professional before beginning any weight loss program and seek out a certified professional to design one tailored to you and your needs.</p>"
           }
         },
         "question_wftG6q": {
           "type": "question",
           "settings": {
             "question": "Can I take this product if I'm pregnant or breastfeeding?",
-            "answer": "<p>You should always talk with a healthcare professional before trying any new natural products, and that’s especially true while pregnant or breastfeeding. That being said, every single ingredient in our blends is either organic or certified GMO-free and, of course, of the utmost quality. We recommend taking a look at the ingredients in each superfood blend, as well as the nutritional facts, to see what’s suitable for your needs.<\/p>"
+            "answer": "<p>You should always talk with a healthcare professional before trying any new natural products, and that’s especially true while pregnant or breastfeeding. That being said, every single ingredient in our blends is either organic or certified GMO-free and, of course, of the utmost quality. We recommend taking a look at the ingredients in each superfood blend, as well as the nutritional facts, to see what’s suitable for your needs.</p>"
           }
         },
         "question_3dXPDV": {
           "type": "question",
           "settings": {
             "question": "Are your products safe for children?",
-            "answer": "<p>All of our superfood blends contain plant-based ingredients that are made from real, organic, GMO-free whole foods. Our blends are full of fruits, vegetables and other superfoods, making them highly nutritious and, in all likelihood, perfect for your children’s needs. We recommend taking a look at the ingredients in each product, as well as the nutritional facts, to see what’s suitable for your children.<\/p>"
+            "answer": "<p>All of our superfood blends contain plant-based ingredients that are made from real, organic, GMO-free whole foods. Our blends are full of fruits, vegetables and other superfoods, making them highly nutritious and, in all likelihood, perfect for your children’s needs. We recommend taking a look at the ingredients in each product, as well as the nutritional facts, to see what’s suitable for your children.</p>"
           }
         },
         "question_HTmQTT": {
           "type": "question",
           "settings": {
             "question": "What is a superfood?",
-            "answer": "<p>The word superfood is used to describe natural, plant-based foods (fruits, vegetables, berries, roots, herbs) that are incredibly dense in nutrients like antioxidants, minerals, vitamins, fibre, flavonoids and healthy fats.<br\/><br\/>Depending on which nutrients they’re rich in, different superfoods might offer different benefits, but, on the whole, consuming more superfoods can lead to better heart health, lower cholesterol, a stronger immune system and reduced inflammation.<\/p>"
+            "answer": "<p>The word superfood is used to describe natural, plant-based foods (fruits, vegetables, berries, roots, herbs) that are incredibly dense in nutrients like antioxidants, minerals, vitamins, fibre, flavonoids and healthy fats.<br/><br/>Depending on which nutrients they’re rich in, different superfoods might offer different benefits, but, on the whole, consuming more superfoods can lead to better heart health, lower cholesterol, a stronger immune system and reduced inflammation.</p>"
           }
         },
         "shape_divider_pAD7FQ": {
@@ -921,13 +931,17 @@
       "settings": {
         "display_on_card": true,
         "heading_text_style": "body",
+        "title_position": "center",
         "two_columns_desktop": false,
         "title": "FAQ's",
-        "richtext": "<p>See below for our most frequently asked questions. If you don't see your answer or just want to say hello, send us an email at <a href=\"https:\/\/goodprotein.ca\/pages\/contact\" title=\"https:\/\/goodprotein.ca\/pages\/contact\"><span style=\"text-decoration:underline\">info@goodprotein.ca<\/span><\/a><\/p>",
+        "richtext": "<p>See below for our most frequently asked questions. If you don't see your answer or just want to say hello, send us an email at <a href=\"https://goodprotein.ca/pages/contact\" title=\"https://goodprotein.ca/pages/contact\"><span style=\"text-decoration:underline\">info@goodprotein.ca</span></a></p>",
         "btn_text": "Read all FAQs",
-        "btn_link": "shopify:\/\/pages\/faq-1",
+        "btn_link": "shopify://pages/faq-1",
         "color_scheme": "scheme-feb35d99-2b2c-4132-b213-d263a4217b67",
-        "use_gradient_background": false
+        "use_gradient_background": false,
+        "use_special_background": false,
+        "special_background": "",
+        "change_style": "default"
       }
     }
   },
