@@ -45,6 +45,28 @@
         "use_gradient_background": false
       }
     },
+    "ss_waves_QMtVid": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": 240,
+        "wave_curvature": 450,
+        "wave_style": "less",
+        "wave_side": "0",
+        "animation": true,
+        "animation_duration": 8,
+        "background_color": "#FFFFFF",
+        "wave_color": "#8eccf3",
+        "margin_top": -300,
+        "margin_bottom": -88,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
+      }
+    },
     "ss_video_with_text_7_ngAr33": {
       "type": "ss-video-with-text-7",
       "blocks": {
@@ -145,6 +167,28 @@
         "border_thickness": 0,
         "section_radius": 0,
         "lazy": true
+      }
+    },
+    "ss_waves_67FQDH": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": 240,
+        "wave_curvature": 450,
+        "wave_style": "less",
+        "wave_side": "180",
+        "animation": true,
+        "animation_duration": 8,
+        "background_color": "#ffffff",
+        "wave_color": "#8eccf3",
+        "margin_top": -24,
+        "margin_bottom": -300,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
       }
     },
     "174345558349d596c6": {
@@ -356,7 +400,9 @@
   "order": [
     "video_with_text_overlay_7HPqq4",
     "main",
+    "ss_waves_QMtVid",
     "ss_video_with_text_7_ngAr33",
+    "ss_waves_67FQDH",
     "174345558349d596c6",
     "17434436682af4c4ba",
     "rich_text_cETRJF",
