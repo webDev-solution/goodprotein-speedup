@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-{%- liquid 
+{%- liquid
   assign padding_horizontal = section.settings.padding_horizontal
   assign padding_horizontal_mobile = section.settings.padding_horizontal_mobile
   assign padding_top = section.settings.padding_top
@@ -11,87 +11,87 @@
   assign margin_bottom = section.settings.margin_bottom
   assign background_color = section.settings.background_color
   assign background_gradient = section.settings.background_gradient
+  assign full_width = section.settings.full_width
   assign content_width = section.settings.content_width
-  assign lazy = section.settings.lazy
 
   assign heading = section.settings.heading
   assign heading_size = section.settings.heading_size
   assign heading_color = section.settings.heading_color
   assign heading_font = section.settings.heading_font
   assign heading_height = section.settings.heading_height
+  assign heading_letter = section.settings.heading_letter
   assign heading_align = section.settings.heading_align
 
-  assign dots_hide = section.settings.dots_hide
-  assign dots_size = section.settings.dots_size
+  assign sub_heading = section.settings.sub_heading
+  assign sub_heading_size = section.settings.sub_heading_size
+  assign sub_heading_color = section.settings.sub_heading_color
+  assign sub_heading_font = section.settings.sub_heading_font
+  assign sub_heading_height = section.settings.sub_heading_height
+  assign sub_heading_letter = section.settings.sub_heading_letter
+  assign sub_heading_align = section.settings.sub_heading_align
+
+  assign invert_content = section.settings.invert_content
+
+  assign link = section.settings.link
+  assign link_url = section.settings.link_url
+  assign link_size = section.settings.link_size
+  assign link_color = section.settings.link_color
+  assign link_hover_color = section.settings.link_hover_color
+  assign link_background_color = section.settings.link_background_color
+  assign link_background_hover_color = section.settings.link_background_hover_color
+  assign link_font = section.settings.link_font
+  assign link_height = section.settings.link_height
+  assign link_letter = section.settings.link_letter
+  assign link_position = section.settings.link_position
+  assign link_mobile = section.settings.link_mobile
 
   assign collection = section.settings.collection
   assign product_list = section.settings.product_list
-  
+
+  assign arrow_size = section.settings.arrow_size
+  assign arrow_size_mobile = section.settings.arrow_size_mobile
   assign arrow_color = section.settings.arrow_color
   assign arrow_hover_color = section.settings.arrow_hover_color
   assign arrow_bg_color = section.settings.arrow_bg_color
   assign arrow_bg_hover_color = section.settings.arrow_bg_hover_color
   assign arrow_border_color = section.settings.arrow_border_color
   assign arrow_border_hover_color = section.settings.arrow_border_hover_color
-  assign dots_color = section.settings.dots_color
+  assign progress_color = section.settings.progress_color
+  assign arrow_hide_mobile = section.settings.arrow_hide_mobile
 
   assign items_mt = section.settings.items_mt
   assign product_per_mobile = section.settings.product_per_mobile
   assign product_per_desktop = section.settings.product_per_desktop
   assign product_show = section.settings.product_show
   assign stack_products = section.settings.stack_products
+  assign show_bar = section.settings.show_bar
+  assign top_bar = section.settings.top_ba
 
+  assign image_radius = section.settings.image_radius
   assign use_custom_height = section.settings.use_custom_height
   assign image_height_desktop = section.settings.image_height_desktop
   assign image_height_mobile = section.settings.image_height_mobile
   assign image_ration = section.settings.image_ration
   assign show_second = section.settings.show_second
-  assign card_image_bg_color = section.settings.card_image_bg_color
-
-  assign card_radius = section.settings.card_radius
-  assign card_border_thickness = section.settings.card_border_thickness
-  assign card_border_color = section.settings.card_border_color
-  assign card_bg_color = section.settings.card_bg_color
+  assign use_shadow = section.settings.use_shadow
   assign card_padding_horizontal = section.settings.card_padding_horizontal
   assign card_padding_vertical = section.settings.card_padding_vertical
-
-  assign use_shadow = section.settings.use_shadow
-  assign shadow_width = section.settings.shadow_width
-  
-  assign show_stars = section.settings.show_stars
-  assign stars_color = section.settings.stars_color
-
-  assign card_content_padding_horizontal = section.settings.card_content_padding_horizontal
-  assign card_content_padding_vertical = section.settings.card_content_padding_vertical
+  assign card_content_bg_color = section.settings.card_content_bg_color
+  assign use_radius = section.settings.use_radius
 
   assign card_title_color = section.settings.card_title_color
   assign card_title_size = section.settings.card_title_size
   assign card_title_font = section.settings.card_title_font
   assign card_title_height = section.settings.card_title_height
+  assign card_title_letter = section.settings.card_title_letter
 
   assign card_price_color = section.settings.card_price_color
   assign card_price_size = section.settings.card_price_size
   assign card_price_font = section.settings.card_price_font
   assign card_price_height = section.settings.card_price_height
-
-  assign card_description_color = section.settings.card_description_color
-  assign card_description_size = section.settings.card_description_size
-  assign card_description_font = section.settings.card_description_font
-  assign card_description_height = section.settings.card_description_height
-  assign card_description_mt = section.settings.card_description_mt
-  assign card_description_length = section.settings.card_description_length
-
-  assign card_description_length = card_description_length | plus: 0
-
-  if section.settings.button_type == 'quick_buy'
-    assign enable_quick_buy = true
-  elsif section.settings.button_type == 'subscribe'
-    assign enable_subscribe = true
-  else 
-    assign enable_show_now = true
-  endif
-  
-  
+  assign card_price_letter = section.settings.card_price_letter
+  assign card_price_mt = section.settings.card_price_mt
+  assign card_price_from = section.settings.card_price_from
 
   if product_list != blank
     assign items = product_list
@@ -99,101 +99,126 @@
     assign items = collection.products
   endif
 
-  unless stack_products 
+  unless stack_products
     assign product_per_mobile_big = product_per_mobile | times: 2 | round: 0
   endunless
 -%}
 
 {%- style -%}
   {{ heading_font | font_face: font_display: 'swap' }}
+  {{ sub_heading_font | font_face: font_display: 'swap' }}
   {{ link_font | font_face: font_display: 'swap' }}
-  {{ card_title_font | font_face: font_display: 'swap' }}
-  {{ card_price_font | font_face: font_display: 'swap' }}
-  {{ card_description_font | font_face: font_display: 'swap' }}
-  
+  {{ card_title | font_face: font_display: 'swap' }}
+  {{ card_price | font_face: font_display: 'swap' }}
+
   .section-{{ section.id }} {
     border-top: solid {{ border_color }} {{ border_thickness }}px;
     border-bottom: solid {{ border_color }} {{ border_thickness }}px;
     margin-top: {{ margin_top | times: 0.75 | round: 0 }}px;
     margin-bottom: {{ margin_bottom | times: 0.75 | round: 0 }}px;
+    overflow: hidden;
   }
-  
+
   .section-{{ section.id }}-settings {
-    position: relative;
-    max-width: {{ content_width }}rem;
     margin: 0 auto;
     padding-top: {{ padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ padding_bottom | times: 1.25 | round: 0  }}px;
+    padding-bottom: {{ padding_bottom | times: 0.75 | round: 0 }}px;
     padding-left: {{ padding_horizontal_mobile }}rem;
-    {% if stack_products %}
     padding-right: {{ padding_horizontal_mobile }}rem;
-    {% endif %}
   }
-  
-  .featured-collection-top-{{ section.id }} {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  
+
   .featured-collection-top-{{ section.id }} h2 {
     margin: 0;
     font-size: {{ heading_size | times: 0.85 }}px;
     color: {{ heading_color }};
     line-height: {{ heading_height }}%;
-    text-transform: uppercase;
+    letter-spacing: {{ heading_letter }}px;
+    text-transform: unset;
     text-align: {{ heading_align }};
-    flex: 1 1 auto;
   }
 
-  .featured-collection-dots-{{ section.id }}  {
-    position: absolute;
-    bottom: {{ padding_bottom | times: 0.55 | round: 0 }}px;
-    left: 50%;
-    transform: translateX(-50%);
+  .featured-collection-wrapper-{{ section.id }} > p {
+    margin: 0;
+    font-size: {{ sub_heading_size | times: 0.85 }}px;
+    color: {{ sub_heading_color }};
+    line-height: {{ sub_heading_height }}%;
+    letter-spacing: {{ sub_heading_letter }}px;
+    text-transform: unset;
+    text-align: {{ sub_heading_align }};
   }
 
-  .featured-collection-pagination-{{ section.id }} {
-    position: static !important;
+  .featured-collection-link-{{ section.id }} {
+    margin: 0;
+    font-size: {{ link_size | times: 0.85 }}px;
+    color: {{ link_color }};
+    line-height: {{ link_height }}%;
+    letter-spacing: {{ link_letter }}px;
+    text-transform: unset;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+  }
+
+  .featured-collection-link-{{ section.id }} {
     display: flex;
     align-items: center;
-    gap: 5px;
-  }
-  
-  .featured-collection-pagination-{{ section.id }} .swiper-pagination-bullet {
-    width: {{ dots_size }}px;
-    height: {{ dots_size }}px;
-    background-color: transparent;
-    opacity: 1;
-    border: 1px solid {{ dots_color }};
-    transition: all 0.25s ease 0s;
+    gap: 10px;
+    width: fit-content;
   }
 
-  .featured-collection-pagination-{{ section.id }} .swiper-pagination-bullet-active {
-    background-color: {{ dots_color }};
+  .featured-collection-link-{{ section.id }}:hover{
+    transition: all 0.3s ease 0s;
+    color: {{ link_hover_color }};
   }
 
-  .featured-collection-pagination-{{ section.id }} .swiper-pagination-bullet:hover {
-    transition: all 0.25s ease 0s;
-    background-color: {{ dots_color }} !important;
+  .featured-collection-arrow-{{ section.id }} {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ link_background_color }};
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
   }
 
-  .featured-collection-slider-wrapper-{{ section.id }} {
-    position: relative;
-    margin-top: {{ items_mt | times: 0.75 | round: 0 }}px;
+  .featured-collection-arrow-{{ section.id }} svg {
+    width: 5px;
+    height: 8px;
+    transform: rotate(-90deg);
   }
-  
+
+  .featured-collection-arrow-{{ section.id }} svg path {
+    transition: all 0.3s ease 0s;
+    color: {{ link_color }};
+    fill: {{ link_color }};
+  }
+
+  .featured-collection-link-{{ section.id }}:hover .featured-collection-arrow-{{ section.id }} {
+    transition: all 0.3s ease 0s;
+    background-color: {{ link_background_hover_color }};
+  }
+
+  .featured-collection-link-{{ section.id }}:hover .featured-collection-arrow-{{ section.id }} svg path {
+    fill: white;
+  }
+
   .featured-collection-slider-{{ section.id }} {
+    margin-top: {{ items_mt | times: 0.75 | round: 0 }}px;
     overflow: hidden;
     position: relative;
+    padding-inline:6px;
   }
 
   .featured-collection-slider-{{ section.id }} .swiper-slide {
-    display: flex;
-    flex-direction: column;
+    display: block;
     height: auto;
     text-decoration: none;
+    background-color: {{ card_content_bg_color }};
+    border-top-left-radius: {{ image_radius }}px;
+    border-top-right-radius: {{ image_radius }}px;
+    overflow: hidden;
+    box-sizing: border-box !important;
   }
 
   .featured-collection-items-{{ section.id }} {
@@ -205,27 +230,22 @@
   .featured-collection-item-{{ section.id }} {
     display: block;
     text-decoration: none;
-    padding: {{ card_padding_vertical | times: 0.75 | round: 0 }}px {{ card_padding_horizontal | times: 0.75 | round: 0 }}px;
-    border-radius: {{ card_radius }}px;
-    background-color: {{ card_bg_color }};
-    border: {{ card_border_thickness }}px solid {{ card_border_color }};
-    box-sizing: border-box;
-    position: relative;
+    background-color: {{ card_content_bg_color }};
+    border-top-left-radius: {{ image_radius }}px;
+    border-top-right-radius: {{ image_radius }}px;
+    overflow: hidden;
+    box-sizing: border-box !important;
   }
-  
+
   .featured-collection-image-{{ section.id }} {
-    flex-shrink: 0;
-    flex-basis: 0;
     width: 100%;
-    border-top-left-radius: {{ card_radius }}px;
-    border-top-right-radius: {{ card_radius }}px;
-    background-color: {{ card_image_bg_color }};
+    border-radius: {{ image_radius }}px;
   }
 
   .featured-collection-image-{{ section.id }}.has-secondary-{{ section.id }} {
     position: relative;
   }
-  
+
   .featured-collection-image-{{ section.id }}.has-secondary-{{ section.id }} .featured-collection-second-image-{{ section.id }} {
     position: absolute;
     top: 0;
@@ -242,23 +262,16 @@
     height: 100%;
     display: block;
     object-fit: cover;
-    border-top-left-radius: {{ card_radius }}px;
-    border-top-right-radius: {{ card_radius }}px;
-    background-color: {{ card_image_bg_color }};
+    border-radius: {{ image_radius }}px;
     transition: all 0.3s ease 0s;
   }
 
-  .featured-collection-content-{{ section.id }} {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: {{ card_content_padding_vertical | times: 0.75 | round: 0 }}px {{ card_content_padding_horizontal | times: 0.75 | round: 0 }}px;
-    transition: all 0.25s ease 0s;
+  .featured-collection-image-{{ section.id }} svg {
+    background-color: gray;
   }
 
-  .featured-collection-item-{{ section.id }}:hover > .featured-collection-content-{{ section.id }} {
-    transition: all 0.25s ease 0s;
+  .featured-collection-content-{{ section.id }} {
+    padding: {{ card_padding_vertical | times: 0.75 | round: 0 }}px {{ card_padding_horizontal | times: 0.75 | round: 0 }}px;
   }
 
   .featured-collection-title-{{ section.id }} {
@@ -266,24 +279,21 @@
     font-size: {{ card_title_size | times: 0.85 }}px;
     color: {{ card_title_color }};
     line-height: {{ card_title_height }}%;
-    text-overflow: ellipsis;
+    letter-spacing: {{ card_title_letter }}px;
+    text-transform: unset;
     text-decoration: none;
     font-weight: 600;
-    word-break: break-word;
   }
 
   .featured-collection-price-{{ section.id }} {
     margin: 0px;
+    margin-top: {{ card_price_mt | times: 0.75 | round: 0 }}px;
     font-size: {{ card_price_size | times: 0.85 }}px;
     color: {{ card_price_color }};
     line-height: {{ card_price_height }}%;
+    letter-spacing: {{ card_price_letter }}px;
     text-decoration: none;
-    text-transform: lowercase;
-    font-weight: 600;
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    text-transform: unset;
   }
 
   .featured-collection-price-{{ section.id }} span {
@@ -292,57 +302,28 @@
     -webkit-text-decoration: line-through;
     text-decoration: line-through;
   }
-  
-  .featured-collection-description-{{ section.id }}{
-    margin: 0px;
-    margin-top: {{ card_description_mt | times: 0.75 | round: 0 }}px;
-    font-size: {{ card_description_size | times: 0.85 | minus: 1 }}px;
-    font-weight: 400;
-    line-height: {{ card_description_height }}%;
-    color: {{ card_description_color }};
-    text-decoration: none;
-    text-transform: lowercase;
-  }
-  
+
   .featured-collection-btn-prev-{{ section.id }},
   .featured-collection-btn-next-{{ section.id }} {
     position: absolute;
     z-index: 2;
     top: 50%;
     transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
+    width: {{ arrow_size_mobile }}px;
+    height: {{ arrow_size_mobile }}px;
     border: 1px solid {{ arrow_border_color }};
     border-radius: 50%;
     background: {{ arrow_bg_color }};
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease 0s;
     cursor: pointer;
   }
 
-  .featured-collection-btn-prev-{{ section.id }} {
-    left: -42px !important;
-  }
-
-  .featured-collection-btn-next-{{ section.id }} {
-    right: -42px !important;
-  }
-
-  .featured-collection-btn-prev-{{ section.id }} svg,
-  .featured-collection-btn-next-{{ section.id }} svg {
-    height: 14px;
-    width: 14px;
-  }
-
-  .featured-collection-btn-next-{{ section.id }} svg {
-    transform: rotate(180deg);
-  }
-
-  .featured-collection-btn-prev-{{ section.id }} svg path,
-  .featured-collection-btn-next-{{ section.id }} svg path {
-    fill: {{ arrow_color }};
+  .featured-collection-btn-prev-{{ section.id }} span,
+  .featured-collection-btn-next-{{ section.id }} span {
+    color: {{ arrow_color }};
     transition: all 0.3s ease 0s;
   }
 
@@ -353,8 +334,8 @@
     background: {{ arrow_bg_hover_color }};
   }
 
-  .featured-collection-btn-prev-{{ section.id }}:hover svg path,
-  .featured-collection-btn-next-{{ section.id }}:hover svg path {
+  .featured-collection-btn-prev-{{ section.id }}:hover span,
+  .featured-collection-btn-next-{{ section.id }}:hover span {
     fill: {{ arrow_hover_color }};
     transition: all 0.3s ease 0s;
   }
@@ -364,37 +345,91 @@
     opacity: 0.3;
   }
 
-  .featured-collection-item-{{ section.id }} .r--stars-icon,
-  .featured-collection-item-{{ section.id }} .ryviu-number-widget span {
-    color: {{ stars_color }} !important;
+  .featured-collection-btn-prev-{{ section.id }} {
+    left: 3%;
   }
 
-  .featured-collection-content-{{ section.id }} .shopify-block {
-      margin-top: 10px;
-    }
+  .featured-collection-btn-next-{{ section.id }} {
+    right: 3%;
+  }
 
-    .featured-collection-content-{{ section.id }} .bottom-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  .featured-collection-pagination-{{ section.id }} {
+    position: static !important;
+    height: 3px;
+    {% if section.settings.top_bar %}
+      margin-bottom:15px;
+    {% else %}
+      margin-top: 15px;
+    {% endif %}
+  }
 
-    .featured-collection-content-{{ section.id }} .bottom-content p {
-      margin-top: 10px;
-    }
+  .featured-collection-pagination-{{ section.id }}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: {{ progress_color }};
+  }
 
-    .featured-collection-content-{{ section.id }} .bottom-content .btn {
-      background: transparent;
-      border: 2px solid;
-      padding: 5px 10px 5px;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 600;
-      font-family: Lato Regular!important;
-      white-space: nowrap;
-      margin-top: 10px;
-    }
+  .featured-collection-pagination-{{ section.id }}.hide {
+    display: none;
+  }
+
+  .featured-collection-btn-prev-{{ section.id }} .animate-icon,
+  .featured-collection-btn-next-{{ section.id }} .animate-icon {
+    pointer-events: none;
+    place-items: center;
+    display: grid;
+  }
+
+  .featured-collection-btn-prev-{{ section.id }} .animate-icon:before,
+  .featured-collection-btn-next-{{ section.id }} .animate-icon:before {
+    content: "";
+    grid-area: 1 / -1;
+    transition: all .2s ease-in-out;
+    width: 8.3px;
+    height: 8.3px;
+    transform: rotate(calc(1 * 45deg));
+    box-sizing: border-box;
+    border-style: solid;
+    border: 0px;
+    border-right: 2px solid currentColor;
+    border-top: 2px solid currentColor;
+    position: relative;
+    left: -1px;
+  }
+
+  .featured-collection-btn-prev-{{ section.id }} .animate-icon:before {
+    left: unset;
+    right: -1px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 2px solid currentColor;
+    border-left: 2px solid currentColor;
+  }
+
+  .featured-collection-btn-next-{{ section.id }}:hover .animate-icon:before {
+    transform: translate(calc(1 * 0.125rem)) rotate(calc(1 * 45deg));
+  }
+
+  .featured-collection-btn-prev-{{ section.id }}:hover .animate-icon:before {
+    transform: translate(calc(-1 * 0.125rem)) rotate(calc(1 * 45deg));
+  }
+
+  .featured-collection-btn-prev-{{ section.id }} .animate-icon:after,
+  .featured-collection-btn-next-{{ section.id }} .animate-icon:after {
+    content: "";
+    grid-area: 1 / -1;
+    transition: all .2s ease-in-out;
+    width: 8px;
+    height: 1.6px;
+    transform-origin: center;
+    opacity: 0;
+    background: currentColor;
+    transform: scaleX(.5);
+  }
+
+  .featured-collection-btn-prev-{{ section.id }}:hover .animate-icon:after,
+  .featured-collection-btn-next-{{ section.id }}:hover .animate-icon:after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 
   @media(min-width: 1024px) {
 
@@ -402,7 +437,7 @@
       margin-top: {{ margin_top }}px;
       margin-bottom: {{ margin_bottom }}px;
     }
-    
+
     .section-{{ section.id }}-settings {
       padding: 0 5rem;
       padding-top: {{ padding_top }}px;
@@ -413,30 +448,22 @@
 
     .featured-collection-wrapper-{{ section.id }} h2 {
       font-size: {{ heading_size }}px;
-      {% if dots_hide or stack_products %}
-      text-align: {{ heading_align }};
-      {% else %}
-      text-align: unset;
-      {% endif %}
     }
 
-    .featured-collection-dots-{{ section.id }} {
-      position: static;
-      margin-left: auto;
-      transform: translateX(0);
+    .featured-collection-wrapper-{{ section.id }} > p {
+      font-size: {{ sub_heading_size }}px;
     }
 
-    .featured-collection-item-{{ section.id }} {
-      padding: {{ card_padding_vertical }}px {{ card_padding_horizontal }}px;
+    .featured-collection-link-{{ section.id }} {
+      font-size: {{ link_size }}px;
     }
-  
+
     .featured-collection-title-{{ section.id }} {
       font-size: {{ card_title_size }}px;
     }
 
-    
-
     .featured-collection-price-{{ section.id }} {
+      margin-top: {{ card_price_mt }}px;
       font-size: {{ card_price_size }}px;
     }
 
@@ -444,27 +471,59 @@
       font-size: {{ card_price_size | minus: 2 }}px;
     }
 
-    .featured-collection-description-{{ section.id }} {
-      margin-top: {{ card_description_mt }}px;
-      font-size: {{ card_description_size }}px;
-    }
-
-    .featured-collection-slider-wrapper-{{ section.id }} {
+    .featured-collection-slider-{{ section.id }} {
       margin-top: {{ items_mt }}px;
     }
 
     .featured-collection-content-{{ section.id }} {
-      padding: {{ card_content_padding_vertical }}px {{ card_content_padding_horizontal }}px;
+      padding: {{ card_padding_vertical }}px {{ card_padding_horizontal }}px;
     }
 
     .featured-collection-btn-prev-{{ section.id }},
     .featured-collection-btn-next-{{ section.id }} {
-      display: flex;
+      width: {{ arrow_size }}px;
+      height: {{ arrow_size }}px;
     }
-    
+
+    .featured-collection-btn-prev-{{ section.id }},
+    .featured-collection-btn-next-{{ section.id }},
+    .featured-collection-btn-prev-{{ section.id }}.swiper-button-disabled,
+    .featured-collection-btn-next-{{ section.id }}.swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .featured-collection-slider-{{ section.id }}:hover .featured-collection-btn-prev-{{ section.id }},
+    .featured-collection-slider-{{ section.id }}:hover .featured-collection-btn-next-{{ section.id }} {
+      opacity: 1;
+      pointer-events: all;
+      transition: all 0.3s ease 0s;
+    }
+
+    .featured-collection-slider-{{ section.id }}:hover .featured-collection-btn-prev-{{ section.id }}.swiper-button-disabled,
+    .featured-collection-slider-{{ section.id }}:hover .featured-collection-btn-next-{{ section.id }}.swiper-button-disabled {
+      opacity: 0.3;
+    }
+
+     .featured-collection-pagination-{{ section.id }} {
+      {% if section.settings.top_bar %}
+        margin-bottom:15px;
+      {% else %}
+        margin-top: 15px;
+      {% endif %}
+    }
+
   }
-  
+
 {%- endstyle -%}
+
+{% unless full_width %}
+  <style>
+    .section-{{ section.id }}-settings {
+      max-width: {{ content_width }}rem;
+    }
+  </style>
+{% endunless %}
 
 {% if section.settings.heading_custom %}
 
@@ -475,7 +534,31 @@
       font-style: {{ heading_font.style }};
     }
   </style>
-  
+
+{% endif %}
+
+{% if section.settings.sub_heading_custom %}
+
+  <style>
+    .featured-collection-wrapper-{{ section.id }} h2 {
+      font-family: {{ sub_heading_font.family }}, {{ sub_heading_font.fallback_families }};
+      font-weight: {{ sub_heading_font.weight }};
+      font-style: {{ sub_heading_font.style }};
+    }
+  </style>
+
+{% endif %}
+
+{% if section.settings.link_custom %}
+
+  <style>
+    .featured-collection-link-{{ section.id }} {
+      font-family: {{ link_font.family }}, {{ link_font.fallback_families }};
+      font-weight: {{ link_font.weight }};
+      font-style: {{ link_font.style }};
+    }
+  </style>
+
 {% endif %}
 
 {% if section.settings.card_title_custom %}
@@ -487,7 +570,7 @@
       font-style: {{ card_title_font.style }};
     }
   </style>
-  
+
 {% endif %}
 
 {% if section.settings.card_price_custom %}
@@ -499,20 +582,20 @@
       font-style: {{ card_price_font.style }};
     }
   </style>
-  
+
 {% endif %}
 
-{% if section.settings.card_description_custom %}
-
+{% unless link_position %}
   <style>
-    .featured-collection-description-{{ section.id }} p {
-      font-family: {{ card_description_font.family }}, {{ card_description_font.fallback_families }};
-      font-weight: {{ card_description_font.weight }};
-      font-style: {{ card_description_font.style }};
+    .featured-collection-top-{{ section.id }} {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
   </style>
-  
-{% endif %}
+{% endunless %}
 
 {% if use_custom_height %}
 
@@ -526,7 +609,7 @@
       }
     }
   </style>
-  
+
 {% endif %}
 
 {% if product_per_mobile == "1" %}
@@ -587,14 +670,29 @@
 
 {% if use_shadow %}
   <style>
-    .featured-collection-item-{{ section.id }}::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      inset: 0;
-      border-radius: {{ card_radius }}px;
-      box-shadow: 0px 0px {{ shadow_width }}px rgba(0, 0, 0, 0.1);
+    .featured-collection-item-{{ section.id }},
+    .featured-collection-slider-{{ section.id }} .swiper-slide{
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,.15);
+    }
+
+    .featured-collection-slider-{{ section.id }} {
+      padding: 10px;
+    }
+  </style>
+{% endif %}
+
+{% if use_radius %}
+  <style>
+    .featured-collection-item-{{ section.id }},
+    .featured-collection-slider-{{ section.id }} .swiper-slide{
+      border-radius: {{ image_radius }}px;
+      overflow: hidden !important;
+    }
+
+    .featured-collection-image-{{ section.id }},
+    .featured-collection-image-{{ section.id }} img,
+    .featured-collection-image-{{ section.id }} svg {
+     border-radius: 0px;
     }
   </style>
 {% endif %}
@@ -638,27 +736,81 @@
     .featured-collection-image-{{ section.id }} {
       aspect-ratio: 1 / 1;
     }
-    .featured-collection-image-{{ section.id }} img,
-    .featured-collection-image-{{ section.id }} svg {
-      aspect-ratio: 1 / 1;
-    }
   </style>
 {% elsif use_custom_height == false and image_ration == "portrait" %}
   <style>
     .featured-collection-image-{{ section.id }} {
       aspect-ratio: 1 / 1.3;
     }
-    .featured-collection-image-{{ section.id }} img,
-    .featured-collection-image-{{ section.id }} svg {
-      aspect-ratio: 1 / 1.3;
+  </style>
+{% endif %}
+
+{% unless link_mobile %}
+  <style>
+    .featured-collection-link-{{ section.id }} {
+      display: none;
+    }
+
+    @media(min-width: 1024px) {
+      .featured-collection-link-{{ section.id }} {
+        display: flex;
+      }
+    }
+  </style>
+{% endunless %}
+
+{% if arrow_hide_mobile %}
+  <style>
+    .featured-collection-btn-prev-{{ section.id }},
+    .featured-collection-btn-next-{{ section.id }} {
+      display: none;
+    }
+
+    @media(min-width: 1024px) {
+      .featured-collection-btn-prev-{{ section.id }},
+      .featured-collection-btn-next-{{ section.id }} {
+        display: flex;
+      }
     }
   </style>
 {% endif %}
 
-{% if dots_hide %}
+{% if product_per_mobile == "1.3" %}
   <style>
-    .featured-collection-dots-{{ section.id }} {
-      display: none !important;
+    .featured-collection-slider-{{ section.id }} {
+      margin-left: -{{ padding_horizontal_mobile }}rem !important;
+      margin-right: -{{ padding_horizontal_mobile }}rem !important;
+      padding-left: {{ padding_horizontal_mobile }}rem !important;
+      padding-right: {{ padding_horizontal_mobile }}rem !important;
+    }
+
+    @media(min-width: 1024px) {
+      .featured-collection-slider-{{ section.id }} {
+        margin-left: 0rem !important;
+        margin-right: 0rem !important;
+        padding-left: 0rem !important;
+        padding-right: 0rem !important;
+      }
+    }
+  </style>
+{% endif %}
+
+{% if full_width %}
+  <style>
+    .featured-collection-slider-{{ section.id }} {
+      margin-left: -{{ padding_horizontal_mobile }}rem !important;
+      margin-right: -{{ padding_horizontal_mobile }}rem !important;
+      padding-left: {{ padding_horizontal_mobile }}rem !important;
+      padding-right: {{ padding_horizontal_mobile }}rem !important;
+    }
+
+    @media(min-width: 1024px) {
+      .featured-collection-slider-{{ section.id }} {
+        margin-left: -{{ padding_horizontal }}rem !important;
+        margin-right: -{{ padding_horizontal }}rem !important;
+        padding-left: {{ padding_horizontal }}rem !important;
+        padding-right: {{ padding_horizontal }}rem !important;
+      }
     }
   </style>
 {% endif %}
@@ -666,163 +818,51 @@
 <div class="section-{{ section.id }} featured-collection-{{ section.id }}" style="background-color:{{ background_color }}; background-image: {{ background_gradient }};">
     <div class="section-{{ section.id }}-settings featured-collection-wrapper-{{ section.id }}">
 
-        {% if heading != blank or dots_hide == false %}        
+        {% if invert_content %}
+
+          {% if sub_heading != blank %}
+            <p>{{ sub_heading }}</p>
+          {% endif %}
+
+        {% endif %}
+
+        {% if heading != blank %}
           <div class="featured-collection-top-{{ section.id }}">
-            {% if heading != blank %}
-              <h2>{{ heading }}</h2>
-            {% endif %}
-  
-            {% unless dots_hide and stack_products %}
-              <div class="featured-collection-dots-{{ section.id }}">
-                <div class="featured-collection-pagination-{{ section.id }} swiper-pagination"></div>
+            <h2>{{ heading }}</h2>
+            <a class="featured-collection-link-{{ section.id }}" href="{{ link_url }}">
+              {{ link }}
+              <div class="featured-collection-arrow-{{ section.id }}">
+                <svg class="featured-collection-arrow-{{ section.id }}" aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z">
+                </svg>
               </div>
-            {% endunless %}
+            </a>
           </div>
         {% endif %}
 
-        {% unless stack_products %}
-          <div class="featured-collection-slider-wrapper-{{ section.id }}">
-            <div class="featured-collection-slider-{{ section.id }} swiper" data-preview-mobile="{% if product_per_mobile == blank %} 1 {% else %}{{ product_per_mobile }}.4{% endif %}" data-preview-mobile-big="{% if product_per_mobile == blank %} 2 {% else %}{{ product_per_mobile | times: 2 | round: 0 }}{% endif %}" data-preview-desktop="{% if product_per_desktop == blank %} 4 {% else %}{{ product_per_desktop }}{% endif %}">
-              <div class="swiper-wrapper">
-                {% assign items_size = items | size %}
-                {% if items != blank %}
-                  {% for item in items limit:product_show %}
-                    {%- liquid 
-                      assign product_form_id = 'product-form-' | append: section.id | append: '-' | append: item.id
-                      assign current_variant = item.selected_or_first_available_variant
-                    -%}
-                    <div 
-                      class="swiper-slide featured-collection-item-{{ section.id }}" 
-                      data-hash="slide{{ forloop.index }}" 
-                      {% if enable_quick_buy %}
-                      x-data="
-                      ThemeSection_ProductQuickBuy({
-                        product: {{ item | json | escape }},
-                        variant: {{ current_variant | json | escape }},
-                        featuredMediaID: {{ featured_media.id | json }}
-                      })"
-                      {% endif %}
-                      >
-                      <a href="{{ item.url }}" class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
-                        <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}" {% if lazy %}lazy="loading"{% endif %}>
-                        {% if item.images.size > 1 %}
-                          {% for img in item.images %}
-                            {% if forloop.index == 2 %}
-                              <img class="featured-collection-second-image-{{ section.id }}" src="{{ img | image_url }}">
-                            {% endif %}
-                          {% endfor %}
-                        {% endif %}
-                      </a>
-                      <div class="featured-collection-content-{{ section.id }}">
-                        
-                        <div class="featured-collection-content-top-{{ section.id }}">
-                          <p class="featured-collection-title-{{ section.id }}">{{ item.title }}</p>
-                          {% if show_stars %}
-                            {% if section.blocks.size > 0 %}
-                              {% for block in section.blocks %}
-                                {% render block %}
-                              {% endfor %}
-                            {% else %}
-                              <!-- RYVIU APP :: COLLECTION-WIDGET-TOTAL -->	
-                                <div class="ryviu-collection">
-                                    <ryviu-widget-total collection="1" settings_data="{{ shop.metafields.ryviu.user_settings | escape }}" reviews_data="{{item.metafields.ryviu.product_reviews_info  | escape  }}" product_id="{{itemt.id}}" handle="{{item.handle}}"></ryviu-widget-total>
-                                </div>  
-                              <!-- RYVIU APP -->
-                            {% endif %}
-                          {% endif %}
-                        </div>
-                        <div class="bottom-content">
-                          <p class="featured-collection-price-{{ section.id }}">
-                            {% if item.metafields.custom.discount != blank %}
-                              {% assign discount = item.metafields.custom.discount %}
-                            {% else %}
-                              {% assign discount = settings.discount %}
-                            {% endif %}
-                            {% if page.metafields.custom.discount != blank %}
-                              {% assign discount = page.metafields.custom.discount %}
-                            {% else %}
-                              {% assign discount = settings.discount %}
-                            {% endif %}
-                            
-                            {% if discount != blank %}
-                              {% assign discounted_price = item.price | times: discount | divided_by: 100 %}
-                              {{ item.price | minus: discounted_price | money }}<span>{{ item.price | money }}</span>
-                            {% elsif item.compare_at_price > item.price %}
-                              {{ item.price | money }}<span>{{ item.compare_at_price | money }}</span>
-                            {% else %}
-                            {{ item.price | money }}
-                            {% endif %}
-                          </p>
-                          {% if enable_show_now %}
-                          <a href="{{item.url}}" class="btn btn--secondary" >Shop Now</a>
-                          {% elsif enable_subscribe %}
-                          <a href="https://goodproteinca.myshopify.com/cart/clear?return_to=/cart/add?items[][id]={{item.selected_or_first_available_variant.id}}%26items[][quantity]=1%26items[][selling_plan]={{section.settings.selling_plan}}%26return_to=/checkout" class="btn btn--secondary" >subscribe</a>
-                          {% endif %}
-                        </div>
-                        
-                        {% if enable_quick_buy %}
-                          <span class="inline-block mt-1.5"
-                          x-html="formatMoney(current_price)"
-                          :class="
-                            {
-                              'invisible': !current_variant
-                            }"
-                          data-product-price
-                        >
-                          {{ current_variant.price | money }}
-                        </span>
-                        <div>
-                          {% render 'product-tile-quick-buy'
-                            section: section,
-                            product: item,
-                            product_form_id: product_form_id,
-                            current_variant: current_variant,
-                            is_card: true
-                          %}
-                        </div>
-                        {% endif %}
-                        {% if item.description != blank and card_description_length > 0 %}
-                          <p class="featured-collection-description-{{ section.id }}">
-                            {{ item.description | truncatewords: card_description_length | strip_html }}
-                          </p>
-                        {% endif %}
-                      </div>
-                    </div>
-                  {% endfor %}
-                {% else %}
-                  {% for item in (1..product_show) %}
-                    <a href="{{ item.url }}" class="swiper-slide">
-                      <div class="featured-collection-image-{{ section.id }}">
-                        {{ 'image' | placeholder_svg_tag }}
-                      </div>
-                      <div class="featured-collection-content-{{ section.id }}">
-                        <div class="featured-collection-content-top-{{ section.id }}">
-                          <p class="featured-collection-title-{{ section.id }}">Product</p>
-                          <p class="featured-collection-price-{{ section.id }}">$30</p>
-                        </div>
-                        <p class="featured-collection-description-{{ section.id }}">Description</p>
-                      </div>
-                    </a>
-                  {% endfor %}
-                {% endif %}
-              </div>
-            </div>
-            <div class="featured-collection-btn-prev-{{ section.id }}">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>4-Arrow Left</title><g id="_4-Arrow_Left" data-name="4-Arrow Left"><path d="M32,15H3.41l8.29-8.29L10.29,5.29l-10,10a1,1,0,0,0,0,1.41l10,10,1.41-1.41L3.41,17H32Z"/></g></svg>
-            </div>
-            <div class="featured-collection-btn-next-{{ section.id }}">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>4-Arrow Left</title><g id="_4-Arrow_Left" data-name="4-Arrow Left"><path d="M32,15H3.41l8.29-8.29L10.29,5.29l-10,10a1,1,0,0,0,0,1.41l10,10,1.41-1.41L3.41,17H32Z"/></g></svg>
-            </div>
-          </div>
+        {% unless invert_content %}
+
+          {% if sub_heading != blank %}
+            <p>{{ sub_heading }}</p>
+          {% endif %}
+
         {% endunless %}
-                    
-        {% if stack_products %}
-          <div class="featured-collection-items-{{ section.id }}">
-            {% if items != blank %}
-              {% for item in items limit:product_show %}
-                  <a href="{{ item.url }}" class="featured-collection-item-{{ section.id }}">
+        {% unless stack_products %}
+          <div class="featured-collection-slider-{{ section.id }}" data-preview-mobile="{% if product_per_mobile == blank %} 1 {% else %}{{ product_per_mobile }}{% endif %}" data-preview-mobile-big="{% if product_per_mobile == blank %} 2 {% else %}{{ product_per_mobile | times: 2 | round: 0 }}{% endif %}" data-preview-desktop="{% if product_per_desktop == blank %} 4 {% else %}{{ product_per_desktop }}{% endif %}">
+            {% if top_bar %}
+              <div class="featured-collection-pagination-{{ section.id }} {% unless show_bar %} hide {% endunless %} swiper-pagination"></div>
+            {% endif %}
+            <div class="swiper-wrapper">
+              {% assign items_size = items | size %}
+              {% if items != blank %}
+                {% for item in items limit:product_show %}
+                  <a href="{{ item.url }}" class="swiper-slide">
                     <div class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
-                      <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}" {% if lazy %}lazy="loading"{% endif %}>
+                      {% if item.images.size > 0  %}
+                        <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}">
+                      {% else %}
+                        {{ 'collection-1' | placeholder_svg_tag }}
+                      {% endif %}
                       {% if item.images.size > 1 %}
                         {% for img in item.images %}
                           {% if forloop.index == 2 %}
@@ -832,72 +872,77 @@
                       {% endif %}
                     </div>
                     <div class="featured-collection-content-{{ section.id }}">
-                      
-                      <div class="featured-collection-content-top-{{ section.id }}">
-                        <p class="featured-collection-title-{{ section.id }}">{{ item.title }}</p>
-                        {% if show_stars %}
-                          {% if section.blocks.size > 0 %}
-                            {% for block in section.blocks %}
-                              {% render block %}
-                            {% endfor %}
-                          {% else %}
-                            <!-- RYVIU APP :: COLLECTION-WIDGET-TOTAL -->	
-                              <div class="ryviu-collection">
-                                   <ryviu-widget-total collection="1" settings_data="{{ shop.metafields.ryviu.user_settings | escape }}" reviews_data="{{item.metafields.ryviu.product_reviews_info  | escape  }}" product_id="{{itemt.id}}" handle="{{item.handle}}"></ryviu-widget-total>
-                              </div>  
-                            <!-- RYVIU APP -->
-                          {% endif %}
+                      <p class="featured-collection-title-{{ section.id }}">{{ item.title }}</p>
+                      <p class="featured-collection-price-{{ section.id }}">
+                        {% if item.price_max > item.price %}
+                          {{ card_price_from }} {{ item.price | money }}
+                        {% else %}
+                          {% if item.selected_or_first_available_variant.compare_at_price > item.selected_or_first_available_variant.price -%}
+                            {{ item.selected_or_first_available_variant.price | money }}
+                            <span>{{ item.selected_or_first_available_variant.compare_at_price | money }}</span>
+                          {%- else -%}
+                            {{- item.selected_or_first_available_variant.price | money -}}
+                          {%- endif %}
                         {% endif %}
-                      </div>
-                      <div class="bottom-content">
-                        <p class="featured-collection-price-{{ section.id }}">
-                          {% if item.metafields.custom.discount != blank %}
-                            {% assign discount = item.metafields.custom.discount %}
-                          {% else %}
-                            {% assign discount = settings.discount %}
+                      </p>
+                    </div>
+                  </a>
+                {% endfor %}
+              {% else %}
+                {% for item in (1..product_show) %}
+                  <a href="{{ item.url }}" class="swiper-slide">
+                    <div class="featured-collection-image-{{ section.id }}">
+                      {{ 'image' | placeholder_svg_tag }}
+                    </div>
+                    <div class="featured-collection-content-{{ section.id }}">
+                      <p class="featured-collection-title-{{ section.id }}">Title</p>
+                      <p class="featured-collection-price-{{ section.id }}">Price</p>
+                    </div>
+                  </a>
+                {% endfor %}
+              {% endif %}
+            </div>
+            <div class="featured-collection-btn-prev-{{ section.id }}">
+              <span class="animate-icon"></span>
+            </div>
+            <div class="featured-collection-btn-next-{{ section.id }}">
+              <span class="animate-icon"></span>
+            </div>
+            {% unless top_bar %}
+              <div class="featured-collection-pagination-{{ section.id }} {% unless show_bar %} hide {% endunless %} swiper-pagination"></div>
+            {% endunless %}
+          </div>
+        {% endunless %}
+
+        {% if stack_products %}
+          <div class="featured-collection-items-{{ section.id }}">
+            {% if items != blank %}
+              {% for item in items limit:product_show %}
+                  <a href="{{ item.url }}" class="featured-collection-item-{{ section.id }}">
+                    <div class="featured-collection-image-{{ section.id }} {% if item.images.size > 1 %} has-secondary-{{ section.id }} {% endif %}">
+                      <img class="{% if item.images.size > 1 %}featured-collection-first-image-{{ section.id }}{% endif %}" src="{{ item.featured_image | image_url }}">
+                      {% if item.images.size > 1 %}
+                        {% for img in item.images %}
+                          {% if forloop.index == 2 %}
+                            <img class="featured-collection-second-image-{{ section.id }}" src="{{ img | image_url }}">
                           {% endif %}
-                          {% if page.metafields.custom.discount != blank %}
-                            {% assign discount = page.metafields.custom.discount %}
-                          {% else %}
-                            {% assign discount = settings.discount %}
-                          {% endif %}
-                          {% if discount %}
-                            {% assign discounted_price = item.price | times: discount | divided_by: 100 %}
-                            {{ item.price | minus: discounted_price | money }}<span>{{ item.price | money }}</span>
-                          {% elsif item.compare_at_price > item.price %}
-                            {{ item.price | money }}<span>{{ item.compare_at_price | money }}</span>
-                          {% else %}
-                          {{ item.price | money }}
-                          {% endif %}
-                        </p>
-                        {% if enable_show_now %}
-                        <a href="{{item.url}}" class="btn btn--secondary" >Shop Now</a>
-                        {% elsif enable_subscribe %}
-                        <a href="https://goodproteinca.myshopify.com/cart/clear?return_to=/cart/add?items[][id]={{item.selected_or_first_available_variant.id}}%26items[][quantity]=1%26items[][selling_plan]=883327085%26return_to=/checkout" class="btn btn--secondary" >subscribe</a>
-                        {% endif %}
-                      </div>
-                      
-                      {% if enable_quick_buy %}
-                        <span class="inline-block mt-1.5"
-                        x-html="formatMoney(current_price)"
-                        :class="
-                          {
-                            'invisible': !current_variant
-                          }"
-                        data-product-price
-                      >
-                        {{ current_variant.price | money }}
-                      </span>
-                      <div>
-                        {% render 'product-tile-quick-buy'
-                          section: section,
-                          product: item,
-                          product_form_id: product_form_id,
-                          current_variant: current_variant,
-                          is_card: true
-                        %}
-                      </div>
+                        {% endfor %}
                       {% endif %}
+                    </div>
+                    <div class="featured-collection-content-{{ section.id }}">
+                      <p class="featured-collection-title-{{ section.id }}">{{ item.title }}</p>
+                      <p class="featured-collection-price-{{ section.id }}">
+                        {% if item.price_max > item.price %}
+                          {{ card_price_from }} {{ item.price | money }}
+                        {% else %}
+                          {% if item.selected_or_first_available_variant.compare_at_price > item.selected_or_first_available_variant.price -%}
+                            {{ item.selected_or_first_available_variant.price | money }}
+                            <span>{{ item.selected_or_first_available_variant.compare_at_price | money }}</span>
+                          {%- else -%}
+                            {{- item.selected_or_first_available_variant.price | money -}}
+                          {%- endif %}
+                        {% endif %}
+                      </p>
                     </div>
                   </a>
               {% endfor %}
@@ -908,11 +953,8 @@
                     {{ 'image' | placeholder_svg_tag }}
                   </div>
                   <div class="featured-collection-content-{{ section.id }}">
-                    <div class="featured-collection-content-top-{{ section.id }}">
-                      <p class="featured-collection-title-{{ section.id }}">Product</p>
-                      <p class="featured-collection-price-{{ section.id }}">$30</p>
-                    </div>
-                    <p class="featured-collection-description-{{ section.id }}">Description</p>
+                    <p class="featured-collection-title-{{ section.id }}">Title</p>
+                    <p class="featured-collection-price-{{ section.id }}">Price</p>
                   </div>
                 </a>
               {% endfor %}
@@ -925,7 +967,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@6.8.4/swiper-bundle.min.js"></script>
 
 <script>
-  function initFeaturedCollection2() {
+  function initFeaturedCollection() {
     let item = document.querySelector('.featured-collection-slider-{{ section.id }}');
     let perMobile = item.getAttribute('data-preview-mobile');
     let perMobileBig = item.getAttribute('data-preview-mobile-big');
@@ -938,13 +980,9 @@
         nextEl: '.featured-collection-btn-next-{{ section.id }}',
         prevEl: '.featured-collection-btn-prev-{{ section.id }}'
       },
-      hashNavigation: {
-          watchState: true,
-      },
       pagination: {
         el: '.featured-collection-pagination-{{ section.id }}',
-        type: 'bullets',
-        clickable: true
+        type: 'progressbar'
       },
       breakpoints: {
         320: {
@@ -956,115 +994,30 @@
         1024: {
           slidesPerView: perDesktop,
         }
-      },
+      }
     })
   }
-  document.addEventListener('DOMContentLoaded', initFeaturedCollection2);
+  initFeaturedCollection();
+  document.addEventListener('DOMContentLoaded', initFeaturedCollection);
   if (Shopify.designMode) {
-     document.addEventListener('DOMContentLoaded', initFeaturedCollection2);
-     document.addEventListener('shopify:section:select', initFeaturedCollection2);
-     document.addEventListener('shopify:section:deselect', initFeaturedCollection2);
-     document.addEventListener('shopify:inspector:activate', initFeaturedCollection2);
-     document.addEventListener('shopify:section:unload', initFeaturedCollection2);
-     document.addEventListener('shopify:section:load', initFeaturedCollection2);
-     document.addEventListener('shopify:section:settings:change', initFeaturedCollection2);
+     document.addEventListener('DOMContentLoaded', initFeaturedCollection);
+     document.addEventListener('shopify:section:select', initFeaturedCollection);
+     document.addEventListener('shopify:section:deselect', initFeaturedCollection);
+     document.addEventListener('shopify:inspector:activate', initFeaturedCollection);
+     document.addEventListener('shopify:section:unload', initFeaturedCollection);
+     document.addEventListener('shopify:section:load', initFeaturedCollection);
+     document.addEventListener('shopify:section:settings:change', initFeaturedCollection);
   }
-  
-</script>
 
-{%- unless request.design_mode -%}
-<script src="{{ 'vendor-product.bundle.min.js' | asset_url }}" type="module"></script>
-<script src="{{ 'product-quick-buy.js' | asset_url }}" type="module"></script>
-{%- endunless -%}
+</script>
 
 {% schema %}
   {
-    "name": "Featured Collection",
-    "max_blocks": 1,
+    "name": "SS - Featured Collection",
     "settings": [
-      {
+       {
         "type": "header",
-        "content": "Heading"
-      },
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Recommended for you"
-      },
-      {
-        "type": "checkbox",
-        "id": "heading_custom",
-        "label": "Use Custom Font",
-        "default": true
-      },
-      {
-        "type": "font_picker",
-        "id": "heading_font",
-        "label": "Heading Font Family",
-        "default": "lato_n4"
-      },
-      {
-        "type": "range",
-        "id": "heading_size",
-        "min": 0,
-        "max": 72,
-        "step": 2,
-        "unit": "px",
-        "label": "Heading Size",
-        "default": 28
-      },
-      {
-        "type": "range",
-        "id": "heading_height",
-        "min": 50,
-        "max": 200,
-        "step": 10,
-        "unit": "%",
-        "label": "Heading Line Height",
-        "default": 130
-      },
-      {
-        "type": "select",
-        "id": "heading_align",
-        "label": "Heading Text Align",
-        "default": "center",
-        "info": "If navigation dots hide",
-        "options": [
-          {
-            "label": "Left",
-            "value": "left"
-          },
-          {
-            "label": "Center",
-            "value": "center"
-          },
-          {
-            "label": "Right",
-            "value": "right"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Navigation Dots"
-      },
-      {
-        "type": "checkbox",
-        "id": "dots_hide",
-        "label": "Hide Navigation Dots",
-        "info": "For Show - 'Product to Show' Should Be More 'Product Per Row Desktop'",
-        "default": true
-      },
-      {
-        "type": "range",
-        "id": "dots_size",
-        "min": 4,
-        "max": 20,
-        "step": 1,
-        "unit": "px",
-        "label": "Navigation Dots Size",
-        "default": 8
+        "content": "Save settings to display section correctly"
       },
       {
         "type": "header",
@@ -1094,8 +1047,17 @@
       {
         "type": "checkbox",
         "id": "stack_products",
-        "label": "Stack Products",
-        "default": false
+        "label": "Stack Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_bar",
+        "label": "Show Progress Bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "top_bar",
+        "label": "Top position bar"
       },
       {
         "type": "range",
@@ -1104,7 +1066,7 @@
         "max": 50,
         "step": 1,
         "label": "Product to Show",
-        "default": 8
+        "default": 10
       },
       {
         "type": "range",
@@ -1118,18 +1080,22 @@
       {
         "type": "select",
         "id": "product_per_mobile",
-        "default": "1",
         "options": [
-         {
+          {
             "label": "1",
             "value": "1"
+          },
+          {
+            "label": "1.3",
+            "value": "1.3"
           },
           {
             "label": "2",
             "value": "2"
           }
         ],
-        "label": "Product per Row Mobile"
+        "label": "Product per Row Mobile",
+        "default": "1"
       },
       {
         "type": "header",
@@ -1137,69 +1103,13 @@
       },
       {
         "type": "range",
-        "id": "card_padding_horizontal",
-        "min": 0,
-        "max": 40,
-        "step": 4,
-        "unit": "px",
-        "label": "Card Padding Horizontal",
-        "default": 0
-      },
-      {
-        "type": "range",
-        "id": "card_padding_vertical",
-        "min": 0,
-        "max": 40,
-        "step": 4,
-        "unit": "px",
-        "label": "Card Padding Vertical",
-        "default": 0
-      },
-      {
-        "type": "range",
-        "id": "card_radius",
+        "id": "image_radius",
         "min": 0,
         "max": 100,
         "step": 4,
         "unit": "px",
-        "label": "Card Border Radius",
+        "label": "Image Border Radius",
         "default": 12
-      },
-      {
-        "type": "range",
-        "id": "card_border_thickness",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "unit": "px",
-        "label": "Card Border Thickness",
-        "default": 1
-      },
-      {
-        "type": "checkbox",
-        "id": "use_shadow",
-        "label": "Use Box Shadow"
-      },
-      {
-        "type": "range",
-        "id": "shadow_width",
-        "min": 0,
-        "max": 20,
-        "step": 1,
-        "unit": "px",
-        "label": "Box Shadow Blur-radius",
-        "default":0
-      },
-      {
-        "type": "checkbox",
-        "id": "show_stars",
-        "label": "Show Product Review Stars",
-        "info": "Add review app stars as a 'block' to the section. Does not work on all themes or with all review app.",
-        "default": true
-      },
-      {
-        "type": "header",
-        "content": "Card Image Settings"
       },
       {
         "type": "select",
@@ -1225,8 +1135,7 @@
       {
         "type": "checkbox",
         "id": "use_custom_height",
-        "label": "Use custom Height",
-        "default": false
+        "label": "Use custom Height"
       },
       {
         "type": "range",
@@ -1251,32 +1160,38 @@
       {
         "type": "checkbox",
         "id": "show_second",
-        "label": "Show Second Image in Hover",
+        "label": "Show Second Image on Hover",
         "default": true
       },
       {
-        "type": "header",
-        "content": "Card Content Settings"
+        "type": "checkbox",
+        "id": "use_shadow",
+        "label": "Use Box Shadow"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_radius",
+        "label": "Use Card Roundness"
       },
       {
         "type": "range",
-        "id": "card_content_padding_horizontal",
+        "id": "card_padding_horizontal",
         "min": 0,
         "max": 40,
         "step": 4,
         "unit": "px",
-        "label": "Card Content Padding Horizontal",
-        "default": 12
+        "label": "Card Padding Horizontal",
+        "default": 4
       },
       {
         "type": "range",
-        "id": "card_content_padding_vertical",
+        "id": "card_padding_vertical",
         "min": 0,
         "max": 40,
         "step": 4,
         "unit": "px",
-        "label": "Card Content Padding Vertical",
-        "default": 12
+        "label": "Card Padding Vertical",
+        "default": 16
       },
       {
         "type": "header",
@@ -1286,23 +1201,33 @@
         "type": "checkbox",
         "id": "card_title_custom",
         "label": "Use Custom Font",
-        "default": true
+        "default": false
       },
       {
         "type": "font_picker",
         "id": "card_title_font",
         "label": "Card Title Font Family",
-        "default": "lato_n6"
+        "default": "assistant_n4"
       },
       {
         "type": "range",
         "id": "card_title_size",
         "min": 0,
-        "max": 40,
+        "max": 72,
         "step": 2,
         "unit": "px",
         "label": "Card Title Size",
-        "default": 16
+        "default": 24
+      },
+      {
+        "type": "range",
+        "id": "card_title_letter",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "unit": "px",
+        "label": "Card Title Letter Spacing",
+        "default": 0
       },
       {
         "type": "range",
@@ -1312,33 +1237,266 @@
         "step": 10,
         "unit": "%",
         "label": "Card Title Line Height",
-        "default": 130
+        "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Featured collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "heading_custom",
+        "label": "Use Custom Font",
+        "default": false
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading Font Family",
+        "default": "assistant_n4"
+      },
+      {
+        "type": "range",
+        "id": "heading_size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "label": "Heading Size",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "heading_letter",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "unit": "px",
+        "label": "Heading Letter Spacing",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "heading_height",
+        "min": 50,
+        "max": 200,
+        "step": 10,
+        "unit": "%",
+        "label": "Heading Line Height",
+        "default": 100
+      },
+      {
+        "type": "select",
+        "id": "heading_align",
+        "label": "Heading Text Align",
+        "default": "center",
+        "info": "If Link Under Heading",
+        "options": [
+         {
+            "label": "Center",
+            "value": "center"
+          },
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Subheading"
+      },
+      {
+        "type": "text",
+        "id": "sub_heading",
+        "label": "Subheading"
+      },
+      {
+        "type": "checkbox",
+        "id": "sub_heading_custom",
+        "label": "Use Custom Font",
+        "default": false
+      },
+      {
+        "type": "font_picker",
+        "id": "sub_heading_font",
+        "label": "Subheading Font Family",
+        "default": "assistant_n4"
+      },
+      {
+        "type": "range",
+        "id": "sub_heading_size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "label": "Subheading Size",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "sub_heading_letter",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "unit": "px",
+        "label": "Subheading Letter Spacing",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "sub_heading_height",
+        "min": 50,
+        "max": 200,
+        "step": 10,
+        "unit": "%",
+        "label": "Subheading Line Height",
+        "default": 100
+      },
+      {
+        "type": "select",
+        "id": "sub_heading_align",
+        "label": "Subheading Text Align",
+        "default": "center",
+        "options": [
+         {
+            "label": "Center",
+            "value": "center"
+          },
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Right",
+            "value": "right"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "invert_content",
+        "label": "Invert Heading with Subheading"
+      },
+      {
+        "type": "header",
+        "content": "Link"
+      },
+      {
+        "type": "text",
+        "id": "link",
+        "label": "Link",
+        "default": "View all"
+      },
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Link URL"
+      },
+      {
+        "type": "checkbox",
+        "id": "link_custom",
+        "label": "Use Custom Font",
+        "default": false
+      },
+      {
+        "type": "font_picker",
+        "id": "link_font",
+        "label": "Link Font Family",
+        "default": "assistant_n4"
+      },
+      {
+        "type": "range",
+        "id": "link_size",
+        "min": 0,
+        "max": 72,
+        "step": 2,
+        "unit": "px",
+        "label": "Link Size",
+        "default": 18
+      },
+      {
+        "type": "range",
+        "id": "link_letter",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "unit": "px",
+        "label": "Link Letter Spacing",
+        "default": 0
+      },
+      {
+        "type": "range",
+        "id": "link_height",
+        "min": 50,
+        "max": 200,
+        "step": 10,
+        "unit": "%",
+        "label": "Link Line Height",
+        "default": 100
+      },
+      {
+        "type": "checkbox",
+        "id": "link_position",
+        "label": "Link Under Heading"
+      },
+      {
+        "type": "checkbox",
+        "id": "link_mobile",
+        "label": "Show Link on Mobile",
+        "default": true
       },
       {
         "type": "header",
         "content": "Card Price"
       },
       {
+        "type": "text",
+        "id": "card_price_from",
+        "label": "From text",
+        "default": "From"
+      },
+      {
         "type": "checkbox",
         "id": "card_price_custom",
         "label": "Use Custom Font",
-        "default": true
+        "default": false
       },
       {
         "type": "font_picker",
         "id": "card_price_font",
         "label": "Card Price Font Family",
-        "default": "lato_n5"
+        "default": "assistant_n4"
       },
       {
         "type": "range",
         "id": "card_price_size",
         "min": 0,
-        "max": 40,
+        "max": 72,
         "step": 2,
         "unit": "px",
         "label": "Card Price Size",
         "default": 16
+      },
+      {
+        "type": "range",
+        "id": "card_price_letter",
+        "min": 0,
+        "max": 5,
+        "step": 0.1,
+        "unit": "px",
+        "label": "Card Price Letter Spacing",
+        "default": 0
       },
       {
         "type": "range",
@@ -1348,132 +1506,90 @@
         "step": 10,
         "unit": "%",
         "label": "Card Price Line Height",
-        "default": 130
-      },
-      {
-        "type": "header",
-        "content": "Card Description"
-      },
-      {
-        "type": "checkbox",
-        "id": "card_description_custom",
-        "label": "Use Custom Font",
-        "default": false
-      },
-      {
-        "type": "font_picker",
-        "id": "card_description_font",
-        "label": "Card Description Font Family",
-        "default": "assistant_n4"
+        "default": 100
       },
       {
         "type": "range",
-        "id": "card_description_size",
-        "min": 0,
-        "max": 40,
-        "step": 2,
-        "unit": "px",
-        "label": "Card Description Size",
-        "default": 16
-      },
-      {
-        "type": "range",
-        "id": "card_description_height",
-        "min": 50,
-        "max": 200,
-        "step": 10,
-        "unit": "%",
-        "label": "Card Description Line Height",
-        "default": 130
-      },
-      {
-        "type": "range",
-        "id": "card_description_mt",
+        "id": "card_price_mt",
         "min": 0,
         "max": 80,
         "step": 4,
         "unit": "px",
-        "label": "Card Description Margin top",
+        "label": "Card Price Margin top",
         "default": 12
       },
       {
+        "type": "header",
+        "content": "Arrow Settings"
+      },
+      {
         "type": "range",
-        "id": "card_description_length",
-        "min": 0,
-        "max": 10,
-        "step": 1,
-        "label": "Card Description Length Words",
-        "default": 0
+        "id": "arrow_size",
+        "min": 20,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Arrow Size ",
+        "default": 50
+      },
+      {
+        "type": "range",
+        "id": "arrow_size_mobile",
+        "min": 20,
+        "max": 100,
+        "step": 2,
+        "unit": "px",
+        "label": "Arrow Size - Mobile",
+        "default": 40
+      },
+      {
+        "type": "checkbox",
+        "id": "arrow_hide_mobile",
+        "label": "Hide Arrow on Mobile"
       },
       {
         "type": "header",
-        "content": "purchase buttons"
-      },
-      {
-        "type": "select",
-        "id": "button_type",
-        "label": "Button type",
-        "default": "shop_now",
-        "options": [
-          {
-            "value": "quick_buy",
-            "label": "Quick buy"
-          },
-          {
-            "value": "subscribe",
-            "label": "Subscribe"
-          },
-          {
-            "value": "shop_now",
-            "label": "Shop Now"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "selling_plan",
-        "label": "selling plan",
-        "options": [
-          {
-            "value": "883327085",
-            "label": "30 days"
-          },
-          {
-            "value": "883359853",
-            "label": "45 days"
-          },
-          {
-            "value": "883392621",
-            "label": "60 days"
-          }
-        ]
-      },
-      {
-        "type": "header",
-        "content": "Section Colors"
+        "content": "Link Colors"
       },
       {
         "type": "color",
-        "label": "Heading Color",
-        "id": "heading_color",
-        "default": "#3B3320"
+        "label": "Link Color",
+        "id": "link_color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "label": "Link hover Color",
+        "id": "link_hover_color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "label": "Link Arrow Color",
+        "id": "link_arrow_color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "label": "Link Background Arrow Color",
+        "id": "link_background_color",
+        "default": "#E6E6E6"
+      },
+      {
+        "type": "color",
+        "label": "Link Background Arrow Hover Color",
+        "id": "link_background_hover_color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Card Colors"
       },
       {
         "type": "color",
         "label": "Card Background Color",
-        "id": "card_bg_color",
-        "default": "#FFF9E9"
-      },
-      {
-        "type": "color",
-        "label": "Card Border color",
-        "id": "card_border_color"
-      },
-      {
-        "type": "color",
-        "label": "Card Image Background Color",
-        "id": "card_image_bg_color",
-        "default": "#FFF9E9"
+        "id": "card_content_bg_color",
+        "default": "#FFFFFF"
       },
       {
         "type": "color",
@@ -1488,10 +1604,8 @@
         "default": "#000000"
       },
       {
-        "type": "color",
-        "label": "Card Description Color",
-        "id": "card_description_color",
-        "default": "#000000"
+        "type": "header",
+        "content": "Navigation Colors"
       },
       {
         "type": "color",
@@ -1509,43 +1623,53 @@
         "type": "color",
         "label": "Arrow Background color",
         "id": "arrow_bg_color",
-        "default": "#FFFFFF"
+        "default": "#F2F2F2"
       },
       {
         "type": "color",
         "label": "Arrow Background Hover color",
         "id": "arrow_bg_hover_color",
-        "default": "#FFFFFF"
+        "default": "#F2F2F2"
       },
       {
         "type": "color",
         "label": "Arrow Border color",
         "id": "arrow_border_color",
-        "default": "#E7DAE2"
+        "default": "#C4C4C4"
       },
       {
         "type": "color",
         "label": "Arrow Border Hover color",
         "id": "arrow_border_hover_color",
-        "default": "#E7DAE2"
+        "default": "#C4C4C4"
       },
       {
         "type": "color",
-        "label": "Dots Color",
-        "id": "dots_color",
+        "label": "Progress Bar Color",
+        "id": "progress_color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Section Colors"
+      },
+      {
+        "type": "color",
+        "label": "Heading Color",
+        "id": "heading_color",
         "default": "#000000"
       },
       {
         "type": "color",
-        "label": "Stars Color",
-        "id": "stars_color",
+        "label": "Subheading Color",
+        "id": "sub_heading_color",
         "default": "#000000"
       },
       {
         "type": "color",
         "label": "Section background",
         "id": "background_color",
-        "default": "#F8F1F4"
+        "default": "#FFFFFF"
       },
       {
         "type": "color_background",
@@ -1631,6 +1755,12 @@
         "content": "Section Settings"
       },
       {
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "Full Width",
+        "default": false
+      },
+      {
         "type": "range",
         "id": "content_width",
         "min": 0,
@@ -1638,7 +1768,7 @@
         "step": 10,
         "unit": "rem",
         "label": "Section content width",
-        "default": 120
+        "default": 130
       },
       {
         "type": "range",
@@ -1649,23 +1779,11 @@
         "unit": "px",
         "label": "Border thickness",
         "default": 0
-      },
-      {
-        "type": "checkbox",
-        "id": "lazy",
-        "label": "Lazy load",
-        "info": "Lazy load images for speed optimisation",
-        "default": true
-      }
-    ],
-    "blocks": [
-      {
-        "type": "@app"
       }
     ],
     "presets": [
       {
-        "name": "Featured Collection",
+        "name": "SS - Featured Collection",
         "settings": {
           "product_per_desktop": 4,
           "product_per_mobile": "1"
