@@ -24,10 +24,6 @@
         "use_gradient_background": false
       }
     },
-    "174345558349d596c6": {
-      "type": "apps",
-      "settings": {}
-    },
     "17434436682af4c4ba": {
       "type": "apps",
       "blocks": {
@@ -232,7 +228,6 @@
   },
   "order": [
     "main",
-    "174345558349d596c6",
     "17434436682af4c4ba",
     "rich_text_cETRJF",
     "featured_icon_columns_XthpRk",
