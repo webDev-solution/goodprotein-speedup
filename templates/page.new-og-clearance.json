@@ -190,63 +190,6 @@
         "text_overlay_color": "same_as_section"
       }
     },
-    "replo_style_review_zGP6Uy": {
-      "type": "replo-style-review",
-      "blocks": {
-        "title_YVfcqC": {
-          "type": "title",
-          "settings": {
-            "title": "300,000+",
-            "color": "#ffffff"
-          }
-        },
-        "subtitle_8nVWa9": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "Happy Customers",
-            "color": "#ffffff"
-          }
-        },
-        "review_NHmGpT": {
-          "type": "review",
-          "settings": {
-            "review": "Tastes so much better than other protein powders. I add it to my smoothies and it keeps me full and satisfied for hours. Also, the customer service is amazing.",
-            "customer_photo": "shopify://shop_images/ugc-9-01_5cd9ac94-4078-4361-948c-ec1ac436684d.webp",
-            "customer_name": "Nicole. K."
-          }
-        },
-        "review_4a8Jqc": {
-          "type": "review",
-          "settings": {
-            "review": "Love the rich chocolate flavour! I don’t have any digestive issues from Good Protein shakes, unlike other whey based protein powders. I highly recommend.",
-            "customer_photo": "shopify://shop_images/ugc-9-01_400fc4f9-b1dd-4d1b-8585-a4338afeea34.webp",
-            "customer_name": "Kassie R."
-          }
-        },
-        "review_YgMgzm": {
-          "type": "review",
-          "settings": {
-            "review": "This protein powder is the first one I have tried that tastes great, is a fine texture that is not gritty and does not cause bloating or gas. Highly recommend!",
-            "customer_photo": "shopify://shop_images/ugc-protein-shakes-5-01_fb04f28f-13ac-4faa-b262-99e7f69c1d37.webp",
-            "customer_name": "Surya. T."
-          }
-        }
-      },
-      "block_order": [
-        "title_YVfcqC",
-        "subtitle_8nVWa9",
-        "review_NHmGpT",
-        "review_4a8Jqc",
-        "review_YgMgzm"
-      ],
-      "settings": {
-        "page_width": true,
-        "background": "#9fd0ff",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "review_star_color": "#408ae9"
-      }
-    },
     "faq_dgfKKQ": {
       "type": "faq",
       "blocks": {
@@ -340,7 +283,6 @@
     "collection_carousel_n73bgV",
     "image_wto_2_ziiUfB",
     "image_text_with_overlay_2_38JBt3",
-    "replo_style_review_zGP6Uy",
     "faq_dgfKKQ",
     "main",
     "second_footer_dbFPiE"
