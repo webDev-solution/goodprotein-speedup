@@ -192,7 +192,7 @@
         {% endif %}
       </div>
       <div class="product-tile-info mt-5 break-words">
-        <h3 class="font-body text-base product_title text-white font-size-1_2rem-saturn">
+        <h3 class="font-body text-base product_title text-white product-tile-product-name">
           <a href="{{product.url}}">
             {{
               product.title
@@ -240,7 +240,7 @@
             disabled
           {% endif %}
         >
-          {% if available == false and request.path contains '/pages' %} Sold Out {% else %} Add {% endif %}
+          {% if available == false and request.path contains '/pages' %} Sold Out {% else %} + Add {% endif %}
         </button>
 
         <style>
@@ -555,7 +555,7 @@
 <style>
   .holiday-product-tile-saturn {
     background: rgba(255, 255, 255, 0.6);
-    border-radius: 1rem;
+    border-radius: 8px;
   }
   .holiday-product-tile-saturn > div {
     display: flex;
@@ -570,12 +570,14 @@
   .holiday-product-tile-saturn h3 {
     text-align: center;
   }
-  .font-size-1_2rem-saturn {
-    font-size: 1.2rem !important;
+  .product-tile-product-name {
+    font-size: 16px !important;
+    max-width: 75%;
+    margin: auto;
   }
   .holiday-product-tile-saturn .size-selector {
     width: 100%;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 0.5rem;
     background-color: white;
     color: red;
   }
