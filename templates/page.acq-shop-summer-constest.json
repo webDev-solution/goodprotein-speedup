@@ -243,14 +243,14 @@
         "new_year_page_discount_text_font_size": 10,
         "new_year_page_discount_badge_size": 46,
         "layout": "grid",
-        "main_background_color": "#cb9ed5",
+        "main_background_color": "#c6e4f7",
         "product_title_color": "#000000",
         "product_price_color": "#2aa059",
         "product_variant_select_background_color": "#f1f1f1",
-        "product_variant_select_text_color": "#cb9ed5",
-        "product_variant_select_border_color": "#cb9ed5",
+        "product_variant_select_text_color": "#edafce",
+        "product_variant_select_border_color": "#edafce",
         "cta_label_color": "#f1f0e1",
-        "cta_background_color": "#cb9ed5",
+        "cta_background_color": "#edafce",
         "cta_border_color": "",
         "cta_border_width": 0,
         "crop": "aspect-w-1 aspect-h-1",
@@ -887,7 +887,7 @@
             "review_mt": 0,
             "review_mt_mobile": 0,
             "review_color": "#000000",
-            "stars_color": "#FFB800"
+            "stars_color": "#ffb800"
           }
         },
         "heading_ebRAdR": {
@@ -902,7 +902,7 @@
             "heading_mt": 12,
             "heading_mt_mobile": 12,
             "heading_color": "#000000",
-            "heading_accent_color": "#3B8247"
+            "heading_accent_color": "#3b8247"
           }
         },
         "feature_yaBHC8": {
@@ -963,8 +963,8 @@
             "button_style": "non_outline_arrow",
             "button_color": "#000000",
             "button_hover_color": "#000000",
-            "button_bg_color": "#FFE658",
-            "button_bg_hover_color": "#FFE658",
+            "button_bg_color": "#ffe658",
+            "button_bg_hover_color": "#ffe658",
             "button_border_color": "#000000",
             "button_border_hover_color": "#000000"
           }
@@ -991,10 +991,10 @@
             "text_size": 16,
             "text_size_mobile": 16,
             "text_height": 100,
-            "text_color": "#7C0A0A",
-            "icon_color": "#7C0A0A",
-            "tag_bg_color": "#FFFFFF",
-            "tag_border_color": "#7C0A0A",
+            "text_color": "#7c0a0a",
+            "icon_color": "#7c0a0a",
+            "tag_bg_color": "#ffffff",
+            "tag_border_color": "#7c0a0a",
             "tag_shadow_overlay": "#000000"
           }
         }
@@ -1039,8 +1039,8 @@
         "feature_text_size_mobile": 16,
         "feature_text_height": 100,
         "feature_text_color": "#000000",
-        "feature_icon_color": "#3B8247",
-        "feature_border_color": "#AFAFAF",
+        "feature_icon_color": "#3b8247",
+        "feature_border_color": "#afafaf",
         "background_color": "",
         "background_gradient": "radial-gradient(rgba(231, 253, 219, 0.8) 15%, rgba(255, 255, 255, 1) 85%)",
         "border_color": "#000000",
