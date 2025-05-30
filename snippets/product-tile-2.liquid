@@ -594,6 +594,7 @@
     padding: 0.5rem 1.5rem;
     background-color: white;
     color: red;
+    background-image: none !important;
   }
   @media (max-width: 550px) {
     .holiday-product-tile-saturn .size-selector {
@@ -613,17 +614,18 @@
     content: "\005E";
     color: {{ section.settings.product_variant_select_text_color }};
     position: absolute;
-    font-size: 24px;
+    font-size: 32px;
     font-family: 'swiper-icons';
     scale: 1.3 1;
     z-index: 999;
     /* left: 68px; */
     right: calc(2rem);
-    background-image: none !important;
+    transform: rotate(180deg);
   }
   @media (max-width: 550px) {
     .product-sizes.mt-2.padding-1rem-saturn::after {
       right: calc(1.5rem);
+      font-size: 24px;
     }
   }
 </style>
