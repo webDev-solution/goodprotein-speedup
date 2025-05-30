@@ -248,6 +248,7 @@
     },
     "ss_featured_collection_rwWPCV": {
       "type": "ss-featured-collection",
+      "disabled": true,
       "name": "SS - Featured Collection",
       "settings": {
         "items_mt": 40,
