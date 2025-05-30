@@ -721,13 +721,6 @@
         "disabled": false,
         "settings": {}
       },
-      "10605408327587305396": {
-        "type": "shopify://apps/eg-auto-add-to-cart/blocks/app-embed/0f7d4f74-1e89-4820-aec4-6564d7e535d2",
-        "disabled": false,
-        "settings": {
-          "version": "v3"
-        }
-      },
       "16477486064475509254": {
         "type": "shopify://apps/veeper-stop-coupon-leaks/blocks/cd-embed/701f59c5-5a05-41c0-ad15-29147f0a6331",
         "disabled": true,
