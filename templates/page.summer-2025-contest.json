@@ -465,12 +465,12 @@
         "ingredient_color": "#121212",
         "ingredient_bg_color": "#8eccf3",
         "ingredient_border_color": "#121212",
-        "arrow_color": "#FFFFFF",
+        "arrow_color": "#ffffff",
         "arrow_hover_color": "#121212",
         "arrow_bg_color": "#121212",
-        "arrow_bg_hover_color": "#FFFFFF",
-        "arrow_border_color": "#C7C7C7",
-        "arrow_border_hover_color": "#C7C7C7",
+        "arrow_bg_hover_color": "#ffffff",
+        "arrow_border_color": "#c7c7c7",
+        "arrow_border_hover_color": "#c7c7c7",
         "heading_color": "#ffffff",
         "background_color": "#8eccf3",
         "background_gradient": "",
@@ -716,6 +716,21 @@
         "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209",
         "use_gradient_background": false
       }
+    },
+    "1748627837736af4a0": {
+      "type": "apps",
+      "blocks": {
+        "tolstoy_shoppable_video_quiz_carousel_block_CDNixj": {
+          "type": "shopify://apps/tolstoy-shoppable-video-quiz/blocks/carousel-block/06fa8282-42ff-403e-b67c-1936776aed11",
+          "settings": {
+            "publishId": "sv74ngys9wm5m"
+          }
+        }
+      },
+      "block_order": [
+        "tolstoy_shoppable_video_quiz_carousel_block_CDNixj"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -731,6 +746,7 @@
     "rich_text_cETRJF",
     "featured_icon_columns_XthpRk",
     "faq_dgfKKQ",
-    "rich_text_kFUJpX"
+    "rich_text_kFUJpX",
+    "1748627837736af4a0"
   ]
 }
