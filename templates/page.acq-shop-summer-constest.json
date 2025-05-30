@@ -189,7 +189,7 @@
       }
     },
     "main_345": {
-      "type": "landing-collections",
+      "type": "collection-grid",
       "blocks": {
         "13b0706d-6b53-4ec8-87b3-4e572cba2962": {
           "type": "collection",
