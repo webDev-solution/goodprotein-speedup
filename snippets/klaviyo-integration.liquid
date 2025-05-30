@@ -33,13 +33,14 @@
               let updatedSourceEntries = existingSourceArray.join(', ');
       
               // Prepare data for Klaviyo
-              const k_options = {
+              $.ajax({
+                url: 'https://a.klaviyo.com/client/subscriptions/?company_id=HMfxeP',
                 method: 'POST',
+                contentType: 'application/json',
                 headers: {
-                  revision: '2024-02-15',
-                  'content-type': 'application/json'
+                  revision: '2024-02-15'
                 },
-                body: JSON.stringify({
+                data: JSON.stringify({
                   data: {
                     type: 'subscription',
                     attributes: {
@@ -52,7 +53,7 @@
                             properties: {
                               "contest_entries": updatedEntries,
                               "contest_sources": updatedSourceEntries,
-                              "language":language
+                              "language": language
                             }
                           }
                         }
@@ -62,15 +63,15 @@
                       list: { data: { type: 'list', id: 'V5KYiJ' } }
                     }
                   }
-                })
-              };
-      
-              // Send update
-              fetch('https://a.klaviyo.com/client/subscriptions/?company_id=HMfxeP', k_options)
-                .then(res => res.json())
-                .then(data => {
+                }),
+                success: function(data) {
                   console.log('Updated profile:', data);
-                });
+                },
+                error: function(xhr, status, error) {
+                  console.error('Error updating profile:', error);
+                }
+              });
+
       
             })
             .fail(error => {
