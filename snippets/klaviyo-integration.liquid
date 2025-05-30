@@ -67,7 +67,7 @@
       
               // Send update
               fetch('https://a.klaviyo.com/client/subscriptions/?company_id=HMfxeP', k_options)
-                .then(response => response.json())
+                .then(res => res.json())
                 .then(data => {
                   console.log('Updated profile:', data);
                 });
