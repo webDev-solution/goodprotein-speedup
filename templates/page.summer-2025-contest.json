@@ -764,6 +764,69 @@
         "lazy": true
       }
     },
+    "ss_text_block_pro_JLYTHc": {
+      "type": "ss-text-block-pro",
+      "blocks": {
+        "title_PcGzbM": {
+          "type": "title",
+          "settings": {
+            "title": "So Many Waysto Enjoy",
+            "title_custom": false,
+            "title_font": "assistant_n4",
+            "title_size": 40,
+            "title_height": 100,
+            "title_align": "center",
+            "title_mt": 0,
+            "title_color": "#000000"
+          }
+        },
+        "text_w9Rmxq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>See how people are getting creative with Good Protein — in shakes, soft serve, baked treats, and beyond.</p>",
+            "text_custom": false,
+            "text_font": "assistant_n4",
+            "text_size": 16,
+            "text_height": 130,
+            "text_align": "center",
+            "text_mt": 16,
+            "text_color": "#a0a0a0"
+          }
+        }
+      },
+      "block_order": [
+        "title_PcGzbM",
+        "text_w9Rmxq"
+      ],
+      "name": "SS - Text Block Pro",
+      "settings": {
+        "image_width": 20,
+        "image_custom": false,
+        "image_height_desktop": 400,
+        "image_height_mobile": 200,
+        "image_radius": 12,
+        "image_ration": "none",
+        "image_location": "row",
+        "image_location_mobile": "column",
+        "content_padding_horizontal": 40,
+        "content_padding_vertical": 40,
+        "content_radius": 40,
+        "gap": 30,
+        "gap_mobile": 15,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_bg": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "content_width": 120,
+        "border_thickness": 0
+      }
+    },
     "174345558349d596c6": {
       "type": "apps",
       "settings": {}
@@ -800,53 +863,6 @@
         "use_gradient_background": false
       }
     },
-    "faq_Ky3Hap": {
-      "type": "faq",
-      "blocks": {
-        "question_gLMd4Q": {
-          "type": "question",
-          "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
-          }
-        },
-        "question_e7giyd": {
-          "type": "question",
-          "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
-          }
-        },
-        "question_cACrb8": {
-          "type": "question",
-          "settings": {
-            "question": "Frequently asked question",
-            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "question_gLMd4Q",
-        "question_e7giyd",
-        "question_cACrb8"
-      ],
-      "name": "FAQ",
-      "settings": {
-        "display_on_card": true,
-        "heading_text_style": "heading",
-        "title_position": "center",
-        "two_columns_desktop": true,
-        "title": "FAQ",
-        "richtext": "<p>Find the most frequently asked questions below.</p>",
-        "btn_text": "",
-        "btn_link": "",
-        "color_scheme": "",
-        "use_gradient_background": false,
-        "use_special_background": false,
-        "special_background": "",
-        "change_style": "default"
-      }
-    },
     "tolstoy_video_carousel_widget_controller_63QtqM": {
       "type": "tolstoy-video-carousel-widget-controller",
       "name": "Tolstoy Carousel +",
@@ -856,95 +872,6 @@
         "header_color": "#ffffff",
         "header_tag": "h2",
         "background_color": "#62B5E5"
-      }
-    },
-    "featured_icon_columns_XthpRk": {
-      "type": "featured-icon-columns",
-      "blocks": {
-        "image_iiw9w9": {
-          "type": "image",
-          "settings": {
-            "feature_title": "Pick your favourite flavour",
-            "feature_text": "Choose Subscribe & Save on most product pages.",
-            "feature_image": "shopify://shop_images/Icon-_Heart_03.svg",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_qg9yqK": {
-          "type": "image",
-          "settings": {
-            "feature_title": "Set your delivery frequency",
-            "feature_text": "Anywhere from 4 weeks to 3 months. You’re in control.",
-            "feature_image": "shopify://shop_images/Icon-_Setup.svg",
-            "feature_url": "",
-            "hide_image": false
-          }
-        },
-        "image_aATAf9": {
-          "type": "image",
-          "settings": {
-            "feature_title": "Adjust as needed",
-            "feature_text": "Change your quantities. Change your items. Reschedule anytime.",
-            "feature_image": "shopify://shop_images/Icon-_Control03_15068938-335d-43f0-b9f6-747864fedd13.svg",
-            "feature_url": "",
-            "hide_image": false
-          }
-        }
-      },
-      "block_order": [
-        "image_iiw9w9",
-        "image_qg9yqK",
-        "image_aATAf9"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "How does our subscription program work?",
-        "text": "",
-        "button_title": "",
-        "button_link": "",
-        "feature_row": 3,
-        "feature_row_mobile": 1,
-        "feature_gap": 20,
-        "feature_gap_mobile": 20,
-        "feature_padding_vertical": 0,
-        "feature_padding_horizontal": 0,
-        "feature_radius": 16,
-        "feature_border_thickness": 0,
-        "feature_shadow": false,
-        "feature_heading_custom": true,
-        "feature_heading_font": "lato_n4",
-        "feature_heading_size": 24,
-        "feature_heading_size_mobile": 20,
-        "feature_heading_height": 150,
-        "feature_heading_mt": 8,
-        "feature_text_custom": false,
-        "feature_text_font": "lato_n4",
-        "feature_text_size": 18,
-        "feature_text_size_mobile": 18,
-        "feature_text_height": 150,
-        "feature_text_mt": 4,
-        "feature_icon_size": 100,
-        "feature_icon_size_mobile": 100,
-        "feature_bg": "#ffffff",
-        "feature_border_color": "#000000",
-        "feature_shadow_color": "#000000",
-        "feature_heading_color": "#000000",
-        "feature_text_color": "#000000",
-        "feature_icon_color": "#000000",
-        "background_color": "#ffffff",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 100,
-        "padding_bottom": 100,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 1.5,
-        "full_width": false,
-        "content_width": 80,
-        "border_thickness": 0,
-        "lazy": true
       }
     },
     "faq_dgfKKQ": {
@@ -1041,6 +968,53 @@
         "tolstoy_shoppable_video_quiz_carousel_block_CDNixj"
       ],
       "settings": {}
+    },
+    "faq_Ky3Hap": {
+      "type": "faq",
+      "blocks": {
+        "question_gLMd4Q": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
+          }
+        },
+        "question_e7giyd": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
+          }
+        },
+        "question_cACrb8": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_gLMd4Q",
+        "question_e7giyd",
+        "question_cACrb8"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "heading",
+        "title_position": "center",
+        "two_columns_desktop": true,
+        "title": "FAQ",
+        "richtext": "<p>Find the most frequently asked questions below.</p>",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "use_special_background": false,
+        "special_background": "",
+        "change_style": "default"
+      }
     }
   },
   "order": [
@@ -1054,14 +1028,14 @@
     "ss_product_ingredients_5_KcxWpD",
     "ss_waves_67FQDH",
     "ss_testimonials_30_kfycPf",
+    "ss_text_block_pro_JLYTHc",
     "174345558349d596c6",
     "17434436682af4c4ba",
     "rich_text_cETRJF",
-    "faq_Ky3Hap",
     "tolstoy_video_carousel_widget_controller_63QtqM",
-    "featured_icon_columns_XthpRk",
     "faq_dgfKKQ",
     "rich_text_kFUJpX",
-    "1748627837736af4a0"
+    "1748627837736af4a0",
+    "faq_Ky3Hap"
   ]
 }
