@@ -33,44 +33,49 @@
               let updatedSourceEntries = existingSourceArray.join(', ');
       
               // Prepare data for Klaviyo
-              $.ajax({
-                url: 'https://a.klaviyo.com/client/subscriptions/?company_id=HMfxeP',
-                method: 'POST',
-                contentType: 'application/json',
-                headers: {
-                  revision: '2024-02-15'
-                },
-                data: JSON.stringify({
-                  data: {
-                    type: 'subscription',
-                    attributes: {
-                      custom_source: 'API Submit',
-                      profile: {
-                        data: {
-                          type: 'profile',
-                          attributes: {
-                            email: emailAddress,
-                            properties: {
-                              "contest_entries": updatedEntries,
-                              "contest_sources": updatedSourceEntries,
-                              "language": language
+              setTimeout(function(){
+                
+             
+                $.ajax({
+                  url: 'https://a.klaviyo.com/client/subscriptions/?company_id=HMfxeP',
+                  method: 'POST',
+                  contentType: 'application/json',
+                  headers: {
+                    revision: '2024-02-15'
+                  },
+                  data: JSON.stringify({
+                    data: {
+                      type: 'subscription',
+                      attributes: {
+                        custom_source: 'API Submit',
+                        profile: {
+                          data: {
+                            type: 'profile',
+                            attributes: {
+                              email: emailAddress,
+                              properties: {
+                                "contest_entries": updatedEntries,
+                                "contest_sources": updatedSourceEntries,
+                                "language": language
+                              }
                             }
                           }
                         }
+                      },
+                      relationships: {
+                        list: { data: { type: 'list', id: 'V5KYiJ' } }
                       }
-                    },
-                    relationships: {
-                      list: { data: { type: 'list', id: 'V5KYiJ' } }
                     }
+                  }),
+                  success: function(data) {
+                    console.log('Updated profile:', data);
+                  },
+                  error: function(xhr, status, error) {
+                    console.error('Error updating profile:', error);
                   }
-                }),
-                success: function(data) {
-                  console.log('Updated profile:', data);
-                },
-                error: function(xhr, status, error) {
-                  console.error('Error updating profile:', error);
-                }
-              });
+                });
+
+              }, 2000);
 
       
             })
