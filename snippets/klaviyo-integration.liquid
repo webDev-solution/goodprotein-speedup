@@ -1,0 +1,81 @@
+  <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var newEntry = urlParams.get('utm_campaign');
+        var newSource = window.location.href;
+        var language = {{ (localization.language.iso_code | append: "-" | append: localization.country.iso_code) | json }};
+        // console.log(language);
+        window.addEventListener("klaviyoForms", function (e) {
+          if (e.detail.type == 'submit') {
+            let emailAddress = e.detail.metaData.$email;
+      
+            $.post('https://glaze-digital.wordpress.thcs.in/shopify-api/klaviyo-test/kl_get_profile.php', {
+              email: emailAddress
+            })
+            .done(response => {
+              console.log('Profile data from PHP:', response);
+      
+              let properties = response.properties;
+              let existingEntries = properties.contest_entries || '';
+              let existingSource = properties.contest_sources || '';
+              
+              let entriesArray = existingEntries.split(',').map(e => e.trim()).filter(e => e);
+              let existingSourceArray = existingSource.split(',').map(e => e.trim()).filter(e => e);
+            
+              
+              if (!entriesArray.includes(newEntry)) {
+                entriesArray.push(newEntry);
+              }
+              if (!existingSourceArray.includes(newSource)) {
+                existingSourceArray.push(newSource);
+              }
+              
+              let updatedEntries = entriesArray.join(', ');
+              let updatedSourceEntries = existingSourceArray.join(', ');
+      
+              // Prepare data for Klaviyo
+              const k_options = {
+                method: 'POST',
+                headers: {
+                  revision: '2024-02-15',
+                  'content-type': 'application/json'
+                },
+                body: JSON.stringify({
+                  data: {
+                    type: 'subscription',
+                    attributes: {
+                      custom_source: 'API Submit',
+                      profile: {
+                        data: {
+                          type: 'profile',
+                          attributes: {
+                            email: emailAddress,
+                            properties: {
+                              "contest_entries": updatedEntries,
+                              "contest_sources": updatedSourceEntries,
+                              "language":language
+                            }
+                          }
+                        }
+                      }
+                    },
+                    relationships: {
+                      list: { data: { type: 'list', id: 'V5KYiJ' } }
+                    }
+                  }
+                })
+              };
+      
+              // Send update
+              fetch('https://a.klaviyo.com/client/subscriptions/?company_id=HMfxeP', k_options)
+                .then(response => response.json())
+                .then(data => {
+                  console.log('Updated profile:', data);
+                });
+      
+            })
+            .fail(error => {
+              console.log('Error fetching profile:', error.statusText);
+            });
+          }
+        });
+      </script>
