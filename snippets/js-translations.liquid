@@ -1,0 +1,40 @@
+{% unless request.locale.primary %} 
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var observer = new MutationObserver(function(mutations) {
+            observer.disconnect();
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'childList' || mutation.type === 'subtree') {
+                    var translations = [{
+                            class: '.upcart-rewards-message',
+                            original: "#ly_cuYou're", 
+                            translation: "#ly_cuYou're"
+                        },
+                        {
+                            class: '.upcart-rewards-message',
+                            original: '#ly_cuaway from',
+                            translation: 'away from'
+                        }
+                    ];
+                    translations.forEach(function(item) {
+                        var elements = document.querySelectorAll(item.class);
+                        elements.forEach(function(element) {
+                            var content = element.innerHTML;
+                            if (content && item.original !== item.translation && content.includes(item.original)) {
+                                var translated = content.replace(item.original, item.translation);
+                                element.innerHTML = translated;
+                            }
+                        });
+                    });
+                }
+            });
+            observer.observe(document.body, config);
+        });
+        var config = {
+            childList: true,
+            subtree: true
+        };
+        observer.observe(document.body, config);
+    }); 
+</script> 
+{% endunless %}
