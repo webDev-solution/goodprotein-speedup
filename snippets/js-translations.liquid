@@ -1,21 +1,14 @@
-{% unless request.locale.primary %} 
+{% unless request.locale.primary %}
   <script>
     document.addEventListener('DOMContentLoaded', function() {
         var observer = new MutationObserver(function(mutations) {
             observer.disconnect();
             mutations.forEach(function(mutation) {
                 if (mutation.type === 'childList' || mutation.type === 'subtree') {
-                    var translations = [{
-                            class: '.upcart-rewards-message p',
-                            original: "#ly_cuYou're", 
-                            translation: "You're"
-                        },
-                        {
-                            class: '.upcart-rewards-message p',
-                            original: '#ly_cuaway from',
-                            translation: 'away from'
-                        }
+                    var translations = [
+                        { class: '.upcart-rewards-message p', original: '#ly_cuaway from', translation: 'away from' }
                     ];
+    
                     translations.forEach(function(item) {
                         var elements = document.querySelectorAll(item.class);
                         elements.forEach(function(element) {
@@ -30,11 +23,9 @@
             });
             observer.observe(document.body, config);
         });
-        var config = {
-            childList: true,
-            subtree: true
-        };
+    
+        var config = { childList: true, subtree: true };
         observer.observe(document.body, config);
-    }); 
-</script> 
+    });
+  </script>
 {% endunless %}
