@@ -3,11 +3,11 @@
         var newEntry = urlParams.get('utm_campaign');
         var newSource = window.location.href;
         var language = {{ (localization.language.iso_code | append: "-" | append: localization.country.iso_code) | json }};
-        // console.log(language);
+         console.log(language);
         window.addEventListener("klaviyoForms", function (e) {
           if (e.detail.type == 'submit') {
             let emailAddress = e.detail.metaData.$email;
-      
+      console.log(emailAddress);
             $.post('https://glaze-digital.wordpress.thcs.in/shopify-api/klaviyo-test/kl_get_profile.php', {
               email: emailAddress
             })
