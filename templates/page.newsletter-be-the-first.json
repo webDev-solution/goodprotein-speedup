@@ -37,6 +37,9 @@
       "block_order": [
         "klaviyo_email_marketing_sms_form_embed_block_fEAJjk"
       ],
+      "custom_css": [
+        ".needsclick {height: 230px;}"
+      ],
       "settings": {}
     },
     "rich_text_cETRJF": {
