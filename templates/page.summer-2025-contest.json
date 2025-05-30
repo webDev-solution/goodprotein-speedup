@@ -512,6 +512,193 @@
         "content_width": 120
       }
     },
+    "rich_text_4XQcWm": {
+      "type": "rich-text",
+      "name": "Rich text",
+      "settings": {
+        "logo": "shopify://shop_images/Group_32_2aeb5ccd-033b-478f-b865-5d7ba22a32b5.png",
+        "logo_max_width": 280,
+        "title": "",
+        "heading_size": "heading-base",
+        "site_review": false,
+        "rich_text": "",
+        "display_on_card": true,
+        "content_width_desktop": "lg:w-2/3",
+        "button_link": "",
+        "button_label": "Shop Now",
+        "color_scheme": "",
+        "use_gradient_background": false
+      }
+    },
+    "ss_testimonials_30_kfycPf": {
+      "type": "ss-testimonials-30",
+      "blocks": {
+        "card_6xUiVA": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-4_3aba2ac9-7be6-4595-a061-355195b5ebf7.png",
+            "title": "Best tasting vanilla protein...",
+            "stars_count": 5,
+            "text": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>",
+            "author": "Author's name",
+            "url": ""
+          }
+        },
+        "card_gEFUPr": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-3_521a4881-fbce-4197-a7e3-2d4df13c9985.png",
+            "title": "Best tasting vanilla protein...",
+            "stars_count": 5,
+            "text": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>",
+            "author": "Author's name",
+            "url": ""
+          }
+        },
+        "card_zrAniX": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_26c27867-364d-42f0-9a36-8144fb683680.png",
+            "title": "Best tasting vanilla protein...",
+            "stars_count": 5,
+            "text": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>",
+            "author": "Author's name",
+            "url": ""
+          }
+        },
+        "card_Wtf99n": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-1.png",
+            "title": "Best tasting vanilla protein...",
+            "stars_count": 5,
+            "text": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>",
+            "author": "Author's name",
+            "url": ""
+          }
+        },
+        "card_K7wmCU": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image-2_7e8c3737-c569-4d5e-b488-a120d8a40a37.png",
+            "title": "Best tasting vanilla protein...",
+            "stars_count": 5,
+            "text": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>",
+            "author": "Author's name",
+            "url": ""
+          }
+        },
+        "card_he7Xhx": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/image_103ecc23-73c6-4557-82a1-ca21784d85e8.png",
+            "title": "Best tasting vanilla protein...",
+            "stars_count": 5,
+            "text": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>",
+            "author": "Author's name",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_6xUiVA",
+        "card_gEFUPr",
+        "card_zrAniX",
+        "card_Wtf99n",
+        "card_K7wmCU",
+        "card_he7Xhx"
+      ],
+      "name": "SS - Testimonials #30",
+      "settings": {
+        "content_padding_horizontal": 50,
+        "content_padding_horizontal_mobile": 16,
+        "content_align": "center",
+        "content_align_mobile": "center",
+        "heading": "<h2>Real People.Real Reviews.</h2>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 36,
+        "heading_size_mobile": 28,
+        "heading_height": 130,
+        "sub_heading": "<p>Don’t take our word for it — check out what our community is saying.</p>",
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 16,
+        "sub_heading_size_mobile": 14,
+        "sub_heading_height": 150,
+        "sub_heading_mt": 12,
+        "sub_heading_mt_mobile": 8,
+        "scrolling_velocity": 70,
+        "scrolling_velocity_mobile": 70,
+        "scrolling_gap": 10,
+        "scrolling_gap_mobile": 10,
+        "scrolling_mt": 32,
+        "scrolling_mt_mobile": 24,
+        "reverse_direction": false,
+        "one_line": false,
+        "pause_hover": true,
+        "card_width": 550,
+        "card_width_mobile": 410,
+        "card_padding_horizontal": 20,
+        "card_padding_horizontal_mobile": 20,
+        "card_padding_vertical": 20,
+        "card_padding_vertical_mobile": 20,
+        "card_radius": 10,
+        "card_border_thickness": 0,
+        "card_content_align": "left",
+        "card_content_align_mobile": "left",
+        "card_content_vertical_align": "center",
+        "card_content_vertical_align_mobile": "center",
+        "title_custom": true,
+        "title_font": "lato_n7",
+        "title_size": 18,
+        "title_size_mobile": 16,
+        "title_height": 130,
+        "stars_size": 16,
+        "stars_size_mobile": 14,
+        "stars_mt": 6,
+        "stars_mt_mobile": 6,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 13,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 18,
+        "text_mt_mobile": 16,
+        "author_custom": false,
+        "author_font": "josefin_sans_n4",
+        "author_size": 14,
+        "author_size_mobile": 12,
+        "author_height": 130,
+        "author_mt": 10,
+        "author_mt_mobile": 10,
+        "heading_color": "#000000",
+        "sub_heading_color": "#868686",
+        "card_bg_color": "#f8f3fe",
+        "card_border_color": "#000000",
+        "title_color": "#000000",
+        "stars_color": "#fecb28",
+        "text_color": "#868686",
+        "author_color": "#000000",
+        "author_line_color": "#fbd4d4",
+        "background_color": "#FFFFFF",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 36,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
     "174345558349d596c6": {
       "type": "apps",
       "settings": {}
@@ -741,6 +928,8 @@
     "ss_featured_collection_rwWPCV",
     "ss_product_ingredients_5_KcxWpD",
     "ss_waves_67FQDH",
+    "rich_text_4XQcWm",
+    "ss_testimonials_30_kfycPf",
     "174345558349d596c6",
     "17434436682af4c4ba",
     "rich_text_cETRJF",
