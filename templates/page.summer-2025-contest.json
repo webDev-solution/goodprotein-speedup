@@ -32,7 +32,7 @@
             "text": "<p>Win a Ninja Swirl and make ice cream out of your favourite Good Protein flavour.</p>",
             "text_custom": false,
             "text_font": "josefin_sans_n4",
-            "text_size": 15,
+            "text_size": 24,
             "text_size_mobile": 15,
             "text_height": 150,
             "text_mt": 22,
@@ -121,8 +121,69 @@
         "use_gradient_background": false
       }
     },
+    "ss_text_block_pro_eK7kWR": {
+      "type": "ss-text-block-pro",
+      "blocks": {
+        "button_TPr3Ai": {
+          "type": "button",
+          "settings": {
+            "btn": "Contest rules",
+            "btn_url": "",
+            "btn_custom": false,
+            "btn_font": "assistant_n4",
+            "btn_size": 16,
+            "btn_height": 140,
+            "btn_align": "center",
+            "btn_width": 200,
+            "btn_mt": 0,
+            "btn_padding_horizontal": 12,
+            "btn_padding_vertical": 12,
+            "btn_border_thickness": 1,
+            "btn_radius": 100,
+            "btn_color": "#a0a0a0",
+            "btn_hover_color": "#a0a0a0",
+            "btn_bg_color": "",
+            "btn_bg_hover_color": "",
+            "btn_border_color": "#a0a0a0",
+            "btn_border_hover_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_TPr3Ai"
+      ],
+      "name": "SS - Text Block Pro",
+      "settings": {
+        "image_width": 20,
+        "image_custom": false,
+        "image_height_desktop": 100,
+        "image_height_mobile": 50,
+        "image_radius": 0,
+        "image_ration": "none",
+        "image_location": "row",
+        "image_location_mobile": "column",
+        "content_padding_horizontal": 0,
+        "content_padding_vertical": 0,
+        "content_radius": 0,
+        "gap": 0,
+        "gap_mobile": 0,
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "content_bg": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "content_width": 120,
+        "border_thickness": 0
+      }
+    },
     "ss_waves_QMtVid": {
       "type": "ss-waves",
+      "disabled": true,
       "name": "SS - Wave",
       "settings": {
         "wave_height": 130,
@@ -133,10 +194,32 @@
         "animation_duration": 8,
         "background_color": "#ffffff",
         "wave_color": "#8eccf3",
-        "margin_top": -300,
+        "margin_top": -44,
         "margin_bottom": -144,
-        "padding_top": 92,
+        "padding_top": 0,
         "padding_bottom": 48,
+        "padding_horizontal": 0,
+        "padding_horizontal_mobile": 0,
+        "full_width": true,
+        "content_width": 120
+      }
+    },
+    "ss_waves_8pMMbr": {
+      "type": "ss-waves",
+      "name": "SS - Wave",
+      "settings": {
+        "wave_height": -290,
+        "wave_curvature": 470,
+        "wave_style": "less",
+        "wave_side": "0",
+        "animation": true,
+        "animation_duration": 5,
+        "background_color": "rgba(0,0,0,0)",
+        "wave_color": "#8eccf3",
+        "margin_top": -52,
+        "margin_bottom": -300,
+        "padding_top": 0,
+        "padding_bottom": 0,
         "padding_horizontal": 0,
         "padding_horizontal_mobile": 0,
         "full_width": true,
@@ -193,22 +276,22 @@
       ],
       "name": "SS - Video with text #7",
       "settings": {
-        "layout_gap": 80,
+        "layout_gap": 52,
         "layout_gap_mobile": 28,
         "content_horizontal_align": "center",
         "content_horizontal_align_mobile": "center",
         "content_vertical_align": "center",
-        "buttons_gap": 16,
+        "buttons_gap": 42,
         "buttons_gap_mobile": 12,
         "buttons_mt": 40,
         "buttons_mt_mobile": 30,
-        "features_max_width": 100,
+        "features_max_width": 116,
         "features_max_width_mobile": 84,
         "features_gap": 40,
         "features_gap_mobile": 20,
         "features_mt": 50,
         "features_mt_mobile": 24,
-        "icon_size": 130,
+        "icon_size": 110,
         "icon_size_mobile": 86,
         "heading_custom": false,
         "heading_font": "josefin_sans_n4",
@@ -392,12 +475,12 @@
       ],
       "name": "SS - Product ingredients #5",
       "settings": {
-        "layout_type": "grid",
+        "layout_type": "slider",
         "layout_type_mobile": "slider",
         "heading": "<h2>13 Flavours Worth Swirling🍦</h2>",
         "heading_custom": false,
         "heading_font": "josefin_sans_n4",
-        "heading_size": 72,
+        "heading_size": 46,
         "heading_size_mobile": 36,
         "heading_height": 130,
         "heading_align": "left",
@@ -502,32 +585,14 @@
         "animation_duration": 8,
         "background_color": "#ffffff",
         "wave_color": "#8eccf3",
-        "margin_top": -24,
+        "margin_top": -72,
         "margin_bottom": -300,
         "padding_top": 0,
-        "padding_bottom": 36,
-        "padding_horizontal": 5,
+        "padding_bottom": 100,
+        "padding_horizontal": 0,
         "padding_horizontal_mobile": 0,
         "full_width": true,
         "content_width": 120
-      }
-    },
-    "rich_text_4XQcWm": {
-      "type": "rich-text",
-      "name": "Rich text",
-      "settings": {
-        "logo": "shopify://shop_images/Group_32_2aeb5ccd-033b-478f-b865-5d7ba22a32b5.png",
-        "logo_max_width": 280,
-        "title": "",
-        "heading_size": "heading-base",
-        "site_review": false,
-        "rich_text": "",
-        "display_on_card": true,
-        "content_width_desktop": "lg:w-2/3",
-        "button_link": "",
-        "button_label": "Shop Now",
-        "color_scheme": "",
-        "use_gradient_background": false
       }
     },
     "ss_testimonials_30_kfycPf": {
@@ -623,10 +688,10 @@
         "sub_heading": "<p>Don’t take our word for it — check out what our community is saying.</p>",
         "sub_heading_custom": false,
         "sub_heading_font": "josefin_sans_n4",
-        "sub_heading_size": 16,
+        "sub_heading_size": 23,
         "sub_heading_size_mobile": 14,
         "sub_heading_height": 150,
-        "sub_heading_mt": 12,
+        "sub_heading_mt": 8,
         "sub_heading_mt_mobile": 8,
         "scrolling_velocity": 70,
         "scrolling_velocity_mobile": 70,
@@ -637,7 +702,7 @@
         "reverse_direction": false,
         "one_line": false,
         "pause_hover": true,
-        "card_width": 550,
+        "card_width": 440,
         "card_width_mobile": 410,
         "card_padding_horizontal": 20,
         "card_padding_horizontal_mobile": 20,
@@ -681,14 +746,14 @@
         "text_color": "#868686",
         "author_color": "#000000",
         "author_line_color": "#fbd4d4",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "background_gradient": "",
         "border_color": "#000000",
         "margin_top": 0,
         "margin_bottom": 0,
         "margin_horizontal": 0,
         "margin_horizontal_mobile": 0,
-        "padding_top": 0,
+        "padding_top": 48,
         "padding_bottom": 36,
         "padding_horizontal": 0,
         "padding_horizontal_mobile": 0,
@@ -733,6 +798,64 @@
         "button_label": "Try it Risk-Free",
         "color_scheme": "scheme-c6e6ba7b-ff14-4a11-b51d-11911277929e",
         "use_gradient_background": false
+      }
+    },
+    "faq_Ky3Hap": {
+      "type": "faq",
+      "blocks": {
+        "question_gLMd4Q": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
+          }
+        },
+        "question_e7giyd": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
+          }
+        },
+        "question_cACrb8": {
+          "type": "question",
+          "settings": {
+            "question": "Frequently asked question",
+            "answer": "<p>Use this text to share the answer to the question with your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_gLMd4Q",
+        "question_e7giyd",
+        "question_cACrb8"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "display_on_card": true,
+        "heading_text_style": "heading",
+        "title_position": "center",
+        "two_columns_desktop": true,
+        "title": "FAQ",
+        "richtext": "<p>Find the most frequently asked questions below.</p>",
+        "btn_text": "",
+        "btn_link": "",
+        "color_scheme": "",
+        "use_gradient_background": false,
+        "use_special_background": false,
+        "special_background": "",
+        "change_style": "default"
+      }
+    },
+    "tolstoy_video_carousel_widget_controller_63QtqM": {
+      "type": "tolstoy-video-carousel-widget-controller",
+      "name": "Tolstoy Carousel +",
+      "settings": {
+        "app_block_id": "",
+        "tolstoy_carousel_header": "",
+        "header_color": "#ffffff",
+        "header_tag": "h2",
+        "background_color": "#62B5E5"
       }
     },
     "featured_icon_columns_XthpRk": {
@@ -923,16 +1046,19 @@
   "order": [
     "ss_hero_33_WD3h8b",
     "main",
+    "ss_text_block_pro_eK7kWR",
     "ss_waves_QMtVid",
+    "ss_waves_8pMMbr",
     "ss_video_with_text_7_ngAr33",
     "ss_featured_collection_rwWPCV",
     "ss_product_ingredients_5_KcxWpD",
     "ss_waves_67FQDH",
-    "rich_text_4XQcWm",
     "ss_testimonials_30_kfycPf",
     "174345558349d596c6",
     "17434436682af4c4ba",
     "rich_text_cETRJF",
+    "faq_Ky3Hap",
+    "tolstoy_video_carousel_widget_controller_63QtqM",
     "featured_icon_columns_XthpRk",
     "faq_dgfKKQ",
     "rich_text_kFUJpX",
