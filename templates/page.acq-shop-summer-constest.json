@@ -243,7 +243,7 @@
         "new_year_page_discount_text_font_size": 10,
         "new_year_page_discount_badge_size": 46,
         "layout": "grid",
-        "main_background_color": "rgba(0,0,0,0)",
+        "main_background_color": "#8eccf3",
         "product_tile_background_color": "#c6e4f7",
         "product_title_color": "#000000",
         "product_price_color": "#2aa059",
