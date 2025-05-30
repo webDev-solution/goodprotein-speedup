@@ -527,7 +527,7 @@
       ],
       "custom_css": [
         ".cusom-padding-bottom {padding-bottom: 7.5vw;}",
-        "@media (max-width: 768px) {.cusom-padding-bottom {padding-bottom: +0255vw; }}"
+        "@media (max-width: 768px) {.cusom-padding-bottom {padding-bottom: 15vw; }}"
       ],
       "settings": {
         "title": "Shakes With Benefits",
