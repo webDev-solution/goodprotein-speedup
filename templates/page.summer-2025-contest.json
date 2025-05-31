@@ -287,6 +287,9 @@
         "feature_FJWV46",
         "feature_kYqCDp"
       ],
+      "custom_css": [
+        ".video-text-heading-heading_jicVre {margin-top: 26px;}"
+      ],
       "name": "SS - Video with text #7",
       "settings": {
         "layout_gap": 52,
