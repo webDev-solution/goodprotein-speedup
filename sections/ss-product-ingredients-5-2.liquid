@@ -781,7 +781,7 @@ For inquiries or permissions, contact daniel@section.store
 
 
 <div class="section-{{ section.id }} product-{{ section.id }}" style="background-color:{{ background_color }}; background-image: {{ background_gradient }};">
-  <div class="section-{{ section.id }}-settings py-section-vertical-spacing"  style="padding-top: var(--section-vertical-spacing) !important; padding-top: var(--section-vertical-spacing) !important;">
+  <div class="section-{{ section.id }}-settings py-section-vertical-spacing"  style="padding-top: var(--section-vertical-spacing) !important; padding-bottom: var(--section-vertical-spacing) !important;">
     {% if heading != blank %}
       <div class="product-heading-{{ section.id }}">{{ heading }}</div>
     {% endif %}
@@ -789,7 +789,8 @@ For inquiries or permissions, contact daniel@section.store
       data-gap="{{ cards_gap }}"
       data-gap-mobile="{{ cards_gap_mobile }}"
       data-view="{{ cards_view }}"
-      data-view-mobile="{{ cards_view_mobile }}">
+      data-view-mobile="{{ cards_view_mobile }}"
+      style="padding-bottom: var(--section-vertical-spacing) !important;" >
       <div class="swiper-wrapper">
         {% for block in section.blocks %}        
           <div class="product-item-{{ section.id }} swiper-slide">
