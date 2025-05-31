@@ -206,6 +206,7 @@
     },
     "ss_waves_8pMMbr": {
       "type": "ss-waves",
+      "disabled": true,
       "name": "SS - Wave",
       "settings": {
         "wave_height": -290,
@@ -229,6 +230,17 @@
     "ss_video_with_text_7_ngAr33": {
       "type": "ss-video-with-text-7-2",
       "blocks": {
+        "shape_divider_DezgKj": {
+          "type": "shape_divider",
+          "settings": {
+            "target_section": "above",
+            "color_bg": "#ffffff",
+            "style": "large-waves_1200x84",
+            "flip_horizontal": true,
+            "enable_animation": false,
+            "animation_direction": ""
+          }
+        },
         "heading_jicVre": {
           "type": "heading",
           "settings": {
@@ -269,6 +281,7 @@
         }
       },
       "block_order": [
+        "shape_divider_DezgKj",
         "heading_jicVre",
         "feature_9D3ULJ",
         "feature_FJWV46",
@@ -871,7 +884,7 @@
         "tolstoy_carousel_header": "",
         "header_color": "#ffffff",
         "header_tag": "h2",
-        "background_color": "#62B5E5"
+        "background_color": "#62b5e5"
       }
     },
     "faq_dgfKKQ": {
