@@ -617,7 +617,7 @@ const _createSplideInstance = (splideRoot, options, extensions) => {
         autoHeight: true,
         arrows: false,
         pagination: false,
-        isNavigation: true,
+        isNavigation: false,
         focus: 'left',
         gap: '0.625rem',
         slideFocus: false
