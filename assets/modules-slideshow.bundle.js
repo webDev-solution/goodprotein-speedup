@@ -650,6 +650,10 @@ const _createSplideInstance = (splideRoot, options, extensions) => {
       console.log('moved');
       return;
     });
+    window.slideshows[thumbsRoot.id].on('click', function () {
+      console.log('click');
+      return;
+    });
 
     window.slideshows[splideRoot.id] = new Splide(`#${splideRoot.id}`, options);
     const mainSplide = window.slideshows[splideRoot.id];
