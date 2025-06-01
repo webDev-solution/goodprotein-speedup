@@ -617,7 +617,7 @@ const _createSplideInstance = (splideRoot, options, extensions) => {
         autoHeight: true,
         arrows: false,
         pagination: false,
-        isNavigation: false,
+        isNavigation: true,
         focus: 'left',
         gap: '0.625rem',
         slideFocus: false
@@ -642,18 +642,18 @@ const _createSplideInstance = (splideRoot, options, extensions) => {
     }
     console.log(thumbsRoot.id)
     window.slideshows[thumbsRoot.id] = new Splide(`#${thumbsRoot.id}`, thumb_option);
-    window.slideshows[thumbsRoot.id].on('dragged', function () {
-      console.log('dragged');
-      return;
-    });
-    window.slideshows[thumbsRoot.id].on('moved', function () {
-      console.log('moved');
-      return;
-    });
-    window.slideshows[thumbsRoot.id].on('click', function () {
-      console.log('click');
-      return;
-    });
+    // window.slideshows[thumbsRoot.id].on('dragged', function () {
+    //   console.log('dragged');
+    //   return;
+    // });
+    // window.slideshows[thumbsRoot.id].on('moved', function () {
+    //   console.log('moved');
+    //   return;
+    // });
+    // window.slideshows[thumbsRoot.id].on('click', function () {
+    //   console.log('click');
+    //   return;
+    // });
 
     window.slideshows[splideRoot.id] = new Splide(`#${splideRoot.id}`, options);
     const mainSplide = window.slideshows[splideRoot.id];
