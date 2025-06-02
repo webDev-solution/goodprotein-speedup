@@ -240,7 +240,7 @@
             "type": "shop_megamenu",
             "settings": {
               "choose_collection": "accessories-1",
-              "button_link": "shopify://collections/accessories-1",
+              "button_link": "https://goodprotein.ca/collections/accessories-1#Accessories",
               "button_label": ""
             }
           },
