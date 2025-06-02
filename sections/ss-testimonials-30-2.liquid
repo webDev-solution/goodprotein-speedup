@@ -936,13 +936,22 @@ For inquiries or permissions, contact daniel@section.store
 
 <div class="section-{{ section.id }} testimonials-{{ section.id }}" style="background-color:{{ background_color }}; background-image: {{ background_gradient }};">
     <div class="section-{{ section.id }}-settings">
-      <div class="ab-banner-review">
-        20,000+ 5-Star Reviews
-        <span>
-          {% for i in (1..5) %}
-            {% render 'review-star' %}
-          {% endfor %}
-        </span>
+      <div
+        class="ab-banner-content"
+        style="
+          --justify-content: {{ section.settings.vertical_alignment }}!important;
+          --align-items: {{ section.settings.horizontal_alignment }}!important;
+          --text-align: {{ section.settings.text_alignment }}!important;
+        "
+      >
+        <div class="ab-banner-review">
+          20,000+ 5-Star Reviews
+          <span>
+            {% for i in (1..5) %}
+              {% render 'review-star' %}
+            {% endfor %}
+          </span>
+        </div>
       </div>
       {% if heading != blank %}
         <div class="testimonials-heading-{{ section.id }}">{{ heading }}</div>
