@@ -353,14 +353,14 @@
         "text_style": "body",
         "disable_media_style": false,
         "subtitle": "",
-        "title": "Ready To Start Eating Healthier?",
+        "title": "Ready to Taste the Difference?",
         "heading_size": "heading-template",
-        "richtext": "<p>Only you know if you’ll like Good Protein. That’s why we offer a<span style=\"text-decoration:underline\"> </span><a href=\"https://goodprotein.ca/pages/termes-et-conditions?id=satisfaction\" title=\"https://goodprotein.ca/pages/termes-et-conditions?id=satisfaction\"><span style=\"text-decoration:underline\">60-day Satisfaction Guarantee</span></a><span style=\"text-decoration:underline\">.</span> Simply try it yourself. If you don’t absolutely love it. We will refund your money.</p>",
+        "richtext": "<p>Only you can decide if Good Protein is right for you—that’s why we offer a 60-day Satisfaction Guarantee. Try it for yourself, and if you don’t absolutely love it, we’ll give you your money back.</p>",
         "ingredient_text": "",
         "text_alignment": "text-center",
         "ingredient_link_t": "",
         "button_link": "shopify://products/vanilla-milkshake-all-in-one-shake",
-        "button_label": "Try it Risk-Free",
+        "button_label": "Try It Risk-Free",
         "color_scheme": "scheme-8f0bfdb1-4dc0-41c4-8d2a-a0c84adc5209"
       }
     }
