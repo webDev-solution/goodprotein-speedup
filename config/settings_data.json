@@ -238,6 +238,7 @@
           },
           "bec7984c-51a3-4d79-b7b1-9682d702b9e4": {
             "type": "shop_megamenu",
+            "disabled": true,
             "settings": {
               "choose_collection": "accessories-1",
               "button_link": "shopify://collections/accessories-1",
@@ -291,6 +292,7 @@
           },
           "mobile_menu_qixbkp": {
             "type": "mobile_menu",
+            "disabled": true,
             "settings": {
               "image": "shopify://shop_images/Shaker-Pink-01.png",
               "title": "Accessories",

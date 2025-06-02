@@ -445,7 +445,7 @@
         "card_CFzxqn": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Group_140.png",
+            "image": "shopify://shop_images/Group_139_fa561a4c-616c-4578-ba15-0e179991e4e9.png",
             "image_url": "shopify://products/strawberries-cream-all-in-one-shake",
             "title": "",
             "text": "",
@@ -455,7 +455,7 @@
         "card_dfP49R": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Group_164.png",
+            "image": "shopify://shop_images/Group_164_e4abaabf-8c06-47dc-9f7a-7e720c4e11f7.png",
             "image_url": "shopify://products/chocolate-fudge-all-in-one-shake",
             "title": "",
             "text": "",
@@ -465,7 +465,7 @@
         "card_fQnREk": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Group_139.png",
+            "image": "shopify://shop_images/Group_162_736e6636-d520-4305-b680-f6e4efa43290.png",
             "image_url": "shopify://products/vanilla-cupcake-all-in-one-shake",
             "title": "",
             "text": "",
@@ -475,11 +475,91 @@
         "card_cbpE8P": {
           "type": "card",
           "settings": {
-            "image": "shopify://shop_images/Group_162_2cf0f187-0516-4070-a0d2-1a956aca7a58.png",
+            "image": "shopify://shop_images/Group_140_8aabdc1e-d40a-4b6d-8a13-13cc70270965.png",
             "image_url": "shopify://products/vanilla-milkshake-all-in-one-shake",
             "title": "",
             "text": "",
             "ingredients": ""
+          }
+        },
+        "card_zADzHf": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_195.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_jLVhV9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_212.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_qRami9": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_193.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_Jdf4PQ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_213.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_mhXUmP": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_211.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_XeFTtJ": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_194.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_WFP7Lf": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_196.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
+          }
+        },
+        "card_wkigRe": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Group_210.png",
+            "image_url": "",
+            "title": "Title",
+            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
+            "ingredients": "FOCUS, IMMUNITY, LONGEVITY, DE-STRESS"
           }
         },
         "shape_divider_dAEEN3": {
@@ -499,8 +579,17 @@
         "card_dfP49R",
         "card_fQnREk",
         "card_cbpE8P",
+        "card_zADzHf",
+        "card_jLVhV9",
+        "card_qRami9",
+        "card_Jdf4PQ",
+        "card_mhXUmP",
+        "card_XeFTtJ",
+        "card_WFP7Lf",
+        "card_wkigRe",
         "shape_divider_dAEEN3"
       ],
+      "custom_css": [],
       "name": "SS - Product ingredients #5",
       "settings": {
         "layout_type": "slider",
@@ -515,7 +604,7 @@
         "heading_align_mobile": "left",
         "cards_gap": 30,
         "cards_gap_mobile": 12,
-        "cards_view": 3,
+        "cards_view": 5,
         "cards_view_mobile": 1.4,
         "cards_mt": 36,
         "cards_mt_mobile": 24,
