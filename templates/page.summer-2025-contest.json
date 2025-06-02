@@ -702,6 +702,9 @@
         "card_K7wmCU",
         "card_he7Xhx"
       ],
+      "custom_css": [
+        "@media (max-width: 399px) {h2 {max-width: 200px; margin: auto; } }"
+      ],
       "name": "SS - Testimonials #30",
       "settings": {
         "content_padding_horizontal": 50,
