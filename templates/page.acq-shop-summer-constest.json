@@ -562,6 +562,7 @@
         "item_mxiirz",
         "item_gJ4dX3"
       ],
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "title_image": "shopify://shop_images/good_protein_more_like_great_protain.png",
@@ -626,6 +627,7 @@
     },
     "custom_image_countdown_overlay_HNDtx8": {
       "type": "custom-image-countdown-overlay",
+      "disabled": true,
       "custom_css": [
         ".section-content {background: #ffb9db !important; padding: 10vw; padding-top: 5vw; padding-bottom: 0px;}",
         "@media (max-width: 768px) {.section-content {padding: 0px; }}"
