@@ -140,11 +140,11 @@
             "btn_padding_vertical": 12,
             "btn_border_thickness": 1,
             "btn_radius": 100,
-            "btn_color": "#a0a0a0",
-            "btn_hover_color": "#a0a0a0",
+            "btn_color": "#7a7070",
+            "btn_hover_color": "#7a7070",
             "btn_bg_color": "",
             "btn_bg_hover_color": "",
-            "btn_border_color": "#a0a0a0",
+            "btn_border_color": "#7a7070",
             "btn_border_hover_color": ""
           }
         }
@@ -703,7 +703,7 @@
         "card_he7Xhx"
       ],
       "custom_css": [
-        "@media (max-width: 399px) {h2 {max-width: 200px; margin: auto; } }"
+        "@media (max-width: 399px) {h2 {max-width: 200px; margin: auto; }}"
       ],
       "name": "SS - Testimonials #30",
       "settings": {
