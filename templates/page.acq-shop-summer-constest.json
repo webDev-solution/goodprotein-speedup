@@ -1060,38 +1060,93 @@
         "lazy": true
       }
     },
-    "ss_hero_33_XhHKF8": {
-      "type": "ss-hero-33",
-      "name": "SS - Hero #33",
+    "ss_text_block_pro_CJnkrV": {
+      "type": "ss-text-block-pro",
+      "blocks": {
+        "title_X7nggx": {
+          "type": "title",
+          "settings": {
+            "title": "A Protein-Packed Summer Starts Here!",
+            "title_custom": false,
+            "title_font": "assistant_n4",
+            "title_size": 40,
+            "title_height": 100,
+            "title_align": "center",
+            "title_mt": 12,
+            "title_color": "#ffffff"
+          }
+        },
+        "text_yf7a6Q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get 30% off your first Good Protein order, perfect for sipping all summer long.</p>",
+            "text_custom": false,
+            "text_font": "assistant_n4",
+            "text_size": 20,
+            "text_height": 130,
+            "text_align": "center",
+            "text_mt": 16,
+            "text_color": "#ffffff"
+          }
+        },
+        "button_PfwJNe": {
+          "type": "button",
+          "settings": {
+            "btn": "Build Your Order",
+            "btn_url": "",
+            "btn_custom": false,
+            "btn_font": "assistant_n4",
+            "btn_size": 16,
+            "btn_height": 150,
+            "btn_align": "center",
+            "btn_width": 200,
+            "btn_mt": 32,
+            "btn_padding_horizontal": 16,
+            "btn_padding_vertical": 12,
+            "btn_border_thickness": 1,
+            "btn_radius": 100,
+            "btn_color": "#8eccf3",
+            "btn_hover_color": "#000000",
+            "btn_bg_color": "#ffffff",
+            "btn_bg_hover_color": "#ffffff",
+            "btn_border_color": "#ffffff",
+            "btn_border_hover_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_X7nggx",
+        "text_yf7a6Q",
+        "button_PfwJNe"
+      ],
+      "name": "SS - Text Block Pro",
       "settings": {
-        "layout_height": "fixed_height",
-        "layout_fixed_height": 600,
-        "layout_fixed_height_mobile": 490,
-        "content_maxwidth": 95,
-        "content_align": "center",
-        "content_align_mobile": "center",
-        "content_vertical_align": "center",
-        "content_vertical_align_mobile": "center",
-        "layout_bg_type": "image",
-        "bg_image_mobile": "shopify://shop_images/Group_124.png",
-        "bg_overlay": 0,
-        "bg_overlay_color": "#121212",
+        "image": "shopify://shop_images/Group_124.png",
+        "image_width": 40,
+        "image_custom": false,
+        "image_height_desktop": 600,
+        "image_height_mobile": 200,
+        "image_radius": 12,
+        "image_ration": "none",
+        "image_location": "row",
+        "image_location_mobile": "column",
+        "content_padding_horizontal": 40,
+        "content_padding_vertical": 40,
+        "content_radius": 40,
+        "gap": 30,
+        "gap_mobile": 15,
         "background_color": "#8eccf3",
         "background_gradient": "",
         "border_color": "#000000",
+        "content_bg": "",
         "margin_top": 0,
-        "margin_bottom": 32,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 2,
+        "margin_bottom": 0,
         "padding_top": 36,
         "padding_bottom": 36,
         "padding_horizontal": 5,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 1200,
-        "border_thickness": 0,
-        "section_radius": 26,
-        "lazy": false
+        "padding_horizontal_mobile": 1.5,
+        "content_width": 120,
+        "border_thickness": 0
       }
     },
     "060cabc4-f307-455f-93e9-eaf63f9ccdb3": {
@@ -1663,7 +1718,7 @@
     "ss_comparison_table_15_bQC8hG",
     "ss_text_block_pro_bAkFWz",
     "ss_feature_19_TjerYt",
-    "ss_hero_33_XhHKF8",
+    "ss_text_block_pro_CJnkrV",
     "060cabc4-f307-455f-93e9-eaf63f9ccdb3",
     "review_header_GUGp6V",
     "product_video_carousel_bAcmiB",
