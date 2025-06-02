@@ -35,7 +35,7 @@
           "type": "text",
           "settings": {
             "display_on_card": false,
-            "text": "100% natural plant-based ingredients",
+            "text": "100% natural plant-based ingredients.",
             "icon": "check-mark"
           }
         },
@@ -43,7 +43,7 @@
           "type": "text",
           "settings": {
             "display_on_card": false,
-            "text": "Packed with a balanced intake of nutrients",
+            "text": "Packed with a balanced intake of nutrients.",
             "icon": "check-mark"
           }
         },
