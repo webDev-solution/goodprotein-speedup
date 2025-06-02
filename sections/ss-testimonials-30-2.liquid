@@ -482,6 +482,47 @@ For inquiries or permissions, contact daniel@section.store
     }
   }
   
+  .ab-banner-content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: 100%;
+    z-index: 2;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: var(--align-items);
+    padding: 30px 24px;
+    line-height: 1;
+    text-align: var(--text-align);
+  }
+
+  .ab-banner-review {
+    width: fit-content;
+    padding: 5px 20px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 23px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding-top: 8px;
+    white-space: nowrap;
+  }
+
+  .ab-banner-review span {
+    margin-left: 10px;
+    top: -2px;
+    position: relative;
+  }
+
+  .ab-banner-review svg {
+    display: inline;
+  }
 {%- endstyle -%}
 
 {% unless full_width %}
@@ -939,18 +980,20 @@ For inquiries or permissions, contact daniel@section.store
       <div
         class="ab-banner-content"
         style="
-          --justify-content: {{ section.settings.vertical_alignment }}!important;
-          --align-items: {{ section.settings.horizontal_alignment }}!important;
-          --text-align: {{ section.settings.text_alignment }}!important;
+          --justify-content: center !important;
+          --align-items: flex-start !important;
+          --text-align: center !important;
         "
       >
-        <div class="ab-banner-review">
-          20,000+ 5-Star Reviews
-          <span>
-            {% for i in (1..5) %}
-              {% render 'review-star' %}
-            {% endfor %}
-          </span>
+        <div class="ab-banner-box" style="max-width: 400px;">
+          <div class="ab-banner-review">
+            20,000+ 5-Star Reviews
+            <span>
+              {% for i in (1..5) %}
+                {% render 'review-star' %}
+              {% endfor %}
+            </span>
+          </div>
         </div>
       </div>
       {% if heading != blank %}
