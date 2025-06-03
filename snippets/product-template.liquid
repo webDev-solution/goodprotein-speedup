@@ -92,6 +92,99 @@
       color:  {{  product.metafields.custom.small_icon_label_color }}
     }
   {% endif %}
+
+  @media (min-width: 769px) {
+    .show-desktop {
+      display: block;
+    }
+    .show-mobile {
+      display: none !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .show-desktop {
+      display: none !important;
+    }
+    .show-mobile {
+      display: block;
+    }
+  }  
+  .splide__pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .splide__pagination-each-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: {{ product.metafields.custom.circle_image_background }};
+    margin-top: 10px;
+    opacity: 0.7;
+    margin: 2px;
+  }
+  .splide__pagination-each-dot-active {
+    opacity: 1;
+    filter: brightness(75%);
+  }
+  .splide__pagination-dots-desktop {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    z-index: 9;
+  }
+  .splide__pagination-dots-desktop .splide__pagination-each-dot {
+    background-color: white;
+  }
+  .splide__pagination-dots-desktop .splide__pagination-each-dot-active {
+    opacity: 0.7;
+    background-color: black;
+  }
+
+  /* close */
+  .pswp__top-bar.pswp__hide-on-close {
+    max-width: 100vh;
+    margin-left: clamp(0px, calc(50vw - 50vh - 10px), 100vw);
+    margin-top: clamp(0px, calc(50vh - 50vw), 50vh);
+  }
+  .pswp__button.pswp__button--close {
+    border-radius: 50%;
+    background-color: rgba(225, 225, 225, 0.75);
+  }
+  /* arrow */
+  .arrow-conatiner {
+    position: absolute;
+    {% comment %} display: flex; {% endcomment %}
+    z-index: 1;
+    top: calc(50% - 15px);
+    {% comment %} justify-content: space-between; {% endcomment %}
+    {% comment %} width: 100%; {% endcomment %}
+    height: 24px;
+  }
+  .arrow-conatiner img {
+    width: 26px;
+    height: 26px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+  }
+  .arrow-conatiner.prev-btn {
+    margin-left: 6px;
+  }
+  .arrow-conatiner.next-btn {
+    margin-right: 6px;
+    right: 0px;
+  }
+  @media (max-width: 980px) {
+    .arrow-conatiner {
+      display: none !important;
+    }
+  }
+  {% comment %} .arrow-conatiner span.prev::after {
+    contain: '\003C'
+  }
+  .arrow-conatiner span.next::after {
+    contain: '\003E'
+  } {% endcomment %}
 </style>
 
 {{ 'custom-product.css' | asset_url | stylesheet_tag }}
@@ -179,13 +272,21 @@
                     x-init="mounted()"
                   >
                     <div class="splide__track h-full">
-                      {% if section.settings.thumbnails_position == 'left' %}
+                      {% if section.settings.thumbnails_position == 'left' %}o
                       <div
                         class="thumbnails-overflow-indicator-top z-[2] absolute top-0 left-0 right-0 bg-gradient-to-b from-scheme-background to-transparent w-full h-24 pointer-events-none transition-opacity duration-150"
                         :class="{ 'opacity-0' : firstVisible }"
                       ></div>
                       {% endif %}
-                    <ul class="w-full splide__list {% if section.settings.thumbnails_position == 'left' %} h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}lg:grid-cols-5 grid-cols-6{% else %}lg:grid-cols-4 grid-cols-6{% endif %} {% endif %}">
+                    {% comment %} <div class="arrow-conatiner"> {% endcomment %}
+                      <span class="arrow-conatiner prev-btn">
+                        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle_5774da51-a521-4369-8a11-b4527182e320.png?v=1748624154">
+                      </span>
+                      <span class="arrow-conatiner next-btn">
+                        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle_1a239013-57c0-4464-8e4f-570bbcbf1a1c.png?v=1748624154">
+                      </span> 
+                    {% comment %} </div> {% endcomment %}
+                    <ul class="w-full splide__list splide__list-thumbnail-container {% if section.settings.thumbnails_position == 'left' %} h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}lg:grid-cols-5 grid-cols-6{% else %}lg:grid-cols-4 grid-cols-6{% endif %} {% endif %}">
                       {% comment %} theme-check-disable LiquidTag {% endcomment %}
                       {% assign thumbnail_index = 0 %}
                       {% if featured_media != null %}
@@ -213,6 +314,16 @@
                         {% endunless %}
                       {% endfor %}
                       {% comment %} theme-check-enable LiquidTag {% endcomment %}
+                    </ul>
+                    <ul class="splide__pagination-dots show-mobile">
+                      {% if featured_media != null %}
+                        <li class="splide__pagination-each-dot splide__pagination-each-dot-active"></li>
+                      {% endif %}
+                      {% for media in product.media %}
+                        {% unless media.id == featured_media.id or variant_featured_media contains media %}
+                          <li class="splide__pagination-each-dot {% if forloop.index == 1 %}splide__pagination-each-dot-active{% endif %}"></li>
+                        {% endunless %}
+                      {% endfor %}
                     </ul>
                     {% if section.settings.thumbnails_position == 'left' %}
                     <div
@@ -522,6 +633,16 @@
                           </div>
                         </li>
                         {% assign media_index = media_index | plus: 1 %}
+                        {% endunless %}
+                      {% endfor %}
+                    </ul>
+                    <ul class="splide__pagination-dots splide__pagination-dots-desktop show-desktop">
+                      {% if featured_media != null %}
+                        <li class="splide__pagination-each-dot splide__pagination-each-dot-active"></li>
+                      {% endif %}
+                      {% for media in product.media %}
+                        {% unless media.id == featured_media.id or variant_featured_media contains media %}
+                          <li class="splide__pagination-each-dot {% if forloop.index == 1 %}splide__pagination-each-dot-active{% endif %}"></li>
                         {% endunless %}
                       {% endfor %}
                     </ul>
@@ -1120,3 +1241,193 @@
     }
   </script>
 <!-- script to remove quality selector for free products end -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      const productMediaThumbnailList = document.querySelectorAll(".product-thumbnail-list-item");
+
+      const splidePaginationDotsContainers = document.querySelectorAll(".splide__pagination-dots");
+      [ ...splidePaginationDotsContainers ].forEach((splidePaginationDotsContainer) => {
+        const splidePaginationDots = splidePaginationDotsContainer.querySelectorAll(".splide__pagination-each-dot");
+        [ ...splidePaginationDots ].forEach((splidePaginationDot, index) => {
+          const index__ = index;
+          splidePaginationDot.addEventListener("click", () => {
+            console.log("splidePaginationDotsContainer[index__]", productMediaThumbnailList[index__]);
+            productMediaThumbnailList[index__].click();
+
+            [ ...splidePaginationDots ].forEach(item => {
+              item.classList.remove("splide__pagination-each-dot-active");
+            });
+            splidePaginationDot.classList.add("splide__pagination-each-dot-active");
+          });
+        });
+      });
+
+      const thumbnailContainer = document.querySelector('ul.splide__list');
+      const mutationObserverConfig = { attributes: true, childList: true, subtree: true }
+      const thumbnailContainerMutationCallback = (mutationList, observer) => {
+        {% comment %} setTimeout(() => {
+          if (isActiveIndexBeforeDrag) {
+            console.log("llllllllllllllllllpppppppppp", activeIndexBeforeDrag, productMediaThumbnailList[activeIndexBeforeDrag]);
+            productMediaThumbnailList[activeIndexBeforeDrag].click();
+            isActiveIndexBeforeDrag = false;
+            return;
+          }
+        }, 4000); {% endcomment %}
+        // console.log("bbbbbnnnnnmmmmmiiiiippppp");
+        if (!isActiveIndexBeforeDrag) {
+          [ ...productMediaThumbnailList ].forEach((productMediaThumbnail, index) => {
+            if (productMediaThumbnail.classList.contains("is-active")) {
+              const index__ = index;
+              [ ...splidePaginationDotsContainers ].forEach((splidePaginationDotsContainer) => {
+                const splidePaginationDots = splidePaginationDotsContainer.querySelectorAll(".splide__pagination-each-dot");
+                [ ...splidePaginationDots ].forEach(item => {
+                  item.classList.remove("splide__pagination-each-dot-active");
+                });
+                splidePaginationDots[index__].classList.add("splide__pagination-each-dot-active");
+              });
+            }
+          });
+        }
+        
+        if (isActiveIndexBeforeDrag) {
+          console.log("jkjkjkjkjkjkjkjkjkjkj");
+          setTimeout(() => {
+            // const productMediaThumbnailList2 = document.querySelector(".splide__list-thumbnail-container");
+            productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+              const index__ = index;
+              {% comment %} if (index__ == activeIndexBeforeDrag) {
+                productMediaThumbnai.click();
+              } {% endcomment %}
+              
+              if (index__ == activeIndexBeforeDrag - 1) {
+                productMediaThumbnai.classList.add("is-prev");
+              } else {
+                productMediaThumbnai.classList.remove("is-prev");
+              }
+              if (index__ == activeIndexBeforeDrag) {
+                productMediaThumbnai.classList.add("is-active");
+              } else {
+                productMediaThumbnai.classList.remove("is-active");
+              }
+              if (index__ == activeIndexBeforeDrag + 1) {
+                productMediaThumbnai.classList.add("is-next");
+              } else {
+                productMediaThumbnai.classList.remove("is-next");
+              }
+            });
+            isActiveIndexBeforeDrag = false;
+          }, 1000);
+          // isActiveIndexBeforeDrag = false;
+        };
+      }
+      const thumbnailContainerObserver = new MutationObserver(thumbnailContainerMutationCallback);
+      thumbnailContainerObserver.observe(thumbnailContainer, mutationObserverConfig);
+
+      const arrows = document.querySelectorAll("span.arrow-conatiner");
+      [ ...arrows ].forEach((arrow) => {
+        arrow.addEventListener("click", () => {
+          for (let ii = 0; ii < productMediaThumbnailList.length; ii ++) {
+            if (productMediaThumbnailList[ii].classList.contains("is-active")) {
+              if (arrow.classList.contains("prev-btn")) {
+                const prevProductMediaThumbnail = productMediaThumbnailList[ii].previousElementSibling;
+                if (ii == 0) {
+                  productMediaThumbnailList[productMediaThumbnailList.length - 1].click();
+                  return;
+                }
+                if (prevProductMediaThumbnail) {
+                  prevProductMediaThumbnail.click();
+                }
+              } else if (arrow.classList.contains("next-btn")) {
+                const nextProductMediaThumbnail = productMediaThumbnailList[ii].nextElementSibling;
+                if (ii == productMediaThumbnailList.length - 1) {
+                  productMediaThumbnailList[0].click();
+                  return;
+                }
+                if (nextProductMediaThumbnail) {
+                  console.log("nextProductMediaThumbnail", nextProductMediaThumbnail);
+                  nextProductMediaThumbnail.click();
+                  return;
+                }
+              }
+            }
+          }
+        });
+      });
+        
+      var activeIndexBeforeDrag = 0;
+      var isActiveIndexBeforeDrag = false;
+      thumbnailContainer.addEventListener("dragstart", () => {
+        console.log("opppppppppppppppp");
+        productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+          const index__ = index;
+          if (productMediaThumbnai.classList.contains("is-active")) {
+            activeIndexBeforeDrag = index__;
+            isActiveIndexBeforeDrag = true;
+          }
+        });
+      });
+
+      {% comment %} document.addEventListener("dragend", () => {
+        console.log("piiiiiiiiiiiiiiiiiiiiiiiiiii");
+        if (isActiveIndexBeforeDrag) {
+          console.log("kaaaaaaaaaaaaaaaaaaaaaaaaa");
+          productMediaThumbnailList[activeIndexBeforeDrag].click();
+        }
+      }); {% endcomment %}
+
+      {% comment %} thumbnailContainer.addEventListener("dragend", () => {
+        console.log("bhhhhhhhhhhhhhhhhhhh");
+        productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+          const index__ = index;
+          if (index__ == activeIndexBeforeDrag) {
+            productMediaThumbnai.click();
+          }
+          
+          if (index__ == activeIndexBeforeDrag - 1) {
+            productMediaThumbnailList.classList.add(".is-prev");
+          } else {
+            productMediaThumbnailList.classList.remove(".is-prev");
+          }
+          if (index__ == activeIndexBeforeDrag) {
+            productMediaThumbnailList.classList.add(".is-active");
+          } else {
+            productMediaThumbnailList.classList.remove(".is-active");
+          }
+          if (index__ == activeIndexBeforeDrag + 1) {
+            productMediaThumbnailList.classList.add(".is-next");
+          } else {
+            productMediaThumbnailList.classList.remove(".is-next");
+          }
+        });
+      }); {% endcomment %}
+      {% comment %} var isProductMediaThumbnailListClicked = false; {% endcomment %}
+      productMediaThumbnailList[0].addEventListener("click", () => {
+        if (productMediaThumbnailList[0].classList.contains("is-active")) {
+          return;
+        }
+        productMediaThumbnailList[1].click();
+        console.log("ggggggggg3333333333");
+        setTimeout(() => {
+          console.log("ggggggggg4444444444444");
+          if (!productMediaThumbnailList[0].classList.contains("is-active")) {
+            productMediaThumbnailList[0].click();
+          }
+        }, 50);
+      });
+      productMediaThumbnailList[productMediaThumbnailList.length - 1].addEventListener("click", () => {
+        if (productMediaThumbnailList[productMediaThumbnailList.length - 1].classList.contains("is-active")) {
+          return;
+        }
+        productMediaThumbnailList[productMediaThumbnailList.length - 2].click();
+        console.log("ggggggggg3333333333");
+        setTimeout(() => {
+          console.log("ggggggggg4444444444444");
+          if (!productMediaThumbnailList[productMediaThumbnailList.length - 1].classList.contains("is-active")) {
+            productMediaThumbnailList[productMediaThumbnailList.length - 1].click();
+          }
+        }, 50);
+      });
+    }, 4000);
+  })
+</script>
