@@ -433,25 +433,25 @@ if(evt.submitter.classList.contains('lp_shakes_button')){
       
     },
     openZoom(id) {
-      const imageZoomDataEl = this.productRoot.querySelector(
-        '[data-photoswipe-images]'
-      );
+      // const imageZoomDataEl = this.productRoot.querySelector(
+      //   '[data-photoswipe-images]'
+      // );
 
-      if (!imageZoomDataEl) return;
+      // if (!imageZoomDataEl) return;
 
-      const imageZoomData = JSON.parse(imageZoomDataEl.innerHTML);
+      // const imageZoomData = JSON.parse(imageZoomDataEl.innerHTML);
 
-      const imageMediaIDsArray = Object.keys(imageZoomData);
+      // const imageMediaIDsArray = Object.keys(imageZoomData);
 
-      const index = imageMediaIDsArray.indexOf(id);
+      // const index = imageMediaIDsArray.indexOf(id);
 
-      this.$refs.photoSwipeComponent.dispatchEvent(
-        new CustomEvent('shapes:photoswipe:open', {
-          detail: {
-            index: index,
-          },
-        })
-      );
+      // this.$refs.photoSwipeComponent.dispatchEvent(
+      //   new CustomEvent('shapes:photoswipe:open', {
+      //     detail: {
+      //       index: index,
+      //     },
+      //   })
+      // );
     },
   };
 };
