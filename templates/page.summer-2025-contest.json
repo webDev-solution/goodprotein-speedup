@@ -75,7 +75,7 @@
       ],
       "name": "SS - Hero #33",
       "settings": {
-        "layout_height": "full_screen",
+        "layout_height": "fixed_height",
         "layout_fixed_height": 600,
         "layout_fixed_height_mobile": 560,
         "content_maxwidth": 55,
