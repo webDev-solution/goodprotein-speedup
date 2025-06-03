@@ -301,7 +301,7 @@
         "layout_height": "fixed_height",
         "layout_fixed_height": 200,
         "layout_fixed_height_mobile": 820,
-        "content_maxwidth": 55,
+        "content_maxwidth": 65,
         "content_align": "right",
         "content_align_mobile": "center",
         "content_vertical_align": "center",
