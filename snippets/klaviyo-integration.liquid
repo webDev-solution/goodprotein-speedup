@@ -1,7 +1,13 @@
   <script>
         var urlParams = new URLSearchParams(window.location.search);
         var newEntry = urlParams.get('utm_campaign');
-        var newLang = urlParams.get('lang');
+        // var newLang = urlParams.get('lang');
+        var newLang = "";
+        var pathSegments = window.location.pathname.split('/');
+        if (pathSegments.length > 1) {
+            newLang = pathSegments[1];
+        }
+      
         var newSource = window.location.href;
         var language = {{ (localization.language.iso_code | append: "-" | append: localization.country.iso_code) | json }};
          console.log(language);
