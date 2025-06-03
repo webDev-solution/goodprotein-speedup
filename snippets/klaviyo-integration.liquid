@@ -3,21 +3,21 @@
         var newEntry = urlParams.get('utm_campaign');
         // var newLang = urlParams.get('lang');
         var newLang = "";
-        var pathSegments = window.location.pathname.split('/');
+        // var pathSegments = window.location.pathname.split('/');
         // if (pathSegments.length > 1) {
         //     newLang = pathSegments[1];
         // }
-        if (urlParams.includes('fr')){
-          newLang = "fr";
-        }
-        else{
-          newLang = "en";
-        }
-    
-      console.log(newLang);
         var newSource = window.location.href;
         var language = {{ (localization.language.iso_code | append: "-" | append: localization.country.iso_code) | json }};
-         console.log(language);
+         if (newSource.includes('/fr/'))
+         {
+           newLang = "fr";
+         }
+          else{
+            newLang = "en";
+          }
+    console.log(language);
+    console.log(newLang);
         window.addEventListener("klaviyoForms", function (e) {
           if (e.detail.type == 'submit') {
             let emailAddress = e.detail.metaData.$email;
