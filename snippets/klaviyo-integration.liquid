@@ -7,7 +7,7 @@
         if (pathSegments.length > 1) {
             newLang = pathSegments[1];
         }
-      
+      console.log(newLang);
         var newSource = window.location.href;
         var language = {{ (localization.language.iso_code | append: "-" | append: localization.country.iso_code) | json }};
          console.log(language);
