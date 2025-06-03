@@ -34,11 +34,15 @@
               if (!langArray.includes(newLang)) {
                 langArray.push(newLang);
               }
-              
-              let updatedEntries = entriesArray.join(', ');
+              if(newEntry){
+                let updatedEntries = entriesArray.join(', ');
+              }
+              if(newLang){
               let updatedSourceEntries = existingSourceArray.join(', ');
-              let updatedLang = langArray.join(', ');
-
+              }
+              if(newLang){
+                let updatedLang = langArray.join(', ');
+              }
               // Prepare data for Klaviyo
               setTimeout(function(){
                 
