@@ -1,6 +1,7 @@
   <script>
         var urlParams = new URLSearchParams(window.location.search);
         var newEntry = urlParams.get('utm_campaign');
+        var newLang = urlParams.get('lan');
         var newSource = window.location.href;
         var language = {{ (localization.language.iso_code | append: "-" | append: localization.country.iso_code) | json }};
          console.log(language);
@@ -17,10 +18,12 @@
               let properties = response.properties;
               let existingEntries = properties.contest_entries || '';
               let existingSource = properties.contest_sources || '';
-              
+              let existinglang = properties.language_preference || '';
+
               let entriesArray = existingEntries.split(',').map(e => e.trim()).filter(e => e);
               let existingSourceArray = existingSource.split(',').map(e => e.trim()).filter(e => e);
-            
+              let langArray = existinglang.split(',').map(e => e.trim()).filter(e => e);
+
               
               if (!entriesArray.includes(newEntry)) {
                 entriesArray.push(newEntry);
@@ -28,10 +31,14 @@
               if (!existingSourceArray.includes(newSource)) {
                 existingSourceArray.push(newSource);
               }
+              if (!entriesLangArray.includes(newLang)) {
+                langArray.push(newLang);
+              }
               
               let updatedEntries = entriesArray.join(', ');
               let updatedSourceEntries = existingSourceArray.join(', ');
-      
+              let updatedLang = langArray.join(', ');
+
               // Prepare data for Klaviyo
               setTimeout(function(){
                 
@@ -56,7 +63,8 @@
                               properties: {
                                 "contest_entries": updatedEntries,
                                 "contest_sources": updatedSourceEntries,
-                                "language": language
+                                "language": language,
+                                "language_preference": updatedLang
                               }
                             }
                           }
