@@ -634,7 +634,7 @@ const _createSplideInstance = (splideRoot, options, extensions) => {
         gap: '10px',
         slideFocus: false,
         drag: 'free',
-        speed: 750,
+        speed: 1000,
         breakpoints: {
           758: {
             fixedWidth: '55px'
