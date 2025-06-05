@@ -1314,6 +1314,8 @@
       const thumbnailContainerObserverMobile = new MutationObserver(thumbnailContainerMutationCallback);
       thumbnailContainerObserverMobile.observe(thumbnailContainers[1], mutationObserverConfig);
 
+      console.log(thumbnailContainers, "thumbnailContainers");
+
       const arrows = document.querySelectorAll("span.arrow-conatiner");
       [ ...arrows ].forEach((arrow) => {
         arrow.addEventListener("click", () => {
