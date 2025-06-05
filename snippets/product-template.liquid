@@ -1350,7 +1350,7 @@
       var activeIndexBeforeDrag = 0;
       var isActiveIndexBeforeDrag = false;
       thumbnailContainers.forEach((thumbnailContainer__) => {
-        thumbnailContainer__.addEventListener("dragstart", () => {
+        {% comment %} thumbnailContainer__.addEventListener("dragstart", () => {
           console.log("dragstart")
           productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
             const index__ = index;
@@ -1359,8 +1359,8 @@
               isActiveIndexBeforeDrag = true;
             }
           });
-        });
-        thumbnailContainer__.addEventListener("touchstart", () => {
+        }); {% endcomment %}
+        {% comment %} thumbnailContainer__.addEventListener("touchstart", () => {
           console.log("touchstart")
           productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
             const index__ = index;
@@ -1369,7 +1369,7 @@
               isActiveIndexBeforeDrag = true;
             }
           });
-        });
+        }); {% endcomment %}
 
         let isDragging = false;
         thumbnailContainer__.addEventListener("pointerdown", (e) => {
