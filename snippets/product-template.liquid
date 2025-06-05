@@ -1,3 +1,18 @@
+dump
+
+.section-template--16928925417581__ss_testimonials_30_2_rDCn3h-settings {
+  padding-top: 7.5vw;
+}
+
+ss-feature
+
+@media (max-width: 980px) {
+  #collection-home-goodprotein {
+    padding-top: 54px;
+  }
+}
+
+
 {% comment %}
 {% if request.path contains '/mini-eggs-all-in-one-shake' %}
   <script>
@@ -164,9 +179,8 @@
   .arrow-conatiner img {
     width: 26px;
     height: 26px;
-    /* background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%; */
-    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
   }
   .arrow-conatiner.prev-btn {
     margin-left: 6px;
@@ -281,10 +295,10 @@
                       {% endif %}
                     {% comment %} <div class="arrow-conatiner"> {% endcomment %}
                       <span class="arrow-conatiner prev-btn">
-                        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/left-arrow.png?v=1749086217">
+                        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-left-in-circle_5774da51-a521-4369-8a11-b4527182e320.png?v=1748624154">
                       </span>
                       <span class="arrow-conatiner next-btn">
-                        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/right-arrow.png?v=1749086217">
+                        <img src="https://cdn.shopify.com/s/files/1/0012/5573/5405/files/arrow-right-in-circle_1a239013-57c0-4464-8e4f-570bbcbf1a1c.png?v=1748624154">
                       </span> 
                     {% comment %} </div> {% endcomment %}
                     <ul class="w-full splide__list splide__list-thumbnail-container {% if section.settings.thumbnails_position == 'left' %} h-full{% else %}grid {% if section.settings.thumbnail_size == 'standard' %}lg:grid-cols-5 grid-cols-6{% else %}lg:grid-cols-4 grid-cols-6{% endif %} {% endif %}">
@@ -1264,18 +1278,10 @@
         });
       });
 
-      const thumbnailContainer = document.querySelector('ul.splide__list');
+      const thumbnailContainers = document.querySelectorAll('ul.splide__list');
+      const thumbnailContainer = thumbnailContainers[0];
       const mutationObserverConfig = { attributes: true, childList: true, subtree: true }
       const thumbnailContainerMutationCallback = (mutationList, observer) => {
-        {% comment %} setTimeout(() => {
-          if (isActiveIndexBeforeDrag) {
-            console.log("llllllllllllllllllpppppppppp", activeIndexBeforeDrag, productMediaThumbnailList[activeIndexBeforeDrag]);
-            productMediaThumbnailList[activeIndexBeforeDrag].click();
-            isActiveIndexBeforeDrag = false;
-            return;
-          }
-        }, 4000); {% endcomment %}
-        // console.log("bbbbbnnnnnmmmmmiiiiippppp");
         if (!isActiveIndexBeforeDrag) {
           [ ...productMediaThumbnailList ].forEach((productMediaThumbnail, index) => {
             if (productMediaThumbnail.classList.contains("is-active")) {
@@ -1292,14 +1298,9 @@
         }
         
         if (isActiveIndexBeforeDrag) {
-          console.log("jkjkjkjkjkjkjkjkjkjkj");
           setTimeout(() => {
-            // const productMediaThumbnailList2 = document.querySelector(".splide__list-thumbnail-container");
             productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
               const index__ = index;
-              {% comment %} if (index__ == activeIndexBeforeDrag) {
-                productMediaThumbnai.click();
-              } {% endcomment %}
               
               if (index__ == activeIndexBeforeDrag - 1) {
                 productMediaThumbnai.classList.add("is-prev");
@@ -1324,6 +1325,9 @@
       }
       const thumbnailContainerObserver = new MutationObserver(thumbnailContainerMutationCallback);
       thumbnailContainerObserver.observe(thumbnailContainer, mutationObserverConfig);
+
+      const thumbnailContainerObserverMobile = new MutationObserver(thumbnailContainerMutationCallback);
+      thumbnailContainerObserverMobile.observe(thumbnailContainers[1], mutationObserverConfig);
 
       const arrows = document.querySelectorAll("span.arrow-conatiner");
       [ ...arrows ].forEach((arrow) => {
@@ -1358,61 +1362,26 @@
         
       var activeIndexBeforeDrag = 0;
       var isActiveIndexBeforeDrag = false;
-      thumbnailContainer.addEventListener("dragstart", () => {
-        console.log("opppppppppppppppp");
-        productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
-          const index__ = index;
-          if (productMediaThumbnai.classList.contains("is-active")) {
-            activeIndexBeforeDrag = index__;
-            isActiveIndexBeforeDrag = true;
-          }
+      thumbnailContainers.forEach((thumbnailContainer__) => {
+        thumbnailContainer__.addEventListener("dragstart", () => {
+          productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+            const index__ = index;
+            if (productMediaThumbnai.classList.contains("is-active")) {
+              activeIndexBeforeDrag = index__;
+              isActiveIndexBeforeDrag = true;
+            }
+          });
+        });
+        thumbnailContainer__.addEventListener("touchstart", () => {
+          productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+            const index__ = index;
+            if (productMediaThumbnai.classList.contains("is-active")) {
+              activeIndexBeforeDrag = index__;
+              isActiveIndexBeforeDrag = true;
+            }
+          });
         });
       });
-      
-      thumbnailContainer.addEventListener("touchstart", () => {
-        productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
-          const index__ = index;
-          if (productMediaThumbnai.classList.contains("is-active")) {
-            activeIndexBeforeDrag = index__;
-            isActiveIndexBeforeDrag = true;
-          }
-        });
-      });
-
-      {% comment %} document.addEventListener("dragend", () => {
-        console.log("piiiiiiiiiiiiiiiiiiiiiiiiiii");
-        if (isActiveIndexBeforeDrag) {
-          console.log("kaaaaaaaaaaaaaaaaaaaaaaaaa");
-          productMediaThumbnailList[activeIndexBeforeDrag].click();
-        }
-      }); {% endcomment %}
-
-      {% comment %} thumbnailContainer.addEventListener("dragend", () => {
-        console.log("bhhhhhhhhhhhhhhhhhhh");
-        productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
-          const index__ = index;
-          if (index__ == activeIndexBeforeDrag) {
-            productMediaThumbnai.click();
-          }
-          
-          if (index__ == activeIndexBeforeDrag - 1) {
-            productMediaThumbnailList.classList.add(".is-prev");
-          } else {
-            productMediaThumbnailList.classList.remove(".is-prev");
-          }
-          if (index__ == activeIndexBeforeDrag) {
-            productMediaThumbnailList.classList.add(".is-active");
-          } else {
-            productMediaThumbnailList.classList.remove(".is-active");
-          }
-          if (index__ == activeIndexBeforeDrag + 1) {
-            productMediaThumbnailList.classList.add(".is-next");
-          } else {
-            productMediaThumbnailList.classList.remove(".is-next");
-          }
-        });
-      }); {% endcomment %}
-      {% comment %} var isProductMediaThumbnailListClicked = false; {% endcomment %}
       productMediaThumbnailList[0].addEventListener("click", () => {
         if (productMediaThumbnailList[0].classList.contains("is-active")) {
           return;
