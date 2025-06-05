@@ -164,8 +164,8 @@
   .arrow-conatiner img {
     width: 26px;
     height: 26px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
+    /* background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%; */
   }
   .arrow-conatiner.prev-btn {
     margin-left: 6px;
@@ -272,7 +272,7 @@
                     x-init="mounted()"
                   >
                     <div class="splide__track h-full">
-                      {% if section.settings.thumbnails_position == 'left' %}o
+                      {% if section.settings.thumbnails_position == 'left' %}
                       <div
                         class="thumbnails-overflow-indicator-top z-[2] absolute top-0 left-0 right-0 bg-gradient-to-b from-scheme-background to-transparent w-full h-24 pointer-events-none transition-opacity duration-150"
                         :class="{ 'opacity-0' : firstVisible }"
