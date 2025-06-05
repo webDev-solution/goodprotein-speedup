@@ -1370,6 +1370,25 @@
             }
           });
         });
+
+        let isDragging = false;
+        thumbnailContainer__.addEventListener("pointerdown", (e) => {
+          isDragging = true;
+          console.log("Drag started", e);
+        });
+        
+        document.addEventListener("pointermove", (e) => {
+          if (isDragging) {
+            console.log("Dragging", e);
+            productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+              const index__ = index;
+              if (productMediaThumbnai.classList.contains("is-active")) {
+                activeIndexBeforeDrag = index__;
+                isActiveIndexBeforeDrag = true;
+              }
+            });
+          }
+        });
       });
       productMediaThumbnailList[0].addEventListener("click", () => {
         if (productMediaThumbnailList[0].classList.contains("is-active")) {
@@ -1399,4 +1418,4 @@
       });
     }, 4000);
   })
-</script>
+</script>9
