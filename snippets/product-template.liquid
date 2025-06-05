@@ -1368,6 +1368,16 @@
           }
         });
       });
+      
+      thumbnailContainer.addEventListener("touchstart", () => {
+        productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
+          const index__ = index;
+          if (productMediaThumbnai.classList.contains("is-active")) {
+            activeIndexBeforeDrag = index__;
+            isActiveIndexBeforeDrag = true;
+          }
+        });
+      });
 
       {% comment %} document.addEventListener("dragend", () => {
         console.log("piiiiiiiiiiiiiiiiiiiiiiiiiii");
