@@ -1379,6 +1379,7 @@
         
         document.addEventListener("pointermove", (e) => {
           if (isDragging) {
+            isDragging = false;
             console.log("Dragging", e);
             productMediaThumbnailList.forEach((productMediaThumbnai, index) => {
               const index__ = index;
@@ -1418,4 +1419,4 @@
       });
     }, 4000);
   })
-</script>9
+</script>
